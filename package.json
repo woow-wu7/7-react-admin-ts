@@ -147,7 +147,11 @@
   "devDependencies": {
     "@commitlint/cli": "^11.0.0",
     "@commitlint/config-conventional": "^11.0.0",
-    "husky": "^4.3.0"
+    "husky": "^4.3.0",
+    "stylelint": "^13.6.1",
+    "stylelint-config-standard": "^20.0.0",
+    "stylelint-scss": "^3.18.0",
+    "stylelint-webpack-plugin": "^2.1.0"
   },
   "husky": {
     "hooks": {
@@ -158,6 +162,10 @@
   "lint-staged": {
     "*.{ts,tsx,js}": [
       "eslint --config .eslintrc.js"
+    ],
+    "*.{css,sass,scss}": [
+      "stylelint --fix",
+      "git add"
     ]
   }
 }

@@ -36,7 +36,15 @@
 - [配置实例详细教程](https://juejin.im/post/6844904056591220750#heading-4)
 
 ### (4) stylelint
-- [官网教程](https://github.com/stylelint/stylelint)
+- [官网教程](https://stylelint.io/)
+- npm install --save-dev stylelint stylelint-config-standard
+- .stylelintrc.js
+- stylelint 
+- stylelint-config-standard
+- stylelint-scss
+- stylelint-webpack-plugin
+- 然后添加到 `husky` 的 `hooks` 中
+
 
 
   
