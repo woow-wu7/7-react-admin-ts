@@ -9,6 +9,7 @@
   - `commitlint.config.js`中添加扩展`@commitlint/config-conventional`
 - 单词
   - conventional：常规的
+  - chore：日常事务，乏味无聊的工作
 
 ### (2) husky
 - [官网教程](https://typicode.github.io/husky/#/)
@@ -47,6 +48,8 @@
 
 
 ### (7) react-router-dom
+- npm install react-router-dom
+- npm install @types/react-router-dom
 
 
 
