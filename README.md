@@ -35,7 +35,7 @@
 - [官网教程](https://cn.eslint.org/docs/user-guide/command-line-interface)
 - [配置实例详细教程](https://juejin.im/post/6844904056591220750#heading-4)
 
-### (4) stylelint
+### (6) stylelint
 - [官网教程](https://stylelint.io/)
 - npm install --save-dev stylelint stylelint-config-standard
 - .stylelintrc.js
@@ -46,5 +46,11 @@
 - 然后添加到 `husky` 的 `hooks` 中
 
 
+### (7) react-router-dom
 
-  
+
+
+
+# create-react-app
+
+### 别名
