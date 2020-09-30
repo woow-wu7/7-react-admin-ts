@@ -52,8 +52,27 @@
 - npm install @types/react-router-dom
 - **集中式路由插件** ( `react-router-config` )
   - npm install --save react-router-config
+  - npm install @types/react-router-config -S
   - [官网](https://github.com/ReactTraining/react-router/tree/master/packages/react-router-config)
   - [使用教程](https://www.cnblogs.com/yetiezhu/p/12966026.html)
+  - renderRoutes
+
+
+### (8) antd 按需加载
+- [babel-plugin-import官网](https://github.com/ant-design/babel-plugin-import)
+- [实例教程](https://cloud.tencent.com/developer/article/1467366)
+- npm install babel-plugin-import -D
+- 配置 `.babelrc` 文件
+  - 注意需要 `eject` 后修改 `webpack.config.js` 中的 `babelrc: true` 启用 .babelrc 文件
+  - 同时需要删除在 `package.json` 中定义的 `babel` 选项
+```
+{
+  "presets": ["react-app"],
+  "plugins": [
+    [ "import", { "libraryName": "antd", "style": "css"} ]
+  ]
+}
+```
 
 
 
@@ -61,6 +80,11 @@
 # create-react-app
 
 ### 别名
+
+### css-module
+- 需要安装 node-sass
+- npm install node-sass -D
+- xxxx.module.scss
 
 ### require.context => ts报错不存在属性
 - npm install @tyeps/webpack-env -D
