@@ -104,7 +104,7 @@ package.json
 ```
 
 ### (9) git提交规范
-
+- [文档](http://www.ruanyifeng.com/blog/2016/01/commit_message_change_log.html)
 
 
 # create-react-app
