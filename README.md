@@ -103,7 +103,13 @@ package.json
 }
 ```
 
-### (9) git提交规范
+### (9) redux 相关
+- npm install redux react-redux -S
+- npm install @types/react-redux -S
+- npm install --save redux-devtools-extension
+- npm install redux-devtools -D
+
+### (10) git提交规范
 - [文档](http://www.ruanyifeng.com/blog/2016/01/commit_message_change_log.html)
 
 

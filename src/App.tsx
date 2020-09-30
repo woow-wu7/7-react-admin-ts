@@ -1,6 +1,8 @@
 import React from 'react';
 import Router from '../src/router'
-import './App.css';
+import { connect } from 'react-redux'
+import { bindActionCreators } from 'redux';
+import * as actions from './app.action'
 
 function App() {
   return (
@@ -10,4 +12,14 @@ function App() {
   );
 }
 
-export default App;
+const mapStateToProps = (state: any) => {
+  return {
+    ...state
+  }
+}
+
+const mapDispatchToProps = (payload: any) => {
+  return bindActionCreators(actions, payload)
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);

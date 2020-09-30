@@ -1,16 +1,13 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { renderRoutes } from 'react-router-config'
-import { Select, Button } from 'antd'
+import { connect } from 'react-redux'
 import styles from './layout.module.scss'
 
 
-let systemType = ''
 
 const Layout = (props: any) => {
-  const { Option } = Select;
-  const handleChange = () => {
-
-  }
+  const { systemType } = props
+  
   const render = () => {
     if (systemType === 'admin') {
       return (
@@ -30,10 +27,6 @@ const Layout = (props: any) => {
   }
   return (
     <>
-      <Select defaultValue="lucy" style={{ width: 120 }} onChange={handleChange}>
-        <Option value="jack">Jack</Option>
-        <Option value="lucy">Lucy</Option>
-      </Select>
       {render()}
     </>
   )
@@ -41,4 +34,11 @@ const Layout = (props: any) => {
 
 }
 
-export default Layout
+const mapStateToProps = (state: any) => {
+  return {
+    systemType: state.app.systemType
+  }
+}
+
+
+export default connect(mapStateToProps)(Layout)
