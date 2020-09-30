@@ -8,6 +8,8 @@
   - 新建 `commitlint.config.js` 注意是js文件，不能是ts，或者`.commitlintrc.json`等
   - `commitlint.config.js`中添加扩展`@commitlint/config-conventional`
 ```
+commitlint.config.js
+-----
 module.exports = {
   extends: ['@commitlint/config-conventional']
 }
@@ -91,6 +93,8 @@ package.json
   - 注意需要 `eject` 后修改 `webpack.config.js` 中的 `babelrc: true` 启用 .babelrc 文件
   - 同时需要删除在 `package.json` 中定义的 `babel` 选项
 ```
+.babelrc
+-----
 {
   "presets": ["react-app"],
   "plugins": [
@@ -99,6 +103,7 @@ package.json
 }
 ```
 
+### (9) git提交规范
 
 
 
