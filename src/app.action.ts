@@ -6,3 +6,10 @@ export const changeSystemType = (payload: any) => {
     payload,
   }
 }
+
+export const getToken = (token: string) => {
+  return {
+    type: actionType.GET_TOKEN,
+    payload: token
+  }
+}

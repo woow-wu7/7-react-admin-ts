@@ -1,9 +1,20 @@
-import React from 'react'
+import React,{ useEffect } from 'react'
+import { useSelector } from 'react-redux'
+import { useHistory  } from 'react-router-dom'
 
-const Home = () => {
+const Home = (props: any) => {
+  let history = useHistory();
+  const token = useSelector((state: any) => state.app.token)
+
+  useEffect(() => {
+    if(!token) {
+      history.replace('/login')
+    }
+  }, [])
+  
   return (
     <div>
-      <header>register page</header>
+      <header>home page</header>
     </div>
   )
 }

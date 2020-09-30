@@ -1,7 +1,8 @@
 import actionType from './app.constant'
 
 const initialState = {
-  systemType: 'admin'
+  systemType: 'admin',
+  token: ''
 }
 
 const appReducer = (state = initialState, action: { type: string, payload: any }) => {
@@ -10,6 +11,11 @@ const appReducer = (state = initialState, action: { type: string, payload: any }
       return {
         ...state,
         systemType: action.payload
+      }
+    case actionType.GET_TOKEN:
+      return {
+        ...state,
+        token: action.payload
       }
     default:
       return {

@@ -28,7 +28,7 @@ const Login = (props: any) => {
   const [activedMenu, setActivedMenu] = useState('')
   const [form] = Form.useForm();
 
-  const { changeSystemType, systemType } = props
+  const { changeSystemType, getToken, systemType } = props
   const { Option } = Select;
 
   const handleChange = (type: string) => {
@@ -37,8 +37,8 @@ const Login = (props: any) => {
 
   const onFinish = (values: any) => {
     console.log('Success:', values);
-    console.log(props, 'props');
-    props.history.push('/layout')
+    getToken('token123456')
+    props.history.push('/home')
   };
 
   const onFinishFailed = (errorInfo: any) => {
@@ -128,7 +128,7 @@ const Login = (props: any) => {
 
 const mapStateToProps = (state: any) => {
   return {
-    systemType: state.app.systemType
+    systemType: state.app.systemType,
   }
 }
 
