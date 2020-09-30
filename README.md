@@ -50,6 +50,10 @@
 ### (7) react-router-dom
 - npm install react-router-dom
 - npm install @types/react-router-dom
+- **集中式路由插件** ( `react-router-config` )
+  - npm install --save react-router-config
+  - [官网](https://github.com/ReactTraining/react-router/tree/master/packages/react-router-config)
+  - [使用教程](https://www.cnblogs.com/yetiezhu/p/12966026.html)
 
 
 
@@ -57,3 +61,6 @@
 # create-react-app
 
 ### 别名
+
+### require.context => ts报错不存在属性
+- npm install @tyeps/webpack-env -D
