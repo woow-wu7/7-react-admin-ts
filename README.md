@@ -7,9 +7,11 @@
   - 新建.huskyrc文件或者在package.json中配置husky选项
   - 新建 `commitlint.config.js` 注意是js文件，不能是ts，或者`.commitlintrc.json`等
   - `commitlint.config.js`中添加扩展`@commitlint/config-conventional`
-- 单词
-  - conventional：常规的
-  - chore：日常事务，乏味无聊的工作
+```
+module.exports = {
+  extends: ['@commitlint/config-conventional']
+}
+```
 
 ### (2) husky
 - [官网教程](https://typicode.github.io/husky/#/)
@@ -45,6 +47,29 @@
 - stylelint-scss
 - stylelint-webpack-plugin
 - 然后添加到 `husky` 的 `hooks` 中
+
+```
+1,2,3,4,5
+```
+```
+package.json
+-----
+"husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "lint-staged": {
+    "*.{ts,tsx,js}": [
+      "eslint --config .eslintrc.js"
+    ],
+    "*.{css,sass,scss}": [
+      "stylelint --fix",
+      "git add"
+    ]
+  }
+```
 
 
 ### (7) react-router-dom
@@ -88,3 +113,7 @@
 
 ### require.context => ts报错不存在属性
 - npm install @tyeps/webpack-env -D
+
+### 单词
+  - conventional：常规的
+  - chore：日常事务，乏味无聊的工作
