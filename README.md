@@ -83,7 +83,11 @@ package.json
   - [官网](https://github.com/ReactTraining/react-router/tree/master/packages/react-router-config)
   - [使用教程](https://www.cnblogs.com/yetiezhu/p/12966026.html)
   - renderRoutes
-
+- **react-router-dom中的hooks**
+  - useHistory
+  - useLocation
+  - useParams
+  - useRouteMatch
 
 ### (8) antd 按需加载
 - [babel-plugin-import官网](https://github.com/ant-design/babel-plugin-import)

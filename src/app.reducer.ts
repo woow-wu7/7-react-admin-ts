@@ -1,7 +1,8 @@
 import actionType from './app.constant'
+import { SYSTEMTYPE } from './global/enum'
 
 const initialState = {
-  systemType: 'admin',
+  systemType: SYSTEMTYPE.BIGSCREEN,
   token: ''
 }
 

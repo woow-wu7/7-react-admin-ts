@@ -3,6 +3,7 @@ import { useSelector } from 'react-redux'
 import { useHistory  } from 'react-router-dom'
 
 const Home = (props: any) => {
+  console.log(props);
   let history = useHistory();
   const token = useSelector((state: any) => state.app.token)
 

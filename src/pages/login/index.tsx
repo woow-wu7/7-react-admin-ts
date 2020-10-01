@@ -4,6 +4,7 @@ import loginStyle from './login.module.scss'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux';
 import * as actions from '../../app.action'
+import { SYSTEMTYPE } from '../../global/enum'
 
 const Login = (props: any) => {
   const [list] = useState([
@@ -108,8 +109,8 @@ const Login = (props: any) => {
         <div className={loginStyle.listMenu}>
           <div>
             <Select defaultValue={systemType} className={loginStyle.select} onChange={handleChange}>
-              <Option value="admin">后台系统</Option>
-              <Option value="bigscreen">大屏系统</Option>
+              <Option value={SYSTEMTYPE.ADMIN}>后台系统</Option>
+              <Option value={SYSTEMTYPE.BIGSCREEN}>大屏系统</Option>
             </Select>
           </div>
           {list.map(({ label, value }, i) => {
