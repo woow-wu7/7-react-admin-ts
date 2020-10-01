@@ -115,6 +115,13 @@ package.json
 
 ### (10) git提交规范
 - [文档](http://www.ruanyifeng.com/blog/2016/01/commit_message_change_log.html)
+- feat: 新功能 feature
+- fix: 修复bug
+- docs: 文档 documentation
+- refactor：重构（即不是新增功能，也不是修改bug的代码变动）
+- test：测试
+- chore：构建过程 或 辅助工具的变动
+- style：格式（不影响代码运行的变动）
 
 
 # create-react-app
