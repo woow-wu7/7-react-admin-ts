@@ -6,7 +6,7 @@ import { bindActionCreators } from 'redux';
 import * as actions from '../../app.action'
 import { SYSTEMTYPE } from '../../global/enum'
 
-const Login = (props: any) => {
+const Login = (props: { history?: any; changeSystemType?: any; getToken?: any; systemType: string; }) => {
   const [list] = useState([
     {
       label: '监管机构',
@@ -37,9 +37,11 @@ const Login = (props: any) => {
   }
 
   const onFinish = (values: any) => {
-    console.log('Success:', values);
-    getToken('token123456')
-    props.history.push('/home')
+    getToken('token123456');
+
+    SYSTEMTYPE[systemType] === SYSTEMTYPE.BIGSCREEN
+      ? props.history.push('/home-bigscreen')
+      : props.history.push('/home-admin')
   };
 
   const onFinishFailed = (errorInfo: any) => {

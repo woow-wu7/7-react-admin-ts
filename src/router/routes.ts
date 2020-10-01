@@ -1,7 +1,10 @@
 import React from 'react'
 import Login from '../pages/login';
-import Home from '../pages/home';
+import HomeBigScreen from '../pages/home/bigscreen.home';
+import HomeAdmin from '../pages/home/admin.home';
 import Layout from '../pages/layout';
+import store from '../store'
+import { SYSTEMTYPE } from '../global/enum'
 
 interface RouteModule {
   path: string;
@@ -20,10 +23,15 @@ const routes: RouteModule[] = [
     component: Layout,
     routes: [
       {
-        path: '/home',
+        path: '/home-bigscreen',
         exact: true,
-        component: Home,
-      }
+        component: HomeBigScreen,
+      },
+      {
+        path: '/home-admin',
+        exact: true,
+        component: HomeAdmin,
+      },
     ]
   }
 ]

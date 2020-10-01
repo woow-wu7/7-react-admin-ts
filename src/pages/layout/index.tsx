@@ -2,14 +2,15 @@ import React, { useState } from 'react'
 import { renderRoutes } from 'react-router-config'
 import { connect } from 'react-redux'
 import styles from './layout.module.scss'
+import { SYSTEMTYPE } from '../../global/enum'
 
 
 
 const Layout = (props: any) => {
   const { systemType } = props
-  
+
   const render = () => {
-    if (systemType === 'admin') {
+    if (systemType === SYSTEMTYPE.ADMIN) {
       return (
         <div className={styles.layoutAdmin}>
           <header className={styles.header}>layout page admin</header>
@@ -19,7 +20,6 @@ const Layout = (props: any) => {
     } else {
       return (
         <div className={styles.layoutBigScreen}>
-          <header className={styles.header}>layout page bigScreen</header>
           {renderRoutes(props.route.routes)}
         </div>
       )

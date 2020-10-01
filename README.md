@@ -132,3 +132,26 @@ package.json
 ### 单词
   - conventional：常规的
   - chore：日常事务，乏味无聊的工作
+
+### 使用TS中的 enum 枚举类型避免魔法字符串
+- export enum SYSTEMTYPE { ADMIN, BIGSCREEN }
+- import { SYSTEMTYPE } from 'src/global/enum.ts'
+- 注意点1：
+  - 问题：元素隐式具有 "any" 类型，因为类型为 "string" 的表达式不能用于索引类型 "typeof SYSTEMTYPE"。
+  - 解决方案：在tsconfig.json => compilerOptions => "suppressImplicitAnyIndexErrors": true,
+- 注意点2：
+```
+export enum SYSTEMTYPE1 {
+  ADMIN = 'ADMIN',
+  BIGSCREEN = 'BIGSCREEN',
+}
+
+export enum SYSTEMTYPE2 {
+  ADMIN,
+  BIGSCREEN,
+}
+
+
+SYSTEMTYPE1.ADMIN =========> 'ADMIN'
+SYSTEMTYPE2.ADMIN =========> 0
+```

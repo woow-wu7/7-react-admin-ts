@@ -15,7 +15,7 @@ const Home = (props: any) => {
   
   return (
     <div>
-      <header>home page</header>
+      <header>home page  admin</header>
     </div>
   )
 }

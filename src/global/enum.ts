@@ -1,4 +1,4 @@
 export enum SYSTEMTYPE {
-  ADMIN,
-  BIGSCREEN,
+  ADMIN = 'ADMIN',
+  BIGSCREEN = 'BIGSCREEN',
 }
