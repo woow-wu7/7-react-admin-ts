@@ -99,6 +99,9 @@ package.json
   - useLocation
   - useParams
   - useRouteMatch
+- **路由按需加载**
+- 1. 路由按需加载：`React.lazy` 和 `Suspense`
+- 2. 第三方库 `react-loadable`
 
 
 
@@ -144,11 +147,6 @@ package.json
 
 
 # create-react-app
-
-### 按需加载
-- 1. 路由按需加载：React.lazy 和 Suspense
-- 2. 
-
 
 ### 别名
 
