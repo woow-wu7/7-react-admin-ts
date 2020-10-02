@@ -1,13 +1,22 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { renderRoutes } from 'react-router-config'
-import { connect } from 'react-redux'
+import { connect, useSelector } from 'react-redux'
 import styles from './layout.module.scss'
 import { SYSTEMTYPE } from '../../global/enum'
+import { useHistory } from 'react-router-dom'
 
 
 
 const Layout = (props: any) => {
   const { systemType } = props
+  let history = useHistory();
+  const token = useSelector((state: any) => state.app.token)
+
+  useEffect(() => {
+    if(!token) {
+      history.replace('/login')
+    }
+  }, [])
 
   const render = () => {
     if (systemType === SYSTEMTYPE.ADMIN) {

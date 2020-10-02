@@ -1,10 +1,4 @@
-import React from 'react'
-import Login from '../pages/login';
-import HomeBigScreen from '../pages/home/bigscreen.home';
-import HomeAdmin from '../pages/home/admin.home';
-import Layout from '../pages/layout';
-import store from '../store'
-import { SYSTEMTYPE } from '../global/enum'
+import { lazy } from 'react';
 
 interface RouteModule {
   path: string;
@@ -12,6 +6,11 @@ interface RouteModule {
   exact?: boolean;
   routes?: any
 }
+
+const Login = lazy(() => import(/* webpackChunkName: 'Login' */'../pages/login'))
+const HomeBigScreen = lazy(() => import(/* webpackChunkName: 'HomeBigScreen' */'../pages/home/bigscreen.home'))
+const HomeAdmin = lazy(() => import(/* webpackChunkName: 'HomeAdmin' */'../pages/home/admin.home'))
+const Layout = lazy(() => import(/* webpackChunkName: 'Layout' */'../pages/layout'))
 
 const routes: RouteModule[] = [
   {

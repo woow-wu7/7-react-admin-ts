@@ -15,12 +15,16 @@ module.exports = {
 }
 ```
 
+
+
 ### (2) husky
 - [官网教程](https://typicode.github.io/husky/#/)
 - 安装
   - yarn add husky --save-dev
 - 配置
   - 在 `package.json` 中配置 `husky` 字段
+
+
 
 ### (3) lint-staged 
 - [官网教程](https://github.com/okonet/lint-staged)
@@ -36,11 +40,17 @@ module.exports = {
     - 如果使用 `pre-commit`中用到 `eslint` 就需要配置 `.eslintrc.js` 和 `.eslintignore` 不然会报错
     - 在 `.eslintrc.js` 中，通过 `/* eslint-disable */` 
 
+
+
+
 ### (4) eslint
 - [官网教程](https://cn.eslint.org/docs/user-guide/command-line-interface)
 - [配置实例详细教程](https://juejin.im/post/6844904056591220750#heading-4)
 
-### (6) stylelint
+
+
+
+### (5) stylelint
 - [官网教程](https://stylelint.io/)
 - npm install --save-dev stylelint stylelint-config-standard
 - .stylelintrc.js
@@ -74,7 +84,8 @@ package.json
 ```
 
 
-### (7) react-router-dom
+
+### (6) react-router-dom
 - npm install react-router-dom
 - npm install @types/react-router-dom
 - **集中式路由插件** ( `react-router-config` )
@@ -89,7 +100,9 @@ package.json
   - useParams
   - useRouteMatch
 
-### (8) antd 按需加载
+
+
+### (7) antd 按需加载
 - [babel-plugin-import官网](https://github.com/ant-design/babel-plugin-import)
 - [实例教程](https://cloud.tencent.com/developer/article/1467366)
 - npm install babel-plugin-import -D
@@ -107,13 +120,17 @@ package.json
 }
 ```
 
-### (9) redux 相关
+
+
+### (8) redux 相关
 - npm install redux react-redux -S
 - npm install @types/react-redux -S
 - npm install --save redux-devtools-extension
 - npm install redux-devtools -D
 
-### (10) git提交规范
+
+
+### (9) git提交规范
 - [文档](http://www.ruanyifeng.com/blog/2016/01/commit_message_change_log.html)
 - feat: 新功能 feature
 - fix: 修复bug
@@ -124,7 +141,14 @@ package.json
 - style：格式（不影响代码运行的变动）
 
 
+
+
 # create-react-app
+
+### 按需加载
+- 1. 路由按需加载：React.lazy 和 Suspense
+- 2. 
+
 
 ### 别名
 
@@ -133,12 +157,13 @@ package.json
 - npm install node-sass -D
 - xxxx.module.scss
 
+### 在 create-react-app 实现代码分割
+
+
+
 ### require.context => ts报错不存在属性
 - npm install @tyeps/webpack-env -D
 
-### 单词
-  - conventional：常规的
-  - chore：日常事务，乏味无聊的工作
 
 ### 使用TS中的 enum 枚举类型避免魔法字符串
 - export enum SYSTEMTYPE { ADMIN, BIGSCREEN }
@@ -162,3 +187,7 @@ export enum SYSTEMTYPE2 {
 SYSTEMTYPE1.ADMIN =========> 'ADMIN'
 SYSTEMTYPE2.ADMIN =========> 0
 ```
+
+### 单词
+  - conventional：常规的
+  - chore：日常事务，乏味无聊的工作

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Button, Form, Input, Checkbox, Select } from "antd"
 import loginStyle from './login.module.scss'
 import { connect } from 'react-redux'
@@ -6,26 +6,27 @@ import { bindActionCreators } from 'redux';
 import * as actions from '../../app.action'
 import { SYSTEMTYPE } from '../../global/enum'
 
-const Login = (props: { history?: any; changeSystemType?: any; getToken?: any; systemType: string; }) => {
-  const [list] = useState([
-    {
-      label: '监管机构',
-      value: 'monitor'
-    },
-    {
-      label: '征信机构',
-      value: 'credit'
-    },
-    {
-      label: '查询机构',
-      value: 'search'
-    },
-    {
-      label: '数据源',
-      value: 'origin'
-    }
-  ])
+// 避免在 Login 中重复渲染
+const list = [
+  {
+    label: '监管机构',
+    value: 'monitor'
+  },
+  {
+    label: '征信机构',
+    value: 'credit'
+  },
+  {
+    label: '查询机构',
+    value: 'search'
+  },
+  {
+    label: '数据源',
+    value: 'origin'
+  }
+]
 
+const Login = (props: { history?: any; changeSystemType?: any; getToken?: any; systemType: string; }) => {
   const [activedMenu, setActivedMenu] = useState('')
   const [form] = Form.useForm();
 
