@@ -1,6 +1,6 @@
 import React, { Suspense } from 'react'
 import { Switch } from 'react-router-dom'
-import { renderRoutes } from 'react-router-config'
+import { renderRoutes } from '../utils'
 import routes from '../router/routes'
 
 

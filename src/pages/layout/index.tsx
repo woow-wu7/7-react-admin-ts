@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { renderRoutes } from 'react-router-config'
+import { renderRoutes } from '../../utils'
 import { connect, useSelector } from 'react-redux'
 import styles from './layout.module.scss'
 import { SYSTEMTYPE } from '../../global/enum'
