@@ -7,10 +7,11 @@ import { BrowserRouter as Router } from 'react-router-dom'
 import { Provider } from 'react-redux'
 import store from './store'
 import './style/index.scss'
+import { getUserConfirmation } from './utils';
 
 ReactDOM.render(
   <Provider store={store}>
-    <Router>
+    <Router getUserConfirmation={getUserConfirmation}>
       <App />
     </Router>
   </Provider>,

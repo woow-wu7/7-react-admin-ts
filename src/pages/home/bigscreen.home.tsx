@@ -1,5 +1,5 @@
 import React, { useState, Suspense } from 'react'
-import { Button } from 'antd';
+import { Button, Checkbox, Form, Input } from 'antd';
 
 
 const Home = (props: any) => {
@@ -21,6 +21,14 @@ const Home = (props: any) => {
     setAsyncTest2((component: any) => component = Test2)
   }
 
+  const onFinish = (values: any) => {
+    console.log('Success:', values);
+  };
+
+  const onFinishFailed = (errorInfo: any) => {
+    console.log('Failed:', errorInfo);
+  };
+
   return (
     <div>
       <header>home page bigscreen</header>
@@ -36,6 +44,26 @@ const Home = (props: any) => {
       <Suspense fallback={<div>Loading...</div>}>
         {AsyncTest2 ? <AsyncTest2 /> : null}
       </Suspense>
+
+      {/* <Prompt message={() => isSave ? true : '表单还未保存，真的需要跳转吗？'} ></Prompt> */}
+      {/* <Form
+        onFinish={onFinish}
+        onFinishFailed={onFinishFailed}
+        >
+        <Form.Item
+          label="Username"
+          name="username"
+          rules={[{ required: true, message: 'Please input your username!' }]}
+        >
+          <Input />
+        </Form.Item>
+
+        <Form.Item >
+          <Button type="primary" htmlType="submit">
+            Submit
+        </Button>
+        </Form.Item>
+      </Form> */}
     </div>
   )
 }

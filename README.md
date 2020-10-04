@@ -146,12 +146,21 @@ package.json
 - style：格式（不影响代码运行的变动）
 
 
+
+### (10) 没有锁版本造成的报错
+- 报错：TypeScript error in /@pretty-format/build/index.d.ts(7,13): '=' expected.  TS1005
+- 原因："typescript": "~3.7.2", 版本问题
+- 解决："typescript": "^3.8.2"
+- 资料：https://www.jianshu.com/p/a69ff39a91c5
 ---
 ---
 ---
 ---
 ---
 ---
+
+
+
 
 # create-react-app
 
