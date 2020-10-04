@@ -142,7 +142,7 @@ package.json
 - docs: 文档 documentation
 - refactor：重构（即不是新增功能，也不是修改bug的代码变动）
 - test：测试
-- chore：构建过程 或 辅助工具的变动
+- chore：构建过程 或 辅助工具的变动 (chore：日常事务，乏味无趣的工作的意思)
 - style：格式（不影响代码运行的变动）
 
 
