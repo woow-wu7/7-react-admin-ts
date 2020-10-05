@@ -1,38 +1,32 @@
+import { FormProvider } from 'antd/lib/form/context';
 import { lazy } from 'react';
+import { RouteModule } from '../global/interface'
+import adminRoutes from './admin-routes'
+import bigScreenRoutes from './big-screen-routes'
 
-interface RouteModule {
-  path: string;
-  component: any;
-  exact?: boolean;
-  routes?: any
-}
 
 const Login = lazy(() => import(/* webpackChunkName: 'Login' */'../pages/login'))
-const HomeBigScreen = lazy(() => import(/* webpackChunkName: 'HomeBigScreen' */'../pages/home/bigscreen.home'))
-const HomeAdmin = lazy(() => import(/* webpackChunkName: 'HomeAdmin' */'../pages/home/admin.home'))
 const Layout = lazy(() => import(/* webpackChunkName: 'Layout' */'../pages/layout'))
+const NotFound = lazy(() => import(/* webpackChunkName: 'NotFound' */'../pages/404'))
 
-const routes: RouteModule[] = [
+const totalRoutes: RouteModule[] = [
   {
     path: '/login',
     component: Login,
   },
   {
+    path: '/404',
+    component: NotFound,
+  },
+  {
     path: '/',
     component: Layout,
     routes: [
-      {
-        path: '/home-bigscreen',
-        exact: true,
-        component: HomeBigScreen,
-      },
-      {
-        path: '/home-admin',
-        exact: true,
-        component: HomeAdmin,
-      },
+      ...bigScreenRoutes,
+      ...adminRoutes,
     ]
   }
 ]
 
-export default routes
+
+export default totalRoutes

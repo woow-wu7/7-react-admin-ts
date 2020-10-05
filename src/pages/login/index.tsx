@@ -41,8 +41,8 @@ const Login = (props: { history?: any; changeSystemType?: any; getToken?: any; s
     getToken('token123456');
 
     SYSTEMTYPE[systemType] === SYSTEMTYPE.BIGSCREEN
-      ? props.history.push('/home-bigscreen')
-      : props.history.push('/home-admin')
+      ? props.history.push('/big-screen-home')
+      : props.history.push('/admin-home')
   };
 
   const onFinishFailed = (errorInfo: any) => {
@@ -111,7 +111,7 @@ const Login = (props: { history?: any; changeSystemType?: any; getToken?: any; s
         </div>
         <div className={loginStyle.listMenu}>
           <div>
-            <Select defaultValue={systemType} className={loginStyle.select} onChange={handleChange}>
+            <Select defaultValue={SYSTEMTYPE.ADMIN} className={loginStyle.select} onChange={handleChange}>
               <Option value={SYSTEMTYPE.ADMIN}>后台系统</Option>
               <Option value={SYSTEMTYPE.BIGSCREEN}>大屏系统</Option>
             </Select>
