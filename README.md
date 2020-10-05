@@ -152,6 +152,15 @@ package.json
 - 原因："typescript": "~3.7.2", 版本问题
 - 解决："typescript": "^3.8.2"
 - 资料：https://www.jianshu.com/p/a69ff39a91c5
+
+
+
+### (11) js注释规范
+- http://www.shouce.ren/api/view/a/13269
+
+
+
+
 ---
 ---
 ---
