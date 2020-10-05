@@ -8,7 +8,7 @@ const adminRoutes: RouteModule[] = [{
   key: '/admin-home',
   path: '/admin-home',
   component: AdminHome,
-  subs: [
+  subs: [ // subs用于注册路由，并且用于menu树形菜单
     {
       title: '首页2',
       icon: 'SettingFilled',
