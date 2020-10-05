@@ -21,7 +21,7 @@
     "suppressImplicitAnyIndexErrors": true,
   },
   "include": [
-    "src"
+    "src",
   ],
   "baseUrl": ".",
   "paths": {

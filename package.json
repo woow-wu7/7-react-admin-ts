@@ -16,6 +16,7 @@
     "@types/react-redux": "^7.1.9",
     "@types/react-router-config": "^5.0.1",
     "@types/react-router-dom": "^5.1.5",
+    "@types/redux": "^3.6.0",
     "@typescript-eslint/eslint-plugin": "^2.10.0",
     "@typescript-eslint/parser": "^2.10.0",
     "antd": "^4.6.6",
