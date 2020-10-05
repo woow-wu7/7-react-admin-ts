@@ -6,6 +6,7 @@ export interface RouteModule {
   routes?: any;
   render?: any;
 
+  // 用于router 和 menu 的结合
   title?: string;
   key?: string;
   icon?: string;
