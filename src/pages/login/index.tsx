@@ -58,7 +58,6 @@ const Login = (props: { history?: any; changeSystemType?: any; getToken?: any; s
 
   const change = (v: string) => {
     setActivedMenu(value => value = v)
-    changeSystemType(v)
   }
 
   console.log(props, 'props');
@@ -111,7 +110,7 @@ const Login = (props: { history?: any; changeSystemType?: any; getToken?: any; s
         </div>
         <div className={loginStyle.listMenu}>
           <div>
-            <Select defaultValue={SYSTEMTYPE.ADMIN} className={loginStyle.select} onChange={handleChange}>
+            <Select value={systemType} className={loginStyle.select} onChange={handleChange}>
               <Option value={SYSTEMTYPE.ADMIN}>后台系统</Option>
               <Option value={SYSTEMTYPE.BIGSCREEN}>大屏系统</Option>
             </Select>
