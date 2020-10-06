@@ -1,4 +1,4 @@
-export interface RouteModule {
+export interface IRouteModule {
   path?: string;
   component?: any;
   exact?: boolean;
@@ -10,5 +10,5 @@ export interface RouteModule {
   title?: string;
   key?: string;
   icon?: string;
-  subs?: RouteModule[];
+  subs?: IRouteModule[];
 }

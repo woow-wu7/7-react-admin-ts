@@ -1,7 +1,7 @@
-import { RouteModule } from '../../global/interface'
+import { IRouteModule } from '../../global/interface'
 import BigScreenHome from '../../pages/bigscreen-system/home'
 
-const bigScreenRoutes: RouteModule[] = [{
+const bigScreenRoutes: IRouteModule[] = [{
   key: '/big-screen-home',
   path: '/big-screen-home',
   component: BigScreenHome,

@@ -1,9 +1,9 @@
 import React from 'react'
-import { RouteModule } from '../../global/interface'
+import { IRouteModule } from '../../global/interface'
 import { Switch, Route } from 'react-router-dom'
 
-const renderRoutes = (routes?: RouteModule[], extraProps = {}, switchProps = {}) => {
-  function iterateRoutes(routes: RouteModule[]): any {
+const renderRoutes = (routes?: IRouteModule[], extraProps = {}, switchProps = {}) => {
+  function iterateRoutes(routes: IRouteModule[]): any {
     return routes.map((route, index) => {
       return (
         [<Route

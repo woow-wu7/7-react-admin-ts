@@ -158,8 +158,9 @@ package.json
 ### (11) js注释规范
 - http://www.shouce.ren/api/view/a/13269
 
-
-
+### (12) antd使用iconfont自定义图标
+- [官网](https://ant.design/components/icon-cn/#components-icon-demo-basic)
+- scriptUrl 就是 Symbol在线生成的文件路径
 
 ---
 ---
