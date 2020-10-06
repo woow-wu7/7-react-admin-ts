@@ -1,0 +1,93 @@
+.login {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(78, 69, 88);
+
+  .wrap {
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 2px rgba($color: #000, $alpha: 0.1);
+    // border: 1px solid rgb(247, 247, 247);
+    margin: 100px auto;
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    background: white;
+
+    .wrapLeft {
+      width: 278px;
+      height: 358px;
+      background: url("../../assets/iamges/login.jpg");
+      background-size: cover;
+      position: relative;
+    }
+
+    .wrapRight {
+      // width: 350px;
+      padding: 0 20px 0 100px;
+    }
+
+    .listMenu {
+      position: absolute;
+      left: 278px;
+      transform: translate(-50%);
+
+      .select {
+        width: 110px;
+      }
+
+      .menuItem {
+        background: #eff1f8;
+        margin: 20px 0;
+        padding: 8px 24px;
+        position: relative;
+        cursor: pointer;
+
+        &::before {
+          content: "";
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          width: 0;
+          height: 0;
+          border-style: solid;
+          border-width: 8px 0 0 56px;
+          border-color: rgb(248, 170, 1) transparent transparent transparent;
+          transform: translate(0%, 100%);
+        }
+      }
+
+      .atived {
+        background: #1890ff;
+
+        &::before {
+          border-color: rgba(0, 53, 167, 1) transparent transparent transparent;
+        }
+      }
+    }
+  }
+
+  .test {
+    width: 100px;
+    height: 50px;
+    background: yellow;
+    position: relative;
+
+    &::before {
+      content: '';
+      width: 0;
+      height: 0;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      border-width: 10px 0 0 40px;
+      border-style: solid;
+      border-color: rebeccapurple transparent transparent transparent;
+      transform: translate(0, 100%);
+    }
+  }
+}
