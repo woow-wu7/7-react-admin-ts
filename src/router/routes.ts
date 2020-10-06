@@ -22,6 +22,7 @@ const totalRoutes: IRouteModule[] = [
     routes: [ 
       // routes：用于嵌套路由，注意不是嵌套菜单
       // subs：用于注册路由，并且用于menu树形菜单，在不同系统的路由中定义了subs
+      // 嵌套路由通过 renderRoutes函数 做处理
       ...adminRoutes,
       ...bigScreenRoutes,
     ]

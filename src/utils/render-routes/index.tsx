@@ -13,7 +13,7 @@ function normolize(routes?: IRouteModule[]) {
 	routes?.forEach(route => {
 		!route.subs
 			? result.push(route)
-			: result = result.concat(normolize(route.subs))
+			: result = result.concat(normolize(route.subs)) // 拼接
 	})
 	return result
 }
@@ -26,7 +26,7 @@ function normolize(routes?: IRouteModule[]) {
 const renderRoutes = (routes?: IRouteModule[], extraProps = {}, switchProps = {}) => {
 	return routes
 		? <Switch {...switchProps}>
-			{normolize(routes).map((route, index) => {
+			{normolize(routes).map((route, index) => { // 先对subs做处理
 				return route.path && route.component &&
 				// path 并且 component 同时存在才进行路由注册
 				// path 和 componet 总是同时存在，同时不存在

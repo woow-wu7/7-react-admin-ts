@@ -1,11 +1,4 @@
-import { lazy } from "react"
-export { renderRoutes } from './react-router-config'
 import { Modal } from "antd"
-
-// 懒加载
-export const lazyLoad = (modulePath: string) => {
-  return lazy(() => import(modulePath))
-}
 
 // 表单为保存提示，自定义提示DOM样式，阻止默认样式
 export function getUserConfirmation(message: string, callback: any) {
