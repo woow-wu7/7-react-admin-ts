@@ -27,8 +27,11 @@
     }
 
     .wrapRight {
-      // width: 350px;
-      padding: 0 20px 0 100px;
+      padding: 0 40px 0 90px;
+
+      .loginForm {
+        width: 260px;
+      }
     }
 
     .listMenu {
@@ -88,6 +91,14 @@
       border-style: solid;
       border-color: rebeccapurple transparent transparent transparent;
       transform: translate(0, 100%);
+    }
+  }
+}
+
+:global {
+  .custom-form-button {
+    .ant-col-18 {
+      max-width: 100%;
     }
   }
 }

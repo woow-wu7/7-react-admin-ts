@@ -26,6 +26,12 @@ const list = [
   }
 ]
 
+// form样式
+const layout = {
+  labelCol: { span: 6 },
+  wrapperCol: { span: 18 },
+};
+
 const Login = (props: { history?: any; changeSystemType?: any; getToken?: any; systemType: string; }) => {
   const [activedMenu, setActivedMenu] = useState('')
   const [form] = Form.useForm();
@@ -68,6 +74,7 @@ const Login = (props: { history?: any; changeSystemType?: any; getToken?: any; s
         <div className={loginStyle.wrapLeft}></div>
         <div className={loginStyle.wrapRight}>
           <Form
+            {...layout}
             name="basic"
             initialValues={{ remember: true }}
             onFinish={onFinish}
@@ -95,13 +102,13 @@ const Login = (props: { history?: any; changeSystemType?: any; getToken?: any; s
               <Checkbox>Remember me</Checkbox>
             </Form.Item>
 
-            <Form.Item >
+            <Form.Item className="custom-form-button">
               <Button type="primary" block size="large" onClick={fill}>
                 自动填充
           </Button>
             </Form.Item>
 
-            <Form.Item >
+            <Form.Item className="custom-form-button">
               <Button type="primary" htmlType="submit" block size="large">
                 登陆
           </Button>
