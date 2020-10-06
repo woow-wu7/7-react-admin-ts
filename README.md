@@ -261,3 +261,16 @@ SYSTEMTYPE2.ADMIN =========> 0
   ```
 - [issue](https://stackoverflow.com/questions/41292559/could-not-find-a-declaration-file-for-module-module-name-path-to-module-nam/51320328#51320328)
 - [ts类型声明文件的正确使用姿势](https://zhuanlan.zhihu.com/p/103158789)
+
+
+### (3) style-lint
+- `:global` 报错
+- 解决方法：
+  - .stylelintrc.js 中做以下修改
+```
+rules: {
+    "selector-pseudo-class-no-unknown": [true, {
+      ignorePseudoClasses: ["global"],
+    }]
+  },
+```
