@@ -142,16 +142,34 @@ package.json
 - docs: 文档 documentation
 - refactor：重构（即不是新增功能，也不是修改bug的代码变动）
 - test：测试
-- chore：构建过程 或 辅助工具的变动
+- chore：构建过程 或 辅助工具的变动 (chore：日常事务，乏味无趣的工作的意思)
 - style：格式（不影响代码运行的变动）
 
 
+
+### (10) 没有锁版本造成的报错
+- 报错：TypeScript error in /@pretty-format/build/index.d.ts(7,13): '=' expected.  TS1005
+- 原因："typescript": "~3.7.2", 版本问题
+- 解决："typescript": "^3.8.2"
+- 资料：https://www.jianshu.com/p/a69ff39a91c5
+
+
+
+### (11) js注释规范
+- http://www.shouce.ren/api/view/a/13269
+
+
+
+
 ---
 ---
 ---
 ---
 ---
 ---
+
+
+
 
 # create-react-app
 
@@ -196,3 +214,48 @@ SYSTEMTYPE2.ADMIN =========> 0
 ### 单词
   - conventional：常规的
   - chore：日常事务，乏味无聊的工作
+
+
+
+---
+---
+---
+---
+---
+---
+
+
+
+
+# Bug总结
+
+### (1) [ts]未终止的正则表达式文字
+- 注意如果有组件或者jsx返回的DOM，就必须用 tsx 文件后缀
+
+### (2) 找不到模块“xxxx”或其相应的类型声明。
+- 最简单的修复方式：在import前面加上 `// @ts-ignore`
+- 合理的解决办法：
+  - 1、 项目根目录下添加 index.d.ts, 并在其中写类型声明
+  - 2、 将 index.d.ts 加入到 tsconfig.json 中的配置项 include
+
+  - 1. 创建一个 types 目录，专门用来管理自己写的声明文件，将 foo 的声明文件放到 types/foo/index.d.ts 中
+  - 2. tsconfig.json 中的 paths 和 baseUrl 字段
+  ```
+  根目录/types/redux/idnex.d.ts
+  declare module 'redux' {
+    const bindActionCreators: any
+    export { bindActionCreators }
+  }
+
+  tsconfig.json
+  "compilerOptions": {
+    "baseUrl": "./",
+    "paths": {
+      "*": [
+        "types/*"
+      ]
+    }
+  },
+  ```
+- [issue](https://stackoverflow.com/questions/41292559/could-not-find-a-declaration-file-for-module-module-name-path-to-module-nam/51320328#51320328)
+- [ts类型声明文件的正确使用姿势](https://zhuanlan.zhihu.com/p/103158789)

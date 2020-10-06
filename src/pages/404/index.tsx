@@ -1,11 +1,7 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 
-const NotFound = (props: any) => {
-  return (
-    <>
-      <p>404</p>
-    </>
-  )
+const NotFound = () => {
+    return  <p>404 not found</p>
 }
 
-export default NotFound 
+export default NotFound
