@@ -3,12 +3,17 @@ export interface IRouteModule {
   component?: any;
   exact?: boolean;
   strict?: boolean;
-  routes?: any;
+  routes?: IRouteModule[];
   render?: any;
-
   // 用于router 和 menu 的结合
   title?: string;
   key?: string;
   icon?: string;
   subs?: IRouteModule[];
+  meta: IMeta
+}
+
+export interface IMeta {
+  needLoginAuth: boolean;
+  rolesAuth?: string[];
 }

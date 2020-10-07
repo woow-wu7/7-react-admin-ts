@@ -51,7 +51,8 @@ const Admin = (props: any) => {
 					</ul>
 				</Header>
 				<Content className={styles.content}>
-					{renderRoutes(props.route.routes)}
+					{renderRoutes(props.route.routes)} 
+					{/* renderRoutes(props.route.routes) 再次执行，注册嵌套的路由，成为父组件的子组件 */}
 				</Content>
 			</Layout>
 		</Layout>

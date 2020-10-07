@@ -9,19 +9,19 @@ import { SYSTEMTYPE } from '../../global/enum'
 // 避免在 Login 中重复渲染
 const list = [
   {
-    label: '监管机构',
+    label: '测试菜单',
     value: 'monitor'
   },
   {
-    label: '征信机构',
+    label: '测试菜单',
     value: 'credit'
   },
   {
-    label: '查询机构',
+    label: '测试菜单',
     value: 'search'
   },
   {
-    label: '数据源',
+    label: '测试菜单',
     value: 'origin'
   }
 ]
@@ -75,8 +75,6 @@ const Login = (props: { history?: any; changeSystemType?: any; getToken?: any; s
   const change = (v: string) => {
     setActivedMenu(value => value = v)
   }
-
-  console.log(props, 'props');
 
   return (
     <div className={loginStyle.login}>
