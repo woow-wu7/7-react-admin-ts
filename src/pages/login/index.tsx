@@ -32,6 +32,16 @@ const layout = {
   wrapperCol: { span: 18 },
 };
 
+// imgage动画数组
+const imagesArr = [
+  <div className={loginStyle.image1} key={1}></div>,
+  <div className={loginStyle.image2} key={2}></div>,
+  <div className={loginStyle.image3} key={3}></div>,
+  <div className={loginStyle.image1} key={4}></div>,
+  <div className={loginStyle.image2} key={5}></div>,
+  <div className={loginStyle.image3} key={6}></div>,
+]
+
 const Login = (props: { history?: any; changeSystemType?: any; getToken?: any; systemType: string; }) => {
   const [activedMenu, setActivedMenu] = useState('')
   const [form] = Form.useForm();
@@ -71,7 +81,9 @@ const Login = (props: { history?: any; changeSystemType?: any; getToken?: any; s
   return (
     <div className={loginStyle.login}>
       <div className={loginStyle.wrap}>
-        <div className={loginStyle.wrapLeft}></div>
+        <div className={loginStyle.wrapLeft}>
+          {imagesArr.map(item => item)}
+        </div>
         <div className={loginStyle.wrapRight}>
           <Form
             {...layout}

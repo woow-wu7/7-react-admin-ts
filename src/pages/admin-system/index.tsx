@@ -29,7 +29,7 @@ const Admin = (props: any) => {
 		})
 	}
 
-	const goPage = ({keyPath}: {keyPath: any}) => {
+	const goPage = ({ keyPath }: { keyPath: any }) => {
 		history.push(keyPath[0])
 	}
 
@@ -47,7 +47,7 @@ const Admin = (props: any) => {
 			<Layout>
 				<Header className={styles.header}>
 					<ul className={styles.topMenu}>
-						<li>退出</li>
+						<li onClick={() => history.push('/login')}>退出</li>
 					</ul>
 				</Header>
 				<Content className={styles.content}>

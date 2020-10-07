@@ -1,5 +1,6 @@
 # (一) 技术栈
 ` ts + react-hooks + react-router-dom@5.2.0 + redux + react-redux `
+` 通过 create-react-app 脚手架构建 `
 
 
 
