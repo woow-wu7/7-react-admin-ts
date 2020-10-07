@@ -1,3 +1,11 @@
+# (一) 技术栈
+` ts + react-hooks + react-router-dom@5.2.0 + redux + react-redux `
+
+
+
+
+# (二) 代码规范相关 ( 1-7 )
+
 ### (1) commitlint
 - [官网教程](https://github.com/conventional-changelog/commitlint)
 - 安装
@@ -15,16 +23,12 @@ module.exports = {
 }
 ```
 
-
-
 ### (2) husky
 - [官网教程](https://typicode.github.io/husky/#/)
 - 安装
   - yarn add husky --save-dev
 - 配置
   - 在 `package.json` 中配置 `husky` 字段
-
-
 
 ### (3) lint-staged 
 - [官网教程](https://github.com/okonet/lint-staged)
@@ -40,15 +44,9 @@ module.exports = {
     - 如果使用 `pre-commit`中用到 `eslint` 就需要配置 `.eslintrc.js` 和 `.eslintignore` 不然会报错
     - 在 `.eslintrc.js` 中，通过 `/* eslint-disable */` 
 
-
-
-
 ### (4) eslint
 - [官网教程](https://cn.eslint.org/docs/user-guide/command-line-interface)
 - [配置实例详细教程](https://juejin.im/post/6844904056591220750#heading-4)
-
-
-
 
 ### (5) stylelint
 - [官网教程](https://stylelint.io/)
@@ -83,9 +81,26 @@ package.json
   }
 ```
 
+### (6) git提交规范
+- [文档](http://www.ruanyifeng.com/blog/2016/01/commit_message_change_log.html)
+- feat: 新功能 feature
+- fix: 修复bug
+- docs: 文档 documentation
+- refactor：重构（即不是新增功能，也不是修改bug的代码变动）
+- test：测试
+- chore：构建过程 或 辅助工具的变动 (chore：日常事务，乏味无趣的工作的意思)
+- style：格式（不影响代码运行的变动）
+
+### (7) js注释规范
+- http://www.shouce.ren/api/view/a/13269
 
 
-### (6) react-router-dom
+
+
+
+# (三) 按需加载相关
+
+### (1) react-router-dom
 - npm install react-router-dom
 - npm install @types/react-router-dom
 - **集中式路由插件** ( `react-router-config` )
@@ -105,9 +120,7 @@ package.json
   - 2. 第三方库 `react-loadable`
     - https://github.com/jamiebuilds/react-loadable
 
-
-
-### (7) antd 按需加载
+### (2) antd 按需加载
 - [babel-plugin-import官网](https://github.com/ant-design/babel-plugin-import)
 - [实例教程](https://cloud.tencent.com/developer/article/1467366)
 - npm install babel-plugin-import -D
@@ -125,9 +138,11 @@ package.json
 }
 ```
 
+### (3) antd使用iconfont自定义图标
+- [官网](https://ant.design/components/icon-cn/#components-icon-demo-basic)
+- scriptUrl 就是 Symbol在线生成的文件路径
 
-
-### (8) redux 相关
+### (4) redux 相关
 - npm install redux react-redux -S
 - npm install @types/react-redux -S
 - npm install --save redux-devtools-extension
@@ -135,45 +150,9 @@ package.json
 
 
 
-### (9) git提交规范
-- [文档](http://www.ruanyifeng.com/blog/2016/01/commit_message_change_log.html)
-- feat: 新功能 feature
-- fix: 修复bug
-- docs: 文档 documentation
-- refactor：重构（即不是新增功能，也不是修改bug的代码变动）
-- test：测试
-- chore：构建过程 或 辅助工具的变动 (chore：日常事务，乏味无趣的工作的意思)
-- style：格式（不影响代码运行的变动）
 
 
-
-### (10) 没有锁版本造成的报错
-- 报错：TypeScript error in /@pretty-format/build/index.d.ts(7,13): '=' expected.  TS1005
-- 原因："typescript": "~3.7.2", 版本问题
-- 解决："typescript": "^3.8.2"
-- 资料：https://www.jianshu.com/p/a69ff39a91c5
-
-
-
-### (11) js注释规范
-- http://www.shouce.ren/api/view/a/13269
-
-### (12) antd使用iconfont自定义图标
-- [官网](https://ant.design/components/icon-cn/#components-icon-demo-basic)
-- scriptUrl 就是 Symbol在线生成的文件路径
-
-# (13) 
----
----
----
----
----
----
-
-
-
-
-# create-react-app
+# (四) create-react-app 相关设置
 
 ### 别名
 
@@ -184,11 +163,8 @@ package.json
 
 ### 在 create-react-app 实现代码分割
 
-
-
 ### require.context => ts报错不存在属性
 - npm install @tyeps/webpack-env -D
-
 
 ### 使用TS中的 enum 枚举类型避免魔法字符串
 - export enum SYSTEMTYPE { ADMIN, BIGSCREEN }
@@ -219,17 +195,10 @@ SYSTEMTYPE2.ADMIN =========> 0
 
 
 
----
----
----
----
----
----
 
 
 
-
-# Bug总结
+# (五) BUG总结
 
 ### (1) [ts]未终止的正则表达式文字
 - 注意如果有组件或者jsx返回的DOM，就必须用 tsx 文件后缀
@@ -262,7 +231,6 @@ SYSTEMTYPE2.ADMIN =========> 0
 - [issue](https://stackoverflow.com/questions/41292559/could-not-find-a-declaration-file-for-module-module-name-path-to-module-nam/51320328#51320328)
 - [ts类型声明文件的正确使用姿势](https://zhuanlan.zhihu.com/p/103158789)
 
-
 ### (3) style-lint
 - `:global` 报错
 - 解决方法：
@@ -274,3 +242,9 @@ rules: {
     }]
   },
 ```
+
+### (4) 没有锁版本造成的报错
+- 报错：TypeScript error in /@pretty-format/build/index.d.ts(7,13): '=' expected.  TS1005
+- 原因："typescript": "~3.7.2", 版本问题
+- 解决："typescript": "^3.8.2"
+- 资料：https://www.jianshu.com/p/a69ff39a91c5
