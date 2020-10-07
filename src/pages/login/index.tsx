@@ -6,6 +6,7 @@ import { bindActionCreators } from 'redux';
 import * as actions from '../../app.action'
 import { SYSTEMTYPE } from '../../global/enum'
 import { ILoginMessage } from '../../global/interface'
+import { setLocalStorage } from '../../utils'
 
 // 避免在 Login 中重复渲染
 const list = [
@@ -62,10 +63,13 @@ const Login = (
   }
 
   const onFinish = (values: any) => {
-    getLoginMessage({
+    const loginMessage = {
       token: 'token123456',
       roles: 'admin'
-    });
+    }
+
+    getLoginMessage(loginMessage); // 存入store
+    setLocalStorage('loginMessage', loginMessage) // 存入 localstorage
 
     SYSTEMTYPE[systemType] === SYSTEMTYPE.BIGSCREEN
       ? props.history.push('/big-screen-home')

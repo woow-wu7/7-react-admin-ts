@@ -2,6 +2,7 @@ import React from 'react'
 import { IRouteModule } from '../../global/interface'
 import { Switch, Route, useHistory } from 'react-router-dom'
 import { useSelector } from 'react-redux'
+import { getLocalStorage } from '..'
 
 /**
  * @function routesFilter routes的权限过滤
@@ -10,7 +11,7 @@ export function routesFilter(routes: IRouteModule[], roles: string) {
 	return routes.filter(({ meta: { needLoginAuth, rolesAuth }, routes: nestRoutes, subs }) => {
 		if (nestRoutes) { // 存在routes，对routes数组过滤，并重新赋值过滤后的routes
 			nestRoutes = routesFilter(nestRoutes, roles) // 递归
-		} 
+		}
 		if (subs) { // 存在subs，对subs数组过滤，并重新赋值过滤后的subs
 			subs = routesFilter(subs, roles) // 递归
 		}
@@ -29,7 +30,7 @@ export function routesFilter(routes: IRouteModule[], roles: string) {
  * @description 因为menu树都在同一个路由视口，所以可以在同一层级就行路由注册
  * @description 注意：path 和 component 在存在subs的那层menu-route对象中同时存在和同时不存在
  */
-function normalize(routes?: IRouteModule[]) {
+export function normalize(routes?: IRouteModule[]) {
 	let result: IRouteModule[] = []
 	routes?.forEach(route => {
 		!route.subs
@@ -44,10 +45,16 @@ function normalize(routes?: IRouteModule[]) {
  * @function renderRoutes
  * @description 注册所有路由，并向嵌套子路由组件传递 route 对象属性，子组件就可以获取嵌套路由属性 routes
  */
-const renderRoutes = (routes: IRouteModule[], extraProps = {}, switchProps = {}) => {
+export const renderRoutes = (routes: IRouteModule[], extraProps = {}, switchProps = {}) => {
 	const history = useHistory()
-	const token = useSelector((state: {app: {loginMessage: {token: string}}}) => state.app.loginMessage.token)
-	const roles = useSelector((state: {app: {loginMessage: {roles: string}}}) => state.app.loginMessage.roles)
+	const token = 
+		useSelector((state: { app: { loginMessage: { token: string } } }) => state.app.loginMessage.token) ||
+		getLocalStorage('loginMessage').token;
+		
+	const roles = 
+		useSelector((state: { app: { loginMessage: { roles: string } } }) => state.app.loginMessage.roles) ||
+		getLocalStorage('loginMessage').roles;
+
 	if (!token) {
 		history.push('/login') // token未登录去登陆页面
 	}
@@ -75,9 +82,4 @@ const renderRoutes = (routes: IRouteModule[], extraProps = {}, switchProps = {})
 				})}
 		</Switch>
 		: null
-}
-
-
-export {
-	renderRoutes
 }

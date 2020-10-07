@@ -7,6 +7,7 @@ import { IRouteModule } from '../../global/interface'
 import IconFont from '../../components/Icon-font'
 import { useHistory } from 'react-router-dom';
 import { useSelector } from 'react-redux';
+import { getLocalStorage } from '../../utils';
 
 const { SubMenu } = Menu;
 const { Header, Sider, Content } = Layout;
@@ -19,7 +20,10 @@ const Admin = (props: any) => {
 	 * @description 递归渲染菜单
 	 */
 	const renderMenu = (adminRoutes: IRouteModule[]) => {
-		const roles = useSelector((state: { app: { loginMessage: { roles: string } } }) => state.app.loginMessage.roles)
+		const roles =
+			useSelector((state: { app: { loginMessage: { roles: string } } }) => state.app.loginMessage.roles) ||
+			getLocalStorage('loginMessage').roles;
+
 		adminRoutes = routesFilter(adminRoutes, roles) // adminRoutes权限过滤
 
 		return adminRoutes.map(({ subs, key, title, icon }) => {
