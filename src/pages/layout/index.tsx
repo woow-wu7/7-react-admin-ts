@@ -9,7 +9,7 @@ import BigScreen from '../bigscreen-system'
 const Layout = (props: any) => {
   const { systemType } = props
   let history = useHistory();
-  const token = useSelector((state: any) => state.app.token)
+  const token = useSelector((state: {app: {loginMessage: {token: string}}}) => state.app.loginMessage.token)
 
   const isToLogin = () => {
     !token && history.replace('/login')

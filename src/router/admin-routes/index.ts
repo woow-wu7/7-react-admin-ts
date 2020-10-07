@@ -69,7 +69,7 @@ const adminRoutes: IRouteModule[] = [{
   key: '/admin-js',
   meta: {
     needLoginAuth: true,
-    rolesAuth: ['user', 'admin']
+    rolesAuth: ['admin']
   },
   subs: [{
     title: 'ES6',
@@ -79,7 +79,7 @@ const adminRoutes: IRouteModule[] = [{
     component: JsEs6,
     meta: {
       needLoginAuth: true,
-      rolesAuth: ['user', 'admin']
+      rolesAuth: ['admin']
     },
   }, {
     title: 'ES5',
@@ -89,7 +89,7 @@ const adminRoutes: IRouteModule[] = [{
     component: UiAntd,
     meta: {
       needLoginAuth: true,
-      rolesAuth: ['user', 'admin']
+      rolesAuth: ['admin']
     },
   }]
 }]

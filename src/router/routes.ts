@@ -27,8 +27,7 @@ const totalRoutes: IRouteModule[] = [
     path: '/',
     component: Layout,
     meta: {
-      needLoginAuth: true,
-      rolesAuth: ['user', 'admin']
+      needLoginAuth: false,
     },
     routes: [ 
       // routes：用于嵌套路由，注意不是嵌套菜单

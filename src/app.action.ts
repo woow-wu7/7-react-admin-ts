@@ -7,9 +7,9 @@ export const changeSystemType = (payload: any) => {
   }
 }
 
-export const getToken = (token: string) => {
+export const getLoginMessage = (loginMessage: { token: string, roles: string }) => {
   return {
-    type: actionType.GET_TOKEN,
-    payload: token
+    type: actionType.GET_LOGIN_MESSAGE,
+    payload: loginMessage
   }
 }

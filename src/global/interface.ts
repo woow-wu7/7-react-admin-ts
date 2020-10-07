@@ -1,3 +1,4 @@
+// route对象
 export interface IRouteModule {
   path?: string;
   component?: any;
@@ -13,7 +14,15 @@ export interface IRouteModule {
   meta: IMeta
 }
 
+// router对象中的 meta
 export interface IMeta {
   needLoginAuth: boolean;
   rolesAuth?: string[];
+}
+
+
+// store => app => loginMessage
+export interface ILoginMessage {
+  token: string;
+  roles: string;
 }

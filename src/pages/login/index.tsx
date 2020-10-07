@@ -5,6 +5,7 @@ import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux';
 import * as actions from '../../app.action'
 import { SYSTEMTYPE } from '../../global/enum'
+import { ILoginMessage } from '../../global/interface'
 
 // 避免在 Login 中重复渲染
 const list = [
@@ -42,11 +43,18 @@ const imagesArr = [
   <div className={loginStyle.image3} key={6}></div>,
 ]
 
-const Login = (props: { history?: any; changeSystemType?: any; getToken?: any; systemType: string; }) => {
+const Login = (
+  props: {
+    history?: any;
+    changeSystemType?: any;
+    getLoginMessage: (message: ILoginMessage) => void;
+    systemType: string;
+  }
+) => {
   const [activedMenu, setActivedMenu] = useState('')
   const [form] = Form.useForm();
 
-  const { changeSystemType, getToken, systemType } = props
+  const { changeSystemType, getLoginMessage, systemType } = props
   const { Option } = Select;
 
   const handleChange = (type: string) => {
@@ -54,7 +62,10 @@ const Login = (props: { history?: any; changeSystemType?: any; getToken?: any; s
   }
 
   const onFinish = (values: any) => {
-    getToken('token123456');
+    getLoginMessage({
+      token: 'token123456',
+      roles: 'admin'
+    });
 
     SYSTEMTYPE[systemType] === SYSTEMTYPE.BIGSCREEN
       ? props.history.push('/big-screen-home')
