@@ -155,10 +155,11 @@ package.json
 
 # (四) create-react-app 相关设置
 
-### 添加别名 `@` 映射 `src`
+### (1) 添加别名 `@` 映射 `src`
 - 1. create-react-app构建的项目，eject后，找到 config/webpack.config.js => resolve.alias
 - 2. tsconfig.json 中删除 `baseUrl` 和 `paths`，添加 ` "extends": "./paths.json" `
 - 3. 在根目录新建 `paths.json` 文件，写入 `baseUrl` 和 `paths` 配置
+- [教程地址](https://www.jianshu.com/p/6f8a98a9f2e2)
 ```
 1. webpack.config.js => resolve => alias
 module.export = {
@@ -187,17 +188,17 @@ module.export = {
 }
 ```
 
-### css-module
+### (2) css-module
 - 需要安装 node-sass
 - npm install node-sass -D
 - xxxx.module.scss
 
-### 在 create-react-app 实现代码分割
+### (3) 在 create-react-app 实现代码分割
 
-### require.context => ts报错不存在属性
+### (4) require.context => ts报错不存在属性
 - npm install @tyeps/webpack-env -D
 
-### 使用TS中的 enum 枚举类型避免魔法字符串
+### (5) 使用TS中的 enum 枚举类型避免魔法字符串
 - export enum SYSTEMTYPE { ADMIN, BIGSCREEN }
 - import { SYSTEMTYPE } from 'src/global/enum.ts'
 - 注意点1：
@@ -220,7 +221,7 @@ SYSTEMTYPE1.ADMIN =========> 'ADMIN'
 SYSTEMTYPE2.ADMIN =========> 0
 ```
 
-### 单词
+### (6) 单词
   - conventional：常规的
   - chore：日常事务，乏味无聊的工作
 
