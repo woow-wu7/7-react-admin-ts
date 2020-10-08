@@ -131,7 +131,7 @@ module.exports = function(webpackEnv) {
         options: {
             resources: [
               // 这里按照你的文件路径填写../../../ 定位到根目录下, 可以引入多个文件
-              path.resolve(__dirname, '../src/style/index.scss'),
+              path.resolve(__dirname, '../src/styles/index.scss'),
             ]
         }
       })
