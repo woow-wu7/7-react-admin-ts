@@ -1,5 +1,5 @@
 import React from 'react'
-import { IRouteModule } from '../../global/interface'
+import { IRouteModule } from '@/global/interface'
 import { Switch, Route, useHistory } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 import { getLocalStorage } from '..'

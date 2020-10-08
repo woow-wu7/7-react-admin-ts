@@ -4,9 +4,9 @@ import loginStyle from './login.module.scss'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux';
 import * as actions from '../../app.action'
-import { SYSTEMTYPE } from '../../global/enum'
-import { ILoginMessage } from '../../global/interface'
-import { setLocalStorage } from '../../utils'
+import { SYSTEMTYPE } from '@/global/enum'
+import { ILoginMessage } from '@/global/interface'
+import { setLocalStorage } from '@/utils'
 
 // 避免在 Login 中重复渲染
 const list = [

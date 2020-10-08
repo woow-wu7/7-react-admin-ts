@@ -1,9 +1,9 @@
-import { IRouteModule } from '../../global/interface'
-import AdminHome from '../../pages/admin-system/home'
-import UiAntd from '../../pages/admin-system/ui-antd'
-import UiAntdForm from '../../pages/admin-system/ui-antd-form'
-import UiVant from '../../pages/admin-system/ui-vant'
-import JsEs6 from '../../pages/admin-system/js-es6'
+import { IRouteModule } from '@/global/interface'
+import AdminHome from '@/pages/admin-system/home'
+import UiAntd from '@/pages/admin-system/ui-antd'
+import UiAntdForm from '@/pages/admin-system/ui-antd-form'
+import UiVant from '@/pages/admin-system/ui-vant'
+import JsEs6 from '@/pages/admin-system/js-es6'
 
 const adminRoutes: IRouteModule[] = [{
   title: '首页',

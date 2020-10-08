@@ -1,5 +1,5 @@
 import React from 'react'
-import { IRouteModule } from '../../global/interface'
+import { IRouteModule } from '@/global/interface'
 import { Switch, Route } from 'react-router-dom'
 
 const renderRoutes = (routes?: IRouteModule[], extraProps = {}, switchProps = {}) => {

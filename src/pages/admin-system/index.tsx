@@ -1,10 +1,10 @@
 import React from 'react'
-import { renderRoutes, routesFilter } from '../../utils/render-routes/index'
+import { renderRoutes, routesFilter } from '@/utils/render-routes/index'
 import styles from './index.module.scss'
 import { Layout, Menu } from 'antd';
-import adminRoutes from '../../router/admin-routes'
-import { IRouteModule } from '../../global/interface'
-import IconFont from '../../components/Icon-font'
+import adminRoutes from '@/router/admin-routes'
+import { IRouteModule } from '@/global/interface'
+import IconFont from '@/components/Icon-font'
 import { useHistory } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { getLocalStorage } from '@/utils';

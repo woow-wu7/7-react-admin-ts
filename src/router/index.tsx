@@ -1,6 +1,6 @@
 import React, { Suspense } from 'react'
-import { renderRoutes } from '../utils/render-routes/index'
-import routes from '../router/routes'
+import { renderRoutes } from '@/utils/render-routes/index'
+import routes from '@/router/routes'
 
 // renderRoutes 中包含 Switch 组件
 const Router = () => {

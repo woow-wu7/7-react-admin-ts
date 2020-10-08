@@ -194,6 +194,7 @@ module.export = {
 - xxxx.module.scss
 
 ### (3) 在 create-react-app 实现代码分割
+- [我的掘金文章](https://juejin.im/post/6879020830253285384)
 
 ### (4) require.context => ts报错不存在属性
 - npm install @tyeps/webpack-env -D

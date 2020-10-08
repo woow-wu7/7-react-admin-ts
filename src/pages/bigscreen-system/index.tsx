@@ -1,5 +1,5 @@
 import React from 'react'
-import { renderRoutes } from '../../utils/render-routes/index'
+import { renderRoutes } from '@/utils/render-routes/index'
 import styles from './index.module.scss'
 
 const BigScreen = (props: any) => {

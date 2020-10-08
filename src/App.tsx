@@ -1,5 +1,5 @@
 import React from 'react';
-import Router from '../src/router'
+import Router from '@/router'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux';
 import * as actions from './app.action'

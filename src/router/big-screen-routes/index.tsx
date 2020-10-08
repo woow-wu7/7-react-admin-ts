@@ -1,4 +1,4 @@
-import { IRouteModule } from '../../global/interface'
+import { IRouteModule } from '@/global/interface'
 import BigScreenHome from '../../pages/bigscreen-system/home'
 
 const bigScreenRoutes: IRouteModule[] = [{

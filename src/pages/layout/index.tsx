@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react'
 import { connect, useSelector } from 'react-redux'
 import { useHistory } from 'react-router-dom'
-import { SYSTEMTYPE } from '../../global/enum'
-import { getLocalStorage } from '../../utils'
+import { SYSTEMTYPE } from '@/global/enum'
+import { getLocalStorage } from '@/utils'
 import AdminSystem from '../admin-system'
 import BigScreen from '../bigscreen-system'
 
