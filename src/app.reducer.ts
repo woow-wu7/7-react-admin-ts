@@ -7,7 +7,6 @@ const initialState = {
     token: '',
     roles: ''
   },
-  lastBreadCrumbUseParams: ''
 }
 
 const appReducer = (
@@ -28,11 +27,6 @@ const appReducer = (
           token: action.payload.token,
           roles: action.payload.roles,
         }
-      }
-    case actionType.GETLASTBREADCRUMBUSEPARAMS:
-      return {
-        ...state,
-        lastBreadCrumbUseParams: action.payload
       }
     default:
       return {
