@@ -188,6 +188,32 @@ module.export = {
 }
 ```
 
+### (2) create-react-app 配置全局的 scss ，而不需要每次 @import
+- 安装 `sass-resources-loader`
+- 修改 config/webpack.config.js 如下
+- `注意：很多教程修改use:getStyleLoaders().concat()这样修改不行`
+```
+const getStyleLoaders = (cssOptions, preProcessor) => {
+  const loaders = [......].filter(Boolean);
+  if (preProcessor) {
+    loaders.push(......);
+  }
+  if (preProcessor === 'sass-loader') {
+    loaders.push({
+      loader: 'sass-resources-loader',
+      options: {
+          resources: [
+            // 这里按照你的文件路径填写../../../ 定位到根目录下, 可以引入多个文件
+            path.resolve(__dirname, '../src/style/index.scss'),
+          ]
+      }
+    })
+  }
+  return loaders;
+};
+```
+
+
 ### (2) css-module
 - 需要安装 node-sass
 - npm install node-sass -D

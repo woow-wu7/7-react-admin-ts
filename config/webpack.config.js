@@ -125,6 +125,17 @@ module.exports = function(webpackEnv) {
         }
       );
     }
+    if (preProcessor === 'sass-loader') {
+      loaders.push({
+        loader: 'sass-resources-loader',
+        options: {
+            resources: [
+              // 这里按照你的文件路径填写../../../ 定位到根目录下, 可以引入多个文件
+              path.resolve(__dirname, '../src/style/index.scss'),
+            ]
+        }
+      })
+    }
     return loaders;
   };
 
