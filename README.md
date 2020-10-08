@@ -1,6 +1,6 @@
 # (一) 技术栈
-` ts + react-hooks + react-router-dom@5.2.0 + redux + react-redux `
-` 通过 create-react-app 脚手架构建 `
+` ts + react-hooks + react-router-dom@5.2.0 + redux + react-redux `   
+` 通过 create-react-app 脚手架构建 `   
 
 
 
@@ -155,7 +155,37 @@ package.json
 
 # (四) create-react-app 相关设置
 
-### 别名
+### 添加别名 `@` 映射 `src`
+- 1. create-react-app构建的项目，eject后，找到 config/webpack.config.js => resolve.alias
+- 2. tsconfig.json 中删除 `baseUrl` 和 `paths`，添加 ` "extends": "./paths.json" `
+- 3. 在根目录新建 `paths.json` 文件，写入 `baseUrl` 和 `paths` 配置
+```
+1. webpack.config.js => resolve => alias
+module.export = {
+   resolve: {
+     alias: {
+      "@": path.resolve(__dirname, '../src')
+     }
+   }
+ }
+2. 根目录新建 paths.json 写入以下配置
+{
+  "compilerOptions": {
+    "baseUrl": "src",
+    "paths": {
+      "@/*": ["*"]
+    }
+  }
+}
+3. 在 tsconfig.json 中做如下修改，添加( extends ), 删除(  baseUrl,paths )
+{
+  // "baseUrl": "src",
+  // "paths": {
+  //   "@/*": ["src/*"]
+  // },
+  "extends": "./paths.json"
+}
+```
 
 ### css-module
 - 需要安装 node-sass

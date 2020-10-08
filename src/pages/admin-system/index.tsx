@@ -7,7 +7,7 @@ import { IRouteModule } from '../../global/interface'
 import IconFont from '../../components/Icon-font'
 import { useHistory } from 'react-router-dom';
 import { useSelector } from 'react-redux';
-import { getLocalStorage } from '../../utils';
+import { getLocalStorage } from '@/utils';
 
 const { SubMenu } = Menu;
 const { Header, Sider, Content } = Layout;

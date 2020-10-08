@@ -23,10 +23,5 @@
   "include": [
     "src",
   ],
-  "baseUrl": ".",
-  "paths": {
-    "@/*": [
-      "src/*"
-    ]
-  }
+  "extends": "./paths.json"
 }
