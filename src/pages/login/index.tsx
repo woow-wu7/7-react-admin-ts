@@ -65,7 +65,7 @@ const Login = (
   const onFinish = (values: any) => {
     const loginMessage = {
       token: 'token123456',
-      roles: 'admin'
+      roles: 'user'
     }
 
     getLoginMessage(loginMessage); // 存入store

@@ -155,7 +155,7 @@ package.json
 
 # (四) create-react-app 相关设置
 
-### (1) 添加别名 `@` 映射 `src`
+### (1) 添加别名 `@` 映射 `src` 在TS的项目中
 - 1. create-react-app构建的项目，eject后，找到 config/webpack.config.js => resolve.alias
 - 2. tsconfig.json 中删除 `baseUrl` 和 `paths`，添加 ` "extends": "./paths.json" `
 - 3. 在根目录新建 `paths.json` 文件，写入 `baseUrl` 和 `paths` 配置
@@ -281,3 +281,6 @@ rules: {
 - 原因："typescript": "~3.7.2", 版本问题
 - 解决："typescript": "^3.8.2"
 - 资料：https://www.jianshu.com/p/a69ff39a91c5
+
+
+https://www.cnblogs.com/xiaojiumei/p/10422806.html

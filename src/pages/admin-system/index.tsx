@@ -8,6 +8,7 @@ import IconFont from '@/components/Icon-font'
 import { useHistory } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { getLocalStorage } from '@/utils';
+import CustomBreadcrumb from '@/components/custorm-breadcrumb';
 
 const { SubMenu } = Menu;
 const { Header, Sider, Content } = Layout;
@@ -59,6 +60,7 @@ const Admin = (props: any) => {
 					</ul>
 				</Header>
 				<Content className={styles.content}>
+					<CustomBreadcrumb />
 					{renderRoutes(props.route.routes)}
 					{/* renderRoutes(props.route.routes) 再次执行，注册嵌套的路由，成为父组件的子组件 */}
 				</Content>
