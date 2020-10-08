@@ -27,14 +27,16 @@ const Admin = (props: any) => {
 
 		adminRoutes = routesFilter(adminRoutes, roles) // adminRoutes权限过滤
 
-		return adminRoutes.map(({ subs, key, title, icon }) => {
+		return adminRoutes.map(({ subs, key, title, icon, path }) => {
 			return subs
 				?
 				<SubMenu key={key} title={title} icon={<IconFont type={icon || 'anticon-shouye'} />}>
 					{renderMenu(subs)}
 				</SubMenu>
 				:
-				<Menu.Item key={key} icon={<IconFont type={icon || 'anticon-shouye'} />} >{title}</Menu.Item>
+				!path.includes(':') && <Menu.Item key={key} icon={<IconFont type={icon || 'anticon-shouye'} />} >{title}</Menu.Item>
+				// 动态路由不进行显示，因为一般动态路由是详情页
+				// 虽然不显示，但是需要注册路由，只是menu不显示
 		})
 	}
 

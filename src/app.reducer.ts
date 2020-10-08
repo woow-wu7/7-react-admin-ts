@@ -6,12 +6,13 @@ const initialState = {
   loginMessage: {
     token: '',
     roles: ''
-  }
+  },
+  lastBreadCrumbUseParams: ''
 }
 
 const appReducer = (
   state = initialState,
-  action: { type: string, payload: { token: string, roles: string } }
+  action: { type: string, payload: any }
 ) => {
   switch (action.type) {
     case actionType.SYSTEM_TYPE:
@@ -27,6 +28,11 @@ const appReducer = (
           token: action.payload.token,
           roles: action.payload.roles,
         }
+      }
+    case actionType.GETLASTBREADCRUMBUSEPARAMS:
+      return {
+        ...state,
+        lastBreadCrumbUseParams: action.payload
       }
     default:
       return {

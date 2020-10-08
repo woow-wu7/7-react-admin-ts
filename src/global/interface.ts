@@ -1,6 +1,6 @@
 // route对象
 export interface IRouteModule {
-  path?: string;
+  path: string;
   component?: any;
   exact?: boolean;
   strict?: boolean;

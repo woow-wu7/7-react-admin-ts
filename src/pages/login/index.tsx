@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { Button, Form, Input, Checkbox, Select } from "antd"
 import loginStyle from './login.module.scss'
 import { connect } from 'react-redux'

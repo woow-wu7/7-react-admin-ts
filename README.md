@@ -113,7 +113,9 @@ package.json
 - **react-router-dom中的hooks**
   - useHistory
   - useLocation
-  - useParams
+  - useParams 
+    - ` useParams只有在动态路由对应的组件中可以获取到，在父组件或者其他组件都不能后去到 `
+    - ` 做全局 面包屑的时候容易采坑 `
   - useRouteMatch
 - **路由按需加载**
   - 1. 路由按需加载：`React.lazy` 和 `Suspense`

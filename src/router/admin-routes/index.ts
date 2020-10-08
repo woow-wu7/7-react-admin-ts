@@ -4,6 +4,7 @@ import UiAntd from '@/pages/admin-system/ui-antd'
 import UiAntdForm from '@/pages/admin-system/ui-antd-form'
 import UiVant from '@/pages/admin-system/ui-vant'
 import JsEs6 from '@/pages/admin-system/js-es6'
+import JsEs6Detail from '@/pages/admin-system/js-es6-detail'
 
 const adminRoutes: IRouteModule[] = [{
   title: '首页',
@@ -19,6 +20,7 @@ const adminRoutes: IRouteModule[] = [{
   title: 'UI',
   icon: 'anticon-uikit',
   key: '/admin-ui',
+  path: '/admin-ui',
   meta: {
     needLoginAuth: true,
     rolesAuth: ['user', 'admin']
@@ -27,6 +29,7 @@ const adminRoutes: IRouteModule[] = [{
     title: 'Antd',
     icon: 'anticon-ant-design',
     key: '/admin-ui/antd',
+    path: '/admin-ui/antd',
     meta: {
       needLoginAuth: true,
       rolesAuth: ['admin']
@@ -67,31 +70,45 @@ const adminRoutes: IRouteModule[] = [{
   title: 'JS',
   icon: 'anticon-js',
   key: '/admin-js',
+  path: '/admin-js',
   meta: {
     needLoginAuth: true,
     rolesAuth: ['admin']
   },
-  subs: [{
-    title: 'ES6',
-    icon: 'anticon-6',
-    key: '/admin-js/es6',
-    path: '/admin-js/es6',
-    component: JsEs6,
-    meta: {
-      needLoginAuth: true,
-      rolesAuth: ['admin']
+  subs: [
+    {
+      title: 'ES6',
+      icon: 'anticon-6',
+      key: '/admin-js/es6',
+      path: '/admin-js/es6',
+      component: JsEs6,
+      exact: true, // 注意；存在动态路由时，需要设置 exact 精确匹配
+      meta: {
+        needLoginAuth: true,
+        rolesAuth: ['admin']
+      },
     },
-  }, {
-    title: 'ES5',
-    icon: 'anticon-js',
-    key: '/admin-js/es5',
-    path: '/admin-js/es5',
-    component: UiAntd,
-    meta: {
-      needLoginAuth: true,
-      rolesAuth: ['admin']
+    {
+      title: 'ES6详情',
+      key: '/admin-js/es6/:id',
+      path: '/admin-js/es6/:id',
+      component: JsEs6Detail,
+      meta: {
+        needLoginAuth: true,
+        rolesAuth: ['admin']
+      },
     },
-  }]
+    {
+      title: 'ES5',
+      icon: 'anticon-js',
+      key: '/admin-js/es5',
+      path: '/admin-js/es5',
+      component: UiAntd,
+      meta: {
+        needLoginAuth: true,
+        rolesAuth: ['admin']
+      },
+    }]
 }]
 
 export default adminRoutes
