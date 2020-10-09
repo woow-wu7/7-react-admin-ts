@@ -95,6 +95,9 @@ package.json
 ### (7) js注释规范
 - http://www.shouce.ren/api/view/a/13269
 
+### (8) react-hooks 的 eslint 规范插件
+- `eslint-plugin-react-hooks`
+- [eslint-plugin-react-hooks地址](https://www.npmjs.com/package/eslint-plugin-react-hooks)
 
 
 
@@ -253,7 +256,7 @@ SYSTEMTYPE2.ADMIN =========> 0
 ### (6) 单词
   - conventional：常规的
   - chore：日常事务，乏味无聊的工作
-  - persistense：持久的
+  - persistence：持久的
 
 
 
@@ -314,5 +317,6 @@ rules: {
 
 ### (5) antdMenu Sider inlineCollapsed 报错
 - Warning: [antd: Menu] `inlineCollapsed` not control Menu under Sider. Should set `collapsed` on Sider instead.
-- mene的inlineCollapsed在有Sider父组件时，不能操作Sider，必须用Sider的collapsed属性来操作Silder展开/收缩
+- mene的inlineCollapsed在有Sider父组件时，不能操作Sider，必须用Sider的collapsed属性来操作Silder展开/收缩   
+
 https://www.cnblogs.com/xiaojiumei/p/10422806.html

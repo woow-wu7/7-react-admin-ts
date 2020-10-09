@@ -13,9 +13,15 @@ module.exports = {
       "jsx": true // 启用jsx语法
     }
   },
+  "plugins": [
+    // ...
+    "react-hooks"
+  ],
   rules: {
     'no-console': 'off', // 可以console
-    'no-debugger': 'off'
-  }
+    'no-debugger': 'off',
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn"
+  },
 }
 /* eslint-disable */

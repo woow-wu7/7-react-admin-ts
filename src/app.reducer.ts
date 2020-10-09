@@ -7,6 +7,7 @@ const initialState = {
     token: '',
     roles: ''
   },
+  routeParams: {}
 }
 
 const appReducer = (
@@ -28,6 +29,12 @@ const appReducer = (
           roles: action.payload.roles,
         }
       }
+    case actionType.GET_ROUTE_PARAMS: {
+      return {
+        ...state,
+        routeParams: action.payload
+      }
+    }
     default:
       return {
         ...state

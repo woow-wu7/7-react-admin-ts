@@ -1,6 +1,6 @@
 import { Breadcrumb } from 'antd'
-import React from 'react'
-import { useHistory, useLocation } from 'react-router-dom'
+import React, { useState } from 'react'
+import { useHistory, useLocation, useRouteMatch } from 'react-router-dom'
 import styles from './breadcrumb.module.scss'
 import { routesFilter } from '@/utils/render-routes/index'
 import adminRoutes from '@/router/admin-routes'
@@ -9,7 +9,12 @@ import { IRouteModule } from '@/global/interface'
 import { getLocalStorage } from '@/utils'
 import _ from 'lodash'
 
-
+// 需求：面包屑在点击到详情时，更新全局面包屑
+// 不足：使用localstore，在子组件set，在父组件get，但是父组件先执行，子组件后执行，并且localstore不会更新组件，所以导致面包屑不更新
+// 代替：在子组件 es6detail 中 dispatch 了一个action，但不是在onClick的事件中，触发了警告
+  // 之所以还这样做，是要在子组件es6detail更新后，b更新CustomBreadcrumb
+  // 因为子组件es6detail更新了store，而父组件 CustomBreadcrumb 有引用store中的state，所以会更新
+  // 不足：触发了警告
 const CustomBreadcrumb = () => {
   const roles = useSelector((state: any) => state.app.loginMessage.roles) || getLocalStorage('loginMessage').roles
   const pathname = useLocation().pathname // 获取url的path
@@ -17,6 +22,7 @@ const CustomBreadcrumb = () => {
 
   // routeParams => 获取useParams的params对象，对象中包含动态路由的id属性
   const routeParams = getLocalStorage('routeParams')
+  // debugger
 
   // 深拷贝 权限过滤后的adminRoutes
   const routesAmin = _.cloneDeep([...routesFilter(adminRoutes, roles)]) // 权限过滤，为了和menu同步
@@ -49,8 +55,8 @@ const CustomBreadcrumb = () => {
   const data = generateBreadcrumbData(pathname)
 
   // pathFilter 
-    // 面包屑是否可以点击导航
-    // 同时用来做可点击，不可点击的 UI
+  // 面包屑是否可以点击导航
+  // 同时用来做可点击，不可点击的 UI
   const pathFilter = (path: string) => {
     // normalizeFilterdAdminRoutes => 展平所有subs
     function normalizeFilterdAdminRoutes(routesAmin: IRouteModule[]) {
