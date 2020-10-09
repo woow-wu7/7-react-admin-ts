@@ -16,12 +16,27 @@ export function getUserConfirmation(message: string, callback: any) {
   })
 }
 
+// localstorage 存
 export function setLocalStorage(name: string, data: any) {
   const dataStr = JSON.stringify(data)
   window.localStorage.setItem(name, dataStr)
 }
 
+// localstorage 取
 export function getLocalStorage(name: string) {
   const dataStr = window.localStorage.getItem(name)
-  return JSON.parse(dataStr||'')
+  return JSON.parse(dataStr || '')
+}
+
+// 深拷贝
+export function deepClone(params: any[] | object) {
+  let results: any[] | object = Array.isArray(params) ? [] : {};
+  for (let i in params) {
+    if (params.hasOwnProperty(i)) {
+      (typeof (params[i]) === 'object' && params[i] !== 'null')
+        ? results[i] = deepClone(params[i])
+        : results[i] = params[i]
+    }
+  }
+  return results
 }
