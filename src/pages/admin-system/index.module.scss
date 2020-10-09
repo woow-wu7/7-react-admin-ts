@@ -7,8 +7,19 @@
     background: rgb(250, 242, 240);
     display: flex;
     flex-flow: row nowrap;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
+    padding-left: $safe-padding;
+    padding-right: 2 * $safe-padding;
+
+    & > aside > span {
+      padding: 10px 10px 10px 0;
+      cursor: pointer;
+
+      .toggleCollapsedIcon {
+        font-size: 20px;
+      }
+    }
 
     .topMenu {
       padding: 0;

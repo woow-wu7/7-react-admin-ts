@@ -1,7 +1,7 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { renderRoutes, routesFilter } from '@/utils/render-routes/index'
 import styles from './index.module.scss'
-import { Layout, Menu } from 'antd';
+import { Button, Layout, Menu } from 'antd';
 import adminRoutes from '@/router/admin-routes'
 import { IRouteModule } from '@/global/interface'
 import IconFont from '@/components/Icon-font'
@@ -9,11 +9,13 @@ import { useHistory } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { getLocalStorage } from '@/utils';
 import CustomBreadcrumb from '@/components/custorm-breadcrumb';
+import { MenuFoldOutlined, MenuUnfoldOutlined } from '@ant-design/icons';
 
 const { SubMenu } = Menu;
 const { Header, Sider, Content } = Layout;
 
 const Admin = (props: any) => {
+	const [collapsed, setcollapsed] = useState(false)
 	const history = useHistory()
 
 	/**
@@ -44,9 +46,13 @@ const Admin = (props: any) => {
 		history.push(keyPath[0])
 	}
 
+	const toggleCollapsed = () => {
+		setcollapsed(v => v = !v)
+	};
+
 	return (
 		<Layout className={styles.layoutAdmin}>
-			<Sider>
+			<Sider collapsed={collapsed}>
 				<Menu
 					mode="inline"
 					theme="dark"
@@ -57,6 +63,14 @@ const Admin = (props: any) => {
 			</Sider>
 			<Layout>
 				<Header className={styles.header}>
+					<aside>
+						<span onClick={toggleCollapsed}>
+							{collapsed
+								? <MenuUnfoldOutlined className={styles.toggleCollapsedIcon} />
+								: <MenuFoldOutlined className={styles.toggleCollapsedIcon} />
+							}
+						</span>
+					</aside>
 					<ul className={styles.topMenu}>
 						<li onClick={() => history.push('/login')}>退出</li>
 					</ul>

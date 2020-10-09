@@ -311,4 +311,7 @@ rules: {
 - 资料：https://www.jianshu.com/p/a69ff39a91c5
 
 
+### (5) antdMenu报错
+- Warning: [antd: Menu] `inlineCollapsed` not control Menu under Sider. Should set `collapsed` on Sider instead.
+- mene的inlineCollapsed在有Sider父组件时，不能操作Sider，必须用Sider的collapsed属性来操作Silder展开/收缩
 https://www.cnblogs.com/xiaojiumei/p/10422806.html
