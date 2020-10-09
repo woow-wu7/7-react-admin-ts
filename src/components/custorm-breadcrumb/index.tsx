@@ -48,7 +48,9 @@ const CustomBreadcrumb = () => {
   }
   const data = generateBreadcrumbData(pathname)
 
-  // pathFilter 面包屑是否可以点击导航
+  // pathFilter 
+    // 面包屑是否可以点击导航
+    // 同时用来做可点击，不可点击的 UI
   const pathFilter = (path: string) => {
     // normalizeFilterdAdminRoutes => 展平所有subs
     function normalizeFilterdAdminRoutes(routesAmin: IRouteModule[]) {
@@ -64,7 +66,7 @@ const CustomBreadcrumb = () => {
     }
     const routes = normalizeFilterdAdminRoutes(_.cloneDeep(routesAmin))
 
-    // 是否可以点击面包屑
+    // LinkToWhere => 是否可以点击面包屑
     function LinkToWhere(routes: IRouteModule[]) {
       let isCanGo = false
       routes.forEach(item => {
@@ -77,8 +79,10 @@ const CustomBreadcrumb = () => {
     return LinkToWhere(routes)
   }
 
+  // 点击时的导航操作
   const goPage = (item: string) => {
     pathFilter(item) && history.push(item)
+    // 函数组合，可以点击就就跳转
   }
 
   // 渲染 breadcrumb
