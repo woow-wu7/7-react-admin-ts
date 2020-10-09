@@ -25,7 +25,7 @@ export function setLocalStorage(name: string, data: any) {
 // localstorage 取
 export function getLocalStorage(name: string) {
   const dataStr = window.localStorage.getItem(name)
-  return JSON.parse(dataStr || '')
+  return dataStr && JSON.parse(dataStr)
 }
 
 // 深拷贝

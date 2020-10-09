@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { renderRoutes, routesFilter } from '@/utils/render-routes/index'
 import styles from './index.module.scss'
 import { Button, Layout, Menu } from 'antd';
@@ -7,7 +7,7 @@ import { IRouteModule } from '@/global/interface'
 import IconFont from '@/components/Icon-font'
 import { useHistory } from 'react-router-dom';
 import { useSelector } from 'react-redux';
-import { getLocalStorage } from '@/utils';
+import { getLocalStorage, setLocalStorage } from '@/utils';
 import CustomBreadcrumb from '@/components/custorm-breadcrumb';
 import { MenuFoldOutlined, MenuUnfoldOutlined } from '@ant-design/icons';
 
@@ -16,7 +16,17 @@ const { Header, Sider, Content } = Layout;
 
 const Admin = (props: any) => {
 	const [collapsed, setcollapsed] = useState(false)
+	const [selectedKeys, setSelectedKeys] = useState(['/admin-home'])
+	const [openKeys, setOpenKeys]: any = useState(['/admin-home'])
 	const history = useHistory()
+
+	useEffect(() => {
+		// 初始化，加载持久化的 selectedKeys 和 openKeys
+		const selectedKeys = getLocalStorage('selectedKeys')
+		const openKeys = getLocalStorage('openKeys')
+		setSelectedKeys(v => v = selectedKeys)
+		setOpenKeys((v: any) => v = openKeys)
+	}, [])
 
 	/**
 	 * @function renderMenu
@@ -42,8 +52,17 @@ const Admin = (props: any) => {
 		})
 	}
 
-	const goPage = ({ keyPath }: { keyPath: any }) => {
+	// 点击 menuItem 触发的事件
+	const goPage = ({ keyPath, key }: { keyPath: any[], key: any }) => {
 		history.push(keyPath[0])
+		setSelectedKeys(v => v = [key])
+		setLocalStorage('selectedKeys', [key]) // 记住当前点击的item，刷新持久化
+	}
+
+	// 展开/关闭的回调
+	const onOpenChange = (openKeys: any) => {
+		setOpenKeys((v: any) => v = openKeys)
+		setLocalStorage('openKeys', openKeys) // 记住展开关闭的组，刷新持久化
 	}
 
 	const toggleCollapsed = () => {
@@ -57,6 +76,11 @@ const Admin = (props: any) => {
 					mode="inline"
 					theme="dark"
 					onClick={goPage}
+					// inlineCollapsed={} 在有 Sider 包裹的情况下，需要在Sider中设置展开隐藏
+					inlineIndent={24}
+					selectedKeys={selectedKeys}
+					openKeys={openKeys}
+					onOpenChange={onOpenChange}
 				>
 					{renderMenu([...adminRoutes])}
 				</Menu>

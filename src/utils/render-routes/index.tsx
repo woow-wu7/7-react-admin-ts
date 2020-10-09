@@ -3,7 +3,6 @@ import { IRouteModule } from '@/global/interface'
 import { Switch, Route, useHistory } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 import { getLocalStorage } from '..'
-import JsEs6Detail from '@/pages/admin-system/js-es6-detail'
 
 /**
  * @function routesFilter routes的权限过滤
@@ -48,13 +47,14 @@ export function normalize(routes?: IRouteModule[]) {
  */
 export const renderRoutes = (routes: IRouteModule[], extraProps = {}, switchProps = {}) => {
 	const history = useHistory()
+
 	const token =
 		useSelector((state: { app: { loginMessage: { token: string } } }) => state.app.loginMessage.token) ||
-		getLocalStorage('loginMessage').token;
+		getLocalStorage('loginMessage')?.token;
 
 	const roles =
 		useSelector((state: { app: { loginMessage: { roles: string } } }) => state.app.loginMessage.roles) ||
-		getLocalStorage('loginMessage').roles;
+		getLocalStorage('loginMessage')?.roles;
 
 	if (!token) {
 		history.push('/login') // token未登录去登陆页面
