@@ -1,6 +1,7 @@
 .matarialBigScreen {
   background: #fff;
   padding: $safe-padding;
+  box-sizing: border-box;
   position: relative;
 
   .fullscreenButton {

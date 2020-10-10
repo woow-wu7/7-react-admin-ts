@@ -1,0 +1,20 @@
+.home {
+  .top {
+    height: 400px;
+    display: flex;
+    box-sizing: border-box;
+
+    .bar {
+      flex: 1;
+      height: 400px;
+      box-sizing: border-box;
+      margin-right: 10px;
+
+      &:nth-child(2n) {
+        margin-right: 0;
+      }
+
+      background: #fff;
+    }
+  }
+}
