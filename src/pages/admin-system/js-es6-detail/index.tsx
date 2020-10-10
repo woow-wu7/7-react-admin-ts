@@ -10,16 +10,6 @@ const JsEs6Detail = (props: any) => {
   const params = useParams()
   const dispatch = useDispatch()
   setLocalStorage('routeParams', params)
-  const state = useSelector(state => state)
-  console.log(state);
-  
-  if (runOneTime) {
-    dispatch({
-      type: actionType.GET_ROUTE_PARAMS,
-      payload: params
-    })
-    runOneTime = false
-  }
   
   return (
     <div>

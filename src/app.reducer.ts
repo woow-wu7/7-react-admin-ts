@@ -7,7 +7,8 @@ const initialState = {
     token: '',
     roles: ''
   },
-  routeParams: {}
+  routeParams: {},
+  forceUpdataCount: 0,
 }
 
 const appReducer = (
@@ -33,6 +34,12 @@ const appReducer = (
       return {
         ...state,
         routeParams: action.payload
+      }
+    }
+    case actionType.FORCE_UPDATE: {
+      return {
+        ...state,
+        forceUpdataCount: action.payload
       }
     }
     default:

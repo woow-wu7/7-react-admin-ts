@@ -26,11 +26,6 @@ const CustomBreadcrumb = () => {
   const roles = useSelector((state: any) => state.app.loginMessage.roles) || getLocalStorage('loginMessage').roles
   const pathname = useLocation().pathname // 获取url的path
   const history = useHistory()
-  
-  // const [ignored, forceUpdate] = useReducer(x => x + 1, 0);
-  // window.addEventListener('storage', () => {
-  //   forceUpdate()
-  // })
 
   // routeParams => 获取useParams的params对象，对象中包含动态路由的id属性
   const routeParams = getLocalStorage('routeParams')
