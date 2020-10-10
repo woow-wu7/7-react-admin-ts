@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { renderRoutes, routesFilter } from '@/utils/render-routes/index'
 import styles from './index.module.scss'
-import { Button, Layout, Menu } from 'antd';
+import { Avatar, Button, Dropdown, Layout, Menu } from 'antd';
 import adminRoutes from '@/router/admin-routes'
 import { IRouteModule } from '@/global/interface'
 import IconFont from '@/components/Icon-font'
@@ -9,7 +9,7 @@ import { useHistory } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { getLocalStorage, removeStorage, setLocalStorage } from '@/utils';
 import CustomBreadcrumb from '@/components/custorm-breadcrumb';
-import { MenuFoldOutlined, MenuUnfoldOutlined } from '@ant-design/icons';
+import { LoginOutlined, MenuFoldOutlined, MenuUnfoldOutlined, UserOutlined } from '@ant-design/icons';
 
 const { SubMenu } = Menu;
 const { Header, Sider, Content } = Layout;
@@ -74,6 +74,18 @@ const Admin = (props: any) => {
 		history.replace('/login')
 		removeStorage() // 不传参表示删除所有
 	}
+
+	const menu = (
+		<Menu>
+			<Menu.Item disabled style={{width: '200px'}}>
+				用户设置
+			</Menu.Item>
+			<Menu.Divider />
+			<Menu.Item onClick={loginOut}>
+				<LoginOutlined /> 退出登陆
+			</Menu.Item>
+		</Menu>
+	)
 	return (
 		<Layout className={styles.layoutAdmin}>
 			<Sider collapsed={collapsed}>
@@ -101,7 +113,9 @@ const Admin = (props: any) => {
 						</span>
 					</aside>
 					<ul className={styles.topMenu}>
-						<li onClick={() => loginOut()}>退出</li>
+						<Dropdown overlay={menu}>
+							<Avatar style={{ backgroundColor: '#87d068' }} icon={<UserOutlined />} />
+						</Dropdown>
 					</ul>
 				</Header>
 				<Content className={styles.content}>
