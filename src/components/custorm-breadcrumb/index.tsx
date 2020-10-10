@@ -1,5 +1,5 @@
 import { Breadcrumb } from 'antd'
-import React, { useState } from 'react'
+import React, { useReducer, useState } from 'react'
 import { useHistory, useLocation, useRouteMatch } from 'react-router-dom'
 import styles from './breadcrumb.module.scss'
 import { routesFilter } from '@/utils/render-routes/index'
@@ -26,10 +26,17 @@ const CustomBreadcrumb = () => {
   const roles = useSelector((state: any) => state.app.loginMessage.roles) || getLocalStorage('loginMessage').roles
   const pathname = useLocation().pathname // 获取url的path
   const history = useHistory()
+  
+  // const [ignored, forceUpdate] = useReducer(x => x + 1, 0);
+  // window.addEventListener('storage', () => {
+  //   forceUpdate()
+  // })
 
   // routeParams => 获取useParams的params对象，对象中包含动态路由的id属性
   const routeParams = getLocalStorage('routeParams')
   // debugger
+
+  
 
   // 深拷贝 权限过滤后的adminRoutes
   const routesAmin = _.cloneDeep([...routesFilter(adminRoutes, roles)]) // 权限过滤，为了和menu同步

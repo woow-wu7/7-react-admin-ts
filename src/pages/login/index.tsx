@@ -83,7 +83,7 @@ const Login = (
   const fill = () => {
     form.setFieldsValue({
       username: 'username',
-      password: 'password'
+      password: '111'
     })
   }
 

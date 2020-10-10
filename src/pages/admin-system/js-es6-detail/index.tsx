@@ -20,6 +20,7 @@ const JsEs6Detail = (props: any) => {
     })
     runOneTime = false
   }
+  
   return (
     <div>
       <header>JsEs6Detail page  admin</header>
