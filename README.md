@@ -271,10 +271,20 @@ SYSTEMTYPE2.ADMIN =========> 0
 
 # (六) BUG总结
 
-### (1) [ts]未终止的正则表达式文字
+### (1) 登陆页面出现的bug
+- 问题描述：登陆页面，选择系统时，报错，并且select每change一次，动画就渲染一次
+- `报错描述：Warning: Cannot update during an existing state transition (such as within `render`). Render methods should be a pure function of props and state.`
+- 原因分析：
+  - Select的value值，直接从redux全局state中取数据，change后又把改变的数据传入store
+  - 因为是全局顶层store，导致基本整个项目根组件都重新渲染了
+- 解决办法：
+  - 1. 可以获取store的state，在传给组件的state，然后change Select时，修改组件自己的state，只影响该组件，然后点击登陆时，在把数据传递给redux
+
+
+### (2) [ts]未终止的正则表达式文字
 - 注意如果有组件或者jsx返回的DOM，就必须用 tsx 文件后缀
 
-### (2) 找不到模块“xxxx”或其相应的类型声明。
+### (3) 找不到模块“xxxx”或其相应的类型声明。
 - 最简单的修复方式：在import前面加上 `// @ts-ignore`
 - 合理的解决办法：
   - 1、 项目根目录下添加 index.d.ts, 并在其中写类型声明
@@ -302,7 +312,7 @@ SYSTEMTYPE2.ADMIN =========> 0
 - [issue](https://stackoverflow.com/questions/41292559/could-not-find-a-declaration-file-for-module-module-name-path-to-module-nam/51320328#51320328)
 - [ts类型声明文件的正确使用姿势](https://zhuanlan.zhihu.com/p/103158789)
 
-### (3) style-lint
+### (4) style-lint
 - `:global` 报错
 - 解决方法：
   - .stylelintrc.js 中做以下修改
@@ -314,15 +324,16 @@ rules: {
   },
 ```
 
-### (4) 没有锁版本造成的报错
+### (5) 依赖没有锁版本造成的报错
 - 报错：TypeScript error in /@pretty-format/build/index.d.ts(7,13): '=' expected.  TS1005
 - 原因："typescript": "~3.7.2", 版本问题
 - 解决："typescript": "^3.8.2"
 - 资料：https://www.jianshu.com/p/a69ff39a91c5
 
 
-### (5) antdMenu Sider inlineCollapsed 报错
+### (6) antdMenu Sider inlineCollapsed 报错
 - Warning: [antd: Menu] `inlineCollapsed` not control Menu under Sider. Should set `collapsed` on Sider instead.
 - mene的inlineCollapsed在有Sider父组件时，不能操作Sider，必须用Sider的collapsed属性来操作Silder展开/收缩   
+
 
 https://www.cnblogs.com/xiaojiumei/p/10422806.html

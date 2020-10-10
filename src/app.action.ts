@@ -1,5 +1,8 @@
 import actionType from './app.constant'
 
+// 系统选择
+  // admin
+  // bigScreen
 export const changeSystemType = (payload: any) => {
   return {
     type: actionType.SYSTEM_TYPE,
@@ -7,6 +10,7 @@ export const changeSystemType = (payload: any) => {
   }
 }
 
+// 获取登陆信息
 export const getLoginMessage = (loginMessage: { token: string, roles: string }) => {
   return {
     type: actionType.GET_LOGIN_MESSAGE,

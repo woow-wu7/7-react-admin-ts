@@ -4,7 +4,7 @@ import appReducer from '../app.reducer'
 
 
 const totalReducers = {
-  app: appReducer
+  app: appReducer,
 }
 
 const store = createStore(

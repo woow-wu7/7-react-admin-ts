@@ -53,13 +53,14 @@ const Login = (
   }
 ) => {
   const [activedMenu, setActivedMenu] = useState('')
+  const [currentSystemType, setcurrentSystemType] = useState(props.systemType)
   const [form] = Form.useForm();
-
-  const { changeSystemType, getLoginMessage, systemType, history } = props
+  
+  const { changeSystemType, getLoginMessage, systemType, history} = props
   const { Option } = Select;
 
   const handleChange = (type: string) => {
-    changeSystemType(type)
+    setcurrentSystemType(v => v = type)
   }
 
   const onFinish = (values: any) => {
@@ -68,10 +69,11 @@ const Login = (
       roles: 'admin'
     }
 
-    getLoginMessage(loginMessage); // 存入store
+    getLoginMessage(loginMessage); // 登陆信息存入store
+    changeSystemType(currentSystemType) // 选择的信息传入store
     setLocalStorage('loginMessage', loginMessage) // 存入 localstorage
 
-    SYSTEMTYPE[systemType] === SYSTEMTYPE.BIGSCREEN
+    SYSTEMTYPE[systemType] === SYSTEMTYPE.BIGSCREEN // 跳转
       ? history.push('/big-screen-home')
       : history.push('/admin-home')
   };
@@ -142,7 +144,7 @@ const Login = (
         </div>
         <div className={loginStyle.listMenu}>
           <div>
-            <Select value={systemType} className={loginStyle.select} onChange={handleChange}>
+            <Select value={currentSystemType} className={loginStyle.select} onChange={handleChange}>
               <Option value={SYSTEMTYPE.ADMIN}>后台系统</Option>
               <Option value={SYSTEMTYPE.BIGSCREEN}>大屏系统</Option>
             </Select>
@@ -167,7 +169,7 @@ const Login = (
 
 const mapStateToProps = (state: any) => {
   return {
-    systemType: state.app.systemType,
+    systemType: state.app.systemType
   }
 }
 
