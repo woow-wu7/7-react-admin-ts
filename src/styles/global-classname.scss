@@ -5,3 +5,136 @@ body,
   height: 100%;
   width: 100%;
 }
+
+/* 与布局、排版有关的全局样式名 */
+.flex {
+  display: flex;
+}
+
+.flex-d-row {
+  flex-direction: row;
+}
+
+.flex-d-column {
+  flex-direction: column;
+}
+
+//横向 换行
+.row-wrap {
+  flex-flow: row wrap;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.flex-nowrap {
+  flex-wrap: nowrap;
+}
+
+/* 垂直居中 */
+.flex-vc,
+.flex-a-center {
+  align-items: center;
+}
+
+.flex-a-start {
+  align-items: flex-start;
+}
+
+.flex-a-end {
+  align-items: flex-end;
+}
+
+.flex-a-baseline {
+  align-items: baseline;
+}
+
+.flex-a-stretch {
+  align-items: stretch;
+}
+
+.flex-hc,
+.flex-j-center {
+  justify-content: center;
+}
+
+.flex-j-between {
+  justify-content: space-between;
+}
+
+.flex-j-around {
+  justify-content: space-around;
+}
+
+.flex-j-start {
+  justify-content: flex-start;
+}
+
+.flex-j-end {
+  justify-content: flex-end;
+}
+
+.flex1 {
+  flex: 1;
+}
+
+.flex2 {
+  flex: 2;
+}
+
+.flex3 {
+  flex: 3;
+}
+
+.vat {
+  vertical-align: top;
+}
+
+.vab {
+  vertical-align: bottom;
+}
+
+.vatp {
+  vertical-align: text-top;
+}
+
+.vatb {
+  vertical-align: text-bottom;
+}
+
+.p-absolute {
+  position: absolute;
+}
+
+.p-relative {
+  position: relative;
+}
+
+.p-fixed {
+  position: fixed;
+}
+
+.top0 {
+  top: 0;
+}
+
+.bottom0 {
+  bottom: 0;
+}
+
+.left0 {
+  left: 0;
+}
+
+.right0 {
+  right: 0;
+}
+
+.h-100 {
+  height: 100%;
+}
+
+.w-100 {
+  width: 100%;
+}

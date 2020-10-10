@@ -2,6 +2,7 @@ import { IRouteModule } from '@/global/interface'
 import AdminHome from '@/pages/admin-system/home'
 import UiAntd from '@/pages/admin-system/ui-antd'
 import UiAntdForm from '@/pages/admin-system/ui-antd-form'
+import UiAntdTable from '@/pages/admin-system/ui-antd-table'
 import UiVant from '@/pages/admin-system/ui-vant'
 import JsEs5 from '@/pages/admin-system/js-es5'
 import JsEs6 from '@/pages/admin-system/js-es6'
@@ -49,9 +50,19 @@ const adminRoutes: IRouteModule[] = [{
       },
     }, {
       title: 'Form表单',
-      icon: 'anticon-yewubiaodan',
+      icon: 'anticon-zidingyibiaodan',
       key: '/admin-ui/antd/form',
       path: '/admin-ui/antd/form',
+      component: UiAntdForm,
+      meta: {
+        needLoginAuth: true,
+        rolesAuth: ['admin']
+      },
+    }, {
+      title: 'Table',
+      icon: 'anticon-custom-form',
+      key: '/admin-ui/antd/table',
+      path: '/admin-ui/antd/table',
       component: UiAntdForm,
       meta: {
         needLoginAuth: true,
@@ -134,7 +145,7 @@ const adminRoutes: IRouteModule[] = [{
   },
   subs: [{
     title: '大屏',
-    icon: 'anticon-relevant-outlined',
+    icon: 'anticon-icon-test',
     key: '/admin-material/bigscreen',
     path: '/admin-material/bigscreen',
     component: Material,

@@ -70,7 +70,7 @@ const Login = (
     }
 
     getLoginMessage(loginMessage); // 登陆信息存入store
-    changeSystemType(currentSystemType) // 选择的信息传入store
+    changeSystemType(currentSystemType) // 选择的系统传入store
     setLocalStorage('loginMessage', loginMessage) // 存入 localstorage
 
     SYSTEMTYPE[systemType] === SYSTEMTYPE.BIGSCREEN // 跳转

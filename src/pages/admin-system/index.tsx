@@ -114,7 +114,7 @@ const Admin = (props: any) => {
 					</aside>
 					<ul className={styles.topMenu}>
 						<Dropdown overlay={menu}>
-							<Avatar style={{ backgroundColor: '#87d068' }} icon={<UserOutlined />} />
+							<Avatar style={{ backgroundColor: '#87d068', cursor: 'pointer' }} icon={<UserOutlined />} />
 						</Dropdown>
 					</ul>
 				</Header>

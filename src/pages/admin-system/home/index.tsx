@@ -1,9 +1,11 @@
-import React from 'react'
+import React, { useRef } from 'react'
+import echarts from 'echarts'
 
 const Home = (props: any) => {
+  const bar = useRef(null)
   return (
     <div>
-      <header>home page  admin</header>
+      <div ref={bar}/>
     </div>
   )
 }
