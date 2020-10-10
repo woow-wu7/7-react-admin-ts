@@ -260,10 +260,16 @@ SYSTEMTYPE2.ADMIN =========> 0
 
 
 
+# (五) 大屏
+
+### (1) screenfull
+- 安装：cnpm install screenfull -S
+- [官网](https://github.com/sindresorhus/screenfull.js)
 
 
 
-# (五) BUG总结
+
+# (六) BUG总结
 
 ### (1) [ts]未终止的正则表达式文字
 - 注意如果有组件或者jsx返回的DOM，就必须用 tsx 文件后缀

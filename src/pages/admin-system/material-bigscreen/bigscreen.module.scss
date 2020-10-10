@@ -1,0 +1,22 @@
+.matarialBigScreen {
+  background: #fff;
+  padding: $safe-padding;
+  position: relative;
+
+  .fullscreenButton {
+    position: absolute;
+    top: $safe-padding;
+    right: $safe-padding;
+    cursor: pointer;
+  }
+
+  .plugins {
+    margin-top: 20px;
+
+    .title {
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+  }
+}

@@ -55,7 +55,7 @@ const Login = (
   const [activedMenu, setActivedMenu] = useState('')
   const [form] = Form.useForm();
 
-  const { changeSystemType, getLoginMessage, systemType } = props
+  const { changeSystemType, getLoginMessage, systemType, history } = props
   const { Option } = Select;
 
   const handleChange = (type: string) => {
@@ -72,8 +72,8 @@ const Login = (
     setLocalStorage('loginMessage', loginMessage) // 存入 localstorage
 
     SYSTEMTYPE[systemType] === SYSTEMTYPE.BIGSCREEN
-      ? props.history.push('/big-screen-home')
-      : props.history.push('/admin-home')
+      ? history.push('/big-screen-home')
+      : history.push('/admin-home')
   };
 
   const onFinishFailed = (errorInfo: any) => {
@@ -149,7 +149,11 @@ const Login = (
           </div>
           {list.map(({ label, value }, i) => {
             return (
-              <div className={`${loginStyle.menuItem} ${activedMenu === value ? loginStyle.atived : ''}`} key={i} onClick={() => change(value)}>
+              <div
+                className={`${loginStyle.menuItem} ${activedMenu === value ? loginStyle.atived : ''}`}
+                key={i}
+                onClick={() => change(value)}
+              >
                 {label}
               </div>
             )

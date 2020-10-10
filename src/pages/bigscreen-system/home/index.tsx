@@ -3,7 +3,6 @@ import { Button, Checkbox, Form, Input } from 'antd';
 
 
 const Home = (props: any) => {
-  console.log(props);
 
   const [AsyncTest, setAsyncTest] = useState<any>()
   const [AsyncTest2, setAsyncTest2] = useState<any>()

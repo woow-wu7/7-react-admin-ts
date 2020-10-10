@@ -104,12 +104,7 @@ const CustomBreadcrumb = () => {
   const renderData = (item: string, index: number) => {
     return (
       <Breadcrumb.Item key={index} onClick={() => goPage(item)}>
-        <span
-          style={{
-            cursor: pathFilter(item) ? 'pointer' : 'not-allowed',
-            color: pathFilter(item) ? '#4DB2FF' : 'silver'
-          }}
-        >
+        <span className={pathFilter(item) ? styles.canClick : styles.forbidClick}>
           {routeMap[item]}
         </span>
       </Breadcrumb.Item>

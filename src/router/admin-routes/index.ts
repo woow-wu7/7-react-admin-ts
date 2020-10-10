@@ -7,6 +7,7 @@ import JsEs5 from '@/pages/admin-system/js-es5'
 import JsEs6 from '@/pages/admin-system/js-es6'
 import JsEs6Detail from '@/pages/admin-system/js-es6-detail'
 import JsEs5Detail from '@/pages/admin-system/js-es5-detail'
+import Material from '@/pages/admin-system/material-bigscreen'
 
 const adminRoutes: IRouteModule[] = [{
   title: '首页',
@@ -121,6 +122,28 @@ const adminRoutes: IRouteModule[] = [{
         rolesAuth: ['admin']
       },
     }
+  ]
+}, {
+  title: '资料',
+  icon: 'anticon-relevant-outlined',
+  key: '/admin-material',
+  path: '/admin-material',
+  meta: {
+    needLoginAuth: true,
+    rolesAuth: ['user', 'admin']
+  },
+  subs: [{
+    title: '大屏',
+    icon: 'anticon-relevant-outlined',
+    key: '/admin-material/bigscreen',
+    path: '/admin-material/bigscreen',
+    component: Material,
+    meta: {
+      needLoginAuth: true,
+      rolesAuth: ['user', 'admin']
+    }
+  }
+
   ]
 }]
 

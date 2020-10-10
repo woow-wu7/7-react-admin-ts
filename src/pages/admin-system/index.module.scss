@@ -1,10 +1,10 @@
 .layoutAdmin {
-  // background: red;
   min-height: 100vh;
+  // background: #F0F2F5;
 
   .header {
     // height: 160px;
-    background: rgb(250, 242, 240);
+    background: #fff;
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
@@ -32,7 +32,7 @@
   }
 
   .content {
-    background: #fff;
+    background: #f0f2f5;
     padding: $safe-padding;
   }
 }
