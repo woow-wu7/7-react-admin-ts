@@ -9,12 +9,19 @@ import { IRouteModule } from '@/global/interface'
 import { getLocalStorage } from '@/utils'
 import _ from 'lodash'
 
+// 问题记录
+
+// (1)
 // 需求：面包屑在点击到详情时，更新全局面包屑
 // 不足：使用localstore，在子组件set，在父组件get，但是父组件先执行，子组件后执行，并且localstore不会更新组件，所以导致面包屑不更新
 // 代替：在子组件 es6detail 中 dispatch 了一个action，但不是在onClick的事件中，触发了警告
   // 之所以还这样做，是要在子组件es6detail更新后，b更新CustomBreadcrumb
   // 因为子组件es6detail更新了store，而父组件 CustomBreadcrumb 有引用store中的state，所以会更新
   // 不足：触发了警告
+
+// (2) 
+// 问题：退出重新登陆后，由于menu的openkeys和selectkeys做了缓存，会选中之前的menu并展开，但是面包屑却没有做缓存，不同步
+// 解决：退出的时候，是应该清除掉所有缓存和localstory的数据的，即退出不再缓存面包屑，注意不是刷新，而是退出登陆
 const CustomBreadcrumb = () => {
   const roles = useSelector((state: any) => state.app.loginMessage.roles) || getLocalStorage('loginMessage').roles
   const pathname = useLocation().pathname // 获取url的path

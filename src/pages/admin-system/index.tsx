@@ -7,7 +7,7 @@ import { IRouteModule } from '@/global/interface'
 import IconFont from '@/components/Icon-font'
 import { useHistory } from 'react-router-dom';
 import { useSelector } from 'react-redux';
-import { getLocalStorage, setLocalStorage } from '@/utils';
+import { getLocalStorage, removeStorage, setLocalStorage } from '@/utils';
 import CustomBreadcrumb from '@/components/custorm-breadcrumb';
 import { MenuFoldOutlined, MenuUnfoldOutlined } from '@ant-design/icons';
 
@@ -28,14 +28,15 @@ const Admin = (props: any) => {
 		setOpenKeys((v: any) => v = openKeys)
 	}, [])
 
+	const roles =
+		useSelector((state: { app: { loginMessage: { roles: string } } }) => state.app.loginMessage.roles) ||
+		getLocalStorage('loginMessage').roles;
+
 	/**
 	 * @function renderMenu
 	 * @description 递归渲染菜单
 	 */
 	const renderMenu = (adminRoutes: IRouteModule[]) => {
-		const roles =
-			useSelector((state: { app: { loginMessage: { roles: string } } }) => state.app.loginMessage.roles) ||
-			getLocalStorage('loginMessage').roles;
 
 		const adminRoutesDeepClone = routesFilter([...adminRoutes], roles) // adminRoutes权限过滤
 
@@ -69,6 +70,10 @@ const Admin = (props: any) => {
 		setcollapsed(v => v = !v)
 	};
 
+	const loginOut = () => {
+		history.replace('/login')
+		removeStorage() // 不传参表示删除所有
+	}
 	return (
 		<Layout className={styles.layoutAdmin}>
 			<Sider collapsed={collapsed}>
@@ -96,7 +101,7 @@ const Admin = (props: any) => {
 						</span>
 					</aside>
 					<ul className={styles.topMenu}>
-						<li onClick={() => history.push('/login')}>退出</li>
+						<li onClick={() => loginOut()}>退出</li>
 					</ul>
 				</Header>
 				<Content className={styles.content}>

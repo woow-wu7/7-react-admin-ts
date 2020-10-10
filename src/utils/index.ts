@@ -16,17 +16,28 @@ export function getUserConfirmation(message: string, callback: any) {
   })
 }
 
-// localstorage 存
+// localStorage 存
 export function setLocalStorage(name: string, data: any) {
   const dataStr = JSON.stringify(data)
   window.localStorage.setItem(name, dataStr)
 }
 
-// localstorage 取
+// localStorage 取
 export function getLocalStorage(name: string) {
   const dataStr = window.localStorage.getItem(name)
   return dataStr && JSON.parse(dataStr)
 }
+
+// localStorage 删除一项，或者所有
+// 不传参，就是删除所有
+export function removeStorage(name?: string) {
+  name === 'undefined'
+  ? 
+  window.localStorage.removeItem(name)
+  :
+  window.localStorage.clear()
+}
+
 
 // 深拷贝
 export function deepClone(params: any[] | object) {
