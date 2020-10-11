@@ -7,6 +7,7 @@ import * as actions from '../../app.action'
 import { SYSTEMTYPE } from '@/global/enum'
 import { ILoginMessage } from '@/global/interface'
 import { setLocalStorage } from '@/utils'
+import axios from '@/api/axios'
 
 // 避免在 Login 中重复渲染
 const list = [
@@ -55,8 +56,8 @@ const Login = (
   const [activedMenu, setActivedMenu] = useState('')
   const [currentSystemType, setcurrentSystemType] = useState(props.systemType)
   const [form] = Form.useForm();
-  
-  const { changeSystemType, getLoginMessage, systemType, history} = props
+
+  const { changeSystemType, getLoginMessage, systemType, history } = props
   const { Option } = Select;
 
   const handleChange = (type: string) => {
@@ -68,6 +69,8 @@ const Login = (
       token: 'token123456',
       roles: 'admin'
     }
+
+    axios.get('www.baidu.com')
 
     getLoginMessage(loginMessage); // 登陆信息存入store
     changeSystemType(currentSystemType) // 选择的系统传入store

@@ -63,7 +63,7 @@ const adminRoutes: IRouteModule[] = [{
       icon: 'anticon-custom-form',
       key: '/admin-ui/antd/table',
       path: '/admin-ui/antd/table',
-      component: UiAntdForm,
+      component: UiAntdTable,
       meta: {
         needLoginAuth: true,
         rolesAuth: ['admin']
