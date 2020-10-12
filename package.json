@@ -187,5 +187,8 @@
       "stylelint --fix",
       "git add"
     ]
+  },
+  "resolutions": {
+    "styled-components": "^5"
   }
 }
