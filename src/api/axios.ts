@@ -60,7 +60,7 @@ axiosInstance.interceptors.response.use(response => {
 
 
     case 400:
-      console.log('bad request', '服务器未能理解请求')
+      console.log('bad request', '请求错误，服务器未能理解请求')
       break;
     case 401:
       console.log('unauthoried', '需要验证，被请求的页面需要用户名和密码')

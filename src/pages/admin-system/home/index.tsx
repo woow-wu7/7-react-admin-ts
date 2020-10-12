@@ -1,36 +1,57 @@
 import React, { useEffect, useRef } from 'react'
 import echarts from 'echarts'
 import styles from './home.module.scss'
+import HocEcharts from '@/components/hoc-echart'
 
 const Home = (props: any) => {
-  const bar1: any = useRef(null)
-
-  useEffect(() => {
-    const barChart = echarts.init(bar1.current)
-    window.addEventListener('resize', function () {
-      barChart.resize()
-    })
-    const option = {
-      title: { text: 'ECharts 入门示例' },
-      tooltip: {},
-      xAxis: {
-        data: ["衬衫", "羊毛衫", "雪纺衫", "裤子", "高跟鞋", "袜子"]
-      },
-      yAxis: {},
-      series: [{
-        name: '销量',
+  const barOption = {
+    color: ['#3398DB'],
+    tooltip: {
+      trigger: 'axis',
+      axisPointer: {            // 坐标轴指示器，坐标轴触发有效
+        type: 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+      }
+    },
+    grid: {
+      left: '3%',
+      right: '4%',
+      bottom: '3%',
+      containLabel: true
+    },
+    xAxis: [
+      {
+        type: 'category',
+        data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+        axisTick: {
+          alignWithLabel: true
+        }
+      }
+    ],
+    yAxis: [
+      {
+        type: 'value'
+      }
+    ],
+    series: [
+      {
+        name: '直接访问',
         type: 'bar',
-        data: [5, 20, 36, 10, 10, 20]
-      }]
-    }
-    barChart.setOption(option);
-  }, [bar1])
-
+        barWidth: '60%',
+        data: [10, 52, 200, 334, 390, 330, 220]
+      }
+    ]
+  };
   return (
     <div className={styles.home}>
       <div className={styles.top}>
-        <div ref={bar1} className={styles.bar} />
-        <div className={styles.bar} />
+          <HocEcharts
+            option={barOption}
+            wrapStyle={{ height: '400px', width: '300px', background: '#fff' }}
+          />
+          <HocEcharts
+            option={barOption}
+            wrapStyle={{ height: '400px', width: '300px', background: '#fff' }}
+          />
       </div>
     </div>
   )
