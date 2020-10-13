@@ -1,40 +1,48 @@
 .layoutAdmin {
   min-height: 100vh;
   // background: #F0F2F5;
-
-  .header {
-    // height: 160px;
-    background: #fff;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-    align-items: center;
-    padding-left: $safe-padding;
-    padding-right: $safe-padding;
-    box-sizing: border-box;
-
-    & > aside > span {
-      padding: 10px 10px 10px 0;
-      cursor: pointer;
-
-      .toggleCollapsedIcon {
-        font-size: 20px;
-      }
-    }
-
-    .topMenu {
-      margin: 0;
-
-      & > li {
-        cursor: pointer;
-      }
-    }
+  .silderWrap {
+    height: 100vh;
   }
 
-  .content {
-    background: #f0f2f5;
-    padding: $safe-padding;
-    box-sizing: border-box;
+  .contentWrap {
+    height: 100vh;
+
+    .header {
+      // height: 160px;
+      background: #fff;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      align-items: center;
+      padding-left: $safe-padding;
+      padding-right: $safe-padding;
+      box-sizing: border-box;
+
+      & > aside > span {
+        padding: 10px 10px 10px 0;
+        cursor: pointer;
+
+        .toggleCollapsedIcon {
+          font-size: 20px;
+        }
+      }
+
+      .topMenu {
+        margin: 0;
+
+        & > li {
+          cursor: pointer;
+        }
+      }
+    }
+
+    .content {
+      background: #f0f2f5;
+      padding: $safe-padding;
+      box-sizing: border-box;
+      overflow: scroll;
+    }
   }
 
   .scrollTop {

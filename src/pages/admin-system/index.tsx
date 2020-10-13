@@ -88,7 +88,7 @@ const Admin = (props: any) => {
 	)
 	return (
 		<Layout className={styles.layoutAdmin}>
-			<Sider collapsed={collapsed}>
+			<Sider className={styles.silderWrap} collapsed={collapsed}>
 				<Menu
 					mode="inline"
 					theme="dark"
@@ -102,7 +102,7 @@ const Admin = (props: any) => {
 					{renderMenu([...adminRoutes])}
 				</Menu>
 			</Sider>
-			<Layout>
+			<Layout className={styles.contentWrap}>
 				<Header className={styles.header}>
 					<aside>
 						<span onClick={toggleCollapsed}>
@@ -123,12 +123,12 @@ const Admin = (props: any) => {
 					{renderRoutes(props.route.routes)}
 					{/* renderRoutes(props.route.routes) 再次执行，注册嵌套的路由，成为父组件的子组件 */}
 				</Content>
+				{/* <BackTop>
+					<div className={styles.scrollTop}>
+						<VerticalAlignTopOutlined style={{ color: '#fff', fontSize: '30px' }} />
+					</div>
+				</BackTop> */}
 			</Layout>
-			<BackTop>
-				<div className={styles.scrollTop}>
-					<VerticalAlignTopOutlined style={{color: '#fff', fontSize: '30px'}}/>
-				</div>
-			</BackTop>
 		</Layout>
 	)
 }
