@@ -1,5 +1,6 @@
 # (一) 技术栈
-` ts + react-hooks + react-router-dom@5.2.0 + redux + react-redux `   
+` ts + react-hooks + react-router-dom@5.2.0 + redux@^4.0.5 + react-redux + axios`   
+` styled-components + echarts + antd `      
 ` 通过 create-react-app 脚手架构建 `   
 
 
@@ -253,11 +254,6 @@ SYSTEMTYPE1.ADMIN =========> 'ADMIN'
 SYSTEMTYPE2.ADMIN =========> 0
 ```
 
-### (6) 单词
-  - conventional：常规的
-  - chore：日常事务，乏味无聊的工作
-  - persistence：持久的
-
 
 
 # (五) 大屏
@@ -265,6 +261,9 @@ SYSTEMTYPE2.ADMIN =========> 0
 ### (1) screenfull
 - 安装：cnpm install screenfull -S
 - [官网](https://github.com/sindresorhus/screenfull.js)
+
+### (2) echarts封装
+- [echarts的封装](https://hellohy.github.io/post/react-echarts/)
 
 
 
