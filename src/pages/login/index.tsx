@@ -74,9 +74,13 @@ const Login = (
 
     getLoginMessage(loginMessage); // 登陆信息存入store
     changeSystemType(currentSystemType) // 选择的系统传入store
-    setLocalStorage('loginMessage', loginMessage) // 存入 localstorage
+    setLocalStorage('loginMessage', loginMessage) // currentSystemType 存入 localstorage
+    setLocalStorage('currentSystemType', currentSystemType) // currentSystemType 存如 localstorage
 
-    SYSTEMTYPE[systemType] === SYSTEMTYPE.BIGSCREEN // 跳转
+    console.log(SYSTEMTYPE[systemType] );
+    SYSTEMTYPE[currentSystemType] === SYSTEMTYPE.BIGSCREEN 
+      // 跳转
+      // 注意：这里直接从组件的state中获取systemType，可以获取到实时的type，而store中只有点击登陆按钮的时候，才会去存入
       ? history.push('/big-screen-home')
       : history.push('/admin-home')
   };

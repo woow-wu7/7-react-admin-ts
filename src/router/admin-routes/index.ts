@@ -9,6 +9,7 @@ import JsEs6 from '@/pages/admin-system/js-es6'
 import JsEs6Detail from '@/pages/admin-system/js-es6-detail'
 import JsEs5Detail from '@/pages/admin-system/js-es5-detail'
 import Material from '@/pages/admin-system/material-bigscreen'
+import ServerEgg from '@/pages/admin-system/server-egg'
 
 const adminRoutes: IRouteModule[] = [{
   title: '首页',
@@ -153,8 +154,17 @@ const adminRoutes: IRouteModule[] = [{
       needLoginAuth: true,
       rolesAuth: ['user', 'admin']
     }
-  }
-
+  }, {
+    title: '服务端egg',
+    icon: 'anticon-icon-test',
+    key: '/admin-material/serverse-egg',
+    path: '/admin-material/serverse-egg',
+    component: ServerEgg,
+    meta: {
+      needLoginAuth: true,
+      rolesAuth: ['user', 'admin']
+    }
+  },
   ]
 }]
 

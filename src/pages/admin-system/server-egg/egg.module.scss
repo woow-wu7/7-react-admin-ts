@@ -1,0 +1,22 @@
+.egg {
+  background: #fff;
+  padding: $safe-padding;
+
+  .title {
+    font-size: 30px;
+    font-weight: 700;
+    padding-bottom: 14px;
+    border-bottom: 1px solid rgb(231, 231, 231);
+  }
+
+  .content {
+    a {
+      margin: 14px 0;
+      display: block;
+
+      &:nth-child(1) {
+        margin-top: 28px;
+      }
+    }
+  }
+}
