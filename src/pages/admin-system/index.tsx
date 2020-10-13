@@ -23,9 +23,13 @@ const Admin = (props: any) => {
 
 	useEffect(() => {
 		// 初始化，加载持久化的 selectedKeys 和 openKeys
-		const selectedKeys = getLocalStorage('selectedKeys')
+		const TempSelectedKeys = getLocalStorage('selectedKeys') || selectedKeys
+		// TempSelectedKeys 注意：
+			// 这里要考虑 ( 登陆第一次跳转的加载 ) 和 ( 刷新浏览器的加载 )
+			// 区别是：第一次登陆跳转的 localStorage中的 selectedKeys 是空，因该从组件的初始化 state中获取
+
 		const openKeys = getLocalStorage('openKeys')
-		setSelectedKeys(v => v = selectedKeys)
+		setSelectedKeys(v => v = TempSelectedKeys)
 		setOpenKeys((v: any) => v = openKeys)
 	}, [])
 
@@ -57,7 +61,7 @@ const Admin = (props: any) => {
 	// 点击 menuItem 触发的事件
 	const goPage = ({ keyPath, key }: { keyPath: any[], key: any }) => {
 		history.push(keyPath[0])
-		setSelectedKeys(v => v = [key])
+		setSelectedKeys(v => v = [key]) // 修改当前组件的state
 		setLocalStorage('selectedKeys', [key]) // 记住当前点击的item，刷新持久化
 	}
 
