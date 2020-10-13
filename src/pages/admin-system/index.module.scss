@@ -1,13 +1,12 @@
 .layoutAdmin {
   min-height: 100vh;
   // background: #F0F2F5;
+
   .silderWrap {
     height: 100vh;
   }
 
   .contentWrap {
-    height: 100vh;
-
     .header {
       // height: 160px;
       background: #fff;
@@ -18,6 +17,7 @@
       padding-left: $safe-padding;
       padding-right: $safe-padding;
       box-sizing: border-box;
+      height: 60px;
 
       & > aside > span {
         padding: 10px 10px 10px 0;
@@ -38,10 +38,10 @@
     }
 
     .content {
-      background: #f0f2f5;
       padding: $safe-padding;
       box-sizing: border-box;
-      overflow: scroll;
+      height: calc(100vh - 60px); // 计算
+      overflow-y: auto;
     }
   }
 

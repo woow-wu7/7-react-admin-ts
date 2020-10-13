@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { renderRoutes, routesFilter } from '@/utils/render-routes/index'
 import styles from './index.module.scss'
 import { Avatar, BackTop, Button, Dropdown, Layout, Menu } from 'antd';
@@ -19,6 +19,7 @@ const Admin = (props: any) => {
 	const [selectedKeys, setSelectedKeys] = useState(['/admin-home'])
 	const [openKeys, setOpenKeys]: any = useState(['/admin-home'])
 	const history = useHistory()
+	const ref = useRef<HTMLDivElement>(null)
 
 	useEffect(() => {
 		// 初始化，加载持久化的 selectedKeys 和 openKeys
@@ -118,17 +119,22 @@ const Admin = (props: any) => {
 						</Dropdown>
 					</ul>
 				</Header>
-				<Content className={styles.content}>
-					<CustomBreadcrumb />
-					{renderRoutes(props.route.routes)}
-					{/* renderRoutes(props.route.routes) 再次执行，注册嵌套的路由，成为父组件的子组件 */}
-				</Content>
-				{/* <BackTop>
-					<div className={styles.scrollTop}>
-						<VerticalAlignTopOutlined style={{ color: '#fff', fontSize: '30px' }} />
+				{/* scroll相关 */}
+				<div className={styles.content} ref={ref}>
+					<div className={styles.scrollInner}>
+						<CustomBreadcrumb />
+						{renderRoutes(props.route.routes)}
+						{/* renderRoutes(props.route.routes) 再次执行，注册嵌套的路由，成为父组件的子组件 */}
 					</div>
-				</BackTop> */}
+				</div>
 			</Layout>
+	
+			{/* 返回顶部，层级放在那里都可以 */}
+			<BackTop target={() => ref.current || window} visibilityHeight={200}>
+				<div className={styles.scrollTop}>
+					<VerticalAlignTopOutlined style={{ color: '#fff', fontSize: '30px' }} />
+				</div>
+			</BackTop>
 		</Layout>
 	)
 }
