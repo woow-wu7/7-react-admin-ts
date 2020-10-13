@@ -70,7 +70,10 @@ const Login = (
       roles: 'admin'
     }
 
-    // axios.get('www.baidu.com') // 发起请求20
+    // axios({
+    //   method: 'get',
+    //   url: '/user',
+    // }).then(res => console.log(res, 'res'))
 
     getLoginMessage(loginMessage); // 登陆信息存入store
     changeSystemType(currentSystemType) // 选择的系统传入store
