@@ -350,4 +350,12 @@ rules: {
   - 即确保在setOption时，echarts实例存在并且，如果实例存在，通过echarts.getInstanceByDom()直接复用，不用重新生成
 
 
+### (8) antd - BackTop组件不生效
+- 原因：因为antd的布局组件 **Content** 是不能直接设置宽高和overflow等属性
+- 解决：
+  - 在 content 内部在设置容器 **scrollOuterWrap** 在包裹住 **scrollInnterWrap**，由scrollInnterWrap包裹需要滚动的元素
+  - **.scrollOuterWrap**：需要设置固定的高度，通过 **calc** 计算得到；和其他 **overflow-y** 相关的属性
+  - antd的 **BackTop** 组件的层级，在哪里的层级都可以
+
+
 https://www.cnblogs.com/xiaojiumei/p/10422806.html
