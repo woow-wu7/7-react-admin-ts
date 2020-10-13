@@ -11,7 +11,7 @@ const Layout = (props: any) => {
   const { systemType } = props
   const { pathname } = useLocation()
   let history = useHistory();
-  console.log(location);
+  
   const token =
     useSelector((state: { app: { loginMessage: { token: string } } }) => state.app.loginMessage.token) ||
     getLocalStorage('loginMessage').token;

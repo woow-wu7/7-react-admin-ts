@@ -36,4 +36,15 @@
     padding: $safe-padding;
     box-sizing: border-box;
   }
+
+  .scrollTop {
+    width: 60px;
+    height: 60px;
+    background: #919191;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+  }
 }

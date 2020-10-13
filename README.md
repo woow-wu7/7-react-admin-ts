@@ -267,6 +267,12 @@ SYSTEMTYPE2.ADMIN =========> 0
 ### (2) echarts封装
 - [echarts的封装](https://hellohy.github.io/post/react-echarts/)
 
+### (3) 大屏线上项目
+- [自定义的数据可视化大屏-可拖动的大屏](http://47.100.38.254/library/charts)
+
+### (4) 大屏滚动效果
+- [你可能需要这样的大屏数字滚动效果](https://juejin.im/post/6844903901355835406)
+
 
 
 

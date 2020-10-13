@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { renderRoutes, routesFilter } from '@/utils/render-routes/index'
 import styles from './index.module.scss'
-import { Avatar, Button, Dropdown, Layout, Menu } from 'antd';
+import { Avatar, BackTop, Button, Dropdown, Layout, Menu } from 'antd';
 import adminRoutes from '@/router/admin-routes'
 import { IRouteModule } from '@/global/interface'
 import IconFont from '@/components/Icon-font'
@@ -9,7 +9,7 @@ import { useHistory } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { getLocalStorage, removeStorage, setLocalStorage } from '@/utils';
 import CustomBreadcrumb from '@/components/custorm-breadcrumb';
-import { LoginOutlined, MenuFoldOutlined, MenuUnfoldOutlined, UserOutlined } from '@ant-design/icons';
+import { LoginOutlined, MenuFoldOutlined, MenuUnfoldOutlined, UserOutlined, VerticalAlignTopOutlined } from '@ant-design/icons';
 
 const { SubMenu } = Menu;
 const { Header, Sider, Content } = Layout;
@@ -77,7 +77,7 @@ const Admin = (props: any) => {
 
 	const menu = (
 		<Menu>
-			<Menu.Item disabled style={{width: '200px'}}>
+			<Menu.Item disabled style={{ width: '200px' }}>
 				用户设置
 			</Menu.Item>
 			<Menu.Divider />
@@ -124,6 +124,11 @@ const Admin = (props: any) => {
 					{/* renderRoutes(props.route.routes) 再次执行，注册嵌套的路由，成为父组件的子组件 */}
 				</Content>
 			</Layout>
+			<BackTop>
+				<div className={styles.scrollTop}>
+					<VerticalAlignTopOutlined style={{color: '#fff', fontSize: '30px'}}/>
+				</div>
+			</BackTop>
 		</Layout>
 	)
 }
