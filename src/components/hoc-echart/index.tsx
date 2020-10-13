@@ -1,42 +1,48 @@
 import React, { useEffect, useRef, useState } from 'react'
 import echarts from 'echarts'
 interface Ioption {
-  option: any; // 配置对象
-  wrapStyle?: any; // 样式
+  option: IAny; // 配置对象
+  wrapStyle?: IAny; // 样式
   className?: string; // 自定义class，为了不影响全局，最好加上唯一的前缀
   theme?: string; // 主题
-  isResize?: boolean;
-  events?: any
+  events?: IAny; // 事件的配置对象，key事件名，value事件的回调，回调有events和echarts实例两个参数
+  isResize?: boolean; // 是否自适应窗口变化
+  showLoading?: boolean; // 是否显示loading
+}
+interface IAny {
+  [propName: string]: any
 }
 
 
 const HocEcharts = ({
-  option,
-  wrapStyle = { width: '400px', height: '400px', background: '#fff' },
-  className,
-  theme = 'vintage',
-  isResize = true,
-  events,
+  option, // 配置对象
+  wrapStyle = { width: '400px', height: '400px', background: '#fff' }, // 样式
+  className,// 自定义class，为了不影响全局，最好加上唯一的前缀
+  theme = 'vintage', // 主题
+  showLoading = true, // 是否显示loading
+  isResize = true, // 是否自适应窗口变化
+  events, // 事件的配置对象，key事件名，value事件的回调，回调有events和echarts实例两个参数
 }: Ioption) => {
-  const ref = useRef<any>(null)
-  let instance: any = null
+  const ref = useRef<HTMLDivElement|any>(null)
+
+  let instance: echarts.ECharts
 
   // getInstance 创建或获取实例
   const getInstance = async () => {
     instance = await echarts.getInstanceByDom(ref.current) || await echarts.init(ref.current, theme)
-    instance.clear()
+    instance.clear() // 清除实例
   }
 
   // setOption 设置配置项
   const setOption = async () => {
-    instance.showLoading('default') // login动画开始
+    showLoading && instance.showLoading('default') // loading动画开始
     await new Promise(resolve => {
       setTimeout(() => {
         instance && instance.setOption(option) // 模拟异步
         resolve()
       }, 1000)
     })
-    instance.hideLoading('default') // login动画开始
+    showLoading && instance.hideLoading() // loading动画开始
   }
 
   const bindEvent = () => {
@@ -64,7 +70,7 @@ const HocEcharts = ({
   useEffect(() => { // 监听窗口变化，echarts自适应
     if (isResize) {
       window.addEventListener('resize', resizeEcharts)
-      return () => window.removeEventListener('resize', resizeEcharts)
+      return () => window.removeEventListener('resize', resizeEcharts) // 移除监听
     }
   }, [])
 

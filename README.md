@@ -340,7 +340,7 @@ rules: {
 - 问题：当初始化时，div按照样式设置了50%的大小，但是echarts图标超出了容器大小
 - 解决：
   - 把 init设置成async函数，当实例存在的时候，再去设置setOption
-  - 即确保在setOption时，echarts实例存在并且如何实例存在，通过echarts.getInstanceByDom()直接复用，不用重新生成
+  - 即确保在setOption时，echarts实例存在并且，如果实例存在，通过echarts.getInstanceByDom()直接复用，不用重新生成
 
 
 https://www.cnblogs.com/xiaojiumei/p/10422806.html

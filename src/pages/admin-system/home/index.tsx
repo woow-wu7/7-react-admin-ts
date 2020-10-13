@@ -92,6 +92,7 @@ const Home = (props: any) => {
           className="custom-echarts-bar" // echarts的样式在styles全局设置
           theme={theme}
           isResize={true}
+          showLoading={true}
           events={Events}
         />
         <HocEcharts
@@ -99,6 +100,7 @@ const Home = (props: any) => {
           className="custom-echarts-bar"
           theme={theme}
           isResize={true}
+          showLoading={true}
           events={Events}
         />
       </div>
