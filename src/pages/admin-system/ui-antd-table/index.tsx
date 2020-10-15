@@ -1,8 +1,9 @@
 import { Space, Table, Tag } from 'antd'
-import React from 'react'
-
+import React, { useEffect, useState } from 'react'
+import { getTableList } from '@/api/antd-table'
 
 const UiAntTable = (props: any) => {
+  const [data2, setData] = useState([])
   const columns = [
     {
       title: 'Name',
@@ -75,6 +76,14 @@ const UiAntTable = (props: any) => {
       tags: ['cool', 'teacher'],
     },
   ];
+
+  useEffect(() => {
+    const fetch = async () => {
+      // const res = await getTableList('/table-list')
+      // console.log(res);
+    }
+    fetch()
+  }, [])
 
   return (
     <div>

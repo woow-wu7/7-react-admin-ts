@@ -24,6 +24,7 @@ axiosInstance.interceptors.request.use((config) => {
 
 // 响应拦截
 axiosInstance.interceptors.response.use(response => {
+  console.log(response, 'response')
   const { status } = response
 
   switch (status) {
@@ -32,7 +33,6 @@ axiosInstance.interceptors.response.use(response => {
     case 101:
       console.log('switching protocal', '请升级协议')
       break;
-
 
     case 200:
       console.log('ok')
@@ -43,7 +43,6 @@ axiosInstance.interceptors.response.use(response => {
     case 206:
       console.log('partical content进行部分范围请求')
       break;
-
 
     case 301:
       console.log('moved permanently', '永久重定向，请求的页面已经转移到新的url')
@@ -57,7 +56,6 @@ axiosInstance.interceptors.response.use(response => {
     case 304:
       console.log('not modified', '资源未被修改，缓存文档可以继续使用')
       break;
-
 
     case 400:
       console.log('bad request', '请求错误，服务器未能理解请求')
@@ -77,7 +75,6 @@ axiosInstance.interceptors.response.use(response => {
       console.log('request timeout', '请求超时')
       break;
 
-
     case 500:
       console.log('internet server error', '网络错误')
       break;
@@ -90,8 +87,6 @@ axiosInstance.interceptors.response.use(response => {
     case 504:
       console.log('getway timeout', '网关超时')
       break;
-
-
     default:
       break;
   }
