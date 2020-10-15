@@ -9,6 +9,7 @@ const initialState = {
   },
   routeParams: {},
   forceUpdataCount: 0,
+  selectKeys: []
 }
 
 const appReducer = (
@@ -40,6 +41,12 @@ const appReducer = (
       return {
         ...state,
         forceUpdataCount: action.payload
+      }
+    }
+    case actionType.SELECT_KEYS: {
+      return {
+        ...state,
+        selectKeys: action.payload
       }
     }
     default:

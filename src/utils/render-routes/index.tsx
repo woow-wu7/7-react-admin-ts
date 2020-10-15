@@ -1,8 +1,9 @@
 import React from 'react'
 import { IRouteModule } from '@/global/interface'
-import { Switch, Route, useHistory } from 'react-router-dom'
+import { Switch, Route, useHistory, Redirect } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 import { getLocalStorage } from '..'
+import { CONST } from '@/global/enum'
 
 /**
  * @function routesFilter routes的权限过滤
@@ -40,6 +41,7 @@ export function normalize(routes?: IRouteModule[]) {
 	return result
 }
 
+/* eslint-disable */
 
 /**
  * @function renderRoutes
@@ -50,11 +52,11 @@ export const renderRoutes = (routes: IRouteModule[], extraProps = {}, switchProp
 
 	const token =
 		useSelector((state: { app: { loginMessage: { token: string } } }) => state.app.loginMessage.token) ||
-		getLocalStorage('loginMessage')?.token;
+		getLocalStorage(CONST.LOGIN_MESSAGES)?.token;
 
 	const roles =
 		useSelector((state: { app: { loginMessage: { roles: string } } }) => state.app.loginMessage.roles) ||
-		getLocalStorage('loginMessage')?.roles;
+		getLocalStorage(CONST.LOGIN_MESSAGES)?.roles;
 
 	if (!token) {
 		history.push('/login') // token未登录去登陆页面
@@ -82,6 +84,9 @@ export const renderRoutes = (routes: IRouteModule[], extraProps = {}, switchProp
 								// 向嵌套组件中传递 route属性，通过route.routes在嵌套路由组件中可以再注册嵌套路由
 							}} />
 				})}
+				<Redirect to="/404"></Redirect>
 		</Switch>
 		: null
 }
+
+/* eslint-disable */

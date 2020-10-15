@@ -28,9 +28,9 @@ export function getLocalStorage(name: string) {
   return dataStr && JSON.parse(dataStr)
 }
 
-// localStorage 删除一项，或者所有
+// removeLocalStorage 删除一项，或者所有
 // 不传参，就是删除所有
-export function removeStorage(name?: string) {
+export function removeLocalStorage(name?: string) {
   name === 'undefined'
   ? 
   window.localStorage.removeItem(name)

@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import { Button, Layout } from 'antd'
 import styled from 'styled-components'
+import { useFetch } from '@/utils/hooks/use-fetch.ts'
+import axios from '@/api/axios'
 
 
 interface ITitle {
@@ -11,6 +13,11 @@ interface ITitle {
 
 const ReactComponnet = (props: any) => {
   const [count, setCount] = useState(0)
+  const [data, isError, isLoading, doFetch] = useFetch(getTestData, {})
+
+  async function  getTestData({}) {
+    await axios('/')
+  }
 
   const add = () => {
     setCount(count + 1)
@@ -26,6 +33,10 @@ const ReactComponnet = (props: any) => {
     setCount(0)
   }
 
+  const getData = () => {
+
+  }
+
   return (
     <ReactHooks>
       <UseStateCopmonnet>
@@ -37,6 +48,11 @@ const ReactComponnet = (props: any) => {
 
         <Phenomenon>现象：点击add5次后，点击console，再点击add两次，显示5，而不是7，每次延时console.log显示的是，那一次的count值，每次渲染都是独立分开的</Phenomenon>
       </UseStateCopmonnet>
+
+      <UseFetchComponent>
+        <Title borderColor="#e821ff" backgroundColor="#fdf2ff">useFetch</Title><br />
+        <Button onClick={getData}>useFetch请求测试</Button> &nbsp;
+      </UseFetchComponent>
 
       <LinkOther>
         <Title borderColor="#ff533d" backgroundColor="#FFF2F0">资料</Title>
@@ -54,6 +70,7 @@ const ReactHooks = styled.div`
 const UseStateCopmonnet = styled.div`
     background: #fff;
     padding: 10px;
+    margin: 10px 0;
   `
 
 const Phenomenon = styled.div`
@@ -69,11 +86,17 @@ const Title = styled.div`
     margin-bottom: 30px;
     background: ${(props: ITitle) => props.backgroundColor};
     border: 1px solid ${(props: ITitle) => props.borderColor};
+    border-radius: 2px;
   }
   `
 
 const LinkOther = styled(UseStateCopmonnet)`
   margin-top: 10px;
+`
+
+
+const UseFetchComponent = styled(UseStateCopmonnet)`
+  
 `
 
 

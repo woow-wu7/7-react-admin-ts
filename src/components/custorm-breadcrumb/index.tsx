@@ -8,6 +8,7 @@ import { useSelector } from 'react-redux'
 import { IRouteModule } from '@/global/interface'
 import { getLocalStorage } from '@/utils'
 import _ from 'lodash'
+import { CONST } from '@/global/enum'
 
 // 问题记录
 
@@ -23,7 +24,7 @@ import _ from 'lodash'
 // 问题：退出重新登陆后，由于menu的openkeys和selectkeys做了缓存，会选中之前的menu并展开，但是面包屑却没有做缓存，不同步
 // 解决：退出的时候，是应该清除掉所有缓存和localstory的数据的，即退出不再缓存面包屑，注意不是刷新，而是退出登陆
 const CustomBreadcrumb = () => {
-  const roles = useSelector((state: any) => state.app.loginMessage.roles) || getLocalStorage('loginMessage').roles
+  const roles = useSelector((state: any) => state.app.loginMessage.roles) || getLocalStorage(CONST.LOGIN_MESSAGES).roles
   const pathname = useLocation().pathname // 获取url的path
   const history = useHistory()
 

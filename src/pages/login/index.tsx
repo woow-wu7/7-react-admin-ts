@@ -4,7 +4,7 @@ import loginStyle from './login.module.scss'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux';
 import * as actions from '../../app.action'
-import { SYSTEMTYPE } from '@/global/enum'
+import { CONST, SYSTEMTYPE } from '@/global/enum'
 import { ILoginMessage } from '@/global/interface'
 import { setLocalStorage } from '@/utils'
 import axios from '@/api/axios'
@@ -77,8 +77,8 @@ const Login = (
 
     getLoginMessage(loginMessage); // 登陆信息存入store
     changeSystemType(currentSystemType) // 选择的系统传入store
-    setLocalStorage('loginMessage', loginMessage) // currentSystemType 存入 localstorage
-    setLocalStorage('currentSystemType', currentSystemType) // currentSystemType 存如 localstorage
+    setLocalStorage(CONST.LOGIN_MESSAGES, loginMessage) // currentSystemType 存入 localstorage
+    setLocalStorage(CONST.CURRENT_SYSTEMTYPE, currentSystemType) // currentSystemType 存如 localstorage
 
     console.log(SYSTEMTYPE[systemType] );
     SYSTEMTYPE[currentSystemType] === SYSTEMTYPE.BIGSCREEN 

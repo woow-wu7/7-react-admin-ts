@@ -34,3 +34,11 @@ export const getLastBreadCrumbUseParams = (params: string) => {
     payload: params
   }
 }
+
+// 获取menu的selectkeys
+export const getSelectKeys = (params: any[]) => {
+  return {
+    type: actionType.SELECT_KEYS,
+    payload: params
+  }
+}
