@@ -182,7 +182,7 @@
   },
   "lint-staged": {
     "*.{ts,tsx,js}": [
-      "eslint --config .eslintrc.js"
+      "eslint --config .eslintrc.js --fix"
     ],
     "*.{css,sass,scss}": [
       "stylelint --fix",
