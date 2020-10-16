@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useCallback, useEffect, useRef, useState } from 'react'
 import echarts from 'echarts'
 interface Ioption {
   option: IAny; // 配置对象
@@ -59,20 +59,24 @@ const HocEcharts = ({
     await bindEvent() // 绑定事件
   }
 
-  const resizeEcharts = () => {
+  /* eslint-disable */
+  const resizeEcharts = useCallback(() => {
     instance && instance.resize()
-  }
+  }, [])
+  /* eslint-disable */
 
+  /* eslint-disable */
   useEffect(() => {
     init()
   }, [])
+ /* eslint-disable */
 
   useEffect(() => { // 监听窗口变化，echarts自适应
     if (isResize) {
       window.addEventListener('resize', resizeEcharts)
       return () => window.removeEventListener('resize', resizeEcharts) // 移除监听
     }
-  }, [])
+  }, [isResize, resizeEcharts])
 
   return (
     <div ref={ref} style={wrapStyle} className={className} />

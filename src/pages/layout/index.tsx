@@ -1,43 +1,40 @@
-import React, { useEffect } from 'react'
-import { connect, useDispatch, useSelector } from 'react-redux'
+import React, { useCallback, useEffect } from 'react'
+import { connect, useSelector } from 'react-redux'
 import { useHistory, useLocation } from 'react-router-dom'
 import { CONST, SYSTEMTYPE } from '@/global/enum'
-import { getLocalStorage, removeLocalStorage, setLocalStorage } from '@/utils'
+import { getLocalStorage } from '@/utils'
 import AdminSystem from '../admin-system'
 import BigScreen from '../bigscreen-system'
-import actionType from '@/app.constant'
 
 
 const Layout = (props: any) => {
   const { systemType } = props
-  const { pathname } = useLocation()
+  const { pathname } =  useLocation()
   let history = useHistory();
-  
+
   const token =
     useSelector((state: { app: { loginMessage: { token: string } } }) => state.app.loginMessage.token) ||
     getLocalStorage(CONST.LOGIN_MESSAGES).token;
 
 
-    const isToLogin = () => {
+  const isToLogin = () => {
     // admin系统
     if (systemType === SYSTEMTYPE.ADMIN) {
       !token
         ? history.replace('/login') // 为登陆：去登陆页
         : pathname === '/' && history.push('/admin-home') // 已登录：如果是 '/'，就重定向''/admin-home'
     }
-    
+
     // 大屏系统
     else {
     }
   }
 
-  const clearCash = () => {
-    removeLocalStorage()
-  }
-
+  /* eslint-disable */
   useEffect(() => {
     isToLogin()
   }, [pathname])
+  /* eslint-disable */
 
   return systemType === SYSTEMTYPE.ADMIN
     ?

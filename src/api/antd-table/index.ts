@@ -1,8 +1,19 @@
 import axios from '@/api/axios'
 
-export const getTableList = (url: string, params?: any) => {
+export const getTableList = (params?: any) => {
   return axios({
     method: 'get',
-    url,
+    url: '/table-list',
+    params,
+  })
+}
+
+export const AddTableList = (body: any) => {
+  return axios({
+    method: 'post',
+    url: '/table-list/add',
+    data: {
+      ...body
+    },
   })
 }

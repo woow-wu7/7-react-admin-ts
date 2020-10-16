@@ -84,7 +84,7 @@ export const renderRoutes = (routes: IRouteModule[], extraProps = {}, switchProp
 								// 向嵌套组件中传递 route属性，通过route.routes在嵌套路由组件中可以再注册嵌套路由
 							}} />
 				})}
-				<Redirect to="/404"></Redirect>
+			<Redirect to="/404"></Redirect>
 		</Switch>
 		: null
 }

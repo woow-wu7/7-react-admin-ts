@@ -1,93 +1,108 @@
-import { Space, Table, Tag } from 'antd'
+import { Button, Form, Input, Modal, Space, Table } from 'antd'
 import React, { useEffect, useState } from 'react'
-import { getTableList } from '@/api/antd-table'
+import { getTableList, AddTableList } from '@/api/antd-table'
 
 const UiAntTable = (props: any) => {
-  const [data2, setData] = useState([])
+  const [data, setData] = useState([])
+  const [visible, setvisiable] = useState(false)
+  const [form] = Form.useForm()
+
+
+
+  useEffect(() => {
+    fetch()
+  }, [])
+
   const columns = [
     {
-      title: 'Name',
+      title: '歌名',
       dataIndex: 'name',
       key: 'name',
       render: (text: string) => <a>{text}</a>,
     },
     {
-      title: 'Age',
-      dataIndex: 'age',
-      key: 'age',
+      title: '专辑',
+      dataIndex: 'album',
+      key: 'album',
     },
     {
-      title: 'Address',
-      dataIndex: 'address',
-      key: 'address',
+      title: '歌手',
+      dataIndex: 'singer',
+      key: 'singer',
     },
     {
-      title: 'Tags',
-      key: 'tags',
-      dataIndex: 'tags',
-      render: (tags: any[]) => (
-        <>
-          {tags.map(tag => {
-            let color = tag.length > 5 ? 'geekblue' : 'green';
-            if (tag === 'loser') {
-              color = 'volcano';
-            }
-            return (
-              <Tag color={color} key={tag}>
-                {tag.toUpperCase()}
-              </Tag>
-            );
-          })}
-        </>
-      ),
-    },
-    {
-      title: 'Action',
-      key: 'action',
-      render: (text: string, record: any) => (
-        <Space size="middle">
-          <a>Invite {record.name}</a>
-          <a>Delete</a>
-        </Space>
-      ),
-    },
-  ];
-
-  const data = [
-    {
-      key: '1',
-      name: 'John Brown',
-      age: 32,
-      address: 'New York No. 1 Lake Park',
-      tags: ['nice', 'developer'],
-    },
-    {
-      key: '2',
-      name: 'Jim Green',
-      age: 42,
-      address: 'London No. 1 Lake Park',
-      tags: ['loser'],
-    },
-    {
-      key: '3',
-      name: 'Joe Black',
-      age: 32,
-      address: 'Sidney No. 1 Lake Park',
-      tags: ['cool', 'teacher'],
-    },
-  ];
-
-  useEffect(() => {
-    const fetch = async () => {
-      // const res = await getTableList('/table-list')
-      // console.log(res);
+      title: '操作',
+      key: 'operate',
+      render: (text: string, record: any) => {
+        return (
+          <Space size={6}>
+            <Button size="small">修改</Button>
+            <Button type="primary" danger size="small">删除</Button>
+          </Space>
+        )
+      }
     }
-    fetch()
-  }, [])
+  ];
+
+  const fetch = async () => {
+    const res = await getTableList()
+    if (res.data) {
+      setData(data => data = res.data)
+    }
+  }
+
+  const add = () => {
+    setvisiable(true)
+  }
+
+  const handleOk = async () => {
+    const body = form.getFieldsValue(['name', 'album', 'singer'])
+    const res = await AddTableList({
+      ...body,
+      startTime: '2011-10-16 20:02:41',
+      endTime: '2020-10-16 20:02:41',
+    })
+    if (res) {
+      fetch()
+      setvisiable(false);
+    }
+  };
+
+  const handleCancel = (e: any) => {
+    console.log(e);
+    setvisiable(false);
+  };
+
 
   return (
     <div>
+      <Button type="primary"  onClick={() => add()} style={{margin: '10px 0'}}>添加歌曲</Button>
       <Table columns={columns} dataSource={data} />
+      <Modal
+        title="添加歌曲"
+        visible={visible}
+        onOk={handleOk}
+        onCancel={handleCancel}
+        okText="确定"
+        cancelText="取消"
+      >
+        <Form
+          labelCol={{ span: 4 }}
+          wrapperCol={{ span: 14 }}
+          layout="horizontal"
+          form={form}
+        >
+          <Form.Item label="歌名" name="name">
+            <Input />
+          </Form.Item>
+          <Form.Item label="专辑" name="album">
+            <Input />
+          </Form.Item>
+          <Form.Item label="歌手" name="singer">
+            <Input />
+          </Form.Item>
+        </Form>
+      </Modal>
     </div>
   )
 }
