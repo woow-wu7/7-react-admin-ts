@@ -12,40 +12,18 @@ const Layout = (props: any) => {
   const { systemType } = props
   const { pathname } = useLocation()
   let history = useHistory();
-  const dispatch = useDispatch()
   
   const token =
     useSelector((state: { app: { loginMessage: { token: string } } }) => state.app.loginMessage.token) ||
     getLocalStorage(CONST.LOGIN_MESSAGES).token;
 
-  const stepNext = () => {
-    // token存在的情况
-      // 如果是 '/' 路由跳转到 '/admin-home'，同时同步 menu
-      // 如果不是 '/' 路由跳转到当前的 pathname ， 注意同步 menu
-    if (pathname === '/') {
-      history.replace('/admin-home')
-      setLocalStorage(CONST.SELECTKEYS, ["/admin-home"])
-    } else {
-      setLocalStorage(CONST.SELECTKEYS, [pathname])
-      history.replace(pathname)
-      // dispatch({ // 存入redux
-      //   type: actionType.SELECT_KEYS,
-      //   payload: [pathname]
-      // })
-    }
-  }
 
-  const isToLogin = () => {
+    const isToLogin = () => {
     // admin系统
     if (systemType === SYSTEMTYPE.ADMIN) {
       !token
-        ? history.replace('/login') // 登陆页
-        // : pathname === '/' ? history.replace('/admin-home') : history.replace(pathname)
-        : stepNext()
-      // token
-      // 不存在去 login
-      // 存在，如果是 '/' 跳转到 '/admin-home'
-      // 存在，如果不是 '/' 跳转到当前的 pathname
+        ? history.replace('/login') // 为登陆：去登陆页
+        : pathname === '/' && history.push('/admin-home') // 已登录：如果是 '/'，就重定向''/admin-home'
     }
     
     // 大屏系统
@@ -59,7 +37,7 @@ const Layout = (props: any) => {
 
   useEffect(() => {
     isToLogin()
-  }, [pathname, token])
+  }, [pathname])
 
   return systemType === SYSTEMTYPE.ADMIN
     ?

@@ -8,7 +8,6 @@ const Router = () => {
     <Suspense fallback={<div>loading...</div>}>
       {renderRoutes(routes)}
     </Suspense>
-
   )
 }
 

@@ -5,7 +5,7 @@ import { Avatar, BackTop, Button, Dropdown, Layout, Menu } from 'antd';
 import adminRoutes from '@/router/admin-routes'
 import { IRouteModule } from '@/global/interface'
 import IconFont from '@/components/Icon-font'
-import { Redirect, Route, Switch, useHistory } from 'react-router-dom';
+import { Redirect, Route, Switch, useHistory, useLocation } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { getLocalStorage, removeLocalStorage, setLocalStorage } from '@/utils';
 import CustomBreadcrumb from '@/components/custorm-breadcrumb';
@@ -21,20 +21,19 @@ const Admin = (props: any) => {
 	const [selectedKeys, setSelectedKeys] = useState(['/admin-home'])
 	const [openKeys, setOpenKeys]: any = useState(['/admin-home'])
 	const history = useHistory()
+	const { pathname } = useLocation()
 	const dispatch = useDispatch()
 	const ref = useRef<HTMLDivElement>(null)
 
 	useEffect(() => {
-		// 初始化，加载持久化的 selectedKeys 和 openKeys
-		const TempSelectedKeys = getLocalStorage(CONST.SELECTKEYS) || selectedKeys
-		// TempSelectedKeys 注意：
 		// 这里要考虑 ( 登陆第一次跳转的加载 ) 和 ( 刷新浏览器的加载 )
-		// 区别是：第一次登陆跳转的 localStorage中的 selectedKeys 是空，因该从组件的初始化 state中获取
+		// 不管哪种情况，都获取当前的 pathname，当前pathname是 ( path和menu的keys要一致的原因  )
+		const TempSelectedKeys = [pathname]
 
 		const openKeys = getLocalStorage(CONST.OPENKEYS)
 		setSelectedKeys(v => v = TempSelectedKeys)
 		setOpenKeys((v: any) => v = openKeys)
-	}, [])
+	}, [pathname])
 
 	const roles =
 		useSelector((state: { app: { loginMessage: { roles: string } } }) => state.app.loginMessage.roles) ||
@@ -65,11 +64,6 @@ const Admin = (props: any) => {
 	const goPage = ({ keyPath, key }: { keyPath: any[], key: any }) => {
 		history.push(keyPath[0])
 		setSelectedKeys(v => v = [key]) // 修改当前组件的state
-		setLocalStorage(CONST.SELECTKEYS, [key]) // 记住当前点击的item，刷新持久化
-		// dispatch({ // 存入redux
-		// 	type: actionType.SELECT_KEYS,
-		// 	payload: [key]
-		// })
 	}
 
 	// 展开/关闭的回调
