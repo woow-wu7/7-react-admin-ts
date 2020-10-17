@@ -8,10 +8,31 @@ export const getTableList = (params?: any) => {
   })
 }
 
-export const AddTableList = (body: any) => {
+export const addTableList = (body: any) => {
   return axios({
     method: 'post',
     url: '/table-list/add',
+    data: {
+      ...body
+    },
+  })
+}
+
+
+export const delTableList = (body: any) => {
+  return axios({
+    method: 'post',
+    url: '/table-list/del',
+    data: {
+      ...body
+    },
+  })
+}
+
+export const updTableList = (body: any) => {
+  return axios({
+    method: 'post',
+    url: '/table-list/upd',
     data: {
       ...body
     },

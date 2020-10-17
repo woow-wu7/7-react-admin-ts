@@ -1,3 +1,4 @@
+import { message } from 'antd';
 import axios from 'axios'
 
 
@@ -24,7 +25,6 @@ axiosInstance.interceptors.request.use((config) => {
 
 // 响应拦截
 axiosInstance.interceptors.response.use(response => {
-  console.log(response, 'response')
   const { status } = response
 
   switch (status) {
@@ -35,7 +35,7 @@ axiosInstance.interceptors.response.use(response => {
       break;
 
     case 200:
-      console.log('ok')
+      console.log('ok', '成功')
       break;
     case 204:
       console.log('no content没有资源可以返回')
