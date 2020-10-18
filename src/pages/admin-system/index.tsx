@@ -1,17 +1,16 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { renderRoutes, routesFilter } from '@/utils/render-routes/index'
 import styles from './index.module.scss'
-import { Avatar, BackTop, Button, Dropdown, Layout, Menu } from 'antd';
+import { Avatar, BackTop, Dropdown, Layout, Menu } from 'antd';
 import adminRoutes from '@/router/admin-routes'
 import { IRouteModule } from '@/global/interface'
 import IconFont from '@/components/Icon-font'
-import { Redirect, Route, Switch, useHistory, useLocation } from 'react-router-dom';
+import { useHistory, useLocation } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { getLocalStorage, removeLocalStorage, setLocalStorage } from '@/utils';
 import CustomBreadcrumb from '@/components/custorm-breadcrumb';
 import { LoginOutlined, MenuFoldOutlined, MenuUnfoldOutlined, UserOutlined, VerticalAlignTopOutlined } from '@ant-design/icons';
 import { CONST } from '@/global/enum';
-import actionType from '../../app.constant'
 
 const { SubMenu } = Menu;
 const { Header, Sider, Content } = Layout;

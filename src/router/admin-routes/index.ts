@@ -1,6 +1,5 @@
 import { IRouteModule } from '@/global/interface'
 import AdminHome from '@/pages/admin-system/home'
-import UiAntd from '@/pages/admin-system/ui-antd'
 import UiAntdForm from '@/pages/admin-system/ui-antd-form'
 import UiAntdTable from '@/pages/admin-system/ui-antd-table'
 import UiVant from '@/pages/admin-system/ui-vant'

@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect } from 'react'
+import React, { useEffect } from 'react'
 import { connect, useSelector } from 'react-redux'
 import { useHistory, useLocation } from 'react-router-dom'
 import { CONST, SYSTEMTYPE } from '@/global/enum'

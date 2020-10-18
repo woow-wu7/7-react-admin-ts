@@ -1,8 +1,6 @@
 import { Button } from 'antd'
 import React from 'react'
-import { useDispatch } from 'react-redux'
 import { useHistory } from 'react-router-dom'
-import actionTypes from '../../../app.constant'
 
 
 const JsEs6 = (props: any) => {

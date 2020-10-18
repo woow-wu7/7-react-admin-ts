@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
-import { Button, Layout } from 'antd'
+import { Button } from 'antd'
 import styled from 'styled-components'
-import { useFetch } from '@/utils/hooks/use-fetch.ts'
-import axios from '@/api/axios'
+// import { useFetch } from '@/utils/hooks/use-fetch.ts'
+// import axios from '@/api/axios'
 
 
 interface ITitle {
@@ -13,11 +13,11 @@ interface ITitle {
 
 const ReactComponnet = (props: any) => {
   const [count, setCount] = useState(0)
-  const [data, isError, isLoading, doFetch] = useFetch(getTestData, {})
+  // const { data, error, loading, doFetch } = useFetch(getTestData, {})
 
-  async function  getTestData({}) {
-    await axios('/')
-  }
+  // async function getTestData({ }) {
+  //   await axios('/')
+  // }
 
   const add = () => {
     setCount(count + 1)

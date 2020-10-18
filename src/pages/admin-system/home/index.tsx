@@ -1,12 +1,9 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useState } from 'react'
 import styles from './home.module.scss'
 import HocEcharts from '@/components/hoc-echart'
-import { Select } from 'antd';
-
-const { Option } = Select;
 
 const Home = (props: any) => {
-  const [theme, setTheme] = useState('vintage')
+  const [theme] = useState('vintage')
   const barOption = {
     color: ['#3398DB'],
     tooltip: {
@@ -178,10 +175,6 @@ const Home = (props: any) => {
     ]
   };
 
-
-  const handleChange = (v: string) => {
-    setTheme((theme) => theme = v)
-  }
   const Events = {
     click: {
       query: 'series',
@@ -198,16 +191,6 @@ const Home = (props: any) => {
   }
   return (
     <div className={styles.home}>
-      {/* <div style={{ marginBottom: '10px' }}>
-        <span style={{ marginRight: '10px', }}>
-          请选择主题:
-        </span>
-        <Select defaultValue="vintage" onChange={handleChange}>
-          <Option value="vintage">vintage</Option>
-          <Option value="roma">roma</Option>
-          <Option value="macarons">macarons</Option>
-        </Select>
-      </div> */}
       <div className={styles.top}>
         <HocEcharts
           option={barOption}

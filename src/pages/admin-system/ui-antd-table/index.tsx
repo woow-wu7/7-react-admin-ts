@@ -6,14 +6,11 @@ import HocTable from '@/components/hoc-table'
 import { useFetch } from '@/utils/hooks/use-fetch'
 
 const UiAntTable = (props: any) => {
-  const [data, setData] = useState([])
   const [visible, setvisiable] = useState(false)
   const [operateType, setOperateType] = useState('')
-  const [loading, setLoading] = useState(false)
+  const [disabled, setDisabled] = useState(false)
   const [form] = Form.useForm()
-
-  // const {data, doFetch} = useFetch(getTableList, {})
-
+  const { data, doFetch, loading } = useFetch(getTableList, {})
 
   const renderTableOperator = (text: string) => {
     return (
@@ -53,20 +50,6 @@ const UiAntTable = (props: any) => {
     }
   ];
 
-
-  const fetch = async () => {
-    try {
-      setLoading(true)
-      const res = await getTableList()
-      if (res.data) {
-        setLoading(false)
-        setData(data => data = res.data)
-      }
-    } catch (err) {
-      setLoading(false)
-    }
-  }
-
   const addSong = () => {
     form.resetFields()
     setOperateType(CONST.TABLE_OPERATE_ADD)
@@ -75,6 +58,7 @@ const UiAntTable = (props: any) => {
 
   const deleteSong = (e: React.MouseEvent<HTMLElement, MouseEvent>, text: string) => {
     setOperateType(CONST.TABLE_OPERATE_DEL)
+    setDisabled(true)
     setvisiable(true)
     form.setFieldsValue(text)
   }
@@ -88,6 +72,13 @@ const UiAntTable = (props: any) => {
 
   // 确定按钮
   const handleOk = async () => {
+    setDisabled(false)
+    let errs
+    await form.validateFields().catch(err => errs = err)
+    if (errs) {
+      return
+    }
+
     const fields = form.getFieldsValue(['name', 'album', 'singer', 'key', 'id'])
     const body = {
       ...fields,
@@ -96,11 +87,10 @@ const UiAntTable = (props: any) => {
       key: operateType === CONST.TABLE_OPERATE_ADD ? data.length + 20 : fields.key,
     }
     let res: any
-    setLoading(true)
+    /* eslint-disable */
     switch (operateType) {
       case CONST.TABLE_OPERATE_ADD: {
         res = await addTableList(body)
-        setLoading(false)
         break
       }
       case CONST.TABLE_OPERATE_DEL: {
@@ -114,19 +104,21 @@ const UiAntTable = (props: any) => {
       default:
         break
     }
-
+    /* eslint-disable */
     if (res.status === 200) {
+      setvisiable(false)
       message.success(
         operateType === CONST.TABLE_OPERATE_ADD
           ? '添加成功'
           : operateType === CONST.TABLE_OPERATE_DEL ? '删除成功' : '修改成功'
       )
-      fetch()
+      doFetch({})
     }
-    setvisiable(false);
+    setvisiable(false)
   };
 
   const handleCancel = (e: any) => {
+    setDisabled(false)
     setvisiable(false);
   };
 
@@ -157,9 +149,9 @@ const UiAntTable = (props: any) => {
         }}
       />
 
-      <hr/>
+      <hr />
       <HocTable columns={[]} />
-      
+
       <Modal
         title="添加歌曲"
         visible={visible}
@@ -174,14 +166,14 @@ const UiAntTable = (props: any) => {
           layout="horizontal"
           form={form}
         >
-          <Form.Item label="歌名" name="name">
-            <Input />
+          <Form.Item label="歌名" name="name" rules={[{ required: true, message: '歌名不能为空' }]}>
+            <Input disabled={disabled} />
           </Form.Item>
-          <Form.Item label="专辑" name="album">
-            <Input />
+          <Form.Item label="专辑" name="album" rules={[{ required: true, message: '专辑不能为空' }]}>
+            <Input disabled={disabled} />
           </Form.Item>
-          <Form.Item label="歌手" name="singer">
-            <Input />
+          <Form.Item label="歌手" name="singer" rules={[{ required: true, message: '歌手不能为空' }]}>
+            <Input disabled={disabled} />
           </Form.Item>
         </Form>
       </Modal>

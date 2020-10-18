@@ -7,7 +7,7 @@ import * as actions from '../../app.action'
 import { CONST, SYSTEMTYPE } from '@/global/enum'
 import { ILoginMessage } from '@/global/interface'
 import { setLocalStorage } from '@/utils'
-import axios from '@/api/axios'
+// import axios from '@/api/axios'
 
 // 避免在 Login 中重复渲染
 const list = [

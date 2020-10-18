@@ -8,7 +8,7 @@
 
 
 
-# (二) 代码规范相关 ( 1-7 )
+# (二) 代码规范相关 ( 1-8 )
 
 ### (1) commitlint
 - [官网教程](https://github.com/conventional-changelog/commitlint)
@@ -102,6 +102,16 @@ package.json
 - `eslint-plugin-react-hooks`
 - [eslint-plugin-react-hooks地址](https://www.npmjs.com/package/eslint-plugin-react-hooks)
 
+
+### (9) prettier
+- eslint负责语法正误，prettier负责样式美化
+- 所需要的包
+  - prettier 
+  - eslint-config-prettier
+  - eslint-plugin-prettier
+- 安装
+  - npm install prettier --save-dev --save-exact
+  - 
 
 
 
