@@ -26,3 +26,8 @@ export interface ILoginMessage {
   token: string;
   roles: string;
 }
+
+
+export interface ITableProps {
+  columns: any,
+}
