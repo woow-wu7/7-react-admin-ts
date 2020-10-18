@@ -17,8 +17,8 @@ export function useFetch(
 ) {
   const [data, setData] = useState([])
   const [params, setParPms] = useState(fnParams)
-  const [isError, setIsError] = useState(false)
-  const [isLoading, setIsLoading] = useState(false)
+  const [error, setError] = useState(false)
+  const [loading, setLoading] = useState(false)
 
   // useEffect当依赖数组中有对象，函数等引用类型时，必须做函数缓存保证每次Object.is判断是true，不会造成死循环
   const memoryConverter = useCallback(converter, [])
@@ -26,18 +26,17 @@ export function useFetch(
 
   useEffect(() => {
     const fetchData = async () => {
-      setIsLoading(true)
-      setIsError(false)
+      setLoading(true)
+      setError(false)
       try {
         const res = await memoryFetchFn(params)
         if (res.data) {
           setData(data => data = memoryConverter(res.data))
-          setIsLoading(false)
         }
       } catch (err) {
-        setIsError(true)
+        setError(true)
       }
-      setIsLoading(false)
+      setLoading(false)
     }
 
     fetchData()
@@ -47,5 +46,5 @@ export function useFetch(
     setParPms(params)
   }
 
-  return [data, doFetch]
+  return { data, error, loading, doFetch }
 }

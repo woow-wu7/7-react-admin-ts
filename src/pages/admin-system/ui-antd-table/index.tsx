@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 import { getTableList, addTableList, delTableList, updTableList } from '@/api/antd-table'
 import { CONST } from '@/global/enum'
 import HocTable from '@/components/hoc-table'
+import { useFetch } from '@/utils/hooks/use-fetch'
 
 const UiAntTable = (props: any) => {
   const [data, setData] = useState([])
@@ -11,11 +12,8 @@ const UiAntTable = (props: any) => {
   const [loading, setLoading] = useState(false)
   const [form] = Form.useForm()
 
+  // const {data, doFetch} = useFetch(getTableList, {})
 
-
-  useEffect(() => {
-    fetch()
-  }, [])
 
   const renderTableOperator = (text: string) => {
     return (
