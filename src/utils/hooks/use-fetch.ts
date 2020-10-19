@@ -4,6 +4,12 @@ interface IFetch {
   (params?: any): any;
 }
 
+interface IParams {
+  current?: number;
+  pageSize?: number;
+  total?: number;
+}
+
 /**
  * @function useFetch 请求hooks
  * @param {function} fetchFn 请求函数
@@ -12,10 +18,14 @@ interface IFetch {
  */
 export function useFetch(
   fetchFn: IFetch,
-  fnParams = {},
+  fnParams: IParams = {
+    current: 1,
+    pageSize: 8,
+    total: 10,
+  },
   converter: IFetch = data => data
 ) {
-  const [data, setData] = useState([])
+  const [data, setData] = useState([] as any)
   const [params, setParPms] = useState(fnParams)
   const [error, setError] = useState(false)
   const [loading, setLoading] = useState(false)
@@ -29,9 +39,11 @@ export function useFetch(
       setLoading(true)
       setError(false)
       try {
+        //   const res = await memoryFetchFn(params)
         const res = await memoryFetchFn(params)
         if (res.data) {
-          setData(data => data = memoryConverter(res.data))
+          const { data } = res
+          setData((prevData: any) => memoryConverter(data))
         }
       } catch (err) {
         setError(true)
@@ -46,5 +58,5 @@ export function useFetch(
     setParPms(params)
   }
 
-  return { data, error, loading, doFetch }
+  return { data, error, loading, doFetch, params, setParPms }
 }

@@ -1,4 +1,3 @@
-import { message } from 'antd';
 import axios from 'axios'
 
 
@@ -30,6 +29,7 @@ axiosInstance.interceptors.response.use(response => {
   switch (status) {
     case 100:
       console.log('continue', '请继续请求')
+      break;
     case 101:
       console.log('switching protocal', '请升级协议')
       break;
@@ -65,6 +65,7 @@ axiosInstance.interceptors.response.use(response => {
       break;
     case 403:
       console.log('forbidden', '禁止访问，权限不够')
+      break;
     case 404:
       console.log('not found', '请求的页面不存在')
       break;

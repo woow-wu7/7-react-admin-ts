@@ -6,14 +6,14 @@ import adminRoutes from '@/router/admin-routes'
 import { IRouteModule } from '@/global/interface'
 import IconFont from '@/components/Icon-font'
 import { useHistory, useLocation } from 'react-router-dom';
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { getLocalStorage, removeLocalStorage, setLocalStorage } from '@/utils';
 import CustomBreadcrumb from '@/components/custorm-breadcrumb';
 import { LoginOutlined, MenuFoldOutlined, MenuUnfoldOutlined, UserOutlined, VerticalAlignTopOutlined } from '@ant-design/icons';
 import { CONST } from '@/global/enum';
 
 const { SubMenu } = Menu;
-const { Header, Sider, Content } = Layout;
+const { Header, Sider } = Layout;
 
 const Admin = (props: any) => {
 	const [collapsed, setcollapsed] = useState(false)
@@ -21,7 +21,6 @@ const Admin = (props: any) => {
 	const [openKeys, setOpenKeys]: any = useState(['/admin-home'])
 	const history = useHistory()
 	const { pathname } = useLocation()
-	const dispatch = useDispatch()
 	const ref = useRef<HTMLDivElement>(null)
 
 	useEffect(() => {

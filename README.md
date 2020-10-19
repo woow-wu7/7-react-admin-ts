@@ -8,7 +8,7 @@
 
 
 
-# (二) 代码规范相关 ( 1-8 )
+# (二) 代码规范相关 ( 1-9 )
 
 ### (1) commitlint
 - [官网教程](https://github.com/conventional-changelog/commitlint)
@@ -111,7 +111,6 @@ package.json
   - eslint-plugin-prettier
 - 安装
   - npm install prettier --save-dev --save-exact
-  - 
 
 
 

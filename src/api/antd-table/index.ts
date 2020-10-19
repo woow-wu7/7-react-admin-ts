@@ -19,12 +19,12 @@ export const addTableList = (body: any) => {
 }
 
 
-export const delTableList = (body: any) => {
+export const delTableList = (id: number) => {
   return axios({
     method: 'post',
     url: '/table-list/del',
     data: {
-      ...body
+      id
     },
   })
 }

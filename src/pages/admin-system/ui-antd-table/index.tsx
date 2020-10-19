@@ -1,5 +1,5 @@
 import { Button, Form, Input, message, Modal, Space, Table } from 'antd'
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { getTableList, addTableList, delTableList, updTableList } from '@/api/antd-table'
 import { CONST } from '@/global/enum'
 import HocTable from '@/components/hoc-table'
@@ -9,8 +9,16 @@ const UiAntTable = (props: any) => {
   const [visible, setvisiable] = useState(false)
   const [operateType, setOperateType] = useState('')
   const [disabled, setDisabled] = useState(false)
+  const [modelDanger, setModelDanger] = useState(false)
+  const [search, setSearch] = useState('')
   const [form] = Form.useForm()
-  const { data, doFetch, loading } = useFetch(getTableList, {})
+  const { data, doFetch, loading, params } = useFetch(getTableList, {
+    current: 1,
+    pageSize: 8,
+    total: 10,
+  })
+
+  const { current, pageSize } = params
 
   const renderTableOperator = (text: string) => {
     return (
@@ -26,7 +34,6 @@ const UiAntTable = (props: any) => {
       title: '歌名',
       dataIndex: 'name',
       key: 'name',
-      render: (text: string) => <a>{text}</a>,
     },
     {
       title: '专辑',
@@ -51,20 +58,23 @@ const UiAntTable = (props: any) => {
   ];
 
   const addSong = () => {
+    setSearch('')
     form.resetFields()
     setOperateType(CONST.TABLE_OPERATE_ADD)
     setvisiable(true)
   }
 
   const deleteSong = (e: React.MouseEvent<HTMLElement, MouseEvent>, text: string) => {
+    setSearch('')
     setOperateType(CONST.TABLE_OPERATE_DEL)
+    setModelDanger(true)
     setDisabled(true)
     setvisiable(true)
     form.setFieldsValue(text)
   }
 
-
   const updateSong = (text: string) => {
+    setSearch('')
     setOperateType(CONST.TABLE_OPERATE_UPD)
     setvisiable(true)
     form.setFieldsValue(text)
@@ -73,6 +83,7 @@ const UiAntTable = (props: any) => {
   // 确定按钮
   const handleOk = async () => {
     setDisabled(false)
+    setModelDanger(false)
     let errs
     await form.validateFields().catch(err => errs = err)
     if (errs) {
@@ -94,7 +105,7 @@ const UiAntTable = (props: any) => {
         break
       }
       case CONST.TABLE_OPERATE_DEL: {
-        res = await delTableList(body)
+        res = await delTableList(body.id)
         break
       }
       case CONST.TABLE_OPERATE_UPD: {
@@ -118,34 +129,57 @@ const UiAntTable = (props: any) => {
   };
 
   const handleCancel = (e: any) => {
+    setModelDanger(false)
     setDisabled(false)
-    setvisiable(false);
+    setvisiable(false)
   };
 
   function onShowSizeChange(current: number, pageSize: number) {
     console.log(current, pageSize);
   }
 
-  function onchange(page: number, pageSize?: number) {
-    console.log(page, 'page');
-    console.log(pageSize, 'pageSize');
+  function changePagination(page: number) {
+    setSearch('')
+    doFetch({
+      current: page,
+      pageSize: 8,
+    })
+  }
+
+  function onChangeSearch(e: React.ChangeEvent<HTMLInputElement>) {
+    setSearch(e.target.value)
+  }
+
+  function handleSearch() {
+    console.log(search);
+    doFetch({
+      name: search
+    })
   }
 
   return (
     <div>
-      <Button type="primary" onClick={() => addSong()} style={{ margin: '10px 0' }}>添加歌曲</Button>
+      <div className="flex flex-j-between flex-a-center">
+        <Button type="primary" onClick={() => addSong()} style={{ margin: '10px 0' }}>添加歌曲</Button>
+        <div className="flex">
+          <Input placeholder="搜索关键字" value={search} onChange={onChangeSearch} /> &nbsp;
+          <Button onClick={handleSearch}>搜索</Button>
+        </div>
+      </div>
 
       <Table
         columns={columns}
-        dataSource={data}
+        dataSource={data?.data}
         loading={loading}
         pagination={{
-          onChange: onchange,
+          onChange: changePagination,
+          onShowSizeChange: onShowSizeChange,
           position: ['bottomRight'],
           showQuickJumper: true,
           showSizeChanger: true,
-          onShowSizeChange: onShowSizeChange,
-          defaultPageSize: 5
+          current,
+          pageSize,
+          total: data?.total || 10,
         }}
       />
 
@@ -159,6 +193,7 @@ const UiAntTable = (props: any) => {
         onCancel={handleCancel}
         okText="确定"
         cancelText="取消"
+        okButtonProps={{ danger: modelDanger }}
       >
         <Form
           labelCol={{ span: 4 }}
@@ -169,10 +204,10 @@ const UiAntTable = (props: any) => {
           <Form.Item label="歌名" name="name" rules={[{ required: true, message: '歌名不能为空' }]}>
             <Input disabled={disabled} />
           </Form.Item>
-          <Form.Item label="专辑" name="album" rules={[{ required: true, message: '专辑不能为空' }]}>
+          <Form.Item label="专辑" name="album" >
             <Input disabled={disabled} />
           </Form.Item>
-          <Form.Item label="歌手" name="singer" rules={[{ required: true, message: '歌手不能为空' }]}>
+          <Form.Item label="歌手" name="singer" >
             <Input disabled={disabled} />
           </Form.Item>
         </Form>
