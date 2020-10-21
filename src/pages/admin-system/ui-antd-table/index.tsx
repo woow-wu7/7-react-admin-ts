@@ -2,8 +2,9 @@ import { Button, Form, Input, message, Modal, Space, Table } from 'antd'
 import React, { useState } from 'react'
 import { getTableList, addTableList, delTableList, updTableList } from '@/api/antd-table'
 import { CONST } from '@/global/enum'
-import HocTable from '@/components/hoc-table'
+// import HocTable from '@/components/hoc-table'
 import { useFetch } from '@/utils/hooks/use-fetch'
+import styles from './ui-antd-table.module.scss'
 
 const UiAntTable = (props: any) => {
   const [visible, setvisiable] = useState(false)
@@ -15,7 +16,7 @@ const UiAntTable = (props: any) => {
   const { data, doFetch, loading, params } = useFetch(getTableList, {
     current: 1,
     pageSize: 8,
-    total: 10,
+    total: 8,
   })
 
   const { current, pageSize } = params
@@ -151,19 +152,16 @@ const UiAntTable = (props: any) => {
   }
 
   function handleSearch() {
-    console.log(search);
-    doFetch({
-      name: search
-    })
+    search ? doFetch({ name: search }) : null
   }
 
   return (
-    <div>
+    <div className={styles.uiAntdTable}>
       <div className="flex flex-j-between flex-a-center">
         <Button type="primary" onClick={() => addSong()} style={{ margin: '10px 0' }}>添加歌曲</Button>
-        <div className="flex">
+        <div className="flex searchWrap">
           <Input placeholder="搜索关键字" value={search} onChange={onChangeSearch} /> &nbsp;
-          <Button onClick={handleSearch}>搜索</Button>
+          <Button onClick={handleSearch} className={styles.searchButton}>搜索</Button>
         </div>
       </div>
 
@@ -179,12 +177,12 @@ const UiAntTable = (props: any) => {
           showSizeChanger: true,
           current,
           pageSize,
-          total: data?.total || 10,
+          total: data?.total || 0,
         }}
       />
 
-      <hr />
-      <HocTable columns={[]} />
+      {/* <hr /> */}
+      {/* <HocTable columns={[]} /> */}
 
       <Modal
         title="添加歌曲"

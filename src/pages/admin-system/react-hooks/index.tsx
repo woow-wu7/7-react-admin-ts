@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import { Button } from 'antd'
 import styled from 'styled-components'
+// import Test from './test/test'
+import TestUseCallbackUseMemo from './test/test-usecallback-usememo'
 // import { useFetch } from '@/utils/hooks/use-fetch.ts'
 // import axios from '@/api/axios'
 
@@ -60,6 +62,9 @@ const ReactComponnet = (props: any) => {
           <a href="https://juejin.im/post/6844904132164190221">useState资料</a>
         </div>
       </LinkOther>
+
+      {/* <Test /> */}
+      <TestUseCallbackUseMemo />
     </ReactHooks>
   )
 }
