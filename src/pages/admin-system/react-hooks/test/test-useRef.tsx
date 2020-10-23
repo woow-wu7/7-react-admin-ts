@@ -1,9 +1,13 @@
 import React, { useRef, useState, useEffect, useImperativeHandle } from 'react'
 
+interface IGetmessage {
+  getMessage: () => void
+}
+
 const Father = () => {
   const [count, setCount] = useState(0)
   const inputRef = useRef<HTMLInputElement>(null)
-  const childRef = useRef<any>(null)
+  const childRef = useRef<IGetmessage>(null)
   const countRef = useRef<number | null>(null)
 
   useEffect(() => {
