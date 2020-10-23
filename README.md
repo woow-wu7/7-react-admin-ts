@@ -5,6 +5,7 @@
 
 ` 通过 create-react-app 脚手架构建 `   
 
+[本项目构建过程记录博客](https://juejin.im/post/6879020830253285384)
 
 
 
