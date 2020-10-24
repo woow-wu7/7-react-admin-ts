@@ -4,6 +4,7 @@ import styled from 'styled-components'
 // import Test from './test/test'
 import TestUseCallbackUseMemo from './test/test-usecallback-usememo'
 import TestUseRef from './test/test-useRef'
+import CustomHooks from './test/custom-hooks'
 // import { useFetch } from '@/utils/hooks/use-fetch.ts'
 // import axios from '@/api/axios'
 
@@ -67,6 +68,7 @@ const ReactComponnet = (props: any) => {
       {/* <Test /> */}
       <TestUseCallbackUseMemo />
       <TestUseRef />
+      <CustomHooks />
     </ReactHooks>
   )
 }
