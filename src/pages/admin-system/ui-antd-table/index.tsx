@@ -2,7 +2,7 @@ import { Button, Form, Input, message, Modal, Space, Table } from 'antd'
 import React, { useState } from 'react'
 import { getTableList, addTableList, delTableList, updTableList } from '@/api/antd-table'
 import { CONST } from '@/global/enum'
-// import HocTable from '@/components/hoc-table'
+// import { useFetch } from '@/utils/hooks/use-fetch2'
 import { useFetch } from '@/utils/hooks/use-fetch'
 import styles from './ui-antd-table.module.scss'
 

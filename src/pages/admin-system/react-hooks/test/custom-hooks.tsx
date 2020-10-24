@@ -26,6 +26,10 @@ const CustomHooks = () => {
     console.log('Failed:', errorInfo);
   };
 
+  const getDatas = () => {
+
+  }
+  
   return (
     <div style={{ background: '#fff', margin: '10px 0', padding: '10px', }}>
       <p style={{
@@ -65,6 +69,11 @@ const CustomHooks = () => {
           <div>其他内容</div>
         </CustomModal>
         <Button onClick={swtichModal}>modal</Button>
+      </div>
+
+      {/* useFetch */}
+      <div style={{ border: '1px solid blue', padding: '10px', margin: '10px' }}>
+        <Button onClick={getDatas}>获取数据</Button>
       </div>
     </div>
   )

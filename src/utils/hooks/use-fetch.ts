@@ -1,62 +1,72 @@
-import { useState, useEffect, useCallback } from 'react'
+import { useState, useEffect } from 'react';
 
-interface IFetch {
-  (params?: any): any;
-}
 
-interface IParams {
+type Tfetch = (...rest: any[]) => any; // 当函数参数接收任意数量，任意类型的参数时，可以用rest转成any[]类型
+interface IfnParams {
   current?: number;
   pageSize?: number;
   total?: number;
+  [propNmae: string]: any
 }
+type TuseFetch = (fetch: Tfetch, fetchParams: IfnParams) => ({
+  data: any,
+  doFetch: Tfetch,
+  loading: boolean;
+  params: IfnParams
+});
 
-/**
- * @function useFetch 请求hooks
- * @param {function} fetchFn 请求函数
- * @param {object} fnParams 请求函数的参数
- * @param {function} converter 原始数据的转换函数，默认为恒等函数，用于过滤等
- */
-export function useFetch(
-  fetchFn: IFetch,
-  fnParams: IParams = {
+
+const useFetch: TuseFetch = (
+  fetch,
+  fetchParams = {
     current: 1,
     pageSize: 8,
     total: 10,
   },
-  converter: IFetch = data => data
-) {
-  const [data, setData] = useState([] as any)
-  const [params, setParPms] = useState(fnParams)
-  const [error, setError] = useState(false)
-  const [loading, setLoading] = useState(false)
+) => {
+  const [params, setParams] = useState(fetchParams)
+  const [data, setData] = useState<any>(null)
+  const [loading, setLoading] = useState(false) // loading有两个作用，一个是防止重复点击，一个是loading动画
 
-  // useEffect当依赖数组中有对象，函数等引用类型时，必须做函数缓存保证每次Object.is判断是true，不会造成死循环
-  const memoryConverter = useCallback(converter, [])
-  const memoryFetchFn = useCallback(fetchFn, [])
+  // const memoryFetch = useCallback(fetch, [])
+  // const memoryParams = useMemo(() => params, [params])
+  // 这里注意：
+  // 1. fetch和params是引用类型，不需要在 useEffect中缓存的，因为state本身就做了缓存
+  // 2. 但是：如果是常量 aaaaa 是引用类型，在useEffect中就必须用useMemo做缓存，Object.is()永远是false,死循环
+  // const aaaaa = {a: 1111}
+  // useEffect(() => console.log(aaaaa), [aaaaa]) 死循环
 
   useEffect(() => {
     const fetchData = async () => {
       setLoading(true)
-      setError(false)
       try {
-        //   const res = await memoryFetchFn(params)
-        const res = await memoryFetchFn(params)
+        const res = await fetch(params)
+        setLoading(false)
         if (res.data) {
-          const { data } = res
-          setData((prevData: any) => memoryConverter(data))
+          setData(() => res.data)
         }
       } catch (err) {
-        setError(true)
+        setLoading(false)
+        console.error(err)
       }
-      setLoading(false)
     }
 
     fetchData()
-  }, [params, memoryConverter, memoryFetchFn])
+  }, [fetch, params])
 
-  const doFetch = (params: any) => {
-    setParPms(params)
+
+  // doFetch() 用于按钮等重新请求数据
+  const doFetch = (fetchParams: IfnParams): void => {
+    setParams(fetchParams)
   }
 
-  return { data, error, loading, doFetch, params, setParPms }
+
+  return { data, doFetch, loading, params }
+  // 返回
+  // data: 数据
+  // doFetch：请求函数
+  // loading： 比如用于table的loading
+  // params: 比如用于table的分页参数
 }
+
+export { useFetch }
