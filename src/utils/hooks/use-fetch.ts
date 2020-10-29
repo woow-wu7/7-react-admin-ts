@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 
 
 type Tfetch = (...rest: any[]) => any; // 当函数参数接收任意数量，任意类型的参数时，可以用rest转成any[]类型
@@ -8,7 +8,11 @@ interface IfnParams {
   total?: number;
   [propNmae: string]: any
 }
-type TuseFetch = (fetch: Tfetch, fetchParams: IfnParams) => ({
+interface Iconverter {
+  (data: any): any
+}
+
+type TuseFetch = (fetch: Tfetch, fetchParams: IfnParams, converter?: Iconverter) => ({
   data: any,
   doFetch: Tfetch,
   loading: boolean;
@@ -23,11 +27,13 @@ const useFetch: TuseFetch = (
     pageSize: 8,
     total: 10,
   },
+  converter = data => data 
 ) => {
   const [params, setParams] = useState(fetchParams)
   const [data, setData] = useState<any>(null)
   const [loading, setLoading] = useState(false) // loading有两个作用，一个是防止重复点击，一个是loading动画
 
+  const memoryconverter = useCallback(converter, [])
   // const memoryFetch = useCallback(fetch, [])
   // const memoryParams = useMemo(() => params, [params])
   // 这里注意：
@@ -43,7 +49,7 @@ const useFetch: TuseFetch = (
         const res = await fetch(params)
         setLoading(false)
         if (res.data) {
-          setData(() => res.data)
+          setData(() => memoryconverter(res.data))
         }
       } catch (err) {
         setLoading(false)
@@ -52,7 +58,7 @@ const useFetch: TuseFetch = (
     }
 
     fetchData()
-  }, [fetch, params])
+  }, [fetch, params, memoryconverter])
 
 
   // doFetch() 用于按钮等重新请求数据

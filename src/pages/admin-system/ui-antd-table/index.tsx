@@ -15,8 +15,10 @@ const UiAntTable = (props: any) => {
   const [form] = Form.useForm()
   const { data, doFetch, loading, params } = useFetch(getTableList, {
     current: 1,
-    pageSize: 8,
-    total: 8,
+    pageSize: 10,
+    total: 20,
+  }, (data) => {
+    return data
   })
 
   const { current, pageSize } = params

@@ -5,6 +5,7 @@ import styled from 'styled-components'
 import TestUseCallbackUseMemo from './test/test-usecallback-usememo'
 import TestUseRef from './test/test-useRef'
 import CustomHooks from './test/custom-hooks'
+import NumberAnimate from '@/components/NumberAnimate'
 // import { useFetch } from '@/utils/hooks/use-fetch.ts'
 // import axios from '@/api/axios'
 
@@ -44,6 +45,9 @@ const ReactComponnet = (props: any) => {
   return (
     <ReactHooks>
       <UseStateCopmonnet>
+        <div style={{width:'100px', height: '100px'}}>
+          <NumberAnimate score={20} mode={'up'} off={false} />
+        </div>
         <Title borderColor="#67ce00" backgroundColor="#F6FFED">useState</Title>
         <br /><p>{count}</p><br />
         <Button onClick={add}>Add</Button> &nbsp;
