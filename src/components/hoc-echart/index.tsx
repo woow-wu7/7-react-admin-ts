@@ -1,4 +1,5 @@
-import React, { useCallback, useEffect, useRef, useState } from 'react'
+/** eslint-disable */
+import React, { useCallback, useEffect, useRef } from 'react'
 import echarts from 'echarts'
 interface Ioption {
   option: IAny; // 配置对象

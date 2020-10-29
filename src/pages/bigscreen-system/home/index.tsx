@@ -1,5 +1,5 @@
 import React, { useState, Suspense } from 'react'
-import { Button, Checkbox, Form, Input } from 'antd';
+import { Button } from 'antd';
 
 
 const Home = (props: any) => {
@@ -20,13 +20,13 @@ const Home = (props: any) => {
     setAsyncTest2((component: any) => component = Test2)
   }
 
-  const onFinish = (values: any) => {
-    console.log('Success:', values);
-  };
+  // const onFinish = (values: any) => {
+  //   console.log('Success:', values);
+  // };
 
-  const onFinishFailed = (errorInfo: any) => {
-    console.log('Failed:', errorInfo);
-  };
+  // const onFinishFailed = (errorInfo: any) => {
+  //   console.log('Failed:', errorInfo);
+  // };
 
   return (
     <div>
