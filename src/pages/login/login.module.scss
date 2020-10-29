@@ -14,6 +14,33 @@
   align-items: center;
   background: rgb(78, 69, 88);
 
+  .authorWrap {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+    .author {
+      font-size: 40/1920*100vw;
+      color: #fff;
+      position: absolute;
+      bottom: 200/1080*100vh;
+      // .letter {
+      //   display: inline-block;
+      //   animation: authorAnimate 1s ease;
+      //   // filter: blur(20px);
+      //   // opacity: 1;
+      //   // transform: scale(2);
+      //   // transition: all 1.5s;
+      // }
+    }
+  }
+
   .wrap {
     position: relative;
     border-radius: 10px;
@@ -138,5 +165,18 @@
 
   to {
     transform: translate(0, 0%);
+  }
+}
+
+@keyframes authorAnimate {
+  from {
+    opacity: 0;
+    transform: scale(12);
+    filter: blur(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
   }
 }

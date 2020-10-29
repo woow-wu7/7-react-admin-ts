@@ -7,6 +7,8 @@ import * as actions from '../../app.action'
 import { CONST, SYSTEMTYPE } from '@/global/enum'
 import { ILoginMessage } from '@/global/interface'
 import { setLocalStorage } from '@/utils'
+import styled, { keyframes } from 'styled-components'
+
 // import axios from '@/api/axios'
 
 // 避免在 Login 中重复渲染
@@ -45,6 +47,27 @@ const imagesArr = [
   <div className={loginStyle.image3} key={6}></div>,
 ]
 
+// author动画
+const authorArr = ['w', 'o', 'o', 'w', '_', 'w', 'u', '7']
+
+const magic = keyframes`
+  from {
+    transform: scale(20);
+    filter: blur(30px);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+`
+
+const Span = styled.span`
+  display: inline-block;
+  color: ${(props: { currentNumber: number }) => props.currentNumber % 2 === 0 ? '#fff' : '#fff'};
+  animation: ${magic} ${(props: { currentNumber: number }) => 0.5 + props.currentNumber*0.1}s ease;
+`
+
 const Login = (
   props: {
     history?: any;
@@ -80,8 +103,8 @@ const Login = (
     setLocalStorage(CONST.LOGIN_MESSAGES, loginMessage) // currentSystemType 存入 localstorage
     setLocalStorage(CONST.CURRENT_SYSTEMTYPE, currentSystemType) // currentSystemType 存如 localstorage
 
-    console.log(SYSTEMTYPE[systemType] );
-    SYSTEMTYPE[currentSystemType] === SYSTEMTYPE.BIGSCREEN 
+    console.log(SYSTEMTYPE[systemType]);
+    SYSTEMTYPE[currentSystemType] === SYSTEMTYPE.BIGSCREEN
       // 跳转
       // 注意：这里直接从组件的state中获取systemType，可以获取到实时的type，而store中只有点击登陆按钮的时候，才会去存入
       ? history.push('/big-screen-home')
@@ -105,6 +128,14 @@ const Login = (
 
   return (
     <div className={loginStyle.login}>
+      <div className={loginStyle.authorWrap}>
+        <div className={loginStyle.author}>
+          {authorArr.map((v, index) =>
+            <Span key={+new Date()} currentNumber={index}>{v}</Span>
+          )}
+        </div>
+      </div>
+
       <div className={loginStyle.wrap}>
         <div className={loginStyle.wrapLeft}>
           {imagesArr.map(item => item)}
@@ -172,7 +203,7 @@ const Login = (
           })}
         </div>
       </div>
-    </div>
+    </div >
   )
 }
 
