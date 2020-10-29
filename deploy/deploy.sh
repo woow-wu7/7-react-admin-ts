@@ -4,7 +4,7 @@ rm -rf dist
 
 git pull
 
-cnpm install
+cnpm install --registry=https://registry.npm.taobao.org
 
-cnpm run build
+cnpm run build --registry=https://registry.npm.taobao.org
 
