@@ -21,6 +21,8 @@ const UiAntTable = (props: any) => {
     return data
   })
 
+  if (!data?.data) return ''
+
   const { current, pageSize } = params
 
   const renderTableOperator = (text: string) => {
@@ -98,8 +100,9 @@ const UiAntTable = (props: any) => {
       ...fields,
       startTime: '2011-10-16 20:02:41',
       endTime: '2020-10-16 20:02:41',
-      key: operateType === CONST.TABLE_OPERATE_ADD ? data.length + 20 : fields.key,
+      key: operateType === CONST.TABLE_OPERATE_ADD ? data.data.length + 20 : fields.key,
     }
+
     let res: any
     /* eslint-disable */
     switch (operateType) {
