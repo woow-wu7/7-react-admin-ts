@@ -392,3 +392,22 @@ server {
 
 表示：当 $uri 和 $uri/ 均不是对应资源时，返回 /index.html 资源
 ```
+
+### (10) 本地开发环境用express的proxy做的代理，部署到服务器后需要用nginx做代理
+- 遇到问题：部署后前端代码是跑在 nginx 中的，代理要用nginx来做，同时因为单页应用需要做try_files来解决刷新问题
+- 解决：在前端的请求path中加入 /api，在nginx中对 /api做反向代理
+```
+server {
+	listen 80;
+	server_name localhost;
+	location / {
+		root /usr/share/nginx/html;
+		index index.html index.htm;
+		try_files $uri $uri/  /index.html;
+	}
+	
+	location /api {
+		proxy_pass  http://49.233.215.163:7001; // 因为egg启动的是7001端口
+	}
+}
+```
