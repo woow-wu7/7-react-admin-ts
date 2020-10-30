@@ -4,6 +4,7 @@ import axios from 'axios'
 const token = 'afafad';
 
 const axiosInstance = axios.create({
+  // baseURL: 'http://49.233.215.163:7001',
   baseURL: '',
   timeout: 5000,
   headers: {
