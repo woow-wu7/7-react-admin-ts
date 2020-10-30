@@ -368,4 +368,31 @@ rules: {
   - antd的 **BackTop** 组件的层级，在哪里的层级都可以
 
 
+  ### (9) 前端部署到服务器后，刷新404
+  原因：因为web单页应用，其实就一个index.html页面，跳转路由只是更新页面的一部分，而不存在真正的路由对应的页面，刷新访问的地址页面是不存在的，所以要重新重定向到index.html
+  解决：配置nginx的try_files
+  具体：`try_files $uri $uri/ /index.html`
+  说明：
+    - **try_files**：尝试访问对应的资源，第一个访问不到，就访问第二个资源，一次往后
+    - **$uri**：表示Nginx地址变量，即当前的rul地址
+      - 比如：访问http://www.baidu.com/index.html，则 ( $uri ) 为 ( /index.html )
+    - **$rui/**：表示一个目录，nginx会自动识别是目录还是文件
+      - 比如：访问http://www.baidu.com/a/b/，则 ( $uri/ ) 为 ( /a/b/ )
+  代码：
+```
+server {
+	listen 80;
+	server_name localhost;
+	location / {
+		root /usr/share/nginx/html;
+		index index.html index.htm;
+		try_files $uri $uri/  /index.html;
+	}
+}
+
+表示：当 $uri 和 $uri/ 均不是对应资源时，返回 /index.html 资源
+```
+    
+
+
 https://www.cnblogs.com/xiaojiumei/p/10422806.html
