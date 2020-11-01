@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Button, Form, Input, Checkbox, Select } from "antd"
 import loginStyle from './login.module.scss'
 import { connect } from 'react-redux'
@@ -31,6 +31,10 @@ const list = [
   }
 ]
 
+
+// author动画
+const authorArr = ['w', 'o', 'o', 'w', '_', 'w', 'u', '7']
+
 // form样式
 const layout = {
   labelCol: { span: 6 },
@@ -42,13 +46,7 @@ const imagesArr = [
   <div className={loginStyle.image1} key={1}></div>,
   <div className={loginStyle.image2} key={2}></div>,
   <div className={loginStyle.image3} key={3}></div>,
-  <div className={loginStyle.image1} key={4}></div>,
-  <div className={loginStyle.image2} key={5}></div>,
-  <div className={loginStyle.image3} key={6}></div>,
 ]
-
-// author动画
-const authorArr = ['w', 'o', 'o', 'w', '_', 'w', 'u', '7']
 
 const magic = keyframes`
   from {
@@ -62,10 +60,12 @@ const magic = keyframes`
   }
 `
 
+
+
 const Span = styled.span`
   display: inline-block;
   color: ${(props: { currentNumber: number }) => props.currentNumber % 2 === 0 ? '#fff' : '#fff'};
-  animation: ${magic} ${(props: { currentNumber: number }) => 0.5 + props.currentNumber*0.1}s ease;
+  animation: ${magic} ${(props: { currentNumber: number }) => 0.5 + props.currentNumber * 0.1}s ease;
 `
 
 const Login = (
@@ -82,6 +82,7 @@ const Login = (
 
   const { changeSystemType, getLoginMessage, systemType, history } = props
   const { Option } = Select;
+
 
   const handleChange = (type: string) => {
     setcurrentSystemType(v => v = type)
@@ -126,12 +127,17 @@ const Login = (
     setActivedMenu(value => value = v)
   }
 
+  useEffect(() => {
+    console.table(authorArr)
+  })
+
   return (
     <div className={loginStyle.login}>
+      {/* 底部文字动画 */}
       <div className={loginStyle.authorWrap}>
         <div className={loginStyle.author}>
           {authorArr.map((v, index) =>
-            <Span key={+new Date()} currentNumber={index}>{v}</Span>
+            <Span key={+new Date() * Math.random()} currentNumber={index}>{v}</Span>
           )}
         </div>
       </div>
