@@ -8,6 +8,7 @@ import { CONST, SYSTEMTYPE } from '@/global/enum'
 import { ILoginMessage } from '@/global/interface'
 import { setLocalStorage } from '@/utils'
 import styled, { keyframes } from 'styled-components'
+import { useOnce } from '@/utils/hooks/use-once'
 
 // import axios from '@/api/axios'
 
@@ -30,7 +31,6 @@ const list = [
     value: 'origin'
   }
 ]
-
 
 // author动画
 const authorArr = ['w', 'o', 'o', 'w', '_', 'w', 'u', '7']
@@ -61,13 +61,6 @@ const magic = keyframes`
 `
 
 
-
-const Span = styled.span`
-  display: inline-block;
-  color: ${(props: { currentNumber: number }) => props.currentNumber % 2 === 0 ? '#fff' : '#fff'};
-  animation: ${magic} ${(props: { currentNumber: number }) => 0.5 + props.currentNumber * 0.1}s ease;
-`
-
 const Login = (
   props: {
     history?: any;
@@ -79,10 +72,16 @@ const Login = (
   const [activedMenu, setActivedMenu] = useState('')
   const [currentSystemType, setcurrentSystemType] = useState(props.systemType)
   const [form] = Form.useForm();
+  const once = useOnce(1000)
 
   const { changeSystemType, getLoginMessage, systemType, history } = props
   const { Option } = Select;
 
+  const Span = styled.span`
+    display: inline-block;
+    color: ${(props: { currentNumber: number }) => props.currentNumber % 2 === 0 ? '#fff' : '#fff'};
+    animation: ${!once && magic} ${(props: { currentNumber: number }) => 0.5 + props.currentNumber * 0.1}s ease;
+  `
 
   const handleChange = (type: string) => {
     setcurrentSystemType(v => v = type)
@@ -143,6 +142,7 @@ const Login = (
       </div>
 
       <div className={loginStyle.wrap}>
+        {/* 图片动画 */}
         <div className={loginStyle.wrapLeft}>
           {imagesArr.map(item => item)}
         </div>
