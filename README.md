@@ -411,3 +411,8 @@ server {
 	}
 }
 ```
+
+### (11) React.lazy(import())
+- `React.lazy(import(/* webpackChunkName: "[request]" */, `@/pages/${path}`))`
+- 上面的 request 就是 path 变量的值
+- 比如：path=aaa => request=aaa => 按需加载的chunk包名就包含aaa.chunk.js
