@@ -35,7 +35,7 @@ const Admin = (props: any) => {
 
 	const roles =
 		useSelector((state: { app: { loginMessage: { roles: string } } }) => state.app.loginMessage.roles) ||
-		getLocalStorage(CONST.LOGIN_MESSAGES).roles;
+		getLocalStorage(CONST.LOGIN_MESSAGES)?.roles;
 
 	/**
 	 * @function renderMenu

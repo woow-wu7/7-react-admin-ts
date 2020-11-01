@@ -14,7 +14,7 @@ const Layout = (props: any) => {
 
   const token =
     useSelector((state: { app: { loginMessage: { token: string } } }) => state.app.loginMessage.token) ||
-    getLocalStorage(CONST.LOGIN_MESSAGES).token;
+    getLocalStorage(CONST.LOGIN_MESSAGES)?.token || '';
 
 
   const isToLogin = () => {

@@ -1,6 +1,6 @@
 import React, { Suspense, lazy } from 'react'
-import {Route, Switch} from 'react-router-dom'
-import {lazyLoad} from '@/utils'
+import { Route, Switch, Redirect } from 'react-router-dom'
+import { lazyLoad } from '@/utils'
 
 
 // 基础路由

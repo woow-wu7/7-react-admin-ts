@@ -127,7 +127,7 @@ const Login = (
   }
 
   useEffect(() => {
-    console.table(authorArr)
+    // console.table(authorArr)
   })
 
   return (
