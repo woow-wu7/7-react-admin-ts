@@ -1,3 +1,4 @@
+import React from 'react'
 import { Modal } from "antd"
 export * from './render-routes' // 导出所有render-routes/index中定义的函数
 
@@ -32,10 +33,10 @@ export function getLocalStorage(name: string) {
 // 不传参，就是删除所有
 export function removeLocalStorage(name?: string) {
   name === 'undefined'
-  ? 
-  window.localStorage.removeItem(name)
-  :
-  window.localStorage.clear()
+    ?
+    window.localStorage.removeItem(name)
+    :
+    window.localStorage.clear()
 }
 
 
@@ -50,4 +51,11 @@ export function deepClone(params: any[] | object) {
     }
   }
   return results
+}
+
+// layLoad 懒加载路由组件
+export function lazyLoad(modulePath: string) {
+  const path = modulePath.replace('@/pages/', '')
+  const Component = React.lazy(() => import(/* webpackChunkName: "[request]" */`@/pages/${path}`))
+  return Component
 }

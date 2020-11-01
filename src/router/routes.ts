@@ -1,31 +1,9 @@
-import { lazy } from 'react';
 import { IRouteModule } from '../global/interface'
 import adminRoutes from './admin-routes'
 import bigScreenRoutes from './big-screen-routes'
 
-// 基础路由
-const Login = lazy(() => import(/* webpackChunkName: 'Login' */'../pages/login'))
-const Layout = lazy(() => import(/* webpackChunkName: 'Layout' */'../pages/layout'))
-const NotFound = lazy(() => import(/* webpackChunkName: 'NotFound' */'../pages/404'))
-
 const totalRoutes: IRouteModule[] = [
   {
-    path: '/login',
-    component: Login,
-    meta: {
-      needLoginAuth: false
-    }
-  },
-  {
-    path: '/404',
-    component: NotFound,
-    meta: {
-      needLoginAuth: false
-    }
-  },
-  {
-    path: '/',
-    component: Layout,
     meta: {
       needLoginAuth: false,
     },

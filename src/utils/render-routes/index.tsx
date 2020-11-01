@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Suspense } from 'react'
 import { IRouteModule } from '@/global/interface'
 import { Switch, Route, useHistory, Redirect } from 'react-router-dom'
 import { useSelector } from 'react-redux'
@@ -65,27 +65,29 @@ export const renderRoutes = (routes: IRouteModule[], extraProps = {}, switchProp
 	routes = normalize(routes) // 展平 subs
 
 	return routes
-		? <Switch {...switchProps}>
-			{
-				routes.map((route, index) => { // 先对subs做处理
-					return route.path && route.component &&
-						// path 并且 component 同时存在才进行路由注册
-						// path 和 componet 总是同时存在，同时不存在
-						// 但是 path 是必须字段，是因为在 breadcrumb面包屑中需用用到
-						<Route
-							key={route.key || `${index + +new Date()}`}
-							path={route.path}
-							exact={route.exact}
-							strict={route.strict}
-							render={props => {
-								return route.render
-									? route.render({ ...props, ...extraProps, route: route })
-									: <route.component {...props} {...extraProps} route={route} />
-								// 向嵌套组件中传递 route属性，通过route.routes在嵌套路由组件中可以再注册嵌套路由
-							}} />
-				})}
-			<Redirect to="/404"></Redirect>
-		</Switch>
+		? <Suspense fallback={<div>loading...</div>}>
+			<Switch {...switchProps}>
+				{
+					routes.map((route, index) => { // 先对subs做处理
+						return route.path && route.component &&
+							// path 并且 component 同时存在才进行路由注册
+							// path 和 componet 总是同时存在，同时不存在
+							// 但是 path 是必须字段，是因为在 breadcrumb面包屑中需用用到
+							<Route
+								key={route.key || `${index + +new Date()}`}
+								path={route.path}
+								exact={route.exact}
+								strict={route.strict}
+								render={props => {
+									return route.render
+										? route.render({ ...props, ...extraProps, route: route })
+										: <route.component {...props} {...extraProps} route={route} />
+									// 向嵌套组件中传递 route属性，通过route.routes在嵌套路由组件中可以再注册嵌套路由
+								}} />
+					})}
+				<Redirect to="/404"></Redirect>
+			</Switch>
+		</Suspense>
 		: null
 }
 

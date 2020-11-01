@@ -41,7 +41,7 @@ const CustomBreadcrumb = () => {
   const generateRouteMap = (routesAmin: IRouteModule[]) => {
     const routeMap = {}
     function step(routesAmin: IRouteModule[]) {
-      routesAmin.forEach((item, index) => {
+      routesAmin.forEach((item: any, index) => {
         if (item.path.includes(routeParams && Object.keys(routeParams)[0])) { // 动态路由存在:符号，缓存该 route，用于替换面包屑的最后一级名字
           item.path = item.path.replace(`:${Object.keys(routeParams)[0]}`, routeParams[Object.keys(routeParams)[0]])
           // 把动态路由参数（:id） 替换成真实的（params）

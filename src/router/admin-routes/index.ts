@@ -1,15 +1,20 @@
+import React from 'react'
 import { IRouteModule } from '@/global/interface'
-import AdminHome from '@/pages/admin-system/home'
-import UiAntdForm from '@/pages/admin-system/ui-antd-form'
+import { lazyLoad } from '@/utils' 
 import UiAntdTable from '@/pages/admin-system/ui-antd-table'
-import UiVant from '@/pages/admin-system/ui-vant'
-import ReactHooks from '@/pages/admin-system/react-hooks'
-import JsEs5 from '@/pages/admin-system/js-es5'
-import JsEs6 from '@/pages/admin-system/js-es6'
-import JsEs6Detail from '@/pages/admin-system/js-es6-detail'
-import JsEs5Detail from '@/pages/admin-system/js-es5-detail'
-import Material from '@/pages/admin-system/material-bigscreen'
-import ServerEgg from '@/pages/admin-system/server-egg'
+
+
+const AdminHome = lazyLoad('@/pages/admin-system/home')
+const UiAntdForm = lazyLoad('@/pages/admin-system/ui-antd-form')
+const UiVant = lazyLoad('@/pages/admin-system/ui-vant')
+const ReactHooks = lazyLoad('@/pages/admin-system/react-hooks')
+const JsEs5 = lazyLoad('@/pages/admin-system/js-es5')
+const JsEs6 = lazyLoad('@/pages/admin-system/js-es6')
+const JsEs6Detail = lazyLoad('@/pages/admin-system/js-es6-detail')
+const JsEs5Detail = lazyLoad('@/pages/admin-system/js-es5-detail')
+const Material = lazyLoad('@/pages/admin-system/material-bigscreen')
+const ServerEgg = lazyLoad('@/pages/admin-system/server-egg')
+
 
 const adminRoutes: IRouteModule[] = [
   {

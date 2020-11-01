@@ -52,7 +52,7 @@ const Admin = (props: any) => {
 					{renderMenu(subs)}
 				</SubMenu>
 				:
-				!path.includes(':') && <Menu.Item key={key} icon={<IconFont type={icon || 'anticon-shouye'} />} >{title}</Menu.Item>
+				path && !path.includes(':') && <Menu.Item key={key} icon={<IconFont type={icon || 'anticon-shouye'} />} >{title}</Menu.Item>
 			// 动态路由不进行显示，因为一般动态路由是详情页
 			// 虽然不显示，但是需要注册路由，只是menu不显示
 		})
@@ -90,6 +90,7 @@ const Admin = (props: any) => {
 			</Menu.Item>
 		</Menu>
 	)
+
 	return (
 		<Layout className={styles.layoutAdmin}>
 			<Sider className={styles.silderWrap} collapsed={collapsed}>
@@ -126,7 +127,7 @@ const Admin = (props: any) => {
 				<div className={styles.content} ref={ref}>
 					<div className={styles.scrollInner}>
 						<CustomBreadcrumb />
-						{renderRoutes(props.route.routes)}
+						{renderRoutes(adminRoutes)}
 						{/* renderRoutes(props.route.routes) 再次执行，注册嵌套的路由，成为父组件的子组件 */}
 					</div>
 				</div>
