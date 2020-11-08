@@ -1,4 +1,3 @@
-import React from 'react'
 import { IRouteModule } from '@/global/interface'
 import { lazyLoad } from '@/utils' 
 import UiAntdTable from '@/pages/admin-system/ui-antd-table'

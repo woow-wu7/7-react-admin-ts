@@ -1,5 +1,5 @@
-import React, { Suspense, lazy } from 'react'
-import { Route, Switch, Redirect } from 'react-router-dom'
+import React, { Suspense } from 'react'
+import { Route, Switch } from 'react-router-dom'
 import { lazyLoad } from '@/utils'
 
 
