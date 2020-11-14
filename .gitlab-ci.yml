@@ -6,6 +6,8 @@ stages:
 build-stage:
   stage: build
   image: node
+  tags:
+    - 7-react-admin-ts-runner
   script:
     - npm install cnpm -g --registry=https://registry.npm.taobao.org
     - cnpm -v
