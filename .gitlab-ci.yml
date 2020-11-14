@@ -1,7 +1,7 @@
 image: node
 
 variables:
-  - CENTOS_IP: '123456789'
+  CENTOS_IP: '123456789'
 
 stages:
   - log
