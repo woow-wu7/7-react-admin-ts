@@ -26,6 +26,7 @@ build-stage:
     - 7-react-admin-ts-runner
   script:
     - echo 1
+    - echo 2
     # - rm -rf 7-react-admin-ts
     # - npm install cnpm -g --registry=https://registry.npm.taobao.org
     # - git clone https://gitlab.com/woow_wu7/7-react-admin-ts.git
