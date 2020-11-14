@@ -1,0 +1,11 @@
+image: node
+
+stages:
+  - build
+
+build-stage:
+  stage: build
+  image: node
+  script:
+    - npm install cnpm -g --registry=https://registry.npm.taobao.org
+    - cnpm -v

@@ -1,7 +1,0 @@
-stages:
-  - echo
-  - build
-echo-stage:
-  - stage: echo
-build-stage:
-  - stage: build
