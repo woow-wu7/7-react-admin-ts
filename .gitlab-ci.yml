@@ -11,6 +11,8 @@ stages:
 log-stage:
   stage: log
   image: node
+  tags:
+    - 7-react-admin-ts-runner
   script:
     - echo ${CENTOS_IP}
     - npm -v
