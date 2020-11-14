@@ -2,6 +2,7 @@ image: node
 
 stages:
   - build
+  - deploy
 
 build-stage:
   stage: build
@@ -12,6 +13,18 @@ build-stage:
     - rm -rf 7-react-admin-ts
     - npm install cnpm -g --registry=https://registry.npm.taobao.org
     - git clone https://gitlab.com/woow_wu7/7-react-admin-ts.git
-    - cd 7-react-admin-ts
-    - cnpm install
+    - cd 7-react-admin-ts/
+    - cnpm run install
     - cnpm run build
+  # artifacts:
+  #   expire_in: 1 week
+  #   paths: 
+  #     - $DIST_DIR
+
+deploy-stage:
+  stage: deploy
+  image: node
+  tags:
+    - 7-react-admin-ts-runner
+  script: 
+    - console.log(1)
