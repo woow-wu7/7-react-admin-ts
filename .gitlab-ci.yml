@@ -24,15 +24,12 @@ build-stage:
   tags:
     - 7-react-admin-ts-runner
   script:
-    - echo 1
-    - echo 2
     - rm -rf 7-react-admin-ts
     - npm install cnpm -g --registry=https://registry.npm.taobao.org
     - git clone https://gitlab.com/woow_wu7/7-react-admin-ts.git
-    - ls
     - cd 7-react-admin-ts/
+    - cnpm install
     - ls
-    # - cnpm install
     # - cnpm run build
   # artifacts:
   #   expire_in: 1 week
