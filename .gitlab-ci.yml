@@ -18,6 +18,7 @@ echo-stage-job-variable:
   script:
     - echo ${CENTOS_IP}
   allow_failure: true
+  parallel: 7
 
 echo-stage-job-start:
   stage: echo
@@ -26,7 +27,6 @@ echo-stage-job-start:
     - 7-react-admin-ts-runner2
   script:
     - echo "CI start"
-
 
 build-stage-job:
   stage: build
