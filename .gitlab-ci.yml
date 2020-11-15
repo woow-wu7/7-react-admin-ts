@@ -25,7 +25,7 @@ echo-stage-job-start:
   tags:
     - 7-react-admin-ts-runner2
   script:
-    - echoe "CI start"
+    - echo "CI start"
 
 
 build-stage-job:
