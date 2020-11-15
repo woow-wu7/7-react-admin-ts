@@ -89,7 +89,7 @@
   "scripts": {
     "dev": "npm run start",
     "start": "node scripts/start.js",
-    "build": "node scripts/build.js",
+    "build": "set CI=&&node scripts/build.js",
     "test": "node scripts/test.js"
   },
   "browserslist": {

@@ -1,6 +1,7 @@
 import React from 'react'
 import styles from './home.module.scss'
 // import HocEcharts from '@/components/hoc-echart'
+import buildImage from "@/assets/iamges/building.png"
 
 const Home = (props: any) => {
   // const [theme] = useState('vintage')
@@ -191,6 +192,7 @@ const Home = (props: any) => {
   // }
   return (
     <div className={styles.home}>
+      <img src={buildImage} alt="" style={{width: '100%', height: '100%'}}/>
       {/* <div className={styles.top}>
         <HocEcharts
           option={barOption}

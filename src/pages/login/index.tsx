@@ -44,8 +44,11 @@ const layout = {
 // imgage动画数组
 const imagesArr = [
   <div className={loginStyle.image1} key={1}></div>,
-  <div className={loginStyle.image2} key={2}></div>,
-  <div className={loginStyle.image3} key={3}></div>,
+  <div className={loginStyle.image1} key={2}></div>,
+  <div className={loginStyle.image1} key={3}></div>,
+  <div className={loginStyle.image1} key={4}></div>,
+  <div className={loginStyle.image1} key={5}></div>,
+  <div className={loginStyle.image1} key={6}></div>,
 ]
 
 const magic = keyframes`
