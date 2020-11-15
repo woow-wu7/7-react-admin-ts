@@ -43,6 +43,7 @@ build-stage-job:
     - npm install
     - npm run build
   allow_failure: true
+  retry: 2
   # artifacts:
   #   expire_in: 1 week
   #   paths: 
