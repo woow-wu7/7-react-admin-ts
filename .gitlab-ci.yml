@@ -24,11 +24,11 @@ build-stage:
   tags:
     - 7-react-admin-ts-runner
   script:
-    # - rm -rf 7-react-admin-ts
-    # - git clone https://gitlab.com/woow_wu7/7-react-admin-ts.git
+    - rm -rf 7-react-admin-ts
+    - git clone https://gitlab.com/woow_wu7/7-react-admin-ts.git
     - cd 7-react-admin-ts/
-    # - ls
-    # - npm install
+    - ls
+    - npm install
     - npm run build
   allow_failure: true
   # artifacts:
