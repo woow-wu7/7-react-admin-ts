@@ -10,7 +10,7 @@ stages:
   - manually
   - success
 
-echo-stage:
+echo-stage-job-variable:
   stage: echo
   image: node
   tags:
@@ -19,7 +19,16 @@ echo-stage:
     - echo ${CENTOS_IP}
   allow_failure: true
 
-build-stage:
+echo-stage-job-start:
+  stage: echo
+  image: node
+  tags:
+    - 7-react-admin-ts-runner2
+  script:
+    - echoe "CI start"
+
+
+build-stage-job:
   stage: build
   image: node
   only:
@@ -39,7 +48,7 @@ build-stage:
   #   paths: 
   #     - $DIST_DIR
 
-deploy-stage:
+deploy-stage-job:
   stage: deploy
   image: node
   only:
@@ -49,7 +58,7 @@ deploy-stage:
   script: 
     - echo "deploy successed"
 
-manually-stage:
+manually-stage-job:
   stage: manually
   image: node
   tags:
@@ -58,7 +67,7 @@ manually-stage:
     - echo "manually success"
   when: manual
 
-success-stage:
+success-stage-job:
   stage: success
   image: node
   tags:
