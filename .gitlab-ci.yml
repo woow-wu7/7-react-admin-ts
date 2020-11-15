@@ -7,6 +7,8 @@ stages:
   - echo
   - build
   - deploy
+  - manually
+  - success
 
 echo-stage:
   stage: echo
@@ -15,6 +17,7 @@ echo-stage:
     - 7-react-admin-ts-runner
   script:
     - echo ${CENTOS_IP}
+  allow_failure: true
 
 build-stage:
   stage: build
@@ -44,4 +47,22 @@ deploy-stage:
   tags:
     - 7-react-admin-ts-runner
   script: 
-    - echo "successed"
+    - echo "deploy successed"
+
+manually-stage:
+  stage: manually
+  image: node
+  tags:
+    - 7-react-admin-ts-runner
+  script:
+    - echo "manually success"
+  when: manual
+
+success-stage:
+  stage: success
+  image: node
+  tags:
+    - 7-react-admin-ts-runner
+  script:
+    - echo "all success"
+  when: on_success
