@@ -1,10 +1,11 @@
 import { IRouteModule } from '@/global/interface'
 import { lazyLoad } from '@/utils' 
-import UiAntdTable from '@/pages/admin-system/ui-antd-table'
 
 
 const AdminHome = lazyLoad('@/pages/admin-system/home')
 const UiAntdForm = lazyLoad('@/pages/admin-system/ui-antd-form')
+const UiAntdTable = lazyLoad('@/pages/admin-system/ui-antd-table/index.tsx')
+const UiAntdProTable = lazyLoad('@/pages/admin-system/ui-antd-protable/index.tsx')
 const UiVant = lazyLoad('@/pages/admin-system/ui-vant')
 const ReactHooks = lazyLoad('@/pages/admin-system/react-hooks')
 const JsEs5 = lazyLoad('@/pages/admin-system/js-es5')
@@ -52,6 +53,17 @@ const adminRoutes: IRouteModule[] = [
           key: '/admin-ui/antd/table',
           path: '/admin-ui/antd/table',
           component: UiAntdTable,
+          meta: {
+            needLoginAuth: true,
+            rolesAuth: ['admin']
+          },
+        },
+        {
+          title: 'Pro-Table',
+          icon: 'anticon-custom-form',
+          key: '/admin-ui/antd/proTable',
+          path: '/admin-ui/antd/proTable',
+          component: UiAntdProTable,
           meta: {
             needLoginAuth: true,
             rolesAuth: ['admin']
