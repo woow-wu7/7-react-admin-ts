@@ -1,0 +1,99 @@
+image: node
+
+variables:
+  PROJECT_NAME: "7-react-admin-ts"
+
+stages:
+  - environment
+  - build
+  - deploy
+
+environment-stage-name-job:
+  stage: environment
+  image: node
+  tags:
+    - 7-react-ci
+  script:
+    - echo "gitlab-ci start"
+    - echo ${PROJECT_NAME}
+  allow_failure: true
+  parallel: 2
+
+environment-stage-env-job:
+  stage: environment
+  image: node
+  tags:
+    - 7-react-ci
+  script:
+    - echo ${CI_COMMIT_SHA}
+    - echo ${CI_PROJECT_NAME}
+    - echo ${CI_PROJECT_NAMESPACE}
+    - echo ${CI_PROJECT_PATH}
+    - echo ${CI_PROJECT_URL}
+    - echo ${GITLAB_USER_NAME}
+    - echo ${GITLAB_USER_EMAIL}
+    - echo ${CI_PROJECT_DIR}
+    - echo ${CI_PIPELINE_ID}
+    - echo ${CI_COMMIT_REF_NAME}
+  allow_failure: true
+
+build-stage-job:
+  stage: build
+  image: node
+  tags:
+    - 7-react-ci
+  only:
+    - master
+  script:
+    - echo "build job start"
+    - apt-get install -y git
+    - npm install -g cnpm --registry=https://registry.npm.taobao.org
+    - git --version
+    - cnpm -v
+    - npm -v
+    - node -v
+    - ls
+    - rm -rf ${PROJECT_DIR}
+    - git clone ${REMOTE_PROJECT_URL}
+    - cd ${PROJECT_DIR}
+    - cnpm install
+    - cnpm run build
+    - ls
+  allow_failure: false
+  retry: 2
+  artifacts:
+    name: "build_dist"
+    paths: 
+      - ${BUILD_DIR}
+    when: on_success
+    expire_in: 7 week
+
+deploy-stage-job:
+  # extends: .deploy-stage-job 继承
+  stage: deploy
+  image: node
+  tags:
+    - 7-react-ci
+  only: 
+    - master
+  dependencies:
+    - build-stage-job
+  before_script:
+    - echo "deploy job start"
+    - ls
+    - 'command -v ssh-agent >/dev/null || ( apt-get update -y && apt-get install openssh-client -y )'
+    - eval $(ssh-agent -s)
+    - echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add -
+    - mkdir -p ~/.ssh
+    - chmod 700 ~/.ssh
+    - echo "$SSH_KNOWN_HOSTS" >> ~/.ssh/known_hosts
+    - chmod 644 ~/.ssh/known_hosts
+  script:
+    - echo "deploy start"
+    - ls
+    - apt-get update
+    - apt-get install -y sshpass
+    - sshpass -p ${PASSWORD} scp -r ${BUILD_DIR} root@49.233.215.163:build_dir
+  allow_failure: false
+  retry: 2
+  when: on_success
