@@ -77,7 +77,7 @@ const Login = (
   const [form] = Form.useForm();
   const once = useOnce(1000)
 
-  const { changeSystemType, getLoginMessage, systemType, history } = props
+  const { changeSystemType, getLoginMessage, history } = props
   const { Option } = Select;
 
   const Span = styled.span`
@@ -87,6 +87,7 @@ const Login = (
   `
 
   const handleChange = (type: string) => {
+    console.log('切换系统')
     setcurrentSystemType(v => v = type)
   }
 
@@ -106,7 +107,7 @@ const Login = (
     setLocalStorage(CONST.LOGIN_MESSAGES, loginMessage) // currentSystemType 存入 localstorage
     setLocalStorage(CONST.CURRENT_SYSTEMTYPE, currentSystemType) // currentSystemType 存如 localstorage
 
-    console.log(SYSTEMTYPE[systemType]);
+    console.log(history, "props => history");
     SYSTEMTYPE[currentSystemType] === SYSTEMTYPE.BIGSCREEN
       // 跳转
       // 注意：这里直接从组件的state中获取systemType，可以获取到实时的type，而store中只有点击登陆按钮的时候，才会去存入

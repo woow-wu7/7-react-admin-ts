@@ -1,11 +1,23 @@
 .layoutBigScreen {
   height: 100%;
   width: 100%;
-  background: gold;
-}
+  background: rgb(0, 124, 226);
 
-.select {
-  position: fixed;
-  bottom: 50px;
-  right: 10px;
+  .panel {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #fff;
+    padding: 8px;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 1px 1px 14px 2px rgb(194, 193, 193);
+
+    & > p {
+      margin-bottom: 10px;
+    }
+  }
 }

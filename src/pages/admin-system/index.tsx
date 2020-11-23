@@ -24,6 +24,7 @@ const Admin = (props: any) => {
 	const ref = useRef<HTMLDivElement>(null)
 
 	useEffect(() => {
+		console.log("admin-system初始化")
 		// 这里要考虑 ( 登陆第一次跳转的加载 ) 和 ( 刷新浏览器的加载 )
 		// 不管哪种情况，都获取当前的 pathname，当前pathname是 ( path和menu的keys要一致的原因  )
 		const TempSelectedKeys = [pathname]

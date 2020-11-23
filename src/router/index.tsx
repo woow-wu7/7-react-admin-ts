@@ -13,8 +13,8 @@ const Router = () => {
   return (
     <Suspense fallback={<div>loading...</div>}>
       <Switch>
-        <Route path='/login' component={Login} />
-        <Route path='/404' component={NotFound} />
+        <Route path='/login' render={props => { console.log("login路由"); return <Login {...props} />}} />
+        <Route path='/404' render={props => { console.log("NotFount路由"); return <NotFound {...props} />}}  />
         <Route component={Layout} />
       </Switch>
     </Suspense>
