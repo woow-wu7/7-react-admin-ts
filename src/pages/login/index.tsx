@@ -224,8 +224,8 @@ const mapStateToProps = (state: any) => {
   }
 }
 
-const mapDispatchToProps = (payload: any) => {
-  return bindActionCreators(actions, payload)
+const mapDispatchToProps = (dispatch: any) => {
+  return bindActionCreators(actions, dispatch)
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Login)

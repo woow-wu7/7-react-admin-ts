@@ -1,0 +1,11 @@
+@function getWidth($uiWidth) {
+  @return ( $uiWidth / 1920 ) * 100vw;
+};
+
+@function getHeight($uiHeight) {
+  @return ( $uiHeight / 1080 ) * (1080/1920 * 100vw);
+};
+
+@function getFontSize($fontSize) {
+  @return $fontSize / 1920 * 100vw;
+};
