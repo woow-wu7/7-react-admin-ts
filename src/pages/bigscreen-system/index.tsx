@@ -13,10 +13,7 @@ const equalityFn = (prev: any, next: any) => {
 const BigScreen = (props: any) => {
   const history = useHistory()
   const result = useSelector(state => state, equalityFn)
-
- 
   console.log(result, 'result')
-
   useEffect(() => {
     history.push("/big-screen-home")
   },[history])
