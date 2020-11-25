@@ -4,6 +4,7 @@ import { lazyLoad } from '@/utils'
 
 
 // 基础路由
+// lazyLoad 是用 React.lazy(() => import(/* webpackChunkName: "[request]" */`@/pages/${path}`))封装的函数
 const Login = lazyLoad('@/pages/login')
 const NotFound = lazyLoad('@/pages/404')
 const Layout = lazyLoad('@/pages/layout')

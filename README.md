@@ -412,7 +412,34 @@ server {
 }
 ```
 
-### (11) React.lazy(import())
-- `React.lazy(import(/* webpackChunkName: "[request]" */, `@/pages/${path}`))`
+### (11) React.lazy(() => import())
+- `React.lazy(() => import(/* webpackChunkName: "[request]" */, `@/pages/${path}`))`
 - 上面的 request 就是 path 变量的值
 - 比如：path=aaa => request=aaa => 按需加载的chunk包名就包含aaa.chunk.js
+- **( React.lazy ) 需要配合 ( Suspense ) 组件**
+- suspense：是悬念的意思
+
+```
+import React, { Suspense } from 'react'
+import { Route, Switch } from 'react-router-dom'
+import { lazyLoad } from '@/utils'
+// 基础路由
+const Login = lazyLoad('@/pages/login')
+const NotFound = lazyLoad('@/pages/404')
+const Layout = lazyLoad('@/pages/layout')
+
+// renderRoutes 中包含 Switch 组件
+const Router = () => {
+  return (
+    <Suspense fallback={<div>loading...</div>}>
+      <Switch>
+        <Route path='/login' render={props => { console.log("login路由"); return <Login {...props} />}} />
+        <Route path='/404' render={props => { console.log("NotFount路由"); return <NotFound {...props} />}}  />
+        <Route component={Layout} />
+      </Switch>
+    </Suspense>
+  )
+}
+
+export default Router
+```
