@@ -1,0 +1,78 @@
+image: node
+
+variables:
+  CENTOS_IP: '123456789'
+
+stages:
+  - echo
+  - build
+  - deploy
+  - manually
+  - success
+
+echo-stage-job-variable:
+  stage: echo
+  image: node
+  tags:
+    - 7-react-admin-ts-runner
+  script:
+    - echo ${CENTOS_IP}
+  allow_failure: true
+  parallel: 7
+
+echo-stage-job-start:
+  stage: echo
+  image: node
+  tags:
+    - 7-react-admin-ts-runner2
+  script:
+    - echo "CI start"
+
+build-stage-job:
+  stage: build
+  image: node
+  only:
+    - master
+  tags:
+    - 7-react-admin-ts-runner
+  script:
+    - rm -rf 7-react-admin-ts
+    - git clone https://gitlab.com/woow_wu7/7-react-admin-ts.git
+    - cd 7-react-admin-ts/
+    - ls
+    - npm install
+    - npm run build
+  allow_failure: true
+  retry: 2
+  # artifacts:
+  #   expire_in: 1 week
+  #   paths: 
+  #     - $DIST_DIR
+
+deploy-stage-job:
+  stage: deploy
+  image: node
+  only:
+    - master
+  tags:
+    - 7-react-admin-ts-runner
+  script: 
+    - echo "deploy successed"
+
+manually-stage-job:
+  stage: manually
+  image: node
+  tags:
+    - 7-react-admin-ts-runner
+  script:
+    - echo "manually success"
+  when: manual
+
+success-stage-job:
+  stage: success
+  image: node
+  tags:
+    - 7-react-admin-ts-runner
+  script:
+    - echo "all success"
+  when: on_success

@@ -1,0 +1,60 @@
+.layoutAdmin {
+  min-height: 100vh;
+  // background: #F0F2F5;
+
+  .silderWrap {
+    height: 100vh;
+  }
+
+  .contentWrap {
+    min-height: 100vh;
+
+    .header {
+      // height: 160px;
+      background: #fff;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      align-items: center;
+      padding-left: $safe-padding;
+      padding-right: $safe-padding;
+      box-sizing: border-box;
+      height: 60px;
+
+      & > aside > span {
+        padding: 10px 10px 10px 0;
+        cursor: pointer;
+
+        .toggleCollapsedIcon {
+          font-size: 20px;
+        }
+      }
+
+      .topMenu {
+        margin: 0;
+
+        & > li {
+          cursor: pointer;
+        }
+      }
+    }
+
+    .content {
+      padding: $safe-padding;
+      box-sizing: border-box;
+      height: calc(100vh - 60px); // 计算
+      overflow-y: auto;
+    }
+  }
+
+  .scrollTop {
+    width: 60px;
+    height: 60px;
+    background: #919191;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+  }
+}
