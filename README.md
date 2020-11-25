@@ -443,3 +443,9 @@ const Router = () => {
 
 export default Router
 ```
+
+### (12) 当 eject 后报错
+- 原因：eject后，如果之前有安装依赖，就都会消失，也不会在package.json中有记录
+- 解决：
+  - 1. npm run eject 后需要 npm install 安装依赖，因为弹出了很多其他的依赖并没有安装
+  - 2. 需要从新安装eject之前你安装的依赖
