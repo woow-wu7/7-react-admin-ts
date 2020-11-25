@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux';
 import * as actions from './app.action'
 
-function App() {
+function App(props: any) {
   return (
     <div className="App">
       <Router />

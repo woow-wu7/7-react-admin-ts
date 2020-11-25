@@ -2,17 +2,30 @@ import React, { useEffect } from 'react'
 import styles from './index.module.scss'
 import {useHistory} from 'react-router-dom'
 import {removeLocalStorage} from '@/utils/index'
+import {useSelector} from 'react-redux'
+
+const equalityFn = (prev: any, next: any) => {
+  console.log(prev, 'prev')
+  console.log(next, 'next')
+  return true
+}
 
 const BigScreen = (props: any) => {
   const history = useHistory()
-  useEffect(() => {
-    const viewports = document.querySelector('meta[name=viewport]')
-    viewports && viewports.setAttribute('content', `width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0`)
-    console.log(viewports, "viewport");
-  }, [])
+  const result = useSelector(state => state, equalityFn)
+
+ 
+  console.log(result, 'result')
+
   useEffect(() => {
     history.push("/big-screen-home")
   },[history])
+
+  useEffect(() => {
+    const viewports = document.querySelector('meta[name=viewport]')
+    viewports && viewports.setAttribute('content', `width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0`)
+  }, [])
+
   const exit = () => {
     removeLocalStorage()
     history.replace('/login')

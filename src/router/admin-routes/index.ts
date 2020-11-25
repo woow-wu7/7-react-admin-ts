@@ -8,6 +8,7 @@ const UiAntdTable = lazyLoad('@/pages/admin-system/ui-antd-table/index.tsx')
 const UiAntdProTable = lazyLoad('@/pages/admin-system/ui-antd-protable/index.tsx')
 const UiVant = lazyLoad('@/pages/admin-system/ui-vant')
 const ReactHooks = lazyLoad('@/pages/admin-system/react-hooks')
+const ReactReduxHooks = lazyLoad('@/pages/admin-system/react-redux-hooks')
 const JsEs5 = lazyLoad('@/pages/admin-system/js-es5')
 const JsEs6 = lazyLoad('@/pages/admin-system/js-es6')
 const JsEs6Detail = lazyLoad('@/pages/admin-system/js-es6-detail')
@@ -108,6 +109,29 @@ const adminRoutes: IRouteModule[] = [
         key: '/admin-react/hooks',
         path: '/admin-react/hooks',
         component: ReactHooks,
+        meta: {
+          needLoginAuth: true,
+          rolesAuth: ['user', 'admin']
+        },
+      }
+    ]
+  },
+  {
+    title: 'React-redux',
+    icon: 'anticon-react1',
+    key: '/admin-react-redux',
+    path: '/admin-react-redux',
+    meta: {
+      needLoginAuth: true,
+      rolesAuth: ['user', 'admin']
+    },
+    subs: [
+      {
+        title: 'Hooks',
+        icon: 'anticon-zuixinyouhui',
+        key: '/admin-react-redux/hooks',
+        path: '/admin-react-redux/hooks',
+        component: ReactReduxHooks,
         meta: {
           needLoginAuth: true,
           rolesAuth: ['user', 'admin']

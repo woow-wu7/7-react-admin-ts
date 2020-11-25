@@ -29,7 +29,7 @@
     .headeer__button {
       position: absolute;
       right: 24px;
-      bottom: 6px;
+      bottom: 0;
       font-size: getfontsize(16);
       color: rgba(255, 255, 255, 0.9);
     }
@@ -37,7 +37,7 @@
     .header__link {
       position: absolute;
       left: 24px;
-      bottom: 6px;
+      bottom: 0;
       width: getwidth(141);
       height: getheight(40);
       border: 1px solid rgb(161, 161, 161);
