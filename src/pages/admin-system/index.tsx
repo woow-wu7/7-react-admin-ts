@@ -23,17 +23,15 @@ const Admin = (props: any) => {
 	const { pathname } = useLocation()
 	const ref = useRef<HTMLDivElement>(null)
 
-	const memoryOpenKeys = useMemo(() => openKeys, [openKeys])
-
 	useEffect(() => {
 		console.log("admin-system初始化")
 		// 这里要考虑 ( 登陆第一次跳转的加载 ) 和 ( 刷新浏览器的加载 )
 		// 不管哪种情况，都获取当前的 pathname，当前pathname是 ( path和menu的keys要一致的原因  )
 		const TempSelectedKeys = [pathname]
-		const CurrentopenKeys = getLocalStorage(CONST.OPENKEYS) || memoryOpenKeys
+		const CurrentopenKeys = getLocalStorage(CONST.OPENKEYS) || []
 		setSelectedKeys(v => v = TempSelectedKeys)
 		setOpenKeys((v: any) => v = CurrentopenKeys)
-	}, [pathname, memoryOpenKeys])
+	}, [pathname])
 
 	const roles =
 		useSelector((state: { app: { loginMessage: { roles: string } } }) => state.app.loginMessage.roles) ||
