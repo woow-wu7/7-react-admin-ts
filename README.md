@@ -450,3 +450,21 @@ export default Router
   - 1. 删除 node_modules 文件夹
   - 2. npm run eject 后需要 npm install 安装依赖，因为弹出了很多其他的依赖并没有安装
   - 3. 需要从新安装eject之前你安装的依赖
+
+
+### (13) 记录一个因为不小心而踩的深坑 - ( 关于变量和引用 )
+```
+// 根据权限对（menu）,和（router注册）进行过滤
+function routesFilter(routes, role) {
+  return routes.filter((route) => {
+    let { meta, subs } = route;
+    if (subs) {
+      route.subs = routesFilter(subs, role);
+      // 坑：这里有个巨坑，这里一定要用route.subs 
+      // 例如: subs = routesFilter(subs, role);
+      // 说明：不能用 subs， 因为subs是新声明的变量，直接替换了整个subs后，不会影响route.subs
+    }
+    return !meta.needLoginAuth || meta.rolesAuth.includes(role);
+  });
+}
+```

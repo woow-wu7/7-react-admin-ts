@@ -19,8 +19,6 @@ export function routesFilter(routes: IRouteModule[], roles: string) {
 		return !needLoginAuth
 			? true
 			: rolesAuth?.includes(roles)
-				? true
-				: false
 	})
 }
 

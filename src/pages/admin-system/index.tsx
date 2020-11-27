@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState, useMemo } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { renderRoutes, routesFilter } from '@/utils/render-routes/index'
 import styles from './index.module.scss'
 import { Avatar, BackTop, Dropdown, Layout, Menu } from 'antd';
