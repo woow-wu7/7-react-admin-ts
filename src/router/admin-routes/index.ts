@@ -65,7 +65,7 @@ const adminRoutes: IRouteModule[] = [
     subs: [
       {
         title: 'Hooks',
-        icon: 'anticon-zuixinyouhui',
+        icon: 'anticon-sharescreen',
         key: '/admin-react-redux/hooks',
         path: '/admin-react-redux/hooks',
         component: ReactReduxHooks,
@@ -87,7 +87,7 @@ const adminRoutes: IRouteModule[] = [
     },
     subs: [{
       title: 'Hooks',
-      icon: 'anticon-zuixinyouhui',
+      icon: 'anticon-yooxi',
       key: '/admin-react-router/hooks',
       path: '/admin-react-router/hooks',
       component: ReactRouterHooks,

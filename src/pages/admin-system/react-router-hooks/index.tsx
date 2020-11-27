@@ -2,9 +2,7 @@ import React from 'react'
 
 const ReactRouterHooks = () => {
   return (
-    <div>
-      ReactRouterHooks
-    </div>
+    <div>ReactRouterHooks</div>
   )
 }
 
