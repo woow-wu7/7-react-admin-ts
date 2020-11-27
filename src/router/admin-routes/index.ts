@@ -9,6 +9,7 @@ const UiAntdProTable = lazyLoad('@/pages/admin-system/ui-antd-protable/index.tsx
 const UiVant = lazyLoad('@/pages/admin-system/ui-vant')
 const ReactHooks = lazyLoad('@/pages/admin-system/react-hooks')
 const ReactReduxHooks = lazyLoad('@/pages/admin-system/react-redux-hooks')
+const ReactRouterHooks = lazyLoad('@/pages/admin-system/react-router-hooks')
 const JsEs5 = lazyLoad('@/pages/admin-system/js-es5')
 const JsEs6 = lazyLoad('@/pages/admin-system/js-es6')
 const JsEs6Detail = lazyLoad('@/pages/admin-system/js-es6-detail')
@@ -28,6 +29,128 @@ const adminRoutes: IRouteModule[] = [
       needLoginAuth: true,
       rolesAuth: ['user', 'admin']
     },
+  },
+  {
+    title: 'React',
+    icon: 'anticon-react1',
+    key: '/admin-react',
+    path: '/admin-react',
+    meta: {
+      needLoginAuth: true,
+      rolesAuth: ['user', 'admin']
+    },
+    subs: [
+      {
+        title: 'Hooks',
+        icon: 'anticon-zuixinyouhui',
+        key: '/admin-react/hooks',
+        path: '/admin-react/hooks',
+        component: ReactHooks,
+        meta: {
+          needLoginAuth: true,
+          rolesAuth: ['user', 'admin']
+        },
+      }
+    ]
+  },
+  {
+    title: 'React-redux',
+    icon: 'anticon-react1',
+    key: '/admin-react-redux',
+    path: '/admin-react-redux',
+    meta: {
+      needLoginAuth: true,
+      rolesAuth: ['user', 'admin']
+    },
+    subs: [
+      {
+        title: 'Hooks',
+        icon: 'anticon-zuixinyouhui',
+        key: '/admin-react-redux/hooks',
+        path: '/admin-react-redux/hooks',
+        component: ReactReduxHooks,
+        meta: {
+          needLoginAuth: true,
+          rolesAuth: ['user', 'admin']
+        },
+      }
+    ]
+  },
+  {
+    title: 'React-Router',
+    icon: 'anticon-zuixinyouhui',
+    key: '/admin-react-router',
+    path: '/admin-react-router',
+    meta: {
+      needLoginAuth: true,
+      rolesAuth: ['user', 'admin']
+    },
+    subs: [{
+      title: 'Hooks',
+      icon: 'anticon-zuixinyouhui',
+      key: '/admin-react-router/hooks',
+      path: '/admin-react-router/hooks',
+      component: ReactRouterHooks,
+      meta: {
+        needLoginAuth: true,
+        rolesAuth: ['user', 'admin']
+      },
+    }]
+  },
+  {
+    title: 'JS',
+    icon: 'anticon-js',
+    key: '/admin-js',
+    path: '/admin-js',
+    meta: {
+      needLoginAuth: true,
+      rolesAuth: ['admin']
+    },
+    subs: [
+      {
+        title: 'ES6',
+        icon: 'anticon-6',
+        key: '/admin-js/es6',
+        path: '/admin-js/es6',
+        component: JsEs6,
+        exact: true, // 注意；存在动态路由时，需要设置 exact 精确匹配
+        meta: {
+          needLoginAuth: true,
+          rolesAuth: ['admin']
+        },
+      },
+      {
+        title: 'ES6详情',
+        key: '/admin-js/es6/:id',
+        path: '/admin-js/es6/:id',
+        component: JsEs6Detail,
+        meta: {
+          needLoginAuth: true,
+          rolesAuth: ['admin']
+        },
+      },
+      {
+        title: 'ES5',
+        icon: 'anticon-js',
+        key: '/admin-js/es5',
+        path: '/admin-js/es5',
+        component: JsEs5,
+        meta: {
+          needLoginAuth: true,
+          rolesAuth: ['admin']
+        },
+      }, {
+        title: 'ES5详情',
+        icon: 'anticon-js',
+        key: '/admin-js/es5/:id',
+        path: '/admin-js/es5/:id',
+        component: JsEs5Detail,
+        meta: {
+          needLoginAuth: true,
+          rolesAuth: ['admin']
+        },
+      }
+    ]
   },
   {
     title: 'UI',
@@ -92,107 +215,6 @@ const adminRoutes: IRouteModule[] = [
         rolesAuth: ['user', 'admin']
       },
     }]
-  },
-  {
-    title: 'React',
-    icon: 'anticon-react1',
-    key: '/admin-react',
-    path: '/admin-react',
-    meta: {
-      needLoginAuth: true,
-      rolesAuth: ['user', 'admin']
-    },
-    subs: [
-      {
-        title: 'Hooks',
-        icon: 'anticon-zuixinyouhui',
-        key: '/admin-react/hooks',
-        path: '/admin-react/hooks',
-        component: ReactHooks,
-        meta: {
-          needLoginAuth: true,
-          rolesAuth: ['user', 'admin']
-        },
-      }
-    ]
-  },
-  {
-    title: 'React-redux',
-    icon: 'anticon-react1',
-    key: '/admin-react-redux',
-    path: '/admin-react-redux',
-    meta: {
-      needLoginAuth: true,
-      rolesAuth: ['user', 'admin']
-    },
-    subs: [
-      {
-        title: 'Hooks',
-        icon: 'anticon-zuixinyouhui',
-        key: '/admin-react-redux/hooks',
-        path: '/admin-react-redux/hooks',
-        component: ReactReduxHooks,
-        meta: {
-          needLoginAuth: true,
-          rolesAuth: ['user', 'admin']
-        },
-      }
-    ]
-  },
-  {
-    title: 'JS',
-    icon: 'anticon-js',
-    key: '/admin-js',
-    path: '/admin-js',
-    meta: {
-      needLoginAuth: true,
-      rolesAuth: ['admin']
-    },
-    subs: [
-      {
-        title: 'ES6',
-        icon: 'anticon-6',
-        key: '/admin-js/es6',
-        path: '/admin-js/es6',
-        component: JsEs6,
-        exact: true, // 注意；存在动态路由时，需要设置 exact 精确匹配
-        meta: {
-          needLoginAuth: true,
-          rolesAuth: ['admin']
-        },
-      },
-      {
-        title: 'ES6详情',
-        key: '/admin-js/es6/:id',
-        path: '/admin-js/es6/:id',
-        component: JsEs6Detail,
-        meta: {
-          needLoginAuth: true,
-          rolesAuth: ['admin']
-        },
-      },
-      {
-        title: 'ES5',
-        icon: 'anticon-js',
-        key: '/admin-js/es5',
-        path: '/admin-js/es5',
-        component: JsEs5,
-        meta: {
-          needLoginAuth: true,
-          rolesAuth: ['admin']
-        },
-      }, {
-        title: 'ES5详情',
-        icon: 'anticon-js',
-        key: '/admin-js/es5/:id',
-        path: '/admin-js/es5/:id',
-        component: JsEs5Detail,
-        meta: {
-          needLoginAuth: true,
-          rolesAuth: ['admin']
-        },
-      }
-    ]
   },
   {
     title: '资料',

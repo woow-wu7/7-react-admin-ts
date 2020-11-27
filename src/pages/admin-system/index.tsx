@@ -93,7 +93,13 @@ const Admin = (props: any) => {
 
 	return (
 		<Layout className={styles.layoutAdmin}>
-			<Sider className={styles.silderWrap} collapsed={collapsed}>
+			<Sider 
+				className={styles.silderWrap} 
+				collapsed={collapsed}
+				width={200}
+				onCollapse={toggleCollapsed}
+				collapsible
+			>
 				<Menu
 					mode="inline"
 					theme="dark"
