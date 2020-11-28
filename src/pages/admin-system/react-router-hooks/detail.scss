@@ -6,6 +6,11 @@
 
     & div {
       margin: 20px 0;
+
+      & > span {
+        color: rgb(0, 0, 0);
+        font-weight: 600;
+      }
     }
 
     & > p {

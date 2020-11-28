@@ -52,9 +52,9 @@ const ReactRouterHooksDetail = () => {
 
         <br />
         <div>useParams：用来获取动态Route中的动态参数对象</div>
-        <div>{`Route: {path:  'root/detail/:id'}`}</div>
-        <div>{`page:  history.push('root/detail/444')`}</div>
-        <div>{`useParams:  {id: 444}`}</div>
+        <div><span>Route: </span>{`{path:  'root/detail/:id'}`}</div>
+        <div><span>page:  </span>{`history.push('root/detail/444')`}</div>
+        <div><span>detailPage: </span>{`useParams:  {id: 444}`}</div>
       </div>
 
       <div>
