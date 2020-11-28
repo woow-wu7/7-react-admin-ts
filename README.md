@@ -468,3 +468,30 @@ function routesFilter(routes, role) {
   });
 }
 ```
+
+
+### (14) 关于菜单的 openkeys selectedKeys collapsed
+- **问题记录**
+- 问题：当菜单中有展开和选中的项时，点击向左缩窄菜单时，再次向右展开，状态没有保存
+- 解决：可以通过 onOpenChange 中的 openKeys 来做持久化
+  - 刚刚点击的 openKeys 存在，就使用，不存在，就使用  localStorage 中的
+- 新问题：
+  - 1.这样在缩窄的菜单中hover一些之后，展开状态也变了，因为缩窄的菜单hover时也会触发openchange
+  - 2.有选中和展开状态时去缩窄菜单，会有选中的菜单突出，影响观感
+```
+  // 展开/关闭的回调
+  const onOpenChange = (openKeys: any) => {
+    console.log(openKeys, 'onOpenChange执行了')
+    setOpenKeys(() => openKeys)
+    setLocalStorage(CONST.OPENKEYS, openKeys) // 记住展开关闭的组，刷新持久化
+  } 
+
+  // const onOpenChange = (openKeys: any) => {
+  //   console.log(openKeys, 'onOpenChange执行了')
+  //   const currentopenKeys = openKeys.length
+  //     ? openKeys
+  //     : getLocalStorage(CONST.OPENKEYS)
+  //   setLocalStorage(CONST.OPENKEYS, currentopenKeys) // 记住展开关闭的组，刷新持久化
+  //   setOpenKeys(() => currentopenKeys)
+  // }
+```

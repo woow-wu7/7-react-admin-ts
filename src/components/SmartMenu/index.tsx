@@ -19,6 +19,7 @@ const SmartMenu = () => {
   const [openKeys, setOpenKeys]: any = useState(['/admin-home'])
 
   useEffect(() => {
+    console.log('menu组件渲染了')
     // 说明：
     // (1)
     // 这里要考虑 ( 登陆第一次跳转的加载 ) 和 ( 刷新浏览器的加载 )
@@ -30,7 +31,7 @@ const SmartMenu = () => {
     // 该 effect 同时用于初始化和刷新
     const CurrentopenKeys = getLocalStorage(CONST.OPENKEYS) || []
     const currentPathname = location.pathname
-    setOpenKeys(() => CurrentopenKeys) // 菜单的展开和折叠的 keys，每一个menu成员都有一个唯一的key
+    setOpenKeys(() => CurrentopenKeys) // 菜单的展开和关闭的 keys，每一个menu成员都有一个唯一的key
     setSelectedKeys(() => [currentPathname]) // 选中菜单的keys数组，我们的 route 中的  key 和 path 是一样的
   }, [location.pathname])
 
@@ -50,7 +51,16 @@ const SmartMenu = () => {
     console.log(openKeys, 'onOpenChange执行了')
     setOpenKeys(() => openKeys)
     setLocalStorage(CONST.OPENKEYS, openKeys) // 记住展开关闭的组，刷新持久化
-  }
+  } 
+
+  // const onOpenChange = (openKeys: any) => {
+  //   console.log(openKeys, 'onOpenChange执行了')
+  //   const currentopenKeys = openKeys.length
+  //     ? openKeys
+  //     : getLocalStorage(CONST.OPENKEYS)
+  //   setLocalStorage(CONST.OPENKEYS, currentopenKeys) // 记住展开关闭的组，刷新持久化
+  //   setOpenKeys(() => currentopenKeys)
+  // }
 
   const renderMenuMembers = (adminRoutes: IRouteModule[]) => {
     const adminRoutesDeepClone = routesFilter([...adminRoutes], roles) // adminRoutes权限过滤
