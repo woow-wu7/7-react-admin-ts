@@ -13,7 +13,7 @@ const ReactRouterHooks = () => {
       <p>ReactRouterHooks</p>
 
       <br />
-      <button onClick={goDetail}>详情 - 验证useParams</button>
+      <button onClick={goDetail}>详情分析页 - 验证useParams，useRouteMatch</button>
     </div>
   )
 }
