@@ -22,13 +22,16 @@ const adminRoutes: IRouteModule[] = [
   {
     title: '首页',
     icon: 'anticon-home--line',
-    key: '/admin-home', // title,icon,key主要用于menu中
-    path: '/admin-home',
+    key: '/admin-home', // ------- title,icon,key主要用于menu中
+    path: '/admin-home',// ------- path,component用于Route的注册
     component: AdminHome,
-    meta: {
+    meta: { // ------------------- meta 用于权限过滤，和menu,router,breadcrumb强相关
       needLoginAuth: true,
       rolesAuth: ['user', 'admin']
     },
+    // visiable -- visiable用于detail路由的显示隐藏
+    // ----------- 除了通过 visiable 来判断detail菜单的显示隐藏,还可以通过动态路由参数 ( /:id ) 来做
+    // ----------- 存在 ( /:id ) 的路由都不在 ( menu ) 中显示
   },
   {
     title: 'React',
