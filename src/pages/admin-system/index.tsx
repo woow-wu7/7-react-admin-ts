@@ -41,6 +41,7 @@ const Admin = () => {
 			</Sider>
 			<Layout className={styles.contentWrap}>
 				<Header className={styles.header}>
+					{/* Header-左 */}
 					<aside onClick={toggleCollapsed}>
 						<span>
 							{collapsed
@@ -49,6 +50,7 @@ const Admin = () => {
 							}
 						</span>
 					</aside>
+					{/* Header-右 */}
 					<ul className={styles.topMenu}>
 						<SmartAvatarMenu />
 					</ul>
