@@ -14,7 +14,7 @@ const Father = () => {
   const memoryObj = useMemo(() => obj, [])
 
   return (
-    <div style={{ background: '#fff', padding: '12px 0' }}>
+    <div style={{ background: '#fff', padding: '12px 0', border: '1px solid black' }}>
       <p style={{
         margin: '10px', padding: '14px 24px', background: '#edfffb',
         border: '1px solid #00b792', display: 'inline-block',

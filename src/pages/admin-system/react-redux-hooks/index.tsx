@@ -1,6 +1,7 @@
 import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import actionType from './constant'
+import './react-redux-hooks.scss'
 
 const equalityFn = (prevState: any, nextState: any) => {
   console.log(prevState.reactReduxState.number, 'prevState')
@@ -21,17 +22,21 @@ const ReactReduxHooks = () => {
   }
   console.log(number, 'number')
   return (
-    <div>
+    <div className="react-redux-hooks">
       <p>react-redux-hooks</p>
-      <button onClick={addNumber}>点击add，验证react-redux中的useSelector的第二个参数equalityFn返回的布尔值</button>
-      <div>{number}</div>
-      <div style={{ margin: '20px 0', border: '1px solid olive', padding: '0 10px' }}>
+      <div style={{ margin: '20px 0', border: '1px solid #1890FF', padding: '0 10px' }}>
         <br />
         <a href="https://github.com/woow-wu7/7-react-admin-ts/tree/master/src/pages/admin-system/react-redux-hooks" target="__blank">react-redux-hooks -- README.md</a>
         <br /><br />
         <a href="https://react-redux.js.org/introduction/quick-start" target="__blacnk">react-redux官网</a>
         <br />
         <br />
+      </div>
+
+      <div>
+        <div>{number}</div>
+        <br />
+        <button onClick={addNumber}>点击add，验证react-redux中的useSelector的第二个参数equalityFn返回的布尔值</button>
       </div>
     </div>
   )

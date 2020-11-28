@@ -48,7 +48,12 @@ const Father = () => {
   }
 
   return (
-    <div style={{ background: '#fff', margin: '10px 0', padding: '10px', border: '1px solid black' }}>
+    <div style={{
+      background: '#fff',
+      margin: '10px 0',
+      padding: '10px', 
+      border: '1px solid black'
+    }}>
       <p>父组件</p>
       <p style={{
         margin: '10px', padding: '14px 24px', background: '#e8eaff',

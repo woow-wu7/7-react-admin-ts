@@ -29,8 +29,8 @@ const Admin = (props: any) => {
 		// 不管哪种情况，都获取当前的 pathname，当前pathname是 ( path和menu的keys要一致的原因  )
 		const TempSelectedKeys = [pathname]
 		const CurrentopenKeys = getLocalStorage(CONST.OPENKEYS) || []
-		setSelectedKeys(v => v = TempSelectedKeys)
-		setOpenKeys((v: any) => v = CurrentopenKeys)
+		setSelectedKeys(() => TempSelectedKeys)
+		setOpenKeys(() => CurrentopenKeys)
 	}, [pathname])
 
 	const roles =
@@ -61,12 +61,13 @@ const Admin = (props: any) => {
 	// 点击 menuItem 触发的事件
 	const goPage = ({ keyPath, key }: { keyPath: any[], key: any }) => {
 		history.push(keyPath[0])
-		setSelectedKeys(v => v = [key]) // 修改当前组件的state
+		setSelectedKeys(() => [key]) // 修改当前组件的state
 	}
 
 	// 展开/关闭的回调
 	const onOpenChange = (openKeys: any) => {
-		setOpenKeys((v: any) => v = openKeys)
+		console.log(openKeys, 'onOpenChange执行了')
+		setOpenKeys(() => openKeys)
 		setLocalStorage(CONST.OPENKEYS, openKeys) // 记住展开关闭的组，刷新持久化
 	}
 
@@ -93,8 +94,8 @@ const Admin = (props: any) => {
 
 	return (
 		<Layout className={styles.layoutAdmin}>
-			<Sider 
-				className={styles.silderWrap} 
+			<Sider
+				className={styles.silderWrap}
 				collapsed={collapsed}
 				width={200}
 				onCollapse={toggleCollapsed}
@@ -115,8 +116,8 @@ const Admin = (props: any) => {
 			</Sider>
 			<Layout className={styles.contentWrap}>
 				<Header className={styles.header}>
-					<aside>
-						<span onClick={toggleCollapsed}>
+					<aside onClick={toggleCollapsed}>
+						<span>
 							{collapsed
 								? <MenuUnfoldOutlined className={styles.toggleCollapsedIcon} />
 								: <MenuFoldOutlined className={styles.toggleCollapsedIcon} />
@@ -129,11 +130,13 @@ const Admin = (props: any) => {
 						</Dropdown>
 					</ul>
 				</Header>
-				{/* scroll相关 */}
+				{/* scroll相关 ref */}
 				<div className={styles.content} ref={ref}>
 					<div className={styles.scrollInner}>
 						<CustomBreadcrumb />
-						{renderRoutes(adminRoutes)}
+						<div className={styles.routerViewWrap}>
+							{renderRoutes(adminRoutes)}
+						</div>
 						{/* renderRoutes(props.route.routes) 再次执行，注册嵌套的路由，成为父组件的子组件 */}
 					</div>
 				</div>

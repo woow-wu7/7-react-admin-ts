@@ -1,6 +1,6 @@
 .layoutAdmin {
   min-height: 100vh;
-  // background: #F0F2F5;
+  // border: 10px solid red;
 
   .silderWrap {
     height: 100vh;
@@ -49,6 +49,20 @@
       box-sizing: border-box;
       height: calc(100vh - 60px); // 计算
       overflow-y: auto;
+
+      .scrollInner {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+
+        .routerViewWrap {
+          flex: 1;
+          padding: $safe-padding;
+          box-sizing: border-box;
+          background: #fff;
+          // box-shadow: 0px 0px 10px 0px rgb(218, 218, 218);
+        }
+      }
     }
   }
 
