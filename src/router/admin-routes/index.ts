@@ -22,7 +22,7 @@ const adminRoutes: IRouteModule[] = [
   {
     title: '首页',
     icon: 'anticon-home--line',
-    key: '/admin-home',
+    key: '/admin-home', // title,icon,key主要用于menu中
     path: '/admin-home',
     component: AdminHome,
     meta: {
