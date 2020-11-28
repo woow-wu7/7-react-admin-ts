@@ -1,0 +1,15 @@
+.smart-avatar-menu-icon {
+  &:hover {
+    animation: rotateInfinite 0.5s linear 0s infinite;
+  }
+}
+
+@keyframes rotateInfinite {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
