@@ -53,6 +53,7 @@ const CustomBreadcrumb = () => {
 
   // routeMap
   // generateRouteMap => 生成面包屑的 path,title映射
+  // 注意：( 重要 ) 每一个 detail 都要记得用 useParams 存入 localStorage
   const generateRouteMap = (routesAmin: IRouteModule[]) => {
     const routeMap = {}
     function step(routesAmin: IRouteModule[]) {
@@ -69,6 +70,7 @@ const CustomBreadcrumb = () => {
     return routeMap
   }
   const routeMap = generateRouteMap(routesAmin)
+  console.log('routeMap :>> ', routeMap);
 
 
   // pathFilter 

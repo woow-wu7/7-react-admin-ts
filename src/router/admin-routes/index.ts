@@ -10,6 +10,7 @@ const UiVant = lazyLoad('@/pages/admin-system/ui-vant')
 const ReactHooks = lazyLoad('@/pages/admin-system/react-hooks')
 const ReactReduxHooks = lazyLoad('@/pages/admin-system/react-redux-hooks')
 const ReactRouterHooks = lazyLoad('@/pages/admin-system/react-router-hooks')
+const ReactRouterHooksDetail = lazyLoad('@/pages/admin-system/react-router-hooks/detail')
 const JsEs5 = lazyLoad('@/pages/admin-system/js-es5')
 const JsEs6 = lazyLoad('@/pages/admin-system/js-es6')
 const JsEs6Detail = lazyLoad('@/pages/admin-system/js-es6-detail')
@@ -32,6 +33,9 @@ const adminRoutes: IRouteModule[] = [
     // visiable -- visiable用于detail路由的显示隐藏
     // ----------- 除了通过 visiable 来判断detail菜单的显示隐藏,还可以通过动态路由参数 ( /:id ) 来做
     // ----------- 存在 ( /:id ) 的路由都不在 ( menu ) 中显示
+
+    // 注意；存在动态路由时，需要设置 exact 精确匹配
+    // 注意：( 重要 ) 每一个 detail 都要记得用 useParams 存入 localStorage
   },
   {
     title: 'React',
@@ -93,7 +97,18 @@ const adminRoutes: IRouteModule[] = [
       icon: 'anticon-yooxi',
       key: '/admin-react-router/hooks',
       path: '/admin-react-router/hooks',
+      exact: true,  // 注意；存在动态路由时，需要设置 exact 精确匹配
       component: ReactRouterHooks,
+      meta: {
+        needLoginAuth: true,
+        rolesAuth: ['user', 'admin']
+      },
+    },{
+      title: 'HooksDetail',
+      icon: 'anticon-yooxi',
+      key: '/admin-react-router/hooks/:id',
+      path: '/admin-react-router/hooks/:id',
+      component: ReactRouterHooksDetail,
       meta: {
         needLoginAuth: true,
         rolesAuth: ['user', 'admin']

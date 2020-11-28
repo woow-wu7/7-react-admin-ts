@@ -1,0 +1,16 @@
+.react-router-hooks-detail {
+  & > div {
+    margin-bottom: 10px;
+    padding: 20px;
+    background: rgb(250, 220, 220);
+
+    & div {
+      margin: 20px 0;
+    }
+
+    & > p {
+      font-size: 22px;
+      color: rgb(111, 0, 255);
+    }
+  }
+}
