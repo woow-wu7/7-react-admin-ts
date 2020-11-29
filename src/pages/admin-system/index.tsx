@@ -12,7 +12,7 @@ const { Header, Sider } = Layout;
 
 const Admin = () => {
 	const [collapsed, setcollapsed] = useState(false)
-	const ref = useRef<HTMLDivElement>(null)
+	const refScroll = useRef<HTMLDivElement>(null)
 
 	// useEffect(() => {
 	// 	console.log("admin-system初始化")
@@ -23,6 +23,8 @@ const Admin = () => {
 	// 	setSelectedKeys(() => TempSelectedKeys)
 	// 	setOpenKeys(() => CurrentopenKeys)
 	// }, [pathname])
+
+	// 上面useEffect中的判断，已经抽成组件，在menu中判断了
 
 	const toggleCollapsed = () => {
 		setcollapsed(v => v = !v)
@@ -56,19 +58,17 @@ const Admin = () => {
 					</ul>
 				</Header>
 				{/* scroll相关 ref */}
-				<div className={styles.content} ref={ref}>
-					<div className={styles.scrollInner}>
-						<CustomBreadcrumb />
-						<div className={styles.routerViewWrap}>
-							{renderRoutes(adminRoutes)}
-						</div>
-						{/* renderRoutes(props.route.routes) 再次执行，注册嵌套的路由，成为父组件的子组件 */}
+				<div className={styles.content}>
+					<CustomBreadcrumb />
+					<div className={styles.routerViewWrap} ref={refScroll} >
+						{renderRoutes(adminRoutes)}
 					</div>
+					{/* renderRoutes(props.route.routes) 再次执行，注册嵌套的路由，成为父组件的子组件 */}
 				</div>
 			</Layout>
 
 			{/* 返回顶部，层级放在那里都可以 */}
-			<BackTop target={() => ref.current || window} visibilityHeight={200}>
+			<BackTop target={() => refScroll.current || window} visibilityHeight={200}>
 				<div className={styles.scrollTop}>
 					<VerticalAlignTopOutlined style={{ color: '#fff', fontSize: '30px' }} />
 				</div>

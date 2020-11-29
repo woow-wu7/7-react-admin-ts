@@ -1,0 +1,18 @@
+::-webkit-scrollbar {
+  width: 10px;
+  height: 1px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: #b8b8be;
+  // -webkit-box-shadow: none;
+  // -webkit-box-shadow: none;
+}
+
+::-webkit-scrollbar-track { // track跟踪，轨道
+  border-radius: 0px;
+  background: #dfdfdf;
+  // -webkit-box-shadow: none;
+  // -webkit-box-shadow: none;
+}
