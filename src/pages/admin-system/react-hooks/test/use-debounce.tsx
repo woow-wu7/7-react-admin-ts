@@ -1,16 +1,18 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useRef } from 'react'
 import { useDebounce } from '@/utils/hooks/use-debounce'
 
 const UseDebounce = () => {
   const [count, setCount] = useState(0)
+  const refInterval = useRef(0)
   const doSomething = () => {
     console.log('debounce');
   }
 
   useEffect(() => {
-    setInterval(() => {
+    refInterval.current = window.setInterval(() => {
       setCount(v => v + 1)
     }, 1000)
+    return () => window.clearInterval(refInterval.current)
   }, [])
 
   return (
