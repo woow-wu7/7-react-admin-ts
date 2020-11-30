@@ -40,7 +40,7 @@ const useFetch: TuseFetch = (
   // 1. fetch和params是引用类型，不需要在 useEffect中缓存的，因为state本身就做了缓存
   // 2. 但是：如果是常量 aaaaa 是引用类型，在useEffect中就必须用useMemo做缓存，Object.is()永远是false,死循环
   // const aaaaa = {a: 1111}
-  // useEffect(() => console.log(aaaaa), [aaaaa]) 死循环
+  // useEffect(() => console.log(aaaaa), [aaaaa])
 
   useEffect(() => {
     const fetchData = async () => {

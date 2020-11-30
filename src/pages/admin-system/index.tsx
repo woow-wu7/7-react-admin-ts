@@ -7,6 +7,7 @@ import CustomBreadcrumb from '@/components/custorm-breadcrumb';
 import { MenuFoldOutlined, MenuUnfoldOutlined, VerticalAlignTopOutlined } from '@ant-design/icons';
 import SmartMenu from '@/components/SmartMenu';
 import SmartAvatarMenu from '@/components/SmartAvatarMenu'
+import SmartViewport from '@/components/SmartViewport'
 
 const { Header, Sider } = Layout;
 
@@ -73,6 +74,8 @@ const Admin = () => {
 					<VerticalAlignTopOutlined style={{ color: '#fff', fontSize: '30px' }} />
 				</div>
 			</BackTop>
+
+			<SmartViewport />
 		</Layout>
 	)
 }
