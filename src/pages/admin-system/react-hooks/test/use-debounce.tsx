@@ -24,9 +24,12 @@ const UseDebounce = () => {
         border: '1px solid black'
       }}
     >
-      <br/>
-      <p>useDebounce</p><br/>
-      <div> {count}</div><br/>
+      <br />
+      <p style={{
+        margin: '10px', padding: '14px 24px', background: '#b5e6ff',
+        border: '1px solid #0989f9', display: 'inline-block',
+      }}>useDebounce</p><br />
+      <div> {count}</div><br /><br />
       <button onClick={useDebounce(doSomething, 1000, false)}>
         点击测试 - debounce 函数 看console
       </button>

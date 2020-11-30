@@ -5,6 +5,7 @@ import TestUseCallbackUseMemo from './test/test-usecallback-usememo'
 import TestUseRef from './test/test-useRef'
 import TestCustomHooks from './test/custom-hooks'
 import TestUseDebounce from './test/use-debounce'
+import TestUseThrottle from './test/use-throttle'
 
 interface ITitle {
   borderColor?: string;
@@ -35,6 +36,9 @@ const ReactComponnet = (props: any) => {
 
   return (
     <ReactHooks>
+      <div style={{margin: '20px 0 40px 0'}}>
+        <a href="https://juejin.cn/post/6887132776512880654" target="__blank">自定义hooks博客链接</a>
+      </div>
       <div style={{ border: '1px solid black', padding: '14px', margin: '14px 0' }}>
         <UseStateCopmonnet>
           <Title borderColor="#67ce00" backgroundColor="#F6FFED">useState</Title>
@@ -60,6 +64,7 @@ const ReactComponnet = (props: any) => {
       <TestUseRef />
       <TestCustomHooks />
       <TestUseDebounce />
+      <TestUseThrottle />
     </ReactHooks>
   )
 }
