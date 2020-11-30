@@ -1,4 +1,4 @@
-import { useEffect, useReducer } from 'react'
+import { useEffect, useReducer, useMemo } from 'react'
 
 interface IViewportState {
   width?: number;
@@ -58,12 +58,13 @@ export const useViewport = (doSomething?: () => void) => {
       doSomething()
     }
   }
+  const memoryChangeViewPort = useMemo(() => changeViewport, [changeViewport])
 
   useEffect(() => {
-    changeViewport()
-    window.addEventListener('resize', changeViewport, false) // 监听 resize
-    return () => { window.addEventListener('resize', changeViewport, false) }
-  }, [changeViewport])
+    memoryChangeViewPort()
+    window.addEventListener('resize', memoryChangeViewPort, false) // 监听 resize
+    return () => { window.addEventListener('resize', memoryChangeViewPort, false) }
+  }, [memoryChangeViewPort])
 
   return {
     width: state.width,
