@@ -1,4 +1,4 @@
-import { useEffect, useReducer, useMemo } from 'react'
+import { useEffect, useReducer, useCallback } from 'react'
 
 interface IViewportState {
   width?: number;
@@ -58,7 +58,7 @@ export const useViewport = (doSomething?: () => void) => {
       doSomething()
     }
   }
-  const memoryChangeViewPort = useMemo(() => changeViewport, [changeViewport])
+  const memoryChangeViewPort = useCallback(changeViewport, [])
 
   useEffect(() => {
     memoryChangeViewPort()
