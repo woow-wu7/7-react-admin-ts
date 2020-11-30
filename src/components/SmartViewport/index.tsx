@@ -4,25 +4,29 @@ import './smart-viewport.scss'
 
 const SmartViewport = () => {
   const ref = useRef<HTMLDivElement>(null)
-  const timerRef = useRef<any>(0)
   const { width, height } = useViewport(doAnimate)
 
-  const debounce = () => {
-    if (timerRef.current) {
-      window.clearTimeout(timerRef.current)
-    }
-    timerRef.current = window.setTimeout(() => {
-      if( ref.current) {
-        ref.current.style.display = 'none'
+  const debounce = (delay: number) => {
+    let timer = 0;
+    return (...args: any[]) => {
+      console.log('args', args)
+      if (timer) {
+        window.clearTimeout(timer)
       }
-    }, 2000)
+      timer = window.setTimeout(() => {
+        if (ref.current) {
+          ref.current.style.display = 'none'
+        }
+      }, delay)
+    }
   }
 
   function doAnimate() {
     if (ref.current) {
       ref.current.style.display = 'block'
     }
-    debounce()
+    const debounceClosure = debounce(1000)
+    debounceClosure('anything')
   }
 
   return (

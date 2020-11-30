@@ -1,14 +1,10 @@
 import React, { useState } from 'react'
 import { Button } from 'antd'
 import styled from 'styled-components'
-// import Test from './test/test'
 import TestUseCallbackUseMemo from './test/test-usecallback-usememo'
 import TestUseRef from './test/test-useRef'
-import CustomHooks from './test/custom-hooks'
-// import NumberAnimate from '@/components/NumberAnimate'
-// import { useFetch } from '@/utils/hooks/use-fetch.ts'
-// import axios from '@/api/axios'
-
+import TestCustomHooks from './test/custom-hooks'
+import TestUseDebounce from './test/use-debounce'
 
 interface ITitle {
   borderColor?: string;
@@ -18,11 +14,6 @@ interface ITitle {
 
 const ReactComponnet = (props: any) => {
   const [count, setCount] = useState(0)
-  // const { data, error, loading, doFetch } = useFetch(getTestData, {})
-
-  // async function getTestData({ }) {
-  //   await axios('/')
-  // }
 
   const add = () => {
     setCount(count + 1)
@@ -44,25 +35,19 @@ const ReactComponnet = (props: any) => {
 
   return (
     <ReactHooks>
-      <div style={{border: '1px solid black', padding: '14px', margin: '14px 0'}}>
+      <div style={{ border: '1px solid black', padding: '14px', margin: '14px 0' }}>
         <UseStateCopmonnet>
-          {/* <div style={{width:'100px', height: '100px'}}>
-          <NumberAnimate score={20} mode={'up'} off={false} />
-        </div> */}
           <Title borderColor="#67ce00" backgroundColor="#F6FFED">useState</Title>
           <br /><p>{count}</p><br />
           <Button onClick={add}>Add</Button> &nbsp;
         <Button onClick={delayConsole}>延时console</Button>  &nbsp;
         <Button onClick={clear}>清零</Button><br />
-
           <Phenomenon>现象：点击add5次后，点击console，再点击add两次，显示5，而不是7，每次延时console.log显示的是，那一次的count值，每次渲染都是独立分开的</Phenomenon>
         </UseStateCopmonnet>
-
         <UseFetchComponent>
           <Title borderColor="#e821ff" backgroundColor="#fdf2ff">useFetch</Title><br />
           <Button onClick={getData}>useFetch请求测试</Button> &nbsp;
-      </UseFetchComponent>
-
+        </UseFetchComponent>
         <LinkOther>
           <Title borderColor="#ff533d" backgroundColor="#FFF2F0">资料</Title>
           <div>
@@ -71,11 +56,10 @@ const ReactComponnet = (props: any) => {
         </LinkOther>
       </div>
 
-
-      {/* <Test /> */}
       <TestUseCallbackUseMemo />
       <TestUseRef />
-      <CustomHooks />
+      <TestCustomHooks />
+      <TestUseDebounce />
     </ReactHooks>
   )
 }

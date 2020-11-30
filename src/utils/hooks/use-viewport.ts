@@ -54,7 +54,7 @@ export const useViewport = (doSomething?: () => void) => {
       type: actionType.CHANGE_VIEWPORT,
       payload: { width, height }
     })
-    if (doSomething) {
+    if (doSomething) { // props中如果传入viewport改变后执行的函数
       doSomething()
     }
   }
