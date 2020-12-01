@@ -24,8 +24,8 @@ export const useThrottle: IuseThrottle = (fn, delay) => {
 
     refTimer.current = window.setTimeout(() => {
       fn.call(args)
-      refGoRun.current = true
-      window.clearTimeout(refTimer.current)
+      refGoRun.current = true // 执行完后标志位改为true，可再次进入
+      window.clearTimeout(refTimer.current) // 每次执行完，清除定时器
     }, delay)
   }
 }

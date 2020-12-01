@@ -1,0 +1,34 @@
+
+### `IntersectionObserver`
+- **const io = new IntersectionObserver(callback, option)**
+- 参数
+  - **callback**：可见性变化的回调函数
+    - callback一般会触发 ( **两次** )，进入视口和离开视口，即开始可见和开始不可见两次
+    - callback的 ( **参数** )，是一个 ( **IntersectionObserverEntry** ) 对象组成的 ( **数组** )
+      - 如果有两个可观测对象的可见性发生变化，数组就有两个成员
+      - IntersectionObserverEntry 的 6 个属性
+        - time：发生可见性变化的时间，是一个单位为毫秒的时间戳
+        - **target**：`被观察的目标元素，是一个DOM节点`
+        - rootBounds：根元素的矩形区域信息，是getBoundingClientRect()的返回值，没有根元素返回null
+        - boundingClientRect：目标元素的矩形区域信息
+        - intersectionRect：目标元素与根元素的交叉区域信息
+        - **intersectionRatio**：`目标元素的可见比列，intersectionRect/boundingClientRect，完全可见=1，完全不可见<=0`
+  - option：配置参数对象
+    - **threshold**：一个数组，默认值[0]，即交叉比例到达0时触发回调
+    - **root**：指定根元素
+    - **rootMargin**：用来扩展或缩小rootBounds这个矩形的大小，从而影响intersectionRect交叉区域的大小
+- 返回值
+  - 观察器实例
+  - 开始观察：**io.observe(document.getElementById('example'));**
+  - 停止观察：**io.unobserve(element);**
+  - 关闭观察器：**io.disconnect();**
+- 兼容性
+  - 一个polify的库，提高兼容性
+  - [intersection-observer](https://github.com/w3c/IntersectionObserver/tree/master/polyfill)
+- 注意点：
+  - IntersectionObserver API 是异步的，不随着目标元素的滚动同步触发
+- **`总结`**：
+  - **option.root**：指的是 ( 容器节点 )
+  - target：**io.observer(target)** 中的target指的是需要观测的 ( 目标节点 )
+  - ( **`目标节点`** ) 必须是 ( **`容器节点`** ) 的 ( **`子节点`** )
+  - 当目标节点和容器节点有交集时，触发回调，进入和离开都会触发，还可以通过option.threshold指定多个交叉比例

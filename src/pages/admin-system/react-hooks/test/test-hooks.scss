@@ -1,0 +1,25 @@
+#observer-root {
+  background: rgb(222, 255, 232);
+  padding: 50px 0;
+  height: 200px;
+  overflow: auto;
+  margin-bottom: 10px;
+
+  #observer-target {
+    background: rgb(255, 195, 215);
+  }
+}
+
+#use-observer-root {
+  height: 410px;
+  overflow: auto;
+  background: rgb(222, 255, 232);
+
+  & > img {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    display: block;
+    margin: 10px 0;
+  }
+}

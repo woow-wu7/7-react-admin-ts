@@ -8,6 +8,7 @@ import { Provider } from 'react-redux'
 import store from './store'
 import './styles/index.scss'
 import { getUserConfirmation } from '@/utils';
+import 'intersection-observer'
 
 ReactDOM.render(
   <Provider store={store}>
