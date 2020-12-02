@@ -566,3 +566,12 @@ export const useDebounce: IuseDebounce = (
 // };
 
 ```
+
+
+### (16) react-markdown
+- 1.安装： `npm install --save react-markdown`
+- 2.安装： `npm install -D raw-loader`
+- 2.引入md文件作为source
+  - 引入前需要安装的依赖：npm install -D raw-loader，配置webpack
+- 3.接下来就可以正常使用了
+- 4.教程链接：https://segmentfault.com/a/1190000020294373

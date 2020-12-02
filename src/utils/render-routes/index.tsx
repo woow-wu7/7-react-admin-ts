@@ -68,9 +68,13 @@ export const renderRoutes = (routes: IRouteModule[], extraProps = {}, switchProp
 				{
 					routes.map((route, index) => { // 先对subs做处理
 						return route.path && route.component &&
-							// path 并且 component 同时存在才进行路由注册
-							// path 和 componet 总是同时存在，同时不存在
-							// 但是 path 是必须字段，是因为在 breadcrumb面包屑中需用用到
+							// (1) path 并且 component 同时存在才进行路由注册
+							// (2) path 和 componet 总是同时存在，同时不存在
+							// 注意：
+							// 1. 但是 path 是必须字段，是因为在 breadcrumb 面包屑中需用用到
+							// 2. (1)(2) 并不适合最新的写法了
+							// 3. 为什么：(1)(2) 不适合本项目最新的写法了？
+							// 4. 因为：最新的routes中的写法是，path一定在每个route对象中存在，因为在 breadcrumb 面包屑中需要做 path:title 的映射，每一个层级都需要显示在面包屑中，即使该层没有componet，只是如果没有component，在面包屑中做不能导航的ui展示，有component的route层做可以导航的ui展示，并可以导航，比如从 list => detail，list和detail都是可以导航的
 							<Route
 								key={route.key || `${index + +new Date()}`}
 								path={route.path}

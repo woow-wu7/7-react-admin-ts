@@ -11,6 +11,7 @@ const ReactHooks = lazyLoad('@/pages/admin-system/react-hooks')
 const ReactReduxHooks = lazyLoad('@/pages/admin-system/react-redux-hooks')
 const ReactRouterHooks = lazyLoad('@/pages/admin-system/react-router-hooks')
 const ReactRouterHooksDetail = lazyLoad('@/pages/admin-system/react-router-hooks/detail')
+const InterviewReact = lazyLoad('@/pages/admin-system/interview-react')
 const JsEs5 = lazyLoad('@/pages/admin-system/js-es5')
 const JsEs6 = lazyLoad('@/pages/admin-system/js-es6')
 const JsEs6Detail = lazyLoad('@/pages/admin-system/js-es6-detail')
@@ -109,6 +110,27 @@ const adminRoutes: IRouteModule[] = [
       key: '/admin-react-router/hooks/:id',
       path: '/admin-react-router/hooks/:id',
       component: ReactRouterHooksDetail,
+      meta: {
+        needLoginAuth: true,
+        rolesAuth: ['user', 'admin']
+      },
+    }]
+  },
+  {
+    title: 'Interview',
+    icon: 'anticon-custom-form',
+    key: '/admin-interview',
+    path: '/admin-interview',
+    meta: {
+      needLoginAuth: true,
+      rolesAuth: ['user', 'admin']
+    },
+    subs: [{
+      title: 'React',
+      icon: 'anticon-react',
+      key: '/admin-interview/react',
+      path: '/admin-interview/react',
+      component: InterviewReact,
       meta: {
         needLoginAuth: true,
         rolesAuth: ['user', 'admin']

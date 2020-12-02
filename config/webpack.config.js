@@ -1,4 +1,4 @@
-'use strict';
+
 
 const fs = require('fs');
 const path = require('path');
@@ -335,6 +335,12 @@ module.exports = function(webpackEnv) {
       rules: [
         // Disable require.ensure as it's not a standard language feature.
         { parser: { requireEnsure: false } },
+
+        // react-markdown 使用md文件，需要 raw-loader
+        // {
+        //   test: /\.md$/,
+        //   use: 'raw-loader'
+        // },
 
         // First, run the linter.
         // It's important to do this before Babel processes the JS.
