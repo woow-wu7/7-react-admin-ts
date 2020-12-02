@@ -25,7 +25,7 @@ const SmartViewport = () => {
     if (ref.current) {
       ref.current.style.display = 'block'
     }
-    const debounceClosure = debounce(1000)
+    const debounceClosure = debounce(2000)
     debounceClosure('anything')
   }
 
