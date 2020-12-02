@@ -38,6 +38,12 @@ export const useDebounce: IuseDebounce = (
     refTimer.current = window.setTimeout(() => {
       fn.call(rest);
     }, delay);
+
+    // useDebounce.cancel = function() {
+    //   if(refTimer.current) {
+    //     window.clearTimeout(refTimer.current)
+    //   }
+    // }
   };
 };
 

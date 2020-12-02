@@ -7,6 +7,7 @@ import TestCustomHooks from './test/custom-hooks'
 import TestUseDebounce from './test/use-debounce'
 import TestUseThrottle from './test/use-throttle'
 import TestUseIntersectionObserver from './test/use-intersectionObserver'
+import TestUseImperativeHandle from './test/use-imperativeHandle'
 
 interface ITitle {
   borderColor?: string;
@@ -63,6 +64,7 @@ const ReactComponnet = (props: any) => {
 
       <TestUseCallbackUseMemo />
       <TestUseRef />
+      <TestUseImperativeHandle />
       <TestCustomHooks />
       <TestUseDebounce />
       <TestUseThrottle />

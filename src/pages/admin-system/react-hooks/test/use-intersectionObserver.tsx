@@ -80,7 +80,7 @@ const UseIntersectionObserver = () => {
       }}>
       <p
         style={{
-          margin: '10px', padding: '14px 24px', background: '#edfffb',
+          margin: '10px 0', padding: '14px 24px', background: '#edfffb',
           border: '1px solid #00b792', display: 'inline-block',
         }}
       >

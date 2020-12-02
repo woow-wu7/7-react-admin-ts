@@ -33,7 +33,7 @@ const CustomHooks = () => {
   return (
     <div style={{ background: '#fff', margin: '10px 0', padding: '10px', border: '1px solid black'}}>
       <p style={{
-        margin: '10px', padding: '14px 24px', background: '#ffeedb',
+        margin: '10px 0', padding: '14px 24px', background: '#ffeedb',
         border: '1px solid #ff8c00', display: 'inline-block',
       }}> custom-hooks </p>
 
@@ -41,15 +41,15 @@ const CustomHooks = () => {
       <div style={{ border: '1px solid blue', padding: '10px', }}>
         <div>
           count: {count}
-        </div>
+        </div><br/>
         <div>
           prevCount: {prevCount}
-        </div>
+        </div><br/>
         <button onClick={add}>usePrevious</button>
       </div>
 
       {/* useModal */}
-      <div style={{ border: '1px solid blue', padding: '10px', margin: '10px' }}>
+      <div style={{ border: '1px solid blue', padding: '10px', margin: '10px 0' }}>
         <CustomModal formInstance={form}>
           <Form
             name="basic"
@@ -72,7 +72,7 @@ const CustomHooks = () => {
       </div>
 
       {/* useFetch */}
-      <div style={{ border: '1px solid blue', padding: '10px', margin: '10px' }}>
+      <div style={{ border: '1px solid blue', padding: '10px', margin: '10px 0' }}>
         <Button onClick={getDatas}>获取数据</Button>
       </div>
     </div>

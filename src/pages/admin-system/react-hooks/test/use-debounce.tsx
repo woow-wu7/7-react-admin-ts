@@ -26,7 +26,7 @@ const UseDebounce = () => {
     >
       <br />
       <p style={{
-        margin: '10px', padding: '14px 24px', background: '#b5e6ff',
+        margin: '10px 0', padding: '14px 24px', background: '#b5e6ff',
         border: '1px solid #0989f9', display: 'inline-block',
       }}>useDebounce</p><br />
       <div> {count}</div><br /><br />

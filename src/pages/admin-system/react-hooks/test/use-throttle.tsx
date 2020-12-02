@@ -22,7 +22,7 @@ const UseThrottle = () => {
       border: '1px solid black'
     }}>
       <p style={{
-        margin: '10px', padding: '14px 24px', background: '#fdf2ff',
+        margin: '10px 0', padding: '14px 24px', background: '#fdf2ff',
         border: '1px solid #e821ff', display: 'inline-block',
       }}>useThrottle</p>
 

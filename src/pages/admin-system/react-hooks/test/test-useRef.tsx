@@ -51,12 +51,12 @@ const Father = () => {
     <div style={{
       background: '#fff',
       margin: '10px 0',
-      padding: '10px', 
+      padding: '10px',
       border: '1px solid black'
     }}>
       <p>父组件</p>
       <p style={{
-        margin: '10px', padding: '14px 24px', background: '#e8eaff',
+        margin: '10px 0', padding: '14px 24px', background: '#e8eaff',
         border: '1px solid #345bf9', display: 'inline-block',
       }}> useRef </p>
 
@@ -68,14 +68,23 @@ const Father = () => {
       <br />
 
       <div style={{ background: '#bcffb7', padding: '10px', margin: '10px 0' }}>
-        <p>count: {count}</p>
+        <p>count: {count}</p><br/>
         <button onClick={add}>add</button> &nbsp;
         <button onClick={delayConsole}>不用useRef时，延时打印count</button> &nbsp;
         <button onClick={delayConsoleUseRef}>用useRef保存count的值，延时打印count</button>
       </div>
 
       <br />
-      <button onClick={getChildMehod}>useRef+useImperativeHandle实现父组件调用子组件的方法</button>
+
+      <p style={{
+        margin: '10px 0', padding: '14px 24px', background: '#e8eaff',
+        border: '1px solid #345bf9', display: 'inline-block',
+      }}
+      >
+        useRef+React.forwardRef+useImperativeHandle实现父组件调用子组件的方法
+      </p>
+      <br/>
+      <button onClick={getChildMehod}>useRef+React.forwardRef+useImperativeHandle实现父组件调用子组件的方法</button>
       <Child ref={childRef} />
     </div>
   )
@@ -89,7 +98,7 @@ const Child = React.forwardRef((props: any, ref: any) => { // react.ForwardRef()
   }))
 
   return (
-    <div style={{ margin: '10px', border: '1px solid red', padding: '4px' }}>
+    <div style={{ margin: '10px 0', border: '1px solid red', padding: '4px' }}>
       <p>子组件</p>
     </div>
   )
