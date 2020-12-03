@@ -1,0 +1,78 @@
+@mixin interview($borderColor, $backgroundColor, $linkColor) {
+  border: 1px solid $borderColor;
+  margin-bottom: 40px;
+  padding: 10px;
+
+  & > p {
+    margin: 10px 0;
+    padding: 14px 24px;
+    background: $backgroundColor;
+    border: 1px solid $borderColor;
+    display: inline-block;
+  }
+
+  & > h1 {
+    margin: 20px 0 0 2px;
+  }
+
+  & .use-button {
+    border: 1px solid $borderColor;
+    background: $backgroundColor;
+  }
+
+  & a {
+    padding: 16px 0;
+    display: block;
+    color: $linkColor;
+
+    &:hover {
+      color: rgb(0, 140, 255);
+    }
+  }
+}
+
+.use-state {
+  @include interview(#67ce00, #f6ffed, #448801);
+}
+
+.use-fetch {
+  @include interview(#ff533d, #fff2f0, #e0230a);
+}
+
+.use-callback-memo {
+  @include interview(#00b792, #edfffb, #02725c);
+}
+
+.react-hooks {
+  // border: 1px solid red;
+  .ceil-dom {
+    padding: 10px 0 24px 0;
+  }
+
+  .replace-dom {
+    display: none;
+    padding: 24px 0 24px 14px;
+    position: fixed;
+    top: calc(60px + 36px + 14px);
+    // top: calc(60px + 14px + 36px + 14px); // 注意：这里这样是由间隙的，需要将 ( top-14px ), ( paddingTop+14px )
+    left: calc(200px + 14px); // padding+menu
+    right: calc(14px + 14px + 6px); // 两个padding+滚动条
+    z-index: 9999;
+    background: #fff;
+    box-sizing: border-box;
+
+    &::before {
+      content: '';
+      height: 30%;
+      width: 3px;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+      bottom: 1px;
+      right: 0;
+      background: #40a9ff;
+      z-index: 99999;
+    }
+  }
+}

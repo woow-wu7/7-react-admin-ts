@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import './diff.scss'
 
 
 const Diff = () => {
@@ -13,11 +12,11 @@ const Diff = () => {
       url: 'https://www.jianshu.com/p/3ba0822018cf'
     }
   ])
-  const renderLinks = () => links.map(({name, url}) => <a href={url} key={name} target="blank">{name}</a>)
+  const renderLinks = () => links.map(({name, url}) => <div key={name}><a href={url}  target="blank">{name}</a></div>)
 
   return (
     <div className="diff">
-      <p className="diff__title">Diff算法</p>
+      <p>Diff算法</p>
       <div>
         {renderLinks()}
       </div>

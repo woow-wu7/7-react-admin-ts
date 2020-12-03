@@ -1,3 +1,4 @@
 {
-  "eggHelper.serverPort": 63903
+  "eggHelper.serverPort": 63903,
+  "search-online.search-engine": "Baidu"
 }

@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react'
+import React, { useCallback, useEffect, useRef, useState } from 'react'
 import { renderRoutes } from '@/utils/render-routes/index'
 import styles from './index.module.scss'
 import { BackTop, Layout } from 'antd';
@@ -8,12 +8,16 @@ import { MenuFoldOutlined, MenuUnfoldOutlined, VerticalAlignTopOutlined } from '
 import SmartMenu from '@/components/SmartMenu';
 import SmartAvatarMenu from '@/components/SmartAvatarMenu'
 import SmartViewport from '@/components/SmartViewport'
+import { useDispatch } from 'react-redux'
+import { actionType } from './reducer'
 
 const { Header, Sider } = Layout;
 
 const Admin = () => {
 	const [collapsed, setcollapsed] = useState(false)
-	const refScroll = useRef<HTMLDivElement>(null)
+	const refScroll = useRef<HTMLDivElement>(null) // ( 回到顶部 ) 和 ( 吸顶效果 ) 都要用到 ( refScroll )
+	const dispatch = useCallback(useDispatch(), [])
+	
 
 	// useEffect(() => {
 	// 	console.log("admin-system初始化")
@@ -30,6 +34,15 @@ const Admin = () => {
 	const toggleCollapsed = () => {
 		setcollapsed(v => v = !v)
 	};
+
+	useEffect(() => {
+		if (refScroll.current) {
+			dispatch({ // ceiling效果的容器
+				type: actionType.GET_SCROLLCONTAINER,
+				payload: refScroll.current
+			})
+		}
+	}, [dispatch])
 
 	return (
 		<Layout className={styles.layoutAdmin}>

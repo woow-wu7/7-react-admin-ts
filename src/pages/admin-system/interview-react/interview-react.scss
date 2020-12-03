@@ -1,0 +1,43 @@
+@mixin interview($borderColor, $backgroundColor, $linkColor) {
+  border-bottom: 1px solid $borderColor;
+  margin-bottom: 30px;
+
+  & > p {
+    margin: 10px 0;
+    padding: 14px 24px;
+    background: $backgroundColor;
+    border: 1px solid $borderColor;
+    display: inline-block;
+  }
+
+  & > .explain {
+    margin: 10px 0;
+    font-size: 15px;
+  }
+
+  & a {
+    padding: 16px 0;
+    display: inline-block;
+    color: $linkColor;
+
+    &:hover {
+      color: rgb(0, 140, 255);
+    }
+  }
+}
+
+.diff {
+  @include interview(#67ce00, #f6ffed, #448801);
+}
+
+.var-up {
+  @include interview(#e821ff, #fdf2ff, #9a07aa);
+}
+
+.prototype-chain {
+  @include interview(#ff533d, #FFF2F0, #e0230a);
+}
+
+.ceiling {
+  @include interview(#00b792, #edfffb, #02725c);
+}

@@ -14,14 +14,14 @@ const Father = () => {
   const memoryObj = useMemo(() => obj, [])
 
   return (
-    <div style={{ background: '#fff', padding: '12px 0', border: '1px solid black' }}>
+    <div className="use-callback-memo">
       <p style={{
-        margin: '10px', padding: '14px 24px', background: '#edfffb',
+        margin: '10px 0', padding: '14px 24px', background: '#edfffb',
         border: '1px solid #00b792', display: 'inline-block',
       }}>
         useCallback useMemo React.memo做性能优化
       </p>
-      <div style={{ margin: '10px', padding: '4px' }}>
+      <div style={{ margin: '10px 0', padding: '4px' }}>
         <button onClick={() => setNumber(number => number + 1)}>点击 - 改变number</button>
       </div>
       <Child />
@@ -35,7 +35,7 @@ const Father = () => {
 
 const Child = () => {
   return (
-    <div style={{ margin: '10px', border: '1px solid red', padding: '4px', fontSize: '13px' }}>
+    <div style={{ margin: '10px 0', border: '1px solid #00b792', padding: '4px', fontSize: '13px' }}>
       <div>纯函数组件 - 父组件重新渲染，该子组件就会重新渲染</div>
       <div>{Math.random()}</div>
     </div>
@@ -44,7 +44,7 @@ const Child = () => {
 
 const NotMemoryFnChild = React.memo<{ count: number, add: () => void }>(({ count, add }) => {
   return (
-    <div style={{ margin: '10px', border: '1px solid red', padding: '10px', fontSize: '13px' }}>
+    <div style={{ margin: '10px 0', border: '1px solid #00b792', padding: '10px', fontSize: '13px' }}>
       <div>不用 ( useCallback ) 只用React.memo做对props浅比较，props中有函数时，每次钱比较的结果都是变化，子组件会重新渲染</div>
       <div>{Math.random()}</div>
     </div>
@@ -54,8 +54,8 @@ const NotMemoryFnChild = React.memo<{ count: number, add: () => void }>(({ count
 const MemoryFnChild = React.memo<{ count: number, memoryAdd: () => void }>(({ count, memoryAdd }) => {
   return (
     <div style={{
-      margin: '10px', border: '1px solid red', padding: '10px',
-      background: 'yellow', fontSize: '13px'
+      margin: '10px 0', border: '1px solid #00b792', padding: '10px',
+      background: '#edfffb', fontSize: '13px'
     }}>
       <div>用 useCallback() 缓存子组件的props中的函数，并用React.memo做浅比较，props没变，子组件不重新渲染</div>
       <div>{Math.random()}</div>
@@ -65,7 +65,7 @@ const MemoryFnChild = React.memo<{ count: number, memoryAdd: () => void }>(({ co
 
 const NotMemoryObjChild = React.memo<{ obj: { age: number } }>(({ obj }) => {
   return (
-    <div style={{ margin: '10px', border: '1px solid red', padding: '10px', fontSize: '13px' }}>
+    <div style={{ margin: '10px 0', border: '1px solid #00b792', padding: '10px', fontSize: '13px' }}>
       <div>不用 useMemo() 缓存 props中的对象属性，即使在React.Memo() 做浅比较，因为有对象props，每次都是一个新对象，导致浅比较的结果是props变化，子组件更新</div>
       <div>{Math.random()}</div>
     </div>
@@ -75,7 +75,7 @@ const NotMemoryObjChild = React.memo<{ obj: { age: number } }>(({ obj }) => {
 const MemoryObjChild = React.memo<{ memoryObj: { age: number } }>(({ memoryObj }) => {
   console.log(memoryObj, 'memoryObj');
   return (
-    <div style={{ margin: '10px', border: '1px solid red', padding: '10px', background: 'yellow', fontSize: '13px' }}>
+    <div style={{ margin: '10px 0', border: '1px solid #00b792', padding: '10px', background: '#edfffb', fontSize: '13px' }}>
       <div>用 useMemo() 缓存 props中的对象属性，在React.Memo() 做浅比较，因为对象props做了缓存，props做浅比较时没有变化，子组件不更新</div>
       <div>{Math.random()}</div>
     </div>

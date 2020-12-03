@@ -16,7 +16,9 @@ const UiAntTable = (props: any) => {
     current: 1,
     pageSize: 10,
     total: 20,
-  }, (data) => {
+  }, 
+  'initRun',
+  (data) => {
     return data
   })
 
