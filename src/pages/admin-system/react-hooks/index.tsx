@@ -1,5 +1,4 @@
 import React, { useEffect, useRef } from 'react'
-import styled from 'styled-components'
 import TestUseCallbackUseMemo from './test/test-usecallback-usememo'
 import TestUseRef from './test/test-useRef'
 import TestCustomHooks from './test/custom-hooks'
@@ -12,43 +11,29 @@ import TestUseFetch from './test/use-fetch'
 import { useSelector } from 'react-redux';
 import './react-hooks.scss'
 
-
-interface ITitle {
-  borderColor?: string;
-  backgroundColor?: string;
-  [propName: string]: any;
-}
-
-
+// ceiling 效果
+// 注意：实现吸顶效果用js方式，性能并不好，相比较，使用 ( css方式 positon:sticky方式简单高效得多 )
 const ReactComponnet = () => {
-  const scrollWrap = useSelector((state: any ) => state.admin.scrollContainer) // 容器
+  const scrollWrap = useSelector((state: any) => state.admin.scrollContainer) // 容器
   const refBlogLink = useRef<HTMLDivElement>(null) // ceiling元素
   const refBlogLinkReplace = useRef<HTMLDivElement>(null) // 代替元素
 
-
-
   useEffect(() => {
-
     if (scrollWrap && refBlogLink.current && refBlogLinkReplace.current) {
-      const ceilDOM = refBlogLink.current
       const replaceDOM = refBlogLinkReplace.current
       const wrapperDOM = scrollWrap
-
       const scrollHandle = (e: any) => {
-        console.log(e.target.scrollTop);
-        console.log(ceilDOM.offsetTop);
-
         if (e.target && e.target.scrollTop > 0) {
           replaceDOM.style.setProperty('display', 'block')
         } else {
           replaceDOM.style.setProperty('display', 'none')
         }
       }
-
       wrapperDOM.addEventListener('scroll', scrollHandle, false)
       return () => wrapperDOM.removeEventListener('scroll', scrollHandle, false)
     }
   }, [scrollWrap])
+
   return (
     <div className="react-hooks">
       <div ref={refBlogLink} className="ceil-dom">
@@ -70,30 +55,5 @@ const ReactComponnet = () => {
     </div>
   )
 }
-
-const UseStateCopmonnet = styled.div`
-    background: #fff;
-    margin: 10px 0;
-  `
-
-const Title = styled.div`
-    display: inline-block;
-    padding: 10px 30px;
-    margin-bottom: 30px;
-    background: ${(props: ITitle) => props.backgroundColor};
-    border: 1px solid ${(props: ITitle) => props.borderColor};
-    border-radius: 2px;
-  }
-  `
-
-const LinkOther = styled(UseStateCopmonnet)`
-  margin-top: 10px;
-`
-
-
-const UseFetchComponent = styled(UseStateCopmonnet)`
-  
-`
-
 
 export default ReactComponnet

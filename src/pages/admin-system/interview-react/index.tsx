@@ -3,6 +3,7 @@ import Diff from './Knowledge/Diff'
 import VarUp from './Knowledge/VarUp'
 import PrototypeChain from './Knowledge/PrototypeChain'
 import Ceiling from './Knowledge/Ceiling'
+import StickyFooter from './Knowledge/StickyFooter'
 import './interview-react.scss'
 
 const InterviewReact = () => {
@@ -12,6 +13,7 @@ const InterviewReact = () => {
       <VarUp />
       <PrototypeChain />
       <Ceiling />
+      <StickyFooter />
     </div>
   )
 }

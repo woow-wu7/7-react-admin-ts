@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 
 const VarUp = () => {
   const [links] = useState([
@@ -13,16 +13,16 @@ const VarUp = () => {
   ])
   const renderLinks = () => links.map(({ name, url }) => <div key={name}><a href={url} target="blank">{name}</a></div>)
 
-  useEffect(() => {
-    function a(name: string) {
-      // var name = 'wang'
-      // var name = undefined
-      console.log('name :>> ', name); // 输出 'wang'
-      var name = 'zhang' // name = 'zhang'
-      console.log('name :>> ', name); // 输出 '张'
-    }
-    a('wang')
-  }, [])
+  // useEffect(() => {
+  //   function a(name: string) {
+  //     var name = 'wang'
+  //     var name = undefined
+  //     console.log('name :>> ', name); // 输出 'wang'
+  //     var name = 'zhang' // name = 'zhang'
+  //     console.log('name :>> ', name); // 输出 '张'
+  //   }
+  //   a('wang')
+  // }, [])
 
   // useEffect(() => {
   //   function b(name: any) {
@@ -32,6 +32,7 @@ const VarUp = () => {
   //   }
   //   b('wang')
   // }, [])
+
   return (
     <div className="var-up">
       <p>变量提升</p>

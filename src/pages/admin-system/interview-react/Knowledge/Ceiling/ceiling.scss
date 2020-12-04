@@ -1,0 +1,128 @@
+.ceiling2 {
+  background: #fff;
+  // position: sticky;
+  // top: 0;
+  transform: scale(1);
+
+  & > h3 {
+    background: #edfffb;
+  }
+
+  .ceil-css {
+    background: #edfffb;
+  }
+
+  // css 方式
+  .ceilingp-test {
+    height: 220px;
+    width: 360px;
+    overflow: auto;
+    border: 1px solid rgb(187, 187, 187);
+    display: inline-block;
+    margin-right: 10px;
+
+    & div {
+      padding: 10px 0;
+    }
+
+    .ceiling-header {
+      // header
+      background: #edfffb;
+      color: #00b792;
+      position: sticky;
+      top: 0;
+      height: 36px;
+    }
+
+    .ceiling-header2 {
+      // header2
+      background: #edfffb;
+      color: #00b792;
+      position: sticky;
+      top: 36px;
+      height: 36px;
+    }
+
+    .ceiling-header-wrapper {
+      height: 200px;
+      border: 1px solid red;
+
+      .ceiling-header3 {
+        // header3
+        background: #edfffb;
+        color: #00b792;
+        position: sticky;
+        top: 0;
+        height: 36px;
+      }
+    }
+  }
+
+  // js 方式
+  .ceilingp-test-js {
+    height: 220px;
+    width: 360px;
+    overflow: auto;
+    border: 1px solid rgb(187, 187, 187);
+    display: inline-block;
+    margin-right: 10px;
+    position: relative;
+
+    & div {
+      padding: 10px 0;
+    }
+
+    .ceiling-header-js {
+      // header
+      background: #edfffb;
+      color: #00b792;
+      height: 36px;
+    }
+  }
+
+  .ceiling-header-js-replace { // 用于js方式实现ceiling效果的 代替元素
+    background: #edfffb;
+    color: #00b792;
+    height: 36px;
+    position: fixed;
+    top: 214px;
+    left: calc(360px + 11px);
+    width: calc(360px - 8px);
+    z-index: 999999;
+    display: none;
+  }
+
+  // InterSectionObserver 方式
+  .ceilingp-test-interserction-observer {
+    height: 220px;
+    width: 360px;
+    overflow: auto;
+    border: 1px solid rgb(187, 187, 187);
+    display: inline-block;
+    margin-right: 10px;
+    position: relative;
+
+    & div {
+      padding: 10px 0;
+    }
+
+    .ceiling-header-intersection-observer {
+      // header
+      background: #edfffb;
+      color: #00b792;
+      height: 36px;
+    }
+  }
+
+  .ceiling-header-intersection-replace {
+    background: #edfffb;
+    color: #00b792;
+    height: 36px;
+    position: fixed;
+    top: 214px;
+    left: calc(360px + 12px + 360px + 9px);
+    width: calc(360px - 8px);
+    z-index: 999999;
+    display: none;
+  }
+}

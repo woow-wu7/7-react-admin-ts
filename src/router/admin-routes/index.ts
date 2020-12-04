@@ -39,6 +39,27 @@ const adminRoutes: IRouteModule[] = [
     // 注意：( 重要 ) 每一个 detail 都要记得用 useParams 存入 localStorage
   },
   {
+    title: 'Interview',
+    icon: 'anticon-custom-form',
+    key: '/admin-interview',
+    path: '/admin-interview',
+    meta: {
+      needLoginAuth: true,
+      rolesAuth: ['user', 'admin']
+    },
+    subs: [{
+      title: 'Hasaki',
+      icon: 'anticon-react',
+      key: '/admin-interview/react',
+      path: '/admin-interview/react',
+      component: InterviewReact,
+      meta: {
+        needLoginAuth: true,
+        rolesAuth: ['user', 'admin']
+      },
+    }]
+  },
+  {
     title: 'React',
     icon: 'anticon-react1',
     key: '/admin-react',
@@ -110,27 +131,6 @@ const adminRoutes: IRouteModule[] = [
       key: '/admin-react-router/hooks/:id',
       path: '/admin-react-router/hooks/:id',
       component: ReactRouterHooksDetail,
-      meta: {
-        needLoginAuth: true,
-        rolesAuth: ['user', 'admin']
-      },
-    }]
-  },
-  {
-    title: 'Interview',
-    icon: 'anticon-custom-form',
-    key: '/admin-interview',
-    path: '/admin-interview',
-    meta: {
-      needLoginAuth: true,
-      rolesAuth: ['user', 'admin']
-    },
-    subs: [{
-      title: 'React',
-      icon: 'anticon-react',
-      key: '/admin-interview/react',
-      path: '/admin-interview/react',
-      component: InterviewReact,
       meta: {
         needLoginAuth: true,
         rolesAuth: ['user', 'admin']
