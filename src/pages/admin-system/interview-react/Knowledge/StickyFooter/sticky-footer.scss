@@ -1,0 +1,75 @@
+@mixin stick_footer__base {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+
+  & > div {
+    height: 360px;
+    width: 360px;
+    border: 1px solid rgb(187, 187, 187);
+    margin-right: 10px;
+    overflow: auto;
+    padding: 0;
+
+    & > .content {
+      background: yellow;
+      padding: 0;
+      margin: 0;
+    }
+
+    & > footer {
+      height: 50px;
+      background: red;
+      padding: 0;
+      margin: 0;
+    }
+  }
+
+  & > button {
+    padding: 6px 10px;
+    display: inline-block;
+    margin: 6px 10px 4px 0;
+  }
+}
+
+.sticky-footer {
+  .sticky_footer__marginpadding {
+    @include stick_footer__base();
+
+    & > div {
+      & > .content {
+        min-height: 100%;
+        padding-bottom: 50px;
+        box-sizing: border-box;
+      }
+
+      & > footer {
+        margin-top: -50px;
+      }
+    }
+  }
+
+  .sticky_footer__flex {
+    @include stick_footer__base();
+
+    & > div {
+      min-height: 100%;
+      display: flex;
+      flex-direction: column;
+
+      & > .content {
+        flex: 1;
+      }
+    }
+  }
+
+  .sticky_footer__calc {
+    @include stick_footer__base();
+
+    & > div {
+      & > .content {
+        min-height: calc(360px - 52px);
+      }
+    }
+  }
+}
