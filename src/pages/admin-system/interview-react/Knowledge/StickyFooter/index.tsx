@@ -9,7 +9,7 @@ const StickyFooter = () => {
   const [links] = useState([
     {
       name: 'stickyFooter三种方法 - 我的掘金博客',
-      url: 'https://juejin.cn/post/6844904090644774926'
+      url: 'https://juejin.cn/post/6844904090644774926#heading-4'
     },
   ])
   const renderLinks = () => links.map(({ name, url }) => <div key={name}><a href={url} target="blank">{name}</a></div>)

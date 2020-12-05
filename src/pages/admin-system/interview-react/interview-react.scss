@@ -53,4 +53,59 @@
     // @include interview(#e8b900, #ffffdd, #028a6f);
     @include interview(#3d51ff, #e8eaff, #0015d3);
   }
+
+  .visibility_display {
+    @include interview(#ff8800, #ffefb8, #d37000);
+  }
+
+  .line-block {
+    @include interview(#67ce00, #f6ffed, #448801);
+  }
+
+  .triangle {
+    @include interview(#ff0000, #ffe8e8, #e70404);
+
+    .triangle-item {
+      height: 360px;
+      width: 360px;
+      overflow: auto;
+      border: 1px solid rgb(187, 187, 187);
+      display: inline-block;
+      margin-right: 10px;
+
+      .triangle-one {
+        display: inline-block;
+        width: 0;
+        height: 0;
+        border-top: 60px solid #00b792;
+        border-bottom: 60px solid #f00;
+        border-left: 60px solid #e821ff;
+        border-right: 60px solid #f80;
+      }
+
+      .triangle-two {
+        width: 0;
+        height: 0;
+        border: 60px solid transparent;
+        border-bottom: 60px solid #f00;
+      }
+
+      .triangle-three {
+        width: 0;
+        height: 0;
+        border: 60px solid transparent;
+        border-bottom: 120px solid #f00;
+      }
+
+      .triangle-four {
+        width: 0;
+        height: 0;
+        // border: 60px solid transparent;
+        border-top: 60px solid #00b792;
+        border-right: 60px solid #f80;
+        border-left: 60px solid #e821ff;
+        border-bottom: 120px solid #f00;
+      }
+    }
+  }
 }
