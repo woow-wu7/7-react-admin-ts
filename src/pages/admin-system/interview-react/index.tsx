@@ -7,6 +7,7 @@ import StickyFooter from './Knowledge/StickyFooter'
 import VisibilityDisplay from './Knowledge/VisibilityDisplay'
 import InlineBlock from './Knowledge/InlineBlock'
 import Triangle from './Knowledge/Triangle'
+import Animates from './Knowledge/Amimates'
 import './interview-react.scss'
 
 const InterviewReact = () => {
@@ -20,6 +21,7 @@ const InterviewReact = () => {
       <VisibilityDisplay />
       <InlineBlock />
       <Triangle />
+      <Animates />
     </div>
   )
 }
