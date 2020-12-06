@@ -36,9 +36,7 @@ const SmartProgress: React.FC<IProps> = ({ scrollRef, option: { background, heig
   }, [background, height, scrollRef])
 
   return (
-    <div className="smart-progress" ref={refProgress}>
-      <p>SmartProgress</p>
-    </div>
+    <div className="smart-progress" ref={refProgress} />
   )
 }
 
