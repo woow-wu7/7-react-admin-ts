@@ -2,7 +2,7 @@
   background: #fff;
   // position: sticky;
   // top: 0;
-  transform: scale(1);
+  transform: scale(1); // 当fixed定位要基于某个父元素，而不是窗口时，需要使用transform属性
 
   & > h3 {
     background: #edfffb;
@@ -84,7 +84,7 @@
     background: #edfffb;
     color: #00b792;
     height: 36px;
-    position: fixed;
+    position: fixed; // 当fixed定位要基于某个父元素，而不是窗口时，需要使用transform属性(非transform:none以外的都行)，这里在ceiling2上设置了transform属性，即基于整个Ceiling吸顶效果的区域定位
     top: 214px;
     left: calc(360px + 11px);
     width: calc(360px - 8px);

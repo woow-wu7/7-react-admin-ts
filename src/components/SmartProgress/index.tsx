@@ -1,0 +1,44 @@
+import React, { useEffect, useRef } from 'react'
+import './smart-progress.scss'
+
+
+interface IProps {
+  scrollRef: HTMLDivElement;
+  option: Ioption
+}
+
+interface Ioption {
+  height: string;
+  background: string;
+}
+
+/**
+ * @desc FC SmartProgress
+ * @param {DOM} scrollRef 传入的具有滚动条的，需要监听的DOM元素
+ * @param {object} option 配置对象，设置progress的 width height 
+ */
+const SmartProgress: React.FC<IProps> = ({ scrollRef, option: { background, height } }) => {
+  const refProgress = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    const handleScroll = (e: Event) => {
+      const { scrollTop, clientHeight, scrollHeight } = scrollRef
+      const totalWidth = scrollHeight - clientHeight
+      const currentWidth = scrollTop
+      refProgress.current?.style?.setProperty('width', `${currentWidth / totalWidth * 100}%`)
+      refProgress.current?.style?.setProperty('background', `${background}`)
+      refProgress.current?.style?.setProperty('height', `${height}`)
+    }
+
+    scrollRef.addEventListener('scroll', handleScroll, false)
+    return () => scrollRef.removeEventListener('scroll', handleScroll, false)
+  }, [background, height, scrollRef])
+
+  return (
+    <div className="smart-progress" ref={refProgress}>
+      <p>SmartProgress</p>
+    </div>
+  )
+}
+
+export default SmartProgress

@@ -139,7 +139,7 @@
         @include minWrap();
 
         &::before {
-          content: '';
+          content: "";
           position: absolute;
           left: 50%;
           top: 50%;
@@ -154,7 +154,7 @@
         }
 
         &:active::before {
-          content: '';
+          content: "";
           position: absolute;
           top: 50%;
           left: 50%;
@@ -171,7 +171,7 @@
         @include minWrap();
 
         &::before {
-          content: '';
+          content: "";
           position: absolute;
           top: 50%;
           left: 50%;
@@ -188,7 +188,7 @@
         position: relative;
 
         &::before {
-          content: '';
+          content: "";
           position: absolute;
           left: 50%;
           right: 50%;
@@ -201,7 +201,7 @@
         }
 
         &:hover::before {
-          content: '';
+          content: "";
           position: absolute;
           left: 0;
           right: 0;
@@ -211,6 +211,16 @@
           background: red;
         }
       }
+    }
+  }
+
+  .progress {
+    @include interview(#3d51ff, #e8eaff, #0015d3);
+
+    transform: scale(1);
+
+    .progress__main {
+      @include maxWrap();
     }
   }
 }

@@ -11,13 +11,15 @@ import SmartViewport from '@/components/SmartViewport'
 import { useDispatch } from 'react-redux'
 import { actionType } from './reducer'
 
-const { Header, Sider } = Layout;
+const { Header, Sider, Content } = Layout;
 
 const Admin = () => {
 	const [collapsed, setcollapsed] = useState(false)
-	const refScroll = useRef<HTMLDivElement>(null) // ( 回到顶部 ) 和 ( 吸顶效果 ) 都要用到 ( refScroll )
 	const dispatch = useCallback(useDispatch(), [])
-	
+	const refScroll = useRef<HTMLDivElement>(null)
+	// ------ refScroll ------
+	// ( 回到顶部 ) 和 ( 吸顶效果 ) 和 ( progress进入条 ) 都要用到 ( refScroll )
+
 
 	// useEffect(() => {
 	// 	console.log("admin-system初始化")
@@ -55,6 +57,7 @@ const Admin = () => {
 			>
 				<SmartMenu />
 			</Sider>
+
 			<Layout className={styles.contentWrap}>
 				<Header className={styles.header}>
 					{/* Header-左 */}
@@ -72,13 +75,13 @@ const Admin = () => {
 					</ul>
 				</Header>
 				{/* scroll相关 ref */}
-				<div className={styles.content}>
+				<Content className={styles.content}>
 					<CustomBreadcrumb />
 					<div className={styles.routerViewWrap} ref={refScroll} >
 						{renderRoutes(adminRoutes)}
 					</div>
 					{/* renderRoutes(props.route.routes) 再次执行，注册嵌套的路由，成为父组件的子组件 */}
-				</div>
+				</Content>
 			</Layout>
 
 			{/* 返回顶部，层级放在那里都可以 */}
@@ -87,7 +90,8 @@ const Admin = () => {
 					<VerticalAlignTopOutlined style={{ color: '#fff', fontSize: '30px' }} />
 				</div>
 			</BackTop>
-
+			
+			{/* 监听viewport的width height变化 */}
 			<SmartViewport />
 		</Layout>
 	)
