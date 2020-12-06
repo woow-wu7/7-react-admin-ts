@@ -1,0 +1,67 @@
+.one-px {
+  .max-border {
+    .one-px-box {
+      position: relative;
+      display: inline-block;
+      height: 150px;
+      width: 150px;
+      margin: 14px 0 0 14px;
+      background: #fff8f7;
+
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 1px;
+        width: 100%;
+        background: red;
+        z-index: 1;
+      }
+    }
+
+    .one-px-box-not {
+      position: relative;
+      display: inline-block;
+      height: 150px;
+      width: 150px;
+      margin: 14px 0 0 14px;
+      background: #fff8f7;
+
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 1px;
+        width: 100%;
+        background: red;
+        z-index: 1;
+      }
+    }
+  }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 2) {
+  .one-px {
+    .max-border {
+      .one-px-box {
+        &::before {
+          transform: scaleY(0.5);
+        }
+      }
+    }
+  }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 3) {
+  .one-px {
+    .max-border {
+      .one-px-box {
+        &::before {
+          transform: scaleY(0.333333);
+        }
+      }
+    }
+  }
+}

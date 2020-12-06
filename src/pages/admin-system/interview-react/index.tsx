@@ -11,6 +11,7 @@ import Triangle from './Knowledge/Triangle'
 import Animates from './Knowledge/Amimates'
 import Progress from './Knowledge/Progress'
 import BoxSizing from './Knowledge/BoxSizing'
+import OnePx from './Knowledge/OnePx'
 import { useSelector } from 'react-redux'
 import './interview-react.scss'
 
@@ -37,6 +38,7 @@ const InterviewReact = () => {
       <Animates />
       <Progress />
       <BoxSizing />
+      <OnePx />
     </div>
   )
 }

@@ -30,6 +30,14 @@
     padding: 4px 0;
     font-size: 15px;
   }
+
+  & .max-border {
+    @include maxWrap();
+  }
+
+  & .min-border {
+    @include minWrap();
+  }
 }
 
 @mixin maxWrap {
@@ -63,7 +71,8 @@
     @include interview(#e821ff, #fdf2ff, #9a07aa);
   }
 
-  .prototype-chain {
+  .prototype-chain,
+  .one-px {
     @include interview(#ff533d, #fff2f0, #e0230a);
   }
 
