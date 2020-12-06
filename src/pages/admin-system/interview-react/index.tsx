@@ -1,4 +1,5 @@
 import React from 'react'
+import SmartProgress from '@/components/SmartProgress'
 import Diff from './Knowledge/Diff'
 import VarUp from './Knowledge/VarUp'
 import PrototypeChain from './Knowledge/PrototypeChain'
@@ -9,7 +10,7 @@ import InlineBlock from './Knowledge/InlineBlock'
 import Triangle from './Knowledge/Triangle'
 import Animates from './Knowledge/Amimates'
 import Progress from './Knowledge/Progress'
-import SmartProgress from '@/components/SmartProgress'
+import BoxSizing from './Knowledge/BoxSizing'
 import { useSelector } from 'react-redux'
 import './interview-react.scss'
 
@@ -35,6 +36,7 @@ const InterviewReact = () => {
       <Triangle />
       <Animates />
       <Progress />
+      <BoxSizing />
     </div>
   )
 }

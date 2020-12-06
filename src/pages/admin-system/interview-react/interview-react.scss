@@ -54,7 +54,8 @@
 }
 
 .interview-react {
-  .diff {
+  .diff,
+  .inline-block {
     @include interview(#67ce00, #f6ffed, #448801);
   }
 
@@ -66,7 +67,8 @@
     @include interview(#ff533d, #fff2f0, #e0230a);
   }
 
-  .ceiling {
+  .ceiling,
+  .box-sizing {
     @include interview(#00b792, #edfffb, #028a6f);
   }
 
@@ -77,10 +79,6 @@
 
   .visibility_display {
     @include interview(#ff8800, #ffefb8, #d37000);
-  }
-
-  .line-block {
-    @include interview(#67ce00, #f6ffed, #448801);
   }
 
   .triangle {

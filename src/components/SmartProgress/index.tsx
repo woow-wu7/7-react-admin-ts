@@ -16,6 +16,7 @@ interface Ioption {
  * @desc FC SmartProgress
  * @param {DOM} scrollRef 传入的具有滚动条的，需要监听的DOM元素
  * @param {object} option 配置对象，设置progress的 width height 
+ * @desc 不引入该组件，不会监听，即不会出现 progress bar
  */
 const SmartProgress: React.FC<IProps> = ({ scrollRef, option: { background, height } }) => {
   const refProgress = useRef<HTMLDivElement>(null)
