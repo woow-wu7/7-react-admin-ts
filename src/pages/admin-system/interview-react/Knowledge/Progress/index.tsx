@@ -3,8 +3,8 @@ import React, { useState } from 'react'
 const Progress = () => {
   const [links] = useState([
     {
-      name: 'js实现 Progress 进度条 - github源码',
-      url: ''
+      name: 'js实现 Progress 进度条 - github源码链接',
+      url: 'https://github.com/woow-wu7/7-react-admin-ts/blob/master/src/components/SmartProgress/index.tsx'
     },
     {
       name: '纯css实现 Progress 进度条',
@@ -20,6 +20,14 @@ const Progress = () => {
   return (
     <div className="progress">
       <p>实现 Progress 进度条</p><br />
+
+      <div>
+        <h1>js方式实现</h1>
+        <h1>实时进度条宽度( 百分比 )：(target.scrollTop/(target.scrollHeight - target.clientHeight))px;</h1>
+        <h1>滚动了的宽度：target.scrollTop</h1>
+        <h1>需要滚动的宽度：target.scrollTop</h1>
+      </div>
+
       <div>
         {renderLinks()}
       </div>
