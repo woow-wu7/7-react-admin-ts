@@ -17,6 +17,7 @@ import Em from './Knowledge/Em'
 import Rem from './Knowledge/Rem'
 import Ellipsis from './Knowledge/Ellipsis'
 import Layouts from './Knowledge/LayOuts'
+import MarginCollapse from './Knowledge/Margin-collapse'
 import { useSelector } from 'react-redux'
 import './interview-react.scss'
 
@@ -49,6 +50,7 @@ const InterviewReact = () => {
       <Rem />
       <Ellipsis />
       <Layouts />
+      <MarginCollapse />
     </div>
   )
 }

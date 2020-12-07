@@ -95,6 +95,10 @@
     @include interview(#ff8800, #ffefb8, #d37000);
   }
 
+  .margin-collapse {
+    @include interview(#ff0000, #ffe8e8, #e70404);
+  }
+
   .triangle {
     @include interview(#ff0000, #ffe8e8, #e70404);
 

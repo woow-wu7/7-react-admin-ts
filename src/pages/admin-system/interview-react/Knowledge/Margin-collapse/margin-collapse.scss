@@ -1,0 +1,25 @@
+.max-border {
+  .left__top1 {
+    width: 120px;
+    height: 120px;
+    background: yellow;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    display: inline-block;
+  }
+
+  .left__top2 {
+    width: 120px;
+    height: 120px;
+    margin-left: 10px;
+    background: rgb(255, 255, 217);
+    display: inline-block;
+  }
+
+  .left__bottom1 {
+    width: 120px;
+    height: 120px;
+    background: red;
+    margin-top: 10px;
+  }
+}

@@ -20,7 +20,6 @@ const Layouts = () => {
           <h1>left: width: 100px;</h1>
           <h1>left: float: left</h1>
           <h1>right: 无需做任何设置</h1>
-
         </div>
       </div>
       {/* absolute */}
