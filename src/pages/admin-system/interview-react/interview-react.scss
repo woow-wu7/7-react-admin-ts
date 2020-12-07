@@ -63,11 +63,13 @@
 
 .interview-react {
   .diff,
-  .inline-block {
+  .inline-block,
+  .interview-media {
     @include interview(#67ce00, #f6ffed, #448801);
   }
 
-  .var-up {
+  .var-up,
+  .em {
     @include interview(#e821ff, #fdf2ff, #9a07aa);
   }
 
@@ -77,16 +79,19 @@
   }
 
   .ceiling,
-  .box-sizing {
+  .box-sizing,
+  .rem {
     @include interview(#00b792, #edfffb, #028a6f);
   }
 
-  .sticky-footer {
+  .sticky-footer,
+  .ellipsis {
     // @include interview(#e8b900, #ffffdd, #028a6f);
     @include interview(#3d51ff, #e8eaff, #0015d3);
   }
 
-  .visibility_display {
+  .visibility_display,
+  .layouts {
     @include interview(#ff8800, #ffefb8, #d37000);
   }
 

@@ -1,0 +1,53 @@
+.layouts {
+  // float方式
+  .max-border {
+    .float-left {
+      background: #ff8800;
+      height: 100%;
+      width: 100px;
+      float: left;
+    }
+    .float-right {
+      // 右边无需做任何设置
+      background: #ffefb8;
+      height: 100%;
+    }
+  }
+  // 绝对定位方式
+  .max-border {
+    position: relative;
+    .absolute-left {
+      background: #ff8800;
+      width: 100px;
+      height: 100%;
+    }
+    .absolute-right {
+      background: #ffefb8;
+      position: absolute;
+      left: 100px;
+      top: 0;
+      right: 0;
+      bottom: 0;
+    }
+  }
+  // flex
+  .max-borderx {
+    width: 360px;
+    height: 360px;
+    display: inline-block;
+    border: 1px solid rgb(201, 201, 201);
+    .max-border-inner {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      .flex__left {
+        background: #ff8800;
+        flex: 0 0 100px;
+      }
+      .flex__right {
+        background: #ffefb8;
+        flex: 1;
+      }
+    }
+  }
+}

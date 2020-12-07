@@ -19,6 +19,21 @@ const InlineBlock = () => {
       <div>
         <div style={{ display: 'inline-block', background: 'yellow', }}>display: inline-block;</div>
         <div style={{ display: 'inline-block', background: 'yellow', }}>display: inline-block;</div>
+      </div><br /><br /><br /><br /><br /><br />
+
+      <div dangerouslySetInnerHTML={{
+        __html: `
+          <span style={{ width: '700px' }}>span: inline</span>
+          <a href="https://juejin.cn/post/6887132776512880654" style={{ width: '100px', display: 'inline'}}>a: inline</a>
+          <input type="text" placeholder="input：inline-block" style={{ width: '100px' }} />
+          <textarea rows={3} cols={20} style={{ width: '100px' }} value="textarea: inline-block"></textarea>
+          <select name="cars" style={{ width: '100px' }} >
+            <option value="volvo">Volvo</option>
+            <option value="saab">Saab</option>
+            <option value="fiat">Fiat</option>
+            <option value="audi">Audi</option>
+          </select>
+      ` }}>
       </div>
       <div>
         {renderLinks()}

@@ -1,0 +1,16 @@
+.em {
+  .max-border {
+    font-size: 20px;
+    padding: 10px;
+    background: #fdf2ff;
+    .em__div1 {
+      background: #bbdffd;
+      font-size: 1em; // em作为font-size的单位时，1em表示父元素font-size的大小
+    }
+    .em__div2 {
+      background: #bbfdc9;
+      font-size: 20px; // em作为其他属性的单位时，1em表示自身font-size的大小
+      height: 10em;
+    }
+  }
+}

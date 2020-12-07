@@ -1,0 +1,23 @@
+@mixin bgColor($bgColor) {
+  .interview-media {
+    .media-main {
+      .media-main__title {
+        background: $bgColor;
+        padding: 10px 0;
+      }
+    }
+  }
+}
+@include bgColor($bgColor:#c6fd8f); // 注意：属性值不要加引号，区别于html中，踩过坑
+
+@media screen and (min-width: 1200px) {
+  @include bgColor($bgColor:#a8c9ff);
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1100px) {
+  @include bgColor($bgColor:#ffa9ff);
+}
+
+@media screen and (max-width: 900px) {
+  @include bgColor($bgColor:#ffc7c7);
+}

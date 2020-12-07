@@ -1,0 +1,22 @@
+.ellipsis {
+  .max-border {
+    .ellipsis__single {
+      width: 180px;
+      background: yellow;
+
+      overflow: hidden;      
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .ellipsis__many {
+      width: 180px;
+      height: 96px;
+      background: yellow;
+
+      overflow: hidden;
+      display: -webkit-box; // display: -webkit-box;
+      -webkit-box-orient: vertical; // 方向，orient：是方向的意思
+      -webkit-line-clamp: 6; // 行数
+    }
+  }
+}

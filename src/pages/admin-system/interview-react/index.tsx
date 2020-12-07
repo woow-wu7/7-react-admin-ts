@@ -12,6 +12,11 @@ import Animates from './Knowledge/Amimates'
 import Progress from './Knowledge/Progress'
 import BoxSizing from './Knowledge/BoxSizing'
 import OnePx from './Knowledge/OnePx'
+import Media from './Knowledge/Media'
+import Em from './Knowledge/Em'
+import Rem from './Knowledge/Rem'
+import Ellipsis from './Knowledge/Ellipsis'
+import Layouts from './Knowledge/LayOuts'
 import { useSelector } from 'react-redux'
 import './interview-react.scss'
 
@@ -39,6 +44,11 @@ const InterviewReact = () => {
       <Progress />
       <BoxSizing />
       <OnePx />
+      <Media />
+      <Em />
+      <Rem />
+      <Ellipsis />
+      <Layouts />
     </div>
   )
 }
