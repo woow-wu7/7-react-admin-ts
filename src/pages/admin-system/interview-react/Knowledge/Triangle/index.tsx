@@ -6,6 +6,10 @@ const Triangle = () => {
       name: 'css 画 triangle - 我的掘金博客',
       url: 'https://juejin.cn/post/6844904090644774926#heading-24'
     },
+    {
+      name: '三角形的各种画法 - 掘金',
+      url: 'https://juejin.cn/post/6844903810125529101#heading-19'
+    }
   ])
   const renderLinks = () => links.map(({ name, url }) => <div key={name}><a href={url} target="blank">{name}</a></div>)
 
@@ -22,6 +26,8 @@ const Triangle = () => {
             <div>width: 120px;</div>
             <div>height: 120px;</div>
           </div>
+          {/* 直角三角形 */}
+          <div className="triangle-one-right" />
         </div>
         <div>
           <h1> width: 0;</h1>
@@ -46,6 +52,8 @@ const Triangle = () => {
             <div>width: 120px;</div>
             <div>height: 120px;</div>
           </div>
+          {/* 等边三角形 和 带边框的三角形 */}
+          <div className="triangle-two-equal" />
         </div>
         <div>
           <h1> width: 0;</h1>

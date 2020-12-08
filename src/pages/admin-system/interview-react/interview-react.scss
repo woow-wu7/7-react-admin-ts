@@ -64,7 +64,8 @@
 .interview-react {
   .diff,
   .inline-block,
-  .interview-media {
+  .interview-media,
+  .column-equal {
     @include interview(#67ce00, #f6ffed, #448801);
   }
 
@@ -115,12 +116,51 @@
         border-right: 60px solid #f80;
       }
 
+      .triangle-one-right {
+        display: inline-block;
+        width: 0;
+        height: 0;
+        border: 60px solid transparent;
+        border-left: 60px solid rgb(100, 185, 255); // 这样能画出直角三角形，直角在左下角
+        border-bottom: 60px solid rgb(100, 185, 255); // 直角边是border的两倍，即120px
+      }
+
       .triangle-two {
         width: 0;
         height: 0;
         border: 60px solid transparent;
         border-bottom: 60px solid #f00;
       }
+
+      .triangle-two-equal {
+        display: inline-block;
+        width: 0;
+        height: 0;
+        border: 34.5px solid transparent; // 等边三角形 ( 显示部分跨度 = transparent部分宽度 * √3 )
+        border-bottom: 60px solid rgb(253, 0, 0);
+        position: relative;
+        // 利用伪类来做边框,原理是使两个三角形重合,然后通过不同大小颜色来覆盖区分
+        &::before {
+          content: "";
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-51%, -29%);
+          width: 0;
+          height: 0;
+          border: 29px solid transparent; // 等边三角形 ( 显示部分跨度 = transparent部分宽度 * √3 )
+          border-bottom: 50px solid rgb(100, 185, 255);
+        }
+      }
+
+      // .triangle-two-equal-border { // 带边框的三角形,就是画两个三角形重叠,可以用伪元素或者两个div重合
+      //   display: inline-block;
+      //   width: 0;
+      //   height: 0;
+      //   border: 34.5px solid transparent; // 等边三角形 ( 显示部分跨度 = transparent部分宽度 * √3 )
+      //   border-bottom: 60px solid rgb(26, 153, 0);
+      //   transform: scale(1.1);
+      // }
 
       .triangle-three {
         width: 0;

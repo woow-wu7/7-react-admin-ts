@@ -1,0 +1,40 @@
+.column-equal {
+  // flex方式多列等高
+  .max-border-one {
+    .max-border-flex {
+      display: flex;
+      flex-flow: row nowrap;
+    }
+
+    & > div {
+      width: 25%;
+      background: #f6ffed;
+    }
+  }
+  // float方式,padding+margin多列等高
+  .max-border-two {
+    .max-border-float {
+      overflow: hidden;
+
+      & > div {
+        float: left;
+        width: 25%;
+        background: #f6ffed;
+        padding-bottom: 999px;
+        margin-bottom: -999px;
+      }
+    }
+  }
+  // table-ceil布局
+  .max-border-three {
+    .max-border-table {
+      display: table;
+
+      & > div {
+        display: table-cell;
+        width: 25%;
+        background: #f6ffed;
+      }
+    }
+  }
+}

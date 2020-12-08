@@ -18,6 +18,7 @@ import Rem from './Knowledge/Rem'
 import Ellipsis from './Knowledge/Ellipsis'
 import Layouts from './Knowledge/LayOuts'
 import MarginCollapse from './Knowledge/Margin-collapse'
+import ColumnEqual from './Knowledge/ColumnEqual'
 import { useSelector } from 'react-redux'
 import './interview-react.scss'
 
@@ -51,6 +52,7 @@ const InterviewReact = () => {
       <Ellipsis />
       <Layouts />
       <MarginCollapse />
+      <ColumnEqual />
     </div>
   )
 }
