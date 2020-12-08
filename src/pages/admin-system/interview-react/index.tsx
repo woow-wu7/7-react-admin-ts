@@ -19,6 +19,8 @@ import Ellipsis from './Knowledge/Ellipsis'
 import Layouts from './Knowledge/LayOuts'
 import MarginCollapse from './Knowledge/Margin-collapse'
 import ColumnEqual from './Knowledge/ColumnEqual'
+import Curry from './Knowledge/Curry'
+import Partial from './Knowledge/Partial'
 import { useSelector } from 'react-redux'
 import './interview-react.scss'
 
@@ -53,6 +55,8 @@ const InterviewReact = () => {
       <Layouts />
       <MarginCollapse />
       <ColumnEqual />
+      <Curry />
+      <Partial />
     </div>
   )
 }

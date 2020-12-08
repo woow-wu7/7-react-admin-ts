@@ -70,12 +70,14 @@
   }
 
   .var-up,
-  .em {
+  .em,
+  .curry {
     @include interview(#e821ff, #fdf2ff, #9a07aa);
   }
 
   .prototype-chain,
-  .one-px {
+  .one-px,
+  .partial {
     @include interview(#ff533d, #fff2f0, #e0230a);
   }
 
