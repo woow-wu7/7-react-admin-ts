@@ -3,18 +3,10 @@ import Router from '@/router'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux';
 import * as actions from './app.action'
+import { LOG_LOGO } from '@/global/constant'
 
 function App() {
-  const ascll = `
-  ##      ##  #######   #######  ##      ##         ##      ## ##     ## ######## 
-  ##  ##  ## ##     ## ##     ## ##  ##  ##         ##  ##  ## ##     ## ##    ## 
-  ##  ##  ## ##     ## ##     ## ##  ##  ##         ##  ##  ## ##     ##     ##   
-  ##  ##  ## ##     ## ##     ## ##  ##  ##         ##  ##  ## ##     ##    ##    
-  ##  ##  ## ##     ## ##     ## ##  ##  ##         ##  ##  ## ##     ##   ##     
-  ##  ##  ## ##     ## ##     ## ##  ##  ##         ##  ##  ## ##     ##   ##     
-   ###  ###   #######   #######   ###  ###  #######  ###  ###   #######    ##     
-  `
-  console.log(`%c${ascll}`, 'color:red')
+  console.log(`%c${LOG_LOGO}`, 'color:red') // %c 样式占位符，在第二个参数中可以输入样式
   return (
     <div className="App">
       <Router />

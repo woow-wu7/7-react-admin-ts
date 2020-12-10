@@ -61,15 +61,22 @@ const Partial = () => {
 
   const [links] = useState([
     {
-      name: 'partial偏函数 和 memorize函数记忆 - 我的掘金博客',
+      name: 'partial偏函数 和 memorize函数记忆- 我的掘金博客',
       url: 'https://juejin.cn/post/6844904052879261710#heading-8'
+    },
+    {
+      name: 'compose函数组合 - 我的掘金博客',
+      url: 'https://juejin.cn/post/6844904137952329742#heading-10'
     },
   ])
 
   const renderLinks = () => links.map(({ name, url }) => <div key={name}><a href={url} target="blank">{name}</a></div>)
   return (
     <div className="partial">
-      <p>partial偏函数 和 memorize函数记忆</p><br />
+      <p>partial偏函数 </p><br />
+      <p>memorize函数记忆</p><br/>
+      <p>compose函数组合</p><br/>
+      <p>recursive尾递归和尾调用</p><br/>
 
       <div>
         {renderLinks()}

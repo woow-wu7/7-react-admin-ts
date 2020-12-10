@@ -232,16 +232,14 @@ const getStyleLoaders = (cssOptions, preProcessor) => {
 ```
 
 
-### (2) css-module
+### (3) css-module
 - 需要安装 node-sass
 - npm install node-sass -D
 - xxxx.module.scss
 
-### (3) 在 create-react-app 实现代码分割
+### (4) 在 create-react-app 实现代码分割
 - [我的掘金文章](https://juejin.im/post/6879020830253285384)
 
-### (4) require.context => ts报错不存在属性
-- npm install @tyeps/webpack-env -D
 
 ### (5) 使用TS中的 enum 枚举类型避免魔法字符串
 - export enum SYSTEMTYPE { ADMIN, BIGSCREEN }
@@ -266,7 +264,52 @@ SYSTEMTYPE1.ADMIN =========> 'ADMIN'
 SYSTEMTYPE2.ADMIN =========> 0
 ```
 
+### (6) require.context => ts报错不存在属性
+- npm install @tyeps/webpack-env -D
+- require.context(direactory, useSubdirectorys, regExp, mode)
+- 作用
+  - 创建自己的context
+- 参数
+  - directory: 需要搜多的文件夹
+  - useSubdirectory: 是否搜索其子目录
+  - regExp: 匹配文件的正则表达式
+  - mode：模式，比如 'sync'
 
+### (7) require.context() 实现自动化 import 功能
+- require.context(directory, useSubdirectories, regExp, mode)
+- 作用
+  - 创建自己的 context
+- 参数
+  - directory：需要搜索的文件夹
+  - useSubdirectories：是否搜索其子目录
+  - regExp：匹配文件的正则表达式
+  - mode：模式，比如 'sync'
+- 返回值
+  - context导出的 require() 函数
+- require() 函数 
+  - 参数：request
+  - 属性
+    - resolve函数，它返回request被解析后得到的 ( 模块id )，可能在 module.hot.accept 时会用到
+    - keys函数，它返回一个数组，由所有可能被此 context module 处理的请求组成
+```
+
+(1) 获取模块的路径
+const moduleContext = require.context('./Knowledge', true, /index.tsx/, 'sync')
+moduleContext.keys().forEach(modulePath => {
+  console.log('modulePath就是模块的路径')
+})
+
+```
+```
+
+(2) 获取模块的源码
+const moduleContext = require.context('./Knowledge', true, /index.tsx/, 'sync')
+moduleContext.keys().forEach(modulePath => {
+  const moduleSourceCode = moduleContext(modulePath).default
+  console.log('moduleSourceCode就是模块的(组件)源码')
+})
+
+```
 
 # (五) 大屏
 

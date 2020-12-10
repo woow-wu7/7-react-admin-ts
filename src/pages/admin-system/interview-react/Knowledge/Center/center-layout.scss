@@ -1,0 +1,52 @@
+.max-border-one { // table-cell
+  .one__father {
+    height: 300px;
+    width: 300px;
+    background: #cffff4;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+
+    .one__child {
+      background: #00b792;
+      display: inline-block;
+    }
+  }
+}
+
+.max-border-two { // 绝对定位
+  .two__father {
+    height: 300px;
+    width: 300px;
+    position: relative;
+    background: #cffff4;
+
+    .two__child {
+      height: 200px;
+      width: 220px;
+      background: #00b792;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      // transform: translate(-50%, -50%);
+      margin: -100px -110px;
+    }
+  }
+}
+
+.max-border-three { // grid布局
+  .three__father {
+    height: 300px;
+    width: 300px;
+    background: #cffff4;
+    display: grid;
+
+    .three__child {
+      height: 200px;
+      width: 220px;
+      background: #00b792;
+      align-self: center; // 设置单元格内容垂直位置
+      justify-self: center; // 设置单元格内容水平位置
+    }
+  }
+}
