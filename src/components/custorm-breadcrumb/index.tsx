@@ -70,7 +70,7 @@ const CustomBreadcrumb = () => {
     return routeMap
   }
   const routeMap = generateRouteMap(routesAmin)
-  console.log('routeMap :>> ', routeMap);
+  // console.log('routeMap :>> ', routeMap);
 
 
   // pathFilter 
@@ -129,7 +129,7 @@ const CustomBreadcrumb = () => {
     }).filter(v => !!v)
   }
   const data = generateBreadcrumbData(pathname)
-  console.log(data, '=> breadcrumb.data')
+  // console.log(data, '=> breadcrumb.data')
 
 
   // renderData

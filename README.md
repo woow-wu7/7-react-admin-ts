@@ -311,6 +311,8 @@ moduleContext.keys().forEach(modulePath => {
 
 ```
 
+### (8) console.log('123 %c abc', 'font-size: 30px; color: red;')
+
 # (五) 大屏
 
 ### (1) screenfull

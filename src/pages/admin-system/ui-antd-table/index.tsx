@@ -5,7 +5,7 @@ import { CONST } from '@/global/enum'
 import { useFetch } from '@/utils/hooks/use-fetch'
 import styles from './ui-antd-table.module.scss'
 
-const UiAntTable = (props: any) => {
+const UiAntTable = () => {
   const [visible, setvisiable] = useState(false)
   const [operateType, setOperateType] = useState('')
   const [disabled, setDisabled] = useState(false)

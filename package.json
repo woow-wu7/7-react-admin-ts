@@ -193,5 +193,5 @@
   "resolutions": {
     "styled-components": "^5"
   },
-  "proxy": "http://open.iciba.com/"
+  "proxy": "http://127.0.0.1:7002/"
 }

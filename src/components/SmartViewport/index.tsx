@@ -8,8 +8,7 @@ const SmartViewport = () => {
 
   const debounce = (delay: number) => {
     let timer = 0;
-    return (...args: any[]) => {
-      console.log('args', args)
+    return () => {
       if (timer) {
         window.clearTimeout(timer)
       }
@@ -26,7 +25,7 @@ const SmartViewport = () => {
       ref.current.style.display = 'block'
     }
     const debounceClosure = debounce(2000)
-    debounceClosure('anything')
+    debounceClosure()
   }
 
   return (

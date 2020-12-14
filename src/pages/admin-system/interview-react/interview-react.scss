@@ -65,7 +65,8 @@
   .diff,
   .inline-block,
   .interview-media,
-  .column-equal {
+  .column-equal,
+  .promise-learn {
     @include interview(#67ce00, #f6ffed, #448801);
   }
 

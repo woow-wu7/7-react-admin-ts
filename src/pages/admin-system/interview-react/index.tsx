@@ -22,6 +22,7 @@ import MarginCollapse from './Knowledge/Margin-collapse'
 import ColumnEqual from './Knowledge/ColumnEqual'
 import Curry from './Knowledge/Curry'
 import Partial from './Knowledge/Partial'
+import PromiseLearn from './Knowledge/PromiseLearn'
 import { useSelector } from 'react-redux'
 import './interview-react.scss'
 
@@ -62,6 +63,7 @@ const InterviewReact = () => {
       <PrototypeChain />
       <Ceiling />
       <StickyFooter />
+      <PromiseLearn />
       <VisibilityDisplay />
       <InlineBlock />
       <Triangle />

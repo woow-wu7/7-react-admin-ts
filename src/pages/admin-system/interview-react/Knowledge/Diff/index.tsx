@@ -1,7 +1,8 @@
-import React, { useState } from 'react'
-
+import React, { useState, useEffect } from 'react'
+import axios from 'axios';
 
 const Diff = () => {
+  const [timer, setTimer] = useState(0)
   const [links] = useState([
     {
       name: 'React-diff算法1-知乎 ( 概念部分讲得好 )',
@@ -12,7 +13,17 @@ const Diff = () => {
       url: 'https://www.jianshu.com/p/3ba0822018cf'
     }
   ])
-  const renderLinks = () => links.map(({name, url}) => <div key={name}><a href={url}  target="blank">{name}</a></div>)
+  useEffect(() => {
+    const getTimer = async () => {
+      const res: any = await axios('/api/gettimer')
+      if (res && res.data) {
+        setTimer(() => res.data.now)
+      }
+    }
+    getTimer()
+  }, [])
+  console.log(`%c${timer}`, 'font-size: 30px; color: green;', '从服务器获取到的时间')
+  const renderLinks = () => links.map(({ name, url }) => <div key={name}><a href={url} target="blank">{name}</a></div>)
 
   return (
     <div className="diff">

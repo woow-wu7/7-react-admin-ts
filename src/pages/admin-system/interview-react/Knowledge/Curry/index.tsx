@@ -51,7 +51,7 @@ const Curry = () => {
     }
     const curryAdd = curry()
     const res = curryAdd(1)(2)(3, 4)()
-    console.log(res) // 10
+    console.log('curry-res00000:>>', res) // 10
   }, [])
 
 
@@ -75,7 +75,7 @@ const Curry = () => {
 
     const curryAdd = curry(add)
     const res = curryAdd(1, 2)(3)(4, 5, 6)
-    console.log('res11111:>> ', res);
+    console.log('curry-res11111:>> ', res);
   }, [])
 
   // 柯里化阶段四
@@ -98,7 +98,7 @@ const Curry = () => {
     const curryAdd = curry(add)
     const closure = curryAdd(1, 2)(3)(4, 5, 6)
     const res = closure.getSum()
-    console.log('res2222:>> ', res);
+    console.log('curry-res2222:>> ', res);
   }, [])
 
 

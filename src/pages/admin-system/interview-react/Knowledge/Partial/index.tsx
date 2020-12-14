@@ -46,7 +46,6 @@ const Partial = () => {
         const key = JSON.stringify(rest) // 一次参数可能有多个，转成字符串作为key
         if (!cacheMap.hasOwnProperty(key)) {
           cacheMap[key] = fn(...rest) // key不存在，添加映射
-          console.log('执行了');
         }
         return cacheMap[key] // 返回结果
       }

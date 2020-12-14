@@ -1,3 +1,4 @@
+// 这里所有的scss文件都必须引入index.scss，因为在webpack中配置了全局的scss，这样就不用每次都在文件中@import引入 @minxin @function等了
 @import './global-classname.scss';
 @import './global-variable.scss';
 @import './global-function.scss';
