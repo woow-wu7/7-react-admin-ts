@@ -23,6 +23,7 @@ import ColumnEqual from './Knowledge/ColumnEqual'
 import Curry from './Knowledge/Curry'
 import Partial from './Knowledge/Partial'
 import PromiseLearn from './Knowledge/PromiseLearn'
+import CrossOrigin from './Knowledge/CrossOrigin'
 import { useSelector } from 'react-redux'
 import './interview-react.scss'
 
@@ -81,6 +82,7 @@ const InterviewReact = () => {
       <ColumnEqual />
       <Curry />
       <Partial />
+      <CrossOrigin/>
     </div>
   )
 }

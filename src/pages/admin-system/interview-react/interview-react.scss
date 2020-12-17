@@ -90,13 +90,15 @@
   }
 
   .sticky-footer,
-  .ellipsis {
+  .ellipsis,
+  .cross-origin {
     // @include interview(#e8b900, #ffffdd, #028a6f);
     @include interview(#3d51ff, #e8eaff, #0015d3);
   }
 
   .visibility_display,
-  .layouts {
+  .layouts,
+  .xml {
     @include interview(#ff8800, #ffefb8, #d37000);
   }
 

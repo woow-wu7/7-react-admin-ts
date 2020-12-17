@@ -313,6 +313,24 @@ moduleContext.keys().forEach(modulePath => {
 
 ### (8) console.log('123 %c abc', 'font-size: 30px; color: red;')
 
+### (9) 环境变量
+- NODE_ENV
+  - 运行cnpm run start时， NODE_ENV = 'development'
+  - 运行cnpm run test时，NODE_ENV = 'test'
+  - 运行cnpm run build时，NODE_ENV = 'production'
+  - 获取：`process.env.NODE_ENV`
+  - 注意：`你无法手动覆盖 NODE_ENV`
+- **在 ( .env ) 中添加开发环境变量**
+  - 要定义( 永久环境变量 )，请在项目的 ( 根目录 ) 创建名为 ( .env  ) 的文件
+  - 必须以 `REACT_APP_` 开头来创建自定义环境变量，`除了 ( NODE_ENV ) 之外的任何其他变量都将被忽略`
+  - 此功能需要在 react-scripts@0.5.0及更高版本
+- 除了 .env 文件，还可以用哪些命名？
+  - .env：默认
+  - .env.local：本地覆盖。除 test 之外的所有环境都加载此文件
+  - .env.development, .env.test, .env.production：设置特定环境
+  - .env.development.local, .env.test.local, .env.production.local：设置特定环境的本地覆盖
+  - 注意： ( `.env.development.local` ) 文件会覆盖掉 ( `.env.development` ) 中设置的环境便变量，但不会影响 ( `NODE_ENV` )
+
 # (五) 大屏
 
 ### (1) screenfull
