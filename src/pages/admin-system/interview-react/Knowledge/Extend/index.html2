@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- <script>
+    // 原型链继承
+    // 父类
+    function Super(name) {
+      this.superName = name
+    }
+    Super.prototype.superAge = 20
+    // 子类
+    function Sub(name) {
+      this.subName = name
+    }
+    // 原型链继承
+    // 原理：将子类的prototype指向父类的实例，这样 ( 子类的实例 ) 就能继承 ( 父类实例 ) 和 ( 父类实例原型上 ) 的属性和方法
+    Sub.prototype = new Super('super')
+    // 修改prototpe属性后，一定要同时修改constructor的指向，防止引用出错
+    Sub.prototype.contructor = Sub
+    Sub.prototype.subAge = 10 // 缺点：挂载属性必须在prototype赋值之后
+    const sub = new Sub('sub') // 缺点：只能向子类传参，不能向父类传参
+
+    console.log('sub.subName', sub.subName)
+    console.log('sub.subAge', sub.subAge)
+    console.log('sub.superName', sub.superName)
+    console.log('sub.superAge', sub.superAge)
+  </script> -->
+
+
+  
+  <!-- <script>
+    //  借用构造函数继承
+    function Super1(name) {
+      this.superName1 = name
+    }
+    function Super2(name) {
+      this.superName2 = name
+    }
+    Super2.prototype.superAge2 = 20 // 缺点：不能继承父类prototype属性原型链上的属性和方法
+    function Sub(superName1, superName2, subName) {
+      Super1.call(this, superName1) // 借用构造函数继承
+      Super2.call(this, superName2) // 优点：可以实现多继承
+      this.subName = subName
+    }
+    const sub = new Sub('super1', 'super2', 'sub') // 优点：生成子类实例时，可以向父类传参
+    console.log('sub.superName1', sub.superName1)
+    console.log('sub.superName2', sub.superName2)
+    console.log('sub.subName', sub.subName)
+  </script> -->
+
+
+
+  <!-- <script>
+    // 组合式继承 = 借用构造函数继承 + 原型链式继承
+    // 优点：两者组合，相互补充
+    // 缺点：
+    // 1. 会调用两次父构造函数，导致 (子类实例-即借用构造函数继承 ) 和 ( 子类实例的原型链上-即原型链继承 ) 上都有相同的属性和方法
+    //    - 本例中：子类实例上有 superName1 属性；子类实例的原型链上也有 superName1 属性
+    // 2. 父类被调用了两次，一次是借用构造函数是的call调用，一次是原型链继承时的new调用
+    // 3. 因为父类两次调用，所以子类和父类实例原型链上有相同的属性和方法，造成浪费
+    function Super1(name) {
+      this.superName1 = name
+    }
+    function Super2(name) {
+      this.superName2 = name
+    }
+    Super1.prototype.superAge1 = 10
+    Super2.prototype.superAge2 = 20
+    function Sub(superName1, superName2, subName) {
+      // 借用构造函数继承
+      // 优点：可以向父构造函数传参，多继承，属性不共享
+      // 缺点：不能继承父类prototype对象原型链上的属性和方法
+      Super1.call(this, superName1)
+      Super2.call(this, superName2)
+      this.subName = subName
+    }
+    // 原型链继承
+    // 优点：可以继承父类实例原型链上的属性和方法，共享属性
+    // 缺点：在生成子类实例时不能向父类传传参，不能实现多继承，继承的属性是引用类型时，子类实例之间修改会相互影响
+    Sub.prototype = new Super1()
+    Sub.prototype.constructor = Sub
+    Sub.prototype.subAge = 30
+    const sub = new Sub('super1', 'super2', 'sub')
+    console.log('sub.superName1', sub.superName1)
+    console.log('sub.superName2', sub.superName2)
+    console.log('sub.subName', sub.subName)
+    console.log('sub.superAge1', sub.superAge1)
+    console.log('sub.subAge', sub.subAge)
+  </script> -->
+
+
+
+  <!-- <script>
+    // 寄生组合式继承
+    function Super1(name) {
+      this.superName1 = name
+    }
+    function Super2(name) {
+      this.superName2 = name
+    }
+    Super1.prototype.superAge1 = 20
+    function Sub(superName1, superName2, name) {
+      Super1.call(this, superName1)
+      Super2.call(this, superName2)
+      this.subName = name
+    }
+    function Parasitic(){} // 中间函数，本身没有任何属性和方法
+    Parasitic.prototype = Super1.prototype
+    // 这样 sub 实例就能继承 Super1.prototype上的属性和方法，而这条继承线不用在继承 super1 实例上的方法
+    Sub.prototype = new Parasitic() 
+    Sub.prototype.constructor = Sub
+    Sub.prototype.subAge = 30
+    const sub = new Sub('super1', 'super2', 'sub')
+    console.log('sub', sub)
+  </script> -->
+</body>
+
+</html>

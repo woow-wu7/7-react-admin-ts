@@ -24,15 +24,10 @@ import Curry from './Knowledge/Curry'
 import Partial from './Knowledge/Partial'
 import PromiseLearn from './Knowledge/PromiseLearn'
 import CrossOrigin from './Knowledge/CrossOrigin'
+import FrontendRouter from './Knowledge/FrontendRouter'
+import Extend from './Knowledge/Extend'
 import { useSelector } from 'react-redux'
 import './interview-react.scss'
-
-interface IConfig {
-  path: string;
-  deep: boolean;
-  RegExp: any;
-  mode: "sync" | "eager" | "weak" | "lazy" | "lazy-once" | undefined;
-}
 
 function requireModules() {
   const moduleMap = {}
@@ -83,6 +78,8 @@ const InterviewReact = () => {
       <Curry />
       <Partial />
       <CrossOrigin/>
+      <FrontendRouter />
+      <Extend />
     </div>
   )
 }

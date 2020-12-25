@@ -66,7 +66,8 @@
   .inline-block,
   .interview-media,
   .column-equal,
-  .promise-learn {
+  .promise-learn,
+  .frontend-router {
     @include interview(#67ce00, #f6ffed, #448801);
   }
 
@@ -98,7 +99,8 @@
 
   .visibility_display,
   .layouts,
-  .xml {
+  .xml,
+  .extend {
     @include interview(#ff8800, #ffefb8, #d37000);
   }
 

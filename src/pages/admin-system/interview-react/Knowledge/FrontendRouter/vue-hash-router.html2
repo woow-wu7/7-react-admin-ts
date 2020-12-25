@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- 引入 Vue 通过CDN引入 -->
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+  <div id="app">
+    <!-- 注意 router-link组件具有 to 属性 -->
+    <router-link to="#/home">home</router-link>
+    <router-link to="#/other">other</router-link>
+    <router-view></router-view>
+  </div>
+  <script>
+    // 创建两个vue组件
+    const Home = { template: '<h1>home页面</h1>' }
+    const Other = { template: '<h1>other页面</h1>' }
+
+    // 创建vue路由数组
+    const routes = [{
+      path: '/home',
+      component: Home
+    }, {
+      path: '/other',
+      component: Other
+    }]
+
+    class VueRouter {
+      constructor(Vue, option) {
+        this.$option = option
+        this.routeMap = {}
+        this.createRouteMap(option) // 创建路由映射
+        this.app = new Vue({
+          data: {
+            currentHash: '#/'
+          }
+        })
+        this.init() // 初始化监听函数
+        this.initComponent(Vue) // 初始化Vue的各种组件
+      }
+
+      createRouteMap = ({routes}) => {
+        routes.forEach(({path, component}) => {
+          this.routes[path] = component
+        })
+      }
+      init = () => {
+        window.addEventListener('load', this.onHashChange, false)
+        window.addEventListener('hashchange', this.onHashChange, false)
+      }
+      onHashChange = () => {
+        this.app.currentHash = window.location.hash.slice(1) || './'
+      }
+      initComponent = (Vue) => {
+        Vue.component('router-link', {
+          props: {
+            to: {
+              type: String,
+              value: ''
+            }
+          },
+          template: '<a :href="to"></slot></a>'
+        })
+        Vue.component('router-view', {
+          render: (h) => {
+            const component = this.routeMap[this.app.currentHash] // 拿到最新的hash对应的组件
+            return h(component)
+          }
+        })
+      }
+    }
+
+
+    new VueRouter(Vue, { routes })
+    new Vue({
+      el: '#app'
+    })
+  </script>
+</body>
+
+</html>

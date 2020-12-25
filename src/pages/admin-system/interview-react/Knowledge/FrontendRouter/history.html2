@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <a href="javascript:void(0)" data-href="/home">点击去home页面</a>
+  <a href="javascript:void(0)" data-href="/other">点击去other页面</a>
+  <div id="content">内容部分，即路由要替换的内容</div>
+  <script>
+    const routes = [{
+      path: '/home',
+      component: '<h1>home页面</h1>'
+    }, {
+      path: '/other',
+      component: '<h1>other页面</h1>'
+    }]
+    class HistoryRouter {
+      constructor(routes) {
+        this.route = {} // 路由映射 key=path value=()=>{更新视图}
+        this.createRouteMap(routes) // 创建路由映射
+        this.bindEvent() // 绑定事件
+        this.init() // 初始化
+      }
+      createRouteMap = (routes) => {
+        if (routes.length) {
+          routes.forEach(({ path, component }) => {
+            this.route[path] = () => {
+              document.getElementById('content').innerHTML = component
+            }
+          })
+        }
+      }
+      bindEvent = () => {
+        const a = document.getElementsByTagName('a')
+        Array.prototype.forEach.call(a, aDom => {
+          aDom.addEventListener('click', () => {
+            const path = aDom.getAttribute('data-href')
+            this.triggerPushState(path) // 触发pushState事件
+          }, false)
+        })
+      }
+      triggerPushState = (path) => {
+        window.history.pushState({}, null, path)
+        // pushState() 可以改变地址栏的url，但是不会触发页面更新，所以要执行下面的更新函数
+        // (1) 情况1：这只是 ( 点击a标签 ) 的情况，使用的是 pushState() 函数
+        // (2) 情况2：还有就是 ( 点击浏览器的前进后退按钮 ) 和 ( 函数式k导航 window.history.go() back() forward() 的情况 )
+        // (3) 情况3：就是初始化时，在 ( load ) 事件触发是的情况，默认path='/'
+        this.updateView()
+      }
+      updateView = () => {
+        // 因为：在执行该方法之前，已经触发了 pushState() || popstate事件 || load事件
+        // 所以：可以用window.location.pathname 获取最新的 url中的 path 部分
+        const currentPath = window.location.pathname
+          ? window.location.pathname
+          : '/'
+
+        if (this.route[currentPath]) this.route[currentPath]()
+      }
+      init = () => {
+        window.addEventListener('load', this.updateView, false) // 页面加载完成时的情况
+        window.addEventListener('popstate', this.updateView, false) // popstate触发的情况，浏览器前进后退和函数式导航
+      }
+    }
+
+    new HistoryRouter(routes)
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <a href="#/home">home页面</a>
+  <a href="#/other">other页面</a>
+  <div id="content">内容部分，即路由替换的部分</div>
+  <div id="current-hash"></div>
+  <script>
+    const routes = [{
+      path: '/home',
+      component: 'home页面的内容'
+    }, {
+      path: '/other',
+      component: 'other页面的内容'
+    }]
+
+    class HashRouter {
+      constructor(routes) {
+        this.route = {} // 路由映射
+        this.createRouteMap(routes) // 创建路由映射，为 ( this.route ) 创建 ( map ) 映射;key=path;value=()=>{更新页面}
+        this.init() // 初始化
+      }
+      createRouteMap = (routes) => {
+        if (routes.length) {
+          routes.forEach(({ path, component }) => {
+            this.route[path] = () => {
+              document.getElementById('content').innerHTML = component // 替换内容
+            }
+          })
+        }
+      }
+      init = () => {
+        window.addEventListener('load', this.updateView, false)
+        window.addEventListener('hashchange', this.updateView, false)
+      }
+      // 更新视图
+      updateView = () => {
+        // (1)
+        // 这里 ( load事件 ) 和 ( hashchange事件 ) 都会触发 ( updateView方法 )
+        // (2)
+        // load事件: ( 页面加载完成时触发 )，包括 ( DOM，样式，图片，视频等所有资源都加载完成 )
+        // DOMContentLoaded事件: 是在 ( DOM加载完成时触发 ) 
+        // (3)
+        // 当load事件触发时，hash并没有改变，即 window.location.hash = '' => ''.slice(1) => ''
+        const hash = this.getCurrentHash() // 获取hash
+        // if (Object.keys(this.route).includes(hash)) { // 还有更简单的方法
+        //   this.route[hash]()
+        // }
+        if (this.route[hash]) this.route[hash]() // 如果this.route对象中的key对应得值存在，就执行该函数
+      }
+      // 获取当前地址栏的 hash
+      getCurrentHash = () => {
+        const hash = window.location.hash.slice(1)
+        this.printHahToHtml(hash) // 该函数是用来在html中显示当前hash的
+        return hash ? hash : '/home'
+        // load事件触发时，hash就不存在，hash=''，这种情况下即默认情况下返回 '/home' 路由
+        // load事件触发时，window.location.hash => 返回 '' 空字符串
+        // ''.slice(1) => 返回''
+
+      }
+      printHahToHtml = (hash) => {
+        const DOM = document.getElementById('current-hash')
+        DOM.innerHTML = `当前页面的hash是:=> #${hash}`
+        DOM.style.setProperty('background', 'yellow')
+        DOM.style.setProperty('padding', '10px')
+      }
+    }
+
+    new HashRouter(routes)
+  </script>
+</body>
+
+</html>
