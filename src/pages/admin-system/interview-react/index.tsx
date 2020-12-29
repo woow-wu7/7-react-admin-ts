@@ -28,6 +28,7 @@ import FrontendRouter from './Knowledge/FrontendRouter'
 import Extend from './Knowledge/Extend'
 import Observer from './Knowledge/Observer'
 import Garbage from './Knowledge/Garbage'
+import FrontendModule from './Knowledge/FrontendModule'
 import { useSelector } from 'react-redux'
 import './interview-react.scss'
 
@@ -87,6 +88,7 @@ const InterviewReact = () => {
       <Extend />
       <Observer />
       <Garbage />
+      <FrontendModule />
     </div>
   )
 }
