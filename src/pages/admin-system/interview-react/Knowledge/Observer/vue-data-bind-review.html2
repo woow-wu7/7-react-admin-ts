@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="root">
+    <div v-text="name"></div>
+    <input type="text" v-model="name">
+  </div>
+  <script>
+    class MyVue {
+      constructor(options) {
+        const { el, data } = this.$options = options
+        this.$el = document.getElementById(el)
+        this.$data = data
+
+        this._directives = {}
+
+        this._observer(this.$data)
+        this._compiler(this.$el)
+      }
+
+      _observer = (data) => {
+        for (let [key, value] of Object.entries(data)) {
+          if (data.hasOwnProperty(key)) {
+            this._directives[key] = []
+          }
+          if (typeof value === 'object') {
+            _observer(value)
+          }
+          const that = this
+          Reflect.defineProperty(data, key, {
+            enumerable: true,
+            configurable: true,
+            get() {
+              return value
+            },
+            set(newVaue) {
+              if (value !== newVaue) {
+                value = newVaue
+                that._directives[key].forEach(item => item._update())
+              }
+            }
+          })
+        }
+      }
+
+      _compiler = (el) => {
+        console.log('el', el)
+        for (let [key, value] of Object.entries(el.children)) {
+          console.log('111', 111)
+          if (value.length) {
+            this._compiler(value)
+          }
+          if (value.hasAttribute('v-text')) {
+            const attribute = value.getAttribute('v-text')
+            this._directives[attribute].push(new Watcher('input', value, this, attribute, 'innerHTML'))
+          }
+          if (value.hasAttribute('v-model')) {
+            const attribute = value.getAttribute('v-model')
+            this._directives[attribute].push(new Watcher('v-model', value, this, attribute, 'value'))
+            const that = this
+            value.addEventListener('input', (e) => {
+              that.$data[attribute] = e.target.value
+            }, false)
+          }
+        }
+      }
+
+    }
+
+    class Watcher {
+      constructor(directiveName, el, vm, exp, attr) {
+        this.name = directiveName // 指令的名字，比如 'v-text'，'v-model'
+        this.el = el // 每个具体的DOM节点
+        this.vm = vm // MyVue实例对象
+        this.exp = exp // el中的directiveName属性对应的属性值
+        this.attr = attr // el的属性，需要需改的属性
+
+        this._update()
+
+      }
+      _update = () => {
+        this.el[this.attr] = this.vm.$data[this.exp]
+      }
+    }
+
+
+    new MyVue({
+      el: 'root',
+      data: {
+        name: 'woow_wu7'
+      }
+    })
+  </script>
+</body>
+
+</html>

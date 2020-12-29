@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 发布订阅模式 - es6实现
+    class PubSub {
+      constructor() {
+        this.topic = {}
+      }
+
+      subscribe = (eventName, fn) => {
+        if (!this.topic[eventName]) this.topic[eventName] = [];
+        this.topic[eventName].push({
+          fnName: fn.name,
+          fn
+        })
+      }
+
+      publish = (eventName, params) => {
+        if (this.topic[eventName]) {
+          this.topic[eventName].forEach(observer => {
+            observer.fn(params)
+          })
+        }
+      }
+
+      unSubscribe = (eventName, fnName) => {
+        if (this.topic[eventName]) {
+          this.topic[eventName].forEach((observer, index) => {
+            if (observer.fnName === fnName) {
+              this.topic[eventName].splice(index, 1)
+            }
+          })
+        }
+      }
+    }
+    const pubSub = new PubSub()
+    pubSub.subscribe('go', function go1(params) { console.log(`${params + '1'}`) })
+    pubSub.subscribe('go', function go2(params) { console.log(`${params + '2'}`) })
+    pubSub.publish('go', 'home')
+    pubSub.unSubscribe('go', 'go1') // 取消订阅
+    pubSub.publish('go', 'work')
+  </script>
+
+
+  <script>
+    // 发布订阅模式 es5
+    // 中介对象
+    const pubsub = {}
+
+      // 注意：( 小括号 ) 和 ( 中括号 ) 开头的 ( 前一条语句 ) 必须加分号，或者在小括号或中括号的最前面加分号
+      ; (function (pubsub) {
+        const topic = {}
+
+        // 订阅 
+        // subscribe(订阅的事件名, 事件触发的回调函数)
+        pubsub.subscribe = function (eventName, fn) {
+          if (!topic[eventName]) topic[eventName] = [];
+          topic[eventName].push({
+            fnName: fn.name,
+            fn,
+          })
+          console.log('topic[eventName]', topic[eventName])
+        }
+
+        // 发布
+        // publish(事件名，事件触发对应的回调函数的参数)
+        pubsub.publish = function (eventName, params) {
+          console.log('topic[eventName]', topic[eventName])
+          if (topic[eventName]) {
+            topic[eventName].forEach(observer => {
+              observer.fn(params)
+            })
+          }
+        }
+
+        // 取消订阅
+        // unScribe(需要取消的事件名, 需要取消的回调函数名)
+        pubsub.unScribe = function (eventName, fnName) {
+          if (topic[eventName]) {
+            topic[eventName].forEach((observer, index) => {
+              if (observer.fnName === fnName) {
+                topic[eventName].splice(index, 1)
+              }
+            })
+          }
+        }
+      })(pubsub)
+
+    pubsub.subscribe('go', function go1(address1) { console.log(`${address1}one`) })
+    pubsub.subscribe('go', function go2(address2) { console.log(`${address2}two`) })
+    pubsub.publish('go', 'home')
+    pubsub.unScribe('go', 'go1') // 取消订阅go1函数
+    pubsub.publish('go', 'work')
+  </script>
+</body>
+
+</html>

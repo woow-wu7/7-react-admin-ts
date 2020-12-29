@@ -92,7 +92,8 @@
 
   .sticky-footer,
   .ellipsis,
-  .cross-origin {
+  .cross-origin,
+  .garbage {
     // @include interview(#e8b900, #ffffdd, #028a6f);
     @include interview(#3d51ff, #e8eaff, #0015d3);
   }
@@ -104,7 +105,8 @@
     @include interview(#ff8800, #ffefb8, #d37000);
   }
 
-  .margin-collapse {
+  .margin-collapse,
+  .observer {
     @include interview(#ff0000, #ffe8e8, #e70404);
   }
 

@@ -26,6 +26,8 @@ import PromiseLearn from './Knowledge/PromiseLearn'
 import CrossOrigin from './Knowledge/CrossOrigin'
 import FrontendRouter from './Knowledge/FrontendRouter'
 import Extend from './Knowledge/Extend'
+import Observer from './Knowledge/Observer'
+import Garbage from './Knowledge/Garbage'
 import { useSelector } from 'react-redux'
 import './interview-react.scss'
 
@@ -74,12 +76,17 @@ const InterviewReact = () => {
       <Layouts />
       <CenterLayout />
       <MarginCollapse />
+
+      {/* 多列等高布局 */}
       <ColumnEqual />
+      
       <Curry />
       <Partial />
       <CrossOrigin/>
       <FrontendRouter />
       <Extend />
+      <Observer />
+      <Garbage />
     </div>
   )
 }

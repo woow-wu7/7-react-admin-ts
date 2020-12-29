@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // ES6
+    class Subject {
+      constructor() {
+        this.observers = [] // 观察者对象数组
+      }
+      add(...params) {
+        this.observers = this.observers.concat(params)
+      }
+      delete(obj) {
+        this.observers.forEach((observer, index) => {
+          if (obj === observer) {
+            this.observers.splice(index, 1)
+          }
+        })
+      }
+      notify() {
+        this.observers.forEach(observer => {
+          if (observer.update) {
+            observer.update()
+          }
+        })
+      }
+    }
+    class Observer {
+      constructor(fn) {
+        this.update = fn
+      }
+    }
+    const observerObj1 = new Observer(() => console.log('observer update1111'))
+    const observerObj2 = new Observer(() => console.log('observer update2222'))
+    const subject = new Subject()
+    subject.add(observerObj1, observerObj2)
+    subject.notify()
+    subject.delete(observerObj2)
+    subject.notify()
+  </script>
+</body>
+
+</html>

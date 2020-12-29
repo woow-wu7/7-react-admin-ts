@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- 引入 Vue 通过CDN引入 -->
+  <!-- <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> -->
+</head>
+
+<body>
+  <div id="root">
+    <div type="text" v-text="name">v-text的内容</div>
+    <input type="text" v-model="name">
+    <script>
+      class MyVue {
+        constructor(options) {
+          const { el, data } = this.$options = options
+          this.$el = document.getElementById(el)
+          this.$data = data
+
+          this._directive = {}
+          // key：data对象中的key
+          // value: 
+
+          this._observer(this.$data)
+          this._compile(this.$el)
+        }
+
+        _observer = (data) => {
+          for (let [key, value] of Object.entries(data)) {
+            // key就是data对象中的key;  value就是data对象中每个key对应的值
+            // data: {name: 'woow_wu7'} => key=name,value='woow_wu7'
+            if (data.hasOwnProperty(key)) {
+              this._directive[key] = [] // data中每个key都对应一个数组
+            }
+            if (typeof value === 'object') this._observer(value);
+            const that = this
+            Reflect.defineProperty(this.$data, key, {
+              enumerable: true,
+              configurable: true,
+              get() {
+                return value
+              },
+              set(newValue) {
+                if (value !== newValue) {
+                  value = newValue
+                  that._directive[key].forEach(item => item._update())
+                }
+              }
+            })
+
+          }
+        }
+
+        _compile = (el) => {
+          for (let [key, value] of Object.entries(el.children)) {
+            if (value.length) {
+              this._compile(value)
+            }
+            if (value.hasAttribute('v-text')) {
+              const attrubuteValue = value.getAttribute('v-text')
+              this._directive[attrubuteValue].push(new Watcher('input', value, this, attrubuteValue, 'innerHTML'))
+              // 注意：
+              // attrubuteValue是v-text对应的值 => 其实就是data中的key值，和_observer中的声明保持一致了
+            }
+            if (value.hasAttribute('v-model') && value.tagName === 'INPUT' || value.tagName === 'TEXTAREA') {
+              const attributeValue = value.getAttribute('v-model')
+              this._directive[attributeValue].push(new Watcher('v-model', value, this, attributeValue, 'value'))
+
+              const that = this
+              value.addEventListener('input', (e) => {
+                // 1. input事件修改data中的属性
+                // 2. data中的属性被修改，触发 Reflect.defineProperty 的 setter() 函数
+                this.$data[attributeValue] = e.target.value
+                console.log('input-value', e.target.value)
+                console.log('data-name', this.$data[attributeValue])
+              })
+            }
+          }
+        }
+      }
+
+      class Watcher {
+        constructor(directiveName, el, vm, exp, attr) {
+          this.name = directiveName // 指令的名字，比如 'v-text'，'v-model'
+          this.el = el // 每个具体的DOM节点
+          this.vm = vm // MyVue实例对象
+          this.exp = exp // el中的directiveName属性对应的属性值
+          this.attr = attr // el的属性，需要需改的属性
+
+          this._update()
+        }
+        _update = () => {
+          this.el[this.attr] = this.vm.$data[this.exp]
+          // 将MyVue实例的data属性的最新值更新到ui视图中
+        }
+      }
+
+      new MyVue({
+        el: 'root',
+        data: {
+          name: 'woow_wu7'
+        }
+      })
+    </script>
+</body>
+
+</html>
