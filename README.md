@@ -291,6 +291,8 @@ SYSTEMTYPE2.ADMIN =========> 0
   - 属性
     - resolve函数，它返回request被解析后得到的 ( 模块id )，可能在 module.hot.accept 时会用到
     - keys函数，它返回一个数组，由所有可能被此 context module 处理的请求组成
+- require.context()本项目使用到的案例
+  - 详见 `requireModules` 函数
 ```
 
 (1) 获取模块的路径

@@ -1,50 +1,43 @@
 import React from 'react'
 import SmartProgress from '@/components/SmartProgress'
-import Diff from './Knowledge/Diff'
-import VarUp from './Knowledge/VarUp'
-import PrototypeChain from './Knowledge/PrototypeChain'
-import Ceiling from './Knowledge/Ceiling'
-import StickyFooter from './Knowledge/StickyFooter'
-import VisibilityDisplay from './Knowledge/VisibilityDisplay'
-import InlineBlock from './Knowledge/InlineBlock'
-import Triangle from './Knowledge/Triangle'
 import Animates from './Knowledge/Amimates'
-import Progress from './Knowledge/Progress'
-import BoxSizing from './Knowledge/BoxSizing'
-import OnePx from './Knowledge/OnePx'
-import Media from './Knowledge/Media'
-import Em from './Knowledge/Em'
-import Rem from './Knowledge/Rem'
-import Ellipsis from './Knowledge/Ellipsis'
-import Layouts from './Knowledge/LayOuts'
-import CenterLayout from './Knowledge/Center'
-import MarginCollapse from './Knowledge/Margin-collapse'
-import ColumnEqual from './Knowledge/ColumnEqual'
-import Curry from './Knowledge/Curry'
-import Partial from './Knowledge/Partial'
-import PromiseLearn from './Knowledge/PromiseLearn'
-import CrossOrigin from './Knowledge/CrossOrigin'
-import FrontendRouter from './Knowledge/FrontendRouter'
-import Extend from './Knowledge/Extend'
-import Observer from './Knowledge/Observer'
-import Garbage from './Knowledge/Garbage'
-import FrontendModule from './Knowledge/FrontendModule'
+import Layouts from './Knowledge/LayOuts' // 应该为 LayOuts 文件名是key
+// import CenterLayout from './Knowledge/Center' // 这里要引起注意，这里不能更改名字，因为moduleMap的key是截取的文件名
 import { useSelector } from 'react-redux'
+import autoRequire from './auto-require' // 自动引入模块，解决头部很多import
 import './interview-react.scss'
 
-function requireModules() {
-  const moduleMap = {}
-  const moduleContext = require.context('./Knowledge', true, /index.tsx/, 'sync')
-  moduleContext.keys().forEach(modulePath => {
-    const moduleName: any = modulePath.match(/[A-Z].*\//)?.[0]?.replace(/\//g, '');
-    moduleMap[moduleName] = moduleContext(modulePath).default
-  })
-  return moduleMap
-}
 
 const InterviewReact = () => {
-  const res = requireModules()
-  console.log('模块name和模块源码的map映射 :>> ', res);
+  const { 
+    Diff, 
+    VarUp, // 变量提升
+    PrototypeChain, // 原型链
+    Ceiling,
+    StickyFooter,
+    VisibilityDisplay,
+    InlineBlock,
+    Triangle, // 三角形
+    Progress,
+    BoxSizing,
+    OnePx,
+    Media,
+    Em,
+    Rem,
+    Ellipsis, // 省略号
+    Center, // 垂直居中
+    MarginCollapse, // margin 边距重叠
+    ColumnEqual, // 多列等高
+    Curry, // 柯里化
+    Partial, // 片函数
+    PromiseLearn, // proise
+    CrossOrigin, // 跨域
+    FrontendRouter,
+    Extend, // 继承
+    Observer, // 观察者模式
+    Garbage, // 垃圾回收机制
+    FrontendModule, // 前端模块化
+   } = autoRequire() as any
 
   const scrollRef = useSelector((state: { admin: { scrollContainer: HTMLDivElement } }) => state.admin.scrollContainer)
   return (
@@ -75,15 +68,15 @@ const InterviewReact = () => {
       <Rem />
       <Ellipsis />
       <Layouts />
-      <CenterLayout />
+      <Center />
       <MarginCollapse />
 
       {/* 多列等高布局 */}
       <ColumnEqual />
-      
+
       <Curry />
       <Partial />
-      <CrossOrigin/>
+      <CrossOrigin />
       <FrontendRouter />
       <Extend />
       <Observer />
