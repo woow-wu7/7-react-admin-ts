@@ -11,7 +11,9 @@
 
 
 # (二) 源码分析
-- Redux => `src/SOURCE-CODE-ANALYSIS/REDUX`
+### (1) redux
+- redux源码分析记录文件路径 `src/SOURCE-CODE-ANALYSIS/REDUX`
+- [redux源码分析我的掘金博客](https://juejin.cn/post/6844904137952329742) 
 
 
 # (三) 代码规范相关 ( 1-9 )
