@@ -12,8 +12,8 @@
 
 # (二) 源码分析
 ### (1) redux
-- [redux源码分析记录文件路径](https://github.com/woow-wu7/7-react-admin-ts/tree/master/src/SOURCE-CODE-ANALYSIS/REDUX)
-- [redux源码分析我的掘金博客](https://juejin.cn/post/6844904137952329742) 
+- [redux源码分析-源码文件路径](https://github.com/woow-wu7/7-react-admin-ts/tree/master/src/SOURCE-CODE-ANALYSIS/REDUX)
+- [redux源码分析-我的掘金博客](https://juejin.cn/post/6844904137952329742) 
 
 
 # (三) 代码规范相关 ( 1-9 )
