@@ -10,8 +10,11 @@
 [本项目构建过程记录博客](https://juejin.im/post/6879020830253285384)
 
 
+# (二) 源码分析
+- Redux => `src/SOURCE-CODE-ANALYSIS/REDUX`
 
-# (二) 代码规范相关 ( 1-9 )
+
+# (三) 代码规范相关 ( 1-9 )
 
 ### (1) commitlint
 - [官网教程](https://github.com/conventional-changelog/commitlint)
