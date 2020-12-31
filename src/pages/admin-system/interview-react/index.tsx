@@ -9,8 +9,8 @@ import './interview-react.scss'
 
 
 const InterviewReact = () => {
-  const { 
-    Diff, 
+  const {
+    Diff,
     VarUp, // 变量提升
     PrototypeChain, // 原型链
     Ceiling,
@@ -37,7 +37,8 @@ const InterviewReact = () => {
     Observer, // 观察者模式
     Garbage, // 垃圾回收机制
     FrontendModule, // 前端模块化
-   } = autoRequire() as any
+    ReduxSourceCode, // redux 和 react-redux 源码
+  } = autoRequire() as any
 
   const scrollRef = useSelector((state: { admin: { scrollContainer: HTMLDivElement } }) => state.admin.scrollContainer)
   return (
@@ -82,6 +83,7 @@ const InterviewReact = () => {
       <Observer />
       <Garbage />
       <FrontendModule />
+      <ReduxSourceCode />
     </div>
   )
 }

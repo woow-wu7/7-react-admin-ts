@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import axios from 'axios';
+// import axios from 'axios';
 
 const Diff = () => {
   const [timer, setTimer] = useState(0)
@@ -15,7 +15,8 @@ const Diff = () => {
   ])
   useEffect(() => {
     const getTimer = async () => {
-      const res: any = await axios('/api/gettimer')
+      // const res: any = await axios('/api/gettimer') || {}
+      const res: any = {}
       if (res && res.data) {
         setTimer(() => res.data.now)
       }
