@@ -188,7 +188,7 @@ export default function createStore(reducer, preloadedState, enhancer) {
       );
     }
 
-    let isSubscribed = true; // 表示位，是否被订阅
+    let isSubscribed = true; // 标志位，是否被订阅
 
     ensureCanMutateNextListeners(); // 确保listeners数组可以被mutate，即做一个浅拷贝
     nextListeners.push(listener); // 将参数listener函数push进nextListeners数组

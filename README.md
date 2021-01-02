@@ -9,16 +9,32 @@
 
 [本项目构建过程记录博客](https://juejin.im/post/6879020830253285384)
 
+# (二) 主要功能
+```
+(1) 功能
+    - router menu breadcrumb 三合一
+    - 自定义hooks ( useFetch, useModal, useViewprot, useIntersectionObserver, useThrottle, useDebounce等)
+    - 自定义redux, 懒加载, 权限控制, 回到顶部, echarts封装, react-redux-hooks-api, react-router-hooks-api
+    - alias别名, 全局sass, 功能引导动画, 瀑布流, 
+(2) css特效
+    - stickyFooter粘性页脚, ceiling吸顶效果, shockWave冲击波, 水平垂直居中, 两栏三栏布局
+    - rem响应布局, em, @media媒体查询, 一物理像素边框, 盒模型, 三角形, 进度条, margin重叠
+    - inline-block间隙, 两行三行省略号, 多列等高布局, 
+```
 
-# (二) 源码分析
+# (三) 源码分析
 ### (1) redux 和 react-redux 源码分析
 - [redux 和 react-redux源码分析-源码文件路径](https://github.com/woow-wu7/7-react-admin-ts/tree/master/src/SOURCE-CODE-ANALYSIS/REDUX)
 - [redux源码分析-我的掘金博客](https://juejin.cn/post/6844904137952329742) 
 ### (2) 手写 webpack Compiler 源码
 - [手写Compiler源码仓库](https://github.com/woow-wu7/7-compiler)
 
+### (3) axios 源码分析
+- [axios源码文件路径](https://github.com/woow-wu7/7-react-admin-ts/tree/master/src/SOURCE-CODE-ANALYSIS/AXIOS)
+- [AXIOS源码分析-我的掘金文章](https://juejin.cn/post/6844904147532120072)
 
-# (三) 代码规范相关 ( 1-9 )
+
+# (四) 代码规范相关 ( 1-9 )
 
 ### (1) commitlint
 - [官网教程](https://github.com/conventional-changelog/commitlint)
@@ -124,7 +140,7 @@ package.json
 
 
 
-# (三) 按需加载相关
+# (五) 按需加载相关
 
 ### (1) react-router-dom
 - npm install react-router-dom
@@ -180,7 +196,7 @@ package.json
 
 
 
-# (四) create-react-app 相关设置
+# (六) create-react-app 相关设置
 
 ### (1) 添加别名 `@` 映射 `src` 在TS的项目中
 - 1. create-react-app构建的项目，eject后，找到 config/webpack.config.js => resolve.alias
@@ -343,7 +359,7 @@ moduleContext.keys().forEach(modulePath => {
   - 注意： ( `.env.development.local` ) 文件会覆盖掉 ( `.env.development` ) 中设置的环境便变量，但不会影响 ( `NODE_ENV` )
   - 注意：`.env.development.local`文件不被识别，git push 时并不会提交，其实也没有必要使用local文件
 
-# (五) 大屏
+# (七) 大屏
 
 ### (1) screenfull
 - 安装：cnpm install screenfull -S
@@ -361,7 +377,7 @@ moduleContext.keys().forEach(modulePath => {
 
 
 
-# (六) BUG总结
+# (八) BUG总结
 
 ### (1) 登陆页面出现的bug
 - 问题描述：登陆页面，选择系统时，报错，并且select每change一次，动画就渲染一次
