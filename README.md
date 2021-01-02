@@ -11,10 +11,10 @@
 
 
 # (二) 源码分析
-### (1) redux
-- [redux源码分析-源码文件路径](https://github.com/woow-wu7/7-react-admin-ts/tree/master/src/SOURCE-CODE-ANALYSIS/REDUX)
+### (1) redux 和 react-redux 源码分析
+- [redux 和 react-redux源码分析-源码文件路径](https://github.com/woow-wu7/7-react-admin-ts/tree/master/src/SOURCE-CODE-ANALYSIS/REDUX)
 - [redux源码分析-我的掘金博客](https://juejin.cn/post/6844904137952329742) 
-### (2) 手写webpack Compiler 源码
+### (2) 手写 webpack Compiler 源码
 - [手写Compiler源码仓库](https://github.com/woow-wu7/7-compiler)
 
 
