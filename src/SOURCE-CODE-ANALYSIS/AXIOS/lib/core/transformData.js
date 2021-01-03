@@ -10,10 +10,14 @@ var utils = require('./../utils');
  * @param {Array|Function} fns A single function or Array of functions
  * @returns {*} The resulting transformed data
  */
+// -------------------------------------------------------------------------- transformData
 module.exports = function transformData(data, headers, fns) {
   /*eslint no-param-reassign:0*/
   utils.forEach(fns, function transform(fn) {
     data = fn(data, headers);
+    // 1. 遍历fns
+    // 2. 将 fns 数组中的每个fn作为参数传入 transform 函数，并调用 transform
+    // 3. 调用每个 fn(data, headers)
   });
 
   return data;

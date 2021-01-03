@@ -15,14 +15,22 @@ var defaults = require('./defaults');
 function createInstance(defaultConfig) {
   var context = new Axios(defaultConfig);
   var instance = bind(Axios.prototype.request, context);
+  // bind函数将 ( request ) 方法中的this绑定到 ( context ) 对象上，并返回一个 ( 新的函数 )
 
+  // 原型
   // Copy axios.prototype to instance
+  // 将 axios.prototype 拷贝到 instance 函数上，作为instance函数的属性，函数属性的话将this绑定到context上
   utils.extend(instance, Axios.prototype, context);
 
+  // 实例
   // Copy context to instance
+  // 同样拷贝 context 到 instance 函数上，函数属性的话将this绑定到context上返回新函数作为value再拷贝
   utils.extend(instance, context);
 
   return instance;
+  // intance 函数上
+  //  1. 同时具有request, Axios.prototype, new Axios(defaultConfig)
+  //  2. 即 instance 函数拷贝了 axios实例和原型上的属性和方法，instance本身是request函数
 }
 
 // Create the default instance to be exported
@@ -30,9 +38,11 @@ function createInstance(defaultConfig) {
 var axios = createInstance(defaults);
 
 // Expose Axios class to allow class inheritance
-axios.Axios = Axios;
+axios.Axios = Axios; // Axios 属性
 
+// create
 // Factory for creating new instances
+// 用工厂函数生成新的实例，即create方法的作用是生成一个axios实例
 axios.create = function create(instanceConfig) {
   return createInstance(mergeConfig(axios.defaults, instanceConfig));
 };
@@ -42,7 +52,8 @@ axios.Cancel = require('./cancel/Cancel');
 axios.CancelToken = require('./cancel/CancelToken');
 axios.isCancel = require('./cancel/isCancel');
 
-// Expose all/spread
+// all
+// Expose all/spread 即 Promise.all()
 axios.all = function all(promises) {
   return Promise.all(promises);
 };
@@ -51,4 +62,5 @@ axios.spread = require('./helpers/spread');
 module.exports = axios;
 
 // Allow use of default import syntax in TypeScript
+// 为了允许在TypeScript中使用default
 module.exports.default = axios;

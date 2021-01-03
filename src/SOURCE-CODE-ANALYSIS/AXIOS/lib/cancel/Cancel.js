@@ -6,14 +6,16 @@
  * @class
  * @param {string=} message The message.
  */
+// -------------------------------------------------------------------------- Cancel构造函数
 function Cancel(message) {
   this.message = message;
 }
 
+// -------------------------------------------------------------------------- toString
 Cancel.prototype.toString = function toString() {
   return 'Cancel' + (this.message ? ': ' + this.message : '');
 };
 
-Cancel.prototype.__CANCEL__ = true;
+Cancel.prototype.__CANCEL__ = true; // __CANCEL__
 
 module.exports = Cancel;

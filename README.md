@@ -15,23 +15,26 @@
     - router menu breadcrumb 三合一
     - 自定义hooks ( useFetch, useModal, useViewprot, useIntersectionObserver, useThrottle, useDebounce等)
     - 自定义redux, 懒加载, 权限控制, 回到顶部, echarts封装, react-redux-hooks-api, react-router-hooks-api
-    - alias别名, 全局sass, 功能引导动画, 瀑布流, 
+    - alias别名, 全局sass, 功能引导动画, 瀑布流, axios取消请求
 (2) css特效
     - stickyFooter粘性页脚, ceiling吸顶效果, shockWave冲击波, 水平垂直居中, 两栏三栏布局
     - rem响应布局, em, @media媒体查询, 一物理像素边框, 盒模型, 三角形, 进度条, margin重叠
     - inline-block间隙, 两行三行省略号, 多列等高布局, 
+(3) 源码分析
+    - redux axios webpack-Compiler
+    - 具体在本项目 src/SOURCE-CODE-ANALYSIS 文件夹中
 ```
 
 # (三) 源码分析
-### (1) redux 和 react-redux 源码分析
+### (1) redux 和 react-redux 源码分析 [redux^4.0.5]
 - [redux 和 react-redux源码分析-源码文件路径](https://github.com/woow-wu7/7-react-admin-ts/tree/master/src/SOURCE-CODE-ANALYSIS/REDUX)
 - [redux源码分析-我的掘金博客](https://juejin.cn/post/6844904137952329742) 
-### (2) 手写 webpack Compiler 源码
+### (2) 手写 webpack Compiler 源码 [webpack^4.42.0]
 - [手写Compiler源码仓库](https://github.com/woow-wu7/7-compiler)
 
-### (3) axios 源码分析
-- [axios源码文件路径](https://github.com/woow-wu7/7-react-admin-ts/tree/master/src/SOURCE-CODE-ANALYSIS/AXIOS)
-- [AXIOS源码分析-我的掘金文章](https://juejin.cn/post/6844904147532120072)
+### (3) axios 源码分析 [axios^0.20.0]
+- [axios源码分析-源码文件路径](https://github.com/woow-wu7/7-react-admin-ts/tree/master/src/SOURCE-CODE-ANALYSIS/AXIOS)
+- [axios源码分析-我的掘金文章](https://juejin.cn/post/6844904147532120072)
 
 
 # (四) 代码规范相关 ( 1-9 )

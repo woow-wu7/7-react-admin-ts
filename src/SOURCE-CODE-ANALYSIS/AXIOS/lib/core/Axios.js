@@ -73,16 +73,28 @@ Axios.prototype.request = function request(config) {
   // 拦截器中间件
   var chain = [dispatchRequest, undefined];
   var promise = Promise.resolve(config);
+  // promise
+  // 1. 生成promise实例
+  // 2. config 
+  //      (1) 会作为then的第一个回调函数的参数传入，经过中间件
+  //      (2) interceptor.request((config) => {}) => request(config) => interceptor.resonese()
 
+  // interceptors.request.forEach
   this.interceptors.request.forEach(function unshiftRequestInterceptors(interceptor) {
+    // 1. 遍历handlers数组，调用 unshiftRequestInterceptors 函数，参数是handlers数组每个成员对象{ fulfilled, rejected }
+    // 2. unshift 添加成员到数组头部
     chain.unshift(interceptor.fulfilled, interceptor.rejected);
+    // [interceptor.fulfilled2, interceptor.rejected2, interceptor.fulfilled1, interceptor.rejected1, dispatchRequest, undefined]
   });
 
+  // interceptors.response.forEach
   this.interceptors.response.forEach(function pushResponseInterceptors(interceptor) {
     chain.push(interceptor.fulfilled, interceptor.rejected);
+    // [dispatchRequest, undefined, interceptor.fulfilled1, interceptor.rejected1, nterceptor.fulfilled2, interceptor.rejected2,]
   });
 
-  while (chain.length) {
+  while (chain.length) { // chain 数组不为空
+    // 先执行request, 再执行dispatchRequest请求, 最后执行response
     promise = promise.then(chain.shift(), chain.shift());
   }
 

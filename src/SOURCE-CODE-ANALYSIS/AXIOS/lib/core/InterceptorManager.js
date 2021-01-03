@@ -23,7 +23,7 @@ function InterceptorManager() {
  */
 // ---------------------------------------------------------------- use函数
 InterceptorManager.prototype.use = function use(fulfilled, rejected) {
-  this.handlers.push({
+  this.handlers.push({ // 向 handlers 数组中添加 {}
     fulfilled: fulfilled,
     rejected: rejected
   });
@@ -55,6 +55,13 @@ InterceptorManager.prototype.eject = function eject(id) {
 // ---------------------------------------------------------------- forEach函数
 InterceptorManager.prototype.forEach = function forEach(fn) {
   utils.forEach(this.handlers, function forEachHandler(h) {
+    // utils.forEach
+    // 1. 因为：this.handlers 是一个数组
+    // 2. 所以：遍历 this.handlers 数组，将每个数组成员对象作为参数h，传入 forEachHandler 函数
+    // 3. 调用 fn({
+    //          fulfilled: fulfilled, // fulfilled 函数
+    //          rejected: rejected, // rejected 函数
+    //         })
     if (h !== null) {
       fn(h);
     }

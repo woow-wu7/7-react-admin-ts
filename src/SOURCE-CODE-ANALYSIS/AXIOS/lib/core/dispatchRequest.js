@@ -28,6 +28,8 @@ module.exports = function dispatchRequest(config) {
   // Ensure headers exist
   config.headers = config.headers || {};
 
+  // transformData
+  // 1. 作用：遍历 transformRequest 数组，调用每个成员函数，参数是data和headers，并重新赋值给data
   // Transform request data
   config.data = transformData(
     config.data,

@@ -16,6 +16,7 @@ var toString = Object.prototype.toString;
  * @param {Object} val The value to test
  * @returns {boolean} True if value is an Array, otherwise false
  */
+// -------------------------------------------------------------------------- isArray函数
 function isArray(val) {
   return toString.call(val) === '[object Array]';
 }
@@ -113,11 +114,17 @@ function isObject(val) {
  * @param {Object} val The value to test
  * @return {boolean} True if value is a plain Object, otherwise false
  */
+// -------------------------------------------------------------------------- isPlainObject
+// isPlainObject(val)
+// 用来判断是否是一个纯对象
 function isPlainObject(val) {
+  // 1. 首先要是一个对象
   if (toString.call(val) !== '[object Object]') {
     return false;
   }
 
+  // 2. 当val的的原型对象是null或者Object.prototype时，返回true
+  // 3. 即通过 ( Object.create(null)生成的对象 ) 或者通过 ( 对象字面量方式声明的对象 )
   var prototype = Object.getPrototypeOf(val);
   return prototype === null || prototype === Object.prototype;
 }
@@ -223,36 +230,55 @@ function isStandardBrowserEnv() {
  * Iterate over an Array or an Object invoking a function for each item.
  *
  * If `obj` is an Array callback will be called passing
- * the value, index, and complete array for each item.
+ * the ( value, index, and complete array ) for each item.
  *
  * If 'obj' is an Object callback will be called passing
- * the value, key, and complete object for each property.
+ * the ( value, key, and complete object ) for each property.
  *
  * @param {Object|Array} obj The object to iterate
  * @param {Function} fn The callback to invoke for each item
  */
+// -------------------------------------------------------------------------- forEach方法
+// forEach
+//  - 作用：
+//    - 1. 循环遍历 obj，将obj的value,key,obj作为参数传入fn，并调用fn
+//    - 2. 只不过这个obj包含数组和对象两种情况
 function forEach(obj, fn) {
-  // Don't bother if no value provided
+  // Don't bother if no value provided // bother: 是打扰的意思
   if (obj === null || typeof obj === 'undefined') {
+    // 1. obj是 null 或者 undefined 则直接返回
+    // 2. 即 obj必须存在
     return;
   }
 
   // Force an array if not already something iterable
+  // (1) typeof => number string boolean undefined symbol function object 一共7种数据类型
+  //      - 1. 上面排出了 null 和 undefined
+  //      - 2. 这里排除了 object
+  //      - 3. 剩下: number string boolean symbol function
+  //      - 4. 即: 将3种的几种类型包装成数组
   if (typeof obj !== 'object') {
     /*eslint no-param-reassign:0*/
     obj = [obj];
   }
 
+  // 到这里还剩: array, object 两种类型
+  // 1. array
   if (isArray(obj)) {
-    // Iterate over array values
+    // Iterate over array values 
+    // iterate: 是迭代的意思
     for (var i = 0, l = obj.length; i < l; i++) {
       fn.call(null, obj[i], i, obj);
+      // 调用 fn(obj[i], i, obj)
+      // 其实就是 fn(value, index, 原数组)
     }
+  // 2. object
   } else {
     // Iterate over object keys
     for (var key in obj) {
       if (Object.prototype.hasOwnProperty.call(obj, key)) {
         fn.call(null, obj[key], key, obj);
+        // fn(value, key, 原对象)
       }
     }
   }
@@ -275,6 +301,7 @@ function forEach(obj, fn) {
  * @param {Object} obj1 Object to merge
  * @returns {Object} Result of all merge properties
  */
+// -------------------------------------------------------------------------- merge
 function merge(/* obj1, obj2, obj3, ... */) {
   var result = {};
   function assignValue(val, key) {
@@ -303,9 +330,13 @@ function merge(/* obj1, obj2, obj3, ... */) {
  * @param {Object} thisArg The object to bind function to
  * @return {Object} The resulting value of object a
  */
+// -------------------------------------------------------------------------- extend函数
 function extend(a, b, thisArg) {
-  forEach(b, function assignValue(val, key) {
+  forEach(b, function assignValue(val, key) { // assign: 是分配，指定的意思
     if (thisArg && typeof val === 'function') {
+      // 1. 遍历 b (对象或数组) 
+      // 2. 如果 b 的某一个属性值是一个function，就绑定this后，复制到 a 上
+      // 3. 如果 b 的某一个属性不是function, 直接拷贝到 a 上
       a[key] = bind(val, thisArg);
     } else {
       a[key] = val;
@@ -336,7 +367,7 @@ module.exports = {
   isString: isString,
   isNumber: isNumber,
   isObject: isObject,
-  isPlainObject: isPlainObject,
+  isPlainObject: isPlainObject, // 纯对象
   isUndefined: isUndefined,
   isDate: isDate,
   isFile: isFile,
@@ -345,8 +376,8 @@ module.exports = {
   isStream: isStream,
   isURLSearchParams: isURLSearchParams,
   isStandardBrowserEnv: isStandardBrowserEnv,
-  forEach: forEach,
-  merge: merge,
+  forEach: forEach, // forEach
+  merge: merge, // merge
   extend: extend,
   trim: trim,
   stripBOM: stripBOM
