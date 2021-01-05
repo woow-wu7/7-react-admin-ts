@@ -19,7 +19,7 @@ function InterceptorManager() {
  * @param {Function} rejected The function to handle `reject` for a `Promise`
  *
  * @return {Number} An ID used to remove interceptor later
- * 返回值是一个数值类型的ID，用于删除interceptor拦截器对象
+ * 返回值是一个数值类型的ID
  */
 // ---------------------------------------------------------------- use函数
 InterceptorManager.prototype.use = function use(fulfilled, rejected) {
@@ -54,7 +54,7 @@ InterceptorManager.prototype.eject = function eject(id) {
  */
 // ---------------------------------------------------------------- forEach函数
 InterceptorManager.prototype.forEach = function forEach(fn) {
-  utils.forEach(this.handlers, function forEachHandler(h) {
+  utils.forEach(this.handlers, function forEachHandler(h) { // h 是 handlers[index]
     // utils.forEach
     // 1. 因为：this.handlers 是一个数组
     // 2. 所以：遍历 this.handlers 数组，将每个数组成员对象作为参数h，传入 forEachHandler 函数

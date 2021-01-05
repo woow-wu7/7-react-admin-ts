@@ -195,5 +195,7 @@
   "resolutions": {
     "styled-components": "^5"
   },
-  "proxy": "http://127.0.0.1:7002/"
+  "#proxy": "http://127.0.0.1:7002/",
+  "#": "上面的 # 只是为了在json中做注释",
+  "proxy": "https://api.10248.top/"
 }

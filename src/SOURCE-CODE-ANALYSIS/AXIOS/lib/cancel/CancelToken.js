@@ -6,7 +6,7 @@ var Cancel = require('./Cancel');
  * A `CancelToken` is an object that can be used to request cancellation of an operation.
  *
  * @class
- * @param {Function} executor The executor function.
+ * @param {Function} executor The executor function. 执行器
  */
 // -------------------------------------------------------------------------- CancelToken
 function CancelToken(executor) {
@@ -20,7 +20,9 @@ function CancelToken(executor) {
     resolvePromise = resolve;
   });
 
+  // token 就是 CancelToken 构造函数生成的实例对象
   var token = this;
+
   // 调用CancelToken函数的参数函数 executor
   // 调用 executor, 传入 cancel函数 作为参数
   executor(function cancel(message) {
@@ -30,16 +32,26 @@ function CancelToken(executor) {
     }
 
     token.reason = new Cancel(message); // reason对象上具有：message, toString, __CANCEL__ 等属性
-    resolvePromise(token.reason); // 并把reason对象resolve出去
+    // Cancel 构造函数的
+    // 1.实例属性
+    //  - message: 就是传入Cancel构造函数的参数message
+    // 2. 原型对象上的属性
+    //  - toString(): 返回一个'Cancel'开头的字符串
+    //  - __CANCEL__: 布尔值
+    resolvePromise(token.reason); 
+    // 1. 并把reason对象resolve出去
+    // 2. 注意!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    //    - cancel函数会resolve(reson)一个reson对象，可以通过 promise实例的 then 捕获
   });
 }
 
 /**
  * Throws a `Cancel` if cancellation has been requested.
+ * 请求被取消，就抛出这个 Cancel 对象，即reson对象，即new Cancel(message)生成的reson对象
  */
 CancelToken.prototype.throwIfRequested = function throwIfRequested() {
   if (this.reason) {
-    throw this.reason;
+    throw this.reason; // reson对象存在，就抛出这个reson对象
   }
 };
 

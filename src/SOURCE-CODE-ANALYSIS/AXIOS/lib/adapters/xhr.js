@@ -11,11 +11,13 @@ var createError = require('../core/createError');
 
 module.exports = function xhrAdapter(config) {
   return new Promise(function dispatchXhrRequest(resolve, reject) {
-    var requestData = config.data;
-    var requestHeaders = config.headers;
+    var requestData = config.data; // requestData
+    var requestHeaders = config.headers; // requestHeaders
 
     if (utils.isFormData(requestData)) {
       delete requestHeaders['Content-Type']; // Let the browser set it
+      // 是 requestData 是 FormData 类型的话，就删除 Content-Type 这个 header
+      // Content-Type: application/json, application/x-www-form-urlencode, text/plain, text/html
     }
 
     if (
@@ -23,6 +25,7 @@ module.exports = function xhrAdapter(config) {
       requestData.type
     ) {
       delete requestHeaders['Content-Type']; // Let the browser set it
+      // 处理 blob 类型
     }
 
     var request = new XMLHttpRequest();
@@ -35,15 +38,22 @@ module.exports = function xhrAdapter(config) {
     }
 
     var fullPath = buildFullPath(config.baseURL, config.url);
+
+    // xhr.open(method, url, async, username, password)
+    // 1. method必须大写，比如 GET POST HEAD
+    // 发起请求
     request.open(config.method.toUpperCase(), buildURL(fullPath, config.params, config.paramsSerializer), true);
 
+    // timeout
     // Set the request timeout in MS
-    request.timeout = config.timeout;
+    request.timeout = config.timeout; // timeout超时时间
 
+    // onreadystatechange
     // Listen for ready state
     request.onreadystatechange = function handleLoad() {
       if (!request || request.readyState !== 4) {
         return;
+        // xhr.readyState === 4 时，请求完成
       }
 
       // The request errored out and we didn't get a response, this will be
@@ -66,13 +76,16 @@ module.exports = function xhrAdapter(config) {
         request: request
       };
 
-      settle(resolve, reject, response);
+      settle(resolve, reject, response); // 根据 response 的状态决定是 resolve 还是 reject
 
       // Clean up request
+      // 请求完成后，清除 XMLHttpRequest 生成的 xhr 实例
       request = null;
     };
 
+    // onabort
     // Handle browser request cancellation (as opposed to a manual cancellation)
+    // 中断请求，取消请求
     request.onabort = function handleAbort() {
       if (!request) {
         return;
@@ -84,7 +97,9 @@ module.exports = function xhrAdapter(config) {
       request = null;
     };
 
-    // Handle low level network errors
+    // onerror
+    // Handle low level network 
+    // 错误处理
     request.onerror = function handleError() {
       // Real errors are hidden from us by the browser
       // onerror should only fire if it's a network error
@@ -94,7 +109,9 @@ module.exports = function xhrAdapter(config) {
       request = null;
     };
 
+    // ontimeout
     // Handle timeout
+    // 超时处理
     request.ontimeout = function handleTimeout() {
       var timeoutErrorMessage = 'timeout of ' + config.timeout + 'ms exceeded';
       if (config.timeoutErrorMessage) {

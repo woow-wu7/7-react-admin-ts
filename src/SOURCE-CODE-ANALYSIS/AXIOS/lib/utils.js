@@ -54,12 +54,17 @@ function isArrayBuffer(val) {
 
 /**
  * Determine if a value is a FormData
+ * // 确定值是不是 FormData 
+ * // determin: 确定
  *
  * @param {Object} val The value to test
  * @returns {boolean} True if value is an FormData, otherwise false
  */
+// -------------------------------------------------------------------------- isFormData
 function isFormData(val) {
   return (typeof FormData !== 'undefined') && (val instanceof FormData);
+  // 如果: 环境支持FormData, 并且val是FormData的实例，就返回 true
+  // 否则: 返回false
 }
 
 /**
@@ -302,6 +307,7 @@ function forEach(obj, fn) {
  * @returns {Object} Result of all merge properties
  */
 // -------------------------------------------------------------------------- merge
+// 合并对象
 function merge(/* obj1, obj2, obj3, ... */) {
   var result = {};
   function assignValue(val, key) {
@@ -318,6 +324,7 @@ function merge(/* obj1, obj2, obj3, ... */) {
 
   for (var i = 0, l = arguments.length; i < l; i++) {
     forEach(arguments[i], assignValue);
+    // 遍历每个参数对象，并将每个对象的 assignValue(value, key, arguments[i]) 作为参数传入
   }
   return result;
 }
@@ -362,13 +369,13 @@ module.exports = {
   isArray: isArray,
   isArrayBuffer: isArrayBuffer,
   isBuffer: isBuffer,
-  isFormData: isFormData,
+  isFormData: isFormData, // isFormData 判断值是不是 FormData 的实例
   isArrayBufferView: isArrayBufferView,
   isString: isString,
   isNumber: isNumber,
   isObject: isObject,
-  isPlainObject: isPlainObject, // 纯对象
-  isUndefined: isUndefined,
+  isPlainObject: isPlainObject, // 纯对象 => 是否是纯对象
+  isUndefined: isUndefined, // isUndefined => 是否是undefined
   isDate: isDate,
   isFile: isFile,
   isBlob: isBlob,
@@ -376,10 +383,10 @@ module.exports = {
   isStream: isStream,
   isURLSearchParams: isURLSearchParams,
   isStandardBrowserEnv: isStandardBrowserEnv,
-  forEach: forEach, // forEach
-  merge: merge, // merge
-  extend: extend,
-  trim: trim,
+  forEach: forEach, // forEach 用于遍历数组和对象，并把 value 传入参数函数执行
+  merge: merge, // merge 合并
+  extend: extend, // extend 继承
+  trim: trim, // trim 修剪，去除字符串两端的空白字符
   stripBOM: stripBOM
 };
 

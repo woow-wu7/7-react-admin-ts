@@ -1,10 +1,8 @@
-
-
-var utils = require('./../utils');
-var buildURL = require('../helpers/buildURL');
-var InterceptorManager = require('./InterceptorManager');
-var dispatchRequest = require('./dispatchRequest');
-var mergeConfig = require('./mergeConfig');
+var utils = require("./../utils");
+var buildURL = require("../helpers/buildURL");
+var InterceptorManager = require("./InterceptorManager");
+var dispatchRequest = require("./dispatchRequest");
+var mergeConfig = require("./mergeConfig");
 
 /**
  * Create a new instance of Axios
@@ -26,11 +24,11 @@ var mergeConfig = require('./mergeConfig');
 //        - forEach
 function Axios(instanceConfig) {
   this.defaults = instanceConfig;
-  this.interceptors = { 
+  this.interceptors = {
     // axios实例对象上挂载 interceptors 属性对象
     // interceptors: 是拦截器的意思
-    request: new InterceptorManager(),
-    response: new InterceptorManager()
+    request: new InterceptorManager(), // 这里request中的handlers和response中的handlers是相互独立的，是不同的实例
+    response: new InterceptorManager(),
   };
 }
 
@@ -40,33 +38,34 @@ function Axios(instanceConfig) {
  * @param {Object} config The config specific for this request (merged with this.defaults)
  */
 // -------------------------------------------------------------------------- request方法
+// Axios.prototype.request 最终返回的是一个 promsie 对象
 Axios.prototype.request = function request(config) {
   /*eslint no-param-reassign:0*/
   // Allow for axios('example/url'[, config]) a la fetch API
   // 1. 允许 axios('example/url'[, config]) 这样发送请求
   // 2. 即 axios(url, config)
 
-  if (typeof config === 'string') { 
+  if (typeof config === "string") {
     // config是一个字符串
-    config = arguments[1] || {}; // 获取配置对象config
-    config.url = arguments[0]; // 获取请求url，并赋值给配置对象 config
+    config = arguments[1] || {}; // 1. 如果config是一个字符串，那么config就是第二个参数，获取配置对象config
+    config.url = arguments[0]; // 2. 那么第一个参数就是rul, 获取请求url，并赋值给配置对象 config
   } else {
     // config不是字符串，即是一个 对象 或者 不传
     config = config || {};
   }
 
-  config = mergeConfig(this.defaults, config);
+  config = mergeConfig(this.defaults, config); // 合并参数对象和默认对象，返回合并后的总对象，是深拷贝
 
   // Set config.method
-  if (config.method) { 
+  if (config.method) {
     // 1. config对象中存在 method 属性
     config.method = config.method.toLowerCase(); // 转成小写
-  } else if (this.defaults.method) { 
+  } else if (this.defaults.method) {
     // 2. config对象中method属性不存在，但是axios实例中default对象中method属性存在
     config.method = this.defaults.method.toLowerCase();
   } else {
     // 3. 都不存在，默认get方法
-    config.method = 'get';
+    config.method = "get";
   }
 
   // Hook up interceptors middleware
@@ -75,57 +74,92 @@ Axios.prototype.request = function request(config) {
   var promise = Promise.resolve(config);
   // promise
   // 1. 生成promise实例
-  // 2. config 
+  // 2. config
   //      (1) 会作为then的第一个回调函数的参数传入，经过中间件
   //      (2) interceptor.request((config) => {}) => request(config) => interceptor.resonese()
 
+  // request
   // interceptors.request.forEach
-  this.interceptors.request.forEach(function unshiftRequestInterceptors(interceptor) {
+  this.interceptors.request.forEach(function unshiftRequestInterceptors(
+    interceptor
+  ) {
     // 1. 遍历handlers数组，调用 unshiftRequestInterceptors 函数，参数是handlers数组每个成员对象{ fulfilled, rejected }
     // 2. unshift 添加成员到数组头部
     chain.unshift(interceptor.fulfilled, interceptor.rejected);
     // [interceptor.fulfilled2, interceptor.rejected2, interceptor.fulfilled1, interceptor.rejected1, dispatchRequest, undefined]
+    // [请求成功拦截2, 请求失败拦截2, 请求成功拦截1, 请求失败拦截1, dispatchRequest, undefined]
   });
 
+  // response
   // interceptors.response.forEach
-  this.interceptors.response.forEach(function pushResponseInterceptors(interceptor) {
+  this.interceptors.response.forEach(function pushResponseInterceptors(
+    interceptor
+  ) {
     chain.push(interceptor.fulfilled, interceptor.rejected);
     // [dispatchRequest, undefined, interceptor.fulfilled1, interceptor.rejected1, nterceptor.fulfilled2, interceptor.rejected2,]
+    // [dispatchRequest, undefined, 响应成功拦截1, 响应失败拦截1, 响应成功拦截2, 响应失败拦截2]
   });
 
-  while (chain.length) { // chain 数组不为空
+  while (chain.length) {
+    // chain 数组不为空
     // 先执行request, 再执行dispatchRequest请求, 最后执行response
     promise = promise.then(chain.shift(), chain.shift());
+    // 从左往右一次一次取出两个方法
+    // promise = Promise.resolve(config);
+    // .then('请求成功拦截2', '请求失败拦截2') // 依此向下传递config , 注意2在1前面，unshift
+    // .then('请求成功拦截1', '请求失败拦截1')
+    // .then(dispatchRequest, undefined) // 真正发送请求，(config) => adapter(config).then(value => value, reason => Promise.reject(reason))
+    // .then('响应成功拦截1', '响应失败拦截1')
+    // .then('响应成功拦截2', '响应失败拦截2') // 注意2在1后面，push
   }
 
   return promise;
+  // 最后返回 promise
+  // 就又可以通过 .then() 方法获取请求得到的结果值
 };
 
 // -------------------------------------------------------------------------- getUri方法
 Axios.prototype.getUri = function getUri(config) {
   config = mergeConfig(this.defaults, config);
-  return buildURL(config.url, config.params, config.paramsSerializer).replace(/^\?/, '');
+  return buildURL(config.url, config.params, config.paramsSerializer).replace(
+    /^\?/,
+    ""
+  );
 };
 
+// A
+// 1. 将 get head options delete 方法绑定到 Axios.prototype上
+// 2. 上面这四个方法都是调用 request 方法
 // Provide aliases for supported request methods
-utils.forEach(['delete', 'get', 'head', 'options'], function forEachMethodNoData(method) {
-  /*eslint func-names:0*/
-  Axios.prototype[method] = function(url, config) {
-    return this.request(mergeConfig(config || {}, {
-      method: method,
-      url: url
-    }));
-  };
-});
+utils.forEach(
+  ["delete", "get", "head", "options"],
+  function forEachMethodNoData(method) {
+    /*eslint func-names:0*/
+    Axios.prototype[method] = function (url, config) {
+      return this.request(
+        mergeConfig(config || {}, {
+          method: method,
+          url: url,
+        })
+      );
+    };
+  }
+);
 
-utils.forEach(['post', 'put', 'patch'], function forEachMethodWithData(method) {
+// B
+// 1. 将 post put patch 方法绑定到 Axios.prototype上
+// 2. 同样这三个方法也是调用request方法
+// A和B的区别：参数对象中是否包含 data
+utils.forEach(["post", "put", "patch"], function forEachMethodWithData(method) {
   /*eslint func-names:0*/
-  Axios.prototype[method] = function(url, data, config) {
-    return this.request(mergeConfig(config || {}, {
-      method: method,
-      url: url,
-      data: data
-    }));
+  Axios.prototype[method] = function (url, data, config) {
+    return this.request(
+      mergeConfig(config || {}, {
+        method: method,
+        url: url,
+        data: data,
+      })
+    );
   };
 });
 

@@ -7,10 +7,16 @@ var defaults = require('../defaults');
 
 /**
  * Throws a `Cancel` if cancellation has been requested.
+ * 1. 如果: 请求时，传入的配置对象config对象中存在 cancelToken
+ * 2. 那么：就调用 config.cancelToken.throwIfRequested() 方法
  */
 function throwIfCancellationRequested(config) {
   if (config.cancelToken) {
     config.cancelToken.throwIfRequested();
+    // throwIfRequested()
+    //  - 作用：如果 reason 对象存在，就 throw reason，即 throw {message: '...'}
+    //  - reason = new Cancel(message)
+    //  - reason对象具有 message 属性
   }
 }
 
@@ -52,6 +58,8 @@ module.exports = function dispatchRequest(config) {
   );
 
   var adapter = config.adapter || defaults.adapter;
+  // adapter
+  // 1. 浏览器环境是 (config) => new Promise()
 
   return adapter(config).then(function onAdapterResolution(response) {
     throwIfCancellationRequested(config);

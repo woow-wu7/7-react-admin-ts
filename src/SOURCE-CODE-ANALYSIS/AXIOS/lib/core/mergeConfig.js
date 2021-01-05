@@ -10,10 +10,12 @@ var utils = require('../utils');
  * @param {Object} config2
  * @returns {Object} New object resulting from merging config2 to config1
  */
+// -------------------------------------------------------------------------- mergeConfig
 module.exports = function mergeConfig(config1, config2) {
   // eslint-disable-next-line no-param-reassign
   config2 = config2 || {};
-  var config = {};
+
+  var config = {}; // 合并过后的总对象，最终的函数的返回值
 
   var valueFromConfig2Keys = ['url', 'method', 'data'];
   var mergeDeepPropertiesKeys = ['headers', 'auth', 'proxy', 'params'];
@@ -25,6 +27,7 @@ module.exports = function mergeConfig(config1, config2) {
     'httpsAgent', 'cancelToken', 'socketPath', 'responseEncoding'
   ];
   var directMergeKeys = ['validateStatus'];
+  // 以上都是在定义变量
 
   function getMergedValue(target, source) {
     if (utils.isPlainObject(target) && utils.isPlainObject(source)) {
@@ -45,14 +48,18 @@ module.exports = function mergeConfig(config1, config2) {
     }
   }
 
+  // forEach(obj, fn)会遍历obj(plainObject或数组)，然后调用 fn(obj[value], obj[key], obj)
   utils.forEach(valueFromConfig2Keys, function valueFromConfig2(prop) {
     if (!utils.isUndefined(config2[prop])) {
+      // 如果传入的config中不存在 ( url, method, data ) 这这几个属性
       config[prop] = getMergedValue(undefined, config2[prop]);
     }
   });
 
+  // 将 'headers', 'auth', 'proxy', 'params' 这些属性放入 config
   utils.forEach(mergeDeepPropertiesKeys, mergeDeepProperties);
 
+  // 将 defaultToConfig2Keys 数组的每个成员拷贝到 config
   utils.forEach(defaultToConfig2Keys, function defaultToConfig2(prop) {
     if (!utils.isUndefined(config2[prop])) {
       config[prop] = getMergedValue(undefined, config2[prop]);
@@ -61,6 +68,7 @@ module.exports = function mergeConfig(config1, config2) {
     }
   });
 
+  // 将 validateStatus 拷贝到 config
   utils.forEach(directMergeKeys, function merge(prop) {
     if (prop in config2) {
       config[prop] = getMergedValue(config1[prop], config2[prop]);
@@ -78,10 +86,10 @@ module.exports = function mergeConfig(config1, config2) {
     .keys(config1)
     .concat(Object.keys(config2))
     .filter(function filterAxiosKeys(key) {
-      return axiosKeys.indexOf(key) === -1;
+      return axiosKeys.indexOf(key) === -1; // 在总对象上过滤掉 axiosKeys 存在的属性，得到 otherKeys
     });
 
-  utils.forEach(otherKeys, mergeDeepProperties);
+  utils.forEach(otherKeys, mergeDeepProperties); // 深拷贝到config
 
-  return config;
+  return config; // 返回config
 };
