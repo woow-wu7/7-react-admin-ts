@@ -2,6 +2,7 @@
 
 /**
  * Syntactic sugar for invoking a function and expanding an array for arguments.
+ * 调用函数和扩展参数数组的语法糖。
  *
  * Common use case would be to use `Function.prototype.apply`.
  *

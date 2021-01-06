@@ -1,10 +1,15 @@
 var utils = require("./utils");
 var normalizeHeaderName = require("./helpers/normalizeHeaderName");
 
+// Content-type: x-www-form-urlencoded
+// 表单方式提交
+// 是 XMLHttpRequest 的默认提交方法
 var DEFAULT_CONTENT_TYPE = {
   "Content-Type": "application/x-www-form-urlencoded",
 };
 
+// 设置 Content-Type
+// 条件: ( headers存在 ) 并且 (  headers[Content-Tpye]不存在 )
 function setContentTypeIfUnset(headers, value) {
   if (
     !utils.isUndefined(headers) &&
