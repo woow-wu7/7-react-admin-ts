@@ -10,10 +10,23 @@ import SmartAvatarMenu from '@/components/SmartAvatarMenu'
 import SmartViewport from '@/components/SmartViewport'
 import { useDispatch } from 'react-redux'
 import { actionType } from './reducer'
+// import Joyride from 'react-joyride';
+// import Tour from 'reactour' // 新手导航
 
 const { Header, Sider, Content } = Layout;
+// const steps = [
+// 	{
+// 		target: '.top-menu',
+// 		content: 'This is my awesome feature!',
+// 	},
+// 	{
+// 		target: '.my-other-step',
+// 		content: 'This another awesome feature!',
+// 	},
+// ]
 
 const Admin = () => {
+	// const [isTourOpen, setIsTourOpen] = useState(true); // 新手导航 - reactour
 	const [collapsed, setcollapsed] = useState(false)
 	const dispatch = useCallback(useDispatch(), [])
 	const refScroll = useRef<HTMLDivElement>(null)
@@ -60,17 +73,17 @@ const Admin = () => {
 
 			<Layout className={styles.contentWrap}>
 				<Header className={styles.header}>
-					{/* Header-左 */}
+					{/* Header-左-菜单伸缩图标 */}
 					<aside onClick={toggleCollapsed}>
-						<span>
+						<span className="toggle-collapse-icon-wrap">
 							{collapsed
 								? <MenuUnfoldOutlined className={styles.toggleCollapsedIcon} />
 								: <MenuFoldOutlined className={styles.toggleCollapsedIcon} />
 							}
 						</span>
 					</aside>
-					{/* Header-右 */}
-					<ul className={styles.topMenu}>
+					{/* Header-右-个人中心设置 */}
+					<ul className="top-menu">
 						<SmartAvatarMenu />
 					</ul>
 				</Header>
@@ -90,9 +103,19 @@ const Admin = () => {
 					<VerticalAlignTopOutlined style={{ color: '#fff', fontSize: '30px' }} />
 				</div>
 			</BackTop>
-			
+
 			{/* 监听viewport的width height变化 */}
 			<SmartViewport />
+
+			{/* 新手导航 */}
+			{/* <Joyride
+				steps={steps}
+			/> */}
+			{/* <Tour
+        steps={steps}
+        isOpen={isTourOpen}
+        onRequestClose={() => setIsTourOpen(false)}
+      /> */}
 		</Layout>
 	)
 }

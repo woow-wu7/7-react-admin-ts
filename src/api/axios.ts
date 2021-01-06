@@ -26,7 +26,14 @@ axiosInstance.interceptors.request.use((config) => {
 // 响应拦截
 axiosInstance.interceptors.response.use(response => {
   const { status } = response
+  processStatus(status)
+  return response
+}, err => {
+  return Promise.reject(err)
+})
 
+// 状态码判断
+function processStatus(status: number) {
   switch (status) {
     case 100:
       console.log('continue', '请继续请求')
@@ -35,7 +42,7 @@ axiosInstance.interceptors.response.use(response => {
       console.log('switching protocal', '请升级协议')
       break;
 
-    case 200:
+      case 200:
       console.log('ok', '成功')
       break;
     case 204:
@@ -59,7 +66,8 @@ axiosInstance.interceptors.response.use(response => {
       break;
     case 305:
       console.log('use proxy', '使用代理，所请求的资源必须通过代理访问')
-
+      break;
+    
     case 400:
       console.log('bad request', '请求错误，服务器未能理解请求')
       break;
@@ -78,7 +86,7 @@ axiosInstance.interceptors.response.use(response => {
     case 408:
       console.log('request timeout', '请求超时')
       break;
-
+    
     case 500:
       console.log('internet server error', '网络错误')
       break;
@@ -91,12 +99,11 @@ axiosInstance.interceptors.response.use(response => {
     case 504:
       console.log('getway timeout', '网关超时') // 504
       break;
+      
     default:
       break;
   }
-  return response
-}, err => {
-  return Promise.reject(err)
-})
+}
+
 
 export default axiosInstance

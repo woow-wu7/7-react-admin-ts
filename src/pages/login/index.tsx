@@ -6,7 +6,7 @@ import { bindActionCreators } from 'redux';
 import * as actions from '../../app.action'
 import { CONST, SYSTEMTYPE } from '@/global/enum'
 import { ILoginMessage } from '@/global/interface'
-import { setLocalStorage } from '@/utils'
+import { setLocalStorage, getLocalStorage } from '@/utils'
 import styled, { keyframes } from 'styled-components'
 import { useOnce } from '@/utils/hooks/use-once'
 
@@ -97,6 +97,14 @@ const Login = (
       roles: 'admin'
     }
 
+    // if (+getLocalStorage('loginTimes') === 0) {
+    //   console.log('第一次登陆')
+    //   setLocalStorage('loginTimes', 1)
+    // } else {
+    //   console.log('不是第一次登陆')
+    //   setLocalStorage('loginTimes', getLocalStorage('loginTimes') + 1)
+    // }
+
     // axios({
     //   method: 'get',
     //   url: '/user',
@@ -183,13 +191,13 @@ const Login = (
             <Form.Item className="custom-form-button">
               <Button type="primary" block size="large" onClick={fill}>
                 自动填充
-          </Button>
+              </Button>
             </Form.Item>
 
             <Form.Item className="custom-form-button">
               <Button type="primary" htmlType="submit" block size="large">
                 登陆
-          </Button>
+              </Button>
             </Form.Item>
           </Form>
         </div>

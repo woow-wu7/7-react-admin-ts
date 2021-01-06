@@ -15,7 +15,7 @@
     - router menu breadcrumb 三合一
     - 自定义hooks ( useFetch, useModal, useViewprot, useIntersectionObserver, useThrottle, useDebounce等)
     - 自定义redux, 懒加载, 权限控制, 回到顶部, echarts封装, react-redux-hooks-api, react-router-hooks-api
-    - alias别名, 全局sass, 功能引导动画, 瀑布流, axios取消请求
+    - alias别名, 全局sass, 新手功能引导动画(react-joyride)(reactour), 瀑布流, axios取消请求
 (2) css特效
     - stickyFooter粘性页脚, ceiling吸顶效果, shockWave冲击波, 水平垂直居中, 两栏三栏布局
     - rem响应布局, em, @media媒体查询, 一物理像素边框, 盒模型, 三角形, 进度条, margin重叠
