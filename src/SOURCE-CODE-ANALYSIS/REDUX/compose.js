@@ -8,18 +8,20 @@
  * from right to left. For example, compose(f, g, h) is identical to doing
  * (...args) => f(g(h(...args))).
  */
-
+// ------------------------------------------------------------------------- compose函数
 export default function compose(...funcs) {
   // 没传参数，就返回一个函数，这个函数直接将参数返回
   if (funcs.length === 0) {
     return arg => arg
   }
 
-  // 参数个数为1，直接返回参数
+  // 参数个数为1，直接返回该参数
   if (funcs.length === 1) {
     return funcs[0]
   }
 
   // 多个参数
   return funcs.reduce((a, b) => (...args) => a(b(...args)))
+  // [a, b, c] => a(b(c(...args)))
+  //  - 右边函数调用的结果作为左边函数的参数，迭代进行
 }

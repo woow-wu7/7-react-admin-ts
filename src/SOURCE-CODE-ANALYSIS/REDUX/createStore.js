@@ -86,12 +86,14 @@ export default function createStore(reducer, preloadedState, enhancer) {
       // 说明: enhancer 只能是函数
       throw new Error("Expected the enhancer to be a function.");
     }
+    // enhancer 存在
     // enhancer 是函数时, 很明显是一个高阶函数
     return enhancer(createStore)(reducer, preloadedState);
   }
 
   if (typeof reducer !== "function") {
     throw new Error("Expected the reducer to be a function.");
+    // reducer 必须是一个函数
   }
 
   let currentReducer = reducer; // 缓存reducer, reducer是传入createStore()的参数
@@ -115,9 +117,10 @@ export default function createStore(reducer, preloadedState, enhancer) {
   function ensureCanMutateNextListeners() {
     if (nextListeners === currentListeners) {
       nextListeners = currentListeners.slice();
-      // 做一层浅拷贝
-      // 当两个对象的属性值是基本类型的数据时，修改互不影响
-      // 注意区分赋值，浅拷贝，深拷贝的区别
+      // nextListeners 和 currentListeners 是同一个对象时
+      // 1. 做一层浅拷贝
+      //  - 当两个对象的属性值是基本类型的数据时，修改互不影响
+      //  - 注意区分赋值，浅拷贝，深拷贝的区别
     }
   }
 
@@ -258,7 +261,7 @@ export default function createStore(reducer, preloadedState, enhancer) {
   function dispatch(action) {
     if (!isPlainObject(action)) {
       // 不是纯对象，就报错
-      // 1. 纯对象是必须通过对象字面量声明的对象 或者 通过构造函数声明的对象，即 {} 或者 new Object() 生成的对象
+      // 1. 纯对象是必须通过 ( 对象字面量声明的对象 ) 或者 ( 通过构造函数声明的对象 )，即 {} 或者 new Object() 生成的对象
       // 2. 数组，Date对象，Regexp对象，Error对象，Function对象等都不是纯对象
       // 3. 这里action不是对象就抛错，如果不是对象，可能是个函数，比如异步提交的函数，就需要通过redux中间件处理
       throw new Error(
@@ -267,7 +270,7 @@ export default function createStore(reducer, preloadedState, enhancer) {
       );
     }
 
-    // action纯对象中，必须要有 type 属性
+    // action纯对象中，必须要有 type 属性，type是一个string类型的数据
     if (typeof action.type === "undefined") {
       throw new Error(
         'Actions may not have an undefined "type" property. ' +
@@ -371,6 +374,7 @@ export default function createStore(reducer, preloadedState, enhancer) {
   // the initial state tree.
   dispatch({ type: ActionTypes.INIT });
 
+  // 总的 createStore() 函数的返回值
   return {
     dispatch,
     subscribe,

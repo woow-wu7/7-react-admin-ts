@@ -11,6 +11,9 @@ import logger from 'redux-logger'
 // 1. redux-thunk  => 用于dispatch一个函数，则可以处理异步的请求函数
 // 2. redux-logger => 可以打印 prevState action nextState
 
+// 3. redux-thunk 案例
+// 在 admin-system/interview-react/Knowledge/reduxSourceCode组件中使用了 redux-thunk 中间件
+
 const totalReducers = {
   app: appReducer,
   admin: adminReducer,
