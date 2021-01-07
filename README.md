@@ -39,6 +39,7 @@
 
 # (四) 代码规范相关 ( 1-9 )
 
+* [x]123456789
 ### (1) commitlint
 - [官网教程](https://github.com/conventional-changelog/commitlint)
 - 安装
