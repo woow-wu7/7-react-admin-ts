@@ -16,6 +16,13 @@ const Triangle = () => {
         <div className="animates__wave">点击冲击波</div>
         <div className="animates__wave2">冲击波</div>
         <div className="animates__3">hover</div>
+        <div className="animates__4">
+          <div className="animates-wave-wrap">
+            <div className="wave1"></div>
+            <div className="wave2"></div>
+            <div className="wave3"></div>
+          </div>
+        </div>
       </div>
       <div>
         {renderLinks()}

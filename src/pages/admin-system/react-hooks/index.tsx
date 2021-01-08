@@ -7,6 +7,7 @@ import TestUseThrottle from './test/use-throttle'
 import TestUseIntersectionObserver from './test/use-intersectionObserver'
 import TestUseImperativeHandle from './test/use-imperativeHandle'
 import TestUseState from './test/use-state'
+import TestUseEffect from './test/use-effect'
 import TestUseFetch from './test/use-fetch'
 import { useSelector } from 'react-redux';
 import './react-hooks.scss'
@@ -44,6 +45,7 @@ const ReactComponnet = () => {
         <a href="https://juejin.cn/post/6887132776512880654" target="__blank">自定义hooks博客链接</a>
       </div>
       <TestUseState />
+      <TestUseEffect />
       <TestUseFetch />
       <TestUseCallbackUseMemo />
       <TestUseRef />

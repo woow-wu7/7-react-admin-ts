@@ -35,6 +35,10 @@
   @include interview(#67ce00, #f6ffed, #448801);
 }
 
+.use-effect {
+  @include interview(#e821ff, #fdf2ff, #9a07aa);
+}
+
 .use-fetch {
   @include interview(#ff533d, #fff2f0, #e0230a);
 }

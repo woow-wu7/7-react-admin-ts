@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import axios from 'axios'
+import { Button } from 'antd'
 
 const AxiosCancelToken = () => {
   const [cancalFn1, setCancalFn1] = useState(() => { }) as any
@@ -77,11 +78,11 @@ const AxiosCancelToken = () => {
       <p>Axios - CancelToken测试</p><br />
 
       <div>请打开浏览器调试面板调式</div>
-      <button onClick={handleRequest}>点击发送请求1 - 每次请求都用promise延时2s模拟</button><br />
-      <button onClick={cancelRequest}>点击 - 取消请求方法1 - 工厂函数source</button><br />
+      <Button onClick={handleRequest}>点击发送请求1 - 每次请求都用promise延时2s模拟</Button><br />
+      <Button onClick={cancelRequest}>点击 - 取消请求方法1 - 工厂函数source</Button><br />
       <br/><br/>
-      <button onClick={handleRequest2}>发送请求2 - 每次请求都用promise延时2s模拟</button><br/>
-      <button onClick={cancelRequest2}>点击 - 请求请求方法2 - 直接 new axios.CancelToken(cancel(c)) 传入cancel函数, 将cancel函数的参数赋值给变量即可</button>
+      <Button onClick={handleRequest2}>发送请求2 - 每次请求都用promise延时2s模拟</Button><br/>
+      <Button onClick={cancelRequest2}>点击 - 请求请求方法2 - 直接 new axios.CancelToken(cancel(c)) 传入cancel函数, 将cancel函数的参数赋值给变量即可</Button>
       <div>
         {renderLinks()}
       </div>
