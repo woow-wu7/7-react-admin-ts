@@ -95,7 +95,8 @@
     "dev": "npm run start",
     "start": "node scripts/start.js",
     "build": "set CI=&&node scripts/build.js",
-    "test": "node scripts/test.js"
+    "test": "node scripts/test.js",
+    "analyze": "source-map-explorer dist/static/js/main.*"
   },
   "browserslist": {
     "production": [
@@ -178,7 +179,8 @@
     "stylelint": "^13.6.1",
     "stylelint-config-standard": "^20.0.0",
     "stylelint-scss": "^3.18.0",
-    "stylelint-webpack-plugin": "^2.1.0"
+    "stylelint-webpack-plugin": "^2.1.0",
+    "webpack-bundle-analyzer": "^4.3.0"
   },
   "husky": {
     "hooks": {

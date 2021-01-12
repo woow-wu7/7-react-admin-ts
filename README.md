@@ -16,6 +16,7 @@
     - 自定义hooks ( useFetch, useModal, useViewprot, useIntersectionObserver, useThrottle, useDebounce等)
     - 自定义redux, 懒加载, 权限控制, 回到顶部, echarts封装, react-redux-hooks-api, react-router-hooks-api
     - alias别名, 全局sass, 新手功能引导动画(react-joyride)(reactour), 瀑布流, axios取消请求
+    - webpack-bundle-analyzer 包分析插件
 (2) css特效
     - stickyFooter粘性页脚, ceiling吸顶效果, shockWave冲击波, 水平垂直居中, 两栏三栏布局
     - rem响应布局, em, @media媒体查询, 一物理像素边框, 盒模型, 三角形, 进度条, margin重叠
@@ -671,3 +672,8 @@ export const useDebounce: IuseDebounce = (
   - 引入前需要安装的依赖：npm install -D raw-loader，配置webpack
 - 3.接下来就可以正常使用了
 - 4.教程链接：https://segmentfault.com/a/1190000020294373
+
+
+### (17) webpack-bundle-analyzer 使用报错
+- 原因：端口被占用，如果有别的项目中也使用到了 webpack-bundle-analyzer 时就会产生端口调用
+- 解决: 关闭其他项目的服务
