@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import Router from '@/router'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux';

@@ -6,7 +6,7 @@ import { bindActionCreators } from 'redux';
 import * as actions from '../../app.action'
 import { CONST, SYSTEMTYPE } from '@/global/enum'
 import { ILoginMessage } from '@/global/interface'
-import { setLocalStorage, getLocalStorage } from '@/utils'
+import { setLocalStorage } from '@/utils'
 import styled, { keyframes } from 'styled-components'
 import { useOnce } from '@/utils/hooks/use-once'
 
