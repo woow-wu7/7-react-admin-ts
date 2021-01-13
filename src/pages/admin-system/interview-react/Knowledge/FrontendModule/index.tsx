@@ -1,4 +1,6 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
+import { a } from './ESModule'
+import { b } from './CommonJS'
 
 const Em = () => {
   const [links] = useState([
@@ -8,6 +10,14 @@ const Em = () => {
     },
   ])
   const renderLinks = () => links.map(({ name, url }) => <div key={name}><a href={url} target="blank">{name}</a></div>)
+  useEffect(() => {
+    setTimeout(() => {
+      console.log(a, '模块化-ESMODULE-导出的是 ( 值的引用 )，修改会影响原模块');
+    }, 4000)
+    setTimeout(() => {
+      console.log(b, '模块化-CommonJS-导出的是 ( 值得拷贝 )，修改不会影响原模块');
+    }, 7000)
+  }, [])
   return (
     <div className="frontend-module">
       <p>前端模块化</p><br />
@@ -15,7 +25,7 @@ const Em = () => {
       <h1>Commonjs方案: 主要用于服务端，同步加载，nodejs使用commonjs规范；commonjs模块就是对象，输入时必须查找对象属性</h1>
       <h1>AMD,CMD用于浏览器端，异步加载</h1>
       <h1>ES6的模块化方案，可以用于浏览器和服务器，通用方案，静态的</h1>
-      <br/>
+      <br />
       <h1>AMD：用于浏览器端，依赖前置，异步加载，运行时确定依赖关系，输入输出的变量 --- requirejs</h1>
       <h1>CMD: 用于浏览器端，依赖就近，异步加载，运行时确定依赖关系，输入输出的变量 --- seajs</h1>
       <h1>ES6的模块化方案：可以用于浏览器和服务器，静态的，即在编译时就能确定模块的依赖关系，输入输出的变量；而commonjs，AMD，CMD都只能在运行时才能确定</h1>
