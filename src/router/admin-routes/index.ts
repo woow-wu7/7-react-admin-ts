@@ -39,7 +39,7 @@ const adminRoutes: IRouteModule[] = [
     // 注意：( 重要 ) 每一个 detail 都要记得用 useParams 存入 localStorage
   },
   {
-    title: 'Interview',
+    title: 'Interviews',
     icon: 'anticon-custom-form',
     key: '/admin-interview',
     path: '/admin-interview',
