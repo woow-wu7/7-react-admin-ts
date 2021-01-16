@@ -39,6 +39,7 @@ const InterviewReact = () => {
     FrontendModule, // 前端模块化
     ReduxSourceCode, // redux 和 react-redux 源码
     AxiosCancelToken, // Axios CancelToken 取消请求 
+    DocumentObjectModel, // DOM文档对象模型
   } = autoRequire() as any
 
   const scrollRef = useSelector((state: { admin: { scrollContainer: HTMLDivElement } }) => state.admin.scrollContainer)
@@ -86,6 +87,7 @@ const InterviewReact = () => {
       <FrontendModule />
       <ReduxSourceCode />
       <AxiosCancelToken />
+      <DocumentObjectModel />
     </div>
   )
 }

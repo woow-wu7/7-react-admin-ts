@@ -13,7 +13,7 @@ const Em = () => {
   useEffect(() => {
     setTimeout(() => {
       console.log(a, '模块化-ESMODULE-导出的是 ( 值的引用 )，修改会影响原模块');
-      console.log(a, '模块化-ESMODULE-导出的是 ( 值的引用 )，修改会影响原模块，当值是对象时，还是会影响，单不影响理解');
+      console.log(a, '模块化-ESMODULE-导出的是 ( 值的引用 )，修改会影响原模块，当值是对象时，还是会影响，但不影响理解');
     }, 4000)
     setTimeout(() => {
       console.log(b, '模块化-CommonJS-导出的是 ( 值得拷贝 )，修改不会影响原模块');
