@@ -79,63 +79,63 @@ const adminRoutes: IRouteModule[] = [
           needLoginAuth: true,
           rolesAuth: ['user', 'admin']
         },
-      }
-    ]
-  },
-  {
-    title: 'React-redux',
-    icon: 'anticon-react1',
-    key: '/admin-react-redux',
-    path: '/admin-react-redux',
-    meta: {
-      needLoginAuth: true,
-      rolesAuth: ['user', 'admin']
-    },
-    subs: [
+      },
       {
-        title: 'Hooks',
-        icon: 'anticon-sharescreen',
-        key: '/admin-react-redux/hooks',
-        path: '/admin-react-redux/hooks',
-        component: ReactReduxHooks,
+        title: 'React-Redux',
+        icon: 'anticon-react1',
+        key: '/admin-react/admin-react-redux',
+        path: '/admin-react/admin-react-redux',
         meta: {
           needLoginAuth: true,
           rolesAuth: ['user', 'admin']
         },
-      }
+        subs: [
+          {
+            title: 'Hooks',
+            icon: 'anticon-sharescreen',
+            key: '/admin-react/admin-react-redux/hooks',
+            path: '/admin-react/admin-react-redux/hooks',
+            component: ReactReduxHooks,
+            meta: {
+              needLoginAuth: true,
+              rolesAuth: ['user', 'admin']
+            },
+          }
+        ]
+      },
+      {
+        title: 'React-Router',
+        icon: 'anticon-zuixinyouhui',
+        key: '/admin-react/admin-react-router',
+        path: '/admin-react/admin-react-router',
+        meta: {
+          needLoginAuth: true,
+          rolesAuth: ['user', 'admin']
+        },
+        subs: [{
+          title: 'Hooks',
+          icon: 'anticon-yooxi',
+          key: '/admin-react/admin-react-router/hooks',
+          path: '/admin-react/admin-react-router/hooks',
+          exact: true,  // 注意；存在动态路由时，需要设置 exact 精确匹配
+          component: ReactRouterHooks,
+          meta: {
+            needLoginAuth: true,
+            rolesAuth: ['user', 'admin']
+          },
+        },{
+          title: 'HooksDetail',
+          icon: 'anticon-yooxi',
+          key: '/admin-react/admin-react-router/hooks/:id',
+          path: '/admin-react/admin-react-router/hooks/:id',
+          component: ReactRouterHooksDetail,
+          meta: {
+            needLoginAuth: true,
+            rolesAuth: ['user', 'admin']
+          },
+        }]
+      },
     ]
-  },
-  {
-    title: 'React-Router',
-    icon: 'anticon-zuixinyouhui',
-    key: '/admin-react-router',
-    path: '/admin-react-router',
-    meta: {
-      needLoginAuth: true,
-      rolesAuth: ['user', 'admin']
-    },
-    subs: [{
-      title: 'Hooks',
-      icon: 'anticon-yooxi',
-      key: '/admin-react-router/hooks',
-      path: '/admin-react-router/hooks',
-      exact: true,  // 注意；存在动态路由时，需要设置 exact 精确匹配
-      component: ReactRouterHooks,
-      meta: {
-        needLoginAuth: true,
-        rolesAuth: ['user', 'admin']
-      },
-    },{
-      title: 'HooksDetail',
-      icon: 'anticon-yooxi',
-      key: '/admin-react-router/hooks/:id',
-      path: '/admin-react-router/hooks/:id',
-      component: ReactRouterHooksDetail,
-      meta: {
-        needLoginAuth: true,
-        rolesAuth: ['user', 'admin']
-      },
-    }]
   },
   {
     title: 'JS',
