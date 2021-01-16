@@ -15,24 +15,24 @@ const Em = () => {
 
       <div>
         <h1>em是相对单位</h1>
-        <h1>当em是font-size的单位时，表示的是 ( 父元素的font-size的大小 )</h1>
-        <h1>当em是其他属性的单位时，表示的是 ( 自身font-size的大小 ) </h1>
+        <h1>当em是子元素的 ( font-size的单位 ) 时，表示的是 ( 父元素的font-size的大小 )</h1>
+        <h1>当em是子元素的 ( 其他属性的单位 ) 时，表示的是 ( 自身font-size的大小 ) </h1>
       </div>
       <div className="max-border">
         <p>设置父元素的字体大小：20px</p>
         <div className="em__div1">
-          <p>设置父元素的字体大小：1em</p>
+          <p>设置子元素的字体大小：1em</p>
           <p>得到的子元素的字体大小：20px</p>
-          <div>em是font-size的单位时，1em表示父元素的font-size大小</div>
+          <div>em是子元素的font-size的单位时，1em表示父元素的font-size大小</div>
         </div>
       </div>
       <div className="max-border">
         <p>设置父元素的字体大小: 20px</p>
         <div className="em__div2">
-          <p>设置子元素的字体大小:20px</p>
+          <p>设置子元素的字体大小: 10px</p>
           <p>设置子元素的高度: 10em</p>
-          <p>得到子元素的高度: 200px</p>
-          <div>em是其他属性的单位时，1em表示自身font-size大小</div>
+          <p>得到子元素的高度: 100px ( 10 * 10 )</p>
+          <div>em是子元素的其他属性的单位时，1em表示自身font-size大小</div>
         </div>
       </div>
       <div>
