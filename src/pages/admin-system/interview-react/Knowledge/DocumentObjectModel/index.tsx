@@ -92,8 +92,9 @@ const DocumentObjectModel = () => {
       <div ref={refInnterAndOuter}>
         <div>child1</div>
         <div>child2</div>
-      </div>
-      <button onClick={scrollintoView}>点击触发 Element.scrollintoView() 事件，使页面滚动到绑定事件的元素位置</button>
+      </div><br/>
+      <button ref={refButton}>accessKey测试，当设置Element.accessKey='u'键盘后，按下Alt+u就能移动到它上面</button><br/><br/>
+      <button onClick={scrollintoView}>点击触发 Element.scrollintoView() 事件，使页面滚动到绑定事件的元素位置</button><br/><br/>
       <div className="aaa">aaa</div><br/><br/><br/><br/><br/><br/><br/>
       <div className="aaa">bbb</div><br/><br/><br/><br/><br/><br/><br/>
       <div className="aaa">ccc</div><br/><br/><br/><br/><br/><br/><br/>
@@ -124,8 +125,7 @@ const DocumentObjectModel = () => {
       <div className="aaa">ddd</div><br/><br/><br/><br/><br/><br/><br/>
       <div className="aaa">ddd</div><br/><br/><br/><br/><br/><br/><br/>
       <div className="aaa">eee</div><br/><br/><br/><br/><br/><br/><br/>
-      <div className="aaa">fff</div><br/><br/><br/><br/><br/><br/><br/>
-      <button ref={refButton}>accessKey测试，当设置Element.accessKey='u'键盘后，按下Alt+u就能移动到它上面</button>
+      <div className="aaa">fff</div><br/>
       <div>
         {renderLinks()}
       </div>
