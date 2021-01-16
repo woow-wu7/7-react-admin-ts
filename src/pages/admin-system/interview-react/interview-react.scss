@@ -82,7 +82,8 @@
 
   .prototype-chain,
   .one-px,
-  .partial {
+  .partial,
+  .storage {
     @include interview(#ff533d, #fff2f0, #e0230a);
   }
 
