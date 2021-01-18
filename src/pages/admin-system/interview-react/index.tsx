@@ -40,6 +40,7 @@ const InterviewReact = () => {
     ReduxSourceCode, // redux 和 react-redux 源码
     AxiosCancelToken, // Axios CancelToken 取消请求 
     DocumentObjectModel, // DOM文档对象模型
+    EventLoop, // node 和 js 的事件轮询
     Storage, // 代理模式重新代理 ( 原生Storage )
   } = autoRequire() as any
 
@@ -89,6 +90,7 @@ const InterviewReact = () => {
       <ReduxSourceCode />
       <AxiosCancelToken />
       <Storage />
+      <EventLoop />
       <DocumentObjectModel />
     </div>
   )
