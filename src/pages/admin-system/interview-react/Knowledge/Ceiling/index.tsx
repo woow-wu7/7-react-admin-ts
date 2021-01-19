@@ -38,7 +38,7 @@ const Ceiling = () => {
         <h2>注意：当同一层级的多个元素都设置了position:sticky属性时，top相同的将会被替换，不同top值的不会</h2>
       </div>
       <h2>(2) InterSectionObserver方式</h2>
-      <h2>(3) js方式：scrollTop + clientHeight = scrollHeight 配合 offsetHeight，【主要是 scrollTop 和 offsetTop 两个属性】</h2>
+      <h2>(3) js方式：scrollTop + clientHeight = scrollHeight 配合 offsetHeight，【主要是 scrollTop 和 offsetTop 两个属性，scrollTop &gt; offsetTop 时，显示置换的DOM】</h2>
 
       <WayCss />
       <WayJs />

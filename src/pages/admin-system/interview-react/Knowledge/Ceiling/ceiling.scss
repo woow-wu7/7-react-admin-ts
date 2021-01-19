@@ -12,13 +12,13 @@
     background: #edfffb;
   }
 
-  // css 方式
+  // ---------------------------------------------------- css 方式
   .ceilingp-test {
     height: 220px;
     width: 360px;
     overflow: auto;
     border: 1px solid rgb(187, 187, 187);
-    display: inline-block;
+    display: inline-block; // 这个是为了三种方式可以在一行显示
     margin-right: 10px;
 
     & div {
@@ -29,6 +29,9 @@
       // header
       background: #edfffb;
       color: #00b792;
+
+      // 元素固定的相对 ( 偏移量 ) 是相对于：距离它 ( 最近的 ) 具有 ( 滚动框 ) 的祖先元素
+      // position: sticky; 相当于 relative 和 fixed 的结合
       position: sticky;
       top: 0;
       height: 36px;
@@ -38,7 +41,7 @@
       // header2
       background: #edfffb;
       color: #00b792;
-      position: sticky;
+      position: sticky; // header2 会在 header 的下面组合
       top: 36px;
       height: 36px;
     }
@@ -58,7 +61,7 @@
     }
   }
 
-  // js 方式
+  // ---------------------------------------------------- js 方式
   .ceilingp-test-js {
     height: 220px;
     width: 360px;

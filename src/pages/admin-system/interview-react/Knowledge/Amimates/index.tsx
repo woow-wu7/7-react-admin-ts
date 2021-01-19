@@ -11,11 +11,18 @@ const Triangle = () => {
 
   return (
     <div className="animates">
-      <p>一些动画</p><br/>
+      <p>一些动画</p><br />
       <div className="animates__main1">
         <div className="animates__wave">点击冲击波</div>
         <div className="animates__wave2">冲击波</div>
         <div className="animates__3">hover</div>
+        {/* hover动画2 */}
+        {/* 主要就是利用了子元素的z-index高于伪类，然后做transition的width动画 */}
+        <div className="animates__5">
+          <div className="animates-in">
+            <div className="animates-in-text">hover</div>
+          </div>
+        </div>
         <div className="animates__4">
           <div className="animates-wave-wrap">
             <div className="wave1"></div>
@@ -23,6 +30,7 @@ const Triangle = () => {
             <div className="wave3"></div>
           </div>
         </div>
+
       </div>
       <div>
         {renderLinks()}

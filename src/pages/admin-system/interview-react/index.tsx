@@ -31,6 +31,7 @@ const InterviewReact = () => {
     Curry, // 柯里化
     Partial, // 片函数
     PromiseLearn, // proise
+    PromiseManual, // 手写promise
     CrossOrigin, // 跨域
     FrontendRouter,
     Extend, // 继承
@@ -41,6 +42,7 @@ const InterviewReact = () => {
     AxiosCancelToken, // Axios CancelToken 取消请求 
     DocumentObjectModel, // DOM文档对象模型
     EventLoop, // node 和 js 的事件轮询
+    SlideMenu,
     Storage, // 代理模式重新代理 ( 原生Storage )
   } = autoRequire() as any
 
@@ -61,6 +63,7 @@ const InterviewReact = () => {
       <Ceiling />
       <StickyFooter />
       <PromiseLearn />
+      <PromiseManual />
       <VisibilityDisplay />
       <InlineBlock />
       <Triangle />
@@ -91,6 +94,7 @@ const InterviewReact = () => {
       <AxiosCancelToken />
       <Storage />
       <EventLoop />
+      <SlideMenu />
       <DocumentObjectModel />
     </div>
   )
