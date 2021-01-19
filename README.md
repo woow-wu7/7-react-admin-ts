@@ -20,7 +20,7 @@
 (2) css特效
     - stickyFooter粘性页脚, ceiling吸顶效果, shockWave冲击波, 水平垂直居中, 两栏三栏布局
     - rem响应布局, em, @media媒体查询, 一物理像素边框, 盒模型, 三角形, 进度条, margin重叠
-    - inline-block间隙, 两行三行省略号, 多列等高布局, 
+    - inline-block间隙, 两行三行省略号, 多列等高布局, 滑动菜单slide-menu
 (3) 源码分析
     - redux axios webpack-Compiler
     - 具体在本项目 src/SOURCE-CODE-ANALYSIS 文件夹中
