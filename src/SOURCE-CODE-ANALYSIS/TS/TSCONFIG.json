@@ -6,8 +6,13 @@
       "dom.iterable",
       "esnext"
     ],
-    "allowJs": true,
-    // "checkJs": true,
+    "allowJs": true, // 允许编辑 JS 文件 （js, jsx）
+    // "checkJs": true, // 允许在 JS 文件中报错，通常与 allowJS 一起使用
+    "outDir": "./out", // 指定输出目录
+    "rootDir": "./", // 指定输入目录 （用于输出）
+    "declaration": true, // 生成声明文件
+    "declarationDir": "./d", // 声明文件的路径
+    "emitDeclarationOnly": true, // 只生成声明文件
     "skipLibCheck": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,

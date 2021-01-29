@@ -2,6 +2,9 @@
 #dist
 /dist
 
+#SOURCE-CODE-ANALYSIS
+/src/SOURCE-CODE-ANALYSIS
+
 
 #src
 #/src

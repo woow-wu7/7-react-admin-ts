@@ -1,4 +1,6 @@
 
+/* eslint-disable */
+/* tslint-disable */
 
 var utils = require('./../utils');
 var settle = require('./../core/settle');
@@ -285,3 +287,5 @@ module.exports = function httpAdapter(config) {
     }
   });
 };
+/* tslint-disable */
+/* eslint-disable */

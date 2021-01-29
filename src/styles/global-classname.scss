@@ -11,6 +11,55 @@ body,
   display: flex;
 }
 
+.flex-r-center {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-r-start-start {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.flex-r-between-center {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flex-r-end-start {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+.flex-c-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-c-start-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.flex-c-start-start {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
 .flex-d-row {
   flex-direction: row;
 }
@@ -19,9 +68,12 @@ body,
   flex-direction: column;
 }
 
-//横向 换行
 .row-wrap {
   flex-flow: row wrap;
+}
+
+.row-nowrap {
+  flex-flow: row nowrap;
 }
 
 .flex-wrap {
@@ -30,6 +82,11 @@ body,
 
 .flex-nowrap {
   flex-wrap: nowrap;
+}
+
+.flex-center {
+  justify-content: center;
+  align-items: center;
 }
 
 /* 垂直居中 */

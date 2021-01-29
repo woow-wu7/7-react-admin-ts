@@ -262,6 +262,46 @@ const getStyleLoaders = (cssOptions, preProcessor) => {
 };
 ```
 
+### (2-2) create-react-app 配置全局 less
+- 安装 `style-resources-loader`
+- `cnpm i style-resources-loader`
+- [github仓库](https://github.com/yenshih/style-resources-loader)
+```
+  // common function to get style loaders
+  const getStyleLoaders = (cssOptions, preProcessor) => {
+    const loaders = [
+      ...
+    ].filter(Boolean);
+    if (preProcessor) {
+      loaders.push(
+        {
+          loader: require.resolve('resolve-url-loader'),
+          options: {
+            sourceMap: isEnvProduction ? shouldUseSourceMap : isEnvDevelopment,
+            root: paths.appSrc,
+          },
+        },
+        {
+          loader: require.resolve(preProcessor),
+          options: {
+            sourceMap: true,
+          },
+        }
+      );
+    }
+    if (preProcessor === 'less-loader') {
+      loaders.push({
+        loader: 'style-resources-loader',
+        options: {
+          patterns: path.resolve(__dirname, '../src/styles/*.less'),
+          injector: 'append'
+        }
+      })
+    }
+    return loaders;
+  };
+```
+
 
 ### (3) css-module
 - 需要安装 node-sass
@@ -678,3 +718,58 @@ export const useDebounce: IuseDebounce = (
 - 原因：端口被占用，如果有别的项目中也使用到了 webpack-bundle-analyzer 时就会产生端口调用
 - 解决: 关闭其他项目的服务
 - 该项目已经在开发环境添加了 webpack-bundle-analyzer 分析
+
+
+### (18) 在react中如果通过create-react-app创建的项目，之后想加Typescript配置
+- 1.同过配置别名时已经做了相关配置了
+- 2.在1的基础上在 `scr` 文件夹中添加 `global.d.ts` 配置文件
+
+
+# (九) TS 相关
+
+## (1) tsconfig.json
+- [官网介绍](https://www.tslang.cn/docs/handbook/tsconfig-json.html)
+- [顶级属性](http://json.schemastore.org/tsconfig)
+- 如果项目中存在 `tsconfig.json` 代表着这个目录是Typescript项目的 `根目录`
+- `tsconfig.json`文件中指定了编译这个项目的 ( 根文件 ) 和 ( 编译选项 )
+  - 根文件
+  - 编译选项
+### (1-1) @types, typeRoots, types
+  - **@types**: 默认所有可见的@types包会在 `编译过程中被包含进来`，比如 `node_modules/@type/...`
+  - **typeRoots**: 如果指定了`typeRoots`，则只有typeRoots下面的包才会包含进来
+  - **types**: 只有被列举的包才会包含进来
+```1
+{
+  "compilerOptions": {
+    "typeRoots" : ["./typings"]
+  }
+}
+表示：这个配置文件会包含 ./typings 下面的包，而不包含 ./node_modules/@types 里面的包
+```
+```2
+{
+  "compilerOptions": {
+    "types" : ["node", "lodash", "express"]
+  }
+}
+表示：
+1. 这个tsconfig.json文件将仅会包含 ./node_modules/@types/node，./node_modules/@types/lodash和./node_modules/@types/express
+2. /@types/。 node_modules/@types/*里面的其它包不会被引入进来
+```
+
+### (1-2) extends 
+- tsconfig.json文件可以利用 `extends` 属性从 `另一个配置文件里继承配置`
+- **extends**的值是一个字符串，表示继承文件的**路径**
+- **源文件的配置先被加载，然后被继承文件中的配置重写**，如果循环引用就会报错
+- 顶级属性
+
+### (1-3) compilerOptions 编译选项 
+- **allowJs**
+  - boolean，默认值false，表示允许编译js文件
+- **declaration**
+  - boolean，默认值false，表示生成相应的 .d.ts 文件
+- **jsx**
+  - 表示在 .tsx 文件中支持jsx
+
+
+## (2) 如何编写 .d.ts

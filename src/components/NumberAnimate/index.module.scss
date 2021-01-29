@@ -1,0 +1,41 @@
+.wheel {
+  width: 22px;
+  height: 21px;
+  background: red;
+  overflow: hidden;
+  display: inline-block;
+  .wheelWrapDown {
+    display: inline-block;
+    animation: down 1s ease-in-out;
+  }
+  .wheelWrapUp {
+    display: inline-block;
+    animation: up 1s ease-in-out;
+  }
+}
+
+.wheelItem {
+  width: 12px;
+  height: 21px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes down {
+  from {
+    transform: translateY(-100%+20px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes up {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-100%);
+  }
+}
