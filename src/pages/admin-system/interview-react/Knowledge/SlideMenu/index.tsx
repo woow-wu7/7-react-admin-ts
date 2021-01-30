@@ -15,7 +15,7 @@ const SlideMenu = () => {
   useEffect(() => {
     // marker: 标记
     // market: 超市
-    const indicator = (target: any) => {
+    const indicator = (target: any): void => {
       if (markerRef.current) {
         // offsetLeft => 每个a标签距离父元素的left差值
         // width增加4，则left减少2，就能保证居中
@@ -33,7 +33,6 @@ const SlideMenu = () => {
 
     // 第一个标签默认选中
     indicator(firstMarkerRef.current)
-    
   }, [])
   const renderLinks = () => links.map(({ name, url }) => <div key={name}><a href={url} target="blank">{name}</a></div>)
   return (
@@ -43,15 +42,15 @@ const SlideMenu = () => {
       <div className="slide-menu-content-wrap">
         <div className="slide-menu-content">
           <div className="marker" ref={markerRef}></div>
-          <a href="#" ref={firstMarkerRef}>地址1</a>
-          <a href="#">地址2</a>
-          <a href="#">地址3</a>
-          <a href="#">地址4</a>
-          <a href="#">地址5</a>
-          <a href="#">地址6</a>
-          <a href="#">地址7</a>
-          <a href="#">地址8</a>
-          <a href="#">地址9</a>
+          <a href="www.baidu.com" ref={firstMarkerRef}>地址1</a>
+          <a href="www.baidu.com">地址2</a>
+          <a href="www.baidu.com">地址3</a>
+          <a href="www.baidu.com">地址4</a>
+          <a href="www.baidu.com">地址5</a>
+          <a href="www.baidu.com">地址6</a>
+          <a href="www.baidu.com">地址7</a>
+          <a href="www.baidu.com">地址8</a>
+          <a href="www.baidu.com">地址9</a>
         </div>
       </div>
 

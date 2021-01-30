@@ -42,6 +42,59 @@
 # (四) 代码规范相关 ( 1-9 )
 
 * [x] 123456789
+
+
+### (1) eslint
+- **eslint**
+  - [eslint官网](https://cn.eslint.org/docs/user-guide/command-line-interface)
+- **eslint-plugin-import**
+  - 用来校验import/export语法，防止 ( 文件路径 ) 和 ( 导出名称 ) 错误
+  - [eslint-plugin-import官网](https://github.com/benmosher/eslint-plugin-import)
+- **eslint-plugin-react**
+  - [eslint-plugin-react官网](https://github.com/yannickcr/eslint-plugin-react)
+- **eslint-plugin-jsx-a11y**
+  - [eslint-plugin-jsx-a11y官网](https://github.com/jsx-eslint/eslint-plugin-jsx-a11y)
+- 教程
+  - [教程0 - TS + react + eslint](https://zhuanlan.zhihu.com/p/62401626?from_voters_page=true)
+  - [教程1 - 自动](https://juejin.cn/post/6844904056591220750#heading-0)
+  - [教程2 - 手动](https://segmentfault.com/a/1190000020379876?utm_source=tag-newest)
+- **手动安装过程**
+```
+
+(1) 安装
+- npm install -D eslint @typescript-eslint/parser @typescript-eslint/eslint-plugin
+
+(2) 新建 .eslintrc.js 和 .eslintignore 两个文件
+
+(3) 配置 .eslintrc.js 文件
+module.exports = {
+  parser: "@typescript-eslint/parser",
+  extends: ["react-app", "plugin:@typescript-eslint/recommended"],
+  plugins: ["@typescript-eslint", "react"],
+  rules: {
+    "no-console": 0,
+    "@typescript-eslint/no-empty-function": 0,
+    "@typescript-eslint/no-explicit-any": 0,
+    "no-use-before-define": 0,
+    "@typescript-eslint/explicit-module-boundary-types": 0,
+    "react-hooks/exhaustive-deps": 0,
+  },
+};
+
+```
+- **自动安装过程**
+```
+(1) 安装 npm install -D eslint
+
+(2) 在项目根目录中，执行命令 npx eslint --init
+
+(3) 执行2的命令后，会进入交互式界面，可根据上面的 [教程1] 进行配置，这个过程可能安装依赖时会报错，不行就自行安装依赖吧
+
+(4) 经过23后，就会自动生成 .eslintrc.js 文件，并且配置好了
+```
+
+
+
 ### (1) commitlint
 - [官网教程](https://github.com/conventional-changelog/commitlint)
 - 安装
