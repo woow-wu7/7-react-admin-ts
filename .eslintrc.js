@@ -1,17 +1,21 @@
 /* eslint-disable */
 module.exports = {
-  parser: "@typescript-eslint/parser",
-  extends: ["react-app", "plugin:@typescript-eslint/recommended"],
-  plugins: ["@typescript-eslint", "react"],
+  parser: '@typescript-eslint/parser',
+  extends: [
+    'react-app',
+    'plugin:@typescript-eslint/recommended',
+    //  "plugin:prettier/recommended" 暂不开启
+  ],
+  plugins: ['@typescript-eslint', 'react'],
   rules: {
-    "no-console": 0,
-    "@typescript-eslint/no-empty-function": 0,
-    "@typescript-eslint/no-explicit-any": 0,
-    "no-use-before-define": 0,
-    "@typescript-eslint/explicit-module-boundary-types": 0,
-    "react-hooks/exhaustive-deps": 0,
-    "jsx-a11y/anchor-is-valid": 0,
-    "@typescript-eslint/explicit-function-return-type": 0,
+    'no-console': 0,
+    '@typescript-eslint/no-empty-function': 0,
+    '@typescript-eslint/no-explicit-any': 0,
+    'no-use-before-define': 0,
+    '@typescript-eslint/explicit-module-boundary-types': 0,
+    'react-hooks/exhaustive-deps': 0,
+    'jsx-a11y/anchor-is-valid': 0,
+    '@typescript-eslint/explicit-function-return-type': 0,
   },
 
   // "extends": ["react-app"],
@@ -48,5 +52,5 @@ module.exports = {
   //   // "semi-spacing": [2, {"before": false, "after": true}], // 强制分号前后不允许空格
   //   // "no-const-assign": 2, //禁止修改const声明的变量
   // },
-};
+}
 /* eslint-disable */

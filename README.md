@@ -1,13 +1,15 @@
 # (一) 技术栈
-` ts + react-hooks + react-router-dom@5.2.0 + redux@^4.0.5 + react-redux + axios`   
+` ts + react-hooks + react-router-dom@5.2.0 + redux@^4.0.5 + react-redux + axios`
 
-` styled-components + echarts + antd `  
+` styled-components + echarts + antd `
 
 ` redux-logger + redux-thunk 中间件`
 
-` 通过 create-react-app 脚手架构建 `   
+` 通过 create-react-app 脚手架构建 `
 
 [本项目构建过程记录博客](https://juejin.im/post/6879020830253285384)
+
+
 
 # (二) 主要功能
 ```
@@ -26,25 +28,100 @@
     - 具体在本项目 src/SOURCE-CODE-ANALYSIS 文件夹中
 ```
 
+
+
 # (三) 源码分析
 ### (1) redux 和 react-redux 源码分析 [redux^4.0.5]
 - [redux源码分析-仓库](https://github.com/woow-wu7/7-react-admin-ts/tree/master/src/SOURCE-CODE-ANALYSIS/REDUX)
-- [redux源码分析-我的掘金博客](https://juejin.cn/post/6844904137952329742) 
+- [redux源码分析-我的掘金博客](https://juejin.cn/post/6844904137952329742)
 ### (2) 手写 webpack Compiler 源码 [webpack^4.42.0]
 - [手写Compiler源码-仓库](https://github.com/woow-wu7/7-compiler)
 - [手写Compiler源码-我的掘金文章](https://juejin.cn/post/6844903973002936327)
-
 ### (3) axios 源码分析 [axios^0.20.0]
 - [axios源码分析-仓库](https://github.com/woow-wu7/7-react-admin-ts/tree/master/src/SOURCE-CODE-ANALYSIS/AXIOS)
 - [axios源码分析-我的掘金文章](https://juejin.cn/post/6844904147532120072)
 
 
-# (四) 代码规范相关 ( 1-9 )
 
+
+# (四) 代码规范相关 ( 1-9 )
 * [x] 123456789
 
+>安装 husky + lint-staged + commitlint + eslint + stylelint + prettier + EditorConfig
 
-### (1) eslint
+### (1) EditorConfig
+- [EditorConfig官网](https://editorconfig.org/)
+- [EditorConfig教程](https://juejin.cn/post/6860440041039069191#heading-0)
+- 作用
+  - EditorConfig 可以帮助开发者在不同的编辑器和IDE之间定义和维护一致的代码风格
+- 重点规则
+  - **[*]** 表示用于所有文件的规则
+  - **[.md]** 表示用于.md文件的规则
+  - **indent_style=space** 表示当键下tab键时使用软选项卡填充缩进，也就是使用 ( 空格 ) 填充
+  - **indent_style=tab** 表示键下tab键时使用硬选项卡填充缩进，也就是使用 ( \t ) 填充
+  - **indent_size=2** 表示两个空格
+  - **trim_trailing_whitespace=true** 表示将换行符前面的空格删除掉 `trim: 修剪` `trailing: 尾部`
+  - **insert_final_newline=true** 确保文件保存的时候以换行符结尾，即文件末尾会多一行空行
+- 配置步骤
+  - 1.在vscode中下载 `EditorConfig for VSCode` 插件，该插件在保存时会执行.editorconfig中指定的规则
+  - 2.新建 `.editorconfig` 文件
+```
+root=true
+
+[*]
+indent_style = space
+indent_size = 2
+end_of_line = lf
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = true
+```
+
+### (2) husky + lint-staged
+- [husky官网](https://typicode.github.io/husky/#/)
+- [lint-staged官网](https://github.com/okonet/lint-staged)
+- [教程](https://juejin.cn/post/6879955438482227207)
+- 配置步骤
+  - 1.安装npm install -D husky lint-staged
+  - 2.在 `package.json` 文件中配置 `husky` 和 `lint-staged` 配置项
+  - 3.如果在 `husky => hooks => pre-commit`中用到eslint,就需要配置`.eslintrc.js`和`.eslintignore`不然会报错
+  - 4.在配置中就用到了几乎所有代码规范的配置 `husky + lint-staged + commitlint + eslint + styleslnt + prettier`
+- package.json配置如下
+```
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "lint-staged": {
+    "*.{ts,tsx,js,jsx}": [
+      "eslint --config .eslintrc.js --fix"
+    ],
+    "*.{css,less}": [
+      "stylelint --config .stylelintrc.js --fix"
+    ],
+    "*.{ts,tsx,js,jsx,css,less}": "prettier --write --ignore-unknown"
+  }
+```
+
+### (3) commitlint
+- [commitlint官网](https://github.com/conventional-changelog/commitlint)
+- 配置步骤
+  - 1.安装npm install --save-dev @commitlint/config-conventional @commitlint/cli
+  - 2.安装npm install --save-dev husky
+  - 3.新建.huskyrc文件或者在`package.json`中配置`husky`选项
+  - 4.新建 `.commitlintrc.js` 注意是js文件，不能是ts，或者.commitlintrc.json等
+  - 5.在`.commitlintrc.js`中添加扩展`@commitlint/config-conventional` // conventional: 传统的
+```
+在 .commitlintrc.js 中配置如下
+
+module.exports = {
+  extends: ['@commitlint/config-conventional']
+};
+```
+
+### (4) eslint
 - **eslint**
   - [eslint官网](https://cn.eslint.org/docs/user-guide/command-line-interface)
 - **eslint-plugin-import**
@@ -58,9 +135,9 @@
   - [教程0 - TS + react + eslint](https://zhuanlan.zhihu.com/p/62401626?from_voters_page=true)
   - [教程1 - 自动](https://juejin.cn/post/6844904056591220750#heading-0)
   - [教程2 - 手动](https://segmentfault.com/a/1190000020379876?utm_source=tag-newest)
-- **手动安装过程**
-```
 
+- **手动配置步骤**
+```
 (1) 安装
 - npm install -D eslint @typescript-eslint/parser @typescript-eslint/eslint-plugin
 
@@ -82,7 +159,8 @@ module.exports = {
 };
 
 ```
-- **自动安装过程**
+
+- **自动配置步骤**
 ```
 (1) 安装 npm install -D eslint
 
@@ -93,66 +171,15 @@ module.exports = {
 (4) 经过23后，就会自动生成 .eslintrc.js 文件，并且配置好了
 ```
 
-
-
-### (1) commitlint
-- [官网教程](https://github.com/conventional-changelog/commitlint)
-- 安装
-  - npm install --save-dev @commitlint/config-conventional @commitlint/cli
-  - npm install --save-dev husky
-- 新建
-  - 新建.huskyrc文件或者在package.json中配置husky选项
-  - 新建 `commitlint.config.js` 注意是js文件，不能是ts，或者`.commitlintrc.json`等
-  - `commitlint.config.js`中添加扩展`@commitlint/config-conventional`
-```
-commitlint.config.js
------
-module.exports = {
-  extends: ['@commitlint/config-conventional']
-}
-```
-
-### (2) husky
-- [官网教程](https://typicode.github.io/husky/#/)
-- 安装
-  - yarn add husky --save-dev
-- 配置
-  - 在 `package.json` 中配置 `husky` 字段
-
-### (3) lint-staged 
-- [官网教程](https://github.com/okonet/lint-staged)
-- 安装
-  - yarn add lint-staged -save-dev
-- 相关案例
-  - [tianbo-h5](https://github.com/woow-wu/tianbo-h5)
-- 配置
-  - lint-stage
-  - .eslintrc.js
-  - .eslintignore
-    - 在 `package.json` 中配置  `"lint-staged"` 字段
-    - 如果使用 `pre-commit`中用到 `eslint` 就需要配置 `.eslintrc.js` 和 `.eslintignore` 不然会报错
-    - 在 `.eslintrc.js` 中，通过 `/* eslint-disable */` 
-
-### (4) eslint
-- [官网教程](https://cn.eslint.org/docs/user-guide/command-line-interface)
-- [配置实例详细教程](https://juejin.im/post/6844904056591220750#heading-4)
-
 ### (5) stylelint
-- [官网教程](https://stylelint.io/)
-- npm install --save-dev stylelint stylelint-config-standard
-- .stylelintrc.js
-- stylelint 
-- stylelint-config-standard
-- stylelint-scss
-- stylelint-webpack-plugin
-- 然后添加到 `husky` 的 `hooks` 中
-
+- [stylelint官网](https://stylelint.io/user-guide/get-started)
+- 配置步骤
+  - 1.npm install --save-dev stylelint stylelint-config-standard
+  - 2.npm install -D stylelint-scss stylelint-webpack-plugin
+  - 3.新建`.stylelintrc.js`
+  - 4.然后添加到 `husky` 的 `hooks` 中
+- package.json 配置如下
 ```
-1,2,3,4,5
-```
-```
-package.json
------
 "husky": {
     "hooks": {
       "pre-commit": "lint-staged",
@@ -161,16 +188,54 @@ package.json
   },
   "lint-staged": {
     "*.{ts,tsx,js}": [
-      "eslint --config .eslintrc.js"
+      "eslint --config .eslintrc.js --fix"
     ],
     "*.{css,sass,scss}": [
-      "stylelint --fix",
+      "stylelint --config .stylelintrc.js --fix",
       "git add"
     ]
   }
 ```
 
-### (6) git提交规范
+
+### (6) prettier
+- [prettier官网](https://github.com/prettier/prettier)
+- [prettier教程](https://segmentfault.com/a/1190000020379876)
+- 配置步骤
+  - 1.npm i -D prettier eslint-config-prettier eslint-plugin-prettier
+  - 2.新建 `.prettierrc.js` 文件
+  - 3.同时修改 `.eslintrc.js` 中的配置
+- .prettierrc.js配置如下
+```
+module.exports = {
+  printWidth: 120, //一行的字符数，如果超过会进行换行，默认为80
+  tabWidth: 2, //一个tab代表几个空格数，默认为2
+  singleQuote: true,
+  semi: false,
+}
+```
+- .eslintrc.js配置如下
+```
+module.exports = {
+  parser: '@typescript-eslint/parser',
+  extends: [
+    'react-app',
+    'plugin:@typescript-eslint/recommended',
+    //  "plugin:prettier/recommended" 暂不开启
+  ],
+  plugins: ['@typescript-eslint', 'react', 'prettier'],
+  rules: {
+    'no-console': 0,
+    '@typescript-eslint/no-empty-function': 0,
+    '@typescript-eslint/no-explicit-any': 0,
+    'no-use-before-define': 0,
+    '@typescript-eslint/explicit-module-boundary-types': 0,
+    'react-hooks/exhaustive-deps': 0,
+  },
+}
+```
+
+### (7) git提交规范
 - [文档](http://www.ruanyifeng.com/blog/2016/01/commit_message_change_log.html)
 - feat: 新功能 feature
 - fix: 修复bug
@@ -180,22 +245,13 @@ package.json
 - chore：构建过程 或 辅助工具的变动 (chore：日常事务，乏味无趣的工作的意思)
 - style：格式（不影响代码运行的变动）
 
-### (7) js注释规范
+### (8) js注释规范
 - http://www.shouce.ren/api/view/a/13269
 
-### (8) react-hooks 的 eslint 规范插件
+### (9) react-hooks 的 eslint 规范插件
 - `eslint-plugin-react-hooks`
 - [eslint-plugin-react-hooks地址](https://www.npmjs.com/package/eslint-plugin-react-hooks)
 
-
-### (9) prettier
-- eslint负责语法正误，prettier负责样式美化
-- 所需要的包
-  - prettier 
-  - eslint-config-prettier
-  - eslint-plugin-prettier
-- 安装
-  - npm install prettier --save-dev --save-exact
 
 
 
@@ -213,7 +269,7 @@ package.json
 - **react-router-dom中的hooks**
   - useHistory
   - useLocation
-  - useParams 
+  - useParams
     - ` useParams只有在动态路由对应的组件中可以获取到，在父组件或者其他组件都不能后去到 `
     - ` 做全局 面包屑的时候容易采坑 `
   - useRouteMatch
@@ -410,7 +466,7 @@ SYSTEMTYPE2.ADMIN =========> 0
   - mode：模式，比如 'sync'
 - 返回值
   - context导出的 require() 函数
-- require() 函数 
+- require() 函数
   - 参数：request
   - 属性
     - resolve函数，它返回request被解析后得到的 ( 模块id )，可能在 module.hot.accept 时会用到
@@ -540,7 +596,7 @@ rules: {
 
 ### (6) antdMenu Sider inlineCollapsed 报错
 - Warning: [antd: Menu] `inlineCollapsed` not control Menu under Sider. Should set `collapsed` on Sider instead.
-- mene的inlineCollapsed在有Sider父组件时，不能操作Sider，必须用Sider的collapsed属性来操作Silder展开/收缩   
+- mene的inlineCollapsed在有Sider父组件时，不能操作Sider，必须用Sider的collapsed属性来操作Silder展开/收缩
 
 
 ### (7) echarts初始化时超出容器的宽度
@@ -595,7 +651,7 @@ server {
 		index index.html index.htm;
 		try_files $uri $uri/  /index.html;
 	}
-	
+
 	location /api {
 		proxy_pass  http://49.233.215.163:7001; // 因为egg启动的是7001端口
 	}
@@ -650,7 +706,7 @@ function routesFilter(routes, role) {
     let { meta, subs } = route;
     if (subs) {
       route.subs = routesFilter(subs, role);
-      // 坑：这里有个巨坑，这里一定要用route.subs 
+      // 坑：这里有个巨坑，这里一定要用route.subs
       // 例如: subs = routesFilter(subs, role);
       // 说明：不能用 subs， 因为subs是新声明的变量，直接替换了整个subs后，不会影响route.subs
     }
@@ -674,7 +730,7 @@ function routesFilter(routes, role) {
     console.log(openKeys, 'onOpenChange执行了')
     setOpenKeys(() => openKeys)
     setLocalStorage(CONST.OPENKEYS, openKeys) // 记住展开关闭的组，刷新持久化
-  } 
+  }
 
   // const onOpenChange = (openKeys: any) => {
   //   console.log(openKeys, 'onOpenChange执行了')
@@ -810,13 +866,13 @@ export const useDebounce: IuseDebounce = (
 2. /@types/。 node_modules/@types/*里面的其它包不会被引入进来
 ```
 
-### (1-2) extends 
+### (1-2) extends
 - tsconfig.json文件可以利用 `extends` 属性从 `另一个配置文件里继承配置`
 - **extends**的值是一个字符串，表示继承文件的**路径**
 - **源文件的配置先被加载，然后被继承文件中的配置重写**，如果循环引用就会报错
 - 顶级属性
 
-### (1-3) compilerOptions 编译选项 
+### (1-3) compilerOptions 编译选项
 - **allowJs**
   - boolean，默认值false，表示允许编译js文件
 - **declaration**

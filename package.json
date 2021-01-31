@@ -170,12 +170,12 @@
     "@typescript-eslint/eslint-plugin": "^2.34.0",
     "@typescript-eslint/parser": "^2.34.0",
     "babel-plugin-import": "^1.13.0",
-    "eslint-config-prettier": "^6.13.0",
-    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-config-prettier": "^6.15.0",
+    "eslint-plugin-prettier": "^3.3.1",
     "eslint-plugin-react-hooks": "^1.7.0",
     "husky": "^4.3.0",
     "node-sass": "^4.14.1",
-    "prettier": "2.1.2",
+    "prettier": "^2.1.2",
     "redux-devtools": "^3.7.0",
     "styled-components": "^5.2.0",
     "stylelint": "^13.6.1",
@@ -195,9 +195,10 @@
       "eslint --config .eslintrc.js --fix"
     ],
     "*.{css,sass,scss}": [
-      "stylelint --fix",
+      "stylelint --config .stylelintrc.js --fix",
       "git add"
-    ]
+    ],
+    "*.{ts,tsx,js,jsx,css,sass,scss}": "prettier --write --ignore-unknown"
   },
   "resolutions": {
     "styled-components": "^5"
