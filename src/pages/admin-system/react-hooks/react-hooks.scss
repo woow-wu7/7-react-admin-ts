@@ -58,7 +58,7 @@
     position: fixed;
     top: calc(60px + 36px + 14px);
     // top: calc(60px + 14px + 36px + 14px); // 注意：这里这样是由间隙的，需要将 ( top-14px ), ( paddingTop+14px )
-    left: calc(200px + 14px); // padding+menu
+    left: calc(200px + 54px); // padding+menu
     right: calc(14px + 14px + 6px); // 两个padding+滚动条
     z-index: 9999;
     background: #fff;
