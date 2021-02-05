@@ -5,7 +5,7 @@ const ReactRouterHooks = () => {
   const history = useHistory()
 
   const goDetail = () => {
-    history.push('/admin-react-router/hooks/77')
+    history.push('/admin-react/admin-react-router/hooks/77')
   }
 
   return (
@@ -15,8 +15,8 @@ const ReactRouterHooks = () => {
       <br />
       <button onClick={goDetail}>详情分析页 - 验证useParams，useRouteMatch</button>
 
-      <br/>
-      <br/>
+      <br />
+      <br />
       <a href="https://reactrouter.com/web/guides/quick-start">官网链接</a>
     </div>
   )

@@ -7,7 +7,6 @@ import { useSelector } from 'react-redux'
 import autoRequire from './auto-require' // 自动引入模块，解决头部很多import
 import './interview-react.scss'
 
-
 const InterviewReact = () => {
   const {
     Diff,
@@ -39,7 +38,7 @@ const InterviewReact = () => {
     Garbage, // 垃圾回收机制
     FrontendModule, // 前端模块化
     ReduxSourceCode, // redux 和 react-redux 源码
-    AxiosCancelToken, // Axios CancelToken 取消请求 
+    AxiosCancelToken, // Axios CancelToken 取消请求
     DocumentObjectModel, // DOM文档对象模型
     EventLoop, // node 和 js 的事件轮询
     SlideMenu,
@@ -47,8 +46,14 @@ const InterviewReact = () => {
   } = autoRequire() as any
 
   const scrollRef = useSelector((state: { admin: { scrollContainer: HTMLDivElement } }) => state.admin.scrollContainer)
+
+  // const testSentry = () => {
+  //   console.log('sentry测试');
+  //   throw new Error('第一个sentry错误')
+  // }
   return (
     <div className="interview-react">
+      {/* <button onClick={testSentry}>Sentry测试</button> */}
       {/* 进度条 */}
       <SmartProgress
         scrollRef={scrollRef}
@@ -67,7 +72,9 @@ const InterviewReact = () => {
       <VisibilityDisplay />
       <InlineBlock />
       <Triangle />
+      {/* 一些动画 */}
       <Animates />
+      <SlideMenu />
       <Progress />
       <BoxSizing />
       <OnePx />
@@ -94,7 +101,6 @@ const InterviewReact = () => {
       <AxiosCancelToken />
       <Storage />
       <EventLoop />
-      <SlideMenu />
       <DocumentObjectModel />
     </div>
   )
