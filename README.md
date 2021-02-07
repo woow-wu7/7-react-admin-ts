@@ -1,9 +1,11 @@
 # (一) 技术栈
-` ts + react-hooks + react-router-dom@5.2.0 + redux@^4.0.5 + react-redux + axios`
+` ts + react-hooks + react-router-dom@5.2.0 + redux@^4.0.5 + react-redux + axios `
+
+` husky + lint-staged + commitlint + eslint + stylelint + prettier + EditorConfig `
 
 ` styled-components + echarts + antd `
 
-` redux-logger + redux-thunk 中间件`
+` redux-logger + redux-thunk 中间件 `
 
 ` 通过 create-react-app 脚手架构建 `
 
