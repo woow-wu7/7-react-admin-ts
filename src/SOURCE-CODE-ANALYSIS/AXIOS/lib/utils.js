@@ -1,14 +1,12 @@
-
-
 /* eslint-disable */
 
-var bind = require('./helpers/bind');
+var bind = require('./helpers/bind')
 
 /*global toString:true*/
 
 // utils is a library of generic helper functions non-specific to axios
 
-var toString = Object.prototype.toString;
+var toString = Object.prototype.toString
 
 /**
  * Determine if a value is an Array
@@ -18,7 +16,7 @@ var toString = Object.prototype.toString;
  */
 // -------------------------------------------------------------------------- isArray函数
 function isArray(val) {
-  return toString.call(val) === '[object Array]';
+  return toString.call(val) === '[object Array]'
 }
 
 /**
@@ -28,7 +26,7 @@ function isArray(val) {
  * @returns {boolean} True if the value is undefined, otherwise false
  */
 function isUndefined(val) {
-  return typeof val === 'undefined';
+  return typeof val === 'undefined'
 }
 
 /**
@@ -38,8 +36,14 @@ function isUndefined(val) {
  * @returns {boolean} True if value is a Buffer, otherwise false
  */
 function isBuffer(val) {
-  return val !== null && !isUndefined(val) && val.constructor !== null && !isUndefined(val.constructor)
-    && typeof val.constructor.isBuffer === 'function' && val.constructor.isBuffer(val);
+  return (
+    val !== null &&
+    !isUndefined(val) &&
+    val.constructor !== null &&
+    !isUndefined(val.constructor) &&
+    typeof val.constructor.isBuffer === 'function' &&
+    val.constructor.isBuffer(val)
+  )
 }
 
 /**
@@ -49,12 +53,12 @@ function isBuffer(val) {
  * @returns {boolean} True if value is an ArrayBuffer, otherwise false
  */
 function isArrayBuffer(val) {
-  return toString.call(val) === '[object ArrayBuffer]';
+  return toString.call(val) === '[object ArrayBuffer]'
 }
 
 /**
  * Determine if a value is a FormData
- * // 确定值是不是 FormData 
+ * // 确定值是不是 FormData
  * // determin: 确定
  *
  * @param {Object} val The value to test
@@ -62,7 +66,7 @@ function isArrayBuffer(val) {
  */
 // -------------------------------------------------------------------------- isFormData
 function isFormData(val) {
-  return (typeof FormData !== 'undefined') && (val instanceof FormData);
+  return typeof FormData !== 'undefined' && val instanceof FormData
   // 如果: 环境支持FormData, 并且val是FormData的实例，就返回 true
   // 否则: 返回false
 }
@@ -74,13 +78,13 @@ function isFormData(val) {
  * @returns {boolean} True if value is a view on an ArrayBuffer, otherwise false
  */
 function isArrayBufferView(val) {
-  var result;
-  if ((typeof ArrayBuffer !== 'undefined') && (ArrayBuffer.isView)) {
-    result = ArrayBuffer.isView(val);
+  var result
+  if (typeof ArrayBuffer !== 'undefined' && ArrayBuffer.isView) {
+    result = ArrayBuffer.isView(val)
   } else {
-    result = (val) && (val.buffer) && (val.buffer instanceof ArrayBuffer);
+    result = val && val.buffer && val.buffer instanceof ArrayBuffer
   }
-  return result;
+  return result
 }
 
 /**
@@ -90,7 +94,7 @@ function isArrayBufferView(val) {
  * @returns {boolean} True if value is a String, otherwise false
  */
 function isString(val) {
-  return typeof val === 'string';
+  return typeof val === 'string'
 }
 
 /**
@@ -100,7 +104,7 @@ function isString(val) {
  * @returns {boolean} True if value is a Number, otherwise false
  */
 function isNumber(val) {
-  return typeof val === 'number';
+  return typeof val === 'number'
 }
 
 /**
@@ -110,7 +114,7 @@ function isNumber(val) {
  * @returns {boolean} True if value is an Object, otherwise false
  */
 function isObject(val) {
-  return val !== null && typeof val === 'object';
+  return val !== null && typeof val === 'object'
 }
 
 /**
@@ -125,13 +129,13 @@ function isObject(val) {
 function isPlainObject(val) {
   // 1. 首先要是一个对象
   if (toString.call(val) !== '[object Object]') {
-    return false;
+    return false
   }
 
   // 2. 当val的的原型对象是null或者Object.prototype时，返回true
   // 3. 即通过 ( Object.create(null)生成的对象 ) 或者通过 ( 对象字面量方式声明的对象 )
-  var prototype = Object.getPrototypeOf(val);
-  return prototype === null || prototype === Object.prototype;
+  var prototype = Object.getPrototypeOf(val)
+  return prototype === null || prototype === Object.prototype
 }
 
 /**
@@ -141,7 +145,7 @@ function isPlainObject(val) {
  * @returns {boolean} True if value is a Date, otherwise false
  */
 function isDate(val) {
-  return toString.call(val) === '[object Date]';
+  return toString.call(val) === '[object Date]'
 }
 
 /**
@@ -151,7 +155,7 @@ function isDate(val) {
  * @returns {boolean} True if value is a File, otherwise false
  */
 function isFile(val) {
-  return toString.call(val) === '[object File]';
+  return toString.call(val) === '[object File]'
 }
 
 /**
@@ -161,7 +165,7 @@ function isFile(val) {
  * @returns {boolean} True if value is a Blob, otherwise false
  */
 function isBlob(val) {
-  return toString.call(val) === '[object Blob]';
+  return toString.call(val) === '[object Blob]'
 }
 
 /**
@@ -171,7 +175,7 @@ function isBlob(val) {
  * @returns {boolean} True if value is a Function, otherwise false
  */
 function isFunction(val) {
-  return toString.call(val) === '[object Function]';
+  return toString.call(val) === '[object Function]'
 }
 
 /**
@@ -181,7 +185,7 @@ function isFunction(val) {
  * @returns {boolean} True if value is a Stream, otherwise false
  */
 function isStream(val) {
-  return isObject(val) && isFunction(val.pipe);
+  return isObject(val) && isFunction(val.pipe)
 }
 
 /**
@@ -191,7 +195,7 @@ function isStream(val) {
  * @returns {boolean} True if value is a URLSearchParams object, otherwise false
  */
 function isURLSearchParams(val) {
-  return typeof URLSearchParams !== 'undefined' && val instanceof URLSearchParams;
+  return typeof URLSearchParams !== 'undefined' && val instanceof URLSearchParams
 }
 
 /**
@@ -201,7 +205,7 @@ function isURLSearchParams(val) {
  * @returns {String} The String freed of excess whitespace
  */
 function trim(str) {
-  return str.replace(/^\s*/, '').replace(/\s*$/, '');
+  return str.replace(/^\s*/, '').replace(/\s*$/, '')
 }
 
 /**
@@ -220,15 +224,13 @@ function trim(str) {
  *  navigator.product -> 'NativeScript' or 'NS'
  */
 function isStandardBrowserEnv() {
-  if (typeof navigator !== 'undefined' && (navigator.product === 'ReactNative' ||
-                                           navigator.product === 'NativeScript' ||
-                                           navigator.product === 'NS')) {
-    return false;
+  if (
+    typeof navigator !== 'undefined' &&
+    (navigator.product === 'ReactNative' || navigator.product === 'NativeScript' || navigator.product === 'NS')
+  ) {
+    return false
   }
-  return (
-    typeof window !== 'undefined' &&
-    typeof document !== 'undefined'
-  );
+  return typeof window !== 'undefined' && typeof document !== 'undefined'
 }
 
 /**
@@ -253,36 +255,37 @@ function forEach(obj, fn) {
   if (obj === null || typeof obj === 'undefined') {
     // 1. obj是 null 或者 undefined 则直接返回
     // 2. 即 obj必须存在
-    return;
+    return
   }
 
   // Force an array if not already something iterable
   // (1) typeof => number string boolean undefined symbol function object 一共7种数据类型
   //      - 1. 上面排出了 null 和 undefined
-  //      - 2. 这里排除了 object
+  //      - 2. 这里排除了 object 和 array
   //      - 3. 剩下: number string boolean symbol function
-  //      - 4. 即: 将3种的几种类型包装成数组
+  //      - 4. 即: 将上面3剩下的几种类型包装成数组
   if (typeof obj !== 'object') {
     /*eslint no-param-reassign:0*/
-    obj = [obj];
+    obj = [obj]
   }
 
   // 到这里还剩: array, object 两种类型
+  // 为什么还剩两种类型，因为上面会将其他的类型都包装成数组，即还剩 typeof obj === 'object'的两种类型
   // 1. array
   if (isArray(obj)) {
-    // Iterate over array values 
+    // Iterate over array values
     // iterate: 是迭代的意思
     for (var i = 0, l = obj.length; i < l; i++) {
-      fn.call(null, obj[i], i, obj);
+      fn.call(null, obj[i], i, obj)
       // 调用 fn(obj[i], i, obj)
       // 其实就是 fn(value, index, 原数组)
     }
-  // 2. object
+    // 2. object
   } else {
     // Iterate over object keys
     for (var key in obj) {
       if (Object.prototype.hasOwnProperty.call(obj, key)) {
-        fn.call(null, obj[key], key, obj);
+        fn.call(null, obj[key], key, obj)
         // fn(value, key, 原对象)
       }
     }
@@ -309,24 +312,24 @@ function forEach(obj, fn) {
 // -------------------------------------------------------------------------- merge
 // 合并对象
 function merge(/* obj1, obj2, obj3, ... */) {
-  var result = {};
+  var result = {}
   function assignValue(val, key) {
     if (isPlainObject(result[key]) && isPlainObject(val)) {
-      result[key] = merge(result[key], val);
+      result[key] = merge(result[key], val)
     } else if (isPlainObject(val)) {
-      result[key] = merge({}, val);
+      result[key] = merge({}, val)
     } else if (isArray(val)) {
-      result[key] = val.slice();
+      result[key] = val.slice()
     } else {
-      result[key] = val;
+      result[key] = val
     }
   }
 
   for (var i = 0, l = arguments.length; i < l; i++) {
-    forEach(arguments[i], assignValue);
+    forEach(arguments[i], assignValue)
     // 遍历每个参数对象，并将每个对象的 assignValue(value, key, arguments[i]) 作为参数传入
   }
-  return result;
+  return result
 }
 
 /**
@@ -339,17 +342,19 @@ function merge(/* obj1, obj2, obj3, ... */) {
  */
 // -------------------------------------------------------------------------- extend函数
 function extend(a, b, thisArg) {
-  forEach(b, function assignValue(val, key) { // assign: 是分配，指定的意思
+  // assign: 是分配，指定的意思
+  forEach(b, function assignValue(val, key) {
+    // 这里的key，val就是参数b对象的key和value
     if (thisArg && typeof val === 'function') {
-      // 1. 遍历 b (对象或数组) 
+      // 1. 遍历 b (对象或数组)
       // 2. 如果 b 的某一个属性值是一个function，就绑定this后，复制到 a 上
       // 3. 如果 b 的某一个属性不是function, 直接拷贝到 a 上
-      a[key] = bind(val, thisArg);
+      a[key] = bind(val, thisArg)
     } else {
-      a[key] = val;
+      a[key] = val
     }
-  });
-  return a;
+  })
+  return a
 }
 
 /**
@@ -359,14 +364,14 @@ function extend(a, b, thisArg) {
  * @return {string} content value without BOM
  */
 function stripBOM(content) {
-  if (content.charCodeAt(0) === 0xFEFF) {
-    content = content.slice(1);
+  if (content.charCodeAt(0) === 0xfeff) {
+    content = content.slice(1)
   }
-  return content;
+  return content
 }
 
 module.exports = {
-  isArray: isArray,
+  isArray: isArray, // is开头的方法都是判断是不是该类型
   isArrayBuffer: isArrayBuffer,
   isBuffer: isBuffer,
   isFormData: isFormData, // isFormData 判断值是不是 FormData 的实例
@@ -387,7 +392,7 @@ module.exports = {
   merge: merge, // merge 合并
   extend: extend, // extend 继承
   trim: trim, // trim 修剪，去除字符串两端的空白字符
-  stripBOM: stripBOM
-};
+  stripBOM: stripBOM,
+}
 
 /* eslint-disable */

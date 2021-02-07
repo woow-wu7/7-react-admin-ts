@@ -9,9 +9,9 @@ import { setLocalStorage, getLocalStorage } from '@/utils'
 
 function App() {
   console.log(`%c${LOG_LOGO}`, 'color:red') // %c 样式占位符，在第二个参数中可以输入样式
-  console.log('process.env.NODE_ENV :>> ', process.env.NODE_ENV)
-  console.log('REACT_APP_AUTHOR :>> ', process.env.REACT_APP_AUTHOR) // .env
-  console.log('REACT_APP_CURRENT_ENVIRONMENT :>> ', process.env.REACT_APP_CURRENT_ENVIRONMENT) // development or production
+  // console.log('process.env.NODE_ENV :>> ', process.env.NODE_ENV)
+  // console.log('REACT_APP_AUTHOR :>> ', process.env.REACT_APP_AUTHOR) // .env
+  // console.log('REACT_APP_CURRENT_ENVIRONMENT :>> ', process.env.REACT_APP_CURRENT_ENVIRONMENT) // development or production
 
   // runTimes
   // 1. App组件执行的次数，初始渲染执行了 4 次

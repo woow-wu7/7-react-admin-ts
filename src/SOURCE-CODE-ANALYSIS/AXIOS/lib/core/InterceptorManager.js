@@ -1,10 +1,8 @@
-
-
-var utils = require('./../utils');
+var utils = require('./../utils')
 
 // ---------------------------------------------------------------- InterceptorManager构造函数
 function InterceptorManager() {
-  this.handlers = [];
+  this.handlers = []
   // handlers数组
   // 1. 成员是一个对象，该对象具有 fulfilled 和 rejected 属性
   // 2. stack: 栈
@@ -23,12 +21,19 @@ function InterceptorManager() {
  */
 // ---------------------------------------------------------------- use函数
 InterceptorManager.prototype.use = function use(fulfilled, rejected) {
-  this.handlers.push({ // 向 handlers 数组中添加 {}
-    fulfilled: fulfilled,
-    rejected: rejected
-  });
-  return this.handlers.length - 1;
-};
+  this.handlers.push({
+    // 向 handlers 数组中添加 {}
+    fulfilled: fulfilled, // fulfilled 和 rejected 是两个函数
+    rejected: rejected,
+  })
+  // 在真实的开发中，如果调用use
+  // 1. request
+  // axios.interceptors.request.use(config => config, err =>  Promise.reject(err))
+  // 2. response
+  // axios.interceptors.response.use(response => response, err => Promise.reject(err))
+
+  return this.handlers.length - 1 // 返回值类型的ID，用于eject操作
+}
 
 /**
  * Remove an interceptor from the stack
@@ -40,9 +45,9 @@ InterceptorManager.prototype.use = function use(fulfilled, rejected) {
 // ---------------------------------------------------------------- eject函数
 InterceptorManager.prototype.eject = function eject(id) {
   if (this.handlers[id]) {
-    this.handlers[id] = null; // 赋值为null
+    this.handlers[id] = null // 赋值为null
   }
-};
+}
 
 /**
  * Iterate over all the registered interceptors
@@ -54,18 +59,20 @@ InterceptorManager.prototype.eject = function eject(id) {
  */
 // ---------------------------------------------------------------- forEach函数
 InterceptorManager.prototype.forEach = function forEach(fn) {
-  utils.forEach(this.handlers, function forEachHandler(h) { // h 是 handlers[index]
+  utils.forEach(this.handlers, function forEachHandler(h) {
+    // h 是 handlers[index]
     // utils.forEach
     // 1. 因为：this.handlers 是一个数组
     // 2. 所以：遍历 this.handlers 数组，将每个数组成员对象作为参数h，传入 forEachHandler 函数
+    // 3. 在真实开发中，有两种调用forEach的情况，request和response来调用
     // 3. 调用 fn({
     //          fulfilled: fulfilled, // fulfilled 函数
     //          rejected: rejected, // rejected 函数
     //         })
     if (h !== null) {
-      fn(h);
+      fn(h)
     }
-  });
-};
+  })
+}
 
-module.exports = InterceptorManager;
+module.exports = InterceptorManager
