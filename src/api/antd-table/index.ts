@@ -3,7 +3,7 @@ import axios from '@/api/axios'
 export const getTableList = (params?: any) => {
   return axios({
     method: 'get',
-    url: '/api/table-list',
+    url: '/api/musics',
     params,
   })
 }
@@ -11,20 +11,19 @@ export const getTableList = (params?: any) => {
 export const addTableList = (body: any) => {
   return axios({
     method: 'post',
-    url: '/api/table-list/add',
+    url: '/api/musics/add',
     data: {
-      ...body
+      ...body,
     },
   })
 }
 
-
 export const delTableList = (id: number) => {
   return axios({
     method: 'post',
-    url: '/api/table-list/del',
+    url: '/api/musics/delete',
     data: {
-      id
+      id,
     },
   })
 }
@@ -32,9 +31,9 @@ export const delTableList = (id: number) => {
 export const updTableList = (body: any) => {
   return axios({
     method: 'post',
-    url: '/api/table-list/upd',
+    url: '/api/musics/edit',
     data: {
-      ...body
+      ...body,
     },
   })
 }

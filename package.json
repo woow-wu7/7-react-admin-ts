@@ -207,6 +207,6 @@
   },
   "#": "# 只是为了在json中做注释",
   "#proxy": "http://127.0.0.1:7002/",
-  "#https://api.10248.top/": "用来请求图片，验证取消请求用的",
-  "proxy": "https://api.10248.top/"
+  "#proxy2": "注意现在在package.json中proxy只能是字符串，要是对象的化直接去修改webpack把,webpackDevServer.config.js",
+  "#https://api.10248.top/": "用来请求图片，验证取消请求用的"
 }

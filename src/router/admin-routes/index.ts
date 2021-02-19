@@ -1,7 +1,7 @@
 import { IRouteModule } from '@/global/interface'
 import { lazyLoad } from '@/utils'
 
-const AdminHome = lazyLoad('@/pages/admin-system/home')
+// const AdminHome = lazyLoad('@/pages/admin-system/home')
 const UiAntdForm = lazyLoad('@/pages/admin-system/ui-antd-form')
 const UiAntdTable = lazyLoad('@/pages/admin-system/ui-antd-table/index.tsx')
 const UiAntdProTable = lazyLoad('@/pages/admin-system/ui-antd-protable/index.tsx')
@@ -24,7 +24,7 @@ const adminRoutes: IRouteModule[] = [
     icon: 'anticon-home--line',
     key: '/admin-home', // ------- title,icon,key主要用于menu中
     path: '/admin-home', // ------- path,component用于Route的注册
-    component: AdminHome,
+    component: UiAntdTable, // antd table来对接 java提供的数据
     meta: {
       // ------------------- meta 用于权限过滤，和menu,router,breadcrumb强相关
       needLoginAuth: true,

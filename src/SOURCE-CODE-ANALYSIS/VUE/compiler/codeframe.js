@@ -1,4 +1,6 @@
 /* @flow */
+/* eslint-disable */
+/* tslint-disable */
 
 const range = 2
 
@@ -45,3 +47,5 @@ function repeat(str, n) {
   }
   return result
 }
+/* eslint-disable */
+/* tslint-disable */

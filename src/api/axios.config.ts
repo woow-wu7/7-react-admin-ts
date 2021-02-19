@@ -1,4 +1,4 @@
-const HOST = process.env.NODE_ENV === 'development' ? '' : 'http://39.104.109.46:9090'
+const HOST = process.env.NODE_ENV === 'development' ? '' : ''
 
 export type TListWrap<P, R> = (
   params: P & { pageNum?: number; pageSize?: number; pageNo?: number }
