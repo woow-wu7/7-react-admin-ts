@@ -102,7 +102,7 @@ module.exports = function (proxy, allowedHost) {
     // `proxy` is run between `before` and `after` `webpack-dev-server` hooks
     proxy: {
       '/api': {
-        target: 'http://120.53.220.141:7777',
+        target: 'http://localhost:7777/',
         pathRewrite: {
           '^/api': '',
         },

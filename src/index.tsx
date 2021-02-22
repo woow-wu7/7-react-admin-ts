@@ -20,6 +20,7 @@ Sentry.init({
   tracesSampleRate: 1.0,
 })
 
+// TODO: 注意优先级 react-redux => router，用react-redux包裹router
 ReactDOM.render(
   <Provider store={store}>
     <Router getUserConfirmation={getUserConfirmation}>
