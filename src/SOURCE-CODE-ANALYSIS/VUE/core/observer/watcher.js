@@ -37,6 +37,12 @@ export default class Watcher {
   constructor(vm: Component, expOrFn: string | Function, cb: Function, options?: ?Object, isRenderWatcher?: boolean) {
     this.vm = vm
     if (isRenderWatcher) {
+      // 是渲染 watcher
+      // watcher分为三种
+      // 1. renderWatcher
+      // 2. computedWatcher
+      // 3. userWatcher => 用户自定义的watcher
+      // 三种watcher在subs数组中是有顺序的，computedWatcher会在renderWatcher前，保证render时计算完成
       vm._watcher = this
     }
     vm._watchers.push(this)
@@ -44,7 +50,7 @@ export default class Watcher {
     if (options) {
       this.deep = !!options.deep
       this.user = !!options.user
-      this.lazy = !!options.lazy
+      this.lazy = !!options.lazy // true就是computedWatcher
       this.sync = !!options.sync
       this.before = options.before
     } else {
@@ -62,7 +68,11 @@ export default class Watcher {
     // parse expression for getter
     if (typeof expOrFn === 'function') {
       this.getter = expOrFn
+      // 函数
+      // 1. 如果 第二个参数是 函数，则赋值给 getter
+      // 2. 什么时候是函数 => 比如 computed watcher 时
     } else {
+      // 字符串
       this.getter = parsePath(expOrFn)
       if (!this.getter) {
         this.getter = noop
@@ -75,7 +85,9 @@ export default class Watcher {
           )
       }
     }
+
     this.value = this.lazy ? undefined : this.get()
+    // 1. computedWatcher时 => lazy=true，就返回undefined，不会立即求值
   }
 
   /**
@@ -83,10 +95,25 @@ export default class Watcher {
    */
   get() {
     pushTarget(this)
+    // this就是当前的 watcher
+    // pushTarget() 作用
+    // 1. 向 targetStack 数组中 push 一个computed watcher
+    // 2. 将 Dep.target 指定为 computed watcher
+
+    // dep.pushTarget
+    // export function pushTarget(target: ?Watcher) {
+    //   targetStack.push(target)
+    //   Dep.target = target
+    // }
+
     let value
     const vm = this.vm
+
     try {
       value = this.getter.call(vm, vm)
+      // this.getter = expOrFn || noop
+      // 传入 vm 实例
+      // 当是 computed watcher 时，就是用户自定义的computed对象中的方法
     } catch (e) {
       if (this.user) {
         handleError(e, vm, `getter for watcher "${this.expression}"`)
@@ -98,9 +125,41 @@ export default class Watcher {
       // dependencies for deep watching
       if (this.deep) {
         traverse(value)
+        // export function traverse(val: any) {
+        //   _traverse(val, seenObjects)
+        //   seenObjects.clear()
+        // }
       }
+
       popTarget()
+      // 1. popTarget
+      // export function popTarget() {
+      //   targetStack.pop()
+      //   Dep.target = targetStack[targetStack.length - 1] 动态切换当前的watcher,即 Dep.target 的值
+      // }
+
+      //  2. popTarget()
+      // 1. targetStack.pop()将 computed watcher从targetStack数组中删除
+      // 2. 并且将 Dep.target 指定为数组中的前一个 watcher，没有了就是undefined
+
       this.cleanupDeps()
+      // cleanupDeps() {
+      //   let i = this.deps.length
+      //   while (i--) {
+      //     const dep = this.deps[i]
+      //     if (!this.newDepIds.has(dep.id)) {
+      //       dep.removeSub(this)
+      //     }
+      //   }
+      //   let tmp = this.depIds
+      //   this.depIds = this.newDepIds
+      //   this.newDepIds = tmp
+      //   this.newDepIds.clear()
+      //   tmp = this.deps
+      //   this.deps = this.newDeps
+      //   this.newDeps = tmp
+      //   this.newDeps.length = 0
+      // }
     }
     return value
   }
@@ -147,10 +206,15 @@ export default class Watcher {
   update() {
     /* istanbul ignore else */
     if (this.lazy) {
+      // A. computedWatcher
+      // this.lazy=true, 说明是 computedWatcher
+      // 将 this.dirty = true，则下次就会再次进入 watcher.evaluate() 进行计算
       this.dirty = true
     } else if (this.sync) {
       this.run()
     } else {
+      // C. renderWatcher
+      //  queueWatcher(this) => flushSchedulerQueue => watcher.run()
       queueWatcher(this)
     }
   }
@@ -192,7 +256,7 @@ export default class Watcher {
    */
   evaluate() {
     this.value = this.get()
-    this.dirty = false
+    this.dirty = false // 将 dirty = false
   }
 
   /**

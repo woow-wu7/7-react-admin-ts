@@ -1,4 +1,4 @@
-import compose from "./compose";
+import compose from './compose'
 
 /**
  * Creates a store enhancer that applies middleware to the dispatch method
@@ -28,21 +28,21 @@ export default function applyMiddleware(...middlewares) {
   return (createStore) => (...args) => {
     // createStore => 生成store, args是rest参数 => args是一个数组
     //  - 注意：这里的createStore(...args) 中第三个参数 enhancer 不存在，所以会返回函数内部定义的api，而不是调用enhancer高阶函数
-    const store = createStore(...args);
+    const store = createStore(...args)
     // 定义 dispatch 函数
     let dispatch = () => {
       throw new Error(
-        "Dispatching while constructing your middleware is not allowed. " +
-          "Other middleware would not be applied to this dispatch."
-      );
-    };
+        'Dispatching while constructing your middleware is not allowed. ' +
+          'Other middleware would not be applied to this dispatch.'
+      )
+    }
 
     const middlewareAPI = {
       getState: store.getState, // 从store实例上获取 getState 方法
-      dispatch: (...args) => dispatch(...args), //
-    };
+      dispatch: (...args) => dispatch(...args), // dispatch函数定义
+    }
 
-    const chain = middlewares.map((middleware) => middleware(middlewareAPI));
+    const chain = middlewares.map((middleware) => middleware(middlewareAPI))
     // chain
     // 1. 向每个传入的 ( 中间件 ) 中传入 ( middlewareAPI ) 参数
     // 2. 并且将中间件执行的结果返回，组成一个数组
@@ -52,7 +52,7 @@ export default function applyMiddleware(...middlewares) {
     // 1. 中间件必须满足 (dispatch, getState) => (next) => (action) => dispatch(action) 这样的格式
     // 2. middleware(middlewareAPI) 返回的是 (next) => (action) => dispatch(action) || ...
 
-    dispatch = compose(...chain)(store.dispatch);
+    dispatch = compose(...chain)(store.dispatch)
     // 1. compose() 方法
     // 2. 当参数是多个时的函数签名： (...funcs) => funcs.reduce((a, b) => (...args) => a(b(...args)))
     // 3. compose函数的作用：从右往左，将 ( 右边函数的返回值 ) 作为 ( 左边函数的参数传入 )
@@ -118,7 +118,7 @@ export default function applyMiddleware(...middlewares) {
     return {
       ...store,
       dispatch,
-    };
+    }
     // 返回
     // 1. store
     // 2. 覆盖store中的 dispatch 方法
@@ -129,5 +129,5 @@ export default function applyMiddleware(...middlewares) {
     // store上的dispatch方法，主要干了两件事情
     // 1. 传递action给reducer，更新state
     // 2. state更新后，执行监听数组中的所有监听函数listener
-  };
+  }
 }

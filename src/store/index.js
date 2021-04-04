@@ -22,9 +22,6 @@ const totalReducers = {
   interview: interviewReducer,
 }
 
-const store = createStore(
-  combineReducers(totalReducers),
-  composeWithDevTools(applyMiddleware(thunk, logger)) 
-)
+const store = createStore(combineReducers(totalReducers), composeWithDevTools(applyMiddleware(thunk, logger)))
 
 export default store
