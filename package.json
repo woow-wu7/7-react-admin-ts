@@ -186,13 +186,13 @@
     "stylelint-webpack-plugin": "^2.1.0",
     "webpack-bundle-analyzer": "^4.3.0"
   },
-  "husky": {
+  "#husky": {
     "hooks": {
       "pre-commit": "lint-staged",
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   },
-  "lint-staged": {
+  "#lint-staged": {
     "*.{ts,tsx,js}": [
       "eslint --config .eslintrc.js --fix"
     ],
