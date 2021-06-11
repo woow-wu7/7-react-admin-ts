@@ -1,8 +1,8 @@
 import actionType from './app.constant'
 
 // 系统选择
-  // admin
-  // bigScreen
+// admin
+// bigScreen
 export const changeSystemType = (payload: any) => {
   return {
     type: actionType.SYSTEM_TYPE,
@@ -11,10 +11,10 @@ export const changeSystemType = (payload: any) => {
 }
 
 // 获取登陆信息
-export const getLoginMessage = (loginMessage: { token: string, roles: string }) => {
+export const getLoginMessage = (loginMessage: { token: string; roles: string }) => {
   return {
     type: actionType.GET_LOGIN_MESSAGE,
-    payload: loginMessage
+    payload: loginMessage,
   }
 }
 
@@ -22,7 +22,7 @@ export const getLoginMessage = (loginMessage: { token: string, roles: string }) 
 export const getForceUpdate = (updateCount: number) => {
   return {
     type: actionType.GET_LOGIN_MESSAGE,
-    payload: updateCount
+    payload: updateCount,
   }
 }
 
@@ -31,7 +31,7 @@ export const getForceUpdate = (updateCount: number) => {
 export const getLastBreadCrumbUseParams = (params: string) => {
   return {
     type: actionType.GETLASTBREADCRUMBUSEPARAMS,
-    payload: params
+    payload: params,
   }
 }
 
@@ -39,6 +39,6 @@ export const getLastBreadCrumbUseParams = (params: string) => {
 export const getSelectKeys = (params: any[]) => {
   return {
     type: actionType.SELECT_KEYS,
-    payload: params
+    payload: params,
   }
 }

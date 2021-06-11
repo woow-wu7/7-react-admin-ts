@@ -1,17 +1,17 @@
 /** eslint-disable */
 import React, { useCallback, useEffect, useRef } from 'react'
 import echarts from 'echarts'
-interface Ioption {
-  option: IAny; // 配置对象
-  wrapStyle?: IAny; // 样式
+interface Option {
+  option: Any; // 配置对象
+  wrapStyle?: Any; // 样式
   className?: string; // 自定义class，为了不影响全局，最好加上唯一的前缀
   theme?: string; // 主题
-  events?: IAny; // 事件的配置对象，key事件名，value事件的回调，回调有events和echarts实例两个参数
+  events?: Any; // 事件的配置对象，key事件名，value事件的回调，回调有events和echarts实例两个参数
   isResize?: boolean; // 是否自适应窗口变化
   showLoading?: boolean; // 是否显示loading
 }
-interface IAny {
-  [propName: string]: any
+interface Any {
+  [propName: string]: any;
 }
 
 
@@ -23,7 +23,7 @@ const HocEcharts = ({
   showLoading = true, // 是否显示loading
   isResize = true, // 是否自适应窗口变化
   events, // 事件的配置对象，key事件名，value事件的回调，回调有events和echarts实例两个参数
-}: Ioption) => {
+}: Option) => {
   const ref = useRef<HTMLDivElement|any>(null)
 
   let instance: echarts.ECharts

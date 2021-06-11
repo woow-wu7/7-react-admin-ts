@@ -1,14 +1,14 @@
 import { useRef } from "react";
 
-interface IuseDebounce {
-  (fn: Ifn, delay?: number, immediate?: boolean): IClosure;
+interface UseDebounce {
+  (fn: Ifn, delay?: number, immediate?: boolean): Closure;
 }
 
 interface Ifn {
   (...rest: any[]): any;
 }
 
-interface IClosure {
+interface Closure {
   (e: any, ...rest: any[]): any;
 }
 
@@ -18,7 +18,7 @@ interface IClosure {
  * @param {number} delay 延时执行的时间段
  * @param {boolean} immediate 是否立即执行
  */
-export const useDebounce: IuseDebounce = (
+export const useDebounce: UseDebounce = (
   fn: any,
   delay = 1000,
   immediate = false
@@ -51,7 +51,7 @@ export const useDebounce: IuseDebounce = (
 // 问题：当 UseDebounce 组件中有其他 state 更新时，useDebounce是新的函数重新执行了，timer又会被重新赋值为初始值，造成错乱，不能达到debounce效果
 // 如何验证：useDebounce在UseDebounce组件有其他state更新时重新执行了：在useDebounce中 console.log() 打印即可
 // 如何解决：使用 useRef 固定数据，类似class中的实例变量
-// export const useDebounce: IuseDebounce = (fn: any, delay = 1000, immediate = false) => {
+// export const useDebounce: UseDebounce = (fn: any, delay = 1000, immediate = false) => {
 //   let timer = 0;
 //   return (e, ...rest) => {
 //     if (immediate && !timer) {
