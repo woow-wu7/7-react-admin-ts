@@ -1,8 +1,8 @@
 import { useRef, useEffect } from 'react';
 
-type TuseIntersectionObserver = (doms: any[], option: IOption) => void
+type TuseIntersectionObserver = (doms: any[], option: WIOption) => void
 
-interface IOption {
+interface WIOption {
   root?: any;
   rootMargin?: string;
   threshold?: number[]; // 阈值，比如[0]，表示交叉比例

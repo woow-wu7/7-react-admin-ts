@@ -1,11 +1,11 @@
 import { useEffect, useReducer, useCallback } from 'react'
 
-interface IViewportState {
+interface WIViewportState {
   width?: number;
   height?: number;
 }
 
-interface IViewportActionn {
+interface WIViewportActionn {
   type: string;
   payload: any;
 }
@@ -16,7 +16,7 @@ const actionType = {
 }
 
 // reducer
-const viewPortReducer = (state: IViewportState, action: IViewportActionn) => {
+const viewPortReducer = (state: WIViewportState, action: WIViewportActionn) => {
   switch (action.type) {
     case actionType.CHANGE_VIEWPORT:
       return {
@@ -32,7 +32,7 @@ const viewPortReducer = (state: IViewportState, action: IViewportActionn) => {
 }
 
 // initialState
-const initialState: IViewportState = {
+const initialState: WIViewportState = {
   width: 0,
   height: 0,
 }

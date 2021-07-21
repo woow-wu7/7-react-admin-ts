@@ -1,12 +1,12 @@
 import React, { useState } from 'react'
 import { Modal } from 'antd'
 
-interface IformInstance {
+interface WIformInstance {
   submit: () => void
 }
 
-interface ICustomModalProps {
-  formInstance?: IformInstance;
+interface WICustomModalProps {
+  formInstance?: WIformInstance;
   children: any; // 必传属性
 }
 
@@ -17,7 +17,7 @@ const useModal = (title: string) => {
     setVisible(prevVisible => !prevVisible)
   }
 
-  const CustomModal = (props: ICustomModalProps) => {
+  const CustomModal = (props: WICustomModalProps) => {
     const {formInstance, children} = props
     const handleOk = () => {
       formInstance && formInstance.submit() // 如果child是form实例，就提交form，具体逻辑请自定义

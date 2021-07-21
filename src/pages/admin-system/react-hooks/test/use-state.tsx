@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Button } from 'antd'
 import styled from 'styled-components'
 
-interface ITitle {
+interface WITitle {
   borderColor?: string;
   backgroundColor?: string;
   [propName: string]: any;

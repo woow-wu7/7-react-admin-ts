@@ -1,29 +1,29 @@
 import actionType from './constant'
 
 const initialState = {
-  interviewCount: 0
+  interviewCount: 0,
 }
 
-interface IA {
-  type: string;
-  payload: any;
+interface WIA {
+  type: string
+  payload: any
 }
 
-const interviewCountReducer = (state=initialState, action: IA) => {
-  switch(action.type) {
+const interviewCountReducer = (state = initialState, action: WIA) => {
+  switch (action.type) {
     case actionType.ADD_INTERVIEW:
       return {
         ...state,
-        interviewCount: state.interviewCount + action.payload
+        interviewCount: state.interviewCount + action.payload,
       }
     case actionType.DEC_INTERVIEW:
       return {
         ...state,
-        interviewCount: state.interviewCount - action.payload
+        interviewCount: state.interviewCount - action.payload,
       }
     default:
       return {
-        ...state
+        ...state,
       }
   }
 }
