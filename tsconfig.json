@@ -19,8 +19,7 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react",
-    "suppressImplicitAnyIndexErrors": true,
-    "interface-name-prefix": true,
+    "suppressImplicitAnyIndexErrors": true
   },
   "include": [
     "src",

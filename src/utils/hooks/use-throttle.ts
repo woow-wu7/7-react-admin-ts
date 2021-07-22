@@ -1,22 +1,22 @@
 import { useRef } from 'react'
 
-interface IuseThrottle {
-  (fn: Ifn, delay: number): IClosure;
+interface WIuseThrottle {
+  (fn: WIfn, delay: number): WClosure;
 }
 
-interface Ifn {
+interface WIfn {
   (...rest: any[]): any
 }
 
-interface IClosure {
+interface WClosure {
   (e: any, ...rest: any[]): any
 }
 
-export const useThrottle: IuseThrottle = (fn, delay) => {
+export const useThrottle: WIuseThrottle = (fn, delay) => {
   const refGoRun = useRef(true)
   const refTimer = useRef(1)
 
-  return (e, ...args) => {
+  return (e: any, ...args: any) => {
     if (!refGoRun.current) {
       return
     }

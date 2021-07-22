@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 
 type TAdd<T> = (a: T, b: T, c: T, d: T) => T
-interface IAdd<T> {
+interface WIAdd<T> {
   (a: T, b: T, c: T, d: T): T
 }
 const Curry = () => {
@@ -17,7 +17,7 @@ const Curry = () => {
     const add: TAdd<number> = (a, b, c, d) => {
       return a + b + c + d
     }
-    const add2: IAdd<number> = (a, b, c, d) => {
+    const add2: WIAdd<number> = (a, b, c, d) => {
       return a + b + c + d
     }
     console.log('add(1, 2, 3, 4)', add(1, 2, 3, 4))

@@ -48,7 +48,7 @@ const HocEcharts = ({
 
   const bindEvent = () => {
     if (instance && events) {
-      for (let i in events) {
+      for (const i in events) {
         instance.on(i, events[i].query, (e: any) => events[i].callback(e, instance))
       }
     }
