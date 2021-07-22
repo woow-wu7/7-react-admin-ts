@@ -88,6 +88,15 @@ export default function createStore(reducer, preloadedState, enhancer) {
     }
     // enhancer 存在
     // enhancer 是函数时, 很明显是一个高阶函数
+    // 1. 真实调用createStore如下
+    // - const store = createStore(combineReducers(totalReducers), composeWithDevTools(applyMiddleware(thunk, logger)))
+    // - 简化：const store = createStore(reducer, applyMiddleware(thunk, logger))
+    // - 简化[对应1]：const store = createStore(reducer, (createStore) => (...args) => ({...store, dispatch}))
+    // - 调用[对应2]：const store = createStore(reducer, enhancer)
+    // - 调用后的返回值[对应3]：enhancer(createStore)(reducer, preloadedState)
+    // ------- 对照13得到：3这里的(reducer, preloadedState)对应着2中的(...args)
+    // ------- 其实就是：const store = createStore(reducer, preloadedState)，则不再满足 if (typeof enhancer !== "undefined")条件，则跳出if往下执行
+    // ------- 即：const store = createStore(reducer, preloadedState) 执行后返回 { dispatch, subscribe, getState, replaceReducer, [$$observable]: observable, };
     return enhancer(createStore)(reducer, preloadedState);
   }
 
@@ -249,12 +258,12 @@ export default function createStore(reducer, preloadedState, enhancer) {
    */
 
   // ------------------------------------------------------------------------- dispatch函数
-  // dispatch(actoin)
+  // dispatch(action)
   // 参数
   // 1. action对象必须是一个纯对象 plainObject
   // 2. action纯对象中必须要有 type 属性
   // 返回值
-  // 1. dispath函数返回传入的参数，即返回一个action
+  // 1. dispatch函数返回传入的参数，即返回一个action
   // 主要作用
   // 1. 将 action 纯对象(plainObject)传递给 reducer纯函数，reducer纯函数负责更新state
   // 2. reducer更新state后，遍历监听数组中的所有监听函数，比如更新页面等
@@ -295,6 +304,8 @@ export default function createStore(reducer, preloadedState, enhancer) {
       const listener = listeners[i];
       listener();
       // 当执行reducer函数，更新state之后，执行监听数组listeners数组中的所有监听函数
+      // 即 state 更新后，如何把更新的数据反应到ui上
+      // 即 是一个发布订阅模式，当state更新后，通知所有订阅了该state的订阅者，订阅者在自身执行state变化后的一系列操作
     }
 
     return action;
@@ -375,8 +386,10 @@ export default function createStore(reducer, preloadedState, enhancer) {
   dispatch({ type: ActionTypes.INIT });
 
   // 总的 createStore() 函数的返回值
+  // 1. 这里返回内部定义的函数，是在createStore中不存在enhancer时，才会执行到这里返回
+  // 2. 不然返回的也是这里返回的对象，但是会重写 dispatch，因为涉及到 ( redux中间件 ) 了，需要走compose的洋葱模型不断nex到下一个中间价
   return {
-    dispatch,
+    dispatch, // dispatch 和 getState 会传入中间件
     subscribe,
     getState,
     replaceReducer,
