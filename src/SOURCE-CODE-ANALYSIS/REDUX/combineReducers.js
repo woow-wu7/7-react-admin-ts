@@ -66,14 +66,15 @@ function assertReducerShape(reducers) {
   Object.keys(reducers).forEach((key) => {
     const reducer = reducers[key];
     const initialState = reducer(undefined, { type: ActionTypes.INIT });
+    // reducer(pervState, action) => nextState
 
     if (typeof initialState === "undefined") {
       throw new Error(
         `Reducer "${key}" returned undefined during initialization. ` +
           `If the state passed to the reducer is undefined, you must ` +
-          `explicitly return the initial state. The initial state may ` +
+          `explicitly return the initial state. The initial state may ` + // explicitly 明确的
           `not be undefined. If you don't want to set a value for this reducer, ` +
-          `you can use null instead of undefined.`
+          `you can use null instead of undefined.` // 初始化state不能是undefined，如果是请用null代替
       );
     }
 
@@ -111,12 +112,28 @@ function assertReducerShape(reducers) {
  * passed object, and builds a state object with the same shape.
  */
 
+
+// ---------------------------------------------------------------------------------------------------------------------
 // combineReducers
-//
+// 参数：reducer组成的对象
+// 返回值：返回一个函数，即返回 ( combination ) 函数
+// 真实的调用：const store = createStore(combineReducers(totalReducers), composeWithDevTools(applyMiddleware(thunk, logger)))
 export default function combineReducers(reducers) {
   // reducers是一个对象
+  // const totalReducers = { app: appReducer, admin: adminReducer }
+  // combineReducers(totalReducers)
   const reducerKeys = Object.keys(reducers);
-  const finalReducers = {};
+  // Object.keys
+  // 1. Object.keys 和 Object.getOwnPropertyNames 的区别
+  // - Object.getOwnPropertyNames() ==============> 遍历 ( 所有自身属性 )，包括不可枚举属性
+  // - Object.keys() =============================> 遍历自身属性，但是 ( 不包括不可枚举属性 )
+  // 2. 如何声明一个对象的属性，是不可枚举的？
+  // - const a = {name: 'woow_wu7'}
+  // - Object.defineProperty(a, 'age', {value: 20, enumerable: false})
+  // - Object.keys(a) ============================> ["name"]
+  // - Object.getOwnPropertyNames(a) =============> ["name", "age"]
+
+  const finalReducers = {}; // 如果reducer是函数，就把每个reducer拷贝到finalReducers中
   for (let i = 0; i < reducerKeys.length; i++) {
     const key = reducerKeys[i];
 
@@ -131,10 +148,10 @@ export default function combineReducers(reducers) {
       finalReducers[key] = reducers[key];
     }
   }
-  const finalReducerKeys = Object.keys(finalReducers);
+  const finalReducerKeys = Object.keys(finalReducers); // finalReducers 对象的key 数组
 
   // This is used to make sure we don't warn about the same
-  // keys multiple times.
+  // keys multiple times. // 不多次警告相同的key
   let unexpectedKeyCache;
   if (process.env.NODE_ENV !== "production") {
     unexpectedKeyCache = {};
@@ -143,10 +160,14 @@ export default function combineReducers(reducers) {
   let shapeAssertionError;
   try {
     assertReducerShape(finalReducers);
+    // assert 断言assertReducerShape
+    // assertReducerShape 主要是做一些reducer的检查工作，必须符合规范
   } catch (e) {
     shapeAssertionError = e;
   }
 
+
+  // ---------------------------------------------------------------------------------------------------------------------
   return function combination(state = {}, action) {
     if (shapeAssertionError) {
       throw shapeAssertionError;
@@ -167,15 +188,15 @@ export default function combineReducers(reducers) {
     let hasChanged = false;
     const nextState = {};
     for (let i = 0; i < finalReducerKeys.length; i++) {
-      const key = finalReducerKeys[i];
-      const reducer = finalReducers[key];
+      const key = finalReducerKeys[i]; // key
+      const reducer = finalReducers[key]; // value 对应 reducer函数
       const previousStateForKey = state[key];
-      const nextStateForKey = reducer(previousStateForKey, action);
+      const nextStateForKey = reducer(previousStateForKey, action); // 新的state
       if (typeof nextStateForKey === "undefined") {
         const errorMessage = getUndefinedStateErrorMessage(key, action);
         throw new Error(errorMessage);
       }
-      nextState[key] = nextStateForKey;
+      nextState[key] = nextStateForKey; // 赋值
       hasChanged = hasChanged || nextStateForKey !== previousStateForKey;
       hasChanged = hasChanged || nextStateForKey !== previousStateForKey
       // 1. hasChanged = true 则 hasChanged为true
@@ -186,5 +207,6 @@ export default function combineReducers(reducers) {
     return hasChanged ? nextState : state;
     // 如果state变化了，返回新的state (nextState)
     // 如果state没有变化，返回就的state (state)
+    // 其实就是做缓存处理，来提升性能
   };
 }
