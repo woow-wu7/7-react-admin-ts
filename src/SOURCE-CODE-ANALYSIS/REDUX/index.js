@@ -56,4 +56,6 @@ export {
   // 1. compose(funcs)
   // - 当没有参数时，返回 args => args 这样一个函数
   // - 当参数长度为1，即一个参数，直接返回参数函数调用的结果，funcs[0]
-  // - 否则用reducer迭代，从右往左，把 ( 右边函数的结果 ) 作为 ( 左边函数的参数 ) 传入，[a, b, c] => a(b(c(...args))) __DO_NOT_USE__ActionTypes }
+  // - 否则用reducer迭代，从右往左，把 ( 右边函数的结果 ) 作为 ( 左边函数的参数 ) 传入，[a, b, c] => a(b(c(...args)))
+  __DO_NOT_USE__ActionTypes,
+}
