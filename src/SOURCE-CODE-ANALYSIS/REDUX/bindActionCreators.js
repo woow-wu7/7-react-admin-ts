@@ -1,3 +1,6 @@
+// bindActionCreator
+// - 函数签名: (actionCreator, dispatch) => () => dispatch(actionCreator.apply(this, arguments))
+// - 调用后：返回的是一个函数： () => dispatch(actionCreator.apply(this, arguments))
 function bindActionCreator(actionCreator, dispatch) {
   return function() {
     return dispatch(actionCreator.apply(this, arguments))
@@ -26,15 +29,16 @@ function bindActionCreator(actionCreator, dispatch) {
  * function.
  */
 export default function bindActionCreators(actionCreators, dispatch) {
-  // actionCreators 是函数，则最终返回一个函数 () => dispatch(actionObject)
-  if (typeof actionCreators === 'function') {
+  if (typeof actionCreators === 'function') { // ------------------------------------------- 函数
+  // 如果 actionCreators 是函数，则最终返回一个函数 () => dispatch(actionObject)
+
     return bindActionCreator(actionCreators, dispatch)
     // return () => dispatch(actionCreator.apply(this, arguments))
     // return () => dispatch(actionObject)
     // 因为actionCreator是action创建函数，调用返回一个action
   }
 
-  if (typeof actionCreators !== 'object' || actionCreators === null) {
+  if (typeof actionCreators !== 'object' || actionCreators === null) { // ------------------ undefined,number,string,boolean
     throw new Error(
       `bindActionCreators expected an object or a function, instead received ${
         actionCreators === null ? 'null' : typeof actionCreators
@@ -43,21 +47,25 @@ export default function bindActionCreators(actionCreators, dispatch) {
     )
   }
 
-  // actionCreators 是对象, 则最终返回一个对象
+  // actionCreators 是对象, 则最终返回一个对象 // ---------------------------------------------- object||array
   // {
-  //   actionCreator即action创建函数的函数名: () => dispatch(actionObject)
+  //   actionCreator 即 ( action创建函数 ) 的函数名: () => dispatch(actionObject)
   // }
   const boundActionCreators = {}
+  // boundActionCreators 是一个对象
+  // key ===> action创建函数的函数名
+  // value => bindActionCreator(actionCreator, dispatch)执行的返回值
+
   for (const key in actionCreators) {
-    const actionCreator = actionCreators[key]
+    const actionCreator = actionCreators[key] // 取出具体的每一个 actionCreator 函数
     if (typeof actionCreator === 'function') { // 对象 value 是一个函数
       boundActionCreators[key] = bindActionCreator(actionCreator, dispatch)
       // boundActionCreators[key] = () => dispatch(actionObject)
-      
+
       // key是：函数名
       // value是： () => dispatch(actionCreator.apply(this, arguments)) 这样一个函数
       // value简化：() => dispatch(action)
     }
   }
-  return boundActionCreators
+  return boundActionCreators // 返回这个map对象
 }

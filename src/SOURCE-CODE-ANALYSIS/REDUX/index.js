@@ -29,9 +29,31 @@ if (
 // redux最终暴露以下api
 export {
   createStore,
+  // createStore
+  // 1. 返回一个store实例，store上挂载了 ( getState, dispatch, subscribe, replaceReducer, observable )
+  // 2. 如果存在 applyMiddleware() 这样的 enhancer 函数，则会重写 ( dispatch ) 函数
+
   combineReducers,
+  // combineReducers
+  // 1. combineReducers 返回的是 combination(state = {}, action) 函数，该函数是 reducer函数类型
+
   bindActionCreators,
+  // bindActionCreators
+  // 1. 案例：
+  //   const mapDispatchToProps = (dispatch: any) => {
+  //     return bindActionCreators(actions, dispatch)
+  //   }
+  // 2. 返回值
+  // - 参数是函数：() => dispatch(action)
+  // - 参数是对象：{ action创建函数的函数名: () => dispatch(action), action创建函数的函数名: () => dispatch(action) }
+
   applyMiddleware,
+  // applyMiddleware
+  // 1. 返回 store实例，不过会重写dispatch，其实applyMiddleware就是 enhancer 函数
+
   compose,
-  __DO_NOT_USE__ActionTypes
-}
+  // compose
+  // 1. compose(funcs)
+  // - 当没有参数时，返回 args => args 这样一个函数
+  // - 当参数长度为1，即一个参数，直接返回参数函数调用的结果，funcs[0]
+  // - 否则用reducer迭代，从右往左，把 ( 右边函数的结果 ) 作为 ( 左边函数的参数 ) 传入，[a, b, c] => a(b(c(...args))) __DO_NOT_USE__ActionTypes }

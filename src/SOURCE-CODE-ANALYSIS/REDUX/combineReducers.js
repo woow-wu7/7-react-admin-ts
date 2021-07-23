@@ -190,13 +190,19 @@ export default function combineReducers(reducers) {
     for (let i = 0; i < finalReducerKeys.length; i++) {
       const key = finalReducerKeys[i]; // key
       const reducer = finalReducers[key]; // value 对应 reducer函数
-      const previousStateForKey = state[key];
+      const previousStateForKey = state[key]; // state初始化时是一个空对象，key表示reducerMap中的key
       const nextStateForKey = reducer(previousStateForKey, action); // 新的state
       if (typeof nextStateForKey === "undefined") {
         const errorMessage = getUndefinedStateErrorMessage(key, action);
         throw new Error(errorMessage);
       }
-      nextState[key] = nextStateForKey; // 赋值
+
+      nextState[key] = nextStateForKey;
+      // 1. nextState[key] = nextStateForKey;
+      // - 赋值，其实就是把总的 key --- reducer ---- state 三者关联起来
+      // - 将 ( reducer-map中的key，即combineReducer中的key ) 和 ( reducer生成的state ) 一一对应，放入nextState
+
+
       hasChanged = hasChanged || nextStateForKey !== previousStateForKey;
       hasChanged = hasChanged || nextStateForKey !== previousStateForKey
       // 1. hasChanged = true 则 hasChanged为true
@@ -208,5 +214,9 @@ export default function combineReducers(reducers) {
     // 如果state变化了，返回新的state (nextState)
     // 如果state没有变化，返回就的state (state)
     // 其实就是做缓存处理，来提升性能
+
+    // 所以：
+    // 1. combineReducer(rootReducer) 执行返回的是一个函数 ( combination )，返回的这个函数类型其实就是 ( reducer函数 )
+    // 2. combination(state, action) 即是一个reducer函数类型，执行后返回的是 state，只不过会做缓存处理，state没变化直接返回
   };
 }
