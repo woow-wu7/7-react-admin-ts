@@ -19,12 +19,15 @@ import compose from './compose'
  */
 
 // @function applyMiddleware
-// @description 函数签名 (...middlewares) => (createStore) => (...args) => ({...store, dispath})
-// @description 使用 applyMiddleware(thunk, logger) => (createStore) => (...args) => ({...store, dispath})
+// @description 1. applyMiddleware的函数签名 (...middlewares) => (createStore) => (...args) => ({...store, dispatch})
+// @description 2. applyMiddleware第一层的调用: applyMiddleware(thunk, logger) ====> (createStore) => (...args) => ({...store, dispatch})
+// @description 3. 每个中间键的函数签名(以redux-thunk为例)是：({ dispatch, getState }) => (next) => (action) => next(action)
 // @description createStore(combineReducers(totalReducers), applyMiddleware(thunk, logger))
 
 // ------------------------------------------------------------------------- applyMiddleware
 export default function applyMiddleware(...middlewares) {
+  // 这里，middlewares 是一个数组
+  // 真正的调用是：applyMiddleware(thunk, logger)
   return (createStore) => (...args) => {
     // createStore => 生成store, args是rest参数 => args是一个数组
     //  - 注意：这里的createStore(...args) 中第三个参数 enhancer 不存在，所以会返回函数内部定义的api，而不是调用enhancer高阶函数
@@ -44,7 +47,7 @@ export default function applyMiddleware(...middlewares) {
 
     const chain = middlewares.map((middleware) => middleware(middlewareAPI))
     // chain
-    // 1. 向每个传入的 ( 中间件 ) 中传入 ( middlewareAPI ) 参数
+    // 1. 向每个传入的 ( 中间件 ) 中传入 ( middlewareAPI ) 参数，middlewareAPI上具有 ( getState 和 dispatch )
     // 2. 并且将中间件执行的结果返回，组成一个数组
     // 3. chain = [next => action => next(action), next => action => next(action)]
 
@@ -62,7 +65,7 @@ export default function applyMiddleware(...middlewares) {
     // const M1 = (store) => (next) => (action) => { console.log('A开始');  next(action); console.log('A结束')}
     // const M2 = (store) => (next) => (action) => { console.log('B开始');  next(action); console.log('B结束')}
     // const M3 = (store) => (next) => (action) => { console.log('C开始');  next(action); console.log('C结束')}
-    // 注意上面三个中间件的第一个参数 store 中只有getState, dispacth两个函数
+    // 注意上面三个中间件的第一个参数 store 中只有getState, dispatch两个函数
     // 1. chain = [next => action => {M1}, next => action => {M2}, next => action => {M3}]
     // 2. 在chain数组中的
     //    M1 = next => action => {console.log('A开始');  next(action); console.log('A结束')}
