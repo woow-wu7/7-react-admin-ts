@@ -7,8 +7,8 @@ var defaults = require('./defaults')
 /**
  * Create an instance of Axios
  *
- * @param {Object} defaultConfig The default config for the instance
- * @return {Axios} A new instance of Axios
+ * @param {Object} defaultConfig The default config for the instance 默认配置
+ * @return {Axios} A new instance of Axios 实例
  */
 function createInstance(defaultConfig) {
   var context = new Axios(defaultConfig)

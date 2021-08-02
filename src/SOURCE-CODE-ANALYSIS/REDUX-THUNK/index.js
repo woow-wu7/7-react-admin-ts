@@ -6,10 +6,10 @@
 
 // 2
 // 真正导出的是:
-// (1) action是一个对象: ({dispatch, getState}) => next => action => next(acion) 
-// (2) action是一个函数: ({dispatch, getState}) => next => action => action(dispath, getState, extraArgument)
+// (1) action是一个对象: ({dispatch, getState}) => next => action => next(action)
+// (2) action是一个函数: ({dispatch, getState}) => next => action => action(dispatch, getState, extraArgument)
 
-// 3 
+// 3
 // 具体案例在 在 admin-system/interview-react/Knowledge/reduxSourceCode组件中
 
 function createThunkMiddleware(extraArgument) {
