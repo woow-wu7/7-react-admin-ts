@@ -49,7 +49,7 @@
 ### (3) axios 源码分析 [axios^0.20.0]
 - [axios源码分析-仓库](https://github.com/woow-wu7/7-react-admin-ts/tree/master/src/SOURCE-CODE-ANALYSIS/AXIOS)
 - [axios源码分析-我的掘金文章](https://juejin.cn/post/6844904147532120072)
-### (4) react 源码分析 [vue^2.6.12]
+### (4) react 源码分析 [react^17.0.3]
 - [react源码分析-仓库](https://github.com/woow-wu7/7-react-source-code-analysis/tree/main/src/REACT_SOURCE_CODE_ANALYSIS/packages)
 ### (5) vue 源码分析 [vue^2.6.12]
 - [vue源码分析-仓库](https://github.com/woow-wu7/7-react-admin-ts/tree/master/src/SOURCE-CODE-ANALYSIS/VUE)
