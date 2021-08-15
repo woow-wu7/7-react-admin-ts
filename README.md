@@ -57,7 +57,7 @@
 ### (6) badJs-report 源码分析
 - [badJs-report源码分析-仓库](https://github.com/woow-wu7/7-badjs-report-analysis)
 
-### 复习资料
+# 复习资料
 - [复习理疗-思维导图](https://github.com/woow-wu7/7-react-admin-ts/tree/master/src/assets/iamges/xmind)
 
 
