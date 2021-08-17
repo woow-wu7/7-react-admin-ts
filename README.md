@@ -54,6 +54,8 @@
 - [vue源码分析-我的掘金文章](https://juejin.cn/post/6844904181094957069)
 ### (5) react 源码分析 [react^17.0.3]
 - [react源码分析-仓库](https://github.com/woow-wu7/7-react-source-code-analysis)
+- [react源码分析-我的掘金文章](https://juejin.cn/post/6993980489463758855)
+
 ### (6) badJs-report 源码分析
 - [badJs-report源码分析-仓库](https://github.com/woow-wu7/7-badjs-report-analysis)
 
