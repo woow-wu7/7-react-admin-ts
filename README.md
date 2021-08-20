@@ -55,6 +55,9 @@
 ### (5) react 源码分析 [react^17.0.3]
 - [react源码分析-仓库](https://github.com/woow-wu7/7-react-source-code-analysis)
 - [react源码分析-我的掘金文章](https://juejin.cn/post/6993980489463758855)
+- [js实现单向链表 - 源码](https://github.com/woow-wu7/7-react-source-code-analysis/blob/main/src/manual/linked-list.js)
+- [手写hooks-useState实现 - 源码仓库](https://github.com/woow-wu7/7-react-source-code-analysis/blob/main/src/manual/hooks-manual.js)
+- [手写hooks-useState实现 - 思维导图](https://github.com/woow-wu7/7-react-source-code-analysis/blob/main/src/images/hook-useState.png)
 
 ### (6) badJs-report 源码分析
 - [badJs-report源码分析-仓库](https://github.com/woow-wu7/7-badjs-report-analysis)
