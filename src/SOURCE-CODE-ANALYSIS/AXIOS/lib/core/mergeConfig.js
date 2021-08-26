@@ -42,7 +42,8 @@ module.exports = function mergeConfig(config1, config2) {
 
   function mergeDeepProperties(prop) {
     if (!utils.isUndefined(config2[prop])) {
-      config[prop] = getMergedValue(config1[prop], config2[prop]);
+      // 不是undefined
+      config[prop] = getMergedValue(config1[prop], config2[prop]); // 合并
     } else if (!utils.isUndefined(config1[prop])) {
       config[prop] = getMergedValue(undefined, config1[prop]);
     }
@@ -77,11 +78,16 @@ module.exports = function mergeConfig(config1, config2) {
     }
   });
 
+  // axiosKeys
+  // 拼接上面定义的四个数组，合成一个总数组
   var axiosKeys = valueFromConfig2Keys
     .concat(mergeDeepPropertiesKeys)
     .concat(defaultToConfig2Keys)
     .concat(directMergeKeys);
 
+  // otherKeys
+  // 1. 拼接 ( 两个参数对象 ) 中 ( key ) 组成的数组
+  // 2. 拼接后，过滤掉 axiosKeys 中已经存在的key
   var otherKeys = Object
     .keys(config1)
     .concat(Object.keys(config2))
@@ -90,6 +96,8 @@ module.exports = function mergeConfig(config1, config2) {
     });
 
   utils.forEach(otherKeys, mergeDeepProperties); // 深拷贝到config
+  // utils.forEach(otherKeys, mergeDeepProperties)
+  // - 将otherKeys数组的每个成员，作为参数传入 mergeDeepProperties 函数中
 
   return config; // 返回config
 };

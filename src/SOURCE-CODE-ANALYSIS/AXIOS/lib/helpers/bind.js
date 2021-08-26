@@ -10,7 +10,7 @@
 //    - 实质就是bind函数的简单实现，简单到不能用new去调用
 module.exports = function bind(fn, thisArg) {
   return function wrap() {
-    var args = new Array(arguments.length);
+    var args = new Array(arguments.length); // 收集到的参数数组
     for (var i = 0; i < args.length; i++) {
       args[i] = arguments[i];
     }

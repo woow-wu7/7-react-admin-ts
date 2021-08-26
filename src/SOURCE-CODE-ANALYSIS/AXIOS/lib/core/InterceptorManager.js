@@ -1,6 +1,6 @@
 var utils = require('./../utils')
 
-// ---------------------------------------------------------------- InterceptorManager构造函数
+// ---------------------------------------------------------------- InterceptorManager构造函数，将一些操作方法挂载到原型对象上
 function InterceptorManager() {
   this.handlers = []
   // handlers数组
@@ -45,7 +45,7 @@ InterceptorManager.prototype.use = function use(fulfilled, rejected) {
 // ---------------------------------------------------------------- eject函数
 InterceptorManager.prototype.eject = function eject(id) {
   if (this.handlers[id]) {
-    this.handlers[id] = null // 赋值为null
+    this.handlers[id] = null // 赋值为null，初始这里是赋值为null，而不是删除该成员
   }
 }
 
@@ -60,7 +60,17 @@ InterceptorManager.prototype.eject = function eject(id) {
 // ---------------------------------------------------------------- forEach函数
 InterceptorManager.prototype.forEach = function forEach(fn) {
   utils.forEach(this.handlers, function forEachHandler(h) {
-    // h 是 handlers[index]
+    // 1
+    // util.forEach(obj, fn)
+    // - arr ====> fn(arr[i], i, arr)
+    // - object => fn(obj[key], key, obj)
+
+    // 2
+    // 因为：handlers是一个数组
+    // 所以：forEachHandler(h) === fn(arr[i], i, arr)
+    // 所以：h 是第一个参数即 arr[i]
+
+    // 3
     // utils.forEach
     // 1. 因为：this.handlers 是一个数组
     // 2. 所以：遍历 this.handlers 数组，将每个数组成员对象作为参数h，传入 forEachHandler 函数
@@ -70,7 +80,7 @@ InterceptorManager.prototype.forEach = function forEach(fn) {
     //          rejected: rejected, // rejected 函数
     //         })
     if (h !== null) {
-      fn(h)
+      fn(h) // 最终，将 对象或数据的每个成员key对应的值传入fn
     }
   })
 }

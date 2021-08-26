@@ -23,7 +23,7 @@ var mergeConfig = require('./mergeConfig')
 //        - eject
 //        - forEach
 function Axios(instanceConfig) {
-  this.defaults = instanceConfig
+  this.defaults = instanceConfig // 默认参数
   this.interceptors = {
     // axios实例对象上挂载 interceptors 属性对象
     // interceptors: 是拦截器的意思
@@ -38,14 +38,26 @@ function Axios(instanceConfig) {
  * @param {Object} config The config specific for this request (merged with this.defaults)
  */
 // -------------------------------------------------------------------------- request方法
-// Axios.prototype.request 最终返回的是一个 promsie 对象
+// Axios.prototype.request 最终返回的是一个 promise 对象
 Axios.prototype.request = function request(config) {
   /*eslint no-param-reassign:0*/
+
+  // 1
   // Allow for axios('example/url'[, config]) a la fetch API
   // 1. 允许 axios('example/url'[, config]) 这样发送请求
   // 2. 即 axios(url, config)
 
-  if (typeof config === 'string') {
+  // 2
+  // axios允许发送请求的方法有下面几种
+  // 11. axios(config)
+  // 22. axios(url[, config])
+  // 33. axios.request(config)
+  //    axios.get(url[, config])
+  //    axios.post(url[, data[, config]])
+  //    ... delete put head options patch
+  // 44. axios.create([config]).get(url[, config])
+
+  if (typeof config === 'string') { // 对应22
     // config是一个字符串
     config = arguments[1] || {} // 1. 如果config是一个字符串，那么config就是第二个参数，获取配置对象config
     config.url = arguments[0] // 2. 那么第一个参数就是rul, 获取请求url，并赋值给配置对象 config

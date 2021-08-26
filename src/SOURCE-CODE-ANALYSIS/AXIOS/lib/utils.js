@@ -266,7 +266,7 @@ function forEach(obj, fn) {
   //      - 4. 即: 将上面3剩下的几种类型包装成数组
   if (typeof obj !== 'object') {
     /*eslint no-param-reassign:0*/
-    obj = [obj]
+    obj = [obj] // number string boolean symbol function
   }
 
   // 到这里还剩: array, object 两种类型
@@ -277,10 +277,15 @@ function forEach(obj, fn) {
     // iterate: 是迭代的意思
     for (var i = 0, l = obj.length; i < l; i++) {
       fn.call(null, obj[i], i, obj)
+      // 1
+      // call
+      // 因为：call方法的参数是 ( null, undefined, 或者为空 ) 时候，相当于传入 window
+      // 所以：a.call() === a.call(null) === a.call(undefined) === a.call(window) 四者等价
+      // 2
       // 调用 fn(obj[i], i, obj)
       // 其实就是 fn(value, index, 原数组)
     }
-    // 2. object
+  // 2. object
   } else {
     // Iterate over object keys
     for (var key in obj) {
@@ -312,15 +317,25 @@ function forEach(obj, fn) {
 // -------------------------------------------------------------------------- merge
 // 合并对象
 function merge(/* obj1, obj2, obj3, ... */) {
+
   var result = {}
-  function assignValue(val, key) {
+  // result
+  // 1. 收集所有传入merge方法的 - 参数对象的key，value
+  // 2. 当参数对象中有同名属性时
+
+  function assignValue(val, key) { // val和key 分别对应对象的 value和key
     if (isPlainObject(result[key]) && isPlainObject(val)) {
+      // result对象中已经存该key，并且key对应的是一个对象，同时val也是一个对象
+      // 即：result对象中，和参数对象中，具有相同都key，并且key属性都是对象，则递归
       result[key] = merge(result[key], val)
     } else if (isPlainObject(val)) {
+      // val是一个对象，并且在result中不存在
       result[key] = merge({}, val)
     } else if (isArray(val)) {
+      // val是一个数组，，并且在result中不存在，浅拷贝
       result[key] = val.slice()
     } else {
+      // value是基本数据类型
       result[key] = val
     }
   }
