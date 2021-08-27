@@ -1,9 +1,19 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 
 const InterviewCancelToken = () => {
   const [cancelFn, setCancelFn] = useState<any>()
   const [source, setSource] = useState<any>(() => axios.CancelToken.source())
+  const [count, setCount] = useState(0)
+
+  const [resolve, setResolve] = useState<any>()
+  useEffect(() => {
+    const runAsyncFunction = async () => {
+      await new Promise((resolveFn) => setResolve(() => resolveFn))
+      setCount(prev => prev + 1)
+    }
+    runAsyncFunction()
+  }, [])
 
   const renderAxios = () => {
     const handleRequest = () => {
@@ -47,6 +57,9 @@ const InterviewCancelToken = () => {
         <br />
         <button onClick={handleRequest2}>axios-发送请求4s</button>
         <button onClick={handleCancel2}>点击-取消请求axios-CancelToken.source()-</button>
+        <br />
+        <button onClick={() => resolve()}>手写axios取消请求的原理 ---- 测试 - 点击执行resolve，从而改变promise状态，从而才打印count; 未点击一直处于pending状态</button>
+        <div>count: {count}</div>
       </div>
     )
   }
