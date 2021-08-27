@@ -9,7 +9,7 @@ var DEFAULT_CONTENT_TYPE = {
 }
 
 // 设置 Content-Type
-// 条件: ( headers存在 ) 并且 (  headers[Content-Tpye]不存在 )
+// 条件: ( headers存在 ) 并且 (  headers[Content-Type]不存在 )
 function setContentTypeIfUnset(headers, value) {
   if (!utils.isUndefined(headers) && utils.isUndefined(headers['Content-Type'])) {
     headers['Content-Type'] = value
@@ -41,7 +41,7 @@ var defaults = {
   adapter: getDefaultAdapter(),
 
   transformRequest: [
-    function transformRequest(data, headers) {
+    function transformRequest(data, headers) { // body headers
       normalizeHeaderName(headers, 'Accept') // 相当于格式化，将headers中不正规的key的写法正规化
       normalizeHeaderName(headers, 'Content-Type') // 同上
       if (

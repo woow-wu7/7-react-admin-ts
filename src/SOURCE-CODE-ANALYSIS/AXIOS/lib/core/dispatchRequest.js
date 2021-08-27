@@ -22,15 +22,15 @@ function throwIfCancellationRequested(config) {
  * Dispatch a request to the server using the configured adapter.
  * 使用配置的适配器向服务器发送请求
  *
- * @param {object} config The config that is to be used for the request
- * @returns {Promise} The Promise to be fulfilled
+ * @param {object} config The config that is to be used for the request // 用于请求的config配置项
+ * @returns {Promise} The Promise to be fulfilled // 返回 fulfilled 状态的 promise
  */
 // ---------------------------------------------------------------------- dispatchRequest函数
 module.exports = function dispatchRequest(config) {
   throwIfCancellationRequested(config)
 
   // Ensure headers exist
-  config.headers = config.headers || {}
+  config.headers = config.headers || {} // 熔断处理
 
   // (一)
   // transformData
@@ -82,8 +82,20 @@ module.exports = function dispatchRequest(config) {
   //     return data;
   //   },
   // ],
+
   // -------------------------------------------------------------------------- transformRequest
   // Transform request data
+  // 1
+  // transformData
+  // - 1. transformRequest是函数 ---------> 将 data 和 header 作为参数，传入transformRequest函数
+  // - 2. transformRequest是函数组成的数组 -> 遍历，将 data 和 header 作为参数，传入transformRequest数组成员的每一个函数
+  // 2
+  // config.data是什么？
+  // config.data是post等请求的 body
+  // 3
+  // transformRequest = [transformRequest] 做了哪些事情
+  // - 1. 格式化headers中的 Accept Content-Type 等为标准的写法
+  // - 2. 根据config.data的不同类型，设置 Content-Type 的默认值
   config.data = transformData(config.data, config.headers, config.transformRequest)
 
   // Flatten headers
@@ -91,13 +103,16 @@ module.exports = function dispatchRequest(config) {
 
   utils.forEach(['delete', 'get', 'head', 'post', 'put', 'patch', 'common'], function cleanHeaderConfig(method) {
     delete config.headers[method]
+    // 删除以上方法
   })
 
   var adapter = config.adapter || defaults.adapter
   // adapter
   // 1. 浏览器环境是 (config) => new Promise()
+  // 2. 允许自定义处理请求，使测试更容易，返回一个promise
+  // 3. 一般在config中都不会传 adapter，所以一般都是使用 defaults.adapter，可以直接点击 defaults.adapter 跳到 defaults.adapter 的函数定义 => adapter: getDefaultAdapter()
 
-  return adapter(config).then(
+  return adapter(config).then( // 执行完then的回调，返回一个promise对象
     function onAdapterResolution(response) {
       throwIfCancellationRequested(config)
 

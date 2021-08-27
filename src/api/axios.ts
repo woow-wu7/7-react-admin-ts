@@ -20,6 +20,15 @@ const axiosInstance = axios.create({
 })
 
 // 请求拦截
+// - 描述：config 是通过 axios(conifg) 中传入的config
+// - 原因：因为整个promise链条是 chain = [请求成功拦截2, 请求失败拦截2, 请求成功拦截1, 请求失败拦截1, dispatchRequest, undefined, 应成功拦截1, 响应失败拦截1, 响应成功拦截2, 响应失败拦截2]
+// - 详细：
+// promise = Promise.resolve(config)
+  // .then('请求成功拦截2', '请求失败拦截2') // 依此向下传递config , 注意2在1前面，unshift
+  // .then('请求成功拦截1', '请求失败拦截1')
+  // .then(dispatchRequest, undefined) // 真正发送请求，(config) => adapter(config).then(value => value, reason => Promise.reject(reason))
+  // .then('响应成功拦截1', '响应失败拦截1')
+  // .then('响应成功拦截2', '响应失败拦截2') // 注意2在1后面，push
 axiosInstance.interceptors.request.use(
   (config) => {
     token ? (config.headers.token = token) : (window.location.pathname = '/login')

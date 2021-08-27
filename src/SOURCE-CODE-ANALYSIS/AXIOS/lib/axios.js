@@ -61,9 +61,21 @@ axios.create = function create(instanceConfig) {
 }
 
 // Expose Cancel & CancelToken
+// 取消请求相关的三个属性
+// 1
+// 有两种方法来取消请求
+// - 1. new axios.CancelToken(c => cancelFn => c)
+// - 2. const source = axios.CancelToken.source()
+//      - source.token
+//      - source.cancel
+// 2
+// 问题：如果判断axios请求是否已经取消了
+// 回答：axios.isCancel(Error对象)
+// 链接：https://github.com/axios/axios#cancellation
 axios.Cancel = require('./cancel/Cancel')
 axios.CancelToken = require('./cancel/CancelToken')
 axios.isCancel = require('./cancel/isCancel')
+
 
 // all
 // Promise.all()

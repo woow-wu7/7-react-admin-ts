@@ -80,15 +80,18 @@ Axios.prototype.request = function request(config) {
     config.method = 'get'
   }
 
+  // chain
   // Hook up interceptors middleware
   // 拦截器中间件
+  // dispatchRequest => 执行adapter，并返回一个promise
   var chain = [dispatchRequest, undefined]
+
   var promise = Promise.resolve(config)
   // promise
   // 1. 生成promise实例
   // 2. config
-  //      (1) 会作为then的第一个回调函数的参数传入，经过中间件
-  //      (2) interceptor.request((config) => {}) => request(config) => interceptor.responese()
+  //      (1) 会作为then的第一个回调函数的参数传入，经过中间件，结合chain数组一起看
+  //      (2) interceptor.request((config) => {}) => request(config) => interceptor.response()
 
   // request
   // interceptors.request.forEach() 的作用
@@ -106,7 +109,7 @@ Axios.prototype.request = function request(config) {
   // interceptors.response.forEach
   this.interceptors.response.forEach(function pushResponseInterceptors(interceptor) {
     chain.push(interceptor.fulfilled, interceptor.rejected)
-    // [dispatchRequest, undefined, interceptor.fulfilled1, interceptor.rejected1, nterceptor.fulfilled2, interceptor.rejected2,]
+    // [dispatchRequest, undefined, interceptor.fulfilled1, interceptor.rejected1, interceptor.fulfilled2, interceptor.rejected2,]
     // [dispatchRequest, undefined, 响应成功拦截1, 响应失败拦截1, 响应成功拦截2, 响应失败拦截2]
   })
 

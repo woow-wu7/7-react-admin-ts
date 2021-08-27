@@ -11,6 +11,7 @@ const ReactReduxHooks = lazyLoad('@/pages/admin-system/react-redux-hooks')
 const ReactRouterHooks = lazyLoad('@/pages/admin-system/react-router-hooks')
 const ReactRouterHooksDetail = lazyLoad('@/pages/admin-system/react-router-hooks/detail')
 const InterviewReact = lazyLoad('@/pages/admin-system/interview-react')
+const InterviewCancel = lazyLoad('@/pages/admin-system/interview-cancel')
 const JsEs5 = lazyLoad('@/pages/admin-system/js-es5')
 const JsEs6 = lazyLoad('@/pages/admin-system/js-es6')
 const JsEs6Detail = lazyLoad('@/pages/admin-system/js-es6-detail')
@@ -53,6 +54,17 @@ const adminRoutes: IRouteModule[] = [
         key: '/admin-interview/react',
         path: '/admin-interview/react',
         component: InterviewReact,
+        meta: {
+          needLoginAuth: true,
+          rolesAuth: ['user', 'admin'],
+        },
+      },
+      {
+        title: '实现取消请求',
+        icon: 'anticon-react',
+        key: '/admin-interview/cancel',
+        path: '/admin-interview/cancel',
+        component: InterviewCancel,
         meta: {
           needLoginAuth: true,
           rolesAuth: ['user', 'admin'],

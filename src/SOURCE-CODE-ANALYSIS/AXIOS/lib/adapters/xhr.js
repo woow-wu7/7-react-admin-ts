@@ -69,12 +69,12 @@ module.exports = function xhrAdapter(config) {
       var responseData =
         !config.responseType || config.responseType === 'text' ? request.responseText : request.response
       var response = {
-        data: responseData,
-        status: request.status,
+        data: responseData, // data
+        status: request.status, // status
         statusText: request.statusText,
-        headers: responseHeaders,
+        headers: responseHeaders, // headers
         config: config,
-        request: request,
+        request: request, // xhr 实例
       }
 
       settle(resolve, reject, response) // 根据 response 的状态决定是 resolve 还是 reject
@@ -183,20 +183,23 @@ module.exports = function xhrAdapter(config) {
     // ------------------------------------------------------------------- 重要
     // ------------------------------------------------------------------- 处理取消请求
     if (config.cancelToken) {
+      // 如果axios调用时，options中传入了 cancelToken 属性
       // Handle cancellation
       // 1. cancelToken = token = new CancelToken(executor) 生成的实例中是有 promise 实例的
-      // 2. exectutor(c)中的c是这样一个函数 resolvePromise(token.reason)
-      // 3. resolvepromise = resolve 其实就是 token.promise(resolvepromise => resolvepromise(token.reason))
+      // 2. executor(c)中的c是这样一个函数 resolvePromise(token.reason)
+      // 3. resolvePromise = resolve 其实就是 token.promise(resolvePromise => resolvePromise(token.reason))
       // 4. resolve的结果在这里通过 then 来捕获
       config.cancelToken.promise.then(function onCanceled(cancel) {
+        // 重点1: config.cancelToken 就是调用 CancelToken 构造函数生成的实例，实例上有promise属性
+        // 重点2: cancel()取消函数执行时，才会把promise属性的状态变成fulfilled，并且将token.reason抛出，作为这里的 then函数onCanceled回调的参数
         if (!request) {
           return
         }
 
         request.abort() // abort中断请求
-        reject(cancel) // reject出去，可以通过axios().catch()来捕获
+        reject(cancel) // reject出去，抛出错误，可以通过axios().catch()来捕获
         // Clean up request
-        request = null
+        request = null // 清除xhr实例
       })
     }
 

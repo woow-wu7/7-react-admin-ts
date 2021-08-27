@@ -5,7 +5,7 @@ var utils = require('./../utils');
 /**
  * Transform the data for a request or a response
  *
- * @param {Object|String} data The data to be transformed
+ * @param {Object|String} data The data to be transformed // 被转换的数据
  * @param {Array} headers The headers for the request or response
  * @param {Array|Function} fns A single function or Array of functions
  * @returns {*} The resulting transformed data

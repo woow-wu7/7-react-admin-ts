@@ -6,7 +6,7 @@ import { useFetch } from '@/utils/hooks/use-fetch'
 import styles from './ui-antd-table.module.scss'
 
 const UiAntTable = () => {
-  const [visible, setvisiable] = useState(false)
+  const [visible, setVisible] = useState(false)
   const [operateType, setOperateType] = useState('')
   const [disabled, setDisabled] = useState(false)
   const [modelDanger, setModelDanger] = useState(false)
@@ -79,7 +79,7 @@ const UiAntTable = () => {
     setSearch('')
     form.resetFields()
     setOperateType(CONST.TABLE_OPERATE_ADD)
-    setvisiable(true)
+    setVisible(true)
   }
 
   const deleteSong = (e: React.MouseEvent<HTMLElement, MouseEvent>, text: string) => {
@@ -87,14 +87,14 @@ const UiAntTable = () => {
     setOperateType(CONST.TABLE_OPERATE_DEL)
     setModelDanger(true)
     setDisabled(true)
-    setvisiable(true)
+    setVisible(true)
     form.setFieldsValue(text)
   }
 
   const updateSong = (text: string) => {
     setSearch('')
     setOperateType(CONST.TABLE_OPERATE_UPD)
-    setvisiable(true)
+    setVisible(true)
     form.setFieldsValue(text)
   }
 
@@ -135,7 +135,7 @@ const UiAntTable = () => {
     }
     /* eslint-disable */
     if (res.status === 200) {
-      setvisiable(false)
+      setVisible(false)
       message.success(
         operateType === CONST.TABLE_OPERATE_ADD
           ? '添加成功'
@@ -145,13 +145,13 @@ const UiAntTable = () => {
       )
       doFetch({})
     }
-    setvisiable(false)
+    setVisible(false)
   }
 
   const handleCancel = (e: any) => {
     setModelDanger(false)
     setDisabled(false)
-    setvisiable(false)
+    setVisible(false)
   }
 
   function onShowSizeChange(current: number, pageSize: number) {

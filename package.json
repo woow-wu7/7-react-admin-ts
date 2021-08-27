@@ -45,6 +45,7 @@
     "eslint-plugin-jsx-a11y": "6.2.3",
     "eslint-plugin-react": "7.19.0",
     "eslint-plugin-react-hooks": "^1.6.1",
+    "express": "^4.17.1",
     "file-loader": "4.3.0",
     "fs-extra": "^8.1.0",
     "html-webpack-plugin": "4.0.0-beta.11",
@@ -98,7 +99,8 @@
     "start": "node scripts/start.js",
     "build": "set CI=&&node scripts/build.js",
     "test": "node scripts/test.js",
-    "analyze": "source-map-explorer dist/static/js/main.*"
+    "analyze": "source-map-explorer dist/static/js/main.*",
+    "server": "node ./src/pages/admin-system/interview-cancel/server.js"
   },
   "browserslist": {
     "production": [
@@ -206,7 +208,7 @@
     "styled-components": "^5"
   },
   "#": "# 只是为了在json中做注释",
-  "#proxy": "http://127.0.0.1:7002/",
+  "proxy": "http://localhost:5678",
   "#proxy2": "注意现在在package.json中proxy只能是字符串，要是对象的化直接去修改webpack把,webpackDevServer.config.js",
   "#https://api.10248.top/": "用来请求图片，验证取消请求用的"
 }
