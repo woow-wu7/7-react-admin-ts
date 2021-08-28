@@ -61,6 +61,9 @@
 - [手写hook调度-useState实现 - 源码仓库](https://github.com/woow-wu7/7-react-source-code-analysis/blob/main/src/manual/hooks-manual.js)
 - [手写hook调度-useState实现 - 思维导图](https://github.com/woow-wu7/7-react-source-code-analysis/blob/main/src/images/hook-useState.png)
 
+### (6) a-hooks 源码分析 [a-hooks^2.10.9]
+- [a-hooks源码分析 - 仓库](https://github.com/woow-wu7/7-a-hooks-source-code-analysis)
+
 ### (6) badJs-report 源码分析
 - [badJs-report源码分析-仓库](https://github.com/woow-wu7/7-badjs-report-analysis)
 
