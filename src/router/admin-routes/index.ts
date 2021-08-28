@@ -12,6 +12,7 @@ const ReactRouterHooks = lazyLoad('@/pages/admin-system/react-router-hooks')
 const ReactRouterHooksDetail = lazyLoad('@/pages/admin-system/react-router-hooks/detail')
 const InterviewReact = lazyLoad('@/pages/admin-system/interview-react')
 const InterviewCancel = lazyLoad('@/pages/admin-system/interview-cancel')
+const InterviewUseFullscreen = lazyLoad('@/pages/admin-system/interview-fullscreen')
 const JsEs5 = lazyLoad('@/pages/admin-system/js-es5')
 const JsEs6 = lazyLoad('@/pages/admin-system/js-es6')
 const JsEs6Detail = lazyLoad('@/pages/admin-system/js-es6-detail')
@@ -65,6 +66,17 @@ const adminRoutes: IRouteModule[] = [
         key: '/admin-interview/cancel',
         path: '/admin-interview/cancel',
         component: InterviewCancel,
+        meta: {
+          needLoginAuth: true,
+          rolesAuth: ['user', 'admin'],
+        },
+      },
+      {
+        title: 'useFullscreen',
+        icon: 'anticon-react',
+        key: '/admin-interview/useFullscreen',
+        path: '/admin-interview/useFullscreen',
+        component: InterviewUseFullscreen,
         meta: {
           needLoginAuth: true,
           rolesAuth: ['user', 'admin'],
