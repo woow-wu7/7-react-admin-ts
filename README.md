@@ -64,7 +64,7 @@
 ### (6) a-hooks 源码分析 [a-hooks^2.10.9]
 - [a-hooks源码分析 - 仓库](https://github.com/woow-wu7/7-a-hooks-source-code-analysis)
 
-### (6) badJs-report 源码分析
+### (7) badJs-report 源码分析
 - [badJs-report源码分析-仓库](https://github.com/woow-wu7/7-badjs-report-analysis)
 
 # 复习资料
