@@ -64,8 +64,12 @@
 ### (6) a-hooks 源码分析 [a-hooks^2.10.9]
 - [a-hooks源码分析 - 仓库](https://github.com/woow-wu7/7-a-hooks-source-code-analysis)
 
-### (7) badJs-report 源码分析
+### (7) koa 源码分析 [koa^2.13.1]
+- [koa源码分析 - 仓库](https://github.com/woow-wu7/7-react-admin-ts/tree/master/src/SOURCE-CODE-ANALYSIS/KOA)
+
+### (8) badJs-report 源码分析
 - [badJs-report源码分析-仓库](https://github.com/woow-wu7/7-badjs-report-analysis)
+- [ ] 注意分析：( axios拦截器 + redux中间件 + koa中间键 ) 三者的相同点和区别
 
 # 复习资料
 - [复习资料-思维导图](https://github.com/woow-wu7/7-react-admin-ts/tree/master/src/assets/iamges/xmind)
@@ -584,7 +588,7 @@ moduleContext.keys().forEach(modulePath => {
   - 1. 创建一个 types 目录，专门用来管理自己写的声明文件，将 foo 的声明文件放到 types/foo/index.d.ts 中
   - 2. tsconfig.json 中的 paths 和 baseUrl 字段
   ```
-  根目录/types/redux/idnex.d.ts
+  根目录/types/redux/index.d.ts
   declare module 'redux' {
     const bindActionCreators: any
     export { bindActionCreators }
