@@ -68,10 +68,10 @@
 ### (7) koa 源码分析 [koa^2.13.1]
 - [koa源码分析 - 仓库](https://github.com/woow-wu7/7-koa-source-code-analysis)
 - [koa源码调试 - 仓库](https://github.com/woow-wu7/7-koa-source-code-analysis)
+- 注意分析：( axios拦截器 + redux中间件 + koa中间键 ) 三者的相同点和区别
 
 ### (8) badJs-report 源码分析
 - [badJs-report源码分析-仓库](https://github.com/woow-wu7/7-badjs-report-analysis)
-- 注意分析：( axios拦截器 + redux中间件 + koa中间键 ) 三者的相同点和区别
 
 # 复习资料
 - [复习资料-思维导图](https://github.com/woow-wu7/7-react-admin-ts/tree/master/src/assets/iamges/xmind)
