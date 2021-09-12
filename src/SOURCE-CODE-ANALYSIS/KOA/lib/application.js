@@ -7,7 +7,12 @@
 const debug = require('debug')('koa:application')
 const onFinished = require('on-finished')
 const response = require('./response')
+
 const compose = require('koa-compose')
+// koa-compose
+// 仓库地址：https://github.com/Cool-Primavera/compose/blob/master/index.js
+// 本项目已经将koa-compose拷贝到koa-compose.js中
+
 const context = require('./context')
 const request = require('./request')
 const statuses = require('statuses')
@@ -136,6 +141,7 @@ module.exports = class Application extends Emitter {
    * @api public
    */
 
+  // ------------------------------------------------------------------------------------------------------------------- callback
   callback() {
     const fn = compose(this.middleware)
 
