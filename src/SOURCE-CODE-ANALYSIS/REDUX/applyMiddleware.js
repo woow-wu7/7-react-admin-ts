@@ -5,10 +5,13 @@ import compose from './compose'
  * of the Redux store. This is handy for a variety of tasks, such as expressing
  * asynchronous actions in a concise manner, or logging every action payload.
  *
+ *
  * See `redux-thunk` package as an example of the Redux middleware.
  *
  * Because middleware is potentially asynchronous, this should be the first
  * store enhancer in the composition chain.
+ * 因为中间件可能是异步的，这应该是compose中间件中第一个增强器
+ *
  *
  * Note that each middleware will be given the `dispatch` and `getState` functions
  * as named arguments.
@@ -37,6 +40,7 @@ export default function applyMiddleware(...middlewares) {
       throw new Error(
         'Dispatching while constructing your middleware is not allowed. ' +
           'Other middleware would not be applied to this dispatch.'
+        // 在构建中间件时不允许dispatching，因为其他中间件可能不会被dispatch
       )
     }
 
@@ -50,10 +54,11 @@ export default function applyMiddleware(...middlewares) {
     // 1. 向每个传入的 ( 中间件 ) 中传入 ( middlewareAPI ) 参数，middlewareAPI上具有 ( getState 和 dispatch )
     // 2. 并且将中间件执行的结果返回，组成一个数组
     // 3. chain = [next => action => next(action), next => action => next(action)]
+    // 4. reduxThunk = ({ dispatch, getState }) => (next) => (action) => action(dispatch, getState, extraArgument) | next(action)
 
     // 中间件
     // 1. 中间件必须满足 (dispatch, getState) => (next) => (action) => dispatch(action) 这样的格式
-    // 2. middleware(middlewareAPI) 返回的是 (next) => (action) => dispatch(action) || ...
+    // 2. middleware(middlewareAPI) 中间件执行后，返回的是 (next) => (action) => dispatch(action) 执行后的返回值
 
     dispatch = compose(...chain)(store.dispatch)
     // 1. compose() 方法

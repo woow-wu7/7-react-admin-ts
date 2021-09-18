@@ -12,7 +12,7 @@ import isPlainObject from "./utils/isPlainObject";
  * There should only be a single store in your app. To specify how different
  * parts of the state tree respond to actions, you may combine several reducers
  * into a single reducer function by using `combineReducers`.
- * - 一个app中只能有一个 store
+ * - 一个 app 中只能有一个 store
  * - 你可以通过 combineReducers() 将多个reducer合并成一个总的reducer
  *
  * @param {Function} reducer A function that returns the next state tree, given
@@ -31,6 +31,7 @@ import isPlainObject from "./utils/isPlainObject";
  * to enhance the store with third-party capabilities such as middleware,
  * time travel, persistence, etc. The only store enhancer that ships with Redux
  * is `applyMiddleware()`.
+ * Redux附带的唯一增强器是applyMiddleware
  * - enhancer() 增强器
  * - 1. 可以在 ( dispatch ) 一个 ( action ) 到达 ( reducer ) 之前做一些增强处理
  * - 2. 比如：打印日志，dispatch一个函数
@@ -38,6 +39,7 @@ import isPlainObject from "./utils/isPlainObject";
  * @returns {Store} A Redux store that lets you read the state, dispatch actions
  * and subscribe to changes.
  * - 返回一个store
+ * - 你可以 读取state 派发更新 订阅变化
  */
 
 // createStore
@@ -65,10 +67,15 @@ export default function createStore(reducer, preloadedState, enhancer) {
     (typeof preloadedState === "function" && typeof enhancer === "function") ||
     (typeof enhancer === "function" && typeof arguments[3] === "function")
   ) {
+    // 如果 (第二个参数) 和 (第三个参数) 都是函数 或者
+    // 如果 (第三个参数) 和 (第四个参数) 都是函数
+    // 抛错
     throw new Error(
       "It looks like you are passing several store enhancers to " +
         "createStore(). This is not supported. Instead, compose them " +
         "together to a single function."
+      // 你可能在将多个enhances函数传入createStore中，目前不支持这样做，你可以将多个enhancers合并成一个单函数
+      // several 是几个的意思
     );
   }
 
@@ -77,7 +84,7 @@ export default function createStore(reducer, preloadedState, enhancer) {
     preloadedState = undefined;
     // 如果: 第二个参数preloadedState是一个函数，第三个参数enhancer是undefined，
     // 即: 只传入了两个参数的情况
-    // 则: 把第二个参数赋值给第三个参数，把第二个参数设置成undefined
+    // 则: 交换，把第二个参数赋值给第三个参数，把第二个参数设置成undefined
   }
 
   if (typeof enhancer !== "undefined") {
