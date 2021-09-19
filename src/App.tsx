@@ -64,6 +64,9 @@ const mapStateToProps = (state: any) => {
 
 const mapDispatchToProps = (dispatch: any) => {
   return bindActionCreators(actions, dispatch)
+  // bindActionCreators
+  // actions是对象 -> 重新包装成对象 key=actionCreatorName value=() => dispatch(actionCreator(params))
+  // actions是函数 -> () => dispatch(actionCreator.apply(this, arguments))
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(App)
