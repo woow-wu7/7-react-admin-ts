@@ -56,7 +56,7 @@ import isPlainObject from "./utils/isPlainObject";
 // 4. createStore(combineReducers(), applyMiddleware(logger, thunk))
 //      - 返回值 enhancer(createStore)(reducer, preloadedState)
 //      - 调用过程
-//      - 1. (createStore) => (...args) => ({...store, dispath}) 传入的两层参数分别是 ( createStore ) 和 ( reducer, preloadedState )
+//      - 1. (createStore) => (...args) => ({...store, dispatch}) 传入的两层参数分别是 ( createStore ) 和 ( reducer, preloadedState )
 //      - 2. (reducer, preloadedState) => ({...store, dispatch}) 调用该函数
 //      - 3. (reducer, preloadedState) 这两个参数会作为 createStore(reducer, preloadedState)来生成store
 //      - 4. 最终返回 { ...store, dispatch }
@@ -101,9 +101,17 @@ export default function createStore(reducer, preloadedState, enhancer) {
     // - 简化[对应1]：const store = createStore(reducer, (createStore) => (...args) => ({...store, dispatch}))
     // - 调用[对应2]：const store = createStore(reducer, enhancer)
     // - 调用后的返回值[对应3]：enhancer(createStore)(reducer, preloadedState)
-    // ------- 对照13得到：3这里的(reducer, preloadedState)对应着2中的(...args)
+    // ------- 对照13得到：3这里的(reducer, preloadedState)对应着1中的(...args);
+    // ------- 而1中的 args 又在 applyMiddleware 函数中作为  createStore(...args) 中的参数传入，所以这里 args 对应的是 [reducer, preloadState]
     // ------- 其实就是：const store = createStore(reducer, preloadedState)，则不再满足 if (typeof enhancer !== "undefined")条件，则跳出if往下执行
-    // ------- 即：const store = createStore(reducer, preloadedState) 执行后返回 { dispatch, subscribe, getState, replaceReducer, [$$observable]: observable, };
+    // ------- 即：const store = createStore(reducer, enhancer) 执行后返回 { dispatch, subscribe, getState, replaceReducer, [$$observable]: observable, };
+
+    // 2. 这里必须总结一下
+    // - a. enhancer 对应 ----------------------------------------- (createStore) => (...args) => ({...store, dispatch})
+    // - b. (reducer, preloadedState) 对应上面a的 ------------------ (...args)
+    // - c. 在 a 中的 args 是传入了 createStore(...args) 即是 -------  createStore(reducer, preloadState)
+    //      - 因为：这样的话createStore()参数中就不存在enhancer函数
+    //      - 所以：那么createStore()就会走自己定义的各种api的流程，即走到下面自己声明的 getState dispatch subscribe replaceReducer observable
     return enhancer(createStore)(reducer, preloadedState);
   }
 
@@ -220,7 +228,7 @@ export default function createStore(reducer, preloadedState, enhancer) {
 
       if (isDispatching) {
         // 在dispatch()执行时，不能取消订阅
-        // 因为idispatch(action)主要做两件事情
+        // 因为dispatch(action)主要做两件事情
         // 1. 将action传递给reducer纯函数，去更新state
         // 2. state更新之后，去执行监听数组中的所有监听函数
         throw new Error(
