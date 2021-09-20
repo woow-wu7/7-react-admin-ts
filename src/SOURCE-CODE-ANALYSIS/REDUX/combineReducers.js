@@ -160,7 +160,7 @@ export default function combineReducers(reducers) {
   let shapeAssertionError;
   try {
     assertReducerShape(finalReducers);
-    // assert 断言assertReducerShape
+    // assert 断言 assertReducerShape
     // assertReducerShape 主要是做一些reducer的检查工作，必须符合规范
   } catch (e) {
     shapeAssertionError = e;
