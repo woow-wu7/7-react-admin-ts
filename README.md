@@ -79,7 +79,7 @@
 ### (9) badJs-report 源码分析
 - [badJs-report源码分析-仓库](https://github.com/woow-wu7/7-badjs-report-analysis)
 
-# 复习资料
+# (四) 复习资料
 - [复习资料-思维导图](https://github.com/woow-wu7/7-react-admin-ts/tree/master/src/assets/iamges/xmind)
 
 
@@ -87,7 +87,7 @@
 
 
 
-# (四) 代码规范相关 ( 1-9 )
+# (五) 代码规范相关 ( 1-9 )
 * [x] 123456789
 
 >安装 husky + lint-staged + commitlint + eslint + stylelint + prettier + EditorConfig
@@ -299,7 +299,7 @@ module.exports = {
 
 
 
-# (五) 按需加载相关
+# (六) 按需加载相关
 
 ### (1) react-router-dom
 - npm install react-router-dom
@@ -355,7 +355,7 @@ module.exports = {
 
 
 
-# (六) create-react-app 相关设置
+# (七) create-react-app 相关设置
 
 ### (1) 添加别名 `@` 映射 `src` 在TS的项目中
 - 1. create-react-app构建的项目，eject后，找到 config/webpack.config.js => resolve.alias
@@ -558,7 +558,7 @@ moduleContext.keys().forEach(modulePath => {
   - 注意： ( `.env.development.local` ) 文件会覆盖掉 ( `.env.development` ) 中设置的环境便变量，但不会影响 ( `NODE_ENV` )
   - 注意：`.env.development.local`文件不被识别，git push 时并不会提交，其实也没有必要使用local文件
 
-# (七) 大屏
+# (八) 大屏
 
 ### (1) screenfull
 - 安装：cnpm install screenfull -S
@@ -576,7 +576,7 @@ moduleContext.keys().forEach(modulePath => {
 
 
 
-# (八) BUG总结
+# (九) BUG总结
 
 ### (1) 登陆页面出现的bug
 - 问题描述：登陆页面，选择系统时，报错，并且select每change一次，动画就渲染一次
@@ -878,7 +878,7 @@ export const useDebounce: IuseDebounce = (
 - 2.在1的基础上在 `scr` 文件夹中添加 `global.d.ts` 配置文件
 
 
-# (九) TS 相关
+# (十) TS 相关
 
 ## (1) tsconfig.json
 - [官网介绍](https://www.tslang.cn/docs/handbook/tsconfig-json.html)
