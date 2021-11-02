@@ -10,7 +10,7 @@ import __DO_NOT_USE__ActionTypes from './utils/actionTypes'
  * This is a dummy function to check if the function name has been altered by minification.
  * If the function has been minified and NODE_ENV !== 'production', warn the user.
  *
- * isCrushed函数主要用来检查代码是否被压缩后，因为压缩后，函数名会变短，如果被 ( 压缩，并且是生产环境就警告用户 )
+ * isCrushed函数主要用来检查代码是否被压缩，因为压缩后，函数名会变短，如果被 ( 压缩，并且是生产环境就警告用户 )
  *
  */
 function isCrushed() {} // crushed是压坏，压碎的意思
@@ -59,7 +59,7 @@ export {
   // 1. compose(funcs)
   // - 当没有参数时，返回 args => args 这样一个函数
   // - 当参数长度为1，即一个参数，直接返回参数函数调用的结果，funcs[0]
-  // - 否则用reducer迭代，从右往左，把 ( 右边函数的结果 ) 作为 ( 左边函数的参数 ) 传入，[a, b, c] => a(b(c(...args)))
+  // - 否则用reducer迭代，从右往左，把 ( 右边函数执行的结果 ) 作为 ( 左边函数的参数 ) 传入，[a, b, c] => a(b(c(...args)))
 
   __DO_NOT_USE__ActionTypes,
   // __DO_NOT_USE__ActionTypes
@@ -67,6 +67,6 @@ export {
   // __DO_NOT_USE__ActionTypes === const ActionTypes = {
   //   INIT: `@@redux/INIT${randomString()}`,
   //   REPLACE: `@@redux/REPLACE${randomString()}`,
-  //   PROBE_UNKNOWN_ACTION: () => `@@redux/PROBE_UNKNOWN_ACTION${randomString()}`
+  //   PROBE_UNKNOWN_ACTION: () => `@@redux/PROBE_UNKNOWN_ACTION${randomString()}` // probe_unknown_action
   // }
 }

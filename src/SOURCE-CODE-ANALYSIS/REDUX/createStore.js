@@ -62,7 +62,7 @@ import isPlainObject from "./utils/isPlainObject";
 //      - 4. 最终返回 { ...store, dispatch }
 
 // ------------------------------------------------------------------------- createStore函数
-export default function createStore(reducer, preloadedState, enhancer) {
+export default function createStore(reducer, preloadedState, enhancer) { // enhancer 增强器
   if (
     (typeof preloadedState === "function" && typeof enhancer === "function") ||
     (typeof enhancer === "function" && typeof arguments[3] === "function")
@@ -82,7 +82,7 @@ export default function createStore(reducer, preloadedState, enhancer) {
   if (typeof preloadedState === "function" && typeof enhancer === "undefined") {
     enhancer = preloadedState;
     preloadedState = undefined;
-    // 如果: 第二个参数preloadedState是一个函数，第三个参数enhancer是undefined，
+    // 如果: 第二个参数preloadedState是一个函数，并且，第三个参数enhancer是undefined，
     // 即: 只传入了两个参数的情况
     // 则: 交换，把第二个参数赋值给第三个参数，把第二个参数设置成undefined
   }
@@ -91,7 +91,7 @@ export default function createStore(reducer, preloadedState, enhancer) {
     if (typeof enhancer !== "function") {
       // 如果: enhancer 参数存在，但是不是function的话就报错
       // 说明: enhancer 只能是函数
-      throw new Error("Expected the enhancer to be a function.");
+      throw new Error("Expected the enhancer to be a function."); // enhancer必须是一个函数
     }
     // enhancer 存在
     // enhancer 是函数时, 很明显是一个高阶函数

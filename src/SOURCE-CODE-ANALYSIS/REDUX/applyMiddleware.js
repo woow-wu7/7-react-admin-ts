@@ -39,15 +39,17 @@ import compose from './compose'
 // - 返回值
 //    - applyMiddleware() 调用后的返回值就是一个 enhancer 函数，这个enhancer函数一般作为createStore(reducer, enhancer) 的第二个参数传入
 export default function applyMiddleware(...middlewares) {
-  // 这里，middlewares 是一个数组
-  // 真正的调用是：applyMiddleware(thunk, logger)
+  // 参数
+  // - 这里，middlewares 是一个数组，其实就是一个 rest 参数
+  // - 真正的调用是：applyMiddleware(thunk, logger)
   return (createStore) => (...args) => {
     const store = createStore(...args)
     // createStore => 生成store, args是rest参数 => args是一个数组
+    //  - createStore(...args) 其实就是把args数组展开，把每个成员依次传入createStore()函数
     //  - 注意：这里的createStore(...args) 中第三个参数 enhancer 不存在，所以会返回函数内部定义的api，而不是调用enhancer高阶函数
 
     let dispatch = () => {
-      // 定义 dispatch 函数
+      // 自定义的 dispatch 函数
       throw new Error(
         'Dispatching while constructing your middleware is not allowed. ' +
           'Other middleware would not be applied to this dispatch.'
@@ -57,13 +59,17 @@ export default function applyMiddleware(...middlewares) {
 
     const middlewareAPI = {
       getState: store.getState, // 从store实例上获取 getState 方法
-      dispatch: (...args) => dispatch(...args), // dispatch属性的定义
+      dispatch: (...args) => dispatch(...args),
+      // dispatch
+      // 1. dispatch属性的定义，包装dispatch函数
+      // 2. 为什么：这里 dispatch(...args) 为什么可以接受参数，而上面定义时是 ---> let dispatch = () => {}
+      // 3. 因为：dispatch 是 let 定义的变量，在下面重写了 dispatch 函数，-----> dispatch = compose(...chain)(store.dispatch)
     }
 
-    const chain = middlewares.map((middleware) => middleware(middlewareAPI))
+    const chain = middlewares.map((middleware) => middleware(middlewareAPI)) // 调用每个middleware，传入参数对象 {getState, dispatch}
     // chain
-    // 1. 向每个传入的 ( 中间件 ) 中传入 ( middlewareAPI ) 参数，middlewareAPI上具有 ( getState 和 dispatch )
-    // 2. 并且将中间件执行的结果返回，组成一个数组 ---- ( 注意：中间件这里只调用了一层，因为每个中间件都有三成，是 store => next => action => next(action) 这样的结构，当然最后层的返回值next(action)不一定，比如redux-thunk就要分情况next是不是函数)
+    // 1. 调用：向每个传入的 ( 中间件 ) 中传入 ( middlewareAPI ) 参数，middlewareAPI上具有 ( getState 和 dispatch )
+    // 2. 返回值：并且将中间件执行的结果返回，组成一个数组 ---- ( 注意：中间件这里只调用了一层，因为每个中间件都有三成，是 store => next => action => next(action) 这样的结构，当然最后层的返回值next(action)不一定，比如redux-thunk就要分情况next是不是函数)
     // 3. chain = [next => action => next(action), next => action => next(action)]
     // 4. reduxThunk = ({ dispatch, getState }) => (next) => (action) => action(dispatch, getState, extraArgument) | next(action)
 
@@ -72,6 +78,7 @@ export default function applyMiddleware(...middlewares) {
     // 2. middleware(middlewareAPI) 中间件执行后，返回的是 (next) => (action) => dispatch(action) 执行后的返回值
 
     dispatch = compose(...chain)(store.dispatch)
+    // 等价于：dispatch = (store.dispatch) => f(g(h(store.dispatch)))
     // 1. compose() 方法
     // 2. 当参数是多个时compose函数的函数签名是： (...funcs) => funcs.reduce((a, b) => (...args) => a(b(...args)))
     // 3. compose函数的作用：从右往左，将 ( 右边函数执行后的结果，即返回值 ) 作为 ( 左边函数的参数传入 )
@@ -156,7 +163,7 @@ export default function applyMiddleware(...middlewares) {
 
     return {
       ...store,
-      dispatch,
+      dispatch, // dispatch = (store.dispatch) => f(g(h(store.dispatch)))
     }
     // 返回
     // 1. store

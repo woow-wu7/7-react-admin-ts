@@ -15,13 +15,20 @@ export default function compose(...funcs) {
     return arg => arg
   }
 
-  // 参数个数为1，直接返回该参数
+  // 参数个数为1，直接返回该参数的调用结果
   if (funcs.length === 1) {
     return funcs[0]
   }
 
   // 多个参数
   return funcs.reduce((a, b) => (...args) => a(b(...args)))
+  // 1
   // [a, b, c] => a(b(c(...args)))
   //  - 右边函数调用的结果作为左边函数的参数，迭代进行
+  // 2
+  // 最终返回什么？：funcs.reduce((a, b) => (...args) => a(b(...args))) 最终返回的是什么？
+  // 最终返回：是一个函数，函数签名是 (...args) => f(g(h(...args))).
+  // 3
+  // 调用：dispatch = compose(...chain)(store.dispatch)
+  // 等价于：dispatch = (store.dispatch) => f(g(h(store.dispatch)))
 }

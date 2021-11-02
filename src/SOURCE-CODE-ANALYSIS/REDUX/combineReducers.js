@@ -118,11 +118,12 @@ function assertReducerShape(reducers) {
 // 参数：reducer组成的对象
 // 返回值：返回一个函数，即返回 ( combination ) 函数
 // 真实的调用：const store = createStore(combineReducers(totalReducers), composeWithDevTools(applyMiddleware(thunk, logger)))
+// 单词：combine是结合的意思
 export default function combineReducers(reducers) {
   // reducers是一个对象
   // const totalReducers = { app: appReducer, admin: adminReducer }
   // combineReducers(totalReducers)
-  const reducerKeys = Object.keys(reducers);
+  const reducerKeys = Object.keys(reducers); // 很明显这里的reducers是一个对象
   // Object.keys
   // 1. Object.keys 和 Object.getOwnPropertyNames 的区别
   // - Object.getOwnPropertyNames() ==============> 遍历 ( 所有自身属性 )，包括不可枚举属性
