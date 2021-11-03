@@ -35,6 +35,27 @@ export {
   // createStore
   // 1. 返回一个store实例，store上挂载了 ( getState, dispatch, subscribe, replaceReducer, observable )
   // 2. 如果存在 applyMiddleware() 这样的 enhancer 函数，则会重写 ( dispatch ) 函数
+  // 2021.11.03更新如下
+  // createStore(reducer, preloadState, enhancer)
+  // 11. enhancer参数存在
+  //    - 情况：如果只有两个参数，并且第二个参数是函数
+  //    - 交换：说明第三个参数是undefined，第二个参数是函数，那么交换第二个和第三个参数的位置 ( 来保证enhancer参数是一个函数 )
+  //    - 返回：
+  //        - 因为：这种情况 createStore() 返回的是 enhancer(createStore)(reducer, preloadedState)
+  //        - 又因为：applyMiddleware 就是一个enhancer函数
+  //        - 函数签名：applyMiddleware 的函数签名是：(...middlewares) => (createStore) => (...args) => ({...store, dispatch})
+  //          - 第一次调用在：createStore(reducer, applyMiddleware(logger, chunk)) 返回这样一个函数 (createStore) => (...args) => ({...store, dispatch})
+  //          - 第二次和第三次调用：enhancer(createStore)(reducer, preloadedState) 等同于 createStore(reducer, preloadState)
+  //    - 最终返回：createStore(reducer, preloadState) 执行的结果，大部分和下面22的情况一致了
+  //    - 问题：既然 11 和 22 返回大部分一致，那有什么不同呢？
+  //    - 答案：
+  //        - 返回值的不同：是返回的store对象的dispatch方法不一样，这里情况11重写了dispatch，用来处理各种redux中间件执行后的dispatch方法
+  //        - 函数内部逻辑不一样：情况11多了对中间件的处理过程，相当于函数组合的过程
+  // 22. enhancer不存在
+  //    - 情况：只有一个参数，或者有两个参数但是第二个参数不是一个函数(是一个对象)
+  //    - 返回：返回一个对象，对象中的属性都是内部自己定义的，对象中包含 getState，dispatch，subscribe，replaceReducer，observable
+  // 33. 综上所述
+  //    - 不管参数是那种情况，createStore返回的都是store对象，包含getState，dispatch，subscribe，replaceReducer，observable这些属性
 
   combineReducers,
   // combineReducers

@@ -62,7 +62,9 @@ import isPlainObject from "./utils/isPlainObject";
 //      - 4. 最终返回 { ...store, dispatch }
 
 // ------------------------------------------------------------------------- createStore函数
-export default function createStore(reducer, preloadedState, enhancer) { // enhancer 增强器
+export default function createStore(reducer, preloadedState, enhancer) {
+  // enhancer 增强器
+  // preload 预装 预载
   if (
     (typeof preloadedState === "function" && typeof enhancer === "function") ||
     (typeof enhancer === "function" && typeof arguments[3] === "function")

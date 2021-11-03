@@ -4,6 +4,7 @@
 //    - actionCreator：action创建函数，即返回action对象的函数
 //    - dispatch：即store中的dispatch方法
 // - 调用后：返回的是一个函数： () => dispatch(actionCreator.apply(this, arguments))
+// const bindActionCreator = (actionCreator, dispatch) => () => dispatch(actionCreator.apply(this, arguments))
 function bindActionCreator(actionCreator, dispatch) {
   return function() {
     return dispatch(actionCreator.apply(this, arguments))
