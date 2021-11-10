@@ -118,7 +118,7 @@ function assertReducerShape(reducers) {
 // 参数：reducer组成的对象
 // 返回值：返回一个函数，即返回 ( combination ) 函数
 // 真实的调用：const store = createStore(combineReducers(totalReducers), composeWithDevTools(applyMiddleware(thunk, logger)))
-// 单词：combine是结合的意思
+// 单词：combine是组合，结合，的意思
 export default function combineReducers(reducers) {
   // reducers是一个对象
   // const totalReducers = { app: appReducer, admin: adminReducer }
@@ -126,8 +126,8 @@ export default function combineReducers(reducers) {
   const reducerKeys = Object.keys(reducers); // 很明显这里的reducers是一个对象
   // Object.keys
   // 1. Object.keys 和 Object.getOwnPropertyNames 的区别
-  // - Object.getOwnPropertyNames() ==============> 遍历 ( 所有自身属性 )，包括不可枚举属性
-  // - Object.keys() =============================> 遍历自身属性，但是 ( 不包括不可枚举属性 )
+  // - Object.getOwnPropertyNames() ==============> 遍历 ( 所有自身属性 )，包括 ( 不可枚举属性 )
+  // - Object.keys() =============================> 遍历 ( 自身属性 )，但是不包括 ( 不可枚举属性 )
   // 2. 如何声明一个对象的属性，是不可枚举的？
   // - const a = {name: 'woow_wu7'}
   // - Object.defineProperty(a, 'age', {value: 20, enumerable: false})
@@ -168,7 +168,7 @@ export default function combineReducers(reducers) {
   }
 
 
-  // ---------------------------------------------------------------------------------------------------------------------
+  // ------------------------------------------------------ combineReducers 最终返回一个函数 combination
   return function combination(state = {}, action) {
     if (shapeAssertionError) {
       throw shapeAssertionError;
@@ -213,11 +213,11 @@ export default function combineReducers(reducers) {
       hasChanged || finalReducerKeys.length !== Object.keys(state).length;
     return hasChanged ? nextState : state;
     // 如果state变化了，返回新的state (nextState)
-    // 如果state没有变化，返回就的state (state)
+    // 如果state没有变化，返回旧的的state (state)
     // 其实就是做缓存处理，来提升性能
 
     // 所以：
-    // 1. combineReducer(rootReducer) 执行返回的是一个函数 ( combination )，返回的这个函数类型其实就是 ( reducer函数 )
-    // 2. combination(state, action) 即是一个reducer函数类型，执行后返回的是 state，只不过会做缓存处理，state没变化直接返回
+    // 1. combineReducers(rootReducer) 执行返回的是一个函数 ( combination )，返回的这个函数类型其实就是 ( reducer函数 )
+    // 2. combination(state, action) 即是一个reducer函数类型(接受一个state和action，返回一个新的state)，执行后返回的是 state，只不过会做缓存处理，state没变化直接返回
   };
 }
