@@ -56,6 +56,7 @@
 
 ### (4) vue 源码分析 [vue^2.6.12]
 - [vue源码分析-仓库](https://github.com/woow-wu7/7-react-admin-ts/tree/master/src/SOURCE-CODE-ANALYSIS/VUE)
+- [vue源码分析-新建仓库](https://github.com/woow-wu7/7-vue2-source-code-analysis)
 - [vue源码分析-我的掘金文章](https://juejin.cn/post/6844904181094957069)
 
 ### (5) vuex 源码分析 [v2.6.10]
