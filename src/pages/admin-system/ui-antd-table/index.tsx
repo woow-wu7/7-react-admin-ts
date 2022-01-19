@@ -25,6 +25,8 @@ const UiAntTable = () => {
     }
   )
 
+  console.log('data :>> ', data);
+
   if (!data) return '' // 兼容性
 
   const { current, pageSize } = params

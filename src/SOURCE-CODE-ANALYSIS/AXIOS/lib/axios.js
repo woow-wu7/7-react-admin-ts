@@ -12,9 +12,28 @@ var defaults = require('./defaults')
  */
 function createInstance(defaultConfig) {
   var context = new Axios(defaultConfig)
-  // content
-  // - 属性 defaults interceptors request getUri ...
 
+  // 1
+  // context 对象
+  // - 属性
+  //    - defaults
+  //    - interceptors
+
+  // 1-1
+  // defaults
+  // defaults 其实就是参数 defaultConfig
+  // defaultConfig -> defaults 中的属性
+  // - adapter 主要是请求方法的适配器，浏览器环境使用XMLHttpRequest，node环境使用http
+  // - transformRequest
+  // - transformResponse
+  // - timeout
+  // - xsrfCookieName: 'XSRF-TOKEN',
+  // - xsrfHeaderName: 'X-XSRF-TOKEN',
+  // - maxContentLength: -1,
+  // - maxBodyLength: -1,
+  // - validateStatus() 表示状态码 status >= 200 && status < 300 的布尔值
+
+  // 1-2
   // interceptors
   // - 属性 request response
   // - 两个属性都是 InterceptorManager 构造函数new生成的实例
@@ -29,11 +48,13 @@ function createInstance(defaultConfig) {
   // 继承原型
   // Copy axios.prototype to instance
   // 将 axios.prototype 拷贝到 instance 函数上，作为instance函数的属性，函数属性的话将this绑定到context上
+  // Axios.prototype上有哪些属性 -> request + getUri + 请求相关的各种方法比如get head options delete post put patch等
   utils.extend(instance, Axios.prototype, context)
 
   // 继承实例
   // Copy context to instance
   // 同样拷贝 context 到 instance 函数上，函数属性的话将this绑定到context上返回新函数作为value再拷贝
+  // context 上有哪些属性 -> defaults interceptor
   utils.extend(instance, context)
 
   return instance
@@ -54,6 +75,9 @@ axios.Axios = Axios // Axios 属性
 // create
 // Factory for creating new instances
 // 用工厂函数生成新的实例，即create方法的作用是生成一个axios实例
+// - create方法的特点
+//    - 1. create函数存在的核心目的，是为了可以配置request函数的 ( 配置参数对象 )，而不是仅仅使用 defaults
+//    - 2. 通过create创建的实例，就不再具有 Axios，Cancel，CancelToken，isCancel，all，spread 等属性和方法了
 axios.create = function create(instanceConfig) {
   return createInstance(mergeConfig(axios.defaults, instanceConfig))
   // 1. axios.defaults === new Axios(defaultConfig).defaults === defaultConfig
@@ -83,7 +107,9 @@ axios.isCancel = require('./cancel/isCancel')
 axios.all = function all(promises) {
   return Promise.all(promises)
 }
+
 axios.spread = require('./helpers/spread') //调用函数和扩展参数数组的语法糖
+// spread 是传播的意思
 
 module.exports = axios
 

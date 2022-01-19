@@ -1,6 +1,15 @@
 import axios from '@/api/axios'
+import axios2 from 'axios'
+
 
 export const getTableList = (params?: any) => {
+  return axios({
+    method: 'get',
+    url: '/api/musics',
+  })
+}
+
+export const getTableList2 = (params?: any) => {
   return axios({
     method: 'get',
     url: '/api/musics',

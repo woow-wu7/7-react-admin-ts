@@ -588,8 +588,8 @@ module.exports = function(webpackEnv) {
         new WatchMissingNodeModulesPlugin(paths.appNodeModules),
 
       // 需要在 开发环境 才使用
-      isEnvDevelopment &&
-        new BundleAnalyzerPlugin(),
+      // isEnvDevelopment &&
+      //   new BundleAnalyzerPlugin(),
 
       isEnvProduction &&
         new MiniCssExtractPlugin({

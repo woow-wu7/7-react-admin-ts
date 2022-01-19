@@ -92,6 +92,9 @@ var defaults = {
   /**
    * A timeout in milliseconds to abort a request. If set to 0 (default) a
    * timeout is not created.
+   * ---
+   * timeout
+   * 表示超时终止请求，值为0表示不会终止请求
    */
   timeout: 0, // 请求超时时间，超过 timeout 就会 abort中断请求
 

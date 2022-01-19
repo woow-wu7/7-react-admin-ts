@@ -11,6 +11,8 @@ import { getUserConfirmation } from '@/utils'
 import 'intersection-observer'
 import * as Sentry from '@sentry/react'
 import { Integrations } from '@sentry/tracing'
+import './mock/music'
+
 
 Sentry.init({
   dsn: 'https://fee8497c943342baabf5e4fc0ecf4e25@o517062.ingest.sentry.io/5624307',

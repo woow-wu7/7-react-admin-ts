@@ -32,7 +32,9 @@ InterceptorManager.prototype.use = function use(fulfilled, rejected) {
   // 2. response
   // axios.interceptors.response.use(response => response, err => Promise.reject(err))
 
-  return this.handlers.length - 1 // 返回值类型的ID，用于eject操作
+  return this.handlers.length - 1
+  // 返回值类型的ID，用于eject操作
+  // 其实就是通过数组下标来记录，是length长度减少1
 }
 
 /**
