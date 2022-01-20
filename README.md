@@ -396,10 +396,11 @@ module.export = {
 ```
 
 ### (1.2) 遇到问题
-- 问题：当在webpack配置了别名后，ts报错找不到模块
+- 问题：当在webpack配置了别名后，ts报错找不到模块，同时vscode点击时不跳转
 - 回答：
   - **paths**：因为webpack知道了别名路径，但是ts并不知道这是设置了别名，所以需要设置tsconfig.json文件中的 `paths`
   - **baseUrl**: 当设置了 paths时，就必须设置baseUrl
+- 如下配置后，ts不再报错，并且vscode中点击也可以跳转
 ```
 {
   "compilerOptions": {
