@@ -22,7 +22,7 @@
 - redux-logger
 
 ### (1) redux-thunk
-- https://github.com/reduxjs/redux-thunk   
+- https://github.com/reduxjs/redux-thunk
 ```
 源码如下：
 function createThunkMiddleware(extraArgument) {
