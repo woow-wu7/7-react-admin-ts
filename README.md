@@ -38,7 +38,7 @@
 
 基于 vue3 + webpack5 + typescript + vuepress2 构建的组件库
 
-- [DivinePlus-官网](120.53.220.141:8090/)
+- [DivinePlus-官网](http://120.53.220.141:8090/)
 - [DivinePlus-github 地址](https://github.com/woow-wu7/8-divine-plus)
 
 # (四) 源码分析
