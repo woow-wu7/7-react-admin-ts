@@ -90,9 +90,15 @@ axios.create = function create(instanceConfig) {
 // 有两种方法来取消请求
 // - 1. new axios.CancelToken(c => cancelFn => c)
 // - 2. const source = axios.CancelToken.source()
-//      - source.token
-//      - source.cancel
+//      - source.token --- 在axios请求参数对象, { cancelToken: source.token }
+//      - source.cancel -- 用来取消请求的方法
+//      - 使用案例: https://juejin.cn/post/6844904147532120072#heading-3
 // 2
+// 扩展
+// - 如果存在 cancelToken 取消请求的流程的话，请求总流程应该是下面这样
+// - 总流程: [请求拦截，request->dispatchRequest->adapter->xhrAdapter->cancelToken存在 -> promise/pending状态 -> cancel()函数执行 -> promise/resolve状态, 响应拦截]
+// - xhrAdapter文件位置: 本项目/src/SOURCE-CODE-ANALYSIS/AXIOS/lib/adapters/xhr.js
+// 3
 // 问题：如果判断axios请求是否已经取消了
 // 回答：axios.isCancel(Error对象)
 // 链接：https://github.com/axios/axios#cancellation

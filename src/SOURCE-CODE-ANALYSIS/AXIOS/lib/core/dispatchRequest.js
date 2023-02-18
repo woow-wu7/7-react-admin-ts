@@ -111,8 +111,11 @@ module.exports = function dispatchRequest(config) {
   // 1. 浏览器环境是 (config) => new Promise()
   // 2. 允许自定义处理请求，使测试更容易，返回一个promise
   // 3. 一般在config中都不会传 adapter，所以一般都是使用 defaults.adapter，可以直接点击 defaults.adapter 跳到 defaults.adapter 的函数定义 => adapter: getDefaultAdapter()
+  // 4. adapter 是适配器 的意思
 
   return adapter(config).then( // 执行完then的回调，返回一个promise对象
+
+    // 成功回调
     function onAdapterResolution(response) {
       throwIfCancellationRequested(config)
 
@@ -121,6 +124,8 @@ module.exports = function dispatchRequest(config) {
 
       return response
     },
+
+    // 失败回到
     function onAdapterRejection(reason) {
       if (!isCancel(reason)) {
         throwIfCancellationRequested(config)

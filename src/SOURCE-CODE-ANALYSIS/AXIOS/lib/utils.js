@@ -285,9 +285,13 @@ function forEach(obj, fn) {
       // 调用 fn(obj[i], i, obj)
       // 其实就是 fn(value, index, 原数组)
     }
-  // 2. object
+    // 2. object
   } else {
     // Iterate over object keys
+    // for...in 遍历 ( 自身的可枚举属性 ) + ( 继承的可枚举属性 )
+    // - 所以如果只是遍历自身可枚举属性，一般都要配合 hasOwnProperty
+    // - 比如: person.hasOwnProperty(key)
+    // - 链接: https://github.com/woow-wu7/6-penetrate/blob/main/2-FRONTEND/1-JS/DD-%E9%81%8D%E5%8E%86%E5%AF%B9%E8%B1%A1/%E5%AF%B9%E8%B1%A1%E7%9A%84%E9%81%8D%E5%8E%86.html
     for (var key in obj) {
       if (Object.prototype.hasOwnProperty.call(obj, key)) {
         fn.call(null, obj[key], key, obj)
@@ -317,13 +321,13 @@ function forEach(obj, fn) {
 // -------------------------------------------------------------------------- merge
 // 合并对象
 function merge(/* obj1, obj2, obj3, ... */) {
-
   var result = {}
   // result
   // 1. 收集所有传入merge方法的 - 参数对象的key，value
   // 2. 当参数对象中有同名属性时
 
-  function assignValue(val, key) { // val和key 分别对应对象的 value和key
+  function assignValue(val, key) {
+    // val和key 分别对应对象的 value和key
     if (isPlainObject(result[key]) && isPlainObject(val)) {
       // result对象中已经存该key，并且key对应的是一个对象，同时val也是一个对象
       // 即：result对象中，和参数对象中，具有相同都key，并且key属性都是对象，则递归

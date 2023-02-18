@@ -189,6 +189,7 @@ module.exports = function xhrAdapter(config) {
       // 2. executor(c)中的c是这样一个函数 resolvePromise(token.reason)
       // 3. resolvePromise = resolve 其实就是 token.promise(resolvePromise => resolvePromise(token.reason))
       // 4. resolve的结果在这里通过 then 来捕获
+      // 5. 位置: config.cancelToken.promise 的文件位置 本项目/src/SOURCE-CODE-ANALYSIS/AXIOS/lib/cancel/CancelToken.js
       config.cancelToken.promise.then(function onCanceled(cancel) {
         // 重点1: config.cancelToken 就是调用 CancelToken 构造函数生成的实例，实例上有promise属性
         // 重点2: cancel()取消函数执行时，才会把promise属性的状态变成fulfilled，并且将token.reason抛出，作为这里的 then函数onCanceled回调的参数

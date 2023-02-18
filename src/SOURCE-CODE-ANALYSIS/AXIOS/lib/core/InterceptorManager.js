@@ -26,9 +26,9 @@ InterceptorManager.prototype.use = function use(fulfilled, rejected) {
     fulfilled: fulfilled, // fulfilled 和 rejected 是两个函数
     rejected: rejected,
   })
-  // 在真实的开发中，如果调用use
+  // 在真实的开发中，如果调用 use
   // 1. request
-  // axios.interceptors.request.use(config => config, err =>  Promise.reject(err))
+  // axios.interceptors.request.use(config => config, err =>  Promise.reject(err)) 参数和promise的then差不多
   // 2. response
   // axios.interceptors.response.use(response => response, err => Promise.reject(err))
 
@@ -63,7 +63,7 @@ InterceptorManager.prototype.eject = function eject(id) {
 InterceptorManager.prototype.forEach = function forEach(fn) {
   utils.forEach(this.handlers, function forEachHandler(h) {
     // 1
-    // util.forEach(obj, fn)
+    // util.forEach(obj|array, fn)
     // - arr ====> fn(arr[i], i, arr)
     // - object => fn(obj[key], key, obj)
 

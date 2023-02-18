@@ -27,17 +27,27 @@ function Axios(instanceConfig) {
   this.interceptors = {
     // axios实例对象上挂载 interceptors 属性对象
     // interceptors: 是拦截器的意思
-    request: new InterceptorManager(), // 这里request中的handlers和response中的handlers是相互独立的，是不同的实例
+    // 注意:
+    // - 这里 request中的handlers 和 response中的handlers 是相互独立的，是不同的实例，因为是各自new，生成不同实例，实例上有不同的 handlers
+    // - 也就是说，当我们向 chain 添加 handlers 时，是不同的 handlers
+    request: new InterceptorManager(),
     response: new InterceptorManager(),
+    // 在真实的开发中，如果调用 use
+    // 1. request
+    // axios.interceptors.request.use(config => config, err =>  Promise.reject(err)) 参数和promise的then差不多
+    // 2. response
+    // axios.interceptors.response.use(response => response, err => Promise.reject(err))
   }
 }
 
+
+// -------------------------------------------------------------------------- request方法
+// -------------------------------------------------------------------------- request方法
+// -------------------------------------------------------------------------- request方法
 /**
  * Dispatch a request
- *
  * @param {Object} config The config specific for this request (merged with this.defaults)
  */
-// -------------------------------------------------------------------------- request方法
 // Axios.prototype.request 最终返回的是一个 promise 对象
 Axios.prototype.request = function request(config) {
   /*eslint no-param-reassign:0*/
@@ -57,12 +67,14 @@ Axios.prototype.request = function request(config) {
   //    ... delete put head options patch
   // 44. axios.create([config]).get(url[, config])
 
-  if (typeof config === 'string') { // 对应22
+  if (typeof config === 'string') {
+    // 对应22
     // config是一个字符串
     config = arguments[1] || {} // 1. 如果config是一个字符串，那么config就是第二个参数，获取配置对象config
     config.url = arguments[0] // 2. 那么第一个参数就是rul, 获取请求url，并赋值给配置对象 config
-  } else {
-    // config不是字符串，即是一个 对象 或者 不传
+  }
+  // config不是字符串，即是一个 对象 或者 不传
+  else {
     config = config || {}
   }
 
@@ -98,7 +110,7 @@ Axios.prototype.request = function request(config) {
   //  1. 遍历 handlers 数组的每个成员，以每个成员作为参数，传入unshiftRequestInterceptors函数
   //  2. handler是这样的数组 [{fulfilled, rejected}, {fulfilled, rejected}]
   this.interceptors.request.forEach(function unshiftRequestInterceptors(interceptor) {
-    // 1. 遍历handlers数组，调用 unshiftRequestInterceptors 函数，参数是handlers数组每个成员对象{ fulfilled, rejected }
+    // 1. 遍历handlers数组(handler数组是构造函数InterceptorManager中声明的)，调用 unshiftRequestInterceptors 函数，参数是handlers数组每个成员对象{ fulfilled, rejected }
     // 2. unshift 添加成员到数组头部
     chain.unshift(interceptor.fulfilled, interceptor.rejected)
     // [interceptor.fulfilled2, interceptor.rejected2, interceptor.fulfilled1, interceptor.rejected1, dispatchRequest, undefined]
@@ -111,8 +123,17 @@ Axios.prototype.request = function request(config) {
     chain.push(interceptor.fulfilled, interceptor.rejected)
     // [dispatchRequest, undefined, interceptor.fulfilled1, interceptor.rejected1, interceptor.fulfilled2, interceptor.rejected2,]
     // [dispatchRequest, undefined, 响应成功拦截1, 响应失败拦截1, 响应成功拦截2, 响应失败拦截2]
+    // 扩展
+    // - 如果存在 cancelToken 取消请求的流程的话，请求总流程应该是下面这样
+    // - 总流程: [请求拦截，request->dispatchRequest->adapter->xhrAdapter->cancelToken存在 -> promise/pending状态 -> cancel()函数执行 -> promise/resolve状态, 响应拦截]
+    // - xhrAdapter文件位置: 本项目/src/SOURCE-CODE-ANALYSIS/AXIOS/lib/adapters/xhr.js
   })
 
+  // 在真实的开发中，如果调用 use
+  // 1. request
+  // axios.interceptors.request.use(config => config, err =>  Promise.reject(err)) 参数和promise的then差不多
+  // 2. response
+  // axios.interceptors.response.use(response => response, err => Promise.reject(err))
   // 最终 chain = [请求成功拦截2, 请求失败拦截2, 请求成功拦截1, 请求失败拦截1, dispatchRequest, undefined, 应成功拦截1, 响应失败拦截1, 响应成功拦截2, 响应失败拦截2]
   while (chain.length) {
     // chain 数组不为空
