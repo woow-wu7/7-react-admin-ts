@@ -113,7 +113,7 @@
 
 # (五) LeetCode 算法
 
-[6-penetrate - 算法，前端，英语，面试](https://github.com/woow-wu7/6-penetrate)
+[6-penetrate - 算法，前端，设计模式，英语，面试](https://github.com/woow-wu7/6-penetrate)
 
 # (六) 复习资料
 
