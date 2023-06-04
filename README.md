@@ -41,7 +41,11 @@
 - [DivinePlus-官网](http://120.53.220.141:8090/)
 - [DivinePlus-github 地址](https://github.com/woow-wu7/8-divine-plus)
 
-# (四) 源码分析
+# (四) Electron 桌面端工具箱 - 8-Electron-Tools
+- [8-Electron-Tools github 地址](https://github.com/woow-wu7/8-electron-tools)
+
+
+# (五) 源码分析
 
 ### (1) redux 和 react-redux 源码分析 [redux^4.0.5]
 
@@ -111,15 +115,15 @@
 
 - [手写 diff 算法-snabbdom](https://github.com/woow-wu7/7-vue2-source-code-snabbdom)
 
-# (五) LeetCode 算法
+# (六) LeetCode 算法
 
 [6-penetrate - 算法，前端，设计模式，英语，面试](https://github.com/woow-wu7/6-penetrate)
 
-# (六) 复习资料
+# (七) 复习资料
 
 - [复习资料-思维导图](https://github.com/woow-wu7/7-react-admin-ts/tree/master/src/assets/iamges/xmind/png)
 
-# (七) 代码规范相关 ( 1-9 )
+# (八) 代码规范相关 ( 1-9 )
 
 - [x] 123456789
 
@@ -347,7 +351,7 @@ module.exports = {
 - `eslint-plugin-react-hooks`
 - [eslint-plugin-react-hooks 地址](https://www.npmjs.com/package/eslint-plugin-react-hooks)
 
-# (八) 按需加载相关
+# (九) 按需加载相关
 
 ### (1) react-router-dom
 
@@ -404,7 +408,7 @@ module.exports = {
 - npm install --save redux-devtools-extension
 - npm install redux-devtools -D
 
-# (九) create-react-app 相关设置
+# (十) create-react-app 相关设置
 
 ### (1) 添加别名 `@` 映射 `src` 在 TS 的项目中
 
@@ -642,7 +646,7 @@ moduleContext.keys().forEach(modulePath => {
   - 注意： ( `.env.development.local` ) 文件会覆盖掉 ( `.env.development` ) 中设置的环境便变量，但不会影响 ( `NODE_ENV` )
   - 注意：`.env.development.local`文件不被识别，git push 时并不会提交，其实也没有必要使用 local 文件
 
-# (十) 大屏
+# (十一) 大屏
 
 ### (1) screenfull
 
@@ -661,7 +665,7 @@ moduleContext.keys().forEach(modulePath => {
 
 - [你可能需要这样的大屏数字滚动效果](https://juejin.im/post/6844903901355835406)
 
-# (十一) BUG 总结
+# (十二) BUG 总结
 
 ### (1) 登陆页面出现的 bug
 
@@ -978,7 +982,7 @@ export const useDebounce: IuseDebounce = (
 - 1.同过配置别名时已经做了相关配置了
 - 2.在 1 的基础上在 `scr` 文件夹中添加 `global.d.ts` 配置文件
 
-# (十二) TS 相关
+# (十三) TS 相关
 
 ## (1) tsconfig.json
 
