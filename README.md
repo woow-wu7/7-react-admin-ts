@@ -42,6 +42,9 @@
 - [DivinePlus-github 地址](https://github.com/woow-wu7/8-divine-plus)
 
 # (四) Electron 桌面端工具箱 - 8-Electron-Tools
+
+基于 Electron + Vue3 + TypeScript + Vite + Pinia + ElementPlus 构建的桌面端工具箱
+
 - [8-Electron-Tools github 地址](https://github.com/woow-wu7/8-electron-tools)
 
 

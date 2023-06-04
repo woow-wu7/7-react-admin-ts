@@ -3,19 +3,21 @@
   "search-online.search-engine": "Baidu",
   "cSpell.words": [
     "BIGSCREEN",
-    "Innter",
-    "Iuse",
-    "SYSTEMTYPE",
-    "Silder",
-    "Subdirectorys",
     "blacnk",
     "commitlintrc",
     "currentopen",
     "direactory",
+    "Innter",
+    "Iuse",
     "openchange",
     "openkeys",
+    "Pinia",
+    "Silder",
     "stylelintrc",
+    "Subdirectorys",
+    "SYSTEMTYPE",
     "tyeps",
-    "typeof"
+    "typeof",
+    "vuepress"
   ]
 }
