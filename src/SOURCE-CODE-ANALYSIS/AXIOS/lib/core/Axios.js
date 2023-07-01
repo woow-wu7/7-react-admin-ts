@@ -25,11 +25,17 @@ var mergeConfig = require('./mergeConfig')
 function Axios(instanceConfig) {
   this.defaults = instanceConfig // 默认参数
   this.interceptors = {
-    // axios实例对象上挂载 interceptors 属性对象
+    // interceptors: axios实例对象上挂载 interceptors 属性对象
     // interceptors: 是拦截器的意思
     // 注意:
     // - 这里 request中的handlers 和 response中的handlers 是相互独立的，是不同的实例，因为是各自new，生成不同实例，实例上有不同的 handlers
     // - 也就是说，当我们向 chain 添加 handlers 时，是不同的 handlers
+
+    // new InterceptorManager()
+    // - handlers -> []
+    // - use ------> handler.push({fulfilled, rejected })
+    // - eject
+    // - forEach
     request: new InterceptorManager(),
     response: new InterceptorManager(),
     // 在真实的开发中，如果调用 use
@@ -64,7 +70,7 @@ Axios.prototype.request = function request(config) {
   // 33. axios.request(config)
   //    axios.get(url[, config])
   //    axios.post(url[, data[, config]])
-  //    ... delete put head options patch
+  //    axios.delete put head options patch
   // 44. axios.create([config]).get(url[, config])
 
   if (typeof config === 'string') {

@@ -262,11 +262,11 @@ function forEach(obj, fn) {
   // (1) typeof => number string boolean undefined symbol function object 一共7种数据类型
   //      - 1. 上面排出了 null 和 undefined
   //      - 2. 这里排除了 object 和 array
-  //      - 3. 剩下: number string boolean symbol function
+  //      - 3. 剩下: number string boolean symbol bigint function
   //      - 4. 即: 将上面3剩下的几种类型包装成数组
   if (typeof obj !== 'object') {
     /*eslint no-param-reassign:0*/
-    obj = [obj] // number string boolean symbol function
+    obj = [obj] // number string boolean symbol bigint function
   }
 
   // 到这里还剩: array, object 两种类型

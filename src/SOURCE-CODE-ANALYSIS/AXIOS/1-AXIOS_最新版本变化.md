@@ -54,6 +54,7 @@ let cancel;
 axios.get('/user/12345', {
   cancelToken: new CancelToken(function executor(c) {
     // An executor function receives a cancel function as a parameter
+    // 这种方式可以在取消请求后，再次发送请求，而不是一直是错误状态
     cancel = c;
   })
 });

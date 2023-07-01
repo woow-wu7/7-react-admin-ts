@@ -15,15 +15,25 @@ function createInstance(defaultConfig) {
 
   // 1
   // context 对象
-  // - 属性
+  // - 实例属性
   //    - defaults
   //    - interceptors
+  //      - request.use ...
+  //      - response.use ...
+  //        1. request
+  //            axios.interceptors.request.use(config => config, err => Promise.reject(err))
+  //        2. response
+  //            axios.interceptors.response.use(response => response, err => Promise.reject(err))
+  // - 原型属性
+  //    - request
+  //    - getUri
+  //    - 'delete', 'get', 'head', 'options' 'post', 'put', 'patch' 请求方法
 
   // 1-1
   // defaults
   // defaults 其实就是参数 defaultConfig
   // defaultConfig -> defaults 中的属性
-  // - adapter 主要是请求方法的适配器，浏览器环境使用XMLHttpRequest，node环境使用http
+  // - adapter 主要是请求方法的 ( 适配器 )，browser境使用XMLHttpRequest，node环境使用http
   // - transformRequest
   // - transformResponse
   // - timeout
@@ -42,7 +52,7 @@ function createInstance(defaultConfig) {
   // - 属性 handlers use eject forEach
 
   // instance函数
-  // bind函数将 ( request ) 方法中的this绑定到 ( context ) 对象上，并返回一个 ( 新的函数 )，新函数一apply的方式调用，即把返回的新函数的参数组装成数组传入apply
+  // bind函数将 ( request ) 方法中的this绑定到 ( context ) 对象上，并返回一个 ( 新的函数 )，新函数以apply的方式调用，即把返回的新函数的参数组装成数组传入apply
   var instance = bind(Axios.prototype.request, context)
 
   // 继承原型
@@ -114,8 +124,8 @@ axios.all = function all(promises) {
   return Promise.all(promises)
 }
 
-axios.spread = require('./helpers/spread') //调用函数和扩展参数数组的语法糖
 // spread 是传播的意思
+axios.spread = require('./helpers/spread') //调用函数和扩展参数数组的语法糖
 
 module.exports = axios
 

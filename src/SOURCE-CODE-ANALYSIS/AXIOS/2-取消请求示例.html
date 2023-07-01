@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+  <button id="go">请求</button>
+  <button id="stop">取消请求</button>
+  <script>
+    // 现在新的版本中，已经不再使用 CancelToken 了
+    // - 新写法: https://github.com/axios/axios#abortcontroller
+    // - 新写法: 详见 src/SOURCE-CODE-ANALYSIS/AXIOS/1-AXIOS_最新版本变化.md
+    // - 新写法: 详见 https://github.com/woow-wu7/8-penetrate/blob/main/1-FRONTEND/1-JS/II-AbortController/AbortController.md
+
+    let cancel;
+
+    const axiosInstance = axios.create({
+      // baseURL: 'https://some-domain.com/api/',
+      timeout: 1000,
+      headers: { 'Content-Type': 'application/json' },
+    });
+
+    const go = document.getElementById('go');
+    const stop = document.getElementById('stop');
+
+    const onGo = () => {
+      axiosInstance({
+        url: 'https://randomuser.me/api/',
+        method: 'GET',
+        cancelToken: new axios.CancelToken((c) => {
+          cancel = c
+        }) 
+        // 这里没有放在 axios.create 的配置项中，因为我们希望取消请求后，还能继续请求，就需要刷新新的 source
+      })
+        .then(res => {
+          console.log('res', res)
+          return res
+        }, err => console.log('err', err))
+
+
+    }
+
+    const onStop = () => {
+      // source.cancel('取消请求'+Math.random())
+      // source = axios.CancelToken.source();
+      cancel('取消请求'+Math.random())
+    }
+
+    go.addEventListener('click', onGo, false)
+    stop.addEventListener('click', onStop, false)
+  </script>
+</body>
+
+</html>
