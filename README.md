@@ -118,15 +118,112 @@
 
 - [手写 diff 算法-snabbdom](https://github.com/woow-wu7/7-vue2-source-code-snabbdom)
 
-# (六) LeetCode 算法
+# (六) 博客
+
+[\[react\] Hooks](https://juejin.im/post/6844904045342113799)
+
+[\[封装01-设计模式\] 设计原则 和 工厂模式(简单抽象方法)  适配器模式 装饰器模式](https://juejin.cn/post/6950958974854234119)\
+[\[封装02-设计模式\] 命令模式 元模式 组合模式 代理模式](https://juejin.cn/post/6950958974854234119)\
+[\[封装03-设计模式\] Decorator 装饰器模式在前端的应用](https://juejin.cn/post/7037871731070992421)\
+[\[封装04-设计模式\]  Publish Subscribe 发布订阅模式在前端的应用](https://juejin.cn/post/7038522552313970696)\
+[\[封装05-ElementUI源码01\] Row Col Container Header Aside Main
+Footer](https://juejin.cn/post/7042871115848351774)\
+[\[封装06- Divine-plus\] 从0开始封装一个VUE3-UI组件库 初始化](https://juejin.cn/post/7131232733841817631/) \
+[\[封装07- Divine-plus\] 从0开始封装一个VUE3-UI组件库 Watermark Scrollbar](https://juejin.cn/post/7241461049781665852)
+
+[\[React 从零实践01-后台\] 代码分割](https://juejin.im/post/6879020830253285384)\
+[\[React 从零实践02-后台\] 权限控制](https://juejin.im/post/6881481205657632781)\
+[\[React 从零实践03-后台\] 自定义hooks](https://juejin.im/post/6887132776512880654)\
+[\[React 从零实践04-后台\] docker-compose 部署react+egg+nginx+mysql](https://juejin.im/post/6892390655126241287)\
+[\[React 从零实践05-后台\] Gitlab-CI使用Docker自动化部署](https://juejin.cn/post/6897884843275714567)
+
+[\[源码-webpack01-前置知识\] AST抽象语法树](https://juejin.im/post/6844904115265339406)\
+[\[源码-webpack02-前置知识\] Tapable](https://juejin.im/post/6844904115269550087)\
+[\[源码-webpack03\] 手写webpack - compiler简单编译流程](https://juejin.im/post/6844903973002936327)\
+[\[源码\] Redux React-Redux01](https://juejin.im/post/6844904137952329742)\
+[\[源码\] axios ](https://juejin.im/post/6844904147532120072)\
+[\[源码\] koa](https://juejin.cn/post/7008056344540348453)\
+[\[源码\] vuex ](https://juejin.im/post/6844904166293241863)\
+[\[源码-vue01\] data响应式 和 初始化渲染 ](https://juejin.im/post/6844904181094957069)\
+[\[源码-vue02\] computed 响应式 - 初始化，访问，更新过程 ](https://juejin.im/post/6844904184035147790)\
+[\[源码-vue03\] watch 侦听属性 - 初始化和更新 ](https://juejin.im/post/6844904186652409863)\
+[\[源码-vue04\] Vue.set 和 vm.\$set](https://juejin.im/post/6844904190918000654)\
+[\[源码-vue05\] Vue.extend](https://juejin.im/post/6844904201944825863)
+
+[\[源码-vue06\] Vue.nextTick 和 vm.\$nextTick](https://juejin.im/post/6847902219107303438)\
+[\[源码-vue07\] keep-alive](https://juejin.cn/post/7086346927637266469)
+
+[\[源码-react01\] ReactDOM.render01](https://juejin.cn/post/6993980489463758855)\
+[\[源码-react02\] 手写hook调度-useState实现](https://juejin.cn/post/6998452866369191972)
+
+[\[部署01\] Nginx](https://juejin.im/post/6844904095464030215)\
+[\[部署02\] Docker 部署vue项目](https://juejin.im/post/6844904099024994312)\
+[\[部署03\] gitlab-CI](https://juejin.im/post/6844904103944912904)\
+[\[部署04\] \[复习\] gitlabCI +  docker-compose + ssh免密登录 + 最全Dockerfile](https://juejin.cn/post/7066315404561350670)\
+[\[部署05\] Kubernetes01](https://juejin.cn/post/7083047157413969928)\
+[\[部署06\] Kubernetes02](https://juejin.cn/post/7123855003697020958)
+
+[\[数据结构和算法01\]  二分查找和排序](https://juejin.cn/post/6907145602400780296/)\
+[\[数据结构和算法02\]  回文字符串 ](https://juejin.cn/post/7044045702703349774)\
+[\[数据结构和算法03\] 栈 和 队列 ](https://juejin.cn/post/7045911437134266375)\
+[\[数据结构和算法04\] 链表 和 树 ](https://juejin.cn/post/7053335115379769374)
+
+[\[深入01\] 执行上下文](https://juejin.im/post/6844904046050934792)\
+[\[深入02\] 原型链](https://juejin.im/post/6844904048873701389)\
+[\[深入03\] 继承](https://juejin.im/post/6844904050895372295)\
+[\[深入04\] 事件循环](https://juejin.im/post/6844904051562250254)\
+[\[深入05\]  柯里化 偏函数 函数记忆](https://juejin.im/post/6844904052879261710)\
+[\[深入06\]  隐式转换 和 运算符](https://juejin.im/post/6844904052937981959)\
+[\[深入07\]  浏览器缓存机制（http缓存机制）](https://juejin.im/post/6844904053013479432)\
+[\[深入08\]  前端安全](https://juejin.im/post/6844904053235793927)\
+[\[深入09\]  深浅拷贝](https://juejin.im/post/6844904053764259854)\
+[\[深入10\]  Debounce Throttle](https://juejin.im/post/6844904054330490894)\
+[\[深入11\] 前端路由](https://juejin.im/post/6844904054846390279)\
+[\[深入12\] 前端模块化](https://juejin.im/post/6844904056557682701)\
+[\[深入13\] 观察者模式 发布订阅模式 双向数据绑定](https://juejin.im/post/6844904058604486663)\
+[\[深入14\] canvas](https://juejin.im/post/6844904063029477389)\
+[\[深入15\] webSocket](https://juejin.im/post/6844904066808561677)\
+[\[深入16\] webpack](https://juejin.im/post/6844904070201753608)\
+[\[深入17\] http 和 https](https://juejin.im/post/6844904085750038542)\
+[\[深入18\] CSS-interview](https://juejin.im/post/6844904090644774926)\
+[\[深入19\] 手写Promise](https://juejin.im/post/6844903823429861389)\
+[\[深入20\] 手写函数](https://juejin.im/post/6844904131577004040)\
+[\[深入21\] 数据结构和算法 - 二分查找和排序](https://juejin.cn/post/6907145602400780296/)\
+[\[深入22\] js和v8垃圾回收机制](https://juejin.cn/post/6911192116651622413)\
+[\[深入23\] JS设计模式 - 代理，策略，单例](https://juejin.cn/post/6918744081460002824)\
+[\[深入24\] Fiber01](https://juejin.cn/post/6983570939342487565)\
+[\[深入25\] Typescript](https://juejin.cn/post/6999807282343051277)\
+[\[深入26\] Drag](https://juejin.cn/post/7020220064959823885)
+
+[\[前端学java01-SpringBoot实战\] 环境配置和HelloWorld服务](https://juejin.cn/post/6927306093970325517)\
+[\[前端学java02-SpringBoot实战\] mybatis + mysql 实现歌曲增删改查](https://juejin.cn/post/6929145638898794503)\
+[\[前端学java03-SpringBoot实战\] lombok，日志，部署](https://juejin.cn/post/6930627377101979662)\
+[\[前端学java04-SpringBoot实战\] 静态资源 + 拦截器 + 前后端文件上传](https://juejin.cn/post/6932097247735709709)\
+[\[前端学java05-SpringBoot实战\] 常用注解 + redis实现统计功能](https://juejin.cn/post/6933224825200574478)\
+[\[前端学java06-SpringBoot实战\] 注入 + Swagger2 3.0 + 单元测试JUnit5](https://juejin.cn/post/6934274450514771982)\
+[\[前端学java07-SpringBoot实战\] IOC扫描器 + 事务 + Jackson](https://juejin.cn/post/6935081135114289188)\
+[\[前端学java08-SpringBoot实战总结1-7\] 阶段性总结](https://juejin.cn/post/6960187616050282533)\
+[\[前端学java09-SpringBoot实战\]  多模块配置 + Mybatis-plus + 单多模块打包部署](https://juejin.cn/post/6962752749993721892)\
+[\[前端学java10-SpringBoot实战\] bean赋值转换  + 参数校验 + 全局异常处理](https://juejin.cn/post/6965404539298168839)\
+[\[前端学java11-SpringSecurity\] 配置 + 内存 + 数据库 = 三种方式实现RBAC](https://juejin.cn/post/6968003860522598436)\
+[\[前端学java12-SpringSecurity\] JWT](https://juejin.cn/post/6970598940479586334)\
+[\[前端学java13-SpringCloud\] Eureka + RestTemplate + Zuul + Ribbon](https://juejin.cn/post/6973100621205520392)\
+[\[前端学java14-Mybatis Plus\] 分页插件 和 乐观锁插件](https://juejin.cn/post/7089283105470545957)
+
+[复习笔记-01](https://juejin.cn/post/6905924860308881416)\
+[复习笔记-02](https://juejin.cn/post/6908732834026881038)\
+[复习笔记-03](https://juejin.cn/post/6913054936750096397)\
+[复习笔记-04](https://juejin.cn/post/7029703494877577246)
+
+# (七) LeetCode 算法
 
 [6-penetrate - 算法，前端，设计模式，英语，面试](https://github.com/woow-wu7/6-penetrate)
 
-# (七) 复习资料
+# (八) 复习资料
 
 - [复习资料-思维导图](https://github.com/woow-wu7/7-react-admin-ts/tree/master/src/assets/iamges/xmind/png)
 
-# (八) 代码规范相关 ( 1-9 )
+# (九) 代码规范相关 ( 1-9 )
 
 - [x] 123456789
 
@@ -354,7 +451,7 @@ module.exports = {
 - `eslint-plugin-react-hooks`
 - [eslint-plugin-react-hooks 地址](https://www.npmjs.com/package/eslint-plugin-react-hooks)
 
-# (九) 按需加载相关
+# (十) 按需加载相关
 
 ### (1) react-router-dom
 
@@ -411,7 +508,7 @@ module.exports = {
 - npm install --save redux-devtools-extension
 - npm install redux-devtools -D
 
-# (十) create-react-app 相关设置
+# (十一) create-react-app 相关设置
 
 ### (1) 添加别名 `@` 映射 `src` 在 TS 的项目中
 
@@ -649,7 +746,7 @@ moduleContext.keys().forEach(modulePath => {
   - 注意： ( `.env.development.local` ) 文件会覆盖掉 ( `.env.development` ) 中设置的环境便变量，但不会影响 ( `NODE_ENV` )
   - 注意：`.env.development.local`文件不被识别，git push 时并不会提交，其实也没有必要使用 local 文件
 
-# (十一) 大屏
+# (十二) 大屏
 
 ### (1) screenfull
 
@@ -668,7 +765,7 @@ moduleContext.keys().forEach(modulePath => {
 
 - [你可能需要这样的大屏数字滚动效果](https://juejin.im/post/6844903901355835406)
 
-# (十二) BUG 总结
+# (十三) BUG 总结
 
 ### (1) 登陆页面出现的 bug
 
@@ -985,7 +1082,7 @@ export const useDebounce: IuseDebounce = (
 - 1.同过配置别名时已经做了相关配置了
 - 2.在 1 的基础上在 `scr` 文件夹中添加 `global.d.ts` 配置文件
 
-# (十三) TS 相关
+# (十四) TS 相关
 
 ## (1) tsconfig.json
 
