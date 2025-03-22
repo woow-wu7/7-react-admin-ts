@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Deep Clone.</title>
+  </head>
+  <body>
+    <script>
+      // 深拷贝 - 总
+
+      // 深拷贝 需要解决的问题
+      // - 循环引用 ----------------------------- Map
+      // - symbol 类型的 key -------------------- Reflect.ownKeys()
+      // - 特殊的对象: Date Error RegExp 等 ------ 结构化克隆
+
+      // AA.
+      // Symbol()
+      // 1. Symbol() 函数执行就会生成一个 symbol 类型的数据
+      // 2. new Symbol() 不能这样写，因为symbol不是一个对象，new命令会生成一个对象 ---- 报错: Symbol is not a constructor
+      // 3. Symbol('abc') 参数仅仅是在console时便于区分，别有别的作用
+
+      // BB.
+      // Bigint()
+      // 1. BigInt(11) --------- 11n
+      // 2. new BigInt() ------- 报错 BigInt is not a constructor
+      // 3. new Symbol() ------- 报错: Symbol is not a constructor
+
+      // CC.
+      // Reflect
+      // Reflect.get(target, name, receiver)
+      // Reflect.set(target, name, value, receiver)
+      // Reflect.has(target, name)
+      // Reflect.ownKeys(target)
+
+      const obj = {
+        num: 1,
+        str: "string",
+        boo: true,
+        nul: null,
+        undefined: undefined,
+        [Symbol("symbol")]: "symbol", // symbol key
+        bigint: BigInt(9007199254740991), // bigint
+        arr: [1, 2, 3],
+        obj: {
+          name: "woow_wu7",
+          obj2: { age: 10 },
+        },
+        fun: function () {
+          console.log("this is a function.");
+        },
+        date: new Date(), // 特殊对象，结构化克隆
+        regexp: new RegExp(),
+        error: new Error(), // SyntaxError ReferenceError RangeError TypeError URIError EvalError
+      };
+      obj.circle = obj; // 循环引用
+
+      // ------------------------------------------------
+      // deepClone
+      // - 参数：再添加一个参数map，用来存储所有递归时传入的参数，该参数表示的是需要克隆的对象，如果该参数存在，就直接从缓存中取
+
+      const deepClone = (obj, map = new Map()) => {
+        // 1
+        // - 如果不是对象 和 数组，则直接返回
+        // - 即 ( number string boolean undefined symbol bigint null function ) 这些情况都直接返回
+        // 2
+        // - 这里还要注意：当经过这里的 if 判断后，属于 ( 值传递 )，即是新的内存，相互不影响，即深拷贝
+        // - [值传递 vs 引用传递](https://javascript.ruanyifeng.com/grammar/function.html#toc17)
+        if (typeof obj !== "object" || obj === null) {
+          return obj;
+        }
+
+        // 3
+        // 从这里起都是处理 对象 类型，即 ( array object )
+        let res = Array.isArray(obj) ? [] : {};
+
+        // 4
+        // 处理循环引用
+        if (map.has(obj)) return map.get(obj);
+        map.set(obj, res);
+
+        // 4
+        // 机构化克隆 处理 特殊对象
+        // 注意 obj.constructor 返回的是 构造函数
+        switch (obj.constructor) {
+          // AAA 特殊对象
+          case Error:
+          case Date:
+          case RegExp: {
+            res = new obj.constructor(obj);
+            break;
+          }
+          // BBB 普通对象
+          default: {
+            // Reflect.ownKeys 可以遍历对象的 ( 自身可枚举 + 自身不可枚举 + symbol类型的key )
+            Reflect.ownKeys(obj).forEach((key) => {
+              // 这里不需要做具体对象细节类型的判断，因为在 deepClone 中会具体判断
+              if (typeof obj[key] === "object") {
+                res[key] = deepClone(obj[key], map);
+              } else {
+                res[key] = obj[key];
+              }
+            });
+          }
+        }
+
+        return res;
+      };
+
+      // 调用
+      const result = deepClone(obj);
+      console.log("result", result);
+
+      // 修改原数据，看是否深拷贝成功
+      obj.num = 1111;
+      obj.str = "strrrrrr";
+      obj.boo = false;
+      obj.arr = [2, 2, 2, 2];
+      obj.obj = {};
+      obj.fun = function () {
+        console.log("this is a function2222222.");
+      };
+      obj.date = new Date(22222);
+      obj.regexp = new RegExp(22222);
+      obj.error = new Error(22222);
+
+      console.log("result", result);
+    </script>
+  </body>
+</html>

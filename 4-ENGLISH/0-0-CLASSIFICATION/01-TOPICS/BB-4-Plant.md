@@ -1,0 +1,86 @@
+##### (1) Topic - Plat Summarize
+
+- `root 根`
+- `stem 茎`
+- `leaf 叶` // leaves
+- `flower 花`
+- `petal 花瓣`
+- `bud 芽 花蕾`
+- `fruit 果`
+- `seed 种子`
+- `branch 树枝`
+- `trunk 树干 主干`
+- `bark 树皮 狗叫`
+-
+- `flower 花`
+- `petal 花瓣`
+- `bud 花蕾`
+- `bloom 开花`
+- `pollen 花粉`
+- `pollinator 传粉者`
+-
+- `protein 蛋白质`
+- `fiber 纤维`
+- `mineral 矿物质`
+- `vitamin 维生素 维他命`
+- `fat 脂肪 肥肉 肥胖`
+- _【 vegetable protein. 植物蛋白 】_
+- _【 animal protein. 植物蛋白 】_
+-
+- `bean 豆 豆类`
+- `soybean 大豆 黄豆`
+- `pea 豌豆` // one pea one fart. 一粒豌豆一个屁
+-
+- `broad bean. 蚕豆 胡豆`
+- `fava bean. 蚕豆 胡豆`
+- _【 broad 宽阔的 广阔的 】_
+-
+- `mung 绿豆`
+- `mung bean. 绿豆`
+- `red bean. 红豆`
+- _【 sprout 发芽 v 新芽 n 】_
+- _【 mung bean sprout.绿豆芽 】_
+-
+- `garlic 大蒜`
+- `onion 洋葱`
+-
+- `Chinese chives. 韭菜`
+-
+-
+-
+-
+-
+-
+-
+-
+- 1
+- `broad bean. 蚕豆 胡豆`
+- `fava bean.  蚕豆 胡豆`
+- **【 【 Broad bean 】 and 【 fava bean 】 【 belong to 】 the 【 same kind of 】 plant. 蚕豆和蚕豆属于同一种植物 】**
+- // -- belong to. 属于
+- // -- kind of. 有点 一种
+-
+-
+- AA.
+- `kind of. 有点`
+- `kind of. 一种`
+- 一点
+- **【 I'm 【 kind of 】hot. 我有点热 】**
+- **【 I'm 【 kind of 】 tired today. 我今天有点累 】**
+- **【 I'm 【 getting kind of 】 hungry. 我有点饿 】**
+- 一种
+- **【 A phone is a kind of device. 手机是一种设备 】**
+- 我有点热
+- _【 a little. = a bit. = a little bit. = kind of. 有点 】_
+- **【 I'm 【 a little 】 hot. 】**
+- **【 I'm 【 a bit 】 hot. 】**
+- **【 I'm 【 a little bit 】 hot. 】**
+- **【 I'm kind of hot. 】**
+-
+-
+- BB.
+- `belong to. 属于`
+- **【 Victory/Success must 【 belong to 】 us. 胜利一定属于我们 】**
+- // -- victory 胜利
+- // -- success 成功
+- // TIPS: Pay attention to the pronunciation of the word 'belong'.

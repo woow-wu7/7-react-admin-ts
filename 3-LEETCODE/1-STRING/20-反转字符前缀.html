@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 2000. 反转单词前缀
+
+      // 题目
+      // 你一个下标从 0 开始的字符串 word 和一个字符 ch 。找出 ch 第一次出现的下标 i ，反转 word 中从下标 0 开始、直到下标 i 结束（含下标 i ）的那段字符。如果 word 中不存在字符 ch ，则无需进行任何操作。
+
+      // 例如，如果 word = "abcdefd" 且 ch = "d" ，那么你应该 反转 从下标 0 开始、直到下标 3 结束（含下标 3 ）。结果字符串将会是 "dcbaefd" 。
+      // 返回 结果字符串 。
+
+      // 示例 1：
+      // 输入：word = "abcdefd", ch = "d"
+      // 输出："dcbaefd"
+      // 解释："d" 第一次出现在下标 3 。
+      // 反转从下标 0 到下标 3（含下标 3）的这段字符，结果字符串是 "dcbaefd" 。
+
+      // 示例 2：
+      // 输入：word = "xyxzxe", ch = "z"
+      // 输出："zxyxxe"
+      // 解释："z" 第一次也是唯一一次出现是在下标 3 。
+      // 反转从下标 0 到下标 3（含下标 3）的这段字符，结果字符串是 "zxyxxe" 。
+
+      // 示例 3：
+      // 输入：word = "abcd", ch = "z"
+      // 输出："abcd"
+      // 解释："z" 不存在于 word 中。
+      // 无需执行反转操作，结果字符串是 "abcd" 。
+
+      // leetcode
+      // https://leetcode.cn/problems/reverse-prefix-of-word/
+
+      /**
+       * @param {string} word
+       * @param {character} ch
+       * @return {string}
+       */
+
+      // 内置函数
+      var reversePrefix = function (word, ch) {
+        const index = word.indexOf(ch);
+
+        if (index === -1) return word;
+
+        return (
+          word
+            .slice(0, index + 1)
+            .split("")
+            .reverse()
+            .join("") + word.slice(index + 1)
+        );
+      };
+
+      // 手写版
+      var reversePrefix = function (word, ch) {
+        let index = -1;
+        for (let i = 0; i < word.length; i++) {
+          if (word[i] === ch) {
+            index = i;
+            break;
+          }
+        }
+
+        // 没找到，直接返回原字符串
+        if (index === -1) return word;
+
+        // 转数组交换字符
+        const leftStr = word.slice(0, index + 1);
+        const leftArr = leftStr.split("");
+        const rightStr = word.slice(index + 1);
+
+        let l = 0;
+        let r = leftArr.length - 1;
+
+        while (l < r) {
+          [leftArr[l], leftArr[r]] = [leftArr[r], leftArr[l]];
+
+          l++;
+          r--;
+        }
+
+        return leftArr.join("") + rightStr;
+      };
+    </script>
+  </body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>最长连续序列 - Longest Consecutive Sequence</title>
+  </head>
+  <body>
+    <script>
+      // 128. 最长连续序列 Longest Consecutive Sequence
+
+      // 题目
+      // 给定一个未排序的整数数组 nums ，找出数字连续的最长序列（不要求序列元素在原数组中连续）的长度。
+      // 请你设计并实现时间复杂度为 O(n) 的算法解决此问题。
+
+      // 输入：nums = [100,4,200,1,3,2]
+      // 输出：4
+      // 解释：最长数字连续序列是 [1, 2, 3, 4]。它的长度为 4。
+
+      // 输入：nums = [0,3,7,2,5,8,4,6,0,1]
+      // 输出：9
+
+      // leetcode
+      // 128. 最长连续序列 https://leetcode.cn/problems/longest-consecutive-sequence/
+
+      // 对比
+      // 128. 最长连续序列 https://leetcode.cn/problems/longest-consecutive-sequence/
+      // 674. 最长连续递增序列 https://leetcode.cn/problems/longest-continuous-increasing-subsequence/
+
+      // 思路
+      // 1. 利用set去重，并取值
+      // 2. 因为 ( 不要求序列元素在原数组中连续 )，所以我们直接从set中取元素比较即可
+      // 3. 连续上升段的起点: !set.has(currentValue)，即左邻居不存在
+      // 4. 连续上升段的终点: !set.has(xxx+1)，即 (一直+1往后遍历，直到不存在 )，即右邻居不存在
+      // 5. max 统计每个上升度个数的最大值
+
+      // 对比
+      // 1. 最长连续序列
+      // 2. 判断一组数字是否连续，出现连续数字的时候以‘-’输出 [local](file:///Users/xiawu/work/personal/front-end/8-penetrate/5-INTERVIEW/1-noCode.html)
+
+      // English
+      // -
+      // consecutive 连续的 adj
+      // continue 继续
+      // Sequence 顺序 次序 n
+      // 【 consecutive sequence. 连续序列 】
+      // 【 Our team has won seven consecutive games. 我们队连续赢了7场比赛 】
+      // 【 I has watched videos for three consecutive hours. 我连续看了三个小时的视频 】
+      // -
+      // integer 整数
+
+      // 1
+      var longestConsecutive = function (nums) {
+        const set = new Set(nums);
+        let max = 0;
+
+        for (let i = 0; i < nums.length; i++) {
+          let cur = nums[i];
+
+          let len = 1; // Note: The initial value of the variable "len" is 1.
+
+          if (!set.has(cur - 1)) {
+            // start
+            while (set.has(cur + 1)) {
+              // end
+              cur++; // 递归 recursion
+              len++; // 统计 count
+
+              // if (len > max) max = len;
+              // 注意这个表达式不能放在这里，【 因为有 nums = [0] 这样的情况，len需要赋值给max，使 Max===1 】
+            }
+            if (len > max) max = len;
+          }
+        }
+
+        return max;
+      };
+
+      // 2
+      var longestConsecutive = function (nums) {
+        const set = new Set(nums); // ( 去重 )，并 ( 提升取值效率 )，因为 ( 不要求序列元素在原数组中连续 )，直接取出比较
+
+        let max = 0;
+
+        for (let v of set.values()) {
+          // 1.连续的起点: 左邻居: 不存在，就是某个连续段的起点
+          if (!set.has(v - 1)) {
+            let count = 1; // 统计 v 为起点的上升段的 长度
+            let cur = v;
+
+            // 2.连续的终点: 右邻居存在，不断向后+1找，直到不连续为止
+            while (set.has(cur + 1)) {
+              count++;
+              cur++;
+            }
+
+            // 右邻居不存在，某个上升段结束
+            // 某个连续区间从开始到结束
+            max = Math.max(max, count);
+          }
+        }
+
+        return max;
+      };
+    </script>
+  </body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 选择排序 select sort
+
+      // 原理：
+      // 1. 选取数组第一个元素（min），和余下的（数组Y）元素一一做对比（j），如果 j < min，则互换位置，直到Y循环完毕
+      // 2. 除去第一个元素，从剩下的数组中，选取第一个元素（min）和余下的数组（Y）一一做对比，重复以上步骤
+
+      // 链接
+      // https://juejin.cn/post/6907145602400780296#heading-16
+
+      const arr = [1, 9, 4, 3, 8, 6, 5, 2, 7, 7, 7];
+
+      function selectSort(arr) {
+        const len = arr.length;
+
+        for (let i = 0; i < len; i++) {
+          let min = i;
+
+          // 记录本轮较小值 位置
+          for (let j = i + 1; j < len; j++) {
+            if (arr[j] < arr[min]) min = j;
+          }
+
+          [arr[i], arr[min]] = [arr[min], arr[i]];
+        }
+
+        return arr;
+      }
+
+      const res = selectSort(arr);
+      console.log("res: ", res);
+    </script>
+  </body>
+</html>

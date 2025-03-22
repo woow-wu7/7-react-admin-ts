@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>实现小于12px的字体</title>
+    <style>
+      /* 1. zoom */
+      .px-zoom {
+        font-size: 12px;
+        zoom: 0.5;
+        /* 缩放一倍，即 6px */
+      }
+
+      /* 2. transform: scale(); + transform-origin: left; */
+      .px-transform {
+        font-size: 12px;
+
+        /* transform通过scale缩小后，需要同时修改原点为left */
+        /* 默认原点是 盒子 的中心位置 */
+        transform: scale(0.5);
+        transform-origin: left;
+      }
+
+      .contrast1 {
+        font-size: 12px;
+      }
+      .contrast2 {
+        font-size: 6px;
+      }
+
+      /* English */
+      /* origin 起点 起源 源头 */
+      /* // TIPS: Pay attention to the pronunciation of the word 'origin' [origin-起源-源头-n] */
+    </style>
+  </head>
+  <body>
+    <div class="px-zoom">小于12px --- zoom:0.5; 得到 6px 的字体大小</div>
+    <div class="px-transform">小于12px --- transform:scale(0.5) + transform-origin:left; 得到的 6px 的字体大小</div>
+
+    <div class="contrast1">对比大小: 该字体大小为12px</div>
+    <div class="contrast2">对比大小: 该字体大小为6px，虽然设置了6px，但是还是12px</div>
+  </body>
+</html>

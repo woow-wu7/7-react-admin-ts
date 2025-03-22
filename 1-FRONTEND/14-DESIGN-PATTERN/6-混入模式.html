@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 混入模式 Mixin
+      // - 概念: 混入模式，是让一个 ( 目标类 Target ) 具有 ( 源类 source ) 上的属性和方法，即字面意思混入
+
+      // (1) target
+      class Cat {
+        constructor(color) {
+          this.color = color; // 实例属性
+        }
+        sex = "male"; // ------- 实例属性 新的写法
+      }
+
+      // (2) source
+      class CatSkill {
+        // 1. 类中的 方法 是挂在 CatSkill.prototype 上的
+        walk() {
+          console.log("walk");
+        }
+        jump() {
+          console.log("jump");
+        }
+
+        // 2. 这个是实例属性(该实例属性是一个方法)，不在 CatSkill.prototype 上，而是在 new CatSkill() 生成的实例上
+        run = () => console.log("run");
+      }
+
+      // 混入
+      // mixin(Cat, CatSkill) ---------- 混入所有
+      // mixin(Cat, CatSkill, 'walk') -- 只混入'walk'属性
+      const mixin = (target, source, ...rest) => {
+        if (res.length) {
+          rest.forEach((key) => {
+            target.prototype[key] = source.prototype[key];
+          });
+        } else {
+          for (let key in source.prototype) {
+            target.prototype[key] = source.prototype[key];
+          }
+        }
+      };
+    </script>
+
+    <script>
+      // 混合模式 Mixin 和 Object.assign() 的区别
+
+      // 1
+      // Object.assign(target, source1, source2)
+      // - 1. 当有重复的 key 时，source 将覆盖掉 target 中的 key，即 ( 后面的属性覆盖前面的属性 )
+      // - 2. 返回的是一个新的对象
+      // - 3. 只有一个参数时，直接返回该参数 Object.assign(obj) === obj // true
+      // - 4. 如果该参数不是对象，则会先转成对象，然后返回
+
+      // 2
+      // 区别
+      // - Object.assign() 属于混入模式，只不过使用了自己的 ( 合并策略 )
+      // - 不同的混合模式 有不同的 合并策略
+      const target = {
+        age: 10,
+        name: "woow_wu7",
+      };
+      const source = {
+        age: 20,
+        sex: "male",
+      };
+
+      const obj = Object.assign(target, source);
+      console.log("obj: ", obj); // { name : "woow_wu7", age: 20, sex: 'male' }
+    </script>
+  </body>
+</html>

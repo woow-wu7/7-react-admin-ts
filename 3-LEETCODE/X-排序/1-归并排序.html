@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 归并排序 - merge sort
+
+      // 归并
+      // - 拆分
+      // - 合并
+
+      // 思想
+      // - 将 ( 两个或者两个以上 ) 的 ( 有序子序列 ) 归并为 ( 一个有序序列 )
+
+      // 原理：
+      // 1. 递归的将数组分隔成两个数组，递归结束条件是数组长度为1
+      // 2. 在每次拆分数组后，进行合并，递归的从来个有序数组中取第一个元素，比较大小，合并到一个新的数组中，最后返回
+      // 3. 不断的进行 ( 拆分和合并 )
+
+      // 对比
+      // - 归并排序
+      // - 快速排序
+
+      const arr = [1, 9, 4, 3, 8, 6, 5, 2, 7, 7, 7];
+
+      function merge_sort(arr) {
+        // 1
+        // 递归拆分
+        const len = arr.length;
+        if (len <= 1) return arr;
+        const pivot = Math.floor(len / 2);
+        const left = arr.slice(0, pivot); // 取不到pivot
+        const right = arr.slice(pivot);
+
+        // 2
+        // 递归合并
+        return merge(merge_sort(left), merge_sort(right));
+      }
+
+      // 合并
+      function merge(left, right) {
+        // 因为: 是归并，当不能再拆分时，left 和 right 都是 merge 后的值
+        // 所以: 这里 left 和 right 一定是有序的
+
+        let result = [];
+
+        while (left.length && right.length) {
+          result.push(left[0] < right[0] ? left.shift() : right.shift());
+        }
+
+        // 其中一个有剩余
+        // left.length ? result.push(...left) : result.push(...right);
+        result = result.concat(left.length ? left : right); // 效率比上面高
+
+        return result;
+      }
+
+      const res = merge_sort(arr);
+      console.log("res: ", res);
+    </script>
+  </body>
+</html>

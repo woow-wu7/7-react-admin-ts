@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* 
+        Draw a sector shape.
+        - 1. step one, Draw a triangle.
+        - 2. step two, border-radius: 100%;
+        - so, 【 Sector = triangle + border-radius: 100%; 】
+        - expand,【 Trapezoid = triangle + width: x px; 】
+
+        // AA
+        // adjacent 相邻的 adj 
+        // semi-circle 半圆
+        // sector 扇形
+        // right triangle 直角三角形
+        // -
+        // Our house is 【 adjacent 】 to the park. 
+
+        // BB
+        // link https://www.webhek.com/post/40-css-shapes/
+
+        // CC
+        // 1. sector = triangle + border-radius: 100%;
+        // 2. trapezoid = triangle + with: xxx px;
+         
+        width: 100px
+        TIPS: if the width attribute is assigned to some values, then the triangle will change to trapezoid.
+
+        border-radius: 100%;
+        TIPS: if the 'border-radius:100%;' attribute is been added, then the triangle will change to sector.
+       */
+
+      #sector {
+        width: 0;
+        height: 0;
+        border: 100px solid transparent;
+        border-bottom: 100px solid red;
+        /* Above is a triangle */
+
+        border-radius: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="sector">Sector</div>
+  </body>
+</html>

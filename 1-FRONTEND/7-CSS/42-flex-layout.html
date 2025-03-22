@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flex Layout.</title>
+    <style>
+      .one {
+        width: 200px;
+        height: 200px;
+        background: red;
+      }
+      .two {
+        width: 200px;
+        height: 200px;
+        background: yellow;
+
+        /* flex: flex-grow flex-shrink flex-basis */
+        flex: 1 1 auto;
+      }
+      .three {
+        width: 200px;
+        height: 200px;
+        background: purple;
+        /* align-self: stretch; */
+      }
+
+      .container {
+        height: 400px;
+        border: 1px solid black;
+
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="one">one</div>
+      <div class="two">two</div>
+      <div class="three">three</div>
+    </div>
+  </body>
+</html>

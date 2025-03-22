@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Strategy Pattern. 策略模式</title>
+  </head>
+  <body>
+    <form action="javascript:void(0)" method="post">
+      <input type="text" name="username" />
+      <input type="password" name="password" />
+      <button>提交表单</button>
+    </form>
+    <script>
+      // Strategy Pattern 策略模式
+      // -- 表单验证
+      // -- 绩效发放
+
+      // English
+      // - strategy pattern. 策略模式
+      // - strategy game. 策略游戏
+      // - marketing strategy. 市场策略
+    </script>
+    <script>
+      // 1
+      // 未使用任何优化
+      const form = document.querySelector("form");
+
+      function validate(form) {
+        if (form.username.value === "") {
+          console.log("用户名不能为空");
+          return false;
+        }
+        if (form.password.value === "") {
+          console.log("密码不能为空");
+          return false;
+        }
+        console.log("验证成功");
+        return true;
+      }
+
+      form.onsubmit = (form) => {
+        const isPass = validate(form);
+        if (isPass) {
+          // 提交数据
+        }
+      };
+    </script>
+
+    <script>
+      // 2
+      // 使用 策略模式 优化表单验证
+
+      // 策略类 Strategy
+      // - 负责具体方法的计算实现
+      const strategy = {
+        notEmpty: (arg, form) => {
+          if (!form[arg.name].value) return arg.err;
+        },
+        minLength: (arg, form) => {
+          const min = arg.min;
+          if (form[arg.name].value.length < min) return arg.err;
+        },
+      };
+
+      // 环境类 context
+      // - 接受客户请求，并把请求委托给策略类
+      class Validator {
+        constructor(form) {
+          this.form = form;
+          this.rules = [];
+        }
+
+        add = (arg) => this.rules.push(() => strategy[arg.rule](arg, form));
+
+        trigger = () => {
+          for (let i = 0; i < this.rules.length; i++) {
+            const err = this.rules[i]();
+            if (err) return err;
+          }
+        };
+      }
+
+      // form
+      const form2 = document.querySelector("form");
+      form2.onsubmit = () => {
+        const validator = new Validator(form2);
+
+        validator.add({
+          name: "username",
+          rule: "notEmpty",
+          err: "用户名不能为空",
+        });
+
+        validator.add({
+          name: "password",
+          rule: "minLength",
+          min: 6,
+          err: "密码最小长度为6位",
+        });
+
+        const err = validator.trigger();
+        if (err) {
+          console.log("err", err);
+          return;
+        }
+        console.log("validate success");
+      };
+    </script>
+  </body>
+</html>

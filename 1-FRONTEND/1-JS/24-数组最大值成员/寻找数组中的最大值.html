@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const arr = [1, 4, 7, 3, 2, 5, 9, 8, 144, 23];
+
+      // 1
+      const max1 = Math.max(...arr);
+      console.log("max1: ", max1);
+
+      // 2
+      // reduce((accumulator, currentValue, index) => {...})
+      const max2 = arr.reduce((pre, cur) => (pre > cur ? pre : cur)); // TIPS: to compare this with the bubble sort algorithm.
+      console.log("max2: ", max2);
+
+      // 3
+      const max3 = arr.sort((a, b) => a - b).at(-1);
+      console.log("max3: ", max3);
+    </script>
+  </body>
+</html>

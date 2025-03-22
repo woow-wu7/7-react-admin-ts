@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        cursor: pointer;
+      }
+      div {
+        background: yellow;
+        margin: 10px 0;
+      }
+      span,
+      input,
+      a {
+        display: block;
+        background: yellow;
+        margin: 10px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <div tabindex="1">这是div</div>
+      <span>这是span</span>
+      <input type="text" value="这是input" />
+      <a href="javasccript:void(0)">这是a</a>
+    </section>
+
+    <script>
+      const div = document.querySelector("div");
+      div.addEventListener("focus", () => console.log("div focus"), false);
+      div.addEventListener("blur", () => console.log("div blur"), false);
+
+      // 回车键
+      div.addEventListener(
+        "keydown",
+        (e) => {
+          console.log("div keydown");
+          if (e.keyCode == 13) {
+            console.log("回车键");
+          }
+        },
+        false
+      );
+    </script>
+  </body>
+</html>

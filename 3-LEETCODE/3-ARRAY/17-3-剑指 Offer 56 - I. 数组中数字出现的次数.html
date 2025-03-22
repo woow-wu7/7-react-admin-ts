@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 剑指 Offer 56 - I. 数组中数字出现的次数
+
+      // 题目
+      // 一个整型数组 nums 里除两个数字之外，其他数字都出现了两次。请写程序找出这两个只出现一次的数字。要求时间复杂度是O(n)，空间复杂度是O(1)。
+
+      // 示例 1：
+      // 输入：nums = [4,1,4,6]
+      // 输出：[1,6] 或 [6,1]
+
+      // 示例 2：
+      // 输入：nums = [1,2,10,4,1,4,3,3]
+      // 输出：[2,10] 或 [10,2]
+
+      // 限制：
+      // 2 <= nums.length <= 10000
+
+      /**
+       * @param {number[]} nums
+       * @return {number[]}
+       */
+
+      // leetcode
+      // https://leetcode.cn/problems/shu-zu-zhong-shu-zi-chu-xian-de-ci-shu-lcof/
+
+      // 对比
+      // 对比
+      // - ( 只出现1次的1个数 ) 136. 只出现一次的数字 https://leetcode.cn/problems/single-number/
+      // - ( 只出现1次的1个数 ) 387. 字符串中的第一个唯一字符  https://leetcode.cn/problems/first-unique-character-in-a-string/
+      // - ( 只出现1次的2个数 ) 剑指 Offer 56 - I. 数组中数字出现的次数 https://leetcode.cn/problems/shu-zu-zhong-shu-zi-chu-xian-de-ci-shu-lcof/
+
+      // 公式
+      // (一)
+      // 1. N ^ N === 0
+      // 2. N ^ 0 === N
+      // 3. ^满足交换律和结合率
+      // (二)
+      // 4. 二进制数 = 1个符号位 + 7个数值位 ( 符号位0表示正数，1表示负数 )
+      // 5. 反码 = 原码 按位取反
+      // 6. 二进制负数:  ( 负数 = 正数反码 + 1 )
+
+      // 思路
+      // 分组，把只出现一次的两个数，分到不同的组，就变成了唯一不同的出现一次的数，不断^即可
+      // 1. 只出现一次的数字，我们使用 ^ 就可以得到
+      // 2. 本题有两个，只出现一次的数字，我们 ^ 后得到的是这两个数字^的结果，其他出现两次的已经消掉了
+
+      var singleNumbers = function (nums) {
+        const res = [0, 0]; // 两个成员，分别表示两个只出现一次的数字
+
+        // 1
+        // 遍历，^最终得到的是 ( 两个只出现一次的数字的^的结果)
+        let sum = 0;
+        for (let i = 0; i < nums.length; i++) {
+          sum = sum ^ nums[i];
+        }
+
+        // 2
+        sum = sum & -sum;
+
+        for (let j = 0; j < nums.length; j++) {
+          if ((sum & nums[j]) == 0) {
+            res[0] = res[0] ^ nums[j];
+          } else {
+            res[1] = res[1] ^ nums[j];
+          }
+        }
+
+        return res;
+      };
+
+      // ------------------------------------------------------------
+      // ------------------------------------------------------------
+      // ------------------------------------------------------------
+      // ------------------------------------------------------------
+      // ------------------------------------------------------------
+      // ------------------------------------------------------------
+      // ------------------------------------------------------------
+      // 2
+      var singleNumbers2 = function (nums) {
+        const map = new Map();
+        for (let i = 0; i < nums.length; i++) {
+          if (!map.has(nums[i])) {
+            map.set(nums[i], 1);
+          } else {
+            map.set(nums[i], map.get(nums[i]) + 1);
+          }
+        }
+
+        const res = [];
+        for (let j = 0; j < nums.length; j++) {
+          if (map.get(nums[j]) === 1) res.push(nums[j]);
+        }
+
+        return res;
+      };
+    </script>
+  </body>
+</html>

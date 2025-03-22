@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>word-break: break-all;</title>
+    <title>word-wrap: break-word;</title>
+    <style>
+      .word-wrap {
+        /* 整个单词一起换行 */
+        word-wrap: break-word;
+
+        width: 100px;
+        background: red;
+      }
+
+      .word-break {
+        /* 单词内换行 */
+        word-break: break-all;
+
+        width: 100px;
+        background: yellow;
+      }
+    </style>
+  </head>
+  <script>
+    // word-wrap: break-word; 整个单词一起换行
+    // word-break: break-all; 单词内换行
+  </script>
+  <body>
+    <div class="word-wrap">adfadfas adfadfadfafa</div>
+    <div class="word-break">adfadfas adfadfadfafa</div>
+  </body>
+</html>

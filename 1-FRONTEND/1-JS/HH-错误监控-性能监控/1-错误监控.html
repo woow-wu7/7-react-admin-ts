@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <!-- <img src="wwww.baidu.com" alt="" class="img1" />
+    <img
+      src="https://cdn.cdnjson.com/tvax3.sinaimg.cn//large/0072Vf1pgy1foxlo0cwkej31kw0w0dzj.jpg"
+      alt=""
+      class="img2"
+    /> -->
+
+    <script>
+      // 详见: 1-FRONTEND/1-JS/HH-错误监控/README.md
+
+      // 总结:
+      // - 捕获 Promise 中的错误
+      //   - window.onerror 和 window.addEventListener('error') --- 不能捕获 Promise 中的错误
+      //   - window.addEventListener('unhandledrejection') -------- 可以捕获 Promise 中的错误
+      // - 捕获 资源加载 的错误
+      //   - window.onerror --------------------------------------- 不能捕获 资源加载 的错误，因为资源加载不会冒泡，而 【 元素节点的事件属性指定的监听函数 ( 只能在冒泡阶段触发 ) 】
+      //   - window.addEventListener('error') --------------------- 可以捕获 资源加载 的错误，window.addEventListener('error', ()=>{}, true)
+      // - 捕获 setTimeout 异步
+      //   - window.onerror 和 window.addEventListener('error') --- 都能捕获 setTimeout 中的错误
+      // - 扩展知识
+      //   - 从 unhandledRejection 从名字就可以看出: 未处理的rejection，就和Promise的reject状态有关
+
+      // window.onerror
+      // - 优点
+      //   - 可以捕获异步 setTimeout 中的错误
+      // - 缺点
+      //   - 1. 不能绑定多个监听函数，比如: 不能通过 ( 不同的文件 ) 绑定 ( 不同的监听函数 )
+      //   - 2. 只能在事件的 ( 冒泡阶段 ) 触发
+      //   - 3. 不能捕获异步 promise 中的错误
+      //   - 4. 不能捕获网络中的错误(资源加载错误)
+      //     - 因为网络请求异常不会冒泡，应此需要在事件捕获阶段才能获取到，即分别在比如 img 和 script 标签中添加 onerror 事件，获取 img.addEventListener()
+      //     - 所以可以通过 window.addEventListener('error') 捕获网络错误
+
+      // 1
+      window.onerror = (message, source, row, col, error) => {
+        console.log("1.-------: window.onerror");
+        console.log("message: ", message);
+        console.log("source: ", source);
+        console.log("row: ", row);
+        console.log("col: ", col);
+        console.log("error: ", error);
+      };
+
+      // 2
+      window.addEventListener(
+        "error",
+        (e) => {
+          console.log("2.-------: window.addEventListener('error')", e);
+          // 1 捕获资源加载错误 - img 错误
+          console.log("e.srcElement: 发生错误的元素", e.srcElement);
+          console.log("e.target: 发生错误的元素", e.srcElement);
+          console.log("e.error", e.error);
+        },
+        // 设置true则，可以捕获捕获 ( 资源请求错误 )，比如 img 加载 -- 而 window.onerror 不能捕获  ( 资源请求错误 )，因为 资源加载 不会冒泡
+        true
+      );
+
+      // 3
+      // unhandledrejection 事件
+      // - 触发
+      //   - 当 Promise 被 reject 且没有 reject 处理器的时候，会触发 unhandledrejection 事件
+      //   - 可以将unhandledrejection捕获到的错误throw出来让error进行捕获之后统一上报。
+      window.addEventListener("unhandledrejection", (e) => {
+        console.log("3.-------: window.addEventListener('unhandledrejection')", e);
+        // 1 捕获 Promise 的错误
+        console.log("e.reason", e.reason);
+        console.log("e.srcElement: 发生错误的元素", e.srcElement);
+        console.log("e.target: 发生错误的元素", e.srcElement);
+        console.log("e.error", e.error);
+      });
+
+      // performance API
+      console.log("window.performance=", window.performance);
+
+      // 4
+      getRequestTime();
+      function getRequestTime() {
+        // 弃用: performance.timing 已弃用
+        // 代替: performance.getEntriesByType("navigation")
+
+        // 1
+        // 弃用
+        // const timing = window.performance.timing;
+        // const requestTime = timing.responseEnd - timing.requestStart;
+        // console.log("requestTime: ", requestTime);
+
+        // 2
+        const navigation = window.performance.getEntriesByType("navigation")[0];
+        const requestTime = navigation.responseEnd - navigation.requestStart;
+      }
+
+      // window.addEventListener("rejectionhandled", (e) =>
+      //   console.log("这是-rejectionhandled-事件", e.reason)
+      // );
+
+      // 1
+      // 脚本错误
+      // const typeError = new TypeError("类型错误");
+      // throw typeError;
+
+      // 2
+      // 异步任务 宏任务 出错
+      // setTimeout(() => b);
+
+      // 3
+      // promise 出错
+      // - 未设置reject处理函数
+      // 3.1
+      // new Promise((resolve) => {
+      //   throw new Error("promise报错");
+      // });
+      // 3.2
+      // new Promise((resolve, reject) => {
+      //   reject("promise报错");
+      // });
+
+      // 4
+      // img 资源加载错误
+      // const img1 = document.querySelector(".img1");
+      // img1.addEventListener("error", (e) => {
+      //   console.log("e-图片加载错误时触发1", e);
+      // });
+      // const img2 = document.querySelector(".img2");
+      // img2.addEventListener("error", (e) => {
+      //   console.log("e-图片加载错误时触发2-这里不会触发，因为图片正在加载", e);
+      // });
+
+      // 5
+      // 网路请求 出错
+      // 可以被 unhandledrejection 事件捕获
+      fetch("http://api.yytianqi.com/citylist/id/1")
+        .then((res) => res)
+        .then(() => {
+          // throw new Error("这是fetch中的报错信息，即promise中的错误");
+          // 注意: 如果不主动抛出错误的话，unhandledrejection 是不能捕获 promise 错误的
+        });
+
+      fetch("http://api.yytianqi.com/citylist/id/2111131")
+        .then((res) => res)
+        .then(() => {
+          // throw new Error("这是fetch中的报错信息，即promise中的错误");
+        });
+
+      // 6
+      // Promise 报错
+      setTimeout(() => Promise.reject("Promise抛错"), 3000);
+
+      // 7
+      setTimeout(() => {
+        throw new Error("setTimeout 抛错");
+      }, 4000);
+    </script>
+
+    <section>
+      <!--成功-->
+      <img src="https://picsum.photos/200/100" alt="" />
+
+      <!--失败-->
+      <img src="https://picsum.photos-error/200/100"" alt="">
+    </section>
+  </body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>filter: drop-shadow()</title>
+    <style>
+      .image {
+        width: 100px;
+        height: 100px;
+        filter: drop-shadow(10px 10px 2px blue);
+      }
+
+      .image2 {
+        width: 100px;
+        height: 100px;
+        border-radius: 100%;
+        box-shadow: 10px 10px 2px 4px blue;
+      }
+
+      .box {
+        width: 100px;
+        height: 100px;
+        background: red;
+        box-shadow: 2px 2px 20px -1px rgb(106, 0, 255);
+        /* box-shadow: x-shadow y-shadow blur-radius spread-radius color; */
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <br />
+      <img src="./images/firefox-logo.svg" alt="" class="image" />
+      <span>filter: drop-shadow(offset-x offset-y blur-radius color)</span>
+
+      <br />
+      <img src="./images/firefox-logo.svg" alt="" class="image2" />
+      <span>box-shadow: x-shadow y-shadow blur-radius spread-radius color;</span>
+    </div>
+
+    <br />
+    <br />
+    <br />
+    <br />
+    <div class="box"></div>
+  </body>
+</html>

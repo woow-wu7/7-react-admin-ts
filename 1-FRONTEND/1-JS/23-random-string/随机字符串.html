@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Random String.</title>
+  </head>
+  <body>
+    <script>
+      // 获取随机字符串 random string.
+
+      // 1
+      // 前置知识
+      // - 36进制: 的字符包含(10个数字和26个英文字母): 0-9 a-z
+      // - 16进制: 的字符包含(10个数字和6个英文字母): 0-9 A-F
+
+      // 2
+      // Math.random
+      // - 生成 [0, 1) 之间的 18 位小数
+
+      // 3
+      // 资料: https://juejin.cn/post/6844903665522704398
+
+      // 4
+      // 例一: 通过枚举，可以实现任意位数的字符
+      // 例二: 只能是少于11位，当然也可以从11位取任意长度的循环，这样随机性就不强了
+
+      // ---------------------------------------------------------------------------------
+      // ---------------------------------------------------------------------------------
+      // 1
+      // 优点: 随便多少位都可以
+      function getRandomString(len) {
+        const marketStr = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        const pickLetter = () => {
+          const index = Math.floor(Math.random() * marketStr.length);
+          return marketStr[index];
+        };
+
+        let res = "";
+        for (let i = 0; i < len; i++) res += pickLetter();
+        return res;
+      }
+      const res = getRandomString(10);
+      console.log("getRandomString: ", res);
+
+      // ---------------------------------------------------------------------------------
+      // ---------------------------------------------------------------------------------
+      // 2
+      // 缺点: 只能指定少于 11 位的字符
+      function getRandomString2(len) {
+        return Math.random().toString(36).slice(-len);
+        // Math.random() 生成 18 位小数
+        // slice(-len) 表示截取字符串 ( 后 len 位 )，需要 len < 11，因为 Math.random().toString(36) 生成 11 位字符
+      }
+      const res2 = getRandomString2(8);
+      console.log("res2: ", res2);
+    </script>
+  </body>
+</html>

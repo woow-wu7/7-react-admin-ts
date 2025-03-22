@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>block/inline-block/inline</title>
+  </head>
+
+  <body>
+    <!-- 1 -->
+    <!-- inline-block元素有: input textarea select img button -->
+    <!-- 注意：textarea 没有 value 属性，值直接写在标签中 -->
+    <input type="text" style="width: 200px; height: 200px" value="input" />
+    <textarea style="width: 200px; height: 200px">textarea</textarea>
+    <select id="" style="width: 200px; height: 200px"></select>
+    <img style="width: 200px; height: 200px; border: 1px solid red" />
+    <button style="width: 200px; height: 200px">按钮</button>
+
+    <!-- 2 -->
+    <!-- inline元素有 span a -->
+    <!-- inline 设置width和height无效，margin只在水平方向有效 -->
+    <span style="width: 20px; height: 20px; border: 1px solid red; margin: 20px"
+      >span: 设置with和height无效，margin只在水平方向有效</span
+    >
+    <a style="width: 20px; height: 20px; border: 1px solid red; margin: 20px"
+      >a: 设置with和height无效，margin只在水平方向有效</a
+    >
+
+    <!-- 3 -->
+    <!-- block元素有 form table div p h1-h6 ul ol li -->
+    <!-- block元素有 section header footer aside main nav -->
+
+    <!-- 4 -->
+    <!-- line-block 和 line 元素之间都存在间隙，因为有空白字符；1.紧挨着写来解决 2.父元素设置font-size: 0; 子元素再设置font-size的大小 -->
+    <button>a</button><button>b</button> <span>a</span><span>b</span>
+
+    <script>
+      // 1
+      // inline-block: input select textarea img button
+      // block: form table div p h1-h6 ul ol li 语义化标签 section header footer aside main
+      // inline: span a --- a标签中的 title 属性作用时，hover时显示的内容
+
+      // inline
+      // 设置 width 和 height 无效，margin只在水平方向有效
+
+      // 扩展
+      // display: inline-block; 存在间隙的原因?
+      // - 原因: ( 标签 ) 之间存在 ( 空白字符 )
+      // - 解决:
+      //  - 1. 各个标签不要换行，紧贴着写
+      //  - 2. 父元素设置 font-size:0; 然后子元素在设置自己需要的字体大小，因为空白字符是字符，所以设置 font-size 有效
+    </script>
+  </body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 剑指 Offer 18. 删除链表的节点
+
+      // 题目
+      // 给定单向链表的头指针和一个要删除的节点的值，定义一个函数删除该节点。
+      // 返回删除后的链表的头节点。
+
+      // 输入: head = [4,5,1,9], val = 5
+      // 输出: [4,1,9]
+      // 解释: 给定你链表中值为 5 的第二个节点，那么在调用了你的函数之后，该链表应变为 4 -> 1 -> 9.
+
+      // 输入: head = [4,5,1,9], val = 1
+      // 输出: [4,5,9]
+      // 解释: 给定你链表中值为 1 的第三个节点，那么在调用了你的函数之后，该链表应变为 4 -> 5 -> 9.
+
+      // leetcode
+      // 剑指 Offer 18. 删除链表的节点 https://leetcode.cn/problems/shan-chu-lian-biao-de-jie-dian-lcof/
+
+      // 对比
+      // ( 删除一个节点 ) 剑指 Offer 18. 删除链表的节点 https://leetcode.cn/problems/shan-chu-lian-biao-de-jie-dian-lcof/
+      // ( 删除多个节点 ) 203. 移除链表元素 https://leetcode.cn/problems/remove-linked-list-elements/
+      // ( 存在重复的节点，就删除重复的靠后的节点 ) 83. 删除排序链表中的重复元素 https://leetcode.cn/problems/remove-duplicates-from-sorted-list/
+      // ( 删除倒数第N个节点 - 滑动窗口 )  19. 删除链表的倒数第 N 个结点 https://leetcode.cn/problems/remove-nth-node-from-end-of-list/
+
+      // English
+      // -- dummy 假的
+
+      // ------------------------------------------------------------------------------------------
+      // ------------------------------------------------------------------------------------------
+      // ------------------------------------------------------------------------------------------
+      // 方法1
+      // - 和 本项目/3-LEETCODE/2-LINKED_LIST/4-移除链表元素.html 一样
+      // - 方法1 比 方法2 清晰
+      // - 思路
+      //  - 我们要 删掉节点 X，就要遍历到 X 的前一个节点，然后才能删掉 X
+      var deleteNode = function (head, val) {
+        const dummy = (list = new ListNode(null)); // 新建空节点，空链表。即 dummy 虚拟节点，dummy是假，虚假的的意思
+        dummy.next = head; // 空节点指向head，则可以通过 pre.next 遍历整个链表
+
+        // 问题: 这里为什么不用 list，而是用 list.next ？
+        // 回答: 因为 如果是 list.val === val，我们需要拿到 list 的前一个节点，则拿不到了，所以我们使用 list.next 则可以拿到 list 即前一个节点指向后一个节点，绕过目标节点
+        while (list.next) {
+          // 如果 当前节点的 next 节点是目标节点，就将 当前节点.next = 当前节点.next.next，即删除操作
+          if (list.next.val === val) {
+            list.next = list.next.next; // 相当于删除操作
+            break; // 删除之后，结束遍历
+          } else {
+            list = list.next; // 没找到，后移指针，继续遍历
+          }
+        }
+
+        return dummy.next;
+      };
+
+      // ------------------------------------------------------------------------------------------
+      // ------------------------------------------------------------------------------------------
+      // ------------------------------------------------------------------------------------------
+      // 方法2
+      // - 不借用其他虚拟节点
+      //    - 1. val 是头节点的情况
+      //    - 2. val 不是头节点的情况
+      var deleteNode2 = function (head, val) {
+        // 1
+        // 头节点就是要删除的节点
+        if (head.val === val) return head.next;
+
+        const _head = head;
+
+        // 2
+        // 头节点不是要删除的节点
+        while (head.next) {
+          // 当前节点的下一个节点是要删除的节点，就将当前节点的指针指向下下个节点，即删除下一个节点
+          // 找到后返回头节点
+          if (head.next.val === val) {
+            head.next = head.next.next;
+            return _head; // 找到，删除后，返回缓存的头节点_head，因为head已经不是头节点了，head不断在后移
+          } else {
+            head = head.next; // 后移继续遍历
+          }
+        }
+      };
+    </script>
+  </body>
+</html>

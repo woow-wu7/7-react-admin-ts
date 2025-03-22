@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 230. 二叉搜索树中第K小的元素
+
+      // 题目
+      // 给定一个二叉搜索树的根节点 root ，和一个整数 k ，请你设计一个算法查找其中第 k 个最小元素（从 1 开始计数）。
+
+      // 示例 1：
+      // 输入：root = [3,1,4,null,2], k = 1
+      // 输出：1
+
+      // 示例 2：
+      // 输入：root = [5,3,6,2,4,null,null,1], k = 3
+      // 输出：3
+
+      /**
+       * Definition for a binary tree node.
+       * function TreeNode(val, left, right) {
+       *     this.val = (val===undefined ? 0 : val)
+       *     this.left = (left===undefined ? null : left)
+       *     this.right = (right===undefined ? null : right)
+       * }
+       */
+      /**
+       * @param {TreeNode} root
+       * @param {number} k
+       * @return {number}
+       */
+
+      // leetcode
+      // 230. 二叉搜索树中第K小的元素 https://leetcode.cn/problems/kth-smallest-element-in-a-bst/
+
+      // 思路
+      // - 和 二叉搜索树的第k大节点 思路一样
+
+      // 思路
+      // - 二叉搜索树 ( 中序遍历 ) 得到 ( 升序数组 )
+      // - ( 第k大 ) 的值，就是倒数第几个元素
+      // - 我们改造中序遍历，把 ( 左根右 ) -> ( 右根左 )，倒序取值
+
+      // 二叉搜索树的第k大节点 - inorder 右根左 ------- https://leetcode.cn/problems/er-cha-sou-suo-shu-de-di-kda-jie-dian-lcof/
+      // 二叉搜索树中第K小的元素 - inorder 左根右 ----- https://leetcode.cn/problems/kth-smallest-element-in-a-bst/
+
+      var kthSmallest = function (root, k) {
+        let res = 0;
+
+        function inorder(node) {
+          if (node) {
+            inorder(node.left); // 左，升序
+            k--;
+            if (k === 0) res = node.val;
+            inorder(node.right); // 右
+          }
+        }
+
+        inorder(root);
+
+        return res;
+      };
+    </script>
+  </body>
+</html>

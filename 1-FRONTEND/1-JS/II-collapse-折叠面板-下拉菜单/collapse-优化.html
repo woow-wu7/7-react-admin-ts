@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>折叠面板-下拉菜单</title>
+    <style>
+      .content {
+        background: yellow;
+        width: 400px;
+
+        height: 0;
+        overflow: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root">
+      <button>切换</button>
+      <div class="content">
+        <p>这是展开的内容</p>
+        <p>这是展开的内容</p>
+        <p>这是展开的内容</p>
+        <p>这是展开的内容</p>
+      </div>
+    </div>
+    <script>
+      // English
+      // -
+      // fold 折叠 v
+      // unfold 展开 v
+      // -
+      // transition 过渡 v n
+      // 【 smooth transition. 平稳过渡 】
+      // 【 transition period. 过渡期 】
+      // 【 adapt 适应 不及物动词 】
+      // 【 adapt to sth. 适应某事 】
+      //  We need a 【 transition period 】 to 【 adapt to 】 the new environment. 我们需要一个过渡期去适应新环境
+      // TIPS: Pay attention to the pronunciation of the word 'transition'. [transition-过渡-v-n] [transition-period.过渡期]
+      // -
+      // effect 效果 n
+      // effective 有效的 adj
+      ///【 animation effect. 动画效果 n 】
+      // -
+      // attention 注意 注意力 n
+      // note 注意 v 笔记 n
+      // 【 concentrate attention. 集中注意力 v 】
+      // Please 【 concentrate 】 your 【 attention 】 and 【 pay attention to 】 the changes of the animation. 请集中注意力，注意动画的变化
+      // -
+      // concentrate 集中(注意力)
+
+      const button = document.getElementById("root");
+      const content = document.querySelector(".content");
+
+      let isExpand = false;
+
+      function toggle() {
+        isExpand = !isExpand;
+
+        if (isExpand) {
+          content.style.transition = "none";
+          content.style.height = "auto";
+          const height = content.offsetHeight;
+          const height2 = window.getComputedStyle(content).height; // 这样获取 height 也是可以的，注意的是 这里是带了单位 px 的
+          const height3 = content.getBoundingClientRect().height; // 这样获取 height 也是可以的
+          console.log("height", height);
+          console.log("height2", height2);
+          console.log("height3", height3);
+          // 以上是为了获取content的真实高度
+
+          // 获取到高度后，以下是为了展开动画
+          content.style.height = 0;
+          content.offsetHeight; // 注意: 这里一定要强制回流，不然展开是没有动画效果的 // Attention: We need to force reflowing, otherwise the expansion will no animation effect.
+          content.style.height = height + "px"; // 展开时，高度从 0 - height，再添加 transition
+          content.style.transition = "all 0.3s";
+        } else {
+          content.style.height = 0;
+        }
+      }
+      button.addEventListener("click", toggle, false);
+    </script>
+  </body>
+</html>

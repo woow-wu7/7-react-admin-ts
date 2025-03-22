@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        height: 0;
+      }
+
+      div {
+        width: 400px;
+        height: 200px;
+      }
+
+      .rectangle1 {
+        background: red;
+        position: absolute;
+        left: 380px;
+        top: 180px;
+      }
+
+      .rectangle2 {
+        background: yellow;
+        position: absolute;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="rectangle1"></div>
+    <div class="rectangle2"></div>
+    <script>
+      // 题目: 求两个矩形的交集？
+
+      // 思路
+      // - 两个矩形的 宽高 w1 w2 h1 h2
+      // - 两个矩形的 中心点距离差绝对值水平垂直 w h
+
+      // - 取两个矩形的 ( 中心点 )，如果 ( 相交 ) 满足   w <= ( w1 + w2 ) / 2 且 h <= ( h1 + h2 ) / 2
+      //    - (w1+w2)/2 表示水平方向上两个矩形 相邻
+      //    - (h1+h2)/2 表示垂直方向上两个矩形 相邻
+
+      const rectangle1 = document.querySelector(".rectangle1");
+      const rectangle2 = document.querySelector(".rectangle2");
+
+      const bound1 = rectangle1.getBoundingClientRect();
+      const bound2 = rectangle2.getBoundingClientRect();
+
+      const getCenter = (shape) => ({
+        x: (shape.right - shape.left) / 2 + shape.left,
+        y: (shape.bottom - shape.top) / 2 + shape.top,
+      });
+
+      const center1 = getCenter(bound1);
+      const center2 = getCenter(bound2);
+
+      const getCenterDistance = (center1, center2) => {
+        return {
+          x: Math.abs(center1.x - center2.x),
+          y: Math.abs(center1.y - center2.y),
+        };
+      };
+
+      const getCenterAdjacent = (shape1, shape2) => {
+        return {
+          x: Number(shape1.x + shape2.x) / 2,
+          y: Number(shape1.y + shape2.y) / 2,
+        };
+      };
+
+      const centerDistance = getCenterDistance(center1, center2);
+      const centerAdjacent = getCenterAdjacent(center1, center2);
+
+      if (
+        centerDistance.x <= centerAdjacent.x &&
+        centerDistance.y <= centerAdjacent.y
+      ) {
+        console.log("true", true);
+      } else {
+        console.log("false", false);
+      }
+
+      // 资料
+      // https://juejin.cn/post/7000712693728411684
+    </script>
+  </body>
+</html>

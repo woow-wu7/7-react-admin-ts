@@ -1,0 +1,353 @@
+###### Must 2024-12-01
+
+- 1
+- `【 rail 铁路 栏杆 n 】` // ------------------ 【 high speed rail. 高铁 】 【 handrail 扶手 】 【 railing 金属栏杆 】 【 railway 铁路 】 // 【 highway 高速公路 】
+- `【 trail 小路n 跟踪v 】` // ----------------- 【 mountain trail. 山路 】
+- `【 trial 试验 v n 】` // ------------------- 【 free trial. 免费试用 】 // 【 trial period. 】 【 warranty period. 】 【 validity period. 】 【 shelf life. 】
+-
+- AA.
+- > 【 rail 铁路 栏杆 n 】
+- > 【 railing 金属栏杆 n 】
+- > 【 high speed rail. 高铁 n 】 ------------- 【 high speed railway. 高铁 】 // 【 high way. 高速公路 】
+- > 【 handrail 扶手 n 】 // ------------------ 【 handle 把手 v 处理 】 // handle/handrail/handprint/handbag/handgun/hand grenade.
+- > 【 monorail 单轨电车 n 】 // --------------- 【 mono 单声道的 adj 】
+- 【 track 轨道 n / 追踪 v 】 // --------------- _【 track the trace. 追踪痕迹 】_
+- 【 trace 痕迹 n / 追踪 v 】
+- 【 truck 卡车 】 // ------------------------- _【 garbage truck. 垃圾车 】_ _【 sprinkler truck. 洒水车 】_ // 【 track / trace / trail 】
+- .MT **【 There are 【 railings 】 【 around 】 the 【 rail 】. 铁路周围有栏杆 】**
+- .MT **【 Are you 【 familiar with 】 the streets 【 around here 】 ? 你熟悉这附近的街道吗？ 】**
+- // -- around 在...周围 附近 adv prep
+- // --【 around here. 附件 】
+-
+- BB.
+- 【 trial 试验 v 】
+- 【 free trial. 免费试用 n 】
+- _【 trial period. 试用期 】_ // -------------- 【 trial 试验 v n 】
+- _【 internship period. 实习期 】_ // --------- 【 intern position. 实习岗 n 】
+- _【 warranty period. 保修期 】_ // ----------- 【 warranty 保修单 n 】
+- _【 validity period. 有效期 】_ // ----------- 【 valid 有效的 adj 】 【 validity 有效性 n 】
+- _【 shelf life. 保质期 】_ // ---------------- 【 shelf 架子 n 】
+- > 【 expiration time. 过期时间 】
+- > 【 out of date. 过时的 adj 】
+- > 【 be about to expire. 即将过期 】
+- > 【 intern position. 实习岗 】
+- 【 valid 有效的 adj 】
+- 【 validity 有效性 n 】
+- // TIPS: Pay attention to the pronunciation of the word 'validity'. [validity-有效性-n]
+- // TIPS: Pay attention to the pronunciation of the word 'valid'. [valid-有效的-adj]
+- 1.
+- .MT **【 He 【 passed 】 the 【 trial period 】 during the 【 internship 】. 他在实习期间过了试用期 】**
+- // TIPS: Pay attention to the pronunciation of the word 'period'. [period-时期-时代-n]
+- 2.
+- .MT **【 The 【 warranty period 】 is the 【 validity period 】 of 【 warranty 】. 保修期就是保修的有效期 】**
+- 3.
+- .MT **【 The product that 【 is about to 】 expire is 【 out of date 】. 这个即将过期的产品已经过时了 】**
+- // -- out of date. 过时
+- // -- be about to expire. 即将过期
+- 4.
+- **【 The 【 shelf life 】 【 labels 】 of 【 grapes 】 are 【 placed on 】 the 【 shelf 】. 葡萄的保质期标签被放置在架子上 】**
+- // -- shelf life. 保质期
+- // -- shelf 架子
+- // -- label = tag. 标签
+- // -- grape 葡萄
+- // TIPS: Pay attention to the pronunciation of the word 'grape'. [grape-葡萄-n]
+-
+- CC.
+- > 【 trail 跟踪 v 小路 n 】 // ---------------- 【 mountain trail. 山路 】
+- > 【 track 追踪 v 跟踪 v 轨道 n 】 // ---------- 【 track the trace. 追踪痕迹 】
+- > 【 trace 追踪 v 跟踪 v 痕迹 n 】
+- > 【 truck 卡车 】// -------------------------- _【 garbage truck. 垃圾车 】_ _【 sprinkler truck. 洒水车 】_
+- .MT **【 The 【 instrument 】 can 【 track 】 the 【 traces 】 that 【 left 】 by 【 trucks 】 【 on 】 the 【 trail 】. 这个仪器可以追踪卡车在小路上留下的痕迹 】**
+- **【 He is 【 tracking 】 a 【 deer 】 on the 【 trail 】. 他正在小路上跟踪一头鹿 】**
+- // -- instrument 仪器 仪表 n
+- // -- device 设备 装置 n
+- // -- equipment 设备 n
+- // -- gage 表 n
+-
+-
+- DD.
+- _【 warranty period. 保修期 n 】_ // ---------- 【 validity period. 有效期 】 【 trial period. 试用期 】 【 shelf life. 保质期 】 // internship 实习期
+- _【 warship 战舰 n 】_
+- _【 war 战争 n 】_ // ------------------------- 【 cruel war. 残酷的战争 】 【 aggressive war. 侵虐战争 】
+- _【 ward 病房 n 】_
+- > 【 cruel war. 残酷的战争 】
+- > 【 aggressive war. 侵虐战争 】
+- 【 aggress 侵虐 v 】
+- **【 This 【 aggressive war 】 【 led 】 to 【 a large number of 】 【 wounded soldiers 】 to 【 crowding 】 the 【 ward 】. 这场侵虐战场导致大量伤员挤满了病房 】**
+- // -- lead -> led.
+- // --【 overcrowded 过于拥挤的 爆满的 adj 】
+- // -- `【 wound 伤口n 受伤v 】`
+- // -- `【 wounded 受伤的 adj 】`
+- // -- ward 病房 n
+- // -- crowd 人群 n 拥挤 v
+-
+- EE.
+- `【 ward 病房 n 】`
+- `【 reward 奖励 】`
+- `【 award 奖n 授予v 】` // -------------------- 【 award ceremony. 颁奖典礼 】 【 award winner. 获奖者 】
+- `【 awkward 令人尴尬的 adj 】` = embarrassed.
+- `【 steward 乘务员 n 】` // ------------------- 【 stewardess 空姐 n 】
+- > 【 coward 胆小鬼 n 】
+- > 【 forward 向前的 adj adv 】 // --------------【 backward 向后的 adj adv 】
+- > 【 sword 剑 n 】 // ------------------------- 【 swordsman 剑客 n 】
+- _【 award ceremony. 颁奖典礼 】_
+- _【 award winner. 获奖者 】_
+- _【 award speech. 获奖感言 】_
+- **【 The 【 award winner 】 is giving an 【 award speech 】 at the 【 award ceremony 】. 获奖者正在颁奖典礼上发表获奖感言 】**
+- // -- `【 give a speech. 发表演讲 】`
+- // -- `【 give an award speech. 发表获奖感言 】`
+- // -- 【 The governor is giving a speech. 这位州长正在发表演讲 】
+- // governor 州长
+- // government 政府
+-
+- FF.
+- > 【 award ceremony. 颁奖典礼 n 】 // ----------- 【 award winner. 获奖者 】 【 give an award speech. 发表获奖感言 v 】 // 【 give a speech. 发表演讲 v 】
+- > 【 graduation ceremony. 毕业典礼 n 】
+- > 【 opening ceremony. 开幕式 n 】
+- > 【 closing ceremony. 闭幕式 n 】
+- **【 The 【 award winner 】 is giving an 【 award speech 】 at the 【 award ceremony 】. 获奖者正在颁奖典礼上发表获奖感言 】**
+- // -- `【 give a speech. 发表演讲 】`
+- // -- `【 give an award speech. 发表获奖感言 】`
+- // -- 【 The governor is giving a speech. 这位州长正在发表演讲 】
+-
+- GG.
+- _【 steward 乘务员 空少 】_ ---------------------【 stewardess 空姐 】
+- _【 waiter 男服务员 】_ ------------------------ 【 waitress 女服务员 n 】
+- _【 actor 男演员 】_ -------------------------- 【 actress 女演员 n 】
+- _【 headmaster 男校长 】_ --------------------- 【 headmistress 女校长 n 】
+- _【 prince 王子 】_ --------------------------- 【 princess 公主 n 】
+- > attendant 服务员 n
+- > assistant 助手 助理 n
+- > accountant 会计 n
+- > merchant 商人 n
+- > consultant 顾问 n
+- > secretary 秘书 n
+-
+- [AA.]
+- `【 rail 铁路 栏杆 n 】` = railway.
+- `【 railing 栏杆 n 】`
+- > 【 around 周围 围绕 adv prep 】
+- **【 There are 【 railings 】 【 around 】 the 【 rail 】. 铁路周围有栏杆 】**
+
+###### Must 2024-12-02
+
+- 1
+- `【 attendant 服务员 n 】` // ------------------ 【 parking attendant. 停车场服务员 】 【 museum attendant. 博物馆服务员 】
+- `【 assistant 助手 助理 n 】` // -------------- `【 shop assistant. 店员 】`
+- `【 accountant 会计 n 】`
+- `【 consultant 顾问 n 】` // ------------------- 【 consult 咨询 商量 v 】 // insult VS consult VS result
+- `【 merchant 商人n 商业的adj 】` // ------------ `【 merchant bank. 商业银行 】` 【 merchant = wholesaler. 批发商 】 // wholesale retail // retail tail
+- // TIPS: Pay attention to the pronunciation of the word 'consultant'. [consultant-顾问-n]
+- // TIPS: Pay attention to the pronunciation of the word 'consult'. [consult-咨询-商量-v]
+-
+- `【 secretary 秘书 n 】`
+- `【 attendant 服务员 n 】` // ------------------ 【 parking attendant. 停车场服务员 】 【 museum attendant. 博物馆服务员 】
+- `【 assistant 助手 助理 n 】`
+- `【 steward 乘务员 空少 n 】` // ---------------- 【 stewardess 空姐 】
+- `【 waiter 服务员 n 】` // --------------------- 【 waitress 女服务员 】
+- `【 servant 仆人 n 】`
+-
+- `【 actor 男演员 】` --------------------------- 【 actress 女演员 n 】
+- `【 headmaster 难校长 】` ---------------------- 【 headmistress 女校长 n 】
+- `【 prince 王子 】` ---------------------------- 【 princess 公主 n 】
+-
+- `【 merchant 商人 n 】` = businessman.
+- `【 dealer 经销商 n 】`
+- `【 wholesaler 批发商 n 】` // ------------------ `wholesale 批发`
+- `【 retailer 零售商 n 】` // -------------------- `retail 零售`
+- `【 manufacturer 生产商 n 】`
+- > 【 wholesale store. 批发店 】
+- > 【 retail store. 零售店 】 // ---------------- 【 tail 尾巴 n / retail 零售 v n】
+- > 【 specialty store. 专卖店 】 // ------------- 【 special / specialist / specialty 】
+- AA.
+- _【 special 特别的 adj 】_
+- _【 specialize 专攻 】_ // --------------------- specialize in. 专攻
+- _【 specialist 专家 】_ // --------------------- specialist = expert.
+- _【 specialty 专业 】_ // ---------------------- specialty store. 专卖店
+- > 【 specialty store. 专卖店 】
+- > 【 specialty food. 特色食品 】
+- // TIPS: [Related-link][Must 2024-08-07](./IELTS-Must-20240801.md)
+- **【 This 【 specialty store 】 sales 【 specialty food 】. 这个专卖店卖特色食品 】**
+- **【 The person who 【 specializes in 】 a 【 special 】 field is called 【 specialist 】. 专攻某个特殊领域的人称为专家 】**
+- **【 Because I 【 specialize in 】 the front-end 【 field 】, so I 【 am proficient in 】 the React and Vue 【 tech stacks 】. 因为我专攻前端领域，所以我精通 rect 和 vue 技术栈 】**
+- // -- 【 be proficient in. 精通于 】
+- // -- 【 specialize in. 专攻 】
+-
+- // TIPS: Pay attention to the pronunciation of the word 'secretary'. [secretary-秘书-n]
+-
+- [AA.]
+- **【 The prices of the goods sold by 【 manufacturers 】, 【 dealers 】, 【 wholesale stores 】, 【 retail stores 】, and 【 specialty stores 】 are all different. 生产商，经销商，批发店，零售店，专卖店销售的商品价格都不一样 】**
+-
+- [BB.]
+- `【 consult 咨询 商量 v 】`
+- `【 shop assistant. 店员 n 】`
+- `【 merchant bank. 商业银行 n 】`
+- **【 I would like to 【 consult 】 with 【 shop assistants 】 to open a 【 merchant bank 】. 我想和店员商量去开一家商业银行 】**
+- // -- 【 would like to do sth. = want to do sth. 想做某事 】
+- // -- 【 consult with sb. 和某人商量 】
+
+###### Must 2024-12-03
+
+- 1
+- `【 enormous 巨大的 adj 】` // ---------------- 【 enormous success. 巨大的成功 】 【 enormous achievement. 巨大的成就 】 【 enormous potential. 巨大的潜力 】
+- `【 anonymous 匿名的 adj 】` // --------------- 【 anonymous letter. 匿名信 】【 anonymous voting. 匿名投票 】 【 anonymously complain. 匿名投诉 】
+- `【 autonomous 自主的 自治的 adj 】` // -------- 【 autonomous regin. 自治区 】 // 【 autonomous driving technology. 自动驾驶技术 = self-driving technology. 】
+- `【 famous 有名的 adj 】`
+- `【 infamous 臭名昭著的 adj 】`
+- > 【 enormous success. 巨大的成功 】
+- > 【 enormous achievement. 巨大的成就 】
+- > 【 enormous potential. 巨大的潜力 】
+- _【 autonomous regin. 自治区 】_
+- _【 autonomous driving technology. 自动驾驶技术 】_
+- _【 self-driving technology. 自动驾驶技术 】_
+- > 【 anonymous letter. 匿名信 】
+- > 【 anonymous voting system. 匿名投票系统 n 】
+- > 【 anonymously complain. 匿名投诉 v 】
+- // autonomous 自主的 自治的 adj
+- // automatic 自动的 adj
+-
+- [AA.]
+- `【 autonomous region. 自治区 n 】`
+- `【 autonomous driving technology. 自动驾驶技术 n 】`
+- .MT **【 The vehicles 【 in 】 this 【 autonomous region 】 all used 【 autonomous driving technology 】. 这个自治区的车辆都使用了自动驾驶技术 】**
+- // -- 注意: 这里用的是 in，不用 of
+- // -- autonomous driving technology. = self-driving technology. 自动驾驶技术
+-
+- [BB.]
+- `【 enormous achievement. 巨大的成就 n 】`
+- `【 anonymous voting system. 匿名投票系统 n 】`
+- .MT **【 His 【 enormous achievement 】 is that he 【 invented 】 the 【 anonymous voting system 】. 他的巨大成就是他发明了匿名投票系统 】**
+- // -- vent 发泄 v 通风口 n
+- // -- invent 发明 ------------------ invent excuse. 编造借口
+- // -- inventory 库存 --------------- inventory list. 库存清单
+-
+-
+-
+-
+-
+-
+-
+- 2
+- `【 earn 赚钱 v 】`
+- `【 earnest 认真的 adj  认真 n 】` // ------------- 【 in earnest. 认真地 】
+- > 【 earth 地球 n 】`
+- > 【 ear 耳朵 n 】`
+- > 【 bear 熊 n 忍受 v 】`
+- // TIPS: Pay attention to the pronunciation of the word 'ear'.
+-
+- [AA.]
+- `【 in earnest. 认真地 adv 】`
+- .MT **【 We discussed this topic 【 in earnest 】. 我们认真的讨论了这个话题 】**
+
+###### Must 2024-12-04
+
+- 1
+- `【 accent 口音 n  】`
+- `【 decent 体面的 adj 】`
+- `【 adjacent 相邻的 adj 】`
+- `【 scent 气味 】`
+-
+-
+-
+- `【 accent 口音 n 】` // ------- 【 heavy accent. 重口音 】 【 light accent. 轻口音 】 【 a heavy foreign accent. 很重的外国口音 】
+- `【 pronunciation 发音 n 】` // -【 poor pronunciation. 糟糕的发音 】 // 【 pronounce 发音 v 】 【 pronunciation 发音 n 】
+- `【 tone 语气 音调 n 】` // ----- 【 tongue 舌头 】 【 tone 音调 语调 n 】
+- > 【 heavy accent. 重口音 】
+- > 【 light accent. 轻口音 】
+- > 【 a heavy foreign accent. 很重的外国口音 】
+- > The opposite of the word 'heavy' is 'light'.
+- > 【 high pitch. 高音 】
+- > 【 low pitch. 低音 】
+
+###### Must 2024-12-12
+
+- 1
+- `【 particular 特别的 特定的 adj 】` // ----------- 【 particular attention. 特别注意 】 【 Pay particular attention to. 特别注意... 】
+- `【 regular 定期的 正式的 普通的 规则的 adj 】` // -- 【 regular verb. 规则动词 】 【 irregular verb. 】 // 【 regular physical examination. 】 [ regular employee. ]
+- `【 singular 单数的 单数 】` // ------------------- 【 singular noun. 单数名词 】 【 plural noun. 复数名词 】
+- `【 popular 受欢迎的 流行的 adj 】`
+- `【 circular 圆的 循环的 adj 】` // --------------- 【 circular motion. 圆周运动 】
+- > 【 particular attention. 特别注意 】
+- > 【 particular sphere. 特定领域 】 // ----------- 【 sphere 球 领域 n 】
+- // 【 package 包 包裹 套餐 n 】
+- **【 We need to 【 pay particular attention 】 that the most popular 【 package 】 is the 【 regular physical examination 】 package. 我们需要特别注意最受欢迎的套餐是定期体检的套餐 】**
+- // -- 【 package 包 包裹 套餐 n 】
+-
+-
+- AA.
+- `【 particular 特别的 特定的 adj 】` // ------------ 【 particular attention. 特别注意 n 】 `【 pay particular attention to. 特别注意... 】` 【 particular time. 】
+- `【 special 特别的 adj 】`
+- `【 specific 具体的 明确的 特定的 adj 】` // -------- 【 specific time. 特定的时间 】 【 specific symptom. 具体的症状 】 【 specific indictor. 具体的指标 】
+- _【 particular attention. 特别注意 】_
+- _【 pay particular attention to. 特别注意... 】_
+- > particular VS regular
+- .MT 1. **【 The 【 particular 】 equipment can 【 diagnose 】 the 【 specific symptoms 】. 这个特别的设备可以诊断具体的症状 】**
+- .MT 2. **【 You need to 【 pay particular attention to 】 【 traffic safety 】. 你需要特别注意交通安全 】**
+- .MT 3. **【 The 【 trap 】 will be triggered at 【 specific time 】. 这个陷阱将在特定的时间触发 】**
+- **【 We need to 【 pay particular attention 】 that the most popular 【 package 】 is the 【 regular physical examination 】 package. 我们需要特别注意最受欢迎的套餐是定期体检的套餐 】**
+- // -- 【 diagnose 诊断 v 】
+- // -- 【 pay particular attention to. 特别注意... 】
+- // -- 【 traffic safety. 交通安全 】
+- // -- trap 陷阱 VS trip 短途旅行
+- // TIPS: Pay attention to the pronunciation of the word 'particular'.[particular-特别的-特定的-adj]
+- // TIPS: Pay attention to the pronunciation of the word 'trap'. [trap-陷阱-n]
+-
+-
+- BB.
+- `【 regular 定期的 正式的 普通的 规则的 adj 】`
+- _【 regular physical examination. 定期体检 】_
+- _【 regular employee. 正式员工 】_
+- _【 regular gas. 普通汽油 】_
+- _【 regular verb. 规则动词 】_ // ------------------- 【 regular verb. 规则动词 】 【 irregular verb. 不规则动词 】
+- > regular VS particular
+- //【 regular gas. 普通的汽油 】 // 87
+- //【 premium gas. 优质的汽油 】 // 93
+- **【 Going to the hospital for a 【 regular physical examination 】 【 is beneficial to 】 health. 去医院定期体检有利于身体健康 】**
+- **【 She is not a 【 regular 】 employee of the bank. 她不是这个银行的正式员工 】**
+- **【 We need to 【 pay particular attention 】 that the most popular 【 package 】 is the 【 regular physical examination 】 package. 我们需要特别注意最受欢迎的套餐是定期体检的套餐 】**
+- // -- 【 be beneficial to. 对...有利 】
+- // -- 【 regular 定期的 正式的 普通的 】
+
+###### Must 2024-12-13
+
+- 1
+- `【 initialize 初始化 v 】`
+- `【 specialize 专攻 v 】` // specialize in. 专攻...
+- `【 customize 定制 v 】`
+- `【 optimize 优化 v  】`
+- `【 memorize 记住 记忆 v 】`
+- `【 summarize 总结 v  】`
+- `【 organize 组织 v 】`
+- `【 apologize 道歉 v 】`
+- `【 realize 认识到 实现 v 】`
+
+###### Must 2024-12-16
+
+- 1
+- `【 framework 框架 n 】`
+- `【 network 网络 n 】`
+- `【 homework 家庭作业 n 】`
+- `【 firework 烟花 n 】`
+
+###### Must 2024-12-26
+
+- 1
+- `【 restrict 限制 v 】` // ---------------- 【 restrict access. 禁止访问 v 】 【 restrict usage. 禁止使用 】 // 【 be restricted from doing sth. 被禁止做某事 】
+- `【 district 区 区域 地区 n 】` // --------- 【 business district. 商业区 n 】 【 residential district. 居民区 n 】
+- `【 strict 严格的 adj 】`
+- > 【 restrict access. 禁止访问 v 】
+- > 【 restrict usage. 禁止使用 v 】
+- _【 be restrict from doing sth. 被禁止做某事 】_
+- **【 【 Foreigners 】 【 are 【 strictly 】 【 restricted 】 from 】 【 entering 】 and 【 exiting 】 in this 【 district 】. 这个地区严格限制外国人出入 】**
+- **【 There are 【 strict 】 【 regulations 】 【 for 】 【 residents 】 in both 【 business district 】 and 【 residential district 】. 商业区和居民区对居民都有严格的规定 】**
+- **【 The doctor 【 restricts 】 the blood flow in order to see the patient's 【 veins 】 more clearly. 医生限制了血液流动，以便清楚地看到病人的静脉 】**
+- // -
+- // use(v) -> usage(n) 使用
+- // -
+- // enter 进入 v / 回车键 n
+- // exit 出去 v / 出口 n
+- // -
+- // entrance 入口 n
+- // exit 出口 n
+- // -
+- // TIPS: Pay attention to the pronunciation of the word 'exit'. [exit-出口-n/出去-v]

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 树 -> 数组
+
+      // English
+      // -
+      // recursive 递归的 adj
+      // recursion 递归 n
+
+      // const targetArr = [
+      //   { id: 1 },
+      //   { id: 2, parentId: 1 },
+      //   { id: 3, parentId: 1 },
+      //   { id: 4, parentId: 3 },
+      // ];
+
+      const tree = [
+        {
+          id: 1,
+          children: [
+            {
+              id: 2,
+              parentId: 1,
+            },
+            {
+              id: 3,
+              parentId: 1,
+              children: [
+                {
+                  id: 4,
+                  parentId: 3,
+                },
+              ],
+            },
+          ],
+        },
+      ];
+
+      // 1
+      function treeToArray(tree) {
+        const result = [];
+
+        function recursive(arr) {
+          for (let i = 0; i < arr.length; i++) {
+            const item = arr[i];
+            const children = item.children;
+
+            result.push(item); // 注意: 这里每次都直接push，然后在处理children，而不能放在下面的 else 中
+
+            if (children) {
+              recursive(children); // 递归调用，始终操作同一个 result
+              Reflect.deleteProperty(item, "children");
+              // delete arr[i].children; // 扁平后，删除children属性；注意：这里不能是删除 children 变量，而要直接删除 arr[i].children，因为delete是删除对象的属性
+            }
+          }
+        }
+
+        recursive(tree); // 注意：这里的tree包装成了array，便于遍历
+
+        return result;
+      }
+
+      const res = treeToArray(tree);
+      console.log(`res`, res);
+    </script>
+
+    <script>
+      // 2
+      function tree2arr(tree) {
+        const res = [];
+
+        function recursive(tree) {
+          tree.forEach((item) => {
+            res.push(item);
+            if (item.children) {
+              recursive(item.children);
+              delete item.children;
+            }
+          });
+        }
+
+        recursive(tree);
+
+        return res;
+      }
+    </script>
+  </body>
+</html>

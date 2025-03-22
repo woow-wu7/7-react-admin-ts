@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 746. 使用最小花费爬楼梯
+
+      // Question
+      // 746. Min Cost Climbing Stairs
+
+      // 题目
+      // 给你一个整数数组 cost ，其中 cost[i] 是从楼梯第 i 个台阶向上爬需要支付的费用。一旦你支付此费用，即可选择向上爬一个或者两个台阶。
+      // 你可以选择从下标为 0 或下标为 1 的台阶开始爬楼梯。
+      // 请你计算并返回达到楼梯顶部的最低花费。
+
+      // 输入：cost = [10,15,20]
+      // 输出：15
+      // 解释：你将从下标为 1 的台阶开始。
+      // - 支付 15 ，向上爬两个台阶，到达楼梯顶部。
+      // 总花费为 15 。
+
+      // 输入：cost = [1,100,1,1,1,100,1,1,100,1]
+      // 输出：6
+      // 解释：你将从下标为 0 的台阶开始。
+      // - 支付 1 ，向上爬两个台阶，到达下标为 2 的台阶。
+      // - 支付 1 ，向上爬两个台阶，到达下标为 4 的台阶。
+      // - 支付 1 ，向上爬两个台阶，到达下标为 6 的台阶。
+      // - 支付 1 ，向上爬一个台阶，到达下标为 7 的台阶。
+      // - 支付 1 ，向上爬两个台阶，到达下标为 9 的台阶。
+      // - 支付 1 ，向上爬一个台阶，到达楼梯顶部。
+      // 总花费为 6 。
+
+      // leetcode
+      // 746. 使用最小花费爬楼梯  https://leetcode.cn/problems/min-cost-climbing-stairs/
+      // 70. 爬楼梯 https://leetcode.cn/problems/climbing-stairs/
+      // 该题是 爬楼梯 的升级版
+
+      /**
+       * @param {number[]} cost
+       * @return {number}
+       */
+
+      var minCostClimbingStairs = function (cost) {
+        const len = cost.length;
+
+        const dp = []; // dp[i] 表示到达第i节楼梯的 - 最小花费
+        dp[0] = cost[0]; // 第一节楼梯的最小花费就是 cost[0]
+        dp[1] = cost[1]; // 第二节楼梯的最小花费就是 cost[1]，因为 ( 直接走两步cos[1] ) 或者 ( 两个一步cost[0] + cost[1] )，很显然直接走花费小
+
+        // 状态转移方程
+        // 选择前两个楼梯中 花费较小的楼梯 跳过来 + 当前楼梯的花费 = 当前楼梯的最小花费
+        for (let i = 2; i < len; i++) {
+          dp[i] = Math.min(dp[i - 2], dp[i - 1]) + cost[i];
+        }
+
+        // 因为最后一节楼梯没有花费，所以需要计算前两个的最小值就是最后一节的花费
+        // - 这里能用 len 的原因是 cost 和 dp 的长度一样
+        return Math.min(dp[len - 2], dp[len - 1]);
+      };
+    </script>
+  </body>
+</html>

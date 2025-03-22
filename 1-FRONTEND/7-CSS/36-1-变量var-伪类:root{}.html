@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* css 中如何定义变量？ */
+
+      /* ( :root ) 是一个 ( 伪类选择器 ) */
+      /* ( :root ) 选择器是 （ 全局选择器 ），作用是定义全局变量，所有元素都可以使用 */
+      :root {
+        /* 1 */
+        /* 定义变量 */
+        /* css 中的变量必须以 -- 开头，这是css的规范，但是---其实也会生效 */
+        --color: yellow;
+        ---color: blue;
+      }
+
+      .container {
+        /* 2 */
+        /* 使用变量 */
+        /* 第二个参数表示: 如果变量名不存在，就使用第二个参数 */
+        background: var(--color, red);
+      }
+
+      .container2 {
+        /* 2 */
+        /* --- 同样会生效 */
+        background: var(---color);
+      }
+    </style>
+
+    <style>
+      .father {
+        /* 1 */
+        /* 变量定义 */
+        /* 变量并不一定要定义在 :root 中，也可以在其他选择器中，满足作用域 */
+        --bg-color: red;
+      }
+      .child2 {
+        /* 2 */
+        /* 变量使用 */
+        background-color: var(--bg-color);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">css中的变量 --</div>
+    <div class="container2">css中的变量 ---</div>
+
+    <div class="father">
+      <div class="child1">child1</div>
+      <div class="child2">child2</div>
+    </div>
+
+    <script>
+      // js修改
+      const html = document.querySelector(":root");
+      html.style.setProperty("--color", "green");
+    </script>
+  </body>
+</html>

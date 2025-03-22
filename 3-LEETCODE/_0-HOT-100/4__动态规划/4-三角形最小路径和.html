@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 120. 三角形最小路径和
+
+      // 对比
+      // - 120. 三角形最小路径和
+      // - 剑指 Offer II 099. 最小路径之和
+      // - 62. 不同路径
+
+      // 题目
+      // 给定一个三角形 triangle ，找出自顶向下的最小路径和。
+      // 每一步只能移动到下一行中相邻的结点上。相邻的结点 在这里指的是 下标 与 上一层结点下标 相同或者等于 上一层结点下标 + 1 的两个结点。
+      // 也就是说，如果正位于当前行的下标 i ，那么下一步可以移动到下一行的下标 i 或 i + 1 。
+
+      // 输入：triangle = [[2],[3,4],[6,5,7],[4,1,8,3]]
+      // 输出：11
+      // 解释：如下面简图所示：
+      // 2
+      // 3 4
+      // 6 5 7
+      // 4 1 8 3
+      // 自顶向下的最小路径和为 11（即，2 + 3 + 5 + 1 = 11）。
+
+      // 输入：triangle = [[-10]]
+      // 输出：-10
+
+      // leetcode
+      // https://leetcode.cn/problems/triangle/
+
+      // 思路
+      // 动态规划
+      // (一)
+      // - 你可以只使用 O(n) 的额外空间（n 为三角形的总行数）来解决这个问题吗？ ------ 空间复杂度是  O(n)
+      // (二)
+      // - 1. dp[i][j]: 表示 ( 第i行第j列 ) 位置上的最小路径和
+      // - 2. 处理 triangle 最后一行的所有值，dp[i][j] = triangle[i][j]
+      // - 3. 从下往上遍历 triangle 的 ( 0-倒数第二行，所有列 )
+      // - 4. 状态转移方程 dp[i][j] = Math.min(dp[i + 1][j], dp[i + 1][j + 1]) + triangle[i][j];
+
+      /**
+       * @param {number[][]} triangle
+       * @return {number}
+       */
+
+      // 方法1
+
+      // ------------------------------------------------------------------------------------------
+      // ------------------------------------------------------------------------------------------
+      // ------------------------------------------------------------------------------------------
+      // 方法2
+      // - 空间复杂度是 O(n**2)
+      // - 因为是个二维数组
+      // - 优化可以做到 空间复杂度是 O(n)
+      var minimumTotal = function (triangle) {
+        const len = triangle.length;
+
+        // dp 是个二维数组
+        // dp[i][j]: 表示 第i行第j列 位置的最小路径和
+        // 空间复杂度: O(n**2)
+        const dp = new Array(len);
+        for (let i = 0; i < triangle.length; i++) {
+          dp[i] = [];
+        }
+
+        // dp数组最后一行的所有值 就是 triangle最后一行的所有值
+        for (let i = 0; i < triangle[len - 1].length; i++) {
+          dp[len - 1][i] = triangle[len - 1][i];
+        }
+
+        // 我们是从下往上来遍历的，这样边界不容易出错
+        // 遍历 倒数第二行 - 0行
+        // 遍历 每行所有列
+        for (let i = len - 2; i >= 0; i--) {
+          for (let j = 0; j < triangle[i].length; j++) {
+            dp[i][j] =
+              Math.min(dp[i + 1][j], dp[i + 1][j + 1]) + triangle[i][j]; // 状态转移方程
+          }
+        }
+
+        return dp[0][0]; // 返回总的最小路径和
+      };
+    </script>
+  </body>
+</html>

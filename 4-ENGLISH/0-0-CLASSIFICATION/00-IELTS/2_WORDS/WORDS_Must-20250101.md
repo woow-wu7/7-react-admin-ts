@@ -1,0 +1,93 @@
+##### WORDS Must 2024-12-01
+
+- 1
+- `【 dish 菜肴n 一道菜n 】`
+- `【 radish 萝卜 n 】`
+- `【 carrot 胡萝卜 n 】` // ------------------- 【 carotene 胡萝卜素 n 】 VS 【 carrot 胡萝卜 n 】
+- `【 carotene 胡萝卜素 n 】`
+- > 【 meal 一餐 n 进餐 v 】
+- > 【 meat 肉 n 】 // ------------------------ 【 pork 猪肉 n 】 【 beef 牛肉 n 】 【 mutton 羊肉 n 】
+-
+- // TIPS: Pay attention to the pronunciation of the word 'carrot'. [carrot-胡萝卜-n]
+- // TIPS: Pay attention to the pronunciation of the word 'carotene'. [carotene-胡萝卜素-n]
+- // TIPS: Pay attention to the pronunciation of the word 'chef'. [chef-厨师-n]
+-
+- .MT **【 This 【 meal 】 includes two 【 dishes 】: 【 radish 】 and 【 carrot 】. 这一餐有萝卜和胡萝卜两道菜 】**
+- .MT **【 These 【 ingredients 】 and 【 materials 】 are enough for 【 chef 】 to make seven 【 dishes 】. 这些原料和材料足够厨师做出 7 道菜了 】**
+- .HL **【 【 carrots 】 【 contain 】 【 carotene 】. 胡萝卜中含有胡萝卜素 】**
+- **【 The 【 meal 】 has 【 a total of 】 seven 【 dishes 】. 这一餐一共有 7 道菜 】**
+- **【 Seven 【 dishes 】 are enough to eat for a day. 7 个菜足够吃一天了 】**
+- // -
+- // chef 厨师 n
+- // ingredient 成分 原料 n
+- // material 材料 n
+
+##### WORDS Must 2024-12-02
+
+- 1
+- `【 lounge 休息室 候车室 n 】` // ------------ 【 departure lounge. 候车室 n 】 【 study lounge. 自习室 n 】
+- `【 lung 肺 n 】` // ----------------------- 【 lung cancer. 肺癌 n 】
+- > 【 study lounge. 自习室 n 】`
+- > 【 departure lounge. 候车室 n 】`
+- .MT **【 The 【 departure lounge 】 【 is next to 】 the 【 study lounge 】. 候车室在自习室的旁边 】**
+- .MT **【 He 【 complied with 】 the 【 traffic rules 】 in the 【 departure lounge 】 of the 【 terminal building 】. 他在航站楼的候车厅遵守了交通规则 】**
+- // 【 be next to. 在...旁边 】
+- // 【 beside 在...旁边 】
+-
+-
+-
+- 2
+- `【 approach 方式 方法 n / 接近 靠近 v 】` // -- 【 particular approach. 特别的方法 n 】 【 scientific approach. 科学的方法 n 】 【 effective approach. 有效的方法 n 】
+- `【 method 方法 办法 n 】`
+- `【 means 手段 方法 n 】`
+- _【 approach = close to. 靠近 】_
+- > 【 particular approach. 特别的方法 】
+- > 【 scientific approach. 科学的方法 】 // ---- 【 scientist 科学家 n 】 VS 【 scientific 科学的 adj 】
+- > 【 effective approach. 有效的方法 】
+- // TIPS: Pay attention to the pronunciation of the word 'method'. [method-方法-办法-n]
+- AA.
+- `【 highly recommend. 强烈推荐 】` // --------- 【 highly recommend. 强烈推荐 v 】
+- _【 recommend 推荐 v 】_
+- BB.
+- `【 in particular. 尤其 adv 】` // ------------ 【 in particular. 尤其 adv 】
+- _【 particular approach. 特别的方法 】_
+- _【 particular course. 特别的课程 】_
+- CC.
+- `【 fragrance. 香味 香气 n 】` // -------------- 【 flower fragrance. 花香 n 】
+- `【 fragment 片段 n 】`
+- _【 flower fragrance. 花香 n 】_
+-
+- .MT **【 The 【 approach 】 that has been 【 recommended 】 is not only a 【 particular approach 】 but also a 【 scientific approach 】.  】**
+- .MT **【 After you 【 approach 】 the flower, 【 its 】 【 fragrance 】 is 【 strong 】 【 in particular 】. 靠近这朵花之后，它的香味尤其浓烈 】**
+- // --
+- // 【 not only ... but also ... 不仅而且 】
+- // 【 recommend 推荐 v 】
+- // --
+- // 【 fragrance 香味 香气 n 】
+- // 【 fragment 片段 n 】
+- // --
+- // 【 flower fragrance. 花香 n 】
+- // --
+- // 【 in particular. 尤其 adv 】
+- // --
+- // TIPS: Pay attention to the pronunciation of the word 'fragrance'. [fragrance-香味-香气-n][flower-fragrance.花香-n]
+- // TIPS: Pay attention to the pronunciation of the word 'fragment'. [fragment-片段-n]
+- // TIPS: Pay attention to the pronunciation of the word 'recommend'. [recommend-推荐-v][highly-recommend.强烈推荐-v]
+- // TIPS: Pay attention to the pronunciation of the word 'method'. [method-方法-办法-n]
+
+##### WORDS Must 2024-12-03
+
+- 1
+- `【 institution 机构 制度 n 】` // --------------- 【 educational institution. 教育机构 】 【 research institution. 研究机构 n 】
+- `【 tuition 学费 n 】` // ----------------------- 【 tuition fee. 学费 n 】
+- `【 tutorial 教程 n 】`
+- `【 tutor 家庭教师 n 】`
+- > 【 educational institution. 教育机构 n 】
+- > 【 research institution. 研究机构 n 】
+- > 【 financial institution. 金融机构 n 】 // ----- 【 financial statement. 金融报表 】 【 financial term. 金融术语 】 // 【 finance department. 财物部门 】
+- > 【 medical institution. 医疗机构 n 】
+-
+- .MT **【 【 Research institutions 】 【 serve 】 【 educational institutions 】. 研究机构是为教育机构服务的 】**
+- .MT **【 The 【 finance department 】 【 is responsible for 】 【 issuing 】 【 financial statements 】, and the financial statements 【 contain 】 many 【 financial terms 】. 】**
+- // -- serve 服务 v
+- // -- service 服务 n

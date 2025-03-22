@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 1
+      // 问题：如何实现一个数组 [1,2,3,4,5]，通过 arr[-1] 访问到 5 ？
+      // 思路: proxy
+      const arr = new Proxy([1, 2, 3, 4, 5], {
+        get: (target, propKey, receiver) => {
+          const _key = Number(propKey) + target.length;
+          return propKey > 0
+            ? Reflect.get(target, propKey, receiver)
+            : Reflect.get(target, _key, receiver); // : target[_key]; 代理陷阱
+        },
+        set: (target, propKey, value, receiver) =>
+          Reflect.set(target, propKey, value, receiver),
+      });
+      console.log(arr[-1]); // get
+      arr[0] = 1000; // set
+
+      // ----------------------------------------------------------------------------------------
+      // 2
+      // proxy 返回的对象 是 原对象吗？
+      // - 是一个新的对象，毕竟new了，生成的是新的实例对象
+      const obj = {};
+      const ins = new Proxy(obj, {});
+      console.log("obj === ins", obj === ins); // false
+
+      // ----------------------------------------------------------------------------------------
+      // 3
+      // React.PureComponent 实现原理
+      // - 特点:
+      //    - 浅比较: React.PureComponent 是通过 ( shouldComponentUpdate ) 对 props 和 state 做了一层 ( ===浅比较 )
+      // - 扩展
+      //    - 问题: 什么是浅比较？
+      //    - 回答: ( 浅比较 ) 又称 ( 引用相等 )，即 ( 等号两边是不是同一个对象的引用 )，即 ( === )
+      // - 扩展
+      //    - 问题: === 和 Object.is() 的区别？
+      //    - 回答：
+      //      - 基本一样，但有两个区别
+      //      - +0-0: 【 Object.is(+0, -0)是false 】 【 +0===-0是true 】
+      //      - NaN: 【 Object.is(NaN, NaN)是true 】【 NaN===NaN是false 】
+
+      // ----------------------------------------------------------------------------------------
+      // 4
+      // React.memo 和 React.PureComponent 的区别 ？
+      // - 相同点: 都是浅比较
+      // - 不同点:
+      //  - 1
+      //  - React.memo ----------- 只检查 props ------------- 用于 function 函数组件中
+      //  - React.PureComponent -- 检查 props 和 state ------ 只能用于 class 组件中
+      // - React.memo(MyComponent, areEqual)
+
+      // ----------------------------------------------------------------------------------------
+      // 5
+      // HTTP 3.0
+      // 5.1
+      // QUIC 协议
+      // - HTTP3.0的核心是 QUIC (读音quick - quick是快的意思) 协议，由 Google在 2015年提出
+      // - QUIC基于输层UDP上的协议，又取了 TCP 中的精华，实现了即快又可靠的协议
+      // 5.2
+      // HTTP3.0优点 ( QUIC 协议针对基于TCP和TLS的HTTP2.0协议解决了下面的问题 )
+      // - 减少了TCP三次握手及TLS握手时间
+      // - 多路复用丢包的线头阻塞问题
+      // - 优化重传策略
+      // 链接: 本项目/2-FRONTEND/HTTP-HTTPS/HTTP3.0.md
+
+      // ----------------------------------------------------------------------------------------
+      // 6
+      // WeakMap WeakSet
+
+      // 6.1
+      // 问题1
+      // - 问题: Map 和 WeakMap 的区别？
+      // - 回答:
+      //  - 1. key
+      //        - Map的key可以是 - 任意的数据类型
+      //        - 而WeakMap的key - 只能是对象(null除外)
+      //  - 2. 弱引用
+      //        - 键名引用的对象 是 弱引用，删除对象key后，weakMap的引用关系不在了，该 ( 键值对 ) 会被垃圾回收机制回收
+      //        - WeakMap的键名所指向的对象，不计入垃圾回收机制
+      //  - 3. WeakMap没有 遍历操作 和 清空操作
+      //        - 不能遍历: weakMap不存在 keys() values() entries() size() 属性
+      //        - 不能清空: weakMap不存在 clear()
+      //        - 因为:
+      //          - 因为没有办法列出所有键名，某个键名是否存在完全不可预测，跟垃圾回收机制是否运行相关
+      //          - 这一刻可以取到键名，下一刻垃圾回收机制突然运行了，这个键名就没了，为了防止出现不确定性，就统一规定不能取到键名
+
+      // 问题2
+      // - 问题: 强引用 和 弱引用
+      // - 回答:
+      //  - 强引用: const a = {}; new Map(a, 111); ---- map 和 a 指针指向了同一个堆地址，因为是 ( 强引用 )，引用计数为 ( 2 )，删除a后，map中的a仍然被引用，不会被垃圾回收机制回收
+      //  - 弱引用: const a = {}. new WeakMap(a, 111) - weakMap 和 a 执行虽然都指向同一个堆地址，因为是 ( 弱引用 )，引用计数为 ( 1 )，删除a后，引用计数为0，会被垃圾回收机制回收
+      //  - 资料: https://juejin.cn/post/6993101968545677319#heading-24
+
+      // 应用
+      // 1. DOM 节点元数据
+      // 2. 部署私有属性
+      // 3. 数据缓存: 当我们需要在不修改原有对象的情况下储存某些属性等，而又不想管理这些数据时，可以使用WeakMap
+
+      let obj_key = { name: "woow_wu7" };
+      const str_key = "string";
+
+      const map = new Map();
+      map.set(obj_key, '{ name: "woow_wu7" }');
+      map.set(str_key, "string");
+      console.log("map", map);
+
+      const weakMap = new WeakMap();
+      weakMap.set(obj_key, '{ name: "woow_wu7" }');
+      // weakMap.set(str_key, "string"); // Uncaught TypeError: Invalid value used as weak map key
+      console.log("weakMap", weakMap);
+    </script>
+  </body>
+</html>

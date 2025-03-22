@@ -1,0 +1,258 @@
+###### 2024-05-01
+
+- 1
+- `【 personality 性格 n 】` // character 性格 n
+- `habit 习惯` // develop a habit. 养成习惯
+- `hobby 爱好`
+- `destiny 命运` = fate
+- -
+- `【 character 性格 特征 特点 n 】`
+- `【 personality 性格 】`
+- // TIPS: Pay attention to the pronunciation of the wold 'character'.
+- -
+- _【 develop a habit. 养成习惯 】_
+- **【 People 【 with 】 different 【 personalities 】 have different 【 hobbies 】 and 【 habits 】. 不同性格的人有不同爱好和习惯 】**
+- **【 Could you describe the 【 relationship 】 between 【 habit 】, 【 personality 】, and 【 destiny 】? 】**
+-
+- [AA.]
+- `【 personality 性格 】`
+- `【 destiny 命运 n 】` = fate
+- **【 【 personality 】 【 determines 】 【 destiny 】. 性格决定命运 】**
+- // -- determine 决定
+- // -- It's used to 【 determine 】 【 whether 】 this object is the prototype object of the 【 parameter 】 object.
+-
+- [BB.]
+- `【 develop a habit. 养成习惯 】`
+- **【 We should 【 develop 】 the good 【 habit 】 【 of 】 【 washing hands 】 before 【 meals / eating 】. 养成吃饭前洗手的好习惯 】**
+- // -- 【 meal 进餐 v 一餐 n 】
+- // -- 【 meat 肉 】
+-
+- [CC.]
+- `【 character 性格 特征 特点 】`
+- `【 personality 性格 】`
+- **【 Her 【 weakness 】 【 in 】 【 personality 】 is that she likes to 【 have a fit 】. 她性格上的缺点是喜欢发脾气 】**
+- // -- 【 have a fit. 发脾气 】
+-
+-
+- [DD.]
+- `【 meal 进餐v 一餐n 】` -------- 范围广，可以是任意一顿饭
+- `【 dinner 晚餐 正餐 n 】` ------ 侧重主餐，特别是晚上那顿主餐
+- **【 How many 【 meals 】 do you 【 cook 】 every day? 你每天做几顿饭？ 】**
+- **【 It's time for 【 meal 】. 现在是吃饭时间 】**
+- // -- 【 have a meal. 吃一顿饭 】
+- // -- 【 three meals a day. 一日三餐 】
+-
+- [EE.]
+- `person 人`
+- `personal 个人的 adj`
+- `personally 亲自的 adv`
+- `【 personality 性格 n 】`
+- `【 interpersonal 人际关系的 】`
+- `【 personnel 人事部门 】`
+- > personal 个人的
+- > personnel 人事部门
+- _【 personal privacy. 个人隐私 】_
+- _【 personal assistant. 个人助理 】_
+- _【 personal transportation. 个人交通工具 】_
+- _【 interpersonal skill. 人际交往能力 】_
+- _【 private property. 私有财产 】_
+- _【 private conversation. 私人谈话 】_
+-
+- [FF.]
+- `interpersonal 人际关系的 adj` ---- inter + personal
+- `interchange 交换 v/n` ----------- inter + change
+- `interpreter 口译员` ------------- inter + preter
+- `interrupt 打断 中断` ------------- inter + rupt
+- -
+- `organize 组织 v`
+- `organization 组织 n`
+- `organizational 组织的 adj` // TIPS: Pay attention to the pronunciation of the 'organization'
+- -
+- _【 interpersonal skill. 人际交往能力 】_
+- _【 organizational skill. 组织能力 】_
+- _【 interchange station. = transfer station. 中转站 】_
+-
+- > 【 reporter 记者 】
+- > 【 interpreter 口译员 】
+-
+- > interrupt 打断
+- > disturb 打扰
+-
+- **【 I have excellent 【 interpersonal skills 】 and 【 organizational skills 】, but my 【 creativity 】is not strong. 我有出色的【人际交往能力】和【组织能力】, 但是我的创造力不强 】**
+
+###### 2024-05-02
+
+- 1
+- `【 workload 工作量 】`
+- `【 workaholic 工作狂 adj n 】`
+-
+- `【 work overtime. 加班 】`
+- `【 mandatory overtime. 强制加班 】`
+- `【 overtime pay. 加班费 】`
+-
+- `【 day shift. 白班 】`
+- `【 night shift. 夜班 】`
+- `【 stick shift. 换挡杆 】`
+- // shift 转移 vn 换挡 vn 班 n 轮班 n
+- // 【 shift gears. 换档 】
+- // 【 selfie stick. 自拍杆 】
+-
+- `【 intense competition. 激烈的竞争 】`
+- `【 cruel competition. 残酷的竞争 】`
+- `【 fair competition. 公平的竞争 】`
+-
+- `【 exhaust 筋疲力尽 v 】` // ---- 身体上的疲劳
+- `【 burnout 精疲力尽 n 】` // ---- 心理上的疲劳 和 精神上的疲劳
+-
+- > 【 resist 抵抗 反抗 】
+- > 【 insist 坚持 】 -------------- 强调决心
+- > 【 persist 坚持 】 ------------- 强调坚持
+- > 【 assist 协助 辅助 帮助 】
+-
+- [AA.]
+- `【 workload 工作量 n 】`
+- `【 workaholic 工作狂 adj n 】`
+- **【 We can not use 【 workload 】 to 【 measure 】the【 work ability 】 of the【 workaholics 】. 不能用工作量来衡量工作狂的工作能力 】**
+- // -- work ability. 工作能力
+- // -- measure 测量 衡量
+-
+- [BB.]
+- `【 mandatory overtime. 强制加班 】`
+- `【 overtime pay. 加班费 】`
+- `【 resist 抵制 抵抗 v 】`
+- **【 We should 【 persist in 】 【 resisting 】 the 【 mandatory overtime 】 without 【 overtime pay 】. 我们要坚持抵制没有加班费的加班 】**
+- // -- `resist 抵抗v 抵制v v 反抗 v 防腐剂 n `
+- // -- `insist 坚持`
+- // -- `persist 坚持`
+- // --【 without 没有 】
+- // TIPS: Pay attention to the pronunciation of the word 'resist'.
+-
+- [CC.]
+- `【 intense competition. 激烈的竞争 】`
+- `【 cruel competition. 激烈的竞争 】`
+- `【 fair competition. 公平的竞争 】`
+- **【 【 Intense competition 】 is not 【 fair competition 】. 激励的竞争不是公平的竞争 】**
+-
+- [DD.]
+- `【 exhaust 精疲力劲 】`
+- `【 burned out. = burn out. = burnout. 精疲力劲 】`
+- **【 【 Working overtime 】 makes people 【 exhausted 】. 加班让人筋疲力尽 】**
+
+###### 2024-05-03
+
+- 1
+- `【 similar 相似的 adj 】`
+- `【 familiar 熟悉的 adj 】`
+- _【 be similar to. 与...相似 】_
+- _【 be familiar with. 熟悉... 】_
+-
+- [AA.]
+- `【 similar 相似的 adj 】`
+- `【 be similar to. 与...相似 】`
+- **【 I 【 am familiar with 】 this city because it 【 is similar to 】 my hometown. 我很熟悉这座城市，因为它和我老家很相似 】**
+- 1. **【 These two roads are very 【 similar 】. 这两条路很相似 】**
+- 2. **【 useState 【 is very similar to 】 useMemo. useState 和 useMemo 很相似 】**
+- 3. **【 Her 【 personality 】 【 is similar to 】 【 mine 】. 她的性格和我相似 】**
+-
+- [BB.]
+- `【 familiar 熟悉的 adj 】`
+- `【 be familiar with. 熟悉... 】`
+- **【 Excuse me, 【 are you familiar with 】 the street around here? 打扰一下，你熟悉这周围的街道吗？ 】**-
+
+###### 2024-05-04
+
+- 0
+- `【 used to do sth. 过去常常做某事，现在已经不再做了 】`
+-
+- `【 sb be used to sth. 某人习惯于 某事 】`
+- `【 sb be used to doing sth. 某人习惯于 做某事 】`
+-
+- `【 sth be used to do. 被用来做... 】`
+-
+- [AA.]
+- used to do sth.
+- **【 I 【 used to 】 exercise 【 regularly 】, but now I don't like exercise 【 anymore 】. 我过去常常运动，现在不爱运动了 】**
+- **【 I 【 used to 】 love you. 我曾经爱过你 】**
+- **【 I 【 used to 】drink 【 beer 】. 我过去常喝啤酒 】**
+
+- **【 This tool 【 is used to 】 fix the car. 这个工具是用来修车的 】**
+-
+- **【 I 【 am used to getting 】 up early. 】**
+- **【 I 【 am used to going 】 to bed early and 【 getting 】 up early. 】**
+- **【 we 【 are used to 】 noise from the traffic. 】**
+-
+- [BB.]
+- `【 regularly 经常地 定期地 adv 】` -------- 强调规律性
+- `【 often 经常的 adv 】` ----------------- 强调频率
+- `【 regular 定期地 普通的 adj 】`
+- regular 定期的 普通的 正式的 adj
+- regularly 定期地 经常的 adv
+  -often 经常的 adv
+- 【 regular gas. 普通汽油 】
+- 【 premium gas. 优质汽油 】
+- 【 regular physical examination. 定期体检 】
+- 【 regular teacher. 正式教师 】
+- 【 irregular verb. 不规则动词 】
+- 【 regular expression. 正则表达式 】// new Regexp
+
+- 1
+- `【 affect 影响 v 】` ------------- 直接的影响
+- `【 influence 影响 v n 】` -------- 间接的影响
+- `【 impact 影响 v n 】`
+- `【 effect 影响 效果 n 】`
+-
+-
+- 2
+- `【 chief 首领 最高领导人 】`
+- `【 chef 厨师 】`
+- _【 chief architect. 首席架构师 】_
+- _【 software architect. 软件架构师 】_
+- > 【 used to be. 过去是 】
+- **【 This 【 chief architect 】 【 used to 】 be a 【 chef 】. 这个首席架构师之前是一位厨师 】**
+- // -- used to be. 过去是
+- // TIPS: Pay attention to the pronunciation of the word 'chef'.
+-
+-
+- 3
+- `【 lightning 闪电 】`
+- `【 lighter 打火机 】`
+- `【 flashlight 手电筒 】`
+-
+- `【 lighting 光n 照亮v 】`
+- `【 lightning 闪电 】`
+-
+- light 光 光线 明亮的 -> lighting
+-
+-
+- 4
+- `【 wealth 财富 】`
+- `【 health 健康 】`
+- `precious 宝贵的 珍贵的 adj`
+- **【 【 Mental health 】 and 【 physical health 】 are both 【 precious 】 【 wealth 】. 心理健康和生理健康都是宝贵的财富 】**
+- // -- mental health. 心理健康
+- // -- physical health. 身理健康
+- // -
+- // -- physic 物理学 n
+- // -- physical 物理的 adj
+-
+-
+- 5
+- `【 locate 定位 v 】`
+- `【 location 位置 n 】`
+- `【 collocate 搭配 v 】`
+- `【 collocation 搭配 n 】`
+- > 【 locate 定位 v 】
+- > 【 collocate 搭配 v 】
+- > 【 fixed collocation. 固定搭配 】
+- **【 We need to 【 locate 】 the 【 position 】 where the 【 fixed collocation 】 【 appears 】 in the sentence. 我们需要在句子中定位固定搭配出现的地方 】**
+-
+-
+- 6
+- `【 memory 回忆 记忆力 n 】`
+- `【 memorize 记住 记忆 v 】`
+- `【 remember 记得 记住 v 】`
+- `【 recite 背诵 v 】`
+- **【 She has an 【 super-strong 】【 memory 】 and can 【 remember 】 【 precious memories 】. 她有超强的记忆力，能记住珍贵的回忆 】**
+- // -- 【 super-strong. 超强的 】
+- // -- 【 previous memory. 珍贵的回忆 】
+- // -- memory 回忆 n 记忆力 n

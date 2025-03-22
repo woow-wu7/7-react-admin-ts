@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      html,
+      body,
+      section {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+
+      .left {
+        float: left;
+        width: 200px;
+
+        height: 100%;
+        background: yellow;
+      }
+      .right {
+        float: right;
+        width: 200px;
+
+        height: 100%;
+        background: yellow;
+      }
+      .center {
+        /* margin-left: 200px;
+        margin-right: 200px; */
+        /* overflow: hidden; */
+
+        height: 100%;
+        background: red;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <div class="left">left</div>
+      <div class="right">right</div>
+      <div class="center">
+        <div>中心中心中心中心中心中心中心中心中心中心中心中心中心中心中心中心中心中心中心中心</div>
+        <div>三栏布局 注意点是 left right center 的DOM顺序不能变</div>
+      </div>
+    </section>
+    <script>
+      // 三栏布局
+      // 1. 浮动 + DOM顺序(left,right,center)
+      // 2. flex 布局
+    </script>
+  </body>
+</html>

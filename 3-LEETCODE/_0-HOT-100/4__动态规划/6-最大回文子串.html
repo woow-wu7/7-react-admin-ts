@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 5. 最长回文子串
+
+      // leetcode
+      // https://leetcode.cn/problems/longest-palindromic-substring/
+
+      // 对比
+      // 子串: 是 ( 连续 ) 的子字符串
+      // 子序列: 不一定要连续
+
+      // 方法1
+      // 动态规划
+      var longestPalindrome = function (s) {
+        // if (s.length === 1) return s; // 这个边界条件可以不要，也可以写提前return，避免一些计算
+
+        const len = s.length;
+        let res = s[0];
+
+        // dp[i][j] 表示下标 ij 位置是否是回文串
+        const dp = new Array(len).fill(0).map(() => []);
+
+        // 二维dp数组的对角线上一定是回文字符串，因为 ( 两个指针指向了同一个单个字符 )，单个字符也是回文
+        for (let i = 0; i < len; i++) {
+          dp[i][i] = true;
+        }
+
+        // i < j
+        for (let j = 1; j < len; j++) {
+          for (let i = j - 1; i >= 0; i--) {
+            if (
+              (s[i] === s[j] && j - i === 1) || // i -> j 之间没有其他字符了，即 'aa' 这样
+              (s[i] === s[j] && dp[i + 1][j - 1]) //i -> j 之间，还有字符，状态方程 dp[i][j] =  dp[i + 1][j - 1]，也就是说 i->j是回文，需要 i+1 -> j-1 也是回文才行
+            ) {
+              dp[i][j] = true;
+              if (res.length < j - i + 1) {
+                res = s.slice(i, j + 1); // 更新较大的回文
+              }
+            }
+          }
+        }
+
+        return res;
+      };
+    </script>
+  </body>
+</html>

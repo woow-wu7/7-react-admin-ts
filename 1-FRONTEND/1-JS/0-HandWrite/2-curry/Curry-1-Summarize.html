@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>curry 科里化函数</title>
+  </head>
+  <body>
+    <script>
+      //【 accumulator 累积器 蓄电池 】
+      // accumulate 累积 堆积 - accumulate wealth. accumulate experience.
+      // calculate ----------- calculate cost.
+      // stimulate ----------- stimulate demand. stimulate consumption.
+      // simulate ------------ simulate training. simulate examination.
+      // -
+      // wealth 财富 n
+      // health 健康 n
+      // greatest 最大的 最伟大的 adj
+      // 【 【 Health 】 is the 【 greatest 】 【 wealth 】. 健康是最大的财富 】
+      //
+      // -
+      // argument 参数 - 实参
+      //【 parameter 参数 - 形参 】
+      //【 multiple parameters. 多个参数 】
+      //【 rest parameters. 其余参数 】
+      // ---- multiple 多种 多个 倍数
+      // ---- multiply 乘 // multiply by
+      // -
+      // accept 接收 接受 ----- 主动的
+      // receive 接受 收到 ---- 被动
+      // -
+      //【 except for. 除了...外 】 = in addition to.
+      //【 be assigned to. 被分配给... 】
+      // ---- 【 Except for 】 the first parameter, the 【 rest parameters 】【 are all assigned to 】 'recursion' function.
+      // -
+      //【 recursion 递归 n 】// recursive 递归的 adj
+      //【 traverse 遍历 v 】
+      // ---- 【 Except for 】 the first parameter, the 【 rest parameters 】【 are all assigned to 】 'recursion' function.
+      // -
+      //【 as 当...的时候 因为 作为 】
+      //【 report an error. 报错 】
+      // ---- The 'reduce' function will 【 report an error 】 【 as 】 'rest' is an empty array.
+      // ---- When 'rest' is an empty array, The 'reduce' function will 【 report an error 】.
+      // -
+
+      // 和 sum - add plus
+      // 差 difference - minus
+      // 积 product --------- 产品 乘积 - times multiply by
+      // 商 quotient - divided by
+
+      //【 The sum of 】 one 【 plus 】 one is two.
+      //【 The difference of 】 nine 【 minus 】 three is six.
+      //【 The product of 】 one 【 times 】 two is two.
+      //【 The quotient of 】 nine 【 divided by  】three is three.
+
+      // ------- **加法 - 【 plus / add 】**
+      // ------- A. One plus one equals two.
+      // ------- B. One add one equals two.
+      // ------- C. One plus one is two.
+      // ------- **减法 - 【 minus / subtracted 】**
+      // ------- A. 9 minus 6 equals 3.
+      // ------- B. 6 【 subtracted from 】 9 is 3.
+      // ------- c. If you subtract 6 from 9, you get 3.
+      // ------- **除法 - 【 divided 】**
+      // ------- A. 10 【 divided by 】 2 equals 5.
+      // ------- **乘法 - 【 times/multiplied 】**
+      // ------- A. one times two equals two.
+      // ------- B. 1 【 multiplied by 】 2 equals two.
+
+      const curry = (fn, ...rest) => {
+        //【1】
+        // The parameter "fn" can be passed into the "curry" function or into the "calculate" function 【2】.
+        // -- recursion.calculate = (fn) => fn(...totalParameters);
+
+        // The total parameters are divided into two parts:
+        // - 1. one: is the parameter of the curry function.
+        // - 2. another: is the parameter of the returned function.
+        const totalParameters = [];
+
+        // The【 curring function 】 can 【 receive/accept 】【 multiple parameters 】.
+        // --【 Except for 】 the first parameter, the 【 rest parameters 】 【 are all assigned to 】 'recursion' function.
+        if (rest.length) totalParameters.push(...rest);
+
+        // 1
+        // recursion => It's used to gather parameters
+        const recursion = (...rest) => {
+          if (rest.length) totalParameters.push(...rest);
+          return recursion;
+        };
+
+        // 【2】
+        // calculate => It's used to calculate the final result.
+        // The parameter "fn" can be passed into the "curry" function or into the "calculate" function 【2】.
+        // -- recursion.calculate = (fn) => fn(...totalParameters);
+        recursion.calculate = () => fn(...totalParameters);
+
+        return recursion;
+      };
+
+      // add
+      // 1. The 'reduce' function will 【 report an error 】 【 as 】 'rest' parameter is an empty array.
+      // or When 'rest' is an empty array, The 'reduce' function will report an error.
+      // But But we don't do optimization here.
+      const getSum = (...rest) => rest.reduce((accumulator, current) => accumulator + current);
+
+      const fn = curry(getSum, 1, 2, 3)(4, 5)(6)()(7); // curry函数可以不传第二个，第三个...参数
+      const result = fn.calculate();
+      console.log("res: ", result);
+    </script>
+  </body>
+</html>

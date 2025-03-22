@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <a href="#anchor1">锚点1</a>
+    <a href="#anchor2">锚点2</a>
+
+    <div>内容 <br /><br /><br /><br /><br /><br /><br /></div>
+    <div>内容 <br /><br /><br /><br /><br /><br /><br /></div>
+    <div>内容 <br /><br /><br /><br /><br /><br /><br /></div>
+    <div>内容 <br /><br /><br /><br /><br /><br /><br /></div>
+    <div>内容 <br /><br /><br /><br /><br /><br /><br /></div>
+    <div>内容 <br /><br /><br /><br /><br /><br /><br /></div>
+    <div>内容 <br /><br /><br /><br /><br /><br /><br /></div>
+    <div>内容 <br /><br /><br /><br /><br /><br /><br /></div>
+    <div>内容 <br /><br /><br /><br /><br /><br /><br /></div>
+    <div id="anchor1">
+      <div>这是锚点1的部分</div>
+    </div>
+    <div>内容 <br /><br /><br /><br /><br /><br /><br /></div>
+    <div>内容 <br /><br /><br /><br /><br /><br /><br /></div>
+    <div>内容 <br /><br /><br /><br /><br /><br /><br /></div>
+    <div>内容 <br /><br /><br /><br /><br /><br /><br /></div>
+    <div>内容 <br /><br /><br /><br /><br /><br /><br /></div>
+    <div>内容 <br /><br /><br /><br /><br /><br /><br /></div>
+    <div>内容 <br /><br /><br /><br /><br /><br /><br /></div>
+    <div>内容 <br /><br /><br /><br /><br /><br /><br /></div>
+    <div>内容 <br /><br /><br /><br /><br /><br /><br /></div>
+    <div id="anchor2">
+      <div>这是锚点2的部分</div>
+    </div>
+    <div>内容 <br /><br /><br /><br /><br /><br /><br /></div>
+    <div>内容 <br /><br /><br /><br /><br /><br /><br /></div>
+    <div>内容 <br /><br /><br /><br /><br /><br /><br /></div>
+    <div>内容 <br /><br /><br /><br /><br /><br /><br /></div>
+    <div>内容 <br /><br /><br /><br /><br /><br /><br /></div>
+    <div>内容 <br /><br /><br /><br /><br /><br /><br /></div>
+
+    <script>
+      window.addEventListener("hashchange", () => {
+        console.log(
+          "点击a标签后，页面会跳到对应的锚点id位置，同时地址栏的hash部分会变，同时hashchange事件会触发"
+        );
+      });
+    </script>
+  </body>
+</html>

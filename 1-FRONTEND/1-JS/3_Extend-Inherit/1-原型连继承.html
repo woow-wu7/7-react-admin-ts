@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prototype Chain Inheritance. 原型链继承</title>
+  </head>
+  <body>
+    <script>
+      // 原型链继承 
+      // Prototype Chain Inheritance.
+
+      // 原理
+      // - 1. 将 ( 子类的prototype属性 ) 指向 ( 父类的实例 ) ，同时修改 ( 子类的constructor ) 让其重新指向子类
+      // - 2. 或者说：将父类的实例 作为 子类实例 的 原型对象 ( 隐式原型 )
+      //   - 3. 因为: 修改了子类prototype指向父类实例后，子类的prototype.constructor就指向了父类（修改改回来，防止引用出错）
+      //   - 2021/07/24补充
+      //   - 因为：具体是 ( child.constructor ) => ( Child.prototype.constructor ) => ( 父类实例的constructor，即father.constructor ) => ( Father.prototype.constructor ) => Father
+      //   - 所以：当修改了prototype后，Child.prototype.constructor 指向了 Father，所以constructor需要重新指回Child
+      //   - 即：修改了 【 Child.prototype = new Father() 】 之后，需要修改Child.prototype.constructor的指向 【 Child.prototype.constructor = Child 】
+
+      // 缺点
+      // - 1.传参: 生成子类实例时不能向父类传参
+      // - 2.多继承: 不能实现多继承
+      // - 3.共享(影响): 所有实例共享属性，当是引用类型的属性时，修改相互影响
+      // - 4.属性: 在子类的 prototype 上挂属性和方法，必须在修改子类的 prototype 指向之后
+
+      // 注意
+      // - 构造函数不能是箭头函数，因为箭头函数没有自己的this，所以不能作为构造函数，即不能new调用
+
+      // 链接
+      // - https://juejin.cn/post/6844904050895372295
+
+      // 父类
+      // 1. 2023-02-01 注意: 构造函数不能是箭头函数，因为箭头函数没有自己的this，所以不能作为构造函数，即不能new调用
+      function Super(name) {
+        this.name = name;
+      }
+      Super.prototype.age = 10;
+
+      // 子类
+      function Sub(address) {
+        this.address = address;
+      }
+      Sub.prototype = new Super("woow_wu7"); // 1. 这里会导致 Sub.prototype.constructor === super.constructor === Super.prototype.constructor === Super
+      Sub.prototype.constructor = Sub; // 2. 因为1的原因，需要重新修改 constructor 的指向
+      Sub.prototype.country = "china"; // 缺点：挂载属性必须在上面步骤之后，不然会被覆盖
+
+      const sub = new Sub("shanghai"); // 缺点：只能向子类传参，不能向父类传参
+      console.log("sub: ", sub);
+    </script>
+  </body>
+</html>

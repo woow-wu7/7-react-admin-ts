@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 二分法查找
+      // 1. 条件: 有序数组
+      // 2. 原理
+      // 1.从 ( 有序数组 ) 的 ( 中间位置 ) 开始搜索，如果中间位置的值 ( 正好等于 ) 目标值，就返回该元素的 ( 位置 )，否则下一步
+      // 2.如果 中间位置的值 ( 大于 ) 目标值，则在 ( 小于中间位置的那一半数组 ) 继续搜索
+      // 3.如果 中间位置的值 ( 小于 ) 目标值，则在 ( 大于中间位置的那一半数组 ) 继续搜索
+      // 4.如果 某一步 ( 数组为空 ), 表示查完整个数组都没找到目标值，返回 -1
+
+      const arr = [1, 2, 3, 4, 5, 6, 7, 8];
+
+      // 1
+      // while
+      function binary_search(arr, value) {
+        let left = 0;
+        let right = arr.length;
+
+        while (left <= right) {
+          const mid = Math.floor((left + right) / 2);
+
+          switch (true) {
+            case arr[mid] === value: {
+              return mid;
+            }
+            case arr[mid] < value: {
+              left = mid + 1;
+              break;
+            }
+            case arr[mid] > value: {
+              right = mid - 1;
+              break;
+            }
+            default:
+              return -1;
+          }
+        }
+      }
+
+      const res = binary_search(arr, 5);
+      console.log(res); // 4
+    </script>
+  </body>
+</html>

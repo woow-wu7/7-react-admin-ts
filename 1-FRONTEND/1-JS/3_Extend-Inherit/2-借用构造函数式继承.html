@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Constructor Borrowing Inheritance. 借用构造函数式继承</title>
+  </head>
+  <body>
+    <script>
+      // 借用构造函数 式继承
+      // Constructor Borrowing Inheritance.
+
+      // 原理
+      // - call: 在 ( 子类 ) 中通过 ( call 或者 apply ) 方法来绑定 ( 父类中的this ) 为 ( 子类的实例 )，并在 ( 子类中调用父类 )
+      // - 从名字上看: 借用构造函数，就是绑定 this，执行父类
+
+      // 优点
+      // - 1. 传参: 在生成子类实例时 能向父类传参
+      // - 2. 多继承: 能实现多继承 ( 即调用多个父类 )
+      // - 3. 属性: 所有属性都生成在每个实例上，修改互不影响
+
+      // 缺点
+      // - 不能继承多个 ( 父类.prototype ) 上的属性和方法，因为 ( 父类没有 new 调用，而是通过 call 调用的；同时也没修改子类 prototype 的指向，不存在原型链继承 )
+      // - 就是构造函数的缺点，也是优点，作为缺点就是属性和方法都生成在实例上，每次 new 都会新生成一份，造成系统资源浪费(即不共享属性)，对于可以共享的只读属性，应该方法原型链上
+
+      // 注意
+      // - 构造函数不能是箭头函数，因为箭头函数没有自己的this，所以不能作为构造函数，即不能new调用
+
+      // 链接
+      // - https://juejin.cn/post/6844904050895372295
+
+      // 父类 1
+      function Super1(name1) {
+        this.name1 = name1;
+      }
+      Super1.prototype.super_age1 = 10;
+
+      // 父类 2
+      function Super2(name2) {
+        this.name2 = name2;
+      }
+      Super1.prototype.super_age2 = 20;
+
+      // 子类
+      function Sub(name1, name2, name3) {
+        Super1.call(this, name1); // 通过call，绑定super1的this为子类实例，并执行Super1()，相当于 this.name1 = name1，从而实现了 ( 多继承 和 父类传参 )
+        Super2.call(this, name2); // 优点：可以多继承，同时继承了Super1和Super2中的 实例属性，且在子类实例上修改属性相互不受影响
+        this.name3 = name3; // 缺点：不能继承 ( 父类实例原型链上 ) 的属性和方法，即 super_age1 和 super_age1，因为没有作为构造函数 new 调用，而是直接call调用-普通函数
+      }
+      Sub.prototype.child_age = 30;
+
+      const sub = new Sub(1, 2, 3);
+      console.log("sub: ", sub);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 342. 4的幂
+
+      // 题目
+      // 给定一个整数，写一个函数来判断它是否是 4 的幂次方。如果是，返回 true ；否则，返回 false 。
+      // 整数 n 是 4 的幂次方需满足：存在整数 x 使得 n == 4x
+
+      // 示例 1：
+      // 输入：n = 16
+      // 输出：true
+      // 示例 2：
+
+      // 输入：n = 5
+      // 输出：false
+
+      // 示例 3：
+      // 输入：n = 1
+      // 输出：true
+      //
+
+      // 提示：
+      // -231 <= n <= 231 - 1
+
+      /**
+       * @param {number} n
+       * @return {boolean}
+       */
+
+      // leetcode
+      // https://leetcode.cn/problems/power-of-four/
+
+      /**
+       * @param {number} n
+       * @return {boolean}
+       */
+
+      // 对比
+      // 231. 2 的幂 https://leetcode.cn/problems/power-of-two/
+      // 326. 3 的幂 https://leetcode.cn/problems/power-of-three/
+      // 342. 4 的幂 https://leetcode.cn/problems/power-of-four/
+
+      // 思路
+      // - 二分法
+      // - 目前求 ( 幂 ) 都可以用 ( 二分法 ) 来决解
+      // - 比如 2的幂 3的幂 4的幂
+
+      // 1
+      // 不断执行 n%4，然后缩小范围 n/4，直到 n <= 1
+      var isPowerOfFour = function (n) {
+        if (n <= 0) return false;
+
+        while (n > 1) {
+          if (n % 4 !== 0) return false;
+
+          n = n / 4;
+        }
+
+        return true;
+      };
+
+      // 2
+      // 二分法
+      var isPowerOfFour = function (n) {
+        if (n <= 0) return false;
+
+        let left = 0;
+        let right = n;
+
+        while (left <= right) {
+          const mid = Math.floor(left + (right - left) / 2);
+
+          if (Math.pow(4, mid) === n) return true; // power 幂的意思
+          if (Math.pow(4, mid) > n) right = mid - 1;
+          if (Math.pow(4, mid) < n) left = mid + 1;
+        }
+
+        return false;
+      };
+
+      // 3
+      // &
+      // 4的幂应该同时满足 ------ ( 2的幂 ) && ( 模3为1 )
+      var isPowerOfFour = function (n) {
+        if (n <= 0) return false;
+
+        return (n & (n - 1)) === 0 && n % 3 === 1;
+      };
+    </script>
+  </body>
+</html>

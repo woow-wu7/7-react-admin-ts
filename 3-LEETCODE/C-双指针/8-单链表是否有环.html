@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 141. 环形链表
+
+      // 问题: 如何判断一个链表是 - 环形链表？
+      // 方法: 快慢指针
+      // 原理:
+      //  - 设置两个指针，从链表起始开始走，快指针一次走两步，慢指针一次走一步
+      //  - 如果有一个指针走到null，则链表没环 ( 当然是快指针先null，如果没环的话 )
+      //  - 如果有环，则快慢指针一定会在环中相遇
+
+      // 原理解析：
+      // 1. 如果单链表没有环，快慢指针是永远不会相遇，并且快指针的最后一个节点指向 null
+      // 2. 如若单链表中有环，快指针先进入环，慢指针后进入环，即是快指针在追慢指针
+      //    - 问题：那有没有可能，快慢指针在环中永远不会相遇呢？
+      //    - 回答：不可能，因为快2步，慢1步，相对速度就是以  ( 1步 ) 的速度在追慢指针，所以一定会相遇
+      //    - 扩展：如果 快3慢1，相对数组就是2步，则就有可能不会相遇
+
+      // 链接
+      // 141. 环形链表 https://leetcode.cn/problems/linked-list-cycle/
+
+      // 资料
+      //  - 原理 https://www.bilibili.com/video/BV1if4y1d7ob/?spm_id_from=333.337.search-card.all.click&vd_source=a8374ac38c77856369542fc154a1e043
+      //  - 多种方法 https://juejin.cn/post/6844904126434770958
+      //  - https://juejin.cn/post/6885621824067993613
+      //  - https://www.bilibili.com/video/BV1kf4y1u7oA/?spm_id_from=333.337.search-card.all.click&vd_source=a8374ac38c77856369542fc154a1e043
+
+      // 对比 1
+      // - 剑指 Offer II 022. 链表中环的入口节点  https://leetcode.cn/problems/linked-list-cycle-ii/
+      // - 160. 相交链表 https://leetcode.cn/problems/intersection-of-two-linked-lists/
+
+      // 对比 2
+      // 都是对环入口的考核
+      // 剑指 Offer II 022. 链表中环的入口节点  https://leetcode.cn/problems/linked-list-cycle-ii/
+      // 287. 寻找重复数 https://leetcode.cn/problems/find-the-duplicate-number/
+
+      // (1) 快慢指针的运用
+      // - 1. 链表是否有环
+      // - 2. 环形链表的入口
+      // - 3. 链表的中间节点
+      // (2) 滑动窗口的运用
+      // - 1. 删除倒数第k个节点
+      // - 2. 链表中倒数第k个节点
+
+      // 方法1
+      // - 方法1比方法二好，因为方法1 ( 和判断环的入口 ) 更接近
+      var hasCycle = function (head) {
+        // if (head === null || head.next === null) return false; // 空链表，单节点链表，一定没有环
+        // while (fast && fast.next && fast.next.next) 这样判断也可以，这样就不用上面这个 if 判断了
+
+        let fast = head; // 快指针
+        let slow = head; // 慢指针
+
+        // 快指针的两次移动位置都不能是null，如果是null，表示可以遍历完，则一定是单链表
+        // 比如:
+        // - [] ---------------- 返回false，此时 fast === null
+        // - [1] --------------- 返回false，此时 fast.next === null
+        // - 所以其实子需要  while (fast !== null && fast.next !== null ) 就可以了，因为在下一轮循环时相当于 fast !== null
+        // - 我们用了  while (fast !== null && fast.next !== null && fast.next.next !== null) 这样也可以的
+        while (fast !== null && fast.next !== null && fast.next.next !== null) {
+          fast = fast.next.next; // 快指针移动 2步
+          slow = slow.next; // 慢指针移动 1步
+
+          // 相遇，则有环
+          // - 因为 ( 快2慢1 )，则相对数组是1，所以一定能追上相遇
+          // - 如果 ( 快3慢1 )，则相对速度是2，则有可能永远不会相遇
+          // - 注意:
+          //    - 这里不能是 fast.val === slow.val，因为会出现 [1,1,1,1,1] 的情况
+          //    - 一定是要 ( 两个节点是同一个节点 )，即是同一个对象
+          if (fast === slow) return true;
+        }
+
+        // 快指针指向null，则说明可以被遍历完，一定是单链表，没有环
+        return false;
+      };
+
+      // ------------------------------------------------------------------------------------------
+      // ------------------------------------------------------------------------------------------
+      // ------------------------------------------------------------------------------------------
+      // 方法2
+      const hasCircle = (head) => {
+        // 边界，如果传入的链表是空，或者快慢指针不存在，则不是环
+        // 注意：该边界判断一定要写字在最前面，不然 slow 和 fast 可能取不到值而报错
+        if (!head || !head.next || !head.next.next) return false;
+
+        let slow = head.next; // 慢指针，1步
+        let fast = head.next.next; // 快指针，2步
+
+        // 不相遇就继续遍历
+        while (slow !== fast) {
+          // 1
+          // - 快指针不存在，或者快指针下一个节点不存在，或者快指针下下一个节点不存在，即链表已经遍历完，还没有相遇，则一定是没有环的单链
+          // - 这里为什么使用快指针来判断？因为快，遍历次数少；用慢指针来判断也是可以的
+          if (!fast || !fast.next || !fast.next.next) return false;
+
+          // 移动指针，继续遍历
+          slow = slow.next; // 移动指针
+          fast = fast.next.next; // 移动指针
+        }
+
+        // 不满足条件，即 fast和slow 相遇，则肯定有环
+        return true;
+      };
+    </script>
+  </body>
+</html>

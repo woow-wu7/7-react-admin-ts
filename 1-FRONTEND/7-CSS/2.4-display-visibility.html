@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>display:none; VS visibility:hidden;</title>
+    <style>
+      .one {
+        display: none;
+      }
+      .two {
+        visibility: hidden;
+      }
+      /* display: none; 1.隐藏后不占据原来的位置  2.在DOM中存在，只是在页面上不显示而已，css的方式隐藏*/
+      /* visibility: hidden; 1.隐藏后占据原来的位置  2.在DOM中存在，只是在页面上不显示而已，css的方式隐藏*/
+    </style>
+  </head>
+  <body>
+    <div class="one">one - display:none</div>
+    <div class="two">two - visibility:hidden</div>
+    <div class="three">
+      `display:none隐藏后不占据原来的位置；visibility:hidden隐藏后占据原来的位置；两者都会在DOM中存在，只是在页面上不显示而已，css的方式隐藏`
+    </div>
+    <div>伪元素 不在DOM中存在，所以性能好。一些分割线，图标，解决父元素高度塌陷等，可以利用微元素提升渲染性能</div>
+  </body>
+</html>

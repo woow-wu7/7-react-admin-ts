@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>删除链表中间节点 - Delete the Middle Node of a Linked List.</title>
+  </head>
+  <body>
+    <script>
+      // 删除链表中间节点 - Delete the Middle Node of a Linked List.
+
+      // 给你一个链表的头节点 head 。删除 链表的 中间节点 ，并返回修改后的链表的头节点 head 。
+      // 长度为 n 链表的中间节点是从头数起第 ⌊n / 2⌋ 个节点（下标从 0 开始），其中 ⌊x⌋ 表示小于或等于 x 的最大整数。
+      // 对于 n = 1、2、3、4 和 5 的情况，中间节点的下标分别是 0、1、1、2 和 2 。
+
+      // Delete the Middle Node of a Linked List.
+      // You are given the head of a linked list. Delete the middle node, and return the head of the 【 modified 】 linked list.
+      // The middle node of a linked list of size n is the ⌊n / 2⌋th node from the start using 0-based indexing, where ⌊x⌋ 【 denotes 】 the largest 【 integer 】 less than or equal to x.
+      // For n = 1, 2, 3, 4, and 5, the middle nodes are 0, 1, 1, 2, and 2, respectively.
+
+      // leetcode
+      // https://leetcode.cn/problems/delete-the-middle-node-of-a-linked-list/description/
+
+      // English
+      // -
+      // be about to. 即将 ----- 紧迫性
+      // obtain 获得 v
+      // since 自从 因为
+      // -
+      // modify 修改 v
+      // modified 修改的 adj
+
+      /**
+       * Definition for singly-linked list.
+       * function ListNode(val, next) {
+       *     this.val = (val===undefined ? 0 : val)
+       *     this.next = (next===undefined ? null : next)
+       * }
+       */
+      /**
+       * @param {ListNode} head
+       * @return {ListNode}
+       */
+      var deleteMiddle = function (head) {
+        // some boundaries.
+        if (!head.next) return null;
+
+        let pre = (fast = slow = head);
+
+        while (fast && fast.next) {
+          // pre: The main purpose of declaring the "pre" Node is to 【 get / obtain 】 the previous Node of the "slow" Node, 【 because / since 】 we 【 are about to 】 move the "slow" Node.
+          pre = slow;
+          fast = fast.next.next;
+          slow = slow.next;
+        }
+
+        pre.next = pre.next.next;
+
+        return head;
+      };
+    </script>
+  </body>
+</html>

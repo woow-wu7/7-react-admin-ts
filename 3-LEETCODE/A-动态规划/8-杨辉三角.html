@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 118. 杨辉三角
+
+      // 题目
+      // 给定一个非负整数 numRows，生成「杨辉三角」的前 numRows 行。
+      // 在「杨辉三角」中，每个数是它左上方和右上方的数的和。
+
+      // 输入: numRows = 5;
+      // 输出: [[1], [1, 1], [1, 2, 1], [1, 3, 3, 1], [1, 4, 6, 4, 1]];
+
+      // 输入: numRows = 1;
+      // 输出: [[1]];
+
+      // leetcode
+      // 118. 杨辉三角 https://leetcode.cn/problems/pascals-triangle/
+
+      // 思路
+      // - 动态规划
+      // - 1. 结果数组，是一个二维数组，初始化一个 numRows 行的二维数组
+      // - 2. 两层循环，外层表示行数，里层表示列数
+      // - 3.
+      //  - 每一行的 首尾 都是 1
+      //  - 每一行的 其他位置 就是状态转移方程 res[i][j] = res[i - 1][j - 1] + res[i - 1][j];
+
+      var generate = function (numRows) {
+        if (numRows === 0) return []; // 边界: 题目中说明numRows是非负整数
+
+        const res = new Array(numRows).fill(0).map(() => []); // 初始化二维数组，注意必须 fill()，不然map不会执行
+
+        // 两层循环 行列
+        for (let i = 0; i < numRows; i++) {
+          for (let j = 0; j <= i; j++) {
+            // 1. 首尾值是1
+            // 2. 其他位置状态转移方程
+            if (j === 0 || j === i) res[i][j] = 1;
+            else res[i][j] = res[i - 1][j - 1] + res[i - 1][j];
+          }
+        }
+
+        return res;
+      };
+    </script>
+  </body>
+</html>

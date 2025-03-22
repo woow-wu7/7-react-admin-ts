@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 1662. 检查两个字符串数组是否相等
+
+      // leetcode
+      // https://leetcode.cn/problems/check-if-two-string-arrays-are-equivalent/
+
+      // 输入：word1 = ["ab", "c"], word2 = ["a", "bc"]
+      // 输出：true
+
+      // 输入：word1 = ["a", "cb"], word2 = ["ab", "c"]
+      // 输出：false
+
+      /**
+       * @param {string[]} word1
+       * @param {string[]} word2
+       * @return {boolean}
+       */
+      var arrayStringsAreEqual = function (word1, word2) {
+        // const res1 = word1.reduce((a,b) => a+b)
+        // const res2 = word2.reduce((a,b) => a+b)
+        // return res1 === res2
+
+        return word1.join("") === word2.join("");
+      };
+    </script>
+  </body>
+</html>

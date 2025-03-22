@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 105. 从前序与中序遍历序列构造二叉树
+
+      // 题目
+      // 给定两个整数数组 preorder 和 inorder ，其中 preorder 是二叉树的先序遍历， inorder 是同一棵树的中序遍历，请构造二叉树并返回其根节点。
+
+      // 输入: preorder = [3,9,20,15,7], inorder = [9,3,15,20,7]
+      // 输出: [3,9,20,null,null,15,7]
+
+      // 输入: preorder = [-1], inorder = [-1]
+      // 输出: [-1]
+
+      // leetcode
+      // 105. 从前序与中序遍历序列构造二叉树 https://leetcode.cn/problems/construct-binary-tree-from-preorder-and-inorder-traversal/
+
+      // 思路
+      // 1. 我们每次 递归 都从 preorder 中把第一个元素取出来，就是 root 根节点，因为 preorder=根左右
+      // 2. 拿到root，然后来划分 inorder 的两部分，即 ( 左子树 root 右子树 )
+      // 3. 递归12，返回root即可，注意递归结束条件
+
+      var buildTree = function (preorder, inorder) {
+        if (!preorder.length || !inorder.length) return null; // 递归结束条件
+
+        // cur
+        // - 取出root的值
+        // - shift() 改变原数组
+        // - 改变原数组的方法有7个，这也是vue2数组响应式从写的原型链上的7中方法: push pop unshift shift reverse splice sort
+        const cur = preorder.shift();
+
+        const index = inorder.findIndex((v) => v === cur); // 通过root的值，划分inorder，前面是left子树，后面是right子树
+
+        let root = new TreeNode(cur); // 构建root节点
+        root.left = buildTree(preorder, inorder.slice(0, index)); // preorder是取出root值后，剩下的元素
+        root.right = buildTree(preorder, inorder.slice(index + 1));
+
+        return root;
+      };
+    </script>
+  </body>
+</html>

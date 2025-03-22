@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Implement bind function.</title>
+  </head>
+  <body>
+    <script>
+      // bind function implementation.
+      // - To 【 simulate 】 【 implementation 】 of 'bind' function.
+      // - 简单版
+      // - See details in the '3-bind.html' file.
+
+      // 1
+      // link
+      // [bind](file:///Users/xiawu/work/personal/front-end/8-penetrate/1-FRONTEND/1-JS/0-HandWrite/3-bind.html)
+
+      // 2
+      // To 【 simulate 】 【 implementation 】 of 'bind' function.
+      // bind 的模拟实现
+      // 作用:
+      //  - 1.绑定调用 bind 函数 的函数中的 this 对象的指向
+      //  - 2.返回一个 新的函数，新的函数可以是普通调用，也可以是通过new的方式调用
+      // 参数:
+      //  - 1. 第一个参数是this需要绑定的对象，如果是 ( 空，null，undefined ) 则相当于传入 ( 全局对象window|global )
+      //  - 2. 除了第一个参数外，后面的参数会作为返回函数的参数传入
+      // 特点:
+      //  - 1. 返回的函数: 可以 ( 普通调用 )，也可以通过 ( new ) 的方式调用，即可还可以是 ( 构造函数 )
+      //    - 构造函数时:
+      //      - bind时绑定的this失效，因为在构造函数中，this指向的是实例对象
+      //      - 但是传入的参数有效
+      // - 2. 参数:
+      //   - bind时，可以传入部分或全部参数，bind返回的新的函数调用时还能传入其他的部分参数
+
+      // English
+      // -
+      // invoke 调用
+      // -
+      // parasitism 寄生 n
+      // parasitic 寄生的 adj
+      // -
+      // parameter 参数
+
+      Function.prototype._bind = function (obj, ...outParams) {
+        const context = obj ? obj : globalThis;
+
+        const self = this;
+
+        // 兼容性 - bind必须通过函数调用
+        if (typeof self !== "function") {
+          throw new Error("bind must be 【 invoked 】 by a function");
+        }
+
+        // 返回的函数: 有两种调用方式
+        // - 1. 普通函数调用 --------------------------------- this 指向 window|global = globalThis
+        // - 2. new 的方式调用，即返回函数作为 构造函数 ---------- this 指向 实例对象
+        // parasitic 寄生的 adj
+        // parasitism 寄生 n
+
+        function bindReturnFn(...inParams) {
+          const totalParams = [...outParams, ...inParams];
+          return self.apply(this instanceof self ? this : context, totalParams); // self 就是 fn 函数
+        }
+
+        // 这里是为了让返回函数作为构造函数时，返回函数的实例的原型对象是self.prototype，则判断是true，即 this instanceof self 是 true
+        // - 更好的做法是: 用 派生式原型链继承来实现
+        // - 详见: 本项目/2-FRONTEND/1-JS/1-handwrite/3-bind.html
+
+        // bindReturnFn.prototype = Object.create(self.prototype);
+        // TIPS: 以下5行，可以直接使用更简单的写法，只不过没有下面这样写好
+
+        function Parasitism() {}
+        Parasitism.prototype = self.prototype;
+        Parasitism.prototype.constructor = Parasitism; // 直接修改 prototype 指向后，一般都需要修改constructor指向，防止出错
+        bindReturnFn.prototype = new Parasitism();
+        bindReturnFn.prototype.constructor = bindReturnFn; // 直接修改 prototype 指向后，一般都需要修改constructor指向，防止出错
+
+        return bindReturnFn;
+      };
+
+      // ------- ------- ------- ------- ------- ------- -------
+      // ------- ------- ------- ------- ------- ------- -------
+      // ------- ------- ------- ------- ------- ------- -------
+      // ------- ------- ------- ------- ------- ------- -------
+      // ------- ------- ------- ------- ------- ------- -------
+      // ------- ------- ------- ------- ------- ------- -------
+      // ------- ------- ------- ------- ------- ------- -------
+
+      function fn(name, age) {
+        this.name = name;
+        this.age = age;
+
+        return name + age;
+      }
+      const obj = {
+        name: "woow_wu7",
+      };
+
+      // 1
+      // Common function
+      const callbackFn = fn._bind(obj, 1);
+      const res = callbackFn(2);
+      console.log("res: ", res);
+      // 1
+      // Constructor function
+      const res2 = new callbackFn(3);
+      console.log("res2: ", res2);
+
+      // constructor
+      const callbackFn2 = fn.bind(obj, 1);
+      const res3 = callbackFn2(3);
+      const res4 = new callbackFn2(3);
+      console.log("res3: ", res3);
+      console.log("res4: ", res4);
+    </script>
+  </body>
+</html>

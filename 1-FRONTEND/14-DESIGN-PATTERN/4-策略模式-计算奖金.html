@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 题目: S绩效发4倍工资，A绩效发3倍工资，B绩效发2倍工资
+
+      // 1
+      // 未经过任何优化的写法
+      // - 缺点
+      //   - 有很多 if...else
+      //   - 缺乏扩展性: 如要添加C绩效，则需要修改getBonus内部的函数实现，违反开放封闭原则
+      //   - 复用性差
+      const getBonus = (performance, salary) => {
+        if (performance === "S") return 4 * salary;
+        if (performance === "A") return 3 * salary;
+        if (performance === "B") return 2 * salary;
+      };
+      getBonus("S", 1000); // 输出：400
+
+      // ------------------------------------------------
+      // ------------------------------------------------
+      // ------------------------------------------------
+      // 2
+      // 使用策略模式优化代码
+      // - 优点
+      //   - 避免了大量 if...else
+      //   - 可扩展: 所有计算 ( 奖金bonus ) 的逻辑都不在 ( getBonus ) 函数(即环境类context)中，而是分布在各个 ( 策略对象strategy ) 中
+      //   - context环境类不负责计算，只是负责将请求委托给strategy策略类
+      // 策略类
+      const strategy = {
+        S: (salary) => 4 * salary,
+        A: (salary) => 3 * salary,
+        B: (salary) => 2 * salary,
+      };
+      // 环境类
+      const getBonus2 = (performance, salary) => strategy[performance](salary);
+      getBonus2("S", 1000); // 输出：4000
+    </script>
+  </body>
+</html>

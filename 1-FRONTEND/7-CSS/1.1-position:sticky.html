@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sticky effect</title>
+    <style>
+      /* 
+        container 
+        -- container is a location 【 reference point 】 of the sticky point. 
+        -- reference 参考n 引用v
+        -- reference point. 参考点
+      */
+
+      .container {
+        height: 600px;
+        overflow: scroll;
+
+        border: 1px solid black;
+      }
+      .item-sticky {
+        position: sticky;
+        top: 0;
+
+        padding: 10px 0;
+        background: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      // 1
+      // position: sticky 粘性定位
+      // - 定位的基准点
+      //   - 是相对于 ( 具有滚动条的，距离最近的祖先元素 )
+      //   - 如果不存在这样的祖先元素，则是基于 ( viewport ) 视口进行定位
+      // - 表现上来看
+      //   - position:sticky = position:fixed + position:relative
+
+      // 2
+      // 实现 吸顶效果
+      // 方法1 position: sticky
+      // 方法2 js - scroll-top
+      // 方法3 js - IntersectionObserver
+
+      // 2
+      // 对比 sticky-footer
+      // The link is compared with sticky-footer: 1-FRONTEND/7-CSS/14-sticky-footer-calc.html
+
+      // ------- ------- ------- ------- ------- -------
+      // English
+      // reference point for position. 定位基准点
+      // reference 参考n 引用v
+    </script>
+    <div class="container">
+      <div class="item">item <br /><br /></div>
+      <div class="item">item <br /><br /></div>
+      <div class="item">item <br /><br /></div>
+      <div class="item">item <br /><br /></div>
+      <div class="item">item <br /><br /></div>
+      <div class="item">item <br /><br /></div>
+      <div class="item">item <br /><br /></div>
+      <div class="item">item <br /><br /></div>
+      <div class="item">item <br /><br /></div>
+      <div class="item">item <br /><br /></div>
+      <div class="item-sticky">item <br /><br /></div>
+      <div class="item">item <br /><br /></div>
+      <div class="item">item <br /><br /></div>
+      <div class="item">item <br /><br /></div>
+      <div class="item">item <br /><br /></div>
+      <div class="item">item <br /><br /></div>
+      <div class="item">item <br /><br /></div>
+      <div class="item">item <br /><br /></div>
+      <div class="item">item <br /><br /></div>
+      <div class="item">item <br /><br /></div>
+      <div class="item">item <br /><br /></div>
+      <div class="item">item <br /><br /></div>
+      <div class="item">item <br /><br /></div>
+      <div class="item">item <br /><br /></div>
+      <div class="item">item <br /><br /></div>
+      <div class="item">item <br /><br /></div>
+      <div class="item">item <br /><br /></div>
+      <div class="item">item <br /><br /></div>
+      <div class="item">item <br /><br /></div>
+      <div class="item">item <br /><br /></div>
+      <div class="item">item <br /><br /></div>
+      <div class="item">item <br /><br /></div>
+      <div class="item">item <br /><br /></div>
+      <div class="item">item <br /><br /></div>
+      <div class="item">item <br /><br /></div>
+      <div class="item">item <br /><br /></div>
+      <div class="item">item <br /><br /></div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 前端面试题
+      // 说明：
+      // 1. 在不查阅文档前提下，尽可能多的完成习题。
+      // 2. 答题过程请勿离开当前页面。
+      // 3. 时间 60 分钟，题目任选。
+
+      // 重点看
+      // 5
+      // 4
+
+      // ------------------------------------------------------------------------------------
+      // ------------------------------------------------------------------------------------
+      // ------------------------------------------------------------------------------------
+      // 题 1：
+      // 写一个节流函数 (限制一个函数在一定时间内只执行一次)
+      function throttle(fn, duration, ...params) {
+        let isRun = true;
+        return function () {
+          if (!isRun) return;
+          isRun = false;
+
+          const timer = setTimeout(() => {
+            fn(...params);
+            isRun = true;
+            clearTimeout(timer);
+          }, duration);
+        };
+      }
+
+      // ------------------------------------------------------------------------------------
+      // ------------------------------------------------------------------------------------
+      // ------------------------------------------------------------------------------------
+      // 题 2：
+      // 数组扁平化
+      // 输入：list = [1, [2, [3, 4]]]
+      // 输出：[1,2,3,4]
+
+      // 1
+      // This method is only 【 applicable 】 to 【 pure 】 digital 【 nested 】 arrays.
+      // 这个方法只适用于纯数字嵌套数组
+
+      // 2
+      // applicable 适用的 adj
+      // pure 纯的 纯净的 adj
+      // -
+      // nest 嵌套 v
+      // nested 嵌套的 adj / v过去时
+      // -
+      // flat 平的 扁平的
+      // -
+      // infinite 无限的
+      // finite 有限的
+
+      const listArr = [1, [2, [3, 4]]];
+      const flatFn = (arr) => {
+        // 手写
+        // return arr.flat(Infinity);
+        return arr
+          .toString()
+          .split(",")
+          .map((item) => Number(item));
+      };
+      const resList = flatFn(listArr);
+      console.log("resList: ", resList);
+
+      // ------------------------------------------------------------------------------------
+      // ------------------------------------------------------------------------------------
+      // ------------------------------------------------------------------------------------
+      // 题 3：
+      // 有如下文本，请提取文本中的所有 URL
+      // const text =
+      //   "这是一段文本https://www.showmebug.com/pads/LKGVGT这是一段文本http://www.showmebug.com这是一段文本http://showmebug.comm这是一段文本";
+      // function getAllUrl(url) {
+      //   return url.match(/\w+/g);
+      // }
+      // const urls = getAllUrl(text);
+      // console.log("urls: ", urls);
+
+      // -
+      // -
+      // ------------------------------------------------------------------------------------
+      // ------------------------------------------------------------------------------------
+      // ------------------------------------------------------------------------------------
+      // 题 4：
+      // 输入一个数组 nums，对于其中每个元素 nums[i]，请统计数组中比它小的所有数字的数目。
+      // 以数组形式返回答案，不能用 sort 和 filter。
+      // leetCode 1365. 有多少小于当前数字的数字
+
+      // 示例 ：
+      //   输入：nums = [8,1,2,2,3]
+      //   输出：[4,0,1,1,3]
+
+      // 方法1
+      // - 思路: 先拷贝数组，升序排序，遍历原数组当前元素在有序数组的index的值，就是比该元素小的元素个数
+      // - 注意点:
+      //    - 1. arr.indexOf(parameter) 返回的是 ( 参数元素parameter ) 在数组中 ( 第一次出现的位置 )
+      const lessLen = (arr) => {
+        const copy = [...arr].sort((a, b) => a - b); // 升序拷贝  [1, 2, 2, 3, 8]
+        return arr.map((value) => copy.indexOf(value));
+      };
+      const lessLenArr = lessLen([8, 1, 2, 2, 3]);
+      console.log("lessLenArr: ", lessLenArr);
+
+      // 方法2 - O(n^2)
+      const lessLen1 = (arr) => {
+        const len = arr.length;
+        const res = new Array(len).fill(0); // 初始值是 [0,0,0,0,0]
+        for (let i = 0; i < len; i++) {
+          for (let j = 0; j < len; j++) {
+            // 注意j也必须是从0开始比较，因为前面的值也可能比当前的值小
+            if (arr[i] > arr[j]) {
+              res[i]++;
+            }
+          }
+        }
+        return res;
+      };
+      const lessLenArr1 = lessLen1([8, 1, 2, 2, 3]);
+      console.log("lessLenArr1: ", lessLenArr1);
+
+      // 方法3
+      const lessLen2 = (nums) => {
+        const res = [];
+        for (let i = 0; i < nums.length; i++) {
+          let num = 0;
+          for (let j = 0; j < nums.length; j++) {
+            if (nums[j] < nums[i]) {
+              num++;
+            }
+          }
+          res.push(num);
+        }
+        return res;
+      };
+      const lessLenArr2 = lessLen2([8, 1, 2, 2, 3]);
+      console.log("lessLenArr2: ", lessLenArr2);
+
+      // ------------------------------------------------------------------------------------
+      // ------------------------------------------------------------------------------------
+      // ------------------------------------------------------------------------------------
+      // 题 5：
+      // 判断一组数字是否连续
+      // 当出现连续数字的时候以‘-’输出
+      // 输入：[1, 2, 3, 4, 6, 8, 9, 10]
+      // 输出: ["1-4", 6, "8-10"]
+
+      // 思路：
+      // 1. 找出连续开始位置
+      // 2. 找出连续结束位置
+      // 3. 不连续的位置的值直接push
+
+      // English
+      // -
+      // continuous 连续的 adj
+      // continuity 连续性 n
+      // 【 continuous number. 连续的数字 】
+      // -
+      // range 范围 区间 n / 变化 v
+      // interval 间隔 间隙 n
+
+      const continuity = (arr) => {
+        let start = 0; // 连续开始位置的值
+        let res = [];
+        arr.forEach((item, index) => {
+          const pre = arr[index - 1];
+          const next = arr[index + 1];
+
+          // 1
+          // 连续开始位置，比如 68910 中 8
+          // 初始位置 ( 2 === 2 && 0 !== undefined ) 满足条件，所以 start = 1
+          // 开始 - 后等前不等
+          if (item + 1 === next && item - 1 !== pre) {
+            start = item;
+          }
+
+          // 2
+          // 连续结束为止，比如 3468 中的 4
+          // 结束 - 前等后不等
+          else if (item - 1 === pre && item + 1 != next) {
+            const range = `${start}-${item}`;
+            res.push(range);
+          }
+
+          // 3
+          // 不相连的元素(即不连续的值)，即数组该元素前后的值，和 +1 -1 不相等
+          // 不相连 - 前后都不等
+          else if (item - 1 !== pre && item + 1 != next) {
+            res.push(item);
+          }
+        });
+
+        return res;
+      };
+      const continuityArr = continuity([1, 2, 3, 4, 6, 8, 9, 10]);
+      console.log("continuityArr: ", continuityArr);
+    </script>
+  </body>
+</html>

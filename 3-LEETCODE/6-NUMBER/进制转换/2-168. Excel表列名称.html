@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 168. Excel表列名称
+
+      // 给你一个整数 columnNumber ，返回它在 Excel 表中相对应的列名称。
+
+      // 例如：
+      // A -> 1
+      // B -> 2
+      // C -> 3
+      // ...
+      // Z -> 26
+      // AA -> 27
+      // AB -> 28
+      // ...
+      //
+
+      // 示例 1：
+      // 输入：columnNumber = 1
+      // 输出："A"
+
+      // 示例 2：
+      // 输入：columnNumber = 28
+      // 输出："AB"
+
+      // 示例 3：
+      // 输入：columnNumber = 701
+      // 输出："ZY"
+
+      // 示例 4：
+      // 输入：columnNumber = 2147483647
+      // 输出："FXSHRXW"
+
+      // 提示：
+      // 1 <= columnNumber <= 231 - 1
+
+      /**
+       * @param {number} columnNumber
+       * @return {string}
+       */
+
+      // leetcode
+      // https://leetcode.cn/problems/excel-sheet-column-title/
+
+      // 对比
+      // 10进制转任何其他进制，都是 ( 除 和 模 )
+      // 26->10 -- (乘) ------- 171. Excel 表列序号 -- https://leetcode.cn/problems/excel-sheet-column-number/
+      // 10->26 -- (除和模) --- 168. Excel表列名称 -- https://leetcode.cn/problems/excel-sheet-column-title/
+
+      // 思路
+      // 26进制 -> 10进制
+      // 顺序:
+      // - 是先求 ( 个位数 )，再求 ( 十位数 )
+      // 公式:
+      // - 1. 去模可以得到个位数
+      // - 2. 除26，可以得到需要迭代的数字，不断除，迭代，直到 number
+      var convertToTitle = function (columnNumber) {
+        let res = "";
+        let number = columnNumber;
+        const arr = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
+
+        while (number) {
+          const remainder = number % 26;
+          const char = arr[remainder - 1];
+
+          // 余数是 0，表示特殊情况，即被整除了，则字母一定是 Z
+          if (remainder === 0) {
+            res = "Z" + res;
+            number = number - 26;
+          } else {
+            res = char + res;
+            number = number - remainder; // 每次减去余数后，就能被整除
+          }
+
+          // 这里被整除了，所以不需要 Math.floor()
+          number = number / 26;
+        }
+
+        return res;
+      };
+    </script>
+  </body>
+</html>

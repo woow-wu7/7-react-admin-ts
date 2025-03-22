@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <img
+      src="../../../static/images/成都.jpg"
+      id="image"
+      width="300"
+      height="300"
+    />
+    <button id="button">生成图片</button>
+
+    <div id="imgContainer"></div>
+  </body>
+  <script>
+    window.onload = function () {
+      const image = document.getElementById("image");
+      const button = document.getElementById("button");
+      const imgContainer = document.getElementById("imgContainer");
+
+      button.addEventListener("click", combine, false);
+      function combine() {
+        const canvas = document.createElement("canvas"); // -------- 创建canvas标签
+        canvas.width = 500;
+        canvas.height = 500;
+        canvas.style = "border: 1px solid red";
+        document.documentElement.appendChild(canvas); // ------------ 添加到HTML的DOM中
+
+        const context = canvas.getContext("2d"); // ----------------- 获取渲染上下文和绘画功能
+
+        // context.drawImage(img, x, y, width, height)
+        // img：图片
+        // x：在画布上放置图像的 x 坐标
+        // y：在画布上放置图像的 y 坐标
+        // width：图像的宽度
+        // height：图像的高度
+        context.drawImage(image, 50, 55, 400, 400); // ----------------- drawImage() 生成图片
+        context.fillStyle = "white";
+        context.font = "30px Georgia";
+        context.fillText("生成的图片", 100, 100); // ------------------- 填充文字
+
+        const text = context.measureText("生成"); // ------------------ 测量文字的宽度
+        console.log("text.width", text.width);
+        const text2 = context.measureText("生成的图片");
+        console.log("text2.width", text2.width);
+      }
+    };
+  </script>
+</html>

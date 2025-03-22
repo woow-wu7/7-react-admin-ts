@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // ------- ------- ------- ------- ------- ------- -------
+      // ------- ------- ------- ------- ------- ------- -------
+      // 1
+      // answers
+      // - 6789 0 14
+      // - 如果开启 "use strict"，则会报错，因为严格模式下 this 指向 window 就会报错
+      var count = 10;
+      function foo(num) {
+        // "use strict";
+        var count = 20;
+        console.log("foo: " + num); // 6789
+        this.count++;
+      }
+      foo.count = 0;
+      for (var i = 0; i < 10; i++) {
+        if (i > 5) {
+          foo(i); // 6789
+        }
+      }
+      console.log(foo.count); // 0
+      console.log(count); // 14
+
+      // ------- ------- ------- ------- ------- ------- -------
+      // ------- ------- ------- ------- ------- ------- -------
+      // 2
+      // answers
+      // - "global a"
+      // - 'obj a'
+      // - "global a";
+      function foo() {
+        var a = "foo a";
+        console.log(this.a);
+      }
+      function doFoo(fn) {
+        fn();
+      }
+      var obj = { a: "obj a", foo: foo };
+      var a = "global a";
+      foo(); // "global a";
+      obj.foo(); // 'obj a'
+      doFoo(obj.foo); // "global a";
+
+      // ------- ------- ------- ------- ------- ------- -------
+      // ------- ------- ------- ------- ------- ------- -------
+      // 3
+      // 手写深拷贝
+      const objForDeepClone = {
+        num: 1,
+        str: "string",
+        boo: true,
+        nul: null,
+        undefined: undefined,
+        [Symbol("symbol")]: "symbol", // symbol key
+        bigint: BigInt(9007199254740991), // bigint
+        arr: [1, 2, 3],
+        obj: {
+          name: "woow_wu7",
+          obj2: { age: 10 },
+        },
+        fun: function () {
+          console.log("this is a function.");
+        },
+        date: new Date(), // 特殊对象，结构化克隆
+        regexp: new RegExp(),
+        error: new Error(), // SyntaxError ReferenceError RangeError TypeError URIError EvalError
+      };
+      obj.circle = obj; // 循环引用
+
+      const deepClone = (obj, map = new Map()) => {
+        if (typeof obj !== "object" || obj === null) return obj;
+
+        let res = Array.isArray(obj) ? [] : {};
+
+        if (map.has(obj)) return map.get(obj);
+        map.set(obj, res);
+
+        switch (obj.constructor) {
+          case RegExp:
+          case Error:
+          case Date: {
+            res = new obj.constructor(obj);
+            break;
+          }
+          default: {
+            Reflect.ownKeys(obj).forEach((key) => {
+              if (typeof obj[key] === "object") {
+                res[key] = deepClone(obj[key], map);
+              } else {
+                res[key] = obj[key];
+              }
+            });
+          }
+        }
+
+        return res;
+      };
+
+      // 调用
+      const instance = deepClone(objForDeepClone);
+      console.log("instance1111: ", instance);
+
+      // 修改原数据，看是否深拷贝成功
+      objForDeepClone.num = 1111;
+      objForDeepClone.str = "strrrrrr";
+      objForDeepClone.boo = false;
+      objForDeepClone.arr = [2, 2, 2, 2];
+      objForDeepClone.obj = {};
+      objForDeepClone.fun = function () {
+        console.log("this is a function2222222.");
+      };
+      objForDeepClone.date = new Date(22222);
+      objForDeepClone.regexp = new RegExp(22222);
+      objForDeepClone.error = new Error(22222);
+
+      console.log("instance2222: ", instance);
+    </script>
+  </body>
+</html>

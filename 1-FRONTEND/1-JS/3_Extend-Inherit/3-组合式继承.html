@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Composition inheritance. 组合式继承</title>
+  </head>
+  <body>
+    <script>
+      // 组合式继承
+      // - 组合式继承 = 原型链继承 + 借用构造函数式继承
+      // - Composition inheritance.
+
+      // 优点
+      // - 结合了 原型链继承 和 借用构造函数式继承 的优点
+      // - 既具有借用构造函数继承的优点（向父类传参，多继承，不存在属性共享）
+      // - 又具有原型链继承的优点（继承父类实例上的属性和父类实例原型链上的属性和方法，并且是共享）
+
+      // 缺点
+      // - 重复的属性: ( 子类实例中的属性 ) 和 ( 子类.prototype ) 存在相同的属性
+      //  - 比如: 本例中的 name1属性，在子类实例上存在，同时通过原型链能访问到父类实例中的属性 name1
+      //  - 父类被调用了两次，一次是借用构造函数是的call调用，一次是原型链继承时的new调用，因为父类两次调用，所以子类和父类实例原型链上有相同的属性和方法，造成浪费
+
+      // 注意
+      // - 构造函数不能是箭头函数，因为箭头函数没有自己的this，所以不能作为构造函数，即不能new调用
+
+      // 链接
+      // - https://juejin.cn/post/6844904050895372295
+
+      function Super1(name1) {
+        this.name1 = name1;
+      }
+      function Super2(name2) {
+        this.name2 = name2;
+      }
+      function Super3(name3) {
+        this.name3 = name3;
+      }
+      Super1.prototype.age1 = 1;
+      Super2.prototype.age2 = 2;
+      Super3.prototype.age3 = 3;
+
+      function Sub(name1, name2, name100) {
+        Super1.call(this, name1); // 1. 借用构造函数式继: 多继承，传参，属性都在实例上互不影响；但需要注意的是，借用构造函数继承不能继承 ( 父类prototype属性和方法 )
+        Super2.call(this, name2);
+        this.name100 = name100;
+      }
+
+      // 注意：这里没有传参，在原型链继承这条线上，父类实例上的name1属性是undefined
+      // 注意：原型链继承这条线，还是不能多继承，（如不能同时继承Super1和Super2所在的prototype）因为是直接赋值
+      // Sub.prototype = new Super1(11); // 2. 原型链继承: 公有属都在原型链上
+      Sub.prototype = new Super3(3); // 2. 原型链继承: 公有属都在原型链上
+      Sub.prototype.constructor = Sub; // 2. 原型链继承在修改prototype后，需要修改constructor指向，不然指向了父类而不是子类
+      Sub.prototype.age100 = 100;
+
+      const sub = new Sub(1, 2, 100);
+      console.log("sub: ", sub);
+    </script>
+  </body>
+</html>

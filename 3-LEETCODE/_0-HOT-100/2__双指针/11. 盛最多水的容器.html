@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>盛最多水的容器 Container With Most Water.</title>
+  </head>
+  <body>
+    <script>
+      // 11. 盛最多水的容器 Container With Most Water.
+
+      // 题目
+      // 给定一个长度为 n 的整数数组 height 。有 n 条垂线，第 i 条线的两个端点是 (i, 0) 和 (i, height[i]) 。
+      // 找出其中的两条线，使得它们与 x 轴共同构成的容器可以容纳最多的水。
+      // 返回容器可以储存的最大水量。
+      // 说明：你不能倾斜容器。
+      // You are given an integer array height of length n. There are n 【 vertical 】 lines drawn such that the two endpoints of the ith line are (i, 0) and (i, height[i]).
+      // Find two lines that together with the x-axis form a container, 【 such that 】 the container contains the most water.
+      // Return the 【 maximum amount of 】 water a container can store.
+      // Notice that you may not slant the container.
+
+      // 思路
+      // 双指针
+      // 1. 选取 最左 和 最边 两个指针为初始值，计算面积 ( 底部 * 较短指针的 高度 )
+      // 2. 移动指针:
+      // - 问题: 移动哪个指针？
+      // - 回答: 移动 高度较小的指针
+      // - 因为: 面积是 ( 底 * 高 )，( 底无论如何都是逐渐减小的 )，并且 ( 面积的由 较短高度 来决定 ) -> 所以 如果移动 高度较高的指针，面积一定是减少的 -> 因为高度不变，底减小了
+
+      // English
+      // -
+      // area 地区 区域 面积 n
+      // base 底部 根基 基础 n ----------- 【 base 底部 根基 基础 n 】
+      // MT. 【 The 【 area 】 of a 【 triangle 】 is equal to one 【 half 】 of the 【 product 】 of 【 base 】 【 times 】 height. 三角形的面积等于底乘以高的二分之一 】
+      // -
+      // integer 整数 n
+      // -
+      // such that. 使得 以至于 // ------ 【 such that. 使得 以至于 】
+      // so that. 使得 以至于
+      // The problem is very difficult 【 such that 】 no one cay solve it without any help. 这个问题非常难，以至于没有人在没有任何帮助的情况下能够解决它
+      // -
+      // endpoint 端点 终点
+      // -
+      // decrease 减少 降低 v = reduce
+      // increase 增加 加大 v
+
+      /**
+       * @param {number[]} height
+       * @return {number}
+       */
+      var maxArea = function (height) {
+        let left = 0;
+        let right = height.length - 1;
+
+        // maximum area
+        let maxArea = 0;
+
+        while (right > left) {
+          const heightLeft = height[left];
+          const heightRight = height[right];
+
+          const currentArea = (right - left) * Math.min(heightLeft, heightRight); // calculate area.
+          if (currentArea > maxArea) maxArea = currentArea; // update maximum area.
+
+          // The rule for moving the pointer.
+          // - move the 【 shorter / lower 】 pointer
+          // - Because: If we move the 【 longer / higher 】 pointer, the area will 【 decrease 】, because the area is equal to the 【 base 】 times height.
+          if (heightLeft > heightRight) right--;
+          else left++;
+        }
+
+        return maxArea;
+      };
+    </script>
+  </body>
+</html>

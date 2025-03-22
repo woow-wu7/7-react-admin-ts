@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="fetch">发起fetch</button>
+    <button id="fetch-cancel">取消fetch</button>
+    <script>
+      // 1
+      // fetch 终止请求
+      let abortController = new AbortController();
+
+      const fetchRequest = async () => {
+        const res = await fetch("https://randomuser.me/api/", {
+          signal: abortController.signal,
+        }).then((response) => response.json());
+        console.log("res", res);
+        return res;
+      };
+
+      const fetchRequestCancel = () => {
+        abortController.abort();
+        abortController = new AbortController(); // 取消请求后，更新，下次请求就不会再报错
+      };
+
+      // fetch request
+      const fetchButton = document.getElementById("fetch");
+      fetchButton.addEventListener("click", fetchRequest);
+
+      // fetch cancel
+      const fetchSignalButton = document.getElementById("fetch-cancel");
+      fetchSignalButton.addEventListener("click", fetchRequestCancel, false);
+    </script>
+  </body>
+</html>

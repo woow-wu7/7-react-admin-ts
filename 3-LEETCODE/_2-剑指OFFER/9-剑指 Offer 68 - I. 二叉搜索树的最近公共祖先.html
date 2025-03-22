@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 剑指 Offer 68 - I. 二叉搜索树的最近公共祖先
+
+      // 题目
+      // 给定一个二叉搜索树, 找到该树中两个指定节点的最近公共祖先。
+      // 百度百科中最近公共祖先的定义为：“对于有根树 T 的两个结点 p、q，最近公共祖先表示为一个结点 x，满足 x 是 p、q 的祖先且 x 的深度尽可能大（一个节点也可以是它自己的祖先）。”
+      // 例如，给定如下二叉搜索树:  root = [6,2,8,0,4,7,9,null,null,3,5]
+
+      // 示例 1:
+      // 输入: root = [6,2,8,0,4,7,9,null,null,3,5], p = 2, q = 8
+      // 输出: 6
+      // 解释: 节点 2 和节点 8 的最近公共祖先是 6。
+
+      // 示例 2:
+      // 输入: root = [6,2,8,0,4,7,9,null,null,3,5], p = 2, q = 4
+      // 输出: 2
+      // 解释: 节点 2 和节点 4 的最近公共祖先是 2, 因为根据定义最近公共祖先节点可以为节点本身。
+
+      // leetcode
+      // https://leetcode.cn/problems/er-cha-sou-suo-shu-de-zui-jin-gong-gong-zu-xian-lcof/
+
+      /**
+       * Definition for a binary tree node.
+       * function TreeNode(val) {
+       *     this.val = val;
+       *     this.left = this.right = null;
+       * }
+       */
+      /**
+       * @param {TreeNode} root
+       * @param {TreeNode} p
+       * @param {TreeNode} q
+       * @return {TreeNode}
+       */
+
+      // 1
+      // 二叉搜索树
+      // - ( 左子树的所有节点 ) 都小于 ( 根节点 )
+      // - ( 右子树的所有节点 ) 都大于 ( 根节点 )
+
+      // 2
+      // 二叉搜索树的最近公共祖先
+      // - 1. 如果 p q 都小于 root，则只需要看 根节点的左子树
+      // - 2. 如果 p q 都大于 root，则只需要看 根节点的右子树
+      // - 3. 如果 p q 一大一小 于 root，则最近公共祖先就是 root ----- 由二叉搜索树的性质决定
+      var lowestCommonAncestor = function (root, p, q) {
+        if (!root) return null; // 边界
+
+        // 左子树
+        if (p.val < root.val && q.val < root.val) {
+          return lowestCommonAncestor(root.left, p, q);
+        }
+
+        // 右子树
+        if (p.val > root.val && q.val > root.val) {
+          return lowestCommonAncestor(root.right, p, q);
+        }
+
+        // p q 任意一个大于root，另一个小于root，则直接返回root
+        return root;
+      };
+    </script>
+  </body>
+</html>

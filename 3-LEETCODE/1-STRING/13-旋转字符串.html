@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 796. 旋转字符串
+
+      // 题目
+      // 给定两个字符串, s 和 goal。如果在若干次旋转操作之后，s 能变成 goal ，那么返回 true 。
+      // s 的 旋转操作 就是将 s 最左边的字符移动到最右边。
+      // 例如, 若 s = 'abcde'，在旋转一次之后结果就是'bcdea'
+
+      // 输入: s = "abcde", goal = "cdeab"
+      // 输出: true
+
+      // 输入: s = "abcde", goal = "abced"
+      // 输出: false
+
+      // leetcode
+      // https://leetcode.cn/problems/rotate-string/
+
+      // 对比
+      // 796. 旋转字符串 https://leetcode.cn/problems/rotate-string/
+      // 剑指 Offer 58 - II. 左旋转字符串 https://leetcode.cn/problems/zuo-xuan-zhuan-zi-fu-chuan-lcof/
+
+      // goal: 是目标的意思
+
+      /**
+       * @param {string} s
+       * @param {string} goal
+       * @return {boolean}
+       */
+
+      // 思路
+      // 1. 我们将 ( 要旋转的字符串拼接自己 ) 即 s+s
+      //    - 为什么？
+      //    - 因为: 如果s的长度是5，我们最多可以旋转 5 次，超过5次其实就是循环了
+      // 2. 因为 ( s+s ) 的子串中包含了 ( 所有旋转的可能性 )
+      // 3. 所以我们只需要判断 s+s.include(goal) 即可
+
+      var rotateString = function (s, goal) {
+        if (s.length !== goal.length) return false; // 两个串长度不相等，直接返回 false
+
+        const all = s + s;
+        return all.includes(goal);
+      };
+    </script>
+  </body>
+</html>

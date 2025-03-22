@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      path:nth-child(1) {
+        stroke-dasharray: 650;
+        stroke-dashoffset: 650;
+
+        animation: line-animation 2s ease forwards;
+      }
+
+      .icon path:nth-child(1) {
+        stroke-dasharray: 3000;
+        stroke-dashoffset: 3000;
+
+        animation: line-animation 2s ease 300ms forwards;
+      }
+
+      .icon {
+        animation: fill-animation 500ms ease 2000ms forwards;
+      }
+
+      @keyframes line-animation {
+        to {
+          stroke-dashoffset: 0;
+        }
+      }
+
+      @keyframes fill-animation {
+        from {
+          fill: transparent;
+        }
+        to {
+          fill: black;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <svg
+      t="1664262688836"
+      viewBox="0 0 1024 1024"
+      version="1.1"
+      xmlns="http://www.w3.org/2000/svg"
+      p-id="1341"
+      width="200"
+      height="200"
+      fill="none"
+      stroke="black"
+      stroke-width="10"
+      class="icon"
+    >
+      <path
+        d="M893.866667 277.333333H738.133333c-8.533333 0-17.066667-4.266667-21.333333-10.666666l-91.733333-128c-4.266667-6.4-12.8-10.666667-21.333334-10.666667h-185.6c-8.533333 0-17.066667 4.266667-21.333333 10.666667l-91.733333 128c-4.266667 6.4-12.8 10.666667-21.333334 10.666666H130.133333c-25.6 0-44.8 19.2-44.8 44.8V832c0 36.266667 27.733333 64 64 64h725.333334c36.266667 0 64-27.733333 64-64V324.266667c0-27.733333-19.2-46.933333-44.8-46.933334zM512 746.666667c-106.666667 0-192-85.333333-192-192s85.333333-192 192-192 192 85.333333 192 192-85.333333 192-192 192z"
+        p-id="1342"
+      ></path>
+
+      <path
+        d="M512 554.666667m-106.666667 0a106.666667 106.666667 0 1 0 213.333334 0 106.666667 106.666667 0 1 0-213.333334 0Z"
+        p-id="1343"
+      ></path>
+    </svg>
+    <script>
+      // svg 动画
+
+      // 属性相关
+      // fill=“none” 初始状态不可见
+      // stroke=“black” 黑色描边
+      // stroke-width 秒变宽度
+
+      // 2
+      // stroke-dasharray = '10'
+      // 表示：虚线长10，间距10，然后重复 虚线长10，间距10
+
+      // 3
+      // stroke-dashoffset
+      // 这个属性是相对于起始点的偏移，正数偏移x值的时候，相当于往左移动了x个长度单位，负数偏移x的时候，相当于往右移动了x个长度单位。
+    </script>
+  </body>
+</html>

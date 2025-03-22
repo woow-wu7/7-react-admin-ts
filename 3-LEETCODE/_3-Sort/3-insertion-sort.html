@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <script>
+      // English
+      // -- raw 生的 未加工的
+      // -- counter 计数器 柜台
+      // -
+      // -- bubble 泡 气泡 冒泡
+      // -- algorithm 算法
+      // --【 bubble sort algorithm. 冒泡排序算法 】
+      // -
+      // -- series 系列 串联 n
+      // --【 a series of test. 一系列测试 】
+      // --【 series circuit. 串联电路 】
+      // --【 parallel circuit. 并联电路 】
+      // --【 electric circuit. 电路 】
+      // -
+      // -- original 最初的 原始
+      // -- origin 起源 源头 n
+      // -
+      // -- resource 资源 资料
+      // -- source 来源 源头
+      // --【 open source code. 开源代码 】
+      // --【 open source module. 开源模块 】
+      // --【 source code analysis. 源码分析 】
+      // -
+      // -- pivot 支点
+      // TIPS: Pay attention to the pronunciation of the 'pivot'
+      // -
+      // -- coordinate 坐标
+      // -- adjacent 相邻的
+      // --【 Our house is 【 adjacent 】 to the park. 我们的房子紧挨着公园 】
+
+      // 1.【 This is a high performance algorithm. 这是一个性能很高的算法 】
+      // 2. Please don't 【 directly 】 operate the 【 original array 】.
+      // 3. Find the position of the minimum value in the array.
+      // 4. The 【 condition 】 for the 【 recursion 】 to end.
+
+      // insert sort
+      // 插入排序
+      // O(n²)
+
+      // bubble_sort = selection_sort = insert_sort =  O(n²)
+      // quick_sort = shell_sort希尔排序 = O(nlogn)
+
+      // 记忆方式：打牌
+      // 过程
+      // 1. 将数组看成两个部分，一个有序数组(有序数组初始长度为1。升序，则从后往前遍历；降序则相反)，和一个无序数组
+      // 2. 有序数组 起始长度为 1
+      // 3. 每次依次从无序数组取出第一个值，和有序数组的最后一个比较，如果该值小于有序数组最后一个值，则有序数组最后一个值向后移一位
+      //    - ( 所以我们需要缓存 - 从无序数组拿出来比较的值，因为在移动有序数组的最后一位，可能会占据从无序数组取出来值的位置 )
+      // 4. 有序数组是从后往前依次比较的 ( 尾插 )，该循环需要满足的条件是 ( j>=0 && 该项值 > 无序数组拿出来比较的值 )
+      // 5. 当有序数组循环比较完后，j+1 的位置就是 ( 无序数组中拿出来的值需要插入到有序数组中的位置 )
+      // 6. 重复以上步骤
+
+      // 扩展
+      // 希尔排序: 希尔排序 就是 插入排序的升级版，按一定的间隔对数组进行分组，然后在每一个分组中做插入排序，然后逐次缩小间隔，直到间隔为1时，结束整个函数
+
+      // 链接
+      // https://juejin.cn/post/6907145602400780296
+
+      const arr = [1, 5, 4, 2, 3, 9, 8, 6, 7];
+
+      const insertionSort = (raw) => {
+        const arr = [...raw];
+
+        for (let i = 1; i < arr.length; i++) {
+          // 1
+          // i 表示后面的无序数组
+          // 因为我们设有序数组的初始速度是1，所以无序数组从1开始
+
+          // 2
+          // 注意: 这里 arr[i] 是必须缓存的
+          // 因为: 我们如果 ( arr[j] > cache ) 我们需要后移 arr[j]，后移后 arr[j] 就可能把 arr[i] 的位置占了，arr[i]值改变了，就拿不到之前的值了
+          const cache = arr[i];
+
+          let j = i - 1; // 有序数组的最后一个元素的位置就是 i - 1
+
+          while (j >= 0 && arr[j] > cache) {
+            // 从后往前遍历有序数组
+            // 如果 arr[j] > cache 则
+            arr[j + 1] = arr[j];
+            j--;
+          }
+
+          arr[j + 1] = cache; // 无序数组中取出比较的值，需要插入的位置
+        }
+
+        return arr;
+      };
+
+      const res = insertionSort(arr);
+      console.log("res: ", res);
+    </script>
+  </body>
+</html>

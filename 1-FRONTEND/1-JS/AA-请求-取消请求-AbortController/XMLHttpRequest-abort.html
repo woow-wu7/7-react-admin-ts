@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="xhr">发起xhr</button>
+    <button id="xhr-cancel">取消xhr</button>
+    <script>
+      // 1
+      // XMLHttpRequest 终止请求
+      const xhr = new XMLHttpRequest();
+      const xhrRequest = () => {
+        xhr.open(
+          "GET",
+          "https://api.66mz8.com/api/translation.php?info=I come from China TestGetStaticProps",
+          true
+        );
+        // xhr.setRequestHeader("Content-Type", "application/json");
+        xhr.responseType = "json";
+        xhr.timeout = 4000;
+        return new Promise((resolve, reject) => {
+          xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4) {
+              setTimeout(() => {
+                console.log("请求成功", xhr.response);
+                resolve(xhr.response);
+              }, 3000);
+            }
+          };
+          // xhr.onload = function () {
+          //   console.log("请求成功");
+          // };
+          xhr.send();
+        });
+      };
+
+      // xhr request
+      const xhrButton = document.getElementById("xhr");
+      xhrButton.addEventListener("click", xhrRequest, false);
+
+      // xhr abort
+      const xhrAbortButton = document.getElementById("xhr-cancel");
+      xhrAbortButton.addEventListener("click", () => xhr.abort(), false);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>History Router. 注意:需要启动本地服务器</title>
+  </head>
+  <body>
+    <!-- data-href 为自定义属性 -->
+    <!-- void(0) 返回 undefined -->
+    <a href="javascript:void(0)" data-href="/home">home</a>
+    <a href="javascript:void(0)" data-href="/other">other</a>
+    <button id="button">手动执行 window.history.go(-1) 触发 popstate 事件来导航</button>
+    <div id="content">content初始内容</div>
+
+    <script>
+      const routes = [
+        {
+          path: "/home",
+          content: "这是home页面",
+        },
+        {
+          path: "/other",
+          content: "这是other页面",
+        },
+      ];
+
+      // history router
+      // 记得要用本地服务器启动才可以
+
+      // - 问题: 为什么 history 路由需要 服务器 的支持？
+      // - 回答:
+      //   - 1. (file://)文件协议: 在本地通过浏览器打开 html 文件是 ( file://协议，而 file//协议是 - 不允许直接修改 window.history.pushState() )
+      //   - 2. window.history.pushState() 和历史记录相关的操作需要 HTTP 协议的支持，在文件协议 (file://) 下，浏览器会限制一些操作，包括修改历史记录
+
+      class HistoryRouter {
+        constructor(routes) {
+          this.createRouteMap(routes);
+          this.bindEvent();
+          this.init();
+        }
+
+        routeMap = {};
+
+        createRouteMap = (routes) => {
+          routes.forEach(({ path, content }) => {
+            this.routeMap[path] = () => (document.getElementById("content").innerHTML = content);
+          });
+        };
+
+        bindEvent = () => {
+          const aList = document.getElementsByTagName("a"); // document.getElementsByTagName() 返回的是 HTMLCollection 动态集合，不是数组，需要用 Array.from() 转成 数组
+          Array.from(aList).forEach((a) => {
+            a.addEventListener("click", () => {
+              const path = a.getAttribute("data-href");
+              window.history.pushState({}, null, path); // pushState()
+              this.updateView();
+            });
+          });
+        };
+
+        updateView = () => {
+          const path = window.location.pathname;
+          this.routeMap[path]?.();
+        };
+
+        // popstate
+        // The condition to trigger popstate event:
+        // - 1. the forward button and backward button of the browser.
+        // - 2. history.go() history.back() history.forward() ...
+        init = () => {
+          window.addEventListener("load", this.updateView, { capture: false });
+          window.addEventListener("popstate", this.updateView, {
+            capture: false,
+          });
+        };
+      }
+
+      // 用 window.history.go() 触发url变化时，需要用到 popstate 事件
+      const button = document.getElementById("button");
+      button.addEventListener("click", () => window.history.go(-1));
+
+      new HistoryRouter(routes);
+    </script>
+  </body>
+</html>

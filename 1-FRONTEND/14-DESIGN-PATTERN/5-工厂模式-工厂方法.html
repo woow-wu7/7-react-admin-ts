@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 工厂方法
+      // - 在简单工厂模式中，是由工厂来创建产品的，即是老板也是服务员
+      // - 在工厂方法模式中，不再由工厂来创建产品，而是先创建具体的工厂，然后具体的工厂来创建产品
+      // - 即由原来的老板做，变成了发命令让别人来做
+
+      // 抽象类不需要自己实现方法
+      class Animal {}  // ------------------------ 1. 产品
+      class Cat extends Animal { } // ------------ 具体产品 cat
+      class Dog extends Animal { } // ------------ 具体产品 dog
+
+      class AnimalFactory { // -------------------- 3. 具体类型的工厂，抽象类
+        createAnimal()
+      }
+      class CatFactory extends AnimalFactory { // --- 创建cat的工厂，实现类
+        // 实现类 实现 抽象类的方法
+        createAnimal() {
+          return new Cat('cat')
+        }
+      }
+      class DogFactory extends AnimalFactory { // --- 创建dog的工厂，实现类
+        // 实现类 实现 抽象类的方法
+        createAnimal() {
+          return new Dog('dog')
+        }
+      }
+
+      class Factory { // ------------------------- 2. 工厂类
+        // --------------------------------------- 根据类型，让具体的工厂去生产产品
+        // 根据传入的类型，调用不同的构造函数，创建不同的实例
+        // 门店 -> 创建工厂 -> 工厂再生产对应 产品
+        static create(name) {
+          switch (name) {
+            case 'cat':
+              return new CatFactory().createAnimal()
+            case 'dog':
+              return new DogFactory().createAnimal()
+            default:
+              return new Error('出错了')
+          }
+        }
+      }
+
+      const dog = Factory.create('dog')
+      const cat = Factory.create('cat')
+      console.log(dog)
+      console.log(cat)
+    </script>
+  </body>
+</html>

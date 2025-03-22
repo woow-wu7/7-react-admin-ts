@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* 文章: https://juejin.cn/post/6977936816510861326 */
+
+      /* will-change 为 web 开发者提供了一种告知浏览器该元素会有哪些变化的方法，这样浏览器可以在元素属性真正发生变化之前提前做好对应的优化准备工作 */
+
+      /* 扩展知识
+      - 问题：还有哪些属性会开启 GPU 加速？
+      - 回答
+        - transform
+          - transform: translate rotate scale skew translate3d
+        - filter
+        - opacity
+        - will-change
+          - 本项目/2-FRONTEND/CSS/29-will-change.html
+          - will-change 为 web 开发者提供了一种告知浏览器该元素会有哪些变化的方法，浏览器可以在元素属性真正发生变化之前提前做好对应的优化准工作
+
+      /* English
+      - opacity 不透明度 n
+      - transparency 透明度 n 
+      - -
+      - opaque 不透明的 adj
+      - transparent 透明的 adj
+
+      */
+
+      .root {
+        width: 200px;
+        height: 200px;
+        background: red;
+      }
+
+      .root:hover {
+        background: blueviolet;
+        will-change: transform;
+        transform: rotate(50deg);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="root"></div>
+  </body>
+</html>

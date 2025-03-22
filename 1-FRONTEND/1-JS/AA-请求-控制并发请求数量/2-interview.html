@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      class Scheduler {
+        queue = [];
+
+        add = (fn) => {
+          this.queue.push(fn);
+        };
+
+        run = (max) => {
+          let _max = Math.min(max, this.queue.length);
+
+          for (let i = 0; i < _max; i++) {
+            const current = this.queue.shift();
+            max--;
+
+            current()
+              .then((value) => console.log("order", value))
+              .finally(() => {
+                max++;
+                this.run(2);
+              });
+          }
+        };
+      }
+
+      setInterval(() => {
+        console.log("1", 1);
+      }, 1000);
+
+      const task = (time, order) =>
+        new Promise((resolve) => {
+          setTimeout(() => resolve(order), time);
+        });
+
+      const scheduler = new Scheduler();
+
+      const addTask = (time, order) => {
+        scheduler.add(() => task(time, order));
+      };
+
+      // 限制同一时刻只能执行2个task
+      addTask(2000, "1");
+      addTask(6000, "2");
+      addTask(3000, "3");
+      addTask(8000, "4");
+      //实现一个 scheduler.add方法，模拟一个异步串行队列，最大并发数是2
+      //2秒后打印1
+      //5秒打印3 -------------- 注意: 这里是 第5秒，而不是再过5秒
+      //6秒打印2
+      //13秒打印4
+
+      scheduler.run(2); // 参数是每次执行的 并发数量2
+    </script>
+  </body>
+</html>

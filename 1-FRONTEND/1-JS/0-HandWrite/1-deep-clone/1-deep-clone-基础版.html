@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 深拷贝 - 基础版
+      // 基础版
+      //  - 只能拷贝对象和数组
+      //  - 不能解决 ( 循环引用 )，( symbol类型的key )，( 一些特殊的对象 比如 Date RegExp 等 )
+      const obj = {
+        name: "woow_wu7",
+        score: {
+          en: 10,
+          zh: 20,
+        },
+      };
+
+      const deepClone = (obj) => {
+        if (typeof obj !== "object" && typeof obj !== "function") {
+          return obj;
+        }
+
+        const res = Array.isArray(obj) ? [] : {};
+
+        // for...in 遍历对象 自身可枚举属性 + 继承可枚举属性
+        // - 所以如果只需要遍历对象自身可枚举属性: 使用 ( for...in + hasOwnProperty )
+        for (let key in obj) {
+          if (obj.hasOwnProperty(key)) {
+            if (typeof obj[key] === "object") { // object array
+              res[key] = deepClone(obj[key]);
+            } else {
+              res[key] = obj[key];
+            }
+          }
+        }
+
+        return res;
+      };
+
+      const result = deepClone(obj);
+      console.log("result", result);
+
+      console.log(
+        "obj.score === result.score :>> ",
+        obj.score === result.score
+      ); // false
+
+      // console.log("arr === result", arr === result); // false
+      // arr[0] = 111;
+      // console.log("result", result);
+      // obj.score.en = 400;
+      // console.log(result);
+
+      // 1
+      // 循环引用
+      // - 循环引用需要通过 map 去缓存每一次参数
+    </script>
+  </body>
+</html>

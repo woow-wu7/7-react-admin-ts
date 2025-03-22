@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 104. 二叉树的最大深度
+
+      // 思路：
+      // - 分别求出 左子树的深度 和 右子树的深度，然后返回较大的值 + 1，然后递归下去
+      // - 深度: 就是递归的次数，即层数
+      // - +1: 表示遍历的次数，即深度，每遍历一层深度+1
+
+      /**
+       * Definition for a binary tree node.
+       * function TreeNode(val) {
+       *     this.val = val;
+       *     this.left = this.right = null;
+       * }
+       */
+      /**
+       * @param {TreeNode} root
+       * @return {number}
+       **/
+      // ---------
+      //   3
+      // /   \
+      // 9  20
+      //   /  \
+      // 15   7
+      // 返回它的最大深度 3
+      // 思路：深度是 左子树深度 和 右子树深度 的较大值，然后递归
+      // ---------
+      // 【1】
+      // recursive(root.left)
+      // --> 9
+      // --> return Math.max(recursive(root.left), recursive(root.right)) + 1
+      // --> return Math.max(0, 0) + 1
+      // --> 1
+      // 【2】
+      // recursive(root.right)
+      // 20
+      // --> left -> 15 -> 1
+      // --> right -> 7 -> 1
+      // -->  Math.max(recursive(root.left), recursive(root.right)) + 1 --> Math.max(1,1) + 1 --> 2
+      // 【3】
+      // Math.max(recursive(root.left), recursive(root.right)) + 1 --> Math.max(1, 2) + 1 --> 3
+
+      // 高度: 下到上
+      // 深度: 上到下
+
+      // leetcode
+      // 二叉树的深度 和 二叉树的最大深度 是一样的
+      // 104. 二叉树的最大深度 https://leetcode.cn/problems/maximum-depth-of-binary-tree/
+      // 剑指 Offer 55 - I. 二叉树的深度 https://leetcode.cn/problems/er-cha-shu-de-shen-du-lcof/
+
+      // 对比
+      // 104. 二叉树的最大深度 https://leetcode.cn/problems/maximum-depth-of-binary-tree/
+      // 111. 二叉树的最小深度 https://leetcode.cn/problems/minimum-depth-of-binary-tree/
+
+      // 对比
+      // - 1. 二叉树的直径 ------ 需要用到树的深度 ---- https://leetcode.cn/problems/diameter-of-binary-tree/
+      // - 2. 平衡二叉树 ------- 需要用到树的深度 ----- https://leetcode.cn/problems/balanced-binary-tree/
+      // - 3. 二叉树的深度 -------------------------- https://leetcode.cn/problems/maximum-depth-of-binary-tree/
+      // - 4. N叉树的深度 --------------------------- https://leetcode.cn/problems/maximum-depth-of-n-ary-tree/
+
+      // DFS - 后序遍历 postorder
+      var maxDepth = function (root) {
+        if (!root) return 0;
+
+        const left = maxDepth(root.left); // 左
+        const right = maxDepth(root.right); // 右
+
+        return Math.max(left, right) + 1; // 根
+        // 整个是左右根-后续遍历
+
+        // 注意：这里的返回值类型很重要
+        //  - 这里是返回的 ( 每一层 左节点数 和 右节点 的较大值 ) + 1，递归和 ------------------------ 深度
+        //  - 如果返回 return left + right + 1; 则是返回的 -------------- 左节点 + 右节点 + 1 ---- 总的节点数
+
+        // 注意：这里的返回值类型很重要
+        //  - 请对比 ( 二叉树的最大深度 ) ( 二叉树的最小深度 ) ( N叉树的最大深度 ) ( 二叉树的直径 ) ( 平衡二叉树 )
+      };
+
+      // ------------------------------------------------------------------------------------------
+      // ------------------------------------------------------------------------------------------
+      // ------------------------------------------------------------------------------------------
+      // 方法2
+      // - 是上面的简写形式，但是看不出来是 ( 后序遍历 ) 了
+      var maxDepth2 = function (root) {
+        function recursive(root) {
+          if (!root) return 0; // 递归结束的条件，返回值
+
+          return Math.max(recursive(root.left), recursive(root.right)) + 1;
+          // 递归的返回值
+          // 取较大值，即为最大深度
+          // + 1 是因为没递归一层就表示深度+1
+        }
+
+        return recursive(root);
+      };
+    </script>
+  </body>
+</html>

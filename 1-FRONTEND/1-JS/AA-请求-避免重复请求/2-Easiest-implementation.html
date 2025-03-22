@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Avoid duplicate/repeated request.</title>
+  </head>
+  <body>
+    <button>click to trigger</button>
+    <script>
+      // 1
+      // 避免重复请求
+      // - Avoid duplicate request.
+      // - 最简单实现
+      // - 类比 throttle 函数
+
+      // 2
+      // duplicate 副本n 复制的adj 重复的adj 复制v
+      // trigger 触发 v
+      // emit 发出 v
+      // shot 发射 v
+
+      const preventDuplicateRequest = (fn) => {
+        isRun = false;
+
+        function handle() {
+          if (isRun) return;
+          isRun = true;
+
+          mockFetch(fn)
+            .then((res) => console.log("res", res))
+            .catch((err) => console.log("err", err))
+            .finally(() => {
+              isRun = false;
+            });
+        }
+
+        return handle;
+      };
+
+      function mockFetch(fn) {
+        return new Promise((resolve, reject) => {
+          setTimeout(() => {
+            const res = fn();
+            return resolve(res);
+          }, 1000);
+        });
+      }
+
+      const button = document.querySelector("button");
+      button.addEventListener(
+        "click",
+        preventDuplicateRequest(() => 1),
+        false
+      );
+    </script>
+  </body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>1.绑定事件的三种方法 2.currentTarget/target 3.自定义事件</title>
+  </head>
+  <body>
+    <div id="root">
+      <button id="button">事件按钮</button>
+      <button onClick="console.log('AA')">
+        <p>1. ( html的方式 ) 绑定事件监听函数 ( 值是需要执行的代码 ), 而不是一个函数，( 只会在冒泡阶段触发 )</p>
+        <p>2. 注意: onClick="需要执行的代码"</p>
+        <p>2. 等同于 el.setAttribute('onclick', "console.log('AA')")</p>
+        <p>-------</p>
+        <p>`
+          1
+          HTML的方式
+          - on+属性="需要执行的代码，而不是一个函数"
+          - 只会在 ( 冒泡 ) 阶段触发
+          - 等同于 el.setAttribute('onclick', "doSomething()")
+          - 注意 onClick 和 onclick 都可以，大小写问题
+          <!-- 正确 <body onload="doSomething()"> -->
+          <!-- 错误 <body onload="doSomething"> -->
+
+          2
+          元素节点的事件属性
+          div.onclick = function (event) {
+            console.log('触发事件');
+          };
+
+          3
+          EventTarget.addEventListener()
+        `</p>
+      </button>
+      <button id="custom">自定义事件触发按钮</button>
+    </div>
+
+    <script>
+      const button = window.document.getElementById("button");
+
+      // 1
+      // 对 同一个元素 的 同一个事件 绑定 ( 不同的监听函数 )
+      button.addEventListener("click", (e) => console.log(1, "内置事件的e.detail=>", e.detail), {
+        capture: false,
+      });
+      button.addEventListener("click", () => console.log(2), {
+        capture: false,
+      });
+
+      // 2
+      // 同一个节点 同一个事件 绑定 （ 相同的监听函数 ），则 ( 只会执行一次 )
+      const handleClick = () =>
+        console.log("只会执行一次 ==> 同一个节点 同一个事件 绑定 相同的监听函数，则 ( 只会执行一次 )");
+      button.addEventListener("click", handleClick, false);
+      button.addEventListener("click", handleClick, false);
+      // button.removeEventListener("click", handleClick, false); // 移除事件监听
+
+      // 3
+      // dispatchEvent()
+      // DOMtarget.dispatchEvent(Event事件对象实例)
+      // - 用 js 的方式触发 click 事件，相当于点击了 button 按钮
+      const eventInstance = new Event("click");
+      const res = button.dispatchEvent(eventInstance); // 返回一个boolean值，只要没有调用 event.preventDefault 就返回true
+      console.log("res: ", res);
+
+      // 4
+      // 绑定事件监听的三种方式 AA BB CC
+      // AA - html的方式
+      // BB - 元素节点的事件属性
+      // CC - addEventListener
+
+      // 5
+      // 事件监听函数中的this指向
+      // - 其实就是调用时确定this指向
+
+      // 6
+      // e.currentTarget --- 事件监听函数所绑定的节点
+      // e.target ---------- 最先触发事件的节点
+      const root = window.document.getElementById("root");
+      root.addEventListener(
+        "click",
+        function (e) {
+          console.log(this);
+          console.log("e.currentTarget", e.currentTarget);
+          console.log("e.target", e.target);
+        },
+        false
+      );
+
+      // 7
+      // 自定义事件
+      const customButton = window.document.getElementById("custom");
+      const customEventInstance = new CustomEvent("77", { detail: "woow_wu7" }); // 注意 new CustomEvent() 和 new Event() 的区别 -> event.detail的区别
+      customButton.addEventListener("77", (e) => console.log("自定义事件的e.detail =>", e.detail)); // e.target e.currentTarget e.detail
+      customButton.dispatchEvent(customEventInstance);
+    </script>
+  </body>
+</html>

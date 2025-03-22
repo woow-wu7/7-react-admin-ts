@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 翻转二叉树
+      // 226. Invert Binary Tree
+
+      // - 注意点:
+      //  - 是二叉树
+      //  - invert 反转的意思 ------- 强调数量
+      //  - reverse 反转的意思 ------ 强调方向
+
+      // leetcode
+      // https://leetcode.cn/problems/invert-binary-tree/
+
+      /**
+       * Definition for a binary tree node.
+       * function TreeNode(val, left, right) {
+       *     this.val = (val===undefined ? 0 : val)
+       *     this.left = (left===undefined ? null : left)
+       *     this.right = (right===undefined ? null : right)
+       * }
+       */
+      /**
+       * @param {TreeNode} root
+       * @return {TreeNode}
+       */
+
+      var invertTree = function (root) {
+        if (!root) return null; // 递归结束条件，这里返回 root 或 null 都行
+
+        // DFS - 深度优先遍历
+        // 前序遍历 - 根左右
+        [root.left, root.right] = [root.right, root.left]; // 翻转
+        invertTree(root.left); // 左递归，递归反转 -- 这里需要注意: 顺序，一定是要先反转，在递归翻转后的节点
+        invertTree(root.right);
+
+        // 返回所有反转都结束后的，整颗树的根节点
+        return root;
+      };
+    </script>
+  </body>
+</html>

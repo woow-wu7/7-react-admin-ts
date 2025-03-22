@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        text-decoration: none;
+      }
+      body {
+        padding: 20px;
+      }
+      #container {
+        width: 600px;
+        height: 400px;
+        border: 3px solid #333;
+        position: relative;
+        overflow: hidden;
+      }
+      #list {
+        width: 4200px;
+        height: 400px;
+        position: absolute;
+        z-index: 1;
+      }
+      #list img {
+        float: left;
+        width: 600px;
+        height: 400px;
+        object-fit: cover;
+      }
+      #dots {
+        position: absolute;
+        height: 10px;
+        width: 100px;
+        z-index: 2;
+        bottom: 20px;
+        left: 250px;
+      }
+      #dots span {
+        cursor: pointer;
+        float: left;
+        border: 1px solid #fff;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: #333;
+        margin-right: 5px;
+      }
+      #dots .on {
+        background: orangered;
+      }
+      .arrow {
+        cursor: pointer;
+        display: none;
+        line-height: 39px;
+        text-align: center;
+        font-size: 36px;
+        font-weight: bold;
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        z-index: 2;
+        top: 180px;
+        background-color: RGBA(0, 0, 0, 0.3);
+        color: #fff;
+      }
+      .arrow:hover {
+        background-color: RGBA(0, 0, 0, 0.7);
+      }
+      #container:hover .arrow {
+        display: block;
+      }
+      #prev {
+        left: 20px;
+      }
+      #next {
+        right: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- carousel 是旋转木马，轮播图的意思 -->
+    <section id="container">
+      <div id="list" style="left: -600px">
+        <img src="../images/33.png" alt="3" />
+        <img src="../images/11.png" alt="1" />
+        <img src="../images/22.png" alt="2" />
+        <img src="../images/33.png" alt="3" />
+        <img src="../images/11.png" alt="1" />
+      </div>
+      <div id="dots">
+        <span index="1" class="on"></span>
+        <span index="2"></span>
+        <span index="3"></span>
+      </div>
+
+      <a href="javascript:;" id="prev" class="arrow">&lt;</a>
+      <a href="javascript:;" id="next" class="arrow">&gt;</a>
+    </section>
+    <script>
+      // carousel 是旋转木马，轮播图的意思
+      // a标签 <!-- href="javascript:;" 执行了空的js语句 -->
+      // a标签 <!-- href="javascript:void(0);" href值是undefined -->
+
+      const container = document.getElementById("container");
+      const list = document.getElementById("list");
+
+      const prev = document.getElementById("prev");
+      const next = document.getElementById("next");
+      const dots = document.getElementById("dots").getElementsByTagName("span");
+
+      let index = 1;
+      let isRun = false; // 保证固定频率切换，防止快速点击左右切换按钮
+      let autoTimer = null;
+
+      container.onmouseover = stop;
+      container.onmouseout = autoRun;
+      next.onclick = function () {
+        if (!isRun) scroll(-600);
+        changeIndex("add");
+        changeDot();
+      };
+      prev.onclick = function () {
+        if (!isRun) scroll(600);
+        changeIndex("dec");
+        changeDot();
+      };
+      Array.from(dots).forEach(
+        (dot, i) =>
+          (dot.onclick = function () {
+            let dec = i + 1 - index; // 点击的圆点 和 点击前的圆点 index 之差
+            scroll(-600 * dec); // 简化 if (dec > 0) scroll(-600 * dec) 和 if (dec < 0) scroll(-600 * dec);
+
+            index = i + 1;
+            changeDot();
+          })
+      );
+
+      autoRun();
+
+      function changeIndex(type) {
+        type === "add" ? index++ : index--;
+        if (index > 3) index = 1;
+        if (index < 1) index = 3;
+      }
+
+      function changeDot() {
+        Array.from(dots).forEach((dot, i) => {
+          if (i + 1 === index) dot.className = "on";
+          else dot.className = "";
+        });
+      }
+
+      function scroll(offset) {
+        // list.style.left 初始值 -600px
+        // 因为无限滚动在前后都多加了一张图片，所以向左滚动了一张图片600px，可以左右都无限滚动
+        const _left = parseInt(list.style.left) + offset;
+
+        const time = 300;
+        const interval = 10;
+        const step = offset / (time / interval);
+
+        run();
+        function run() {
+          isRun = true;
+          let timer;
+          if (timer) clearInterval(timer);
+
+          if (
+            (step < 0 && parseInt(list.style.left) > _left) ||
+            (step > 0 && parseInt(list.style.left) < _left)
+          ) {
+            list.style.left = parseInt(list.style.left) + step + "px";
+            timer = setTimeout(run, interval);
+          } else {
+            isRun = false;
+            list.style.left = _left + "px";
+            console.log("list.style.left", list.style.left);
+            if (_left > -600) list.style.left = -1800 + "px"; // 左滑边界，跳到最后一张
+            if (_left < -1800) list.style.left = -600 + "px";
+          }
+        }
+      }
+
+      function autoRun() {
+        autoTimer = setInterval(next.onclick, 3000);
+      }
+
+      function stop() {
+        clearInterval(autoTimer);
+      }
+    </script>
+  </body>
+</html>

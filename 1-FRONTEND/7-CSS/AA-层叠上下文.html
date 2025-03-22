@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>层叠上下文</title>
+    <style>
+      /* 层叠上下文 */
+      /* https://juejin.cn/post/6844903667175260174 */
+
+
+      /* 
+      - 如何创建层叠上下文
+        - 根元素 HTML
+        - 普通元素，需要设置 ( position 为非 static )，并且设置 ( z-index ) 的值
+        - css3 很多属性能都创建一个层叠上下文
+      - 层叠顺序 ( 以下逐渐增大 )
+        - **层叠上下文 background/border**
+        - **z-index < 0**
+        - **block 块级水平盒子**
+        - **float 浮动盒子**
+        - **inline/inline-block 水平盒子**
+        - **z-index:auto/z-index:0**
+        - **z-index > 0**
+        - 创建层叠上下文的元素 background/border <--- z-index:负数 <--- block 块级元素 <--- float <--- inline/inline-block <--- z-index:auto/z-index:0 <--- z-index:正数
+      - z-index
+        - 问题: 什么时候 z-index 有效?
+        - 回答: 只有在元素定义了 ( position 属性，且 position 非 static ) 时才有效
+      - 资料
+        - https://juejin.cn/post/6844903667175260174 
+      */
+
+      /* 1 */
+      /* one: 是一个层叠上下文，同时one和two都在一个层叠上下文 .container 中 ----- z-index:  0; */
+      /* two: 也是一个层叠上下文，同时one和two都在一个层叠上下文 .container 中 --- z-index: 1; */
+      /* 所以，two 中的所有元素都在 one 上面 */
+
+      /* 2 */
+      /* 层叠顺序: 创建层叠上下文background/border < z-index:负数 < block < float < inline/inline-block < z-index:auto/0 < z-index:正数 */
+      .container {
+        width: 600px;
+        height: 600px;
+        border: 1px solid red;
+
+        position: relative;
+        z-index: 1;
+      }
+
+      /* 分割线 --------------------------------------------------------------------------------------------------------------------------------- */
+      .one {
+        position: absolute;
+        z-index: 0;
+        /* 注意: one新建了一个层叠上下文，因为设置了上面两句  position: relative;  z-index: 0; */
+        /* 层叠顺序: 虽然 ( one 的 z-index 是 0 )，而 ( 子元素 .one-less 的 z-index 是 -1 )，但是 ( less仍然在one的上面 ) */
+
+        width: 300px;
+        height: 300px;
+        background: yellow;
+      }
+
+      /* greater than. 大于 */
+      /* less than. 小于 */
+      .one-greater {
+        position: absolute;
+        z-index: 1;
+
+        width: 90px;
+        height: 90px;
+        background: blueviolet;
+      }
+
+      .one-less {
+        position: absolute;
+        z-index: -1;
+
+        width: 280px;
+        height: 280px;
+        background: rgb(43, 180, 226);
+        text-align: right;
+      }
+
+      .one-zero {
+        position: absolute;
+        z-index: 0;
+
+        width: 180px;
+        height: 180px;
+        background: rgb(226, 43, 95);
+        text-align: right;
+      }
+
+      /* 分割线 ------------------------------------------------------------------------------------------------------------------------------------------------------ */
+      .two {
+        position: absolute;
+        z-index: 1;
+
+        width: 300px;
+        height: 300px;
+        background: green;
+        top: 80px;
+      }
+
+      .two-block {
+        width: 70px;
+        height: 70px;
+        background: rgb(255, 43, 71);
+      }
+
+      .two-float {
+        float: left;
+
+        width: 70px;
+        height: 70px;
+        background: rgb(152, 179, 0);
+      }
+      .two-inline {
+        display: inline-block;
+        left: 100px;
+
+        width: 80px;
+        height: 80px;
+        background: rgb(0, 179, 152);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="one">
+        <div class="one-greater">z-index > 0</div>
+        <div class="one-less">z-index < 0</div>
+        <div class="one-zero">z-index = 0</div>
+      </div>
+      <div class="two">
+        <div class="two-block">block</div>
+        <div class="two-float">float</div>
+        <div class="two-inline">inline</div>
+      </div>
+    </div>
+  </body>
+</html>

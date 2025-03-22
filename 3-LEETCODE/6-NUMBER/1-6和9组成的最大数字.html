@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 1323. 6 和 9 组成的最大数字
+
+      // 给你一个仅由数字 6 和 9 组成的正整数 num。
+      // 你最多只能翻转一位数字，将 6 变成 9，或者把 9 变成 6 。
+      // 请返回你可以得到的最大数字。
+
+      // 输入：num = 9669
+      // 输出：9969
+
+      // 输入：num = 9996
+      // 输出：9999
+
+      // 输入：num = 9999
+      // 输出：9999
+      // 解释：无需改变就已经是最大的数字了。
+
+      // leetcode
+      // https://leetcode.cn/problems/maximum-69-number/
+
+      // string
+      // array
+
+      // 思路
+      // - 只需要将最高位的 6 替换成 9 即可
+      // - replace 也是替换第一个满足条件的匹配
+
+      /**
+       * @param {number} num
+       * @return {number}
+       */
+      var maximum69Number = function (num) {
+        // 1
+        // string
+        return Number(String(num).replace("6", "9"));
+
+        // 2
+        // array
+        //    const arr = String(num).split('')
+        //    for(let i = 0; i < arr.length; i++) {
+        //        if (arr[i] === '6') {
+        //            arr[i] = '9'
+        //            break;
+        //        }
+        //    }
+        //    return Number(arr.join(''))
+      };
+    </script>
+  </body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // palindromic string 回文字符串
+      // 回文串:
+      // - 概念: 正读和反读都一样的字符串
+      // - 思路: 1反转字符串 2双指针 3递归
+
+      // 1
+      // 反转字符串
+      const str = "abcba";
+      function palindromic_string_reverse(str) {
+        const reverseStr = str.split("").reverse().join("");
+        return str === reverseStr; // 反转字符串还相等就是回文字符串
+      }
+      const isPalindromic1 = palindromic_string_reverse(str);
+      console.log("isPalindromic1", isPalindromic1);
+
+      // 2
+      // 双指针
+      function palindromic_string_pointer(str) {
+        for (
+          let left = 0, right = str.length - 1;
+          left <= right;
+          left++, right--
+        ) {
+          if (str[left] !== str[right]) return false;
+        }
+        // 除了for循环，while循环也可以
+        // let left = 0; let right = str.length - 1;
+        // while (left <= right) {
+        //   if (str[left] !== str[right]) return false;
+        //   left++;right--;
+        // }
+        return true;
+      }
+      const isPalindromic2 = palindromic_string_pointer(str);
+      console.log("isPalindromic2", isPalindromic2);
+
+      // 3
+      // 递归
+      // 和 ( 双指针 ) 类似，只不过 ( 循环变成了递归 )
+      function palindromic_string_recursive(str) {
+        if (str.length <= 1) return true; // 递归结束的条件，如果不满足结束条件前的前后值都相等，则一定是回文字符串
+
+        const left = 0;
+        const right = str.length - 1;
+
+        // 注意 arr.slice(start, end) 的边界，end取不到
+        return str[left] === str[right]
+          ? palindromic_string_recursive(str.slice(1, right))
+          : false;
+      }
+      const isPalindromic3 = palindromic_string_recursive(str);
+      console.log("isPalindromic3", isPalindromic3);
+    </script>
+  </body>
+</html>

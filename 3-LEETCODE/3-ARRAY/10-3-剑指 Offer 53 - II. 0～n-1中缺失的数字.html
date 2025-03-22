@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 剑指 Offer 53 - II. 0～n-1中缺失的数字
+
+      // 题目
+      // 一个长度为n-1的递增排序数组中的所有数字都是唯一的，并且每个数字都在范围0～n-1之内。
+      // 在范围0～n-1内的n个数字中有且只有一个数字不在该数组中，请找出这个数字。
+
+      /**
+       * @param {number[]} nums
+       * @return {number}
+       */
+
+      // 对比
+      // [1, n] ---- 448. 找到所有数组中消失的数字 https://leetcode.cn/problems/find-all-numbers-disappeared-in-an-array/
+      // [0, n] ---- 268. 丢失的数字 https://leetcode.cn/problems/missing-number/
+      // [0, n-1] -- 剑指 Offer 53 - II. 0～n-1中缺失的数字 https://leetcode.cn/problems/que-shi-de-shu-zi-lcof/
+
+      var missingNumber = function (nums) {
+        const len = nums.length;
+
+        const res = new Array(len + 1).fill(0);
+        for (let i = 0; i < len; i++) {
+          res[nums[i]] += 1;
+        }
+
+        return res.findIndex((v) => !v);
+      };
+    </script>
+  </body>
+</html>

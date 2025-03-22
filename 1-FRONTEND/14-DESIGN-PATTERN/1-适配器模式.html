@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Adapter pattern.</title>
+  </head>
+  <body>
+    <script>
+      // Adapter pattern. 适配器模式
+      // -- 接口适配
+      // -- 参数适配
+      // -- 地图适配
+      // -- Node区分环境
+
+      // English
+      // - adapt 适应 适配 n
+      // - adapter 适配器 n
+      // - adaption 适应 适配 n
+    </script>
+    <script>
+      // ------------------------------------------------------
+      // 1
+      // 适配器模式 - ( 接口适配 )
+      // - 接口适配
+      // - 需求: 我们要根据支持的地图种类，来渲染，输入有可能是谷歌地图，也有可能是百度地图
+      const googleMap = {
+        show() {
+          console.log("谷歌地图");
+        },
+      };
+      const baiduMap = {
+        display() {
+          console.log("百度地图");
+        },
+      };
+      // - 未使用适配器模式: 时就会报错，接口不兼容
+      function renderMap(map) {
+        map.show();
+      }
+      // - 使用适配器模式
+      function adapter(map) {
+        if (!map.show) map.show = map.display;
+        return map;
+      }
+      renderMap(adapter(googleMap)); // 适配器模式，将不同的接口统一
+      renderMap(adapter(baiduMap));
+    </script>
+
+    <script>
+      // ------------------------------------------------------
+      // 2
+      // 适配器模式  - ( 函数参数适配 )
+      // - 函数参数适配
+      // - 场景: 比如当我们函数传入的参数个数较多时，一般会用一个对象，而有的参数是可选时，我们就需要使用 适配器模式来解决兼容问题
+      // - 比如: 对于可选参数，如果不存在时，使用 默认
+      // - 案例:
+      //  - 1. 在 Vue 中，( Vue构造函数的 参数 合并策略 中就使用到了 适配器模式 )
+      //  - 2. axios 库中请求部分 也用到了 适配器 模式
+      function sdk(config) {
+        let defaultConfig = {
+          name: "",
+          age: 0,
+        };
+        for (let key in config) {
+          defaultConfig[key] = defaultConfig[key] || config[key]; // 适配器模式 - 函数参数适配 - 当传入的参数在 默认参数 中不存在时，写入默认参数，相当于并集
+          // This is just a simple example, Please don't focus on the logic and completeness.
+          // completeness 完整性 n
+        }
+
+        return defaultConfig;
+      }
+      const res = sdk({ name: "woow_wu7" });
+      console.log("res: ", res);
+    </script>
+
+    <script>
+      // ------------------------------------------------------
+      // 3
+      // 适配器模式 - ( 数据适配 )
+      // - 数据适配
+      // - 需求: 将后端返回的 ( 数组数据 ) 处理成 ( tree型数据 )
+
+      // 后端返回的数据
+      const arr = [
+        { id: 1, parentId: -1 },
+        { id: 2, parentId: 1 },
+        { id: 3, parentId: 1 },
+        { id: 4, parentId: 2 },
+        { id: 5, parentId: 4 },
+      ];
+
+      // array -> tree
+      function array2tree(arr) {
+        const map = {};
+        const res = [];
+
+        arr.forEach((item) => {
+          item.children = [];
+          map[item.id] = item;
+        });
+
+        arr.forEach((item) => {
+          if (item.parentId < 0) {
+            res.push(item);
+          } else {
+            map[item.parentId]?.children?.push(item);
+          }
+        });
+
+        return res;
+      }
+
+      const result = array2tree(arr);
+      console.log("result: ", result);
+    </script>
+  </body>
+</html>

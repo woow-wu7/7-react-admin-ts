@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 二叉树的最小深度
+
+      // 思路
+      // - 后续遍历
+
+      // 注意
+      // - 最小深度的求解是有 ( 坑 ) 的
+      // - 就是其中 ( 左子树 ) 或者 ( 右子树 ) 是 ( null ) 时，最小高度不是1，而是求其中一边子树的最小高度
+
+      // 资料
+      // - https://www.bilibili.com/video/BV1QD4y1B7e2/?spm_id_from=333.337.search-card.all.click&vd_source=a8374ac38c77856369542fc154a1e043
+
+      // leetcode
+      // https://leetcode.cn/problems/minimum-depth-of-binary-tree/
+
+      // 对比
+      // 104. 二叉树的最大深度 https://leetcode.cn/problems/maximum-depth-of-binary-tree/
+      // 111. 二叉树的最小深度 https://leetcode.cn/problems/minimum-depth-of-binary-tree/
+
+      // 对比
+      // - 1. 二叉树的直径 ------ 需要用到树的深度 ---- https://leetcode.cn/problems/diameter-of-binary-tree/
+      // - 2. 平衡二叉树 ------- 需要用到树的深度 ----- https://leetcode.cn/problems/balanced-binary-tree/
+      // - 3. 二叉树的深度 -------------------------- https://leetcode.cn/problems/maximum-depth-of-binary-tree/
+      // - 4. N叉树的深度 --------------------------- https://leetcode.cn/problems/maximum-depth-of-n-ary-tree/
+
+      /**
+       * Definition for a binary tree node.
+       * function TreeNode(val, left, right) {
+       *     this.val = (val===undefined ? 0 : val)
+       *     this.left = (left===undefined ? null : left)
+       *     this.right = (right===undefined ? null : right)
+       * }
+       */
+      /**
+       * @param {TreeNode} root
+       * @return {number}
+       */
+
+      // 最小深度
+      // 需要注意下面的情况: 最小深度不是1，而是4
+      // 3
+      //  \
+      //  20
+      //    \
+      //     7
+      //    / \
+      //   5   10
+      //       \
+      //        20
+
+      // 注意
+      // - 最小深度的求解是有 ( 坑 ) 的
+      // - 就是其中 ( 左子树 ) 或者 ( 右子树 ) 是 ( null ) 时，最小高度不是1，而是求其中一边子树的最小高度
+
+      // 方法1
+      var minDepth = function (root) {
+        if (!root) return 0;
+
+        const left = minDepth(root.left); // 左子树的深度
+        const right = minDepth(root.right); // 右子树的深度，到这里为止 和 ( 最大深度的代码都一摸一样，下面开始不一样了 )
+
+        // 注意: 当二叉树的有一边的子树是null时，最小深度不是null，而是另一边的子树深度
+        if (!left && right) return right + 1;
+        if (!right && left) return left + 1;
+
+        // 都存在 和 都不存在 都包含在了下面的情况中
+        // - postorder 后续遍历 左右根
+        return Math.min(left, right) + 1;
+
+        // 注意：这里的返回值类型很重要
+        //  - 这里是返回的 ( 每一层 左节点数 和 右节点 的较小值 ) + 1，递归和 ------------------------ 最小深度
+        //  - 如果返回 return left + right + 1; 则是返回的 -------------- 左节点 + 右节点 + 1 ---- 总的节点数
+
+        // 注意：这里的返回值类型很重要
+        //  - 请对比 ( 二叉树的最大深度 ) ( 二叉树的最小深度 ) ( N叉树的最大深度 ) ( 二叉树的直径 ) ( 平衡二叉树 )
+      };
+
+      // ------------------------------------------------------------------------------------------
+      // ------------------------------------------------------------------------------------------
+      // ------------------------------------------------------------------------------------------
+      // 方法2
+      var minDepth2 = function (root) {
+        if (!root) return 0;
+
+        function dfs(node, deep) {
+          deep = deep + 1; // 深度+1，比如: 只有根节点时，深度就是1
+          const left = node.left;
+          const right = node.right;
+          if (!left && !right) return deep;
+          if (!left && right) return dfs(right, deep);
+          if (left && !right) return dfs(left, deep);
+
+          // left 和 right 都存在
+          return Math.min(dfs(left, deep), dfs(right, deep));
+        }
+
+        return dfs(root, 0);
+      };
+    </script>
+  </body>
+</html>

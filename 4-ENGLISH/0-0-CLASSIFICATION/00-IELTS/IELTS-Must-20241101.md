@@ -1,0 +1,1464 @@
+###### Must 2024-11-01
+
+- 1
+- `【 satisfy 满足 满意 v 】` // ------------------ 【 satisfy curiosity. 满足好奇心 】 【 satisfy desire. 满足欲望 】 【 satisfy demand/need/requirement. 满足需求 】
+- `【 satisfaction 满足 满意 满意度 n 】` // ------- _【 customer satisfaction. 客户满意度 】_ // _【 customer complaint. 客户投诉 n 】_
+- `【 complain 抱怨 投诉 v 】` // ----------------- 【 anonymously complain. 匿名地投诉 v 】
+- `【 complaint 抱怨 投诉 n 】` // ---------------- 【 anonymous complaint. 匿名的投诉 】 【 customer complaint. 客户投诉 】// 【 customer satisfaction. 客户满意度 】
+- _【 anonymously complain. 匿名地投诉 v 】_
+- _【 anonymous complaint. 匿名的投诉 n 】_
+- _【 customer complaint. 客户的投诉 n 】_
+- _【 customer satisfaction. 客户满意度 n 】_
+- _【 potential customer. 潜在客户 n 】_
+- AA.
+- > 【 satisfy curiosity. 满足好奇心 v 】
+- > 【 satisfy desire. 满足欲望 v 】 // ----------- 【 greedy desire. 贪婪的欲望 】 // greedy 贪婪的 adj // desire 愿望 渴望 欲望 n v
+- > 【 satisfy need/demand/requirement. 满足需求 】
+- > satisfy curiosity. 满足好奇心
+- > inspire curiosity. 激发好奇心 // ------------- 【 inspire potential. 激发潜能 v 】 【 inspire inspiration. 激发灵感 v 】
+- > strong curiosity. 强烈的好奇心
+- BB.
+- _【 inspiration 灵感 】_ // -------------------- 【 creative inspiration. 创作灵感 】 【 inspire inspiration. 激发灵感 v 】
+- _【 inspire 激发 启发 v 】_ // ------------------ 【 inspire potential. 激发潜能 v 】 【 inspire curiosity. 激发好奇心 v 】 【 inspire inspiration. 激发灵感 v 】
+- _【 expire 过期 】_// -------------------------- 【 expiration time. 过期时间 】 【 expired dumpling. 过期的饺子 】 【 be about to expire. 即将过期 】
+- 【 be about to expire. 即将过期 】
+- 【 out of date. 过时的 adj 】
+- 【 For 【 cloth 】 and 【 clothes 】, there is no such thing as being 【 expired 】, only being 【 out of date 】. 对于布料和衣服，没有过期这一说，只有过时一说 】
+- > inspire inspiration. 激发灵感
+- > inspire curiosity. 激发好奇心
+- > inspire potential. 激发潜能
+- > - potential customer. 潜在客户 n
+- > - customer satisfaction. 客户满意度 n
+- > - customer complaint. 客户投诉 n
+- CC.
+- _【 greedy 贪婪的 adj 】_ // -------------------- 1. **【 greedy algorithm. 贪心算法 n 】** 2. **【 greedy desire. 贪婪的欲望 】**
+- _【 desire 欲望 愿望 渴望 性欲 n 】_
+- > 【 greedy desire. 贪婪的欲望 】 // ------------- 【 greedy algorithm. 贪心算法 】 【 greedy desire. 贪心的欲望 】 【 greedy 贪婪的 adj 】
+- > 【 satisfy desire. 满足欲望 】
+- > 【 greedy algorithm. 贪心算法 】
+- > 【 encryption algorithm. 加密算法 n 】
+- > 【 bubble sort algorithm. 冒泡排序算法 n 】 // 【 blow bubble. 吹泡泡 】 // selection/insertion/quick sort algorithm.
+- > The 【 greedy 】 employer 【 exploits 】 his workers for his own 【 profits 】. 这个贪婪的老板为了自己的利益剥削工人
+- // -- exploit 剥削 v
+- // -- profit 利润 利益 n
+- DD.
+- _【 demand 要求 v 需求 n 】_ // ----------------- 【 market demand. 市场需求 】
+- _【 requirement 要求 n 需求 n 】_ // ------------ 【 product requirement. 产品需求 】 // produce reproduce
+- _【 need 需要 v 需求 】_
+- EE.
+- _【 dumpling 饺子 n 】_ // --------------------- 【 expired dumpling. 过期的饺子 n 】
+- _【 dump 倒 灌 倾泻 v 垃圾场 n 】_
+- _【 dumb 哑的 愚蠢的 adj 】_ // ------------------ 【 play dumb. 装傻 v 】
+- _【 dumbbell 哑铃 】_ // ------------------------ 【 lift dumbbell. 举哑铃 v 】
+- _【 doorbell 门铃 】_ // ------------------------ 【 ring doorbell. 按门铃 v 】
+- _【 jump 跳入 】_ // ---------------------------- 【 jump the gun. 抢跑 v 】 【 jump the queue. 插队 】 // cut in line. = cut in queue. = jump the queue.
+- _【 stump 树桩 】_ // --------------------------- 【 tree stump. 树桩 n 】
+- _【 pumpkin 南瓜 】_ // ------------------------- 【 pumpkin porridge. 南瓜粥 n 】
+- _【 stamp 邮票 】_ // --------------------------- 【 stamp duty. 印花税 n 】 // 【 pay stamp duty. 交印花说 n 】
+- // jump into. 跳进 v
+- // jump out. 跳出 v
+- // jump over. 跳过 v
+- FF.
+- _【 complain 抱怨 投诉 v 】_ // ------------------ 【 anonymously complain. 匿名地投诉 v 】
+- _【 complaint 抱怨 投诉 n 】_ // ----------------- 【 anonymous complaint. 匿名的投诉 】 【 customer complaint. 客投诉 】 【 customer satisfaction. 满意度 】
+-
+- // TIPS: Pay attention to the pronunciation of the word 'satisfaction'. [satisfaction-满足-满意-满意度-n] [customer-satisfaction-客户满意度]
+- // TIPS: Pay attention to the pronunciation of the word 'inspiration'. [inspiration-灵感-n] [creative-inspiration-创作灵感-n]
+- // TIPS: Pay attention to the pronunciation of the word 'inspire'. [inspire-激发-启发-v] [inspire-curiosity-激发好奇心] [inspire-potential-激发潜能]
+-
+- [AA.]
+- `【 customer satisfaction. 客户满意度 】`
+- `【 curiosity 好奇心 n 】`
+- `【 desire 欲望 愿望 渴望 性欲 n 】`
+- `【 command 要求v 需求n 】`
+- **【 The good 【 customer satisfaction 】 needs to 【 satisfy 】 the customer's 【 curiosity 】, 【 desire 】, and 【 demand 】. 好的客户满意度需要满足客户的好奇心，欲望，需求 】**
+-
+- [BB.]
+- `【 inspire 激发 启发 v 】`
+- `【 creative inspiration. 创作灵感 】`
+- `【 satisfy curiosity. 满足好奇心 】`
+- > 【 start with. 从...开始 】// ----------------- start with doing sth.
+- > 【 start out. 从...开始 】 // ----------------- start out by doing sth. 从做...开始
+- > 【 start off. 从...开始 】 // ----------------- start off by doing sth. 从做...开始
+- 【 start out by doing sth. = start off by doing sth. 从...开始 】
+- **【 【 inspiring 】 【 creative inspiration 】 【 start with 】 【 satisfying curiosity 】. 激发创作灵感从满足好奇心开始 】**
+- // -- start with. 从...开始
+- // -- start out. 从...开始 以...开始
+- // -- 1. _【 Let's 【 start with 】 【 introducing 】 ourselves. 让我们从自我介绍开始 】_
+- // -- 2. _【 Let's 【 start out 】 【 by 】 【 introducing 】 ourselves. 让我们从自我介绍开始吧 】_
+- // -- 3. _【 Let's 【 start off 】 【 by 】 【 introducing 】 ourselves. 让我们从自我介绍开始吧 】_
+- // -- 【 Most interviews will 【 start out 】 with a 【 handshake 】 and some 【 small talk 】. 大多数面试都是从握手和闲聊开始的 】
+-
+- [CC.]
+- `【 customer complaint. 客户投诉 n 】`
+- `【 customer satisfaction. 客户满意 n 】`
+- **【 【 Customer complaints 】 【 are related to 】 【 customer satisfaction 】. 客户投诉和客户满意度有关 】**
+-
+-
+-
+-
+- 2
+- `【 transparent 透明的 adj 】` // ---------------- transparent / opaque
+- `【 transparency 透明度 透明 n 】` // ------------- transparency / opacity
+- `【 opaque 不透明的 adj 】`
+- `【 opacity 不透明度 n 】` // -------------------- opacity VS capacity
+-
+- `【 transport 运输 v 】`
+- `【 transportation 运输 n 】`
+-
+- AA.
+- _【 image 图片 图像 形象 n 】_
+- _【 imagine 想象 v 】_
+- _【 imagination 想象 想象力 n 】_ // ------------【 subvert imagination. 颠覆想象 v 】 【 rich imagination. 丰富的想象力 n 】
+- _【 emotion 情绪 情感 n 】_ // ------------------【 vent emotion. 发泄情绪 v 】 【 control emotion. 控制情绪 v 】 【 express emotion. 表达情感 v 】
+- _【 emotional 情绪的 adj 】_ // --------------- 【 emotional quotient. 情商 n 】 【 intelligence quotient. 智商 n 】 // The quotient of 5 divided by 5 is 1.
+- > 【 subvert imagination. 颠覆想象 】
+- > 【 rich imagination. 丰富的想象力 】
+- BB.
+- _【 subvert 颠覆 】_ // ------------------------ 【 subvert cognition. 颠覆认知 】 【 subvert imagination. 颠覆想象 】 // 【 rich imagination. 丰富的想象力 n 】
+- _【 invert 颠倒 倒置 反转 v 】_ // --------------- 【 invert selection. 反选 v 】
+- _【 introvert 内向的人 n 内向的 adj 】_ // ------- 【 introvert / extrovert 】
+-
+- // TIPS: Pay attention to the pronunciation of the word 'opaque'. [opaque-不透明的-adj]
+- // TIPS: Pay attention to the pronunciation of the word 'opacity'. [opacity-不透明度-n]
+-
+- [AA.]
+- `【 transparency 透明度 n 】`
+- `【 opacity 不同明度 n 】`
+- **【 The 【 transparency 】 and 【 opacity 】 of 【 an 】 【 image 】 are related to the settings. 图片的透明度和不透明度跟设置有关 】**
+- // -- image 图片 图像 形象 n
+- // -- imagine 想象 v
+- // -- imagination 想象 n
+-
+- [BB.]
+- `【 transparency 透明度 n 】`
+- `【 transparent 透明的 adj 】`
+- > 【 transparent glass. 透明玻璃 】
+- **【 The 【 transparency 】 of the 【 transparent glass 】 is 100 percent. 透明玻璃的透明度是 100% 】**
+
+###### Must 2024-11-02
+
+- 1
+- `【 conjunction 连词 n 】` // -------------- 【 in conjunction with. 结合 】 // Please lean this file 【 in conjunction with 】 that file. 这文件和那文件结合学习
+- `【 junction 交叉路口 枢纽站 】` ------------- 三面的交叉 T // --- 【 junction station. 枢纽站 n 】
+- `【 intersection 十字路口 交点 n 】` --------- 四面的交叉 + // --- 【 intersection point. 交点 n 】 【 cross the intersection. 穿过十字路口 】
+- `【 interaction 相互作用 】` --------------- 【 interaction design. 交互设计 】
+- `【 section 部分 部门 段 截面 n 】` // ------ 【 a section of road. 一段路 】 【 the section of text. 这段文字 】
+- `【 interjection 感叹词 n 】` // ----------- `【 exclamation mark. 感叹号 n 】 VS 【 interjection 感叹词 n 】`
+- > 【 junction station. 枢纽站 】
+- > 【 intersection point. 交点 】
+- > 【 focus point. 焦点 n 】
+- > 【 interaction design. 交互设计 n 】
+- _【 a section of road. 一段路 】_
+- _【 the section of text. 这段文字 】_
+-
+- `【 intersection 十字路口 交点 n 】` // ----- 【 intersection point. 交点 n 】 【 cross the intersection. 穿过十字路口 】
+- `【 section 部分 部门 段 截面 n 】` // ------ 【 a section of road. 一段路 】 【 the section of text. 这段文字 】
+- > 【 a section of road. 一段路 n 】
+- > 【 the section of text. 这段文字 n 】
+- _【 intersection point. 交点 n 】_
+- _【 cross the intersection. 穿过十字路口 】_
+-
+- [AA.]
+- `【 intersection 十字路口 交点 n 】`
+- `【 junction station 枢纽站 n 】`
+- > 【 a section of road. 一段路 n 】
+- > 【 the section of text. 这段文字 n 】
+- `【 overall structure. 整体结构 n 】`
+- 1. **【 cross the 【 intersection 】 you will see the 【 junction station 】. 穿过十字路口，你就会看到枢纽站 】**
+- 2. **【 After 【 crossing the intersection 】, there is 【 still 】 【 a section of 】 road to the 【 junction station 】. 穿过十字路口后距离枢纽站还有一段路 】**
+- 3. **【 This 【 section of text 】 describe the 【 overall structure 】 of 【 the section of road 】. 这段文字描述了这段路的整体结构 】**
+-
+-
+-
+-
+- 2
+- `【 hearing 听觉 n 】` // -------------------- 【 hearing aid. 助听器 】 【 band aid. 创可贴 】 【 first aid. 急救 】 【 first aid kit. 急救箱 】
+- `【 vision 视觉 视力 n 】` // ----------------- 【 clear vision. 清晰的视野 n 】
+- `【 smell 嗅觉 n / 闻 v 】` // ---------------- 【 smell sweet. 闻起来香 】 **【 smell sweet. 闻起来香 】**
+- `【 taste 味觉 n / 尝 v 】` // ---------------- 【 tasty 美味的 adj 】 // 【 tongue 舌头 n 】 【 tone 音调 语调 n 】
+- `【 touch 触觉 n 】`
+- `【 pain 痛觉 n 】`
+- > 【 hearing aid. 助听器 n 】
+- > 【 band aid. 创可贴 n 】 // ---------------- 【 wrap bandage. 包扎绷带 】 【 wrap wound. 包扎伤口 v 】 // band bandage
+- > 【 first aid. 急救 n 】
+- > 【 first aid kit. 急求箱 n 】
+- > 【 aid 帮助 援助 v n 】
+- > 【 kit 工具 元件 n 】
+- _【 bandage 绷带 】_ // ---------------------- 【 wrap bandage. 包扎绷带 】 【 wrap wound. 包裹伤口 】 // wrap 包 裹 缠绕 v
+- _【 band 乐队 】_ // ------------------------- 【 band-aid. 创可贴 n 】 【 hearing aid. 助听器 】 【 first aid. 急救 】 【 first aid kit. 急救箱 】
+- _【 smell sweet. 闻起来香 】_
+- _【 wrap the wound. 包扎伤口 】_
+- _【 wrap bandage. 包扎绷带 】_
+- > The sense of pain/touch/taste/smell/hearing/vision
+- // TIPS: Pay attention to the pronunciation of the word 'hearing'. [hearing-aid.助听器] [band-aid.创可贴] [first-aid.急救] [first-aid-kit.急救箱]
+- // TIPS: Pay attention to the pronunciation of the word 'wound'. [wound-伤口] [wrap-the-wound.包扎伤口]
+- AA.
+- _【 scene 场景 现场 】_ // ----------------------【 crime scene. 犯罪现场 n 】 【 accident scene. 事故现场 n 】
+- _【 sense 感应 感觉 】_ // ----------------------【 make sense. 有道理 n 】 【 common sense. 常识 n 】 【 The sense of pain. 痛觉 】
+- > crime scene. 犯罪现场
+- > accident scene. 事故现场
+- > make sense. 有道理 n
+- > common sense. 常识 n
+- > The sense of pain/touch/taste/smell/hearing/vision
+- BB.
+- _【 crime 犯罪 罪行 n 】_ // -------------------【 crime scene. 犯罪现场 n 】
+- _【 criminal 犯罪的 adj 】_ // ---------------- 【 criminal record. 犯罪记录 n 】
+- > crime scene. 犯罪现场
+- > criminal record. 犯罪记录
+- **【 The 【 reporter 】 is making 【 real-time 】 【 criminal records 】 in the 【 crime scene 】. 记者在犯罪现场做着实时的犯罪记录 】**
+- // -- 【 real-time. 实时的 adj 】
+- // -- 【 real-time live broadcast. 实时直播 】
+-
+- [AA.]
+- `【 equally 相等地 同等地 adv 】`
+- **【 The 【 sense 】 of 【 vision 】 and 【 touch 】 is 【 equally 】 important. 视觉和触觉同等重要 】**
+- // -- _【 equally 相等地 同等地 adv 】_
+- // -- 【 make sense. 有道理 n 】
+- // -- 【 common sense. 常识 n 】
+-
+- [BB.]
+- `【 band aid. 创可贴 n 】`
+- `【 hearing aid. 助听器 n 】`
+- `【 first aid kit. 急救箱 n 】`
+- **【 There are 【 band aids 】 and 【 hearing aids 】 in the 【 first aid kit 】. 急救箱里有创可贴和助听器 】**
+-
+- [CC.]
+- `【 band aid. 创可贴 n 】`
+- `【 bandage 绷带 n 】`
+- `【 wrap wound. 包裹伤口 v 】`
+- `【 first aid kit. 急救箱 n 】`
+- **【 He uses the 【 band aid 】 and the 【 bandage 】 in the 【 first aid kit 】 to 【 wrap 】 the 【 wound 】. 他用急救箱中的创口贴和绷带包裹伤口 】**
+
+###### Must 2024-11-03
+
+- 1
+- `【 opinion 意见 观点 看法 n 】` // ------------- 【 in my opinion. 在我看来 / 我的意见是 】 // 【 public opinion. 舆论 n 】
+- `【 option 选项 选择 [选择权] n 】` // ---------- 【 exercise option. 行使选择权 】
+- `【 optional 可选的 adj 】` // ---------------- 【 optional course. 可选的课程 n 】 // courage 勇气 n
+- > 【 public opinion. 舆论 n 】
+- > 【 in my opinion. 在我看来 / 我的意见是 】
+- _【 exercise option. 行驶选择权 v 】_
+- _【 optional course. 可选课程 n 】_
+-
+- `【 onion 洋葱 n 】` // ----------------------- _【 onion ring. 洋葱圈 n 】_
+- `【 union 工会 联盟 n 】`
+- `【 opinion 意见 观点 看法 n 】` // ------------ 【 public opinion. 舆论 n 】 【 in my opinion. 在我看来 / 我的意见是 】
+-
+- [AA.]
+- `【 opinion 意见 观点 看法 n 】`
+- `【 union 工会 联盟 n 】`
+- `【 onion 洋葱 n 】` // ----------------------- 【 onion ring. 洋葱圈 n 】
+- **【 My 【 opinion 】 is that the 【 union 】 can't buy 【 onions 】. 我的观点是工会不能购买洋葱 】**
+-
+- [BB.]
+- `【 right 正确的adj 权利n 】`
+- `【 onion ring. 洋葱圈 n 】`
+- `【 right 权利 n 】`
+- **【 I have the 【 right 】 to choose to eat 【 onion rings 】. 我有选择吃洋葱圈的权利 】**
+- **【 Every 【 citizen 】 has the 【 right 】 to speak. 每个公民都有发言权 】**
+- // -- right 正确的 adj 权利 n
+
+###### Must 2024-11-04
+
+- 1
+- `【 dump 倒v 垃圾场n 】`
+- `【 dumpling 饺子 n 】` // --------------- 【 expired dumpling. 过期的饺子 n 】 【 make dumpling. 包饺子 n 】
+- `【 dumb 愚蠢的 哑的 adj 】` // ----------- 【 play dumb. 装傻 v 】 // **【 play dumb. 装傻 v 】**
+- `【 dumbbell 哑铃 n 】` // --------------- 【 lift dumbbell. 举哑铃 】 // dumbbell doorbell
+- `【 doorbell 门铃 n 】` // --------------- 【 ring doorbell. 按门铃 】 // doorbell dumbbell
+- > 【 play dumb. 装傻 v 】
+- > 【 lift dumbbell. 举哑铃 v 】
+- > 【 ring doorbell. 按门铃 v 】
+-
+- `【 stump 树桩 n 】` // ------------------ 【 tree stump. 树桩 n 】 // `【 stamp 邮票 n 】- stamp duty.印花税 ` _【 stump 树桩 n 】- tree stump.树桩_
+- `【 dump 倒v 垃圾场n 】`
+- `【 pump 抽水机n 注入v 】` // ------------- 【 gas pump. 加油机 n 】
+- `【 jump 跳 v 】` // --------------------- 【 jump the gun. 抢跑 v 】 【 jump the queue. 插队 】 // gun gunpowder powder
+- _【 jump the gun. 抢跑 v 】_
+- _【 jump the queue. 插队 】_ = cut in line. = cut in queue. = jump the line. = jump the queue.
+- // jump into. 跳进 v
+- // jump out. 跳出 v
+- // jump over. 跳过 v
+- > 【 gas pump. 加油机 n 】
+- > 【 cut in line. = cut in queue. = jump the line. = jump the queue. 插队 】
+- > 【 line up. = queue up. 排队 】
+- _【 gas tank. 油箱 n 】_
+- _【 gas cap. 邮箱盖 】_ // cap cup
+- _【 gas pump. 加油机 n 】_
+- _【 gas nuzzle. 加油抢 n 】_
+- _【 gas station. 加油站 】_
+- _【 gas pedal. 油门踏板 】_
+- _【 gas gauge. 油表 】_
+- _【 gas grade. 汽油等级 】_
+- > 【 tree stump. 树桩 n 】
+- > 【 charging pile. 充电桩 n 】
+- > charging cable. 充电线 n
+- > charging port. 充电口 n
+-
+- `【 damp 潮湿的 adj 】` // --------------------- _【 damp = humid = moist. 潮湿的 adj 】_
+- `【 stamp 邮票 n 】` // ----------------------- 【 stamp duty. 印花税 n 】 【 pay stamp duty. 交印花税 】 // 【 pay tax. 交税 n 】
+- `【 stump 树桩 n 】` // ----------------------- 【 tree stump. 树桩 n 】 // 【 charging pile. 充电桩 】
+- `【 swamp 沼泽 n 】`// --------------------- **【 【 swans 】 are swimming in the 【 swamp 】. 天鹅在沼泽里面游泳 】**
+- `【 swan 天鹅 n 】`
+- > 【 stamp duty. 印花税 n 】// ---------------- 【 pay stamp duty. 交印花税 】 //【 pay tax. 交税 n 】
+- > 【 pay stamp duty. 交印花税 】 // ----------- 【 pay tax. 交税 n 】
+- > 【 tree stump. 树桩 n 】
+- _【 damp = humid = moist 潮湿的 adj 】_
+- _【 damp weather. 潮湿的天气 】_ = humid weather. = moist weather.
+-
+- `【 pumpkin 南瓜 】` // ----------------------- 【 pumpkin porridge. 南瓜粥 n 】
+- `【 pump 抽水机n 注入v 】` // ------------------ 【 gas pump. 加油机 】
+- > 【 pumpkin porridge. 南瓜粥 n 】
+- > 【 gas pump. 加油机 n 】
+-
+- `【 doorbell 门铃 n 】` // -------------------- 【 ring doorbell. 按门铃 v 】
+- `【 dumbbell 哑铃 n 】` // -------------------- 【 lift dumbbell. 举哑铃 v 】
+-
+- [AA.]
+- `【 dump 倒 灌 倾泻 v 】`
+- `【 dumpling 饺子 n 】`
+- `【 dumb 愚蠢的 哑的 adj 】`
+- > trash can. 垃圾桶
+- **【 【 Dumping 】 the 【 unexpired 】 【 dumplings 】 into the 【 trash can 】 is 【 dumb 】. 把没有过期的饺子倒进垃圾桶是愚蠢的 】**
+- // -- unexpired 没有过期的 adj
+- // -- expiration time. 过期时间 n
+- // -- be about to expire. 即将过期
+- // -- trash can. 垃圾桶 n
+-
+- [BB.]
+- `【 dumb 愚蠢的 哑的 adj 】` // --------------- 【 play dumb. 装傻 v 】 // 【 dumbly 愚蠢地 adv 】
+- `【 dump 倒 灌 倾泻 v 垃圾场 n 】`
+- `【 dumpling 饺子 n 】` // ------------------- 【 expired dumpling. 过期的饺子 n 】
+- `【 tree stump. 树桩 n 】` // ---------------- 【 tree stump. 树桩 n 】
+- `【 pumpkin 南瓜 n  】` // ------------------- 【 pumpkin porridge. 南瓜粥 n 】
+- **【 After 【 dumping 】 the 【 tree stump 】,【 pumpkin 】， and 【 dumpling 】 into the 【 dump 】, he 【 jumped 】 into the water 【 dumbly 】. 他把树桩，南瓜，饺子倒进垃圾场后，愚蠢地跳进了水里 】**
+-
+- [CC.]
+- `【 play dumb. 装傻 v 】`
+- `【 tree stump. 树桩 n 】`
+- **【 He 【 played dumb 】 【 beside 】 the 【 tree stump 】. 他在树桩傍边装傻 】**
+- // -- beside 在...旁边
+- // -- next to. 在...旁边
+- // --【 next to. = beside. 在...旁边 】
+-
+- [DD.]
+- `【 lift dumbbell. 举哑铃 v 】`
+- `【 ring doorbell. 按门铃 v 】`
+- **【 He is 【 lifting dumbbells 】, not 【 ringing doorbell 】. 他在举哑铃，而不是在按门铃 】**
+-
+- [EE.]
+- `【 pumpkin porridge. 南瓜粥 n 】`
+- `【 stamp duty. 印花税 n 】`
+- `【 pay tax. 交税 v 】`
+- **【 【 Selling 】 【 pumpkin porridge 】 also need to 【 pay 】 【 stamp duty 】. 卖烂瓜粥也需要交印花税 】**
+- // -- pay tax. 交税 v
+- // -- stamp duty. 印花税 n
+- // -- 【 pay tax. 交税 v 】
+-
+- [GG.]
+- **【 The 【 sap 】 【 flowed 】 from the 【 tree stump 】 to th 【 tree bark 】. 树汁从树桩流向了树皮 】**
+
+###### Must 2024-11-05
+
+- 1
+- `【 resign 辞职 v 】` // ---------------------- resign VS quit // quit VS quite VS quiet
+- `【 resignation 辞职 n 】` // ----------------- 【 resignation application. 离职申请 n 】 【 resignation letter. 辞职信 n 】
+- > 【 resignation application. 离职申请 n 】// -- 【 application letter. 求职信 n 】= cover letter.
+- > 【 resignation letter. 辞职信 】 // --------- 【 anonymous letter. 匿名信 n 】 【 cover letter. 求职信 】
+- AA.
+- _【 liter 公升 升 n 】_
+- _【 litter 垃圾 n 】_
+- _【 letter 信 字母 n 】_ // --------------------【 resignation letter. 辞职信 】【 cover letter. 求职信 】【 anonymous letter. 匿名信 】【 capital letter. 大写字母 】
+- > 【 cover letter. 求职信 n 】 = application letter. 求职信
+- > 【 resignation letter. 辞职信 n 】
+- > 【 anonymous letter. 匿名信 n 】 // --------- 【 anonymous complaint. 匿名投诉 n 】 【 anonymous donation. 匿名捐赠 n 】
+- > 【 lowercase letter. 小写字母 n 】
+- > 【 uppercase letter. 大写字母 n 】= capital letter.
+- **【 in capital letters. 用大写字母 】**
+- **【 This 【 love letter 】 was written 【 in all capital letters 】. 这封情书全是用大写字母写的 】**
+- BB.
+- _【 anonymous 匿名的 adj 】_
+- > 【 anonymous donation. 匿名捐赠 n 】 // ------ 【 donate 捐赠 v 】 【 donation 捐赠 n 】
+- > 【 anonymous complaint. 匿名投诉 adj 】// ---- 【 complain 抱怨 投诉 v 】 【 complaint 抱怨 投诉 n 】 // anonymously complain. 匿名地投诉 v
+- > 【 anonymous letter. 匿名信 n 】 // ---------- 【 resignation letter. 辞职信 n 】 【 capital letter. 大写字母 n 】
+- > 【 anonymous voting. 匿名投票 n 】// --------- 【 anonymous voting system. 匿名投票系统 】
+- **【 We 【 anonymously vote 】 through the 【 anonymous voting system 】. 我们通过匿名投票系统进行匿名投票 】**
+- **【 Both 【 cover letters 】 and the 【 resignation letters 】 need to be written 【 as 】 【 anonymous letter 】. 求职信和离职信都需要写匿名信 】**
+- CC.
+- _【 complain 抱怨 投诉 v 】_
+- _【 complaint 抱怨 投诉 n 】_
+- > 【 anonymously complain. 匿名地投诉 v 】
+- > 【 anonymous complaint. 匿名的投诉 adj 】 // -- 【 customer complaint. 客户投诉 n 】 【 anonymous complaint. 匿名投诉 n 】 // 【 anonymous voting. 】
+- DD.
+- _【 vote 投票 v 】_
+- _【 elect 选举 v 】_ // ------------------------ elect VS select
+- **【 The 【 residents 】 are 【 voting 】 to 【 elect 】 the 【 president 】. 居民正在投票选举总统 】**
+-
+- `【 sigh 叹气 】` // --------------------------- 【 he sighed. 他叹了一口气 】
+- `【 sign 签名v 标志n 】` // --------------------- 【 sign a contract. 签合同 v 】 【 signature 签名 n 】
+- `【 assign 分配 指派 v 】` // --------------------【 assignment 任务 作业 n 】 // sign assign resign
+- `【 resign 辞职 v 】` // ------------------------【 resignation application. 离职申请 n 】 【 resignation letter. 辞职信 n 】
+- `【 assignment. 任务 分配 n 】` // ------------- _【 class assignment. 课堂作业 n 】_
+- `【 signature 签名 n 】` // --------------------- noun
+- > 【 class assignment. 课堂作业 n 】
+- **【 He 【 sighed 】 and then 【 signed 】 the 【 resignation letter 】. 他叹了一口气，然后在辞职信上签了字 】**
+-
+- `【 appoint 任命 指定 v 】`
+- `【 appointment 任命 指定 n 】`
+-
+- `【 assign 分配 v 】`
+- `【 assignment 分配 任务 作业 n 】` // ---------- 【 class assignment. 课堂作业 】
+-
+- `【 resign 辞职 v 】`
+- `【 resignation 辞职 n 】` // ------------------【 resignation application. 离职申请 n 】 【 resignation letter. 辞职信 n 】
+-
+- [AA.]
+- `【 sigh 叹气 v n 】`
+- `【 breath a sigh of relief. 松了一口气 n 】`
+- _【 breathe 呼吸 v 】_
+- _【 breath 呼吸 n 】_
+- **【 He 【 sighed 】 and then 【 signed 】 the 【 resignation letter 】. 他叹了一口气，然后在辞职信上签了字 】**
+- **【 After a busy day 【 at work 】, he 【 breathed a sigh of relief 】. 经过一天繁忙的工作，他舒了一口气 】**
+-
+- [BB.]
+- `【 resignation letter. 辞职信 n 】`
+- `【 assign 分配 指派 v 】`
+- `【 class assignment. 课堂作业 n 】`
+- **【 The 【 resignation letter 】 said that the boos 【 assign 】 too much 【 class assignment 】. 辞职信上说老板指派了过多的课堂作业 】**
+-
+- [CC.]
+- `【 cover letter. 求职信 n 】` = application letter.
+- `【 resignation letter. 辞职信 n 】`
+- `【 anonymous letter. 匿名信 n 】`
+- **【 Both 【 cover letters 】 and the 【 resignation letters 】 need to be written 【 as 】 【 anonymous letter 】. 求职信和离职信都需要写匿名信 】**
+- **【 We 【 anonymously vote 】 through the 【 anonymous voting system 】. 我们通过匿名投票系统进行匿名投票 】**
+-
+- [DD.]
+- `【 complain about. 投诉... 抱怨... v 】`
+- `【 anonymously complain. 匿名投诉 v 】` // ----- v
+- `【 anonymous complaint. 匿名投诉 n 】` // ------ n
+- `【 anonymous letter. 匿名信 n 】`
+- **【 We can 【 anonymously complain 】 【 about 】 the suppliers through the 【 anonymous letters 】. 我们可以通过匿名信匿名投诉供应商 】**
+- // -- complain about. 投诉...
+-
+- [EE.]
+- `【 customer complaint. 客户投诉 n 】`
+- `【 customer satisfaction. 客户满意 n 】`
+- **【 【 Customer complaints 】 【 are related to 】 【 customer satisfaction 】. 客户投诉和客户满意度有关 】**
+-
+- [FF.]
+- `【 sigh 叹气 v 】`
+- `【 sign 签名 v / 标志 符号 n 】`
+- `【 resignation letter. 离职信 n 】`
+- **【 He 【 sighed 】 and then 【 signed 】 the 【 resignation letter 】. 他叹了一口气，然后在辞职信上签了字 】**
+
+###### Must 2024-11-06
+
+- 1
+- `【 exploit 开发 开采 剥削 利用 v 】` // -------------- 【 exploit opportunity. 利用机会 】 【 seize opportunity. 抓住机会 】 【 cherish opportunity. 珍惜机会 】
+- `【 explode 爆炸 v 】` // --------------------------- 【 explosion sound. 爆炸声 n 】 【 The bomb exploded. 炸弹爆炸了 】
+- `【 explore 探险 v 】`
+- > 【 exploit the opportunity. 利用机会 】
+- > 【 seize opportunity. 抓住机会 】
+- > 【 cherish opportunity. 珍惜机会 】
+- > 【 fantastic opportunity. 极好的机会 】
+-
+- `【 explode 爆炸 v 】`
+- `【 explosion 爆炸 n 】` // -------------------------- 【 explosion sound. 爆炸声 n 】
+- `【 explosive. 爆炸的 adj 】` // --------------------- 【 explosive growth. 爆炸性增长 】 【 explosive material. 爆炸物 】 // 【 grow 生长 发育 长大 / growth 】
+- > 【 explosion sound. 爆炸声 n 】
+- > 【 explosive growth. 爆炸性增长 】
+- > 【 explosive material. 爆炸物 】
+- // TIPS: Pay attention to the pronunciation of the word 'explosion'. [explosion-爆炸-n] [explosion-sound.爆炸声-n]
+- AA.
+- _【 explosive material. 爆炸物 n 】_
+- _【 raw material. 原材料 n 】_
+- _【 building material. 建筑材料 n 】_ // -------------- _【 construction site. 建筑工地 】_ _【 construction cost. 建筑成本 】_
+- > constructor / construction
+- > 【 construction site. 建筑工地 n 】
+- > 【 construction cost. 建筑成本 n 】
+- BB.
+- _【 ingredient 原料 成分 n 】_
+- _【 material 材料 n 】_
+- > 【 common ingredient. 常见成分 n 】
+- > 【 active ingredient. 活性成分 n 】
+-
+- `【 capital 首都n 大写的adj 资本n 】` // ---------------- 【 capital letter. 大写字母 n 】 【 international capital. 国际资本 n 】
+- `【 capitalist 资本家n 资本注意点adj 】` // ------------- 【 capitalist country. 资本主义国家 n 】 【 socialist country. 社会主义国家 n 】
+- `【 socialist 社会主义者n 社会主义的adj 】` // ----------- 【 socialist country. 社会主义国家 n 】
+- _【 international capital. 国际资本 n 】_
+- _【 capital letter. 大写字母 n 】_ // ------------------ 【 resignation letter. 辞职信 n 】 【 anonymous letter. 匿名信 n 】
+- > 【 capitalist country. 资本主义国家 n 】
+- > 【 socialist country. 社会主义国家 n 】
+- // state/country/nation
+- // national/national flag./national anthem./national day./national assets.
+-
+- [AA.]
+- `【 exploit 剥削 利用 v 】`
+- `【 human weakness. 人性的弱点 n 】`
+- `【 capitalist. 资本家 n 】`
+- **【 【 Capitalists 】 【 exploit 】 the 【 human weakness 】 to 【 exploit 】 the workers. 资本家利用人性的弱点剥削工人 】**
+-
+- [BB.]
+- `【 explosion sound. 爆炸声 n 】`
+- `【 the explosion of the bomb. 炸弹爆炸 n 】`
+- **【 The 【 explosion sound 】 comes from the 【 explosion of the bomb 】. 这个爆炸声来自炸弹的爆炸 】**
+- // -- bomb. 炸弹
+-
+- [CC.]
+- `【 explosive growth. 爆炸性增长 】`
+- `【 construction site. 建筑工地 】`
+- `【 population 人口 】`
+- **【 The 【 explosive growth 】 of 【 population 】 【 causes 】 the 【 appearance 】 of the 【 construction sites 】. 人口爆炸性的增长导致建筑工地的出现 】**
+- // -- appearance 出现 n
+- // -- cause 引起 v
+
+###### Must 2024-11-07
+
+- 1
+- `【 hand 手n 交v 】` // -------------------- hand in. // hand in hand. // hand down. // shake hand. // wave hand.
+- `【 handrail 扶手 n 】` // ---------------- 【 handrail 扶手 VS handle 把手-手柄-处理 】 // 【 escalator 扶梯 】 // 【 rail 铁轨 n 】
+- `【 handle 把手n 处理v 手柄n 】` // --------- 【 handrail 扶手 VS handle 把手-手柄-处理 】
+- `【 handbag 手提包 n 】`
+- `【 handprint 手印 n 】` // -----------------【 fingerprint 指纹 n 】 【 footprint. 脚印 n 】 【 lip print. 唇印 n 】
+- `【 handwrite 手写 v 】`
+- `【 handmade 手工的 adj 】`
+- `【 handy 方便的 adj 】`
+- > 【 hand over. 交接 移交 转交 v 】 // ----- They 【 caught 】 the 【 robbers 】 and 【 handed them over 】 to the 【 police 】.
+- > 【 hand in. 上交 提交 v 】
+- > 【 hand in hand. 手牵手 adv 】 // -------- 【 hold your hand. 牵着你的手 】
+- > 【 hand down. 传下来 v 】
+- > 【 a handful of. 一把... 】
+- > 【 shake hand. 握手 v 】
+- > 【 wave hand. 挥手 v 】
+- > 【 hold your hand. 牵着你的手 】 // ----- **【 I want to 【 hold your hand 】 and go out together. 我想牵着你的手一起出去 】**
+- 【 hand grenade. 手榴弹 】
+- 【 handgun. 手枪 】
+- AA.
+- _【 a handful of. 一把 】_
+- **【 He 【 grabbed 】 【 a handful of 】 rice and put it into the 【 pot 】. 他抓了一把米到锅里 】**
+- // -- grab 抓住 v
+- // -- pot 锅 n
+- // -- pan 平底锅 n
+- BB.
+- _【 escalator 扶梯 】_ // ------------------ 【 take the escalator. 乘扶梯 】 【 handrail 扶手 n 】
+- _【 elevator 电梯 】_
+- > 【 take the escalator. 乘扶梯 】
+- // TIPS: Pay attention to the pronunciation of the word 'escalator'. [escalator-扶梯-n]
+- CC.
+- _【 fingerprint. 指纹 n 】_
+- _【 handprint. 手印 n 】_
+- _【 footprint. 脚印 n 】_
+- _【 lip print. 唇印 n 】_ // --------------- 【 lipstick 口红 n 】 【 lip balm. 唇膏 n 】
+- DD.
+- _【 lip print. 唇印 n 】_
+- _【 lip balm. 唇膏 n 】_
+- _【 lipstick 口红 n 】_
+-
+- `【 hand 手n 交v 】`
+- `【 palm 手掌 手心 n 】` // ----------------- 【 palm 手心 n 】 【 back of the hand. 手背 n 】
+- `【 wrist 手腕 n 】`
+- `【 finger 手指 n 】` // ------------------- 【 fingernail 手指甲 n 】 【 fingerprint 手印 n 】
+- `【 toe 脚趾 n 】` // ---------------------- 【 toenail 脚指甲 n 】
+- `【 fingerprint 指纹 n 】`
+- > 【 thumb 拇指 】
+- > 【 index finger. 食指 】= forefinger
+- > 【 middle finger. 中指 】
+- > 【 ring finger. 无名指 】
+- > 【 little finger. 小指 】
+-
+- `【 clap 鼓掌v 掌声n 】` // applause 掌声
+- `【 slap 扇耳光 v 】`
+- `【 sap 汁液 n 】`
+- > 【 applause 掌声 n 】
+- > 【 palm 手掌 】
+- _【 clap 鼓掌 n 掌声 n 】_
+- _【 applaud 鼓掌 v 】_
+- _【 applause 掌声 n 】_
+- 1.
+- **【 Please give me some 【 applause 】. 请给我一些掌声 】**
+- **【 Please give me some 【 clapping 】. 请给我一些掌声 】**
+- 2.
+- **【 I 【 applaud 】 you. 我为你鼓掌 】**
+- **【 I 【 clap 】 for you. 我为你鼓掌 】**
+- 3.
+- **【 【 Applause 】 【 broke out 】 here, because many 【 audience members 】 are 【 clapping 】 for the actor. 这里响起了掌声，因为很多观众正在给给这个演员鼓掌 】**
+- // -- break out. 爆发
+- // -- audience 观众 n
+- // --【 audience members. 观众 】
+-
+- [AA.]
+- `【 shake hand. 握手 v 】`
+- `【 hand in. 上交 v 】`
+- `【 hand in hand. 手牵手 adv 】`
+- **【 After 【 shaking hands 】, they 【 hand in 】 their homework 【 hand in hand 】. 他们握手后，手牵手去上交作业 】**
+- // -- homework is a uncountable noun.
+-
+- [BB.]
+- `【 handprint 手印 n 】`
+- `【 handle 把手-手柄-处理 】` // handle handrail // handrail escalator
+- `【 handbag 手提包 n 】`
+- **【 There are some 【 handprints 】 on 【 handle 】 of the 【 handbag 】. 手提包的扶手上有手印 】**
+-
+- [CC.]
+- `【 handrail 扶手 n 】`
+- `【 escalator 扶梯 n 】`
+- `【 grasp 抓住 v 】` // --------------------- gather 收集 聚集 v
+- **【 We need to 【 grasp 】 the 【 handrail 】 of the 【 escalator 】 to 【 ensure 】 our own 【 safety 】. 我们需要抓住扶梯扶手来保证自身安全 】**
+- // -- 【 safety reason. 安全原因 n 】
+- // -- 【 safety rope. 安全绳 n 】
+- // -- 【 ensure safety. 确保安全 v 】
+- // -- rope ripe
+- // -- ripe mature
+- // -- ripe fruit. 成熟的果实
+- // -- mature technology. 成熟的技术
+-
+- [DD.]
+- `【 handprint 手印 n 】`
+- `【 footprint 脚印 n 】`
+- `【 lip print. 唇印 n 】`
+- **【 His face 【 is covered with 】 【 handprints 】, 【 footprints 】, and 【 lip prints 】. 他的脸上布满了手印、脚印和唇印 】**
+-
+- [EE.]
+- `【 thumb 拇指 n 】`
+- `【 index finger. 食指 n 】`
+- `【 middle finger. 中指 n 】`
+- `【 ring finger. 无名指 n 】`
+- `【 little finger. 小指 n 】`
+- **【 The finger consists of the 【 thumb 】, 【 index finger 】, 【 middle finger 】, 【 ring finger 】, and 【 little finger 】. 手指由拇指，食指，中指，无名指，小指组成 】**
+-
+- [FF.]
+- `【 hold your hand. 牵着你的手 】`
+- `【 take elevator. 坐电梯 v 】`
+- **【 I want to 【 hold you hand 】 to 【 take the elevator 】 together. 我想牵着你的手一起去坐电梯 】**
+
+###### Must 2024-11-08
+
+- 1
+- `【 script 脚本 剧本 n 】` // ---------------- _【 film script. 电影剧本 】_ 【 scriptwriter 编剧 n 】 【 write script. 编写剧本 v 】
+- `【 decrypt 解密 v 】` // ------------------- 【 decryption algorithm. 解密算法 n 】
+- `【 encrypt 加密 v 】`
+- `【 encryption 加密 n 】` // ---------------- 【 encryption algorithm. 加密算法 n 】 【 greedy algorithm. 贪心算法 n 】 【 bubble sort algorithm. 】
+- `【 encrypted 加密的 adj 】` // ------------- 【 encrypted file. 加密的文件 n 】
+- > 【 encrypt 加密 v 】
+- > 【 encryption 加密 n 】// ----------------- 【 encryption algorithm. 加密算法 n 】 【 greedy algorithm. 贪心算法 n 】 【 bubble sort algorithm. 】
+- > 【 encrypted 加密的 adj 】// -------------- 【 encrypted file. 加密的文件 n 】
+- AA.
+- _【 algorithm 算法 n 】_
+- _【 encryption algorithm. 加密算法 】_
+- _【 greedy algorithm. 贪心算法 】_
+- _【 bubble sort algorithm. 冒泡排序算法 】_ // 【 blow bubble. 吹泡泡 v 】 // 【 bubble 泡 泡沫 n 】
+- _【 decryption algorithm. 解密算法 】_
+- > 【 blow bubble. 吹泡泡 v 】
+- BB.
+- _【 blow 吹 v 】_ // ------------------------ 【 blow bubble. 吹泡泡 v 】
+- _【 below 下面 adv / 下面 n / 在下面 prep 】_
+- _【 downstairs 在楼下 adv / 楼下 n / 楼下的 adj 】_
+- > 【 blow bubble. 吹泡泡 v 】
+-
+- `【 encode 编码 v 】` // -------------------- 【 encode video. 编码视频 v 】
+- `【 decode 解码 v 】`
+-
+- `【 cipher 密码 暗号 n 】`
+- `【 code 代码 暗号 n 】`
+- `【 password 密码 n 】`
+-
+- [AA.]
+- `【 encrypt 加密 v 】`
+- **【 The 【 sever 】 uses its own public_key to 【 encrypt 】 the file. 服务器用自己的公钥加密这个文件 】**
+-
+- [BB.]
+- `【 script 脚本 剧本 n 】`
+- `【 encrypted scrip. 加密的脚本 n 】`
+- `【 automatically 自动地 adv 】`
+- **【 This 【 encrypted script 】 【 is used to 】 【 automatically 】 write 【 scripts 】. 这个加密的脚本用于自动地编写剧本 】**
+- // automatically 自动地 adv
+-
+- [CC.]
+- `【 encryption algorithm. 加密算法 n 】`
+- `【 greedy algorithm. 贪心算法 n 】`
+- `【 encrypted file. 加密文件 】`
+- **【 The 【 encryption algorithm 】 used by these 【 encrypted files 】 is 【 greedy algorithm 】. 这些加密的文件用的加密算法是贪心算法 】**
+-
+- [DD.]
+- `【 blow bubble. 吹泡泡 】`
+- `【 downstairs. 在楼下prep / 楼下的adj / 楼下n 】`
+- **【 He is 【 blowing bubbles 】 【 downstairs 】. 他在楼下吹泡泡 】**
+-
+- [EE.]
+- **【 The 【 scriptwriter 】 is writing the script. 编剧正在写剧本 】**
+
+###### Must 2024-11-09
+
+- 1
+- `【 sweet 甜的 adj 】` // ------------------ 【 sweet sweat. 甜甜的汗水 】 【 sweet smile. 甜甜的笑容 】 【 sweet noting. 甜言蜜语 】 【 sweet dream. 好梦 】
+- `【 sweat 汗n 出汗v 】` // ----------------- 【 sweet sweat. 甜甜的汗水 】
+- `【 sweater 毛衣 n 】`
+- `【 wet 湿的adj 湿气n 打湿v 】`
+- `【 humid 潮湿的 adj = damp = moist 】` // - 【 humid weather. 潮湿的天气 】 【 humidifier 加湿器 】 // humid moist damp
+- `【 wear = put on. 穿上 】`
+- // humid moist damp stamp stump dump dumpling dumb dumbbell pump jump
+- > 【 sweet sweat. 甜甜的汗水 】
+- > 【 sweet simle. 甜甜的笑容 】
+- > 【 sweet nothing. 甜言蜜语 】
+- > 【 sweet dream. 好梦 】
+- AA.
+- _【 humidity 湿度 n 】_
+- _【 humid 潮湿的 adj 】_ // -----------------【 humid weather. 潮湿的天气 】 【 humidifier 加湿器 】 // humid moist damp
+- _【 moist 潮湿的 adj 】_
+- _【 damp 潮湿的 adj 】_ // ------------------ damp VS stamp // humid moist damp stamp stump dump dumpling dumb dumbbell pump jump
+- _【 humidifier 加湿器 n 】_
+- _【 humid weather. 潮湿的天气 n 】_
+-
+- `【 swan 天鹅 n 】`
+- `【 swamp 沼泽 n 】`
+- `【 swim 游泳 v n 】`
+- `【 swing 摆动v 秋千n 】` // ---------------- swing -> swung -> swung
+- // dump / dumpling / dumb / dumbbell / doorbell / stump / stamp / damp / jump / pump / pumpkin / swamp / swan
+- [2024-11-04](file:///Users/xiawu/work/personal/front-end/8-penetrate/4-ENGLISH/0-0-CLASSIFICATION/00-IELTS/IELTS-Must-20241101.md)
+-
+- [AA.]
+- `【 sweet 甜甜的 adj 】`
+- `【 sweat 汗水 n 】`
+- `【 wet 甜甜的 adj 】`
+- `【 sweet 甜甜的 adj 】`
+- `【 sweet 甜甜的 adj 】`
+- **【 The 【 sweet sweat 】 【 wetted 】 the 【 sweater 】. 甜甜的汗水打湿了毛衣 】**
+-
+- [BB.]
+- `【 sweet sweat. 甜甜的汗水 n 】`
+- `【 sweat 汗n 出汗v 】`
+- `【 sweater 毛衣 n 】`
+- > 【 put on. 穿上 v 】
+- **【 I 【 put on 】 the 【 sweater 】 which she 【 knitted 】 and 【 sweat 】 a lot of 【 sweet sweat 】. 我穿上她编织的毛衣，流了很多甜甜的汗水 】**
+- // -- put on. 穿上 = wear
+-
+- [CC.]
+- `【 sweet noting. 甜言蜜语 n 】`
+- `【 sweet smile. 甜甜的笑容 】`
+- **【 His 【 sweet nothing 】 made her shows a 【 sweet simle 】. 他的甜言蜜语使她露出了甜甜的笑容 】**
+-
+- [DD.]
+- `【 swan 天鹅 n 】`
+- `【 swamp 沼泽 n 】`
+- **【 【 swans 】 are swimming in the 【 swamp 】. 天鹅在沼泽里面游泳 】**
+-
+- [EE.]
+- `【 humid 潮湿的 adj 】` =
+- `【 humidifier 加湿器 n 】`
+- **【 The 【 humid 】 weather doesn't need a 【 humidifier 】. 潮湿的天气不需要加湿器 】**
+-
+- [FF.]
+- `【 blown out by. 被吹出来 】`
+- `【 humid 潮湿的 adj 】` = moist = damp.
+- `【 humidifier 加湿器 n 】`
+- 【 condition 条件 】
+- 【 air conditioner. 空调 n 】
+- // TIPS: Pay attention to the pronunciation of the word 'condition'. [condition-条件-n]
+- .MT **【 In 【 humid weather 】, we don't need a 【 humidifier 】. 在潮湿的天气里，我们不需要加湿器 】**
+- **【 A 【 humidifier 】 can make the hot air 【 blown out by 】 the 【 air conditioner 】 become 【 humid 】. 加湿器可以让空调吹出的热风变得潮湿 】**
+
+###### Must 2024-11-11
+
+- 1
+- `【 cap 盖子 帽子 n 】` // -------------------- 【 baseball cap. 棒球帽 】 【 gas cap. 邮箱盖 】 // 【 cup VS cap 】
+- `【 caption 字幕 说明文字 n 】` // -------------- caption VS subtitle
+- `【 captain 船长 机长 n 】`
+-
+- `【 capital 首都n 大写的adj 资本n 】` // ------- 【 capital letter. 大写字母 】 【 international capital. 国际资本 】 // 【 capitalist country. 资本主义国家 n 】
+- `【 capsule 胶囊 n 】` // --------------------- capsule pill tablet
+- `【 capability 能力 n 】` // ------------------ capability VS ability
+- > 【 capital letter. 大写字母 】
+- > 【 international capital. 国际资本 】
+- > 【 capitalist country. 资本主义国家 】
+- > 【 socialist country. 社会主义国家 】
+- AA.
+- _【 capitalist 资本主义的 adj / 资本家 n 】_
+- _【 capitalist country. 资本主义国家 n 】_
+- _【 socialist country. 社会主义国家 n 】_
+- BB.
+- > 【 interest 兴趣 利息 利益 n 】
+- > 【 national interests. 国家利益 】
+- > 【 people's interest. 人民的利益 】
+- CC.
+- _【 nation / state / country 国家 】_
+- _【 national flag. 国旗 n 】_
+- _【 national anthem. 国歌 n 】_
+- _【 national assets. 国有资产 n 】_
+- _【 National Day. 国庆节 n 】_
+- _【 national interest. 国家利益 n 】_ // ------ interest 兴趣 利息 利益 n
+- **【 【 National assets 】 【 represent 】 【 national interests 】 and can not be 【 inherited 】. 国有资产代表着国家利益，不能被继承 】**
+- DD.
+- _【 letter 信 字母 n 】_
+- _【 in capital letters. 用大写字母 】_
+- > 【 capital letter. 大写字母 】= uppercase letter.
+- > 【 lowercase letter. 小写字母 】
+- > 【 resignation letter. 辞职信 n 】
+- > 【 cover letter. 求职信 n 】
+- > 【 love letter. 情书 n 】
+- **【 This 【 love letter 】 was written 【 in all capital letters 】. 这封情书全是用大写字母写的 】**
+-
+- `【 capacity 容量 产能 n 】` // --------------- 【 overcapacity 产能过剩 n 】
+- `【 opacity 不透明度 n 】`
+- `【 dosage 剂量 n 】`
+- > 【 overcapacity 产能过剩 n 】
+- > 【 capacity 产能 容量 n 】
+-
+- `【 cap 盖子 帽子 n 】` // -------------------- 【 baseball cap. 棒球帽 】 【 gas cap. 邮箱盖 】
+- `【 cup 杯子 】` // -------------------------- 【 a full cup of. 一满杯... 】
+-
+- [AA.]
+- `【 overcapacity 产能过剩 n 】`
+- `【 capitalist country. 资本主义国家 】`
+- **【 【 overcapacity 】 is a problem 【 faced by 】 【 capitalist countries 】. 产能过剩是资本主义国家面临的问题 】**
+-
+- [BB.]
+- **【 【 National assets 】 【 represent 】 【 national interests 】 and can not be 【 inherited 】. 国有资产代表着国家利益，不能被继承 】**
+
+###### Must 2024-11-12
+
+- 1
+- `【 badminton 羽毛球 n 】` // -------------------- 【 badminton court. 羽毛球场 n 】 【 badminton racket. 羽毛球拍 n 】 【 badminton match. 羽毛球比赛 n 】
+- `【 volleyball 排球 n 】` // --------------------- 【 volleyball coach. 排球教练 n 】 【 beach volleyball. 沙滩排球 】 【 volley 拦截 v 齐射 n 】
+- `【 baseball 棒球 n 】` // ----------------------- 【 baseball cap. 棒球帽 n 】 【 baseball bat. 棒球拍 n 】 // 【 meatball 肉丸 n 】
+- `【 tennis 网球 】`
+- `【 table tennis. 乒乓球 】`
+- > 【 badminton court. 羽毛球场 n 】 // ------------ 【 on badminton court. 在羽毛球场 】 // court 法庭 n 球场 n
+- > 【 badminton team. 羽毛球队 n 】
+- > 【 badminton coach. 羽毛球教练 n 】// ----------- [coach/coworker/cohabit/inhabit/coexist/cow/coward]
+- > 【 badminton player. 羽毛球运动员 n 】
+- > 【 badminton match. 羽毛球比赛 n 】 // ---------- 【 play a match. 打比赛 v 】 【 hold a match. 举行比赛 n 】 // 【 play a badminton match. 打羽毛球比赛 】
+- > 【 badminton racket. 羽毛球拍 n 】 // ----------- 【 racket VS bat 】 【 bat VS hat 】 // 【 bat 球拍 蝙蝠 】【 hat 帽子 】 // 【 baseball hat. 帮球拍 】
+- > 【 badminton club. 羽毛球俱乐部 n 】
+- 【 play a match. 打比赛 v 】
+- 【 hold a match. 举行比赛 v 】
+- _【 match 火柴 比赛 n / 匹配 v 】_
+- _【 court 法院 法庭 球场 n 】_
+- > 【 volleyball coach. 排球教练 n 】
+- > 【 volleyball player. 排球运动员 n 】
+- > 【 beach volleyball. 沙滩排球 n 】
+- _【 baseball cap. 棒球帽 n 】_
+- // TIPS: Pay attention to the pronunciation of the word 'badminton'. [badminton-羽毛球-n]
+- // TIPS: Pay attention to the pronunciation of the word 'tennis'. [tennis-网球-n]
+-
+- `【 soccer = football. = soccer ball. 足球  】`
+- `【 tennis = tennis ball. 网球 】`
+- `【 rugby 橄榄球 】`
+- `【 meatball 肉丸子 n 】`
+-
+- `【 bat 蝙蝠 球拍 n 】`
+- `【 bat = racket. 球拍 】`
+- `【 racket 球拍 VS rocket 火箭 】`
+- `【 bat 蝙蝠 球拍 VS hat 帽子 VS cap 盖子 帽子 VS cup 杯子 】`
+-
+- [AA.]
+- `【 badminton team. 羽毛球队 n 】`
+- `【 court 法院 球场 n 】`
+- `【 opponent 对手 v 】`
+- **【 The 【 opponent 】 that we 【 are matched with 】is the 【 badminton team 】 of the 【 court 】. 我们匹配到的对手是法院的羽毛球队 】**
+-
+- [BB.]
+- `【 badminton match. 羽毛球比赛 n 】`
+- `【 badminton court. 羽毛球场 n 】`
+- `【 opponent 对手 n 】`
+- `【 court 法院 球场 n 】`
+- **【 We and 【 opponents 】 have a 【 badminton match 】 on the 【 badminton court 】 of the 【 court 】. 我们和对手在法院的羽毛球场进行羽毛球比赛 】**
+-
+- [CC.]
+- `【 volleyball coach. 排球教练 n 】`
+- `【 volleyball player. 排球运动员 n 】`
+- `【 beach volleyball. 沙滩排球 n 】`
+- _【 on the beach. 在沙滩上 n 】_
+- **【 The 【 volleyball coach 】 and the 【 volleyball players 】 are playing the 【 beach volleyball 】 【 on 】 the beach. 排球教练和排球运动员正在沙滩打沙滩排球 】**
+-
+- [DD.]
+- `【 badminton court. 羽毛球场 】`
+- `【 badminton team. 羽毛球队 】`
+- `【 badminton coach. 羽毛球教练 】`
+- `【 badminton player. 羽毛球运动员 】`
+- `【 badminton match. 羽毛球比赛 】` // 【 play a badminton match. 打羽毛球比赛 】 【 hold a badminton match. 举行羽毛球比赛 】
+- `【 badminton racket. 羽毛球拍 】`
+- **【 The 【 badminton coach 】 and 【 badminton players 】 of this 【 badminton team 】 are 【 playing badminton match 】 【 with 】 the 【 badminton racket 】 on the 【 badminton court 】. 这个羽毛球队的羽毛球教练和羽毛球队员正在羽毛球场用羽毛球拍打羽毛球比赛 】**
+
+###### Must 2024-11-13
+
+- 1
+- `【 coworker 同事 n = colleague 】` // ------ 【 coworker VS colleague VS college 】
+- `【 coach 教练 n 】` // --------------------- 【 volleyball coach. 排球教练 n 】 【 badminton coach. 羽毛球教练 n 】
+- `【 cohabit 同居 v 】` // ------------------- 【 illegal cohabitation. 非法同居 】 【 cohabitation relationship. 同居关系 】// romantic/physical relationship.
+- `【 cooperate 合作 v 】`
+- `【 coexist 共存 v 】` // ------------------- 【 peacefully coexist. 和平相处 】 // 【 peaceful coexistence. 和平共处 n 】
+- AA.
+- _【 inhabit 居住于 栖息于 v 】_ // ---------- `【 cohabit/inhabit/inhibit/prohibit 】`
+- _【 cohabit 同居 v 】_ // ------------------ 【 illegal cohabitation. 非法同居 】 【 legal cohabitation. 合法同居 n 】
+- _【 cohabitation 同居 n 】_ // ------------- `【 illegal cohabitation. 非法同居 】` `【 cohabitation relationship. 同居关系 】` // romantic/physical relationship.
+- _【 in a cohabitation relationship. 处于同居关系中 】_
+- 【 illegal cohabitation. 非法同居 】// ------ 【 legal cohabitation. 合法同居 】
+- 【 illegal wealth. 非法财富 】
+- 【 cohabitation relationship. 同居关系 】
+- > 【 cohabitation relationship. 同居关系 】
+- > 【 romantic relationship. 恋爱关系 】
+- > 【 physical relationship. 肉体关系 】
+- > 【 stable relationship. 稳定的关系 】
+- _【 peacefully coexist. 和平地相处 adv 】_
+- _【 peaceful coexistence. 和平的相处 adj 】_
+-
+- `【 cow 母牛 】` // ------------------------- 【 cow 母牛 VS bull 公牛 VS calf 牛犊 】
+- `【 coward 胆小鬼 n 】`
+- > 【 ward / reward / award / coward / awkward = embarrassed / afterward / forward / backward 】
+- AA.
+- _【 cow 母牛 n 】_
+- _【 bull 公牛 n 】_ // ---------------------- 【 bull market. 牛市 n 】 【 bear market. 熊市 】 【 stock market. 股市 n 】
+- _【 calf 小牛 n 】_
+- _【 beef 牛肉 n 】_ // ---------------------- 【 beef steak. 牛排 】
+- > 【 beef steak. 牛排 n 】 // ---------------- steak 肉排 n
+- > 【 lamb chop. 羊排 n 】 -------------------- lamb 羔羊 n // chop 切碎 n // chopstick 筷子 n
+- // TIPS: Pay attention to the pronunciation to the word 'steak'. [steak-牛排-n]
+- // TIPS: Pay attention to the pronunciation to the word 'bull'. [bull-公牛-n] [bull-market-牛市] // bo
+- **【 The 【 bulls 】 were sold to the market and made into 【 beef steak 】. 公牛被卖到市场做成了牛排 】**
+- **【 The 【 stock market 】 can 【 be divided into 】 【 bull markets 】 and 【 bear markets 】. 股市有牛市和熊市之分 】**
+- // -- make into. 把...制成
+-
+- `【 cohabit 同居 v 】` // --------------------- 【 illegal cohabitation. 非法同居 】
+- `【 inhabit 居住在 栖息于 v 】`
+- > 【 settle 定居 v 】
+- > 【 reside 居住在 v 】
+- > 【 resident 居民 n 】
+- > 【 president 总统 n 】----------------------- 【 elect a president. 选举总统 】 // elect VS select
+- _【 inhabit 居住于 栖息于 v 】_
+- _【 inhibit 抑制 v 】_ // --------------------- 【 inhibit growth. 抑制生长 v 】
+- _【 prohibit 禁止 v 】_
+- _【 exhibit 展览 v 展览品 n 】_ // ------------- 【 exhibition 展览 n 】 【 exhibition hall. 展览馆 】 【 art exhibition. 艺术展览 】
+- AA.
+- _【 vote 投票 v 】_ // ------------------------ 【 anonymous voting. 匿名投票 n 】
+- _【 elect 选举 v 】_
+- > 【 anonymous complaint. 匿名投诉 】
+- > 【 anonymous donation. 匿名捐赠 n 】
+- > 【 anonymous voting. 匿名投票 n 】
+- > 【 anonymous letter. 匿名信 n 】
+- 【 anonymous letter. 匿名信 n 】
+- 【 cover letter. 求职信 】
+- 【 resignation letter. 辞职信 n 】
+- 【 capital letter. 大写字母 】
+- > 【 capital letter. 大写字母 】
+- > 【 uppercase letter. 大写字母 】
+- > 【 lowercase letter. 小写字母 】
+-
+-
+- // TIPS: Pay attention to the pronunciation of the word 'settle'. [settle-定居-v]
+- // TIPS: Pay attention to the pronunciation of the word 'worker'. [coworker-同事-n]
+- // TIPS: Pay attention to the pronunciation of the word 'elect'. [elect-选举-v]
+-
+- [AA.]
+- `【 coach 教练 n 】`
+- `【 cohabit 同居 v 】`
+- **【 【 Coaches 】 can't not 【 cohabit 】 【 with 】 players. 教练不能和球员同居 】**
+-
+- [BB.]
+- `【 cohabitation relationship. 同居关系 】`
+- `【 peacefully coexist. 和平地相处 】`
+- **【 The 【 Coach 】 and the player 【 in 】 【 cohabitation relationship 】 can not 【 peacefully coexist 】. 同居关系的教练和球员不能和平相处 】**
+-
+- [CC.]
+- `【 coworker 同事 n 】`
+- `【 coward 胆小鬼 n 】`
+- **【 My 【 coworker 】 is a 【 coward 】. 我的同事是胆小鬼 】**
+-
+- [DD.]
+- `【 badminton coach. 羽毛球教练 n 】`
+- `【 volleyball coach. 排球教练 n 】`
+- `【 coward 胆小鬼 n 】`
+- `【 dare 敢 v 】`
+- // dare to do sth. 敢做某事
+- **【 The 【 badminton coach 】 is a 【 coward 】 that he doesn't 【 dare to 】 【 cohabit 】 with the 【 volleyball coach. 】 羽毛球教练是一个胆小鬼，不敢和排球教练同居 】**
+-
+- [EE.]
+- `【 illegal cohabitation. 非法同居 n 】`
+- punish VS publish
+- **【 The 【 illegal cohabitation 】 means that you will be 【 punished by law 】. 非法同居意味着你们将受到法律的制裁 】**
+-
+- [FF.]
+- `【 bull 公牛 n 】`
+- `【 bull steak. 牛排 n 】`
+- `【 make into. 把...制成 v 】`
+- **【 The 【 bulls 】 were sold to the market and 【 made into 】 【 beef steak 】. 公牛被卖到市场做成了牛排 】**
+-
+- [GG.]
+- `【 stock market. 股票市场 n 】`
+- `【 bull market. 牛市 n 】`
+- `【 bear market. 熊市 n 】`
+- **【 The 【 stock market 】 can 【 be divided into 】 【 bull markets 】 and 【 bear markets 】. 股市有牛市和熊市之分 】**
+-
+- [HH.]
+- `【 resident 居民 n 】`
+- `【 president 总统 n 】`
+- `【 vote 投票 v 】`
+- `【 elect 选举 v 】`
+- **【 The 【 residents 】 are 【 voting 】 to 【 elect 】 a 【 president 】. 居民正在投票选举新的总统 】**
+
+###### Must 2024-11-17
+
+- 1
+- `【 subjective 主观的 adj 】` // -------------- 【 subjective thought. 主观想法 n 】 【 subjective feeling. 主观感受 】
+- `【 objective 客观的 adj 】` // --------------- 【 objective fact. 客观事实 n 】
+- _【 subject 主语 n 】_
+- _【 object 宾语 n 】_
+- > 【 subjective thought. 主观想法 n 】
+- > 【 subjective feeling. 主观感受 n 】
+- > 【 objective fact. 客观事实 n 】
+- // TIPS: Pay attention to the pronunciation of the word 'thought'. [thought-想法-n]
+-
+- `【 active 主动的 adj 】` // ------------------- 【 active voice. 主动语态 n 】
+- `【 passive 被动的 adj 】` // ------------------ 【 passive voice. 被动语态 n 】
+- _【 actively 主动地 adv 】_ // ----------------- 【 actively pursue. 主动追求 v 】
+- _【 passively 被动地 adv 】_ // ---------------- 【 passively accept. 被动接受 v 】
+- > 【 actively pursue. 主动追求 v 】
+- > 【 passively accept. 被动接受 v 】
+-
+- `【 ascend 上升 v 】` // ----------------------- 【 quickly ascend. 快速上升 v 】
+- `【 descend 下降 v 】` // ---------------------- 【 slowly descend. 缓慢下降 v 】
+- _【 float up. 上浮 v 】_
+- _【 sink down. 下沉 v 】_
+- // TIPS: Pay attention to the pronunciation of the word 'ascend'. [ascend-上升-v]
+-
+- `【 increase 增加 v n 】`
+- `【 decrease 减少 v n 】`
+-
+- `【 enlarge 放大 v 】`
+- `【 reduce 缩小 减少 v 】`
+-
+- `【 uppercase 大写字母 n 】` // ---------------- 【 uppercase letter. = capital letter. 大写字母 】
+- `【 lowercase 小写字母 n 】`
+- _【 uppercase letter. 大写字母 】_
+- _【 capital letter. 大写字母 】_
+- _【 cover letter. 求职信 】_
+- _【 resignation letter. 辞职信 】_
+- _【 anonymous letter. 匿名信 】_
+- _【 complaint letter. 投诉信 】_
+-
+- `【 advance 前进 v n 】` // -------------------- 【 in advance. 提前 】 `【 make an advance. 取得进展 】`
+- `【 retreat 后退 v n 】` // --------------------- treat VS retreat
+- `【 forward 前进的 前进地 】` // ---------------- 【 look forward to sth. 期待某事 】
+- `【 backward 后退的 后退地 】`
+- _【 in advance. 提前 】_
+- _【 make an advance. 取得进展 】_
+- > 【 look forward to sth. 期待某事 】 // --------【 We 【 look forward to 】 your reply. 期待你的回复 】
+-
+- `mood`: ---------------- happy sad
+- `thickness`: ----------- thick thin
+- `weight`: -------------- light heavy // ------ 【 a beam of light. 一束光 】 【 a bolt of lightning. 一道闪电 】 // 【 light 光 n 轻的 adj 】
+- `humidity`: ------------ wet/humid dry
+- // intensity
+- // density
+- // concentration
+- // brightness: ---------- bright dim/dark
+- // speed: --------------- fast slow
+- // length: -------------- long short
+- // width: --------------- wide narrow
+- // height: -------------- high low
+-
+- // TIPS: Pay attention to the pronunciation of the word 'ascend'. [ascend-上升-v]
+-
+- AA.
+- _【 in advance. 提前 adv 】_
+- _【 make an advance. 取得进展 】_
+- > 【 make an effort. 努力 】
+- > 【 make an appointment. 预约 】
+- BB.
+- _【 look forward to. 期待 】_
+- **【 We look forward to your reply. 我们很期待你的回复 】**
+- CC.
+- _【 battlefield 战场 n 】_
+- _【 battle 战斗 战争 战役 v n 】_
+- DD.
+- _【 light 光 n / 轻的 adj / 轻地 adv 】_
+- _【 a beam of light. 一束光 】_
+- _【 a bolt of lightning. 一道闪电 】_
+- **【 The beam of light 】 is 【 emitted 】 by both 【 high beam 】 and the 【 low beam 】. 这一束光来自一道闪电**
+-
+- [AA.]
+- `【 actively pursue. 主动追求 v 】`
+- `【 passively accept. 被动接受 v 】`
+- `【 rather than. 而不是... 】`
+- **【 We should 【 actively pursue 】 【 rather than 】 【 passively accept 】. 我们应该主动追求，而不是被动接受 】**
+-
+- [BB.]
+- `【 subjective thought. 主观想法 n 】`
+- `【 objective fact. 客观事实 n 】`
+- `【 rather than. 而不是... 】`
+- **【 This is your 【 subjective thought 】 【 rather than 】 an 【 objective fact 】. 这是你主观的想法，而不是客观事实 】**
+- **【 The 【 subjective feeling 】 can 【 generate 】 【 subjective thought 】. 主观感受会产生主观想法 】**
+-
+- [CC.]
+- `【 quickly ascend. 快速上升 v 】`
+- `【 slowly descend. 缓慢下降 v 】`
+- **【 The elevator 【 quickly ascended 】 to the 11th floor, and then 【 slowly descended 】 to the 1st floor. 电梯快速上升到了 11 楼，然后缓慢下降到 1 楼 】**
+-
+- [DD.]
+- `【 advance 前进 v n 】`
+- `【 retreat 后退 v n 】` // ----------------- treat VS retreat
+- `【 battlefield 战场 n 】`
+- `【 soldier 士兵 n 】`
+- **【 The 【 advance 】 and 【 retreat 】 of the 【 soldiers 】 should 【 be determined 】 【 according to 】 the situation 【 on 】 the 【 battlefield 】. 士兵的前进和后退需要根据战场的情况而定 】**
+- // -- determine. 决定 确定 v
+- // --【 battlefield 战场 】
+-
+- [EE.]
+- `【 break out. 爆发 v 】`
+- `【 battlefield 战场 n 】`
+- **【 The war 【 broke out 】 on a new 【 battlefield 】. 战争在新的战场爆发了 】**
+-
+- [FF.]
+- `【 look forward to sth. 期待某事 】`
+- **【 We 【 look forward to 】 your 【 reply 】. 我们很期待你的回复 】**
+-
+- [GG.]
+- `【 subjective feeling. 主观感受 n 】`
+- `【 subjective thought. 主观想法 n 】`
+- `【 generate 产生 生成 v 】`
+- **【 The 【 subjective feeling 】 can 【 generate 】 【 subjective thought 】. 主观感受会产生主观想法 】**
+- **【 This is your 【 subjective thought 】 【 rather than 】 an 【 objective fact 】. 这是你主观的想法，而不是客观事实 】**
+-
+- [HH.]
+- `【 float up. 上浮 v 】`
+- `【 sink down. 下沉 v 】`
+- > 【 while 当...时 / 于此同时 / 然而 】
+- **【 The light objects will 【 float up 】, 【 while 】 the heavy objects will 【 sink down 】. 轻的物体将会上浮，而重的物体将会下沉 】**
+-
+- [II.]
+- `【 a beam of light. 一束光 n 】`
+- `【 a bolt of lightning. 一道闪电 n 】`
+- **【 The 【 beam of light 】 comes from 【 a bolt of lightning 】. 这一束光来自一道闪电 】**
+-
+- [JJ.]
+- `【 enlarge 放大 v 】`
+- `【 reduce 缩小 减少 v 】`
+- **【 The image can be 【 enlarged 】 and 【 reduced 】. 这个图片可以放大和缩小 】**
+
+###### Must 2024-11-18
+
+- 1
+- `【 in turn. 依次地 adv 】` // ----------------- 【 one by one. = in turn. 依次地 adv 】
+- `【 in advance. 提前 adv 】`
+- `【 in depth. 深入地 adv 】`
+- `【 in detail. 详细地 adv 】`
+- `【 in earnest. 认真地 adv 】`
+- _【 one by one. 依次地 adv 】_ = in turn.
+-
+- `【 in public. 公开地 adv 】`
+- `【 in secret. 秘密地 adv 】`
+-
+- `【 in addition. 此外 adv 】` // --------------- 【 addition 加 添加 附加 n 】 VS 【 condition 条件 n 】 VS 【 tradition 传统 n 】
+- `【 in vain. 徒劳地 adv 】`
+- `【 in theory. 理论上 adv 】`
+-
+- `【 in summary. 总之 adv 】` // ----------------- 【 in summary. = in conclusion. 总之 adv 】
+- `【 in total. 总共 adv 】`
+- `【 in conclusion. 总之 adv 】`
+-
+- `【 in principle. 原则上 adv 】`
+- `【 in advance. 提前 adv 】`
+- **【 【 In principle 】, we cannot 【 permit handing in 】 【 examination papers 】 【 in advance 】. 原则上考试不允许提前交卷 】**
+- // -- 【 permit doing sth. 允许做某事 】
+-
+- `【 in fact. 事实上 adv 】`
+- `【 in a hurry. 匆忙地 忙 急 adv 】`
+-
+- `【 in particular. 尤其 adv 】`
+-
+- `【 in need. 需要 】`
+- **【 Please offer your seats to anyone 【 in need 】. 请给有需要的人让座 】**
+-
+- `【 in person. 亲自 】`
+- **【 This time, The 【 captain 】 【 gave the order 】 【 in person 】. 这次，船长亲自下达了命令 】**
+-
+- _【 in confusion. 疑惑地 adv 】_
+- > 【 looked confused. 看上去很疑惑 】
+- .MT **【 After 【 shaking hands 】, he 【 scratched his head 】 【 in confusion 】 then 【 shook his head 】. 握手后，他困惑的挠了挠头，然后摇了摇头 】**
+- .MT **【 He 【 shrugged his shoulders 】 【 in confusion 】. 他困惑的耸了耸肩 】**
+- **【 The students 【 looked confused 】. 学生们看上去一脸困惑 】**
+-
+- _【 in earnest. 认真地 adv 】_
+- **【 We discussed this topic 【 in earnest 】. 我们认真的讨论了这个话题 】**
+-
+-
+- `【 on purpose. 故意地 adv 】`
+- `【 not at all. 一点也不 】`
+-
+- AA.
+- _【 addition 加法 添加 附加 n 】_ // -------------- 【 in addition. 此外 adv 】
+- _【 condition 条件 状况 n 】_ // ----------------- 【 favorable condition. 有利条件 n 】
+- _【 tradition 传统 n 】_
+- > 【 favorable condition. 有利条件 n 】
+- BB.
+- _【 favorable 有利的 adj 】_ // ------------------ 【 favorable condition. 有利条件 n 】
+- _【 favorite 最喜欢的 adj 】_
+- > 【 favorable condition. 有利条件 n 】
+- CC.
+- _【 smooth 平滑的 光滑的 顺利的 adj 】_ // --------- 【 smooth pavement. 光滑的路面 n 】 【 smooth skin. 光滑的皮肤 n 】
+- _【 smoothly 平滑地 光滑地 顺利地 adj 】_ // ------- 【 smoothly reach. 顺利到达 v 】
+- > 【 smooth pavement. 光滑的路面 n 】
+- > 【 smooth skin. 光滑的皮肤 n 】
+- > 【 smoothly reach. 顺利到达 v 】
+- //【 pavement 人行道 路面 n 】
+- //【 sideway 人行道 n 】
+-
+- // TIPS: Pay attention to the pronunciation of the word 'depth'. [depth-深度-n]
+- // TIPS: Pay attention to the pronunciation of the word 'condition'. [condition-条件-n]
+- // TIPS: Pay attention to the pronunciation of the word 'vain'. [vain-徒劳地-adj]
+- // TIPS: Pay attention to the pronunciation of the word 'hurry'. [hurry-匆忙的-adj]
+- vain 徒劳的
+- van 面包车
+- // Throw away the chocolate, or your efforts to lose weight will be in vain. 扔掉那块巧克力，不然你未减肥所做的努力就白费了
+-
+- [AA.]
+- `【 analyze 分析 v 】`
+- `【 in turn. 依次地 adv 】`
+- `【 in depth. 详细地 adv 】`
+- `【 in advance. 提前 adv 】`
+- **【 Let's 【 analyze 】 the 【 following 】 questions 【 in turn 】 and 【 in depth 】. 让我们依次并深入分析下面这些问题 】**
+- **【 Please answer this question 【 in turn 】, not 【 in advance 】. 请依次回答这个问题，不要提前回答 】**
+- // -- 【 analyze 分析 v 】
+- // -- 【 analysis 分析 n 】
+- // -- 【 one by one. 依次地 adv 】 = in turn.
+-
+- [BB.]
+- `【 in depth. 深入地 adv 】`
+- `【 in detail. 详细地 adv 】`
+- `【 talk about. 谈论 讨论 v 】`
+- **【 Let's 【 talk about 】 this topic 【 in depth 】 and 【 in detail 】. 让我们深入并详细地谈论这个话题 】**
+-
+- [CC.]
+- `【 act 表演 行动 行为 】`
+- `【 in secret. 秘密地 adv 】`
+- `【 in public. 公开地 adv 】`
+- **【 They 【 act 】 【 in secret 】 and never 【 announce 】 【 in public 】. 他们秘密行动，从不公开宣布 】**
+- // -- 【 act 表演 行动 行为 】
+- // -- 【 actor 演员 n 】
+- // -- 【 actress 女演员 n 】
+- // -- 【 take action. 采取行动 】
+- // ---- 【 announce 宣布 v 】
+- // -- 【 declare 声明 v】
+- // -- 【 declaration 声明 n 】
+- // ---- 【 define 定义 v 】
+-
+- [DD.]
+- `【 in addition. 此外 adv 】`
+- `【 in vain. 徒劳 adv 】`
+- `【 in theory. 理论上 adv 】`
+- **【 【 In addition 】, it is 【 in vain 】 to do so 【 in theory 】. 此外，理论上这样做是徒劳的 】**
+-
+- [EE.]
+- `【 in summary. 总之 adv 】` = in conclusion.
+- `【 in total. 总共 adv 】`
+- **【 【 In summary 】, we can fail three times 【 in total 】. 总之，我们一共可以失败 3 次 】**
+-
+- [FF.]
+- `【 in turn. 依次地 adv 】`
+- `【 in advance. 提前 adv 】`
+- **【 Please answer this question 【 in turn 】, not 【 in advance 】. 请依次回答这个问题，不要提前回答 】**
+- **【 Let's 【 analyze 】 the 【 following 】 questions 【 in turn 】 and 【 in depth 】. 让我们依次并深入分析下面这些问题 】**
+- **【 Let's 【 talk about 】 this topic 【 in depth 】 and 【 in detail 】. 让我们深入并详细地谈论这个话题 】**
+- // -- 【 analyze 分析 v 】
+- // -- 【 analysis 分析 n 】
+- // -- 【 one by one. 依次地 adv 】 = in turn.
+-
+- [GG.]
+- `【 in a hurry. 匆忙地 忙 急 adv 】`
+- `【 make decisions. 做决定 v 】`
+- **【 Please don't 【 make decisions 】 【 in a hurry 】. 请不要匆忙做决定 】**
+-
+- [HH.]
+- `【 in total. 总共 adv 】`
+- `【 episode 集 n 】`
+- `【 TV series. = TV drama. 电视剧 】`
+- **【 How many 【 episodes 】 of this 【 TV series 】 【 in total 】? 这部电视剧一共有多少集？ 】**
+-
+- [II.]
+- `【 in public. 公众地 】`
+- **【 You can't 【 insult 】 others 【 in public 】. 总之你不能当众辱骂他人 】**
+- // -- 【 insult 辱骂 v 】
+- // -- 【 consult 咨询 v 】// -------- 【 consult about sth. 咨询某事 】
+- // -- 【 result 结果 n 】
+- // -- 【 consequence 后果 n 】
+- // -- 【 consult about sth. 咨询某事 】
+-
+- [LL.]
+- `【 depth 厚度 n 】`
+- `【 deep 深的 】`
+- `【 shallow 浅的 】`
+- **【 We use 【 depth 】 to 【 measure 】 how 【 deep 】 or 【 shallow 】 something 【 is 】. 我们用深度来衡量某物是深还是浅 】**
+-
+- [MM.]
+- `【 not at all. 一点也不 】`
+- **【 It's 【 not 】 difficult to learn English well 【 at all 】. 学好英语一点也不难 】**
+- **【 He was 【 not happy at all 】 after 【 getting a promotion 】. 升职后他一点也不开心 】**
+- // -- promotion 提升 升职 促销 n
+- // -- promote 提升 升职 促销 v
+-
+- [NN.]
+- `【 go smoothly. 进行地顺利 v 】`
+- `【 smoothly 平滑地 光滑地 顺利地 adj 】`
+- `【 smooth 平滑的 光滑的 顺利的 adj 】`
+- **【 Did your exam 【 go smoothly? 】 你的考试还顺利吗？ 】**
+- **【 He 【 got through 】 the 【 hardest 】 【 period 】 【 smoothly 】, and pass the exam 【 smoothly 】. 他顺利度过了最艰难的时期，顺利通过了考试 】**
+- // -- 【 get through. 熬过 通过 v 】
+- // -- period 时期 n
+- // -- stage 阶段 n
+-
+- [OO.]
+- `【 smooth pavement. 光滑的路面 n 】`
+- `【 reach smoothly. 顺利到达 v 】`
+- > 【 finish line. 终点线 n 】
+- **【 He ran across all the 【 smooth pavements 】 and reached the 【 finish line 】 【 smoothly 】. 他跑过所有光滑的路面，顺利到达了终点 】**
+-
+- [PP.]
+- `【 smooth skin. 光滑的皮肤 n 】`
+- `【 favorable condition. 有利条件 n 】`
+- **【 Her 【 smooth skin 】 is her 【 favorable condition 】. 她光滑的皮肤是她有利的条件 】**
+-
+- [QQ.]
+- `【 smooth pavement. 光滑的路面 n 】`
+- `【 smoothly reach. 顺利到达 v 】`
+- `【 finish line. 终点 n 】`
+- **【 The 【 smooth pavement 】 helped him to 【 smoothly reach 】 the 【 finish line 】. 光滑的路面使他顺利到达了终点 】**
+-
+- [RR.]
+- `【 in confusion. 疑惑地 adv 】`
+- `【 scratch head. 挠头 v 】`
+- **【 He 【 scratched 】 his head 【 in confusion 】. 他疑惑地挠了挠头 】**
+
+###### Must 2024-11-19
+
+- 1
+- `【 break out. 爆发 v 】`
+- `【 break in. 闯入 v 】`
+- `【 break up. 分手 解散 v 】` // ------------------ 【 break up. = split up. 分手 】 // 【 split open. 裂开 v 】
+- `【 break down. 分解v 崩溃v 故障n  】`
+- > 【 the war break out. 爆发战争 】
+- > 【 the disease break out. 爆发疾病 】
+- > 【 the conflict break out. 爆发冲突 】
+- > 【 the contradiction break out. 爆发矛盾 】
+-
+- `【 break up. 分手 v 】` = split up. // ----------- 【 split open. 裂开 v 】 【 split up. = break up. 分手 v 】
+- `【 breakup. 分手 n 】`
+-
+- _【 break out. 爆发 v 】_
+- _【 rush out of. 从...冲出去 】_
+- _【 call out. 喊 叫 v 】_
+- _【 speak out. 大声说 v 】_
+- **【 After the 【 conflict 】 【 broke out 】, he 【 rushed out of 】 the classroom and 【 called out 】 that someone 【 hit 】 him. 爆发冲突后，他从教室里冲出去大喊有人打他 】**
+- **【 She is 【 calling out 】 that someone has 【 fallen into 】 the water. 她大声呼叫有人掉水里了 】**
+- **【 Please 【 speak out 】, 【 instead of 】 【 calling out 】. 请大声说，而不是大声呼喊 】**
+- // -- 【 instead of. 代替 替换 】
+- // -- 【 replace 代替 替换 】
+- // -- 【 fall into. 掉进... 】
+-
+- `【 take a break. 休息一下 = take a rest.】`
+- > 【 take a break. we'll be right back 休息一下 马上回来 】
+-
+- 动词的 (过去式) : 用在 ( 一般过去时 ) 中
+- 动词的 (过去分词): 用在 ( 完成时 和 被动语态 ) 中
+- // -- have/have + V 的过去分词
+- // -- be + V 的过去分词
+-
+- [AA.]
+- `【 break out. 爆发 v 】`
+- `【 break in. 闯入 v 】`
+- **【 Before the 【 contradiction 】 【 broke out 】, She 【 broke in 】 my life. 矛盾爆发前，她闯进了我的生活 】**
+- // -- contradiction 矛盾
+- // -- social contradiction. 社会矛盾
+- // -- family contradiction. 家庭矛盾
+- // -- internal contradiction. 内部矛盾
+-
+- [BB.]
+- `【 break out. 爆发 v 】`
+- `【 at the same time. 同时 adv 】`
+- **【 The 【 contradiction 】 and the war 【 broke out 】 【 at the same time 】. 矛盾和战争同时爆发了 】**
+-
+- [CC.]
+- `【 break down. 崩溃v 分解v 故障n 】`
+- `【 break up. 分手 v 】`
+- **【 She 【 extremely 】 【 broke down 】 when she 【 broke up 】. 她分手时十分崩溃 】**
+- // -- 【 extremely 及其 adv 极端地 adv 】
+-
+- [DD.]
+- `【 break down. 崩溃v 故障n 分解v 】`
+- **【 It makes him 【 extremely 】 【 break down 】 that the car 【 breaks down 】. 车辆发生了故障令他十分崩溃 】**
+-
+- [EE.]
+- `【 physical conflict. 肢体冲突 】`
+- `【 break in. 闯入 v 】`
+- `【 break out. 爆发 v 】`
+- **【 The 【 thieves 】 【 broke in 】 the room and a 【 physical conflict 】 【 broke out 】. 小偷闯入了房间，爆发了肢体冲突 】**
+- // -- 【 thief 小偷 n 】
+- // -- 【 thieves 小偷 n 】
+- // -- 【 physical conflict. 肢体冲突 】
+-
+- [FF.]
+- `【 break out. 爆发 v 】`
+- `【 battlefield 战场 n 】`
+- `【 soldier 士兵 n 】`
+- `【 enemy -> enemies 敌人 】`
+- **【 After the war 【 broke out 】, the 【 soldiers 】 killed 【 enemies 】 【 on the battlefield 】. 爆发战争后，战士们在战场杀敌 】**
+-
+- [GG.]
+- `【 disease 疾病 n 】`
+- `【 break out. 爆发 v 】`
+- **【 After the war 【 broke out 】, the 【 disease 】 also 【 broke out 】. 爆发战争后，疾病也爆发了 】**
+-
+- [HH.]
+- `【 break up. 分手 v 】` = split up. 分手
+- `【 couple 夫妻 情侣 n 】`
+- `【 break out. 爆发 v 】`
+- **【 After the 【 contradiction 】 【 broke out 】, this 【 couple 】 【 broke up 】. 爆发矛盾后，这对情侣分手了 】**
+-
+- [II.]
+- `【 marriage 结婚 n 】` // marry 结婚 v
+- `【 divorce 离婚 v n 】`
+- `【 breakup. 离婚 n 】`
+- **【 after 【 marriage 】, this 【 is called 】 【 divorce 】, not 【 breakup 】. 结婚后，这叫离婚不叫分手 】**
+- // -- be called. 被称为...
+-
+- [JJ.]
+- `【 break up. 分手 v 】`
+- `【 take up. 占用 v 】`
+- **【 【 Breaking up 】 【 took up 】 some of my time. 分手占用了我一些时间 】**
+
+###### Must 2024-11-24
+
+- 1
+- `【 bankrupt 破产 倒闭 v 】` // ------------ 【 shut down. 关闭 停业 v 】 【 shut up. 闭嘴 】 // 【 shuttle bus. 班车 】
+- `【 erupt 喷发 v 】`
+- `【 corrupt 腐败的 adj 】` // -------------- 【 corrupt official. 腐败的官员 】
+- `【 interrupt 打断 中断  v 】` // ----------- 【 interrupt signal. 中断信号 】 【 interrupt dialog. 打断对话 】
+- _【 bankrupt 破产 倒闭 v 】_
+- _【 shot down. 关闭 停业 v 】_
+- _【 shut up. 闭嘴 v 】_
+- _【 shuttle bus. 班车 区间车 n 】_
+- > 【 corrupt official. 腐败的官员 n 】
+-
+- `【 interrupt 打断 中断 v 】` // ------------ 【 interrupt signal. 中断信号 】 【 interrupt dialog. 打断对话 】
+- `【 intercept 拦截 v 】` // ---------------- 【 intercept missile. 拦截导弹 v 】 【 intercept communication. 拦截通讯 v 】
+-
+- [AA.]
+- `【 corrupt 腐败的 adj 】`
+- `【 bankrupt 破产 倒闭 v 】`
+- > 【 corrupt official. 腐败的官员 n 】
+- **【 【 Corrupt officials 】 【 led 】 to the government 【 bankrupt 】. 腐败的官员导致政府破产 】**
+- // -- lead -> led 导致
+-
+- [BB.]
+- `【 erupt 喷发 v 】`
+- `【 volcanic eruption. 火山喷发 】`
+- `【 interrupt 打断 中断 v 】`
+- **【 The 【 storm 】 【 interrupted 】 the 【 volcanic eruption 】. 暴风雨中断了火山喷发 】**
+- // -- storm 暴风雨 n
+- // -- snowstorm 暴风雪 n
+-
+- [CC.]
+- `【 bankrupt 破产 倒闭 v 】`
+- `【 corrupt 腐败的 adj 】` // corrupt official. 腐败的官员
+- `【 corruption 腐败 n 】`
+- **【 The 【 bank 】 was 【 bankrupted 】 because of its employees' 【 corruption 】. 银行因为员工腐败而破产 】**

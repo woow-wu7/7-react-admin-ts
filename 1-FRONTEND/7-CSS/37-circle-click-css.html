@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* 1 */
+      /* 方式1 css方式 border-radius */
+      .root {
+        width: 300px;
+        height: 300px;
+        border-radius: 100%;
+        background: red;
+        border: 20px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="root">文字还是正方形的区域内现实，并不是圆形内</div>
+
+    <script>
+      // 方式1 css方式 border-radius
+      const root = document.querySelector(".root");
+      const onClick = () => {
+        console.log("click");
+      };
+      root.addEventListener("click", onClick, false);
+    </script>
+  </body>
+</html>

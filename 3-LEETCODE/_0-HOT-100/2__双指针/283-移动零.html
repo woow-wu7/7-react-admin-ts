@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>移动零 - Move Zeroes</title>
+  </head>
+  <body>
+    <script>
+      // 283. 移动零 Move Zeroes
+
+      // 题目
+      // 给定一个数组 nums，编写一个函数将所有 0 移动到数组的末尾，同时保持非零元素的相对顺序。
+      // 请注意 ，必须在不复制数组的情况下原地对数组进行操作。
+      // 请注意 ，必须在不复制数组的情况下原地对数组进行操作。
+      // 请注意 ，必须在不复制数组的情况下原地对数组进行操作。
+      // 请注意 ，必须在不复制数组的情况下原地对数组进行操作。
+
+      // 示例 1:
+      // 输入: nums = [0,1,0,3,12]
+      // 输出: [1,3,12,0,0]
+
+      // 示例 2:
+      // 输入: nums = [0]
+      // 输出: [0]
+
+      /**
+       * @param {number[]} nums
+       * @return {void} Do not return anything, modify nums in-place instead.
+       */
+
+      // leetcode
+      // 283. 移动零 https://leetcode.cn/problems/move-zeroes/
+
+      // 思路 1
+      // - 快慢指针
+      //  - 1. 快指针 是0，后移快指针
+      //  - 2. 快指针 不是0，将 ( 快指针-对应的值 ) 赋值给 ( 慢指针-对应的值 )，同时后移快慢指针
+      //  - 3. 快指针到了末尾，就将慢指针 - 对应位置的值，赋值0。直到末尾
+
+      // [0, 1, 0, 3, 12]
+      // fs
+      // s   f
+      // 1   X
+      //     s  f
+      //     s     f
+      //  1  3  s     f
+      //  1  3  12 s        f
+      //  1  3  12 0  0
+
+      // 1
+      var moveZeroes = function (nums) {
+        let fast = 0;
+        let slow = 0;
+
+        const len = nums.length;
+
+        while (fast < len) {
+          if (nums[fast] === 0) fast++; // aa. 为0，后移快指针
+          else {
+            // bb. 不为0，赋值给慢指针，后 快慢指针都后移
+            // principle:
+            nums[slow] = nums[fast];
+            fast++;
+            slow++;
+          }
+        }
+
+        // 快指针遍历完，将慢指针后面的都赋值为0即可
+        for (let i = slow; i < len; i++) {
+          nums[i] = 0;
+        }
+
+        return nums;
+      };
+
+      // --------------------------------------------------------------------------------
+      // --------------------------------------------------------------------------------
+      // 2
+      var moveZeroes2 = function (nums) {
+        // j 是为了delete0后，又push0，导致会无限遇到0，所以我们遍历的次数只能是 nums.length 次
+        let j = 0;
+        const len = nums.length;
+
+        for (let i = 0; i < len; i++) {
+          j++;
+          if (j < len && nums[i] === 0) {
+            nums.splice(i, 1);
+            nums.push(0);
+            i--;
+          }
+        }
+
+        return nums;
+      };
+
+      // 3
+      // var moveZeroes = function(nums) {
+      //      nums.sort((a,b) => b? 0: -1)
+      // };
+
+      // 4
+      // var moveZeroes = function(nums) {
+      //     let count = 0
+      //     for(let i = 0; i < nums.length; i++) {
+      //         if (nums[i] === 0) {
+      //             count++
+      //             nums.splice(i, 1)
+      //             i = i -1;
+      //         }
+      //     }
+      //     const arr = new Array(count).fill(0)
+      //     return nums.push(...arr)
+      // };
+    </script>
+  </body>
+</html>

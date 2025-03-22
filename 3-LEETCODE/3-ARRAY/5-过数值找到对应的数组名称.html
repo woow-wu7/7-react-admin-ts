@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 比如这个函数输入一个1，那么要求函数返回A
+      const A = [1, 2, 3];
+      const B = [4, 5, 6];
+      const C = [7, 8, 9];
+
+      function test(num) {
+        const map = {};
+
+        A.forEach((_, index) => (map[A[index]] = "A"));
+        B.forEach((_, index) => (map[B[index]] = "B"));
+        C.forEach((_, index) => (map[C[index]] = "C"));
+
+        return map[num];
+      }
+
+      const res = test(1);
+      const res5 = test(5);
+      console.log("res: ", res);
+      console.log("res5: ", res5);
+    </script>
+  </body>
+</html>

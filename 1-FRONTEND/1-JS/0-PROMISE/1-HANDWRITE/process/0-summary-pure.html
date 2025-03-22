@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Promise._all/_race/_retry summary.</title>
+  </head>
+  <body>
+    <script>
+      // English
+      // -
+      // succeed 成功 v
+      // success 成功 n
+      // successful 成功 adj
+      // -
+      // fail 失败 v
+      // failure 失败n 失败的人n
+      // failed 失败 adj / v过去式
+
+      // ------- ------- ------- ------- ------- ------- ------- ------- ------- ------- -------
+      // ------- ------- ------- ------- ------- ------- ------- ------- ------- ------- -------
+      // 1
+      // Promise._all
+      Promise._all = (parameters) => {
+        const res = [];
+        let count = 0;
+        return new Promise((resolve, reject) => {
+          const pList = Array.from(parameters);
+          pList.forEach((p, i) => {
+            Promise.resolve(p).then((value) => {
+              count++;
+              if (count === pList.length) resolve(res);
+              // res.push(value);
+              res[i] = value;
+            }, reject);
+          });
+        });
+      };
+      const p1 = new Promise((resolve) => setTimeout(() => resolve(3), 3000));
+      const p2 = new Promise((resolve) => setTimeout(() => resolve(1), 1000));
+      Promise._all([p1, p2]).then((value) => console.log("_all", value));
+      Promise.all([p1, p2]).then((value) => console.log("all", value));
+
+      // ------- ------- ------- ------- ------- ------- ------- ------- ------- ------- -------
+      // ------- ------- ------- ------- ------- ------- ------- ------- ------- ------- -------
+      // 2
+      // Promise._retry
+      Promise._retry = (fn, times) => {
+        let count = 0;
+        return new Promise((resolve, reject) => {
+          const retry = () => {
+            fn()
+              .then((value) => resolve(value))
+              .catch((err) => {
+                console.log("failure");
+
+                count++;
+                if (count === times) return reject(err);
+                retry();
+              });
+          };
+          retry();
+        });
+      };
+      const fetch = () =>
+        new Promise((resolve, reject) => {
+          setTimeout(() => {
+            return Math.random() - 0.9 > 0 ? resolve("success") : reject("failure");
+          }, 2000);
+        });
+      Promise._retry(fetch, 3).then(
+        (res) => console.log("finally succeed", res),
+        (err) => console.log("finally fail", err)
+      );
+
+      // ------- ------- ------- ------- ------- ------- ------- ------- ------- ------- -------
+      // ------- ------- ------- ------- ------- ------- ------- ------- ------- ------- -------
+      // 3
+      // Promise.race
+      // 静态方法
+      Promise._race = (list) => {
+        return new Promise((resolve, reject) => {
+          Array.from(list).forEach((_promise) => {
+            Promise.resolve(_promise).then(resolve, reject);
+          });
+        });
+      };
+      // 测试
+      const p11 = new Promise((resolve) => setTimeout(() => resolve(3), 3000));
+      const p22 = new Promise((resolve) => setTimeout(() => resolve(2), 2000));
+      const list33 = [p11, p22];
+      Promise.race(list33).then((values) => console.log(values));
+      Promise._race(list33).then((values) => console.log(values));
+    </script>
+  </body>
+</html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 单链表
+
+      // 为什么不把 NodeConstructor 放在 LinkedList 的外面？
+      // 因为可以内部维护，添加和删除时关注value本身
+      // function NodeConstructor(value) {
+      //   this.value = value; // 值
+      //   this.next = null; // 指针
+      // }
+
+      function LinkedList() {
+        // NodeConstructor 构造函数，用来生成节点
+        function NodeConstructor(el) {
+          this.el = el; // 值
+          this.next = null; // 指针
+        }
+        this.head = null; // 单链表头节点
+        this.length = 0; // 单链表长度
+
+        // 1
+        // append 在尾部添加节点
+        this.append = (el) => {
+          const node = new NodeConstructor(el);
+          if (!this.head) {
+            this.head = node;
+          } else {
+            let current = this.head; // 这里current和this.head都指向同一个引用，对象类型可以使用const
+            while (current.next) {
+              // head节点存在，不断通过next指针找到尾节点，尾节点next指向null
+              current = current.next;
+            }
+            current.next = node;
+          }
+
+          this.length++;
+        };
+
+        // 2
+        // find
+        this.find = (id) => {
+          let currentId = 0;
+          let current = this.head;
+          while (currentId < this.size()) {
+            if (currentId === id) {
+              return current;
+            }
+            currentId++;
+            current = current.next;
+          }
+        };
+
+        // 3
+        // findIndex indexOf 寻找链表中的节点
+        this.findIndex = this.indexOf = (el) => {
+          let current = this.head; // 缓存
+          let currentId = 0;
+
+          // 遍历所有节点，如果找到节点，就返回节点的id，否则继续向后寻找
+          while (currentId < this.size()) {
+            if (current.el === el) return currentId;
+            currentId++;
+            current = current.next;
+          }
+        };
+
+        // 4
+        // insert 插入节点
+        // 实现插入节点逻辑首先我们要考虑边界条件，如果插入的位置在头部或者比尾部位置还大，我们就没必要从头遍历一遍处理了，这样可以提高性能
+        this.insert = (position, el) => {
+          const node = new NodeConstructor(el);
+          let prevNode = null;
+          let currentNode = this.head;
+          let currentId = 0;
+
+          if (position >= 0 && position <= this.length) {
+            if (position === 0) {
+              node.next = currentNode; // 插入节点的next指向头节点
+              this.head = node; // 再重新赋值给头节点，则更新头节点，注意头插时一定要更新头节点，一半情况下不需要更新头节点
+            } else {
+              while (currentId < position) {
+                currentId++;
+                prevNode = currentNode;
+                currentNode = currentNode.next;
+              }
+              // 找到位置后
+              node.next = currentNode;
+              prevNode.next = node;
+              this.length++; // 插入完成后，length++
+              return true;
+            }
+          } else {
+            return false; // 不在链表的范围内，简单的处理成不做处理
+          }
+        };
+
+        // 5
+        // removeAt
+        // 移除指定位置的元素
+        // 移除指定位置的节点也需要判断一下边界条件，可插入节点类似，但要注意移除之后一定要将链表长度-1
+        this.removeAt = (position) => {
+          // position表示位置，是number类型
+          // 检测边界条件
+          if (position >= 0 && position < this.length) {
+            let prevNode = null; // 缓存当前节点，也可以理解为是当前节点的前一个节点
+            let current = this.head; // 当前节点
+            let currentIndex = 0; // 当前节点位置
+
+            if (position === 0) {
+              this.head = current.next; // 如果删除链表的第一个节点，则直接把第二个节点赋值给第第一个节点 ( head = head.next )
+            } else {
+              // 这里没有直接判断是不是最后一个，因为没有最后一个的标志位指针，还是要从头遍历 ( 即没有做这样的判断 position === length -1 )
+              while (currentIndex++ < position) {
+                prevNode = current;
+                current = current.next; // 不断重头往后遍历，知道找到position所在的节点
+              }
+              prevNode.next = current.next;
+              // 将 ( 要删除的节点的前一个节点的next ) 指向 ( 将要删除的节点的下一个节点 )
+              // 这里包含了最后一个节点的删除，当是最后一个节点时，current.next === null，prevNode.next = current.next = null 表达式也是成立的
+            }
+            this.length--; // 操作完成，长度-1
+            return current.el; // 返回删除的节点上的数据el
+          } else {
+            return null; // 随便返回一个值，表示没做任何操作，因为位置都不在链表上
+          }
+        };
+
+        // 6
+        // 移除指定节点
+        // 移除指定节点实现非常简单，我们只需要利用之前实现好的查找节点先找到节点的位置，然后再用实现过的removeAt即可
+        this.remove = (el) => {
+          let index = this.indexOf(el);
+          this.removeAt(index);
+        };
+
+        // 7
+        // 判断链表是否为空
+        // 只需要判断 length 是否为0，返回boolean
+        this.isEmpty = () => {
+          return this.length === 0;
+        };
+
+        // 8
+        // 将链表转化为数组返回
+        this.toArray = () => {
+          let current = this.head;
+          let resultList = [];
+          while (current.next) {
+            // 节点的next存在，就把el添加进数组，直到最后一个节点，最后一个节点的 ( lastNde.next = null )
+            resultList.push(current.el);
+            current = current.next; // 不断 next
+          }
+          // 注意尾节点的处理
+          resultList.push(current.el);
+          return resultList;
+        };
+
+        this.size = () => this.length;
+      }
+
+      const linkedList = new LinkedList();
+      linkedList.append(10);
+      linkedList.append(20);
+      linkedList.append(30);
+      linkedList.append(40);
+      console.log(`linkedList.indexOf(40)`, linkedList.indexOf(40));
+      console.log(`linkedList.length`, linkedList.length);
+      linkedList.insert(2, 800);
+      console.log(`linkedList.length`, linkedList.length);
+      console.log(`linkedList.findIndex(800)`, linkedList.findIndex(800));
+      console.log(`linkedList.findIndex(40)`, linkedList.findIndex(40));
+      linkedList.remove(10);
+      console.log(`linkedList.find(0)`, linkedList.find(0));
+      const arr = linkedList.toArray();
+      console.log(`arr`, arr);
+    </script>
+  </body>
+</html>

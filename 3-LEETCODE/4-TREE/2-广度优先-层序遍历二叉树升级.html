@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 广度优先遍历 BFS
+      // - Breadth First Search
+      // 102. 二叉树的层序遍历 - 给你二叉树的根节点 root ，返回其节点值的 层序遍历 。 （即逐层地，从左到右访问所有节点）。
+
+      // leetcode
+      // https://leetcode.cn/problems/binary-tree-level-order-traversal/
+
+      // 对比
+      // 102. 层序遍历
+      // 199. 右视图 = 层序遍历 + 过滤 每个数组成员的最后一个值
+      // 637. 层平均值 = 层序遍历 + 计算 每个数组成员的平均值
+      // 513. 左下角的值 = 层序遍历 + 找到 最后一层数组的第一个值
+
+      // 扩展
+      // 广度优先: 从做到右，从上到下
+      // 广度优先的两种题型:
+      //  - 2-广度优先-层序遍历二叉树.html
+      //  - 2-广度优先-层序遍历二叉树升级.html
+
+      // English
+      // -
+      // Breadth First Search 广度优先遍历 BFS
+      // Depth First Search 深度优先遍历 DFS
+      // -
+      // breadth 宽度 广度
+      // depth  深度
+      // -
+      // deep 深的 adj
+      // depth 深度 n
+      // -
+
+      /**
+       * Definition for a binary tree node.
+       * function TreeNode(val, left, right) {
+       *     this.val = (val===undefined ? 0 : val)
+       *     this.left = (left===undefined ? null : left)
+       *     this.right = (right===undefined ? null : right)
+       * }
+       */
+      /**
+       * @param {TreeNode} root
+       * @return {number[][]}
+       */
+
+      // 11
+      // 问题: 二叉树的层序遍历 - 给你二叉树的根节点 root ，返回其节点值的 层序遍历 。 （即逐层地，从左到右访问所有节点）
+      // leetcode: 102. 二叉树的层序遍历
+      // 举例: root, 最后要返回 [[1], [2, 5], [3, 4, 6, 7]]
+      // layer: 是层的意思
+
+      // 对比
+      // 102. 层序遍历
+      // 199. 右视图 = 层序遍历 + 过滤 每个数组成员的最后一个值
+      // 637. 层平均值 = 层序遍历 + 计算 每个数组成员的平均值
+      // 513. 左下角的值 = 层序遍历 + 找到 最后一层数组的第一个值
+
+      const root = {
+        val: 1,
+        left: {
+          val: 2,
+          left: {
+            val: 3,
+          },
+          right: {
+            val: 4,
+          },
+        },
+        right: {
+          val: 5,
+          left: {
+            val: 6,
+          },
+          right: {
+            val: 7,
+          },
+        },
+      };
+
+      // ------------------------------------------------------------------------------------
+      // ------------------------------------------------------------------------------------
+      // 1
+      // while
+      var levelOrder = function (root) {
+        if (!root) return []; // 边界，不然会出现 [undefined]，同时也保证下面对root对操作不会报错，题目中说明 输入：root = [] 输出：[]
+
+        const result = [];
+        const queue = [{ ...root, level: 0 }]; // 队列 push shift
+        // queue
+        // - level 是为了给每层添加数组 [[...], [...]]
+        // - level 必须从0开始，因为我们用了 res[level] = [] 来声明一个空数组
+
+        while (queue.length) {
+          const target = queue.shift(); // 弹出，这里必须从前面取，因为是从左到右push的，保证顺序 【 即队列是先进先出，改变原数组 】
+          const level = target.level;
+
+          if (!result[level]) result[level] = [];
+          result[level].push(target.val); // 注意这里 不能是else，因为新建数组后，要立即添加本层的值
+
+          // 注意，这里 target.left 一定要做判断，不然会无限 push，然后无限 while，死循环
+          if (target.left) queue.push({ ...target.left, level: level + 1 }); // 添加
+          if (target.right) queue.push({ ...target.right, level: level + 1 });
+        }
+
+        return result;
+      };
+      const res = levelOrder(root);
+      console.log("res: ", res);
+
+      // ------------------------------------------------------------------------------------
+      // ------------------------------------------------------------------------------------
+      // 2
+      // 递归
+      var levelOrder1 = function (root) {
+        if (!root) return [];
+
+        const result = [];
+        const queue = [{ ...root, level: 0 }];
+
+        function recursive() {
+          if (queue.length) {
+            const target = queue.shift();
+
+            // 声明
+            // 结果集中不存在该下标元素，就声明一个数组来表示第几层，收集该层的元素
+            if (!result[target.level]) result[target.level] = [];
+            result[target.level].push(target.val);
+
+            if (target.left)
+              queue.push({ ...target.left, level: target.level + 1 }); // 左子树入队，记得深度 +1
+            if (target.right)
+              queue.push({ ...target.right, level: target.level + 1 }); // 右子树入队，记得深度 +1
+
+            recursive(); // 递归，直到 queue 为空
+          }
+        }
+
+        recursive();
+
+        return result;
+      };
+
+      const res1 = levelOrder1(root);
+      console.log("res1: ", res1);
+    </script>
+  </body>
+</html>

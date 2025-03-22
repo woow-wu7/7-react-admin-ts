@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // ------------------------------------------------------
+      // 1
+      // 例1
+      // - 例子1不是很好，可以直接看例子2
+      var Singleton = function (name) {
+        this.name = name;
+        this.instance = null; // 这里有迷惑行为
+      };
+
+      Singleton.prototype.getName = function () {
+        alert(this.name);
+      };
+
+      Singleton.getInstance = function (name) {
+        // 注意:
+        // - 是: 这里的 this 指代的就是 Singleton 函数本身
+        // - 不是: 而不是指向的 Singleton 的实例
+        // - this.instance 是静态属性，而不是实例属性 // -- 静态属性中的 this.instance
+        if (!this.instance) {
+          this.instance = new Singleton(name); // ---- 实属性中的 this.instance
+        }
+        return this.instance;
+      };
+
+      var a = Singleton.getInstance("sven1");
+      var b = Singleton.getInstance("sven2"); // 该参数无效
+      console.log("a===b", a === b);
+      // a === b 是 true
+      // 因为 a 和 b 都是 Singleton 函数的静态属性 instance，而该 instance 属性的值是 new Singleton 生成的实例
+    </script>
+
+    <script>
+      // ------------------------------------------------------
+      // 2
+      // 例2
+      var Singleton2 = function (name) {
+        this.name = name;
+      };
+      Singleton2.instance = null;
+      Singleton2.getInstance = function () {
+        if (!Singleton2.instance) {
+          Singleton2.instance = new Singleton2("woow_wu7");
+        }
+        return Singleton2.instance;
+      };
+
+      var a2 = Singleton2.getInstance();
+      var b2 = Singleton2.getInstance();
+      console.log("a2===b2", a2 === b2);
+    </script>
+
+    <script>
+      // ------------------------------------------------------
+      // 3
+      // 例3
+      // 利用闭包实现单例模式
+      function Singleton3(name) {
+        // 构造函数, singleton: 单身, 注意：箭头函数不能作为构造函数，arguments，yeild命令
+        this.name = name;
+      }
+      Singleton3.getInstance = (() => {
+        let instance = null; // 闭包变量
+        return (name) => {
+          if (!instance) {
+            instance = new Singleton3(name);
+          }
+          return instance;
+        };
+      })(); // IIFE立即调用的函数表达式，注意小括号和中括号开头的前一条语句需要加分号，或者小括号中括号前加分号
+
+      const a3 = Singleton3.getInstance("A");
+      const b3 = Singleton3.getInstance("B"); // 这一次传参没用了
+      console.log("a3 === b3", a3 === b3); // true
+    </script>
+  </body>
+</html>

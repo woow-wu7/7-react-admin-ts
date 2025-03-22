@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 1
+      function a() {
+        "use strict";
+        console.log("this", this); // undefined
+        return this;
+      }
+      a();
+
+      // 2
+      function b() {
+        b = 123;
+        console.log("b", b); // 123
+        return b;
+      }
+      const resB = b();
+      console.log("resB", resB); // 123
+
+      // 3
+      console.log("NaN==NaN", NaN == NaN); // false
+      console.log("null==undefined", null == undefined); // true
+
+      // 4 ---------------- 做错了
+      var x = 100;
+      function c(
+        x = 1,
+        y = function () {
+          // 函数作用域是函数声明时所在的作用域，在 ( 执行上下文中 -> x是1 )
+          return x + 1;
+        }
+      ) {
+        var x = 5;
+        return y();
+      }
+      const res5 = c();
+      console.log("res5", res5); // 2
+
+      // 5
+      // ----------------- 做错了
+      // 问题：在html中用什么表示列表？用 dl
+      // 不是：ul ol
+
+      // 6
+      // ----------------- 做错了，粗心
+      const res6 = typeof Function.prototype === "function"; // true
+      console.log("res6", res6);
+
+      // 7
+      // 递归 1-100 的和
+      function recursive(value) {
+        if (value === 1) {
+          return 1;
+        }
+        return recursive(value - 1) + value;
+      }
+      const sum = recursive(6);
+      console.log("sum", sum);
+
+      // 8
+      // 如何遍历A节点的父节点的所有子节点
+      // A.parentElement.children -> 转数组遍历 -> HTMLCollection
+      // A.parentNode.childNodes -> 转数组遍历 -> NodeList
+    </script>
+  </body>
+</html>

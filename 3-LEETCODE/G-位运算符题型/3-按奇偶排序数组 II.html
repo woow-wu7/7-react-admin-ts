@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 922. 按奇偶排序数组 II
+
+      // 题目
+      // 给定一个非负整数数组 nums，  nums 中一半整数是 奇数 ，一半整数是 偶数 。
+      // 对数组进行排序，以便当 nums[i] 为奇数时，i 也是 奇数 ；当 nums[i] 为偶数时， i 也是 偶数 。
+      // 你可以返回 任何满足上述条件的数组作为答案 。
+
+      // 示例 1：
+      // 输入：nums = [4,2,5,7]
+      // 输出：[4,5,2,7]
+      // 解释：[4,7,2,5]，[2,5,4,7]，[2,7,4,5] 也会被接受。
+
+      // 示例 2：
+      // 输入：nums = [2,3]
+      // 输出：[2,3]
+
+      // 提示：
+      // 2 <= nums.length <= 2 * 104
+      // nums.length 是偶数
+      // nums 中一半是偶数
+      // 0 <= nums[i] <= 1000
+      //
+
+      // 进阶：可以不使用额外空间解决问题吗？
+
+      /**
+       * @param {number[]} nums
+       * @return {number[]}
+       */
+
+      // leetcode
+      // https://leetcode.cn/problems/sort-array-by-parity-ii/
+
+      // 对比
+      // 905. 按奇偶排序数组 https://leetcode.cn/problems/sort-array-by-parity/
+      // 剑指 Offer 21. 调整数组顺序使奇数位于偶数前面 https://leetcode.cn/problems/diao-zheng-shu-zu-shun-xu-shi-qi-shu-wei-yu-ou-shu-qian-mian-lcof/
+      // 922. 按奇偶排序数组 II https://leetcode.cn/problems/sort-array-by-parity-ii/
+
+      // 思路
+      // 1. 因为是 ( 一半奇数odd ) ( 一半偶数even )，所以我们可以用两个指针，odd 和 even 每次都增加 2，所以odd始终是奇数位置，even始终是偶数位置
+
+      var sortArrayByParityII = function (nums) {
+        let odd = 1; // 奇数位
+        const len = nums.length;
+
+        // even是偶数+2，是奇数就等待交换
+        for (let even = 0; even < len; even = even + 2) {
+          if ((nums[even] & 1) === 1) {
+            // odd是奇数+2，偶数则等待交换；注意 odd必须小于len
+            while ((nums[odd] & 1) === 1 && odd < len) {
+              odd = odd + 2;
+            }
+
+            // 此时，odd是奇数，even是偶数，并且odd是奇数位置，even是偶数位置
+            [nums[even], nums[odd]] = [nums[odd], nums[even]];
+          }
+        }
+
+        return nums;
+      };
+    </script>
+  </body>
+</html>

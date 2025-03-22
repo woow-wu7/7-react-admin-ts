@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 插入排序 - insert sort
+
+      // 类比: 打牌
+
+      // 扩展: 链表的插入排序
+      // 数组插入排序 - 本项目/3-LEETCODE/X-排序/3-插入排序.html
+      // 链表插入排序 - https://leetcode.cn/problems/insertion-sort-list/submissions/
+
+      // 过程
+      // 1. 将数组看成两个部分，一个有序数组(升序，则从后往前便利；降序则相反)，和一个无序数组
+      // 2. 有序数组 起始长度为 1
+      // 3. 每次依次从无序数组取出第一个值，和有序数组的最后一个比较，如果该值小于有序数组最后一个值，最后一个值向后移一位
+      // 4. 有序数组是从后往前依次比较的 ( 尾插 )，该循环需要满足的条件是 ( j>=0 && 该项值 > 无序数组拿出来比较的值 )
+      // 5. 当有序数组循环比较完后，j+1 的位置就是 ( 无序数组中拿出来的值需要插入到有序数组中的位置 )
+      // 6. 重复以上步骤
+
+      const arr = [1, 9, 4, 3, 8, 6, 5, 2, 7, 7, 7];
+
+      function insertSort(arr) {
+        // 无序数组 i 从 1 开始
+        // 无序数组 0 - i-1
+        for (let i = 1; i < arr.length; i++) {
+          const cache = arr[i]; // 这里缓存 cache，是因为  arr[j + 1] = arr[j]; 当 j 往后移动时，可能会占据 arr[i] 的位置
+          let j = i - 1; // 有序数组末尾
+
+          // 有序 - 后往前遍历
+          while (j >= 0 && arr[j] > cache) {
+            arr[j + 1] = arr[j]; // 后移
+            j--;
+          }
+
+          // 此时的 j 是不满足 while 条件循环的最后的 j
+          // 多在纸上画画
+          arr[j + 1] = cache; // 无序数组中取出比较的值，需要插入的位置
+        }
+
+        return arr;
+      }
+
+      const res = insertSort(arr);
+      console.log("res: ", res);
+    </script>
+  </body>
+</html>

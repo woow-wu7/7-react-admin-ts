@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script> -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <button @click="changeCount">点击修改data</button>
+      <p ref="countRef">{{count}}</p>
+
+      <br />
+      <br />
+      <button @click="changeCount2">点击修改ref响应式数据中的count2</button>
+      <p ref="count2Ref">{{count2}}</p>
+    </div>
+    <script>
+      // 1. 测试 watch 中的 flush 属性
+      // 2. 测试 watchEffect watchPostEffect watchSyncEffect
+      const { createApp, ref, watchEffect, watchPostEffect, watchSyncEffect } =
+        Vue;
+
+      const app = createApp({
+        data() {
+          return {
+            count: 1,
+          };
+        },
+        methods: {
+          changeCount() {
+            this.count = this.count + 1;
+          },
+          changeCount2() {
+            this.count2 = this.count2 + 1;
+          },
+        },
+        setup() {
+          const count2 = ref(2);
+
+          // 在 count2 依赖变化前，一会执行一次，同样获取的是更新前的DOM
+          watchEffect(function () {
+            console.log("watchEffect");
+            console.log(count2.value);
+          });
+
+          // 相当于 watch 添加 flush = 'post'
+          watchPostEffect(() => {
+            console.log("watchPostEffect");
+            console.log(count2.value);
+          });
+
+          return {
+            count2,
+          };
+        },
+        watch: {
+          count: {
+            handler(v) {
+              console.log("count", v);
+              // 1
+              // 更新前的DOM:
+              // - 默认情况，当同时触发 ( 组件更新 ) 和 ( 侦听器回调 ) 时，侦听器回调中访问的 DOM 将是被 Vue 更新之前的状态
+
+              // 2
+              // 获取更新后的DOM: flush = 'post'
+              console.log(
+                "this.$refs.countRef.innerHTML",
+                this.$refs.countRef.innerHTML
+              );
+            },
+            flush: "post", // 获取更新后的DOM
+          },
+        },
+      });
+      app.mount("#app");
+    </script>
+  </body>
+</html>

@@ -1,0 +1,1203 @@
+###### 2024-06-01
+
+- 1
+- `【 subtitle 字幕 副标题 】`
+- `【 caption 字幕 说明文字 】`
+-
+- `【 episode 集 一集 】`
+- `【 series 连续 系列 串联 】` // 【 series serious 】// 【 parallel 】// 【 a series of (test). 一些列(测试) 】
+- `【 TV series. 电视连续剧 】` // --- TV drama. = TV series. // `series` `parallel` `parallelogram`
+- `【 TV drama. 电视剧 】` // ------- TV drama. = TV series.
+- stay tuned. 继续收看 敬请关注
+-
+- > 【 series 连续 系列 串联 】
+- > 【 serious 严肃的 认真的 严重的 】
+-
+- `【 preface 前言 序言 】`
+- `【 chapter 章 篇章 章节 】`
+- `【 caption 字幕 说明文字 】`
+- // TIPS: pay attention to the pronunciation of the word 'caption'.
+- // TIPS: Pay attention to the different pronunciations between 'chapter' and 'caption'.
+-
+- `【 animation 动画 动画片 】`
+- `【 cartoon 卡通片 】`
+- // TIPS: Pay attention to the pronunciation of the word 'animation'. [animation]
+-
+- `【 cinema 电影院 n 】`
+- `【 movie theater. 电影院 n 】`
+- `【 movie 电影 】`
+-
+- `【 actress 女演员 】` // prince princess // headmaster headmistress // prince province
+- `【 actor 男演员 】`
+- `【 tractor 拖拉机 】`
+-
+- `【 act in. = act as. 扮演 】`
+- `【 participate in. 参加 】`
+-
+- `【 title 标题 】` // title // subtitle // caption
+- `【 preface 前言 序言 】`
+- `【 chapter 章节 】`
+-
+- `【 tale 故事n 讲述n 】` // ---【 fairy tale. 童话故事 】 // tale tail retail detail fail
+- `【 story 故事 情节 】`
+- `【 novel 小说 】`
+-
+- `【 tale 故事 】` // ---------【 fairy tale. 童话故事 】
+- `【 tail 尾巴 】` // ---------【 tail light. = brake light. 尾灯 】
+- `【 retail 零售 v n 】` // ---【 retail price. 零售价 】// 【 retail store. 零售店 】
+- `【 detail 细节 】` // ------- detail, detailed, in detail
+- `【 fail 失败v 】` // -------- fail failed failure // succeed successful success
+-
+- `【 fair 公平的 公正的 adj 】` //【 fair competition. 公平竞争 】 【 intense competition. 激烈的竞争 】
+- `【 fairy 仙女 精灵 】`
+- `【 fairy tale. 童话故事 】` // fairy tale. // love story.
+- `【 fairyland 仙境 】`
+- > 【 fair competition. 公平的竞争 】
+-
+- [AA.]
+- `【 caption. 字幕 文字说明 】`
+- `【 subtitle 字幕 子标题 】`
+- **【 I like to watch the 【 American 】 【 TV dramas 】 【 with 】 Chinese 【 subtitles / captions 】. 喜欢看中文【字幕】美剧 】**
+- **【 This 【 TV series 】 has 【 a total of 】 20 【 episodes 】. 这部连续剧一共有 20 集 】**
+- 1. **【 This 【 actress 】 【 participated in 】 this 20-episode 【 TV series 】. 这个女演员参演了这部 20 集的连续剧 】**
+- 2. **【 This 【 actress 】 【 participated in 】 a 【 50-episode 】 【 TV series 】, and 【 acted as 】 a 【 princess 】. 这个女演员参加了 50 集的连续剧，并扮演了公主 】**
+- // --【 a total of. 总共 】
+- // -- The company has【 a total of 】 200 【 employees 】. 公司总共有 200 名员工
+- // -- After graduation, I have had 【 a total of 】 four 【 work experiences 】. 毕业之后，我一共有四段工作经历
+-
+- [BB.]
+- `【 series 串联 系列 连续 】` // series serious // a series of test. 一系列测试
+- `【 parallel 平行的adj 并行的adj 纬线n 】`
+- `【 parallelogram 平行四边形 】`
+- _【 TV series. = TV drama. 电视剧 】_ // --- series 连续
+- _【 a series of test. 一系列测试 】_ // ----- series 系列
+- _【 series circuit. 串联电路 】_ // --------- series 串联
+- _【 parallel circuit. 并联电路 】_ // circuit 电路
+- _【 electric circuit. 电路 】_
+- 1. **【 【 Opposite 】 sides of a 【 parallelogram 】 are 【 parallel 】 to 【 each other 】. 平行四边形对边相互平行 】**
+- 2. **【 【 electric circuits 】 【 are divided into 】 【 series circuits 】 and 【 parallel circuits 】. 电路分为串联电路和并联电路 】**
+- // -- 【 each other. 相互 】
+- // -- 【 be divided into. 被分为... 被分成... 】
+- // -- 【 a series of test. 一系列测试 】
+-
+- [CC.]
+- `【 actor 男演员 】` // actor // tractor
+- `【 actress 女演员 】`
+- `【 prince 王子 】` // prince // province
+- `【 princess 公主 】`
+- `【 headmaster 男校长 】`
+- `【 headmistress 女校长 】`
+- `【 waiter 男服务员 】`
+- `【 waitress 女服务员 】`
+- `【 steward 空少 n  】`
+- `【 stewardess 空姐 n 】`
+- _【 act in. 扮演 】_
+- _【 act as. 扮演 】_
+- _【 participate in. 参加 】_
+- **【 This 【 actress 】 【 participated in 】 a 【 50-episode 】 【 TV series 】, and 【 acted as 】 a 【 princess 】. 这个女演员参加了 50 集的连续剧，并扮演了公主 】**
+-
+- [DD.]
+- `【 parallelogram 平行四边形 】` // parallel series
+- `【 diamond 菱形 砖石 】`
+- `【 trapezoid 梯形 】`
+- `【 triangle 三角形 】`
+- `【 rectangle 长方形 】`
+- `【 square 正方形 [ 广场 ] 】`
+- oval 椭圆形
+- circle 圆形
+- semicircle 半圆
+- `【 polygon 多边形 】`
+- `【 pentagon 五边形 】`
+- `【 hexagon 六边形 】`
+- sector 扇形
+- heart 心形
+- star 星形
+- `【 sphere 球 球体 】`
+- `【 cube 立方体 】` // --- cube cuboid
+- `【 cuboid 长方体 】`
+- `【 cylinder 圆柱 】`
+- `【 cone 圆锥 】`
+-
+- [EE.]
+- `【 tale 故事 】` // fairy tale.
+- `【 tail 尾巴 】`
+- `【 retail 零售 v n 】`
+- `【 detail 细节 】`
+- `【 fairy 仙女 小精灵 】` // fair // fairy
+- `【 Fairy tale. 童话故事 】`
+- `【 Fairyland. 仙境 】`
+- `【 tail light. = brake light. 尾灯 】`
+- _【 fog light. 雾灯 】_
+- _【 fairyland 仙境 n 】_
+- **【 This is a 【 fairy tale 】 【 about 】 【 tail 】. 这是一本关于尾巴的童话故事 】**
+- **【 Most little kids love to read 【 fairy tales 】. 很多小孩都喜欢童话故事 】**
+-
+- [FF.]
+- `【 episode 集 一集 】`
+- `【 TV series. 电视连续剧 = TV drama. 】`
+- `【 in total. 总共 】`
+- **【 How many 【 episodes 】 does this 【 TV series 】 have 【 in total 】? 这部连续剧一共有多少集？ 】**
+- **【 Do you still 【 remember 】 what the first 【 episode 】 of the 【 animation 】 【 talk about 】. 你还记得这本动画片第一集讲了什么吗？ 】**
+- // -- talk about. 谈论 讨论
+- // -- animation 动画
+- // -- 【 in total. 总共 】
+-
+- [GG.]
+- `【 serious 严肃的 认真的 严重的 】`
+- `【 series 连续 系列 串联 】`
+- // TV series. = TV drama. 连续剧
+- **【 He is a 【 serious 】 person who 【 is strict with 】 his students. 他是一个很严肃的人，对学生要求很严格 】**
+- **【 He 【 suffered from 】 a 【 serious 】 【 illness 】. 他患上了严重的疾病 】**
+-
+- [HH.]
+- `【 fair 公平的 adj 】`
+- `【 fairy 仙女 小精灵 】`
+- `【 fairy tale. 故事 】`
+- **【 In this 【 fairy tale 】, the 【 fairy 】 is a 【 fair 】 person. 在这个童话故事中，仙女是一个公平的人 】**
+-
+- [II.]
+- `【 retail 零售 】` // retail price. 零售价
+- `【 tail 尾巴 】` // tail light. 尾灯 = brake light
+- `【 tale 故事 】` // fairy tale. 童话故事
+- // detail 细节
+- **【 This 【 fairy tale 】 tells a story about a 【 retail store 】. 这个童话故事讲了关于一家零售店的故事 】**
+
+###### 2024-06-02
+
+- 1
+- `【 relieve 减轻 缓解 v 】` // 【 relieve pain. 缓解疼痛 】
+- `【 relive pain. 减轻疼痛 】`
+-
+- > 【 relieve 减轻 缓解 】
+- > 【 release 释放 发布 】
+-
+- `【 pressure 压力 】` -------- 物理压力
+- `【 stress 压力 】` ---------- 心理压力
+- `【 street 街道 】`
+- > press 压 按
+- > oppress 压迫 欺压
+- > pressure 压力
+-
+- `【 oppress 压迫 欺压 v 】` // oppression 压迫 n
+- `【 press 压 按 v 】`
+- `【 pressure 压力 】`
+- // TIPS: Pay attention to the pronunciation of the word 'oppress'.
+-
+- `【 anxious 焦虑的 adj 】`
+- `【 anxiety 焦虑 n 】`
+-
+- `【 nervous 紧张的 adj 】`
+- `【 tense 紧张的 adj 】`
+- `【 tension 紧张 n 】`
+-
+- `【 exam 考试 】`
+- `【 examination 考试 】` // examination = exam.
+-
+- `【 massage 按摩 v n 】`
+-
+- _【 relieve pain. 缓解疼痛 】_
+- _【 relieve stress. 缓解压力 】_ // relieve stress. = relieve pressure.
+- _【 relieve tension. 缓解紧张 】_
+-
+- _【 be anxious about sth. 对...感到焦虑 】_
+-
+-
+- [AA.]
+- `【 relieve 减轻 v 】`
+- `【 relieve pain. 缓解疼痛 】`
+- `【 prescribe 开处方 v 】`
+- `【 antibiotic 抗生素 】`
+- **【 I will 【 prescribe 】 some 【 antibiotics 】 to help you 【 relieve 】 the pain. 我会开一些抗生素来帮你缓解疼 】**
+- **【 If you 【 are anxious about 】 exam, you can 【 relieve stress 】 and 【 relieve tension 】 though 【 exercising 】. 如果你对考试感到焦虑，你可以通过运动来减少压力和缓解紧张 】**
+-
+-
+- [BB.]
+- `【 relieve 减轻 缓解 】`
+- `【 relieve stress. 减轻压力 】`
+- `【 relieve tension. 缓解紧张 】`
+- `【 be anxious about sth. 对...感到紧张 】`
+- **【 If you 【 are anxious about 】 exam, you can 【 relieve stress 】 and 【 relieve tension 】 though 【 exercising 】. 如果你对考试感到焦虑，你可以通过运动来减少压力和缓解紧张 】**
+- **【 Exercise can 【 relieve stress 】 and 【 relieve tension 】. 运动可以减轻压力和缓解紧张 】**
+-
+-
+- [CC.]
+- `【 press 压 按 v 】`
+- `【 oppress 压迫 欺压 v 】`
+- `【 oppression 压迫 n 】`
+- `【 pressure 压力 】`
+- **【 His 【 pressure 】 comes from the long-term 【 oppression 】. 他的压力来自于长期的压迫 】**
+
+###### 2024-06-05
+
+- 1
+- `【 island 岛 岛屿 】` // islander 岛上居民
+- `【 homeland 家园 祖国 】`
+- `【 fairyland 仙境 n 】` // fairy tale. 童话故事 // fair // fairy
+- `【 grassland 草原 】`
+- // TIPS: Pay attention to the pronunciation of the word 'island'.
+-
+- `【 Thailand 泰国 】`
+- `【 Poland 波兰 】`
+- `【 England 英格兰 英国 】`
+- `【 Switzerland 瑞士 】`
+- // TIPS: Pay attention to the pronunciation of the word 'poland'.
+-
+- `【 freelancer 自由职业者 】` // 【 freelance 自由职业的 adj 】
+- `【 full-time job. 全职 】`
+- `【 part-time job. 兼职 】` // 【 part-time job. = on the side. 兼职 】
+- `【 on the side. 兼职 】` // --【 part-time job. = on the side. 兼职 】
+- `【 odd job. 零工 】`
+- `【 look for a job. 找工作 】`
+- > 【 look for a job. 找工作 】
+- > 【 land a job 找到工作 】--- 结果
+- > 【 find a job 找到工作 】--- 过程
+-
+- `【 landlord 房东 业主 】` // middleman landlord. 二房东
+- `【 vacant land. 空地 】`
+- `【 landscape 景观 地形 】` // landscape mode. 横屏 // portrait mode. 竖屏
+- `【 landscaper 景观设计师 】`
+-
+- `【 bland 枯燥无味的 平淡的 adj 】`
+-
+-
+- [AA.]
+- `【 landlord 房东 业主 】`
+- `【 freelancer 自由职业者 】`
+- **【 My 【 landlord 】 is a 【 freelancer 】. 我的房东是一名自由职业者 】**
+- **【 【 Freelancer 】 don't need to 【 work on-site 】 in the 【 office 】. 自由职业者不需要在办公司现场办公 】**
+-
+-
+-
+-
+-
+-
+-
+-
+- 2
+- `【 fair 公平的 公正的 】` // fair competition.
+- `【 fairy 仙女 小精灵 】` // fairy = fair + y // fairy tale // fairyland
+- `【 fail 失败 v 】` // fail failed failure // succeed successful success
+-
+- `【 benign 良性的 】`
+- `【 malignant 恶性的 】`
+- `【 tumor 肿瘤 】`
+- `【 harm 伤害 损害 v n 】`
+-
+- `【 fairy tale. 童话故事 】`
+- `【 fairyland. 仙境 】`
+-
+- _【 fair competition. 公平的竞争 】_
+- _【 benign competition. 良性的竞争 】_
+- _【 malignant competition. 恶性的竞争 】_
+-
+-
+- _【 be divided into. 被分为... 】_
+-
+- **【 Competition 【 is divided into 】 【 benign competition 】 and 【 malignant competition 】. 竞争分为良性竞争和恶性竞争 】**
+-
+- **【 We need to 【 focus on 】 the 【 harm 】 【 of 】 【 malignant tumors 】 【 to 】 patients . 我们要关注恶性肿瘤对病人的伤害 】**
+-
+-
+- [AA.]
+- `fail 失败 v`
+- `failed 失败的 adj`
+- `failure 失败 失败的人n`
+- `succeed 成功 v`
+- `successful 成功的 adj`
+- `success 成功 n`
+- _【 succeed in doing sth. 成功做成某事 】_
+- 1. **【 He finally has【 succeeded in achieving 】 his goal. 最终成功地实现了他的目标 】**
+- 1. **【 I finally 【 succeeded in passing 】 the exam. 我终于成功通过了考试 】**
+- -
+- **【 If you persist, you will 【 succeed 】. 】** // --------- v -> 注意 will 后面接 动词
+- **【 If you persist, you will be 【 successful 】. 】** // --- adj
+- **【 If you persist, you will achieve 【 success 】. 】** // - n
+- -
+- **【 He is a very 【 successful 】 businessman .他是一个非常成功的商人 】**
+- **【 hard work is a key to 【 success 】. 努力工作是成功的关键 】** // the key to. ...关键
+- -
+- **【 As a 【 failure 】, I have a 【 failed 】 business experience. 做为一个失败者，我有一段失败的经商经历 】**
+- **【 【 failure 】 is the mother of 【 success 】. 失败是成功之母 】**
+- **【 The 【 probability 】 of 【 failure 】 is very low. 【失败】的【概率】很低 】**
+
+###### 2024-06-10
+
+- 1
+- `【 absorb 吸收 】`
+- `【 take in. 吸收 】`
+-
+- `【 release 释放 发布 排放 】`
+- `【 discharge 释放 排出 】` // charge charger discharge
+-
+- > 【 release 释放 发布 】
+- > 【 relieve 缓解 】
+-
+- `【 soil 土壤 】`
+- `【 oil 石油 】`
+- `【 natural gas. 天然气 】` // natural resource. // marine resource. // forest resource. // rare resource.
+- `【 extract 提取 提炼 v 】`
+- `【 mine 开采v 我的 地雷n 矿n 】` // 【 copper mine. 铜矿 】
+-
+- `【 air 空气 】`
+- `【 gas 气体】` // natural gas. 天然气
+- `【 hydrogen 氢气 】` ----------- H
+- `【 nitrogen 氮气 】` ----------- N
+- `【 oxygen 氧气 】` ------------- O
+- `【 carbon dioxide 二氧化碳 】` -- co2
+- `【 natural gas. 天然气 】`
+-
+- `【 natural gas. 天然气 】`
+- `【 natural resource. 资源资源 】`
+- `【 marine resource. 海洋资源 】`
+- `【 forest resource. 森林资源 】`
+- `【 rare resource. 稀有资源 】`
+- _【 mineral resource. 矿产资源 】_
+- `【 rare metal. 稀有金属 】`
+-
+- `【 metal 金属 】` // metal medal model module
+- `【 rare metal. 稀有金属 】`
+- `【 gold 金 金色 金色的 】`
+- `【 silver 银  】`
+- `【 copper 铜  】` // `copper mine. 铜矿`
+- `【 bronze 青铜  】`
+- `【 brass 黄铜  】`
+- `【 iron 铁 】`
+- `【 steel 钢 】` // steel steal
+- _【 copper mine. 铜矿 】_
+-
+- `【 metal 金属 】` // ------- rare metal.
+- `【 medal 奖牌 奖章 】` // -- gold medal. silver medal. bronze medal.
+- `【 model 模型 模特 】` // -- role model. box model. v-model.
+- `【 module 模块 】` // ----- open source module.
+- _【 open source module. 开源模块 】_
+- _【 open source code. 开源代码 】_
+- _【 source code analysis. 源码分析 】_
+- _【 main module. 主要模块 】_
+-
+- _【 form of. ...的形式 】_
+- _【 in the form of. 以...的形式 】_
+-
+- `【 element 元素 要素 】`
+- `【 nutrition 营养 n 】`
+-
+-
+- [AA.]
+- `【 absorb 吸收 】`
+- `【 take in. 吸收 】`
+- `【 release 释放 发行 】` // release relieve
+- `【 discharge 释放 排出 】`
+- 1. **【 Plants 【 absorb 】 water 【 from 】 the 【 soil 】 and 【 release 】 【 carbon dioxide 】 into the air. 植物从土壤中吸收水分，向空气中释放二氧化碳 】**
+- 2. **【 The 【 leaves 】 【 are used to 】 【 take in 】 sunlight, and the roots are used to 【 absorb 】 water. 叶子用来吸收阳光，根用来吸收水分 】**
+- 3. **【 【 electric eel 】can 【 discharge 】【 electricity 】 and use the 【 current 】 【 attack 】 smaller fish. 电鳗可以放电并利用电流攻击小鱼 】**
+- // -- `【 sth be used to do sth. 某物被用来做某事 】`
+- // -- `【 sb used to do sth. 过去常常做某事，但现在不做了 】`
+- // -- `【 sb be used to sth. 某人习惯于 某事 】`
+- // -- `【 sb be used to doing sth. 某人习惯于 做某事 】`
+- // -- I 【 used to get up 】 early. 我过去常常早起
+- // -- He 【 is used to getting up 】 early. 我习惯早起
+- // -- I have already been used to the noisy environment. 他已经习惯了噪杂的环境
+- // -- This tool 【 is used to 】 fix the car. 这个工具是用来修车的
+- //
+- // -- leaf -> leaves
+- //
+- // -- `attack 攻击`
+- // -- `attract 吸引`
+- //
+- // -- `electricity 电 电能`
+- // -- `current 电流n 当前的adj`
+- // -- `voltage 电压`
+- // -- **【 【 Electricity 】 is a great 【 consumption 】 for me every month. 每个月的电费对我来说是一笔很大的开销 】**
+- // -- **【 The 【 consumption 】 is 【 go over 】 the 【 budget 】. 消费超出预算 】**
+-
+-
+-
+- [BB.]
+- `【 soil 土壤 】`
+- `【 oil 油 石油 】`
+- `【 extract 提取 提炼 】`
+- **【 【 Oil 】 is 【 extracted 】 from the 【 soil 】. 石油是从土壤中提炼出来的 】**
+-
+-
+-
+- [CC.]
+- `【 air 空气 】`
+- `【 gas 气体 】`
+- `【 hydrogen 氢气 】`
+- `【 nitrogen 氮气 】`
+- `【 oxygen 氧体 】`
+- `【 carbon dioxide. 二氧化碳 】`
+- `【 natural gas. 天然气 】`
+- 1. **【 【 Hydrogen 】 can 【 burn 】 in 【 oxygen 】, and 【 generate 】 【 carbon dioxide 】. 氢气可以在氧气中燃烧，并生成二氧化碳 】**
+- 2. **【 【 organisms 】 【 rely on 】 【 oxygen 】 to survive. 生物依靠氧气活着 】**
+- 3. **【 The air 【 contains 】 nitrogen, oxygen, and carbon dioxide. 空气中含有氮气，氧气，二氧化碳 】**
+-
+-
+-
+- [DD.]
+- `【 metal 金属 】` // rare metal.
+- `【 medal 奖牌 】` // gold medal. silver medal. bronze medal.
+- `【 model 模型 模特 】` // --------- `【 role model. 榜样 】` `【 box-model. 盒子模型 】`
+- `【 module 模块 】` // open source module.
+- > 【 rare metal. 稀有金属 】
+- _【 gold medal. 金牌 】_
+- _【 silver medal. 银牌 】_
+- _【 bronze medal. 铜牌 】_ // copper bronze brass
+- > 【 role model. 榜样 】
+- > 【 box model. 盒子模型 】
+- _【 open source module. 开源模块 】_
+- 1. **【 This 【 medal 】 【 is made of 】 【 rare metal 】. 这个奖牌使用稀有金属制作的 】**
+- 2. **【 The course 【 consists of 】 ten 【 core modules 】 and five 【 optional modules 】. 】 课程有 10 个核心模块和 1 个可选模块**
+- // -- 【 be made of. 由...制成 】----- 看得出原材料
+- // -- 【 be made from. 由...制成 】--- 看不出原材料
+
+###### 2024-06-11
+
+- 1
+- `【 modest 谦虚的 adj 】`
+- `【 low-key. 低调的 adj 】`
+- `【 generous 慷慨的 adj 】`
+- `【 serious 严肃的 认真的 严重的 adj 】`
+-
+- `【 curiosity 好奇心 n 】`
+- `【 responsibility 责任 n 】`
+- `【 passion 激情 热情 n 】`
+-
+- `【 diligent 勤奋的 adj 】`
+- `【 generous 慷慨的 大方的 adj 】`
+- `【 modest 谦虚的 adj 】`
+- `【 calm 冷静的adj 使冷静v 】`
+-
+- `【 mature 成熟的adj 成熟v 】`
+- `【 steady 稳定的 稳重的 】`
+- `【 stable 稳定的 】`
+-
+- `【 upright 正直的 adj 】`
+- `【 optimistic 乐观的 adj 】`
+- `【 honest 诚实的 adj 】`
+- `【 kind 善良的 adj 】`
+- `【 brave 勇敢的 adj 】`
+- `【 confident 自信的 adj 】`
+- `【 sensitive 敏感的 adj 】`
+-
+-
+-
+- [AA.]
+- `【 mature 成熟的adj 成熟v 】` ----- 人和动物的成熟
+- `【 ripe 成熟的adj 】` ------------- 水果，庄稼的成熟
+- `【 steady 稳定的 稳重的 】`
+- `【 stable 稳定的 】`
+- **【 He is a 【 mature 】 and 【 steady 】 people. 他是一个成熟稳重的人 】**
+-
+-
+-
+- [BB.]
+- `【 calm 冷静的adj 使冷静v 】`
+- `【 calm down. 冷静 】`
+- _【 quarrel with sb. 和某人争吵 】_
+- **【 【 Calm down 】 first and don't 【 quarrel with 】 others. 你先冷静一下，不要和别人争吵 】**
+
+###### Must 2024-06-15
+
+- 1
+- `【 marry 结婚 v 】`
+- `【 marriage 婚姻 结婚 n 】` // ----【 marriage certificate. 结婚证 】 【 propose marriage. 求婚 】 // 【 divorce certificate. 离婚证 】
+- // TIPS: Pay attention to the pronunciation of the word 'marry'.
+-
+- `【 divorce 离婚 v n 】` // -------【 divorce certificate. 离婚证 】 【 divorce rate. 离婚率 】 `【 divorced 离婚的 adj 】`
+- `【 break up. 分手 v 】` // -------【 break up. 分手 打碎 解散 v 】
+-
+- `【 propose 求婚 v 】` // ------- `【 propose marriage. 求婚 】` 【 proposal 求婚 n 】// 【 pose 姿势 vn / propose / purpose / pursue 】
+- `【 purpose 目的 意图 n 】` // --- `【 on purpose. 故意的 adv 】`
+- `【 pursue 追求 追逐 v 】` // ------【 pursue happiness. 追求幸福 】 【 pursue dream. 追求梦想 】 【 pursue a goal. 追求目标 】 // pursue pursuit
+- _【 propose to sb. 向某人求婚 】_
+- _【 in depth. / in detail. / in turn. / in advance. / in public. / in secret. / in total. / on purpose. 】_
+- // TIPS: Pay attention to the pronunciation of the word 'propose'. [propose]
+- // TIPS: Pay attention to the pronunciation of the word 'purpose'. [purpose]
+- // TIPS: Pay attention to the pronunciation of the word 'pursue'. [pursue]
+- // TIPS: Pay attention to the different pronunciation between 'propose' and 'purpose'.
+-
+- `【 elope 私奔 v 】` // -----------【 slope 斜坡 n 】 【 elope 私奔 v 】 【 envelope 信封 n 】
+- `【 fiancee 未婚妻 n 】`
+- > 【 elope 私奔 v 】
+- > 【 slope 斜坡 n 】 // -----------【 slide 滑行 v / 滑梯 n 】 // 【 slide -> slid 】
+- > 【 envelope 信封 n 】
+-
+- `【 wedding 婚礼 n 】` // -------- 【 wedding photo. 结婚照 】// 【 take wedding photo. 拍婚纱照 】// 【 take selfie. 拍自拍照 】
+- `【 wedding dress. 婚纱 n 】`
+- `【 wedding ring. 婚戒 n 】`
+- `【 wedding photo. 结婚照 】`
+- `【 wedding anniversary. 结婚周年纪念日 】` // 【 anniversary 周年纪念日 】
+- > 【 hold a wedding. 举办婚礼 】
+- > 【 take a wedding photo. 拍婚纱照 】
+- > 【 take a photo. = take a picture. 拍照 】
+- > 【 take a selfie. 拍自拍照 】
+- > 【 take action. / take measure. / take notes. / take a break. / take a shower. / take a nap. / take over. / take up. / take out. / takeout. 】
+-
+- `【 groom 新郎 】` // --------------【 groomsman 伴郎 n 】 // ---- mushroom 蘑菇
+- `【 bride 新娘 】` // --------------【 bridesmaid 伴娘 n 】// ---- bridge 桥
+- `【 fiancee 未婚妻 n 】`
+- `【 widow 寡妇 】` //---------------【 window 窗户 】
+- `【 pregnant woman. 孕妇 n 】` // -- pregnant 怀孕的 // fragment 片段 // My wife is three months 【 pregnant 】. 我老婆怀孕 3 个月了
+- > 【 gynecologist 妇科医生 】
+- // TIPS: Pay attention to the pronunciation of the word 'fiancee'. [fiancee]
+- // TIPS: Pay attention to the pronunciation of the word 'pregnant'. [pregnant]
+-
+- `【 groomsman 伴郎 】` // groom
+- `【 bridesmaid 伴娘 】` // bride
+- `【 matchmaker 红娘 媒人 n 】`
+- `【 fairy 仙女 小精灵 】` // fair fairy fail tail tale // 【 fairy tale. 童话故事 】 【 fairyland 仙境 n 】
+- `【 fall in love at first sight. 一见钟情 】`
+- > 【 soulmate 灵魂伴侣 】
+- > 【 playmate 玩伴 】
+- > 【 teammate 队友 】
+- > 【 workmate = colleague. 同事 】
+- > 【 classmate 同学 】
+- > 【 roommate 室友 】
+- // TIPS: pay attention to the pronunciation of the word 'bridesmaid'.
+-
+- `【 womb 子宫 】` // ------------------- 生 born
+- `【 tomb 坟墓 = grave 】` // ----------- 死 die ----------------- 【 tomb = grave. 坟墓 】 【 grave / brave 】
+- `【 embryo 胚胎n 胚胎的 adj 】`// -------【 embryo stage. 胚胎阶段 】
+- `【 fetus 胎儿 】`
+- `【 infant 婴儿 n 】` // ---------------【 baby 婴儿 宝贝 】
+- > 【 womb 子宫 】
+- > 【 tomb 坟墓 】
+- > 【 bomb 炸弹 n 】` // ---------------- bomb / tomb / womb ----- 【 explode / explosion sound. 】
+- _【 brave vs grave 】_
+- _【 date of birth. 出生日期 】_
+- > 【 be born in. 出生于 】 //------------ 主动语态
+- > 【 die in. 死于 】 // ----------------- 主动语态
+- > 【 born (V) -> birth (N) 】 // ------ 【 birth rate. 出生率 】
+- > 【 die (V) -> death (N) 】 // ------- 【 death rate. 死亡率 】
+- **【 He 【 was born in 】 China，worked in 【 Germany 】 and 【 died in 】 America. 他出生在中国，工作在德国，死在美国 】**
+- // TIPS: Pay attention to th pronunciation of the word 'infant'. [infant]
+- // TIPS: Pay attention to th pronunciation of the word 'embryol'. [embryol]
+-
+- `【 miscarry 流产 v 】` -------- 意外流产 【 miscarry -> miscarriage 】
+- `【 abort 流产 中止 v n 】` ----- 主动流产 【 abort ----> abortion 】
+- // TIPS: Pay attention to the pronunciation of the word 'miscarry'.
+- // TIPS: Pay attention to the pronunciation of the word 'abort'.
+-
+- `【 honeymoon 蜜月 】` // 【 honey 蜂蜜 宝贝 】 【 bee 蜜蜂 】 // 【 go on a honeymoon. 度蜜月 】 【 go on a vacation. 休假 】
+- `【 Valentine's day. 情人节 】`
+- `【 wedding anniversary. 结婚周年纪念日 】` // anniversary 周年纪念日
+- > 【 go on a honeymoon. 度蜜月 】`
+- > 【 go on a vacation. 度假 】`
+- > 【 moon roof. 玻璃天窗 】
+-
+- `【 first love. = puppy love. 初恋 】` // puppy 小狗
+- `【 ex-girlfriend = former girlfriend. 前女友 】` // former 前者 以前的 adj
+- > ex 前任
+- > exes. 前任(复数)
+- > former 前者 以前的 adj
+- > latter 后者 较后的 adj
+-
+- `【 fetus 胎儿 n 】`
+- `【 infant 婴儿 n 】`
+- `【 teenager 青少年 n 】`
+- `【 adult 成年人 n 】`
+- `【 middle-aged person. 中年人 n 】`
+-
+- `【 grave 坟墓 】` = tomb
+- `【 brave 勇敢的 adj 】`
+- `【 bravery 勇敢 n 】`
+- > 【 lie in. 在于 】
+-
+- `【 marriage certificate. 结婚证 】`
+- `【 divorce certificate. 离婚证 】`
+-
+- `【 wedding photo. 结婚照 】`
+- `【 wedding anniversary. 结婚纪念日 】`
+- `【 marriage certificate. 结婚证 】`
+-
+- `【 stepfather 继父 】`
+- `【 father-in-law. 岳父 】`
+- `【 mother-in-law. 岳母 丈母娘 】`
+- // TIPS: Pay attention to the pronunciation of the word 'stepfather'.
+-
+- `【 selfie 自拍 】`
+- `【 selfie stick. 自拍杆 】`
+- `【 take selfie. 拍自拍照 】`
+- `【 wedding photo. 结婚照 】`
+-
+- `【 take photo. 拍照 】` = take picture.
+- `【 take selfie. 拍自拍照 】`
+- `【 take wedding photo. 拍结婚照 】`
+-
+- `【 record video. 录像 】`
+- `【 make a radio. 录音 】`
+-
+-
+- [-AA.]
+- `【 envelope 信封 n 】`
+- `【 elope 私奔 v 】`
+- `【 slope 斜坡 n 】`
+- **【 He 【 picked up 】 the 【 envelope 】, 【 ran down 】 the 【 slope 】 and prepared to 【 elope 】 【 with 】 his 【 fiancee 】. 他拿起信封，跑下斜坡，准备和他的未婚妻私奔 】**
+- // -- 【 pick up. 捡起 接人 v 】
+- // -- 【 fiancee 未婚妻 n 】
+-
+- [-BB.]
+- `【 propose 求婚 v 】`
+- `【 purpose 目的 n 】`
+- `【 pursue 追求 v 】`
+- > 【 pursue happiness. 追求幸福 】
+- > 【 pursue dream. 最求梦想 】
+- **【 The 【 purpose 】 of 【 proposing 】 is to 【 pursue happiness 】and 【 pursue dream 】. 求婚的目的是追求幸福和最求梦想 】**
+-
+- [-CC.]
+- `【 brave 勇敢 adj 】` ----- 【 bravely 勇敢地 adv 】
+- `【 grave 坟墓 n 】`
+- `【 courage 勇气 n 】`
+- `【 encourage 鼓励 v 】`
+- `【 discourage 阻碍 v 】`
+- **【 He 【 bravely 】 opened the 【 grave 】. 他勇敢地打开了坟墓 】**
+-
+-
+- [AA.]
+- `【 hold a wedding. 举办婚礼 】`
+- `【 marriage certificate. 结婚证 】`
+- 1. **【 after 【 obtain 】 the 【 marriage certificate 】, They prepare to 【 hold the wedding 】. 领完结婚证后，准备举办婚礼 】**
+- 2. **【 Would you like to 【 marry 】 me? 你愿意嫁给我吗？】**
+- 2. **【 I want to 【 marry 】 you. 我想娶你 】**
+- // -- 【 hold a wedding. 举报婚礼 】
+- // -- obtain 获得
+-
+-
+- [BB.]
+- `【 honeymoon 蜜月 】`
+- `【 wedding photo. 结婚照 】`
+- `【 go on a honeymoon. 度蜜月 】`
+- `【 take wedding photo. 照结婚照 】`
+- `【 marriage certificate. 结婚证 】`
+- `【 divorce certificate. 离婚证 】`
+- **【 They plan to 【 go on a honeymoon 】 after 【 taking wedding photos 】 and getting the 【 marriage certificate 】. 他们准备拍完结婚照和领到结婚证后，就去度蜜月 】**
+- // -- 【 take photo. = take picture. 拍照 】
+- // -- 【 take wedding photo. 拍婚纱照 】
+- // -- 【 go on a honeymoon. 度蜜月 】
+- // -- 【 go on a vacation. 度假 】
+-
+-
+- [CC.]
+- `【 break up. 分手 】` // break up. 分手 打破 解散
+- `【 divorce 离婚 】`
+- **【 This 【 divorced 】 【 couple 】 has 【 broken up 】 many times before. 这对离婚的夫妇之前分手过很多次 】**
+- **【 After【 breaking up 】, we shouldn't 【 keep in touch with 】 【 former girlfriend 】. 分手后，我们就不应该和前女友保持联系 】**
+- **【 After【 breaking up 】, should we still 【 keep in touch with 】 our 【 exes 】? 分手后，我们还应该和前任保持联系吗？ 】**
+- // -- divorced 离婚的 adj
+- // -- divorce 离婚 v
+- // ---- 【 break -> broke -> broken 】
+- // ---- 【 break up. 分手 打碎 解散 v 】
+-
+-
+- [DD.]
+- `【 pregnant 怀孕的 adj 】`
+- `【 miscarry 流产 v 】`
+- `【 miscarriage 流产 n 】`
+- `【 abort 中止 流产 v 】` // abortion 流产 n
+- **【 【 As long as 】 you are【 pregnant 】, There is 【 a risk of 】 【 miscarriage 】. 只要怀孕就有流产的风险 】**
+- // -- 【 as long as. 只要 】
+- // -- 【 a risk of. ...的风险 】
+-
+-
+- [EE.]
+- `【 ex-girlfriend. = former girlfriend. 前女友 】`
+- `【 first love. = puppy love. 初恋 】`
+- **【 She is my 【 former girlfriend 】 and also my 【 first love 】. 她是我的前女友也是我的初恋 】**
+- **【 After 【 breaking up 】, we shouldn't 【 keep in touch with 】 【 former girlfriend 】. 分手后，我们就不应该和前女友保持联系 】**
+-
+-
+- [FF.]
+- `【 ex-girlfriend. = former girlfriend. 前女友 】`
+- **【 After 【 breaking up 】, we shouldn't 【 keep in touch with 】 【 ex-girlfriend 】. 分手后，我们就不应该和前女友保持联系 】**
+- **【 She is my 【 former girlfriend 】 and also my 【 first love 】. 她是我的前女友也是我的初恋 】**
+- // -- 【 keep in touch with. 和...保持联系 】
+- // -- 【 break up. 分手 打碎 解散 v 】
+-
+-
+- [GG.]
+- `【 groom 新郎 】` // groom mushroom
+- `【 bride 新娘 】` // bride bridge
+- **【 The 【 groom 】 put the 【 wedding dress 】 on the 【 bride 】, put the 【 wedding ring 】 on her finger, and 【 held the wedding 】on the 【 wedding anniversary 】. 在结婚纪念日这天，新郎给新娘穿上了婚纱，带上了婚戒，举行了婚礼 】**
+- // -- wedding dress. 婚纱
+- // -- wedding ring. 婚戒
+- // -- wedding anniversary. 结婚纪念日
+- // -- hold wedding. 举行婚礼
+-
+-
+- [HH.]
+- `【 groomsman 伴郎 】` // groom
+- `【 bridesmaid 伴娘 】` // bride
+- `【 groom 新郎 】`
+- `【 bride 新娘 】`
+- **【 The 【 groom 】, 【 bride 】, 【 groomsman 】, 【 bridesmaid 】 and others 【 attended 】 the 【 wedding 】. 新郎，新娘，伴郎，伴娘等参加了婚礼 】**
+-
+-
+-
+- [II.]
+- `【 bride 新娘 】`
+- `【 pregnant woman. 孕妇 】`
+- `【 widow 寡妇 】`
+- `【 fairy 仙女 小精灵 】`
+- **【 If the 【 bride 】 can't become a 【 pregnant woman 】, she can only become a 【 widow 】. 如果一个新娘做不了孕妇，就只能做寡妇 】**
+- // -- groom 新郎
+- // -- mushroom 蘑菇
+- // -- bride 新娘
+- // -- bridge 桥
+- // -- widow 孕妇
+- // -- window 窗户
+- // -- pregnant woman. 孕妇
+- // -- miscarry(V) -> miscarriage(N). 流产
+- // -- abort(V) ->
+-
+-
+- [JJ.]
+- `【 stepfather. 继父 】`
+- `【 father-in-law. 岳父 】`
+- **【 Her 【 stepfather 】 is my 【 father-in-law 】. 她的继父是我的岳父 】**
+-
+-
+- [KK.]
+- `【 selfie 自拍 】`
+- `【 selfie stick. 自拍杆 】`
+- **【 She 【 takes a selfie 】 with 【 selfie stick 】, and then upload the 【 selfie 】 to 【 social platform 】.她用自拍杆进行自拍，然后把自拍照上传到了社交平台 】**
+- // -- He uses a selfie stick to take a selfie, and then uploads the selfie to the social platform.
+- // -- `【 social 社会的 社交的 】`
+- // -- `【 social media. 社交媒体 】`
+- // -- `【 social status. 社会地位 】`
+- // -- `【 social welfare. 社会福利 】`
+-
+-
+- [LL.]
+- `【 propose 求婚 v 】`
+- `【 elope 私奔 】`
+- 【 propose vs purpose 】
+- **【 After the 【 groom 】 【 successfully 】 【 propose 】 to the 【 bride 】, they 【 eloped 】 together. 新郎向新娘求婚成功后，一起私奔了 】**
+- // groom 新郎 -> groomsman
+- // bride 新娘 -> bridesmaid
+-
+-
+-
+- [MM.]
+- `【 purpose 目的 意图 n 】`
+- `【 propose 求婚 n 】`
+- > 【 propose to sb. 向某人求婚 】
+- **【 The 【 purpose 】 of the 【 groom 】 is to 【 propose 】 to the 【 bride 】. 新郎的目的是向新娘求婚 】**
+- **【 Can I 【 propose 】 to you? 我能向你求婚吗 】**
+-
+- [NN.]
+- `【 womb 子宫 】`
+- `【 tomb 坟墓 】` = grave // grave 坟墓 // brave 勇敢的
+- `【 fetus 胎儿 】`
+- `【 baby 婴儿 宝贝 】`
+- > 【 be born in. 出生于 】
+- > 【 die in. 死于 】
+- _【 be born in. 出生于 】_
+- _【 die in. 死于 】_
+- > born (V) -> birth (N)
+- > die (V) -> death (N)
+- **【 The 【 fetus 】 【 is born in 】 【 womb 】, and 【 dies 】 in 【 tomb 】. 胎儿出生在子宫，死在坟墓 】**
+- **【 His 【 bravery 】 【 lies in 】 that he has 【 courage 】 to walk through the 【 grave 】. 他的勇敢在于他有勇气走过坟墓 】**
+-
+-
+- [OO.]
+- `【 grave 坟墓 = tomb 】`
+- `【 brave 勇敢的 adj 】`
+- `【 bravery 勇敢 n 】`
+- `【 courage 勇气 】`
+- brave -> bravery
+- > 【 lie in. 在于 】
+- **【 His 【 bravery 】 【 lies in 】 that he has 【 courage 】 to walk through the 【 grave 】. 他的勇敢在于他有勇气走过坟墓 】**
+- **【 The 【 fetus 】 【 is born in 】 【 womb 】, and 【 dies 】 in 【 tomb 】. 胎儿出生在子宫，死在坟墓 】**
+- // -- 【 lie in. 在于 】
+- // -- brave 勇敢的 adj
+- // -- bravery 勇敢 n
+-
+-
+- [PP.]
+- `【 lie in. 在于 】`
+- `【 the key to. ...的关键 】`
+- **【 【 The key to 】 success 【 lies in 】 hard work and 【 persistence 】. 成功的关键在于努力和坚持 】**
+-
+-
+- [RR.]
+- `【 purpose 目的 意图 n 】`
+- `【 pursue 追求 追逐 v 】`
+- `【 propose 求婚 v 】`
+- **【 The 【 purpose 】 of his 【 proposing 】 was to 【 pursue 】 【 fame 】. 他求婚的目的是追求名声 】**
+
+###### 2024-06-17
+
+- 1
+- `【 ask for leave. 请假 】`
+- `【 ask for 【 sick 】 leave. 请病假 】`
+- `【 ask for 【 personal 】 leave. 请事假 】`
+-
+- `【 leave 离开v 休假n 】`
+- `【 leaves 叶子 -> leaf/leaves 】`
+-
+- `【 vacation 假期 】` ----- 美式英语
+- `【 holiday 假期 】` ------ 英式英语
+-
+- `【 business trip. 出差 】`
+- `【 on business trip. 出差 】`
+-
+- > 【 go on vacation. = go for vacation. 度假 】
+- > 【 go on honeymoon. 度蜜月 】
+- > 【 take a travel. = make a travel. = go on a journey. 去旅行 】
+-
+-
+- [AA.]
+- `【 business trip. 出差 】`
+- `【 on business trip. 出差 】`
+- _【 be equal to. 等于 】_
+- **【 I will go to the America 【 on a business trip 】 【 for 】 two months. 我要去美国出差两个月 】**
+- 1. **【 a 【 business trip 】 is not equal to a 【 vacation 】. 出差不等于休假 】**
+- 2. **【 One 【 centimeter 】 is equal to ten 【 millimeters 】. 一厘米等于十毫米 】**
+- // -- centimeter 厘米 CM
+- // -- millimeter 毫米 MM
+- // -- 【 be equal to. 等于 相等 】
+-
+-
+- [BB.]
+- `【 ask for leave. 请假 】`
+- `【 go on vacation. 休假 】`
+- `【 leave 请假 离开 v 】`
+- **【 He plans to 【 ask for personal leave 】 to 【 leave 】 Beijing 【 for 】 travel. 他计划请事假离开北京去旅游 】**
+- ask for leave. 请假
+- ask for sick leave. 请病假
+- ask for personal leave. 请事假
+-
+-
+- [CC.]
+- `【 ask for sick leave. 请病假 】`
+- `【 ask for personal leave. 请事假 】`
+- **【 He plans to 【 ask for personal leave 】 to 【 leave 】 Beijing 【 for 】 travel. 他计划请事假离开北京去旅游 】**
+- **【 If you're not sick, you can't 【 ask for sick leave 】, You only 【 ask for personal leave 】. 如果你没生病就不能请病假，只能请事假 】**
+-
+-
+- [DD.]
+- `【 leaves 叶子 】`
+- `【 leave 离开v 休假n 】`
+- leaf -> leaves.
+- _【 form of. ...的形式 】_
+- _【 in form of. 以...的形式 】_
+- > 【 plural form. 复数形式 】
+- 1. **【 【 Leaves 】 is the 【 plural form 】 of 【 leaf 】. leaves 是 leaf 的复数形式 】**
+- 2. **【 The 【 plural 】 of child 【 is 】 children. child 的复数是 children 】**
+- 3. **【 Display performance data 【 in form of 】 charts. 用图表的方式显示性能数据 】**
+- // -- 【 form of. ...的形式 】
+- // -- 【 plural 复数的 adj 复数 n 】
+
+###### 2024-06-20
+
+- 1
+- `【 tire 疲劳v 轮胎n 】`
+- `【 retire 退休 v 】` // retire retirement
+- `【 entire 整个的 】` // entire whole
+-
+- `【 tear 眼泪n 撕碎v 】`
+- `【 tier 层 阶层 n 】` // first-tier city. // developed city. // developing city. // coastal city.
+- `【 tire 疲劳v 轮胎 n 】`
+-
+- `【 in tears. 流着泪 含着泪 】`
+- `【 tear up. 撕毁 撕碎 v 】`
+- `【 tore up.  撕毁 撕碎 v 】` // tear -> tore
+-
+- `【 retire 退休 v 】`
+- `【 retirement 退休 n 】`
+-
+-
+- [AA.]
+- `【 tier 层 阶层 】`
+- `【 first-tier city. 一线城市 】`
+- > 【 coastal city. 沿海城市 】
+- > 【 developed city. 发达城市 】
+- > 【 developing city. 发展中城市 】
+- > 【 first-tier city. 一线城市 】
+- **【 【 coastal cities 】 are usually 【 developed cities 】 and【 first-tier cities 】. 沿海城市一般都是发达城市，也是一线城市 】**
+- // city -> cities
+-
+-
+- [BB.]
+- `【 tire 疲劳v 轮胎n 】`
+- `【 entire 真个的 adj 】`
+- `【 tear 撕碎v 眼泪n 】` // tear -> tore
+- > 【 tear up. 撕毁 撕碎 】
+- > 【 in tears. 含着泪 流着泪 】
+- **【 He was 【 in tears 】 and prepared to 【 tear up 】 the 【 contract 】. 他含着泪，准备撕毁这个合同 】**
+- **【 She 【 tore up 】 the 【 wedding photo 】 【 in tears 】. 她流着眼泪撕碎了结婚照 】** // 【 in tears. 流着泪 含着泪 】
+- 1. **【 The 【 typhoon 】 【 tears 】 the 【 entire 】 【 tire 】. 台风撕裂了整个轮胎 】**
+- 2. **【 The 【 entire 】 【 tire 】 was 【 torn 】. 整个轮胎都撕裂了 】**
+- // -- tear -> torn
+- // -- 【 weeding photo. 结婚照 】
+- // -- 【 marriage certificate. 结婚证 】
+- // -- 【 divorce certificate. 离婚证 】
+-
+-
+- [CC.]
+- `【 first-tier city. 一线城市 】`
+- `【 tier 层 层级 】`
+- `【 retire 退休 v 】`
+- `【 retirement 退休 n 】`
+- **【 After 【 retirement 】, he plans to travel to 【 first-tier city 】. 退休之后，他准备去一线城市旅游 】**
+- **【 【 coastal cities 】 are usually 【 developed cities 】 and【 first-tier cities 】. 沿海城市一般都是发达城市，也是一线城市 】**
+-
+-
+- [DD.]
+- `【 tear up. 撕毁 撕碎 】`
+- `【 in tear. 含着泪 留着泪 】`
+- tear -> tore
+- **【 He was 【 in tears 】 and prepared to 【 tear up 】 the 【 contract 】. 他含着泪，准备撕毁这个合同 】**
+-
+-
+-
+-
+-
+-
+-
+-
+-
+- 2
+- `【 kindergarten 幼儿园 】`
+- **【 He is a 【 kindergarten 】 student. 他是一名幼儿园学生 】**
+-
+- `【 junior school. 小学 】` // junior school. = primary school. = elementary school. 小学
+- `【 junior high school. 初中 】`
+- `【 senior high school. 高中 】`
+-
+- `【 university 大学 】`
+- `【 college 学院 大学 】` // college 学院 大学 // colleague 同事
+-
+- `【 middle school. 中学 】`
+- `【 high school. 高中 】`
+-
+- [小学]
+- `【 junior school. 小学 】`
+- `【 primary school. 小学 】`
+- `【 elementary school. 小学 】`
+- > 【 Grade One in primary school. 小学一年级 】
+- > 【 Grade Two in primary school. 小学二年级 】
+- > // 注意 Grade 和 One 都要大写
+- **【 He is a 【 Grade One 】 student in 【 primary school 】. 他是小学一年级学生 】**
+- // -- grade 等级 年级 成绩
+-
+- [初中]
+- `【 junior high school. 初中 】`
+- > 【 Grade One in junior high school. 初中一年级 】
+-
+- [高中]
+- `【 senior high school. 高中 】`
+- > 【 Grade One in senior high school. 高中一年级 】
+-
+- [大学]
+- `【 university 大学 】`
+- `【 college 大学 学院 】` // college // colleague
+- > 【 freshman 大一学生 】
+- > 【 sophomore 大二学生 】 // -- 一半聪明一半笨蛋 philosophy 哲学 moron 笨蛋
+- > 【 junior 大三学生 】 // ----- 年少的 下级的
+- > 【 senior 大四学生 】// ------ 年长的 资深的
+- // TIPS: Pay attention to the pronunciation of the word 'fresh'.
+-
+- [中专]
+- `【 technical secondary school. 中专学校 】`
+- **【 He is a 【 technical secondary school 】 student. 他是一个中专生 】**
+-
+- [学位]
+- `【 bachelor's degree 学士学位 】`
+- `【 master's degree. 硕士学位 】`
+- `【 doctor's degree. 博士学位 】`
+- > bachelor 学士 单身汉 // bachelorette 未婚女子
+- > master 硕士 主人
+- > doctor 博士 医生 // I'm a PhD = I'm a doctor. 我是一个博士
+-
+- [其他]
+- `【 undergraduate student. 本科生 】`
+- `【 postgraduate student. 研究生 】`
+- `【 doctoral student. 博士生 】`
+- **【 are you 【 an 】 【 undergraduate 】 student? 你是本科生吗？ 】**
+-
+-
+-
+- [AA.]
+- `【 kindergarten 幼儿园 】`
+- **【 She teaches English in kindergarten. 她在幼儿园教英语 】**
+-
+- [BB.]
+- `【 undergraduate student. 本科生 】`
+- `【 postgraduate student. 研究生 】`
+- `【 doctoral student. 博士生 】`
+- // post 发布 邮寄 帖子
+- // graduate 毕业
+- **【 He is 【 an 】【 undergraduate student 】, and his 【 elder sister 】 is a 【 postgraduate student 】. 他是本科生，他姐姐是研究生 】**
+- // -- elder sister. 姐姐
+- // -- sister 妹妹
+-
+- [CC.]
+- `【 Grade One student in junior high school. 初中一年级学生 】`
+- `【 Grade One student in senior high school. 高中一年级学生 】`
+- **【 He is a Grade One student in 【 senior high school 】, his 【 younger brother 】 is a Grade one student in 【 junior high school 】, and his 【 elder brother 】 is a 【 sophomore 】. 他是高中一年级学生，他的弟弟是初中一年级学生，他的哥哥是大二学生 】**
+- // -- 【 younger brother. 弟弟 】
+- // -- 【 elder brother. 哥哥 】
+
+###### 2024-06-21
+
+- 1
+- `【 assistant 助手 助理 】` // 【 assist 协助 辅助 】 // assistant 助理
+- `【 attendant 服务员 】`
+- `【 secretary 秘书 】`
+-
+- `【 assist 协助 辅助 帮助 v 】`
+- `【 assistant 助手 助理 n 】`
+- `【 assistance 协助 辅助 n  】`
+-
+- `【 assist 协助 辅助 v 】` // 【 assist sb in doing sth. 协助某事做某事 】
+- `【 insist = persist. 坚持 v 】` // 【 persist in doing sth. = insist on doing sth. 坚持做某事 】
+- `【 resist 抵抗 抵制 v 】`
+- // TIPS: Pay attention to the pronunciation of the word 'resist'.
+-
+- `【 assist sb in doing sth. 协助某事做某事 】`
+- > 【 assist sb in doing sth. 协助某人做某事 】
+- > 【 persist in doing sth. 坚持做某事 】
+- > 【 insist on doing sth. 坚持做某事 】
+- > 【 flight attendant. 空中乘务员 】
+-
+-
+- [AA.]
+- `【 assist 协助 辅助 帮助 v 】`
+- `【 assistant 助手 助理 n 】`
+- `【 assistance 协助 辅助 n  】`
+- > 【 assist sb in doing sth. 协助某人做某事 】
+- > 【 persist in doing sth. 坚持做某事 】
+- **【 An 【 assistant 】 is a person who 【 assists 】 others 【 in 】 【 completing 】 task. 助理是协助他人完成任务的人 】**
+- **【 The 【 nurse 】 【 assisted 】 the doctor 【 in 】 【 performing the surgical operation 】. 护士协助医生做外科手术 】**
+- // -- 【 perform operation. 做手术 】
+- // -- 【 perform surgical operation. 做外科手术 】
+-
+-
+- [BB.]
+- `【 resist 抵制 抵抗 v 】`
+- `【 insist = persist. 坚持 v 】`
+- `【 assist 协助 辅助 v 】`
+- > mandatory overtime. 强制加班
+- > work overtime. 加班
+- > overtime pay. 加班费
+- _【 persist in doing sth. 坚持做某事 】_
+- _【 assist sb in doing sth. 协助某人做某事 】_
+- // TIPS: Pay attention to the pronunciation of the word 'resist'.
+- 1. **【 We should 【 persist in 】 【 resisting 】 the 【 mandatory overtime 】 without 【 overtime pay 】. 我们要坚持抵制没有加班费的加班 】**
+- 2. **【 He persist in assisting her in completing the task. 他坚持协助她完成今天的任务 】**
+-
+-
+- [CC.]
+- `【 secretary 秘书 】`
+- `【 assistant 助理 】`
+- `【 attendant 服务员 】`
+- **【 My 【 secretary 】 is his 【 assistant 】, but she 【 used to be 】 【 an 】 【 attendant 】. 我的秘书是他的助手，但曾经是一个服务员 】**
+
+###### Must 2024-06-23
+
+- 1
+- `【 assure 保证 v 】`
+- `【 ensure 确保 v 】` ----------------- 【 ensure safety. 确保安全 】 // ensure = make sure. 确保
+- `【 insure 投保 v 】` // insurance 保险 // insure 投保
+- > 【 ensure safety. 确保安全 】
+-
+- `【 insure 投保 v 】`
+- `【 insurance 保险 n 】`
+-
+- `【 ensure 确保 】` // ensure = make sure. 确保
+- `【 make sure. 确保 】`
+-
+- `【 treasure 宝藏 财富 】`
+- `【 measure 测量 】` // --------------- 【 exactly measure. 精确测量 】
+- `【 pressure 压力 】` // pressure // stress
+- > 【 exactly measure. 精确测量 】
+-
+-
+- [AA.]
+- `【 assure 保证 v 】`
+- `【 ensure 确保 v 】`
+- `【 insure 投保 v 】`
+- `【 insurance 保险 n 】`
+- **【 I 【 assure 】 you that I can 【 ensure 】 the 【 insurance 】 that you 【 insured 】 is safe and 【 reliable 】. 我向你保证，我能确保你投保的保险安全可靠 】**
+- // -- 【 reliable 可靠的 adj 】
+-
+-
+- [BB.]
+- `【 pressure 压力 】` // pressure = stress
+- `【 measure 测量 】`
+- `【 ensure 确保 】`
+- `【 treasure 宝藏 】`
+- **【 We should 【 measure 】 the 【 pressure 】 of the 【 equipment 】 【 in time 】 to 【 ensure 】 the 【 safety 】 of the 【 treasure 】. 我们需要及时测量设备的压力，来确保宝藏的安全 】**
+- // -- safety 安全 n
+- // -- safe 安全的 adj
+
+###### 2024-06-26
+
+- 1
+- `【 opinion 意见 n 】`
+- `【 suggestion 建议 n 】`
+- // TIPS： Pay attention to the pronunciation of the word 'opinion'.
+-
+- `【 opinion 意见 n 】`
+- `【 option 选项 n 】`
+- `【 optional 可选的 】`
+-
+- `【 adopt 采用 】` // 【 adopt an suggestion. 采纳建议 】
+- `【 adapt 适应 】`
+- // TIPS： Pay attention to the pronunciation of the word 'adapt'.
+-
+- `【 realize 实现v 意识到 n 】`
+- `【 achieve 实现 v 】` // 【 achievement = accomplishment. 成就 】
+- > achievement 成就
+- > accomplishment 成就
+-
+- `【 ideal 理想 n 】`
+- `【 dream 梦想 n 】`
+- `【 desire 愿望 n 】`
+- `【 idea 想法 n 】`
+-
+- `【 unify 统一 v 】`
+- `【 unified 统一的 adj 】` // unified standard.
+- > 【 unified standard. 统一标准 】
+-
+- `【 effort 努力 n 】`
+- `【 make an effort to do sth. 努力做某事 】`
+- `【 It's time to do sth. 是做...的时时候了 】`
+-
+-
+- [AA.]
+- `【 opinion 意见 n 】`
+- `【 suggestion 建议 n 】`
+- `【 adopt 采用 v 】`
+- `【 unify 统一 v 】`
+- **【 The leader 【 adopted 】 my 【 suggestion 】 about 【 unifying 】 the 【 opinions 】 of everyone in the company. 领导采纳了我的关于统一全公司所有人意见的建议 】**
+- **【 his 【 opinion 】 is to select the 【 optional 】 【 options 】. 他的意见是选择可选的选项 】**
+-
+-
+- [BB.]
+- `【 realize 实现v 意识到n 】`
+- `【 ideal 理想 n 】`
+- `【 dream 梦想 n 】`
+- `【 make an effort to do sth. 努力做某事 】`
+- `【 It's time to do sth. 是做...的时时候了 】`
+- **【 He 【 suddenly 】 【 realized 】 that 【 it was time to 】 【 make an effort to 】 【 realize 】 his 【 ideals 】 and 【 dreams 】. 他突然意识到是时候去努力实现自己的理想和梦想了 】**
+-
+-
+- [CC.]
+- `【 option 选项 】`
+- `【 optional 可选的 】`
+- `【 opinion 意见 】`
+- **【 his 【 opinion 】 is to select the 【 optional 】 【 options 】. 他的意见是选择可选的选项 】**
+
+###### 2024-06-28
+
+- 1
+- `【 explain 解释 说明 v 】`
+- `【 complain 抱怨 】`
+- `【 complain about sb. 抱怨某人 】`
+- > 【 start doing sth. 开始做某事 】
+- **【 After 【 explaining 】 this clearly, she stopped 【 complaining about 】 me. 解释清楚这件事后，她不再抱怨我了 】**
+- **【 She 【 started complaining 】 【 without 】 listening to my explanation. 她不听我解释就开始抱怨 】**
+- // -- 【 stop doing sth. 停止做某事 】
+- // -- 【 complain about sb. 抱怨某人 】

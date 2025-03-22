@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 柯里化 阶段二
+      // 原理：
+      // 计算的逻辑耦合在了 curry 函数中，可以抽离出计算逻辑
+
+      // 最终版
+      // 直接看柯里化 阶段三
+
+      function add(...params) {
+        if (params.length) {
+          return params.reduce((total, current) => total + current);
+        }
+        return [];
+      }
+
+      const curry = (add, ...params) => {
+        let allParams = [];
+        if (params.length) allParams = allParams.concat(params);
+
+        function closure(...params) {
+          if (params.length) {
+            allParams = allParams.concat(params);
+            return closure;
+          } else {
+            return add(...allParams);
+          }
+        }
+
+        return closure;
+      };
+
+      const res = curry(add, 1)(2, 3, 4)(5)();
+      console.log("res", res);
+    </script>
+  </body>
+</html>

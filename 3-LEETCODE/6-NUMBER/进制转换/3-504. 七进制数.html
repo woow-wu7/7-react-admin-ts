@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 504. 七进制数
+
+      // 给定一个整数 num，将其转化为 7 进制，并以字符串形式输出。
+
+      // 示例 1:
+      // 输入: num = 100
+      // 输出: "202"
+
+      // 示例 2:
+      // 输入: num = -7
+      // 输出: "-10"
+      //
+
+      // 提示：
+      // -107 <= num <= 107
+
+      /**
+       * @param {number} num
+       * @return {string}
+       */
+
+      // leetcode
+      // https://leetcode.cn/problems/base-7/
+
+      // 对比
+      // 504. 七进制数 https://leetcode.cn/problems/base-7/
+      // 7. 整数反转 https://leetcode.cn/problems/reverse-integer/
+
+      // 思路
+      // 10进制 -> 7进制
+      // 模 和 除
+
+      var convertToBase7 = function (num) {
+        if (num === 0) return "0";
+
+        const flag = num >= 0; // true表示正数，false表示负数
+
+        let res = "";
+        let abs = Math.abs(num); // 处理时，都以正数来出来，最后在加上符号即可
+
+        while (abs) {
+          let remainder = abs % 7;
+
+          res = remainder + res;
+
+          abs = abs - remainder;
+          abs = abs / 7; // 因为减去余数后，可以整除
+        }
+
+        return flag ? res : "-" + res;
+      };
+    </script>
+  </body>
+</html>

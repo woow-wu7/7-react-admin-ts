@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>爬楼梯 Climbing stairs.</title>
+  </head>
+  <body>
+    <script>
+      // 70. 爬楼梯
+      // 爬楼梯 Climbing Stairs
+
+      // Question
+      // You are climbing a 【 staircase 】. It takes n steps to reach the top.
+      // Each time you can either climb 1 or 2 steps. In how many 【 distinct 】 ways can you climb to the top?
+
+      // 题目
+      // 假设你正在爬楼梯。需要 n 阶你才能到达楼顶。
+      // 每次你可以爬 1 或 2 个台阶。你有多少种不同的方法可以爬到楼顶呢？
+
+      // 链接
+      // 70. 爬楼梯 https://leetcode.cn/problems/climbing-stairs/
+      // 746. 使用最小花费爬楼梯  https://leetcode.cn/problems/min-cost-climbing-stairs/
+
+      // 思路
+      // - 动态规划
+      //  - 1. dp数组: dp[i] 表示爬到第i节楼梯的 ( 方法数 )
+      //  - 状态方程:
+      //    - 因为: 爬到 ( 第i节楼梯 )，只能是 ( i-2节楼梯走2步 ) 和 ( i-1节楼梯走1步 )
+      //    - 所以: 第i阶的方法数 = 第i-1阶的方法数 + 第i-2阶的方法数所以
+      //    - dp[i] = dp[i-2] + dp[i-1]
+      //  - 边界
+      //    - dp[0] = 0 可以不用声明
+      //    - dp[1] = 1 第一个台阶只有一种走法
+      //    - dp[2] = 2 第二个台阶有两种走法，两个一步 和 一个两步
+
+      // English
+      // -
+      // distinct 不同的 清楚的 adj
+      // 【 distinct methods. 不同的方法 】
+      // 【 different method. = distinct methods. 】
+      // -
+      // staircase 楼梯 ---- 建筑内的楼梯
+      // stair 楼梯
+      // -
+      // dynamic 动态的
+      // programming 编程  规划
+      // 【 dynamic programming. 动态规划 】
+      // -
+      // TIPS: Pay attention to the pronunciation of the word 'method'. [distinct-method.不同的方法]
+      // TIPS: Pay attention to the pronunciation of the word 'distinct'. [distinct-不同的-清楚的-adj]
+
+      /**
+       * @param {number} n
+       * @return {number}
+       */
+      var climbStairs = function (n) {
+        const dp = []; // dp[i] 表示爬到第i节楼梯的方法数
+
+        // 边界
+        dp[0] = 1; // 第一个台阶只有一种方法，即走一步
+        dp[1] = 2; // 第二个台阶只有两种方法，两个一步，或者一个两步
+
+        // 注意 i = 3，前几种情况上面已经列举了
+        // -------------------------------- aaa. 注意 i <= n 的边界是可以相等的，这里 n 就是长度，第n节楼梯
+        for (let i = 3; i < n; i++) {
+          // 状态转移方程
+          dp[i] = dp[i - 2] + dp[i - 1];
+        }
+
+        return dp[n - 1]; // ------------------ aaa. 所以这里取也是取n
+      };
+    </script>
+  </body>
+</html>

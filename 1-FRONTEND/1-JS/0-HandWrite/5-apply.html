@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Implement apply function.</title>
+  </head>
+  <body>
+    <script>
+      // 手写 apply
+      // - 作用：绑定this指向，执行函数
+      // - 参数:
+      //  - 第一个参数: this需要绑定的对象
+      //    - 应该是一个 ( 对象 )
+      //    - 如果传入的参数是 ( null, undefined, 空 ) 则默认传入 ( 全局对象window/global/globalThis )
+      //    - 如果参数是 ( 原始值 ) 那么这个原始值会自动转成对应的 ( 包装对象 )，然后传入call方法
+      //  - 第一个参数后面的参数
+      //    - 将作为 函数调用时，该函数的参数传入
+      //    - 注意: 是个 数组
+
+      Function.prototype._apply = function (obj, params) {
+        // const context = obj ? obj : window;
+        const context = obj ? obj : globalThis;
+
+        context.fn = this; // this指代fn，调用时确定this指向，fn.call()是fn在调用，指向 this -> fn
+
+        const res = context.fn(...params);
+
+        // delete context.fn
+        Reflect.deleteProperty(context, "fn");
+        return res;
+      };
+
+      const obj = {
+        name: "woow_wu7",
+        age: 20,
+      };
+      const fn = function (name, age) {
+        console.log("name", name);
+        console.log("age", age);
+        return this.age + this.name;
+      };
+
+      const res = fn._apply(obj, ["woow_wu8", 28]);
+      console.log("res", res);
+    </script>
+  </body>
+</html>

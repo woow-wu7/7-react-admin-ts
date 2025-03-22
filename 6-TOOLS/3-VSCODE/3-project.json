@@ -1,0 +1,170 @@
+[
+  {
+    "name": "8-penetrate",
+    "rootPath": "/Users/xiawu/work/personal/front-end/8-penetrate",
+    "paths": [],
+    "tags": [],
+    "enabled": true
+  },
+  {
+    "name": "pc-data-acquisition-analysis-system",
+    "rootPath": "/Users/xiawu/work/company/front-end/pc-data-acquisition-analysis-system",
+    "paths": [],
+    "tags": [],
+    "enabled": true
+  },
+  {
+    "name": "8-divine-plus",
+    "rootPath": "/Users/xiawu/work/personal/front-end/8-divine-plus",
+    "paths": [],
+    "tags": [],
+    "enabled": true
+  },
+  {
+    "name": "8-electron-tools",
+    "rootPath": "/Users/xiawu/work/personal/front-end/8-electron-tools",
+    "paths": [],
+    "tags": [],
+    "enabled": true
+  },
+  {
+    "name": "7-react-admin-ts",
+    "rootPath": "/Users/xiawu/work/personal/front-end/7-react-admin-ts",
+    "paths": [],
+    "tags": [],
+    "enabled": true
+  },
+  {
+    "name": "4-shouqianba-hera-web",
+    "rootPath": "/Users/xiawu/work/company/front-end/4-shouqianba-hera-web",
+    "paths": [],
+    "tags": [],
+    "enabled": true
+  },
+  {
+    "name": "4-shouqianba-apisix-web",
+    "rootPath": "/Users/xiawu/work/company/front-end/4-shouqianba-apisix-web",
+    "paths": [],
+    "tags": [],
+    "enabled": true
+  },
+  {
+    "name": "4-joyo-web-mng",
+    "rootPath": "/Users/xiawu/work/company/front-end/4-joyo-web-mng",
+    "paths": [],
+    "tags": [],
+    "enabled": true
+  },
+  {
+    "name": "data-acquisition-analysis-system",
+    "rootPath": "/Users/xiawu/work/company/front-end/data-acquisition-analysis-system",
+    "paths": [],
+    "tags": [],
+    "enabled": true
+  },
+  {
+    "name": "5-vue3-pinia-test",
+    "rootPath": "/Users/xiawu/work/personal/front-end/5-vue3-pinia-test",
+    "paths": [],
+    "tags": [],
+    "enabled": true
+  },
+  {
+    "name": "4-zt-cloud-web",
+    "rootPath": "/Users/xiawu/work/company/front-end/4-zt-cloud-web",
+    "paths": [],
+    "tags": [],
+    "enabled": true
+  },
+  {
+    "name": "4-joyo-lingjing-h5",
+    "rootPath": "/Users/xiawu/work/company/front-end/4-joyo-lingjing-h5",
+    "paths": [],
+    "tags": [],
+    "enabled": true
+  },
+  {
+    "name": "4-doctor-app",
+    "rootPath": "/Users/xiawu/work/company/front-end/4-doctor-app",
+    "paths": [],
+    "tags": [],
+    "enabled": true
+  },
+  {
+    "name": "4-spine-web",
+    "rootPath": "/Users/xiawu/work/company/front-end/4-spine-web",
+    "paths": [],
+    "tags": [],
+    "enabled": true
+  },
+  {
+    "name": "crm-pc-client-web",
+    "rootPath": "/Users/xiawu/work/company/front-end/crm-pc-client-web",
+    "paths": [],
+    "tags": [],
+    "enabled": true
+  },
+  {
+    "name": "crm-pc-client",
+    "rootPath": "/Users/xiawu/work/company/front-end/crm-pc-client",
+    "paths": [],
+    "tags": [],
+    "enabled": true
+  },
+  {
+    "name": "crm-agency-lite",
+    "rootPath": "/Users/xiawu/work/company/front-end/crm-agency-lite",
+    "paths": [],
+    "tags": [],
+    "enabled": true
+  },
+  {
+    "name": "7-element-source-code-analysis",
+    "rootPath": "/Users/xiawu/work/personal/front-end/7-element-source-code-analysis",
+    "paths": [],
+    "tags": [],
+    "enabled": true
+  },
+  {
+    "name": "7-element-plus-source-code-analysis",
+    "rootPath": "/Users/xiawu/work/personal/front-end/7-element-plus-source-code-analysis",
+    "paths": [],
+    "tags": [],
+    "enabled": true
+  },
+  {
+    "name": "cloud",
+    "rootPath": "/Users/xiawu/work/company/front-end/cloud",
+    "paths": [],
+    "tags": [],
+    "enabled": true
+  },
+  {
+    "name": "7-a-hooks2.0-source-code-analysis",
+    "rootPath": "/Users/xiawu/work/company/front-end/7-a-hooks2.0-source-code-analysis",
+    "paths": [],
+    "tags": [],
+    "enabled": true
+  },
+  {
+    "name": "5-next-learning",
+    "rootPath": "/Users/xiawu/work/personal/front-end/5-next-learning",
+    "paths": [],
+    "tags": [],
+    "enabled": true
+  },
+  {
+    "name": "ms_cloud_ai",
+    "rootPath": "/Users/xiawu/work/company/front-end/ms_cloud_ai",
+    "paths": [],
+    "tags": [],
+    "enabled": true
+  },
+  {
+    "name": "mscloud-web",
+    "rootPath": "/Users/xiawu/work/company/front-end/mscloud-web",
+    "paths": [],
+    "tags": [],
+    "enabled": true
+  }
+]

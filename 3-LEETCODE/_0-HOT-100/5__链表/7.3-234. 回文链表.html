@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>回文链表 palindrome linked list.</title>
+  </head>
+  <body>
+    <script>
+      // 234. 回文链表 palindrome linked list.
+
+      // 题目
+      // 给你一个单链表的头节点 head ，请你判断该链表是否为回文链表。如果是，返回 true ；否则，返回 false 。
+
+      // Given the head of a singly linked list, return true if it is a  palindrome or false otherwise.
+
+      // 示例 1：
+      // 输入：head = [1,2,2,1]
+      // 输出：true
+
+      // 示例 2：
+      // 输入：head = [1,2]
+      // 输出：false
+      //
+
+      // 提示：
+      // 链表中节点数目在范围[1, 105] 内
+      // 0 <= Node.val <= 9
+
+      /**
+       * Definition for singly-linked list.
+       * function ListNode(val, next) {
+       *     this.val = (val===undefined ? 0 : val)
+       *     this.next = (next===undefined ? null : next)
+       * }
+       */
+      /**
+       * @param {ListNode} head
+       * @return {boolean}
+       */
+
+      // leetcode
+      // https://leetcode.cn/problems/palindrome-linked-list/
+
+      // 对比
+      // 都会用到 ( 链表中间节点 ) ( 反转链表 ) ( 合并链表 ) ( 链表相等 )
+      // 143. 重排链表 https://leetcode.cn/problems/reorder-list/
+      // 234. 回文链表  https://leetcode.cn/problems/palindrome-linked-list/
+
+      // 前置知识 - 关联知识
+      // - 0. 回文链表 https://leetcode.cn/problems/palindrome-linked-list/
+      // - 1. 重排链表  https://leetcode.cn/problems/reorder-list/
+      // - 2. 寻找链表中间节点 https://leetcode.cn/problems/convert-sorted-list-to-binary-search-tree/
+      // - 3. 反转链表 https://leetcode.cn/problems/fan-zhuan-lian-biao-lcof/
+      // - 4. 合并两个有序链表 https://leetcode.cn/problems/he-bing-liang-ge-pai-xu-de-lian-biao-lcof/
+
+      // 思路
+      // - 1. 寻找中间节点
+      // - 2. 反转后半部分链表
+      // - 3. 比较两个链表是否相等
+
+      // English
+      // -
+      // otherwise 否则
+      // -
+      // palindrome 回文 回文结构
+
+      var isPalindrome = function (head) {
+        if (!head.next) return true; // 边界 [1] 一定是回文链表
+
+        let fast = (slow = cut = head);
+
+        // 1
+        // 寻找 ( 中间节点  ) 和 ( 中间节点的前一个节点 - 断开链表 )
+        while (fast && fast.next) {
+          cut = slow; // 中间节点的前一个节点
+          fast = fast.next.next;
+          slow = slow.next;
+        }
+
+        cut.next = null; // 断开链表
+
+        // 2
+        // 反转 后半部分链表
+        let pre = null;
+        let cur = slow;
+        while (cur) {
+          const temp = cur.next;
+          cur.next = pre;
+          pre = cur;
+          cur = temp;
+        }
+
+        // 3
+        // 反转后，如果两条链表完全一样，则是 回文链表
+        // -- 反转后，pre就是后半部分链表的 头节点
+        // -- pre 和 head 两个链表是否相等
+        // - 当链表长度是 ( 奇数 ) 的情况下，分割的两个链表长度不相等，以短的为主即可，即 head && pre
+        // - 当链表长度是 ( 偶数 ) 的情况下，分割的两个链表长度相等，while 的条件 head 或 pre 都可以
+        // - 综上 while 的条件是 head && pre
+        while (head && pre) {
+          if (head.val === pre.val) {
+            head = head.next; // 相等，就后移，继续比较
+            pre = pre.next;
+          } else {
+            return false; // 不是回文链表
+          }
+        }
+
+        // 遍历完两个链表，每个节点都相等，返回true
+        return true;
+      };
+    </script>
+  </body>
+</html>

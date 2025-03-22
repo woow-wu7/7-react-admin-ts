@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* 1 ---------------------- */
+      #button-hover {
+        opacity: 0.99;
+        /* background: red; */
+        transition: all 2s;
+      }
+      #button-hover:hover {
+        /* background: gold; */
+        opacity: 1;
+      }
+
+      /* 2 ---------------------- */
+      #button-active {
+        opacity: 0.99;
+        /* background: red; */
+        transition: all 2s;
+      }
+      #button-active:active {
+        /* background: gold; */
+        opacity: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="button-hover">按钮:hover</button>
+    <button id="button-active">按钮:active</button>
+
+    <script>
+      const button1 = document.getElementById("button-hover");
+      button1.addEventListener(
+        "transitionend",
+        () => {
+          console.log("hover 2s 后打印");
+        },
+        false
+      );
+
+      const button2 = document.getElementById("button-active");
+      button2.addEventListener(
+        "transitionend",
+        () => {
+          console.log(":active长按 2s 后打印");
+        },
+        false
+      );
+    </script>
+  </body>
+</html>

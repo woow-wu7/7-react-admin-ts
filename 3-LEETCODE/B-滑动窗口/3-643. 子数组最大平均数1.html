@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 643. 子数组最大平均数 I
+
+      // leetcode https://leetcode.cn/problems/maximum-average-subarray-i/
+
+      // 题目
+      // 给你一个由 n 个元素组成的整数数组 nums 和一个整数 k 。
+      // 请你找出平均数最大且 长度为 k 的连续子数组，并输出该最大平均数。
+      // 任何误差小于 10-5 的答案都将被视为正确答案。
+
+      // 示例 1：
+      // 输入：nums = [1,12,-5,-6,50,3], k = 4
+      // 输出：12.75
+      // 解释：最大平均数 (12-5-6+50)/4 = 51/4 = 12.75
+      // 示例 2：
+
+      // 输入：nums = [5], k = 1
+      // 输出：5.00000
+
+      // 思路
+      // - 滑动窗口
+      // - 每次 滑动窗口 右滑动时，( 当前的和 = +新添加的进来的元素 -出去的元素 )
+
+      // 优化
+      // - 优化下面的写法
+      // - 平均值可以最后计算，我们直接比较每次 sum 的大小，sum大则平均值一定大
+
+      var findMaxAverage = function (nums, k) {
+        let sum = 0;
+
+        // 初始化滑动窗的 sum
+        for (let i = 0; i < k; i++) {
+          sum += nums[i];
+        }
+
+        let max = sum;
+
+        // +新加进来的元素，右边界
+        // -滑动出去的元素，左边界
+        for (let i = k; i < nums.length; i++) {
+          sum = sum + nums[i] - nums[i - k];
+          if (sum > max) max = sum; // 找到每个滑动窗总和 的最大值
+        }
+
+        return max / k;
+      };
+    </script>
+
+    <script>
+      var findMaxAverage = function (nums, k) {
+        let sum = 0;
+        let max = -Infinity;
+
+        // 初始化滑动窗的 sum
+        for (let i = 0; i < k; i++) {
+          sum += nums[i];
+        }
+        max = Math.max(max, sum / k);
+
+        // +新加进来的元素，右边界
+        // -滑动出去的元素，左边界
+        for (let i = k; i < nums.length; i++) {
+          sum = sum + nums[i] - nums[i - k];
+
+          let curMax = sum / k;
+          if (curMax > max) max = curMax;
+        }
+
+        return max;
+      };
+    </script>
+  </body>
+</html>

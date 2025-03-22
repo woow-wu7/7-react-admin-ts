@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Binary tree preorder traversal.
+      // 144. 二叉树的前序遍历
+
+      // Question
+      // Given the root of a 【 binary tree 】, return the preorder traversal of its nodes' values.
+
+      // 二叉树 - 前序遍历
+      // - 前序遍历: 指的是 ( 根左右 ) 的遍历方式
+      // - traversal 是遍历的意思
+
+      // - preorder 前序 --------- 根左右
+      // - inorder 中序 ---------- 左根右
+      // - postorder 后序 -------- 左右根
+
+      // English
+      // -- recursion 递归 n
+      // -- traversal 遍历 n
+
+      // - 都是深度优先遍历 DFS - Depth First Search
+
+      // DFS Depth First Search 深度优先遍历
+      // BFS Breadth First Search 广度优先遍历
+
+      // - 链接图解 https://blog.csdn.net/My_Jobs/article/details/43451187
+
+      // leetcode
+      // https://leetcode.cn/problems/binary-tree-preorder-traversal/
+
+      /**
+       * Definition for a binary tree node.
+       * function TreeNode(val, left, right) {
+       *     this.val = (val===undefined ? 0 : val)
+       *     this.left = (left===undefined ? null : left)
+       *     this.right = (right===undefined ? null : right)
+       * }
+       */
+      /**
+       * @param {TreeNode} root
+       * @return {number[]}
+       */
+      var preorderTraversal = function (root) {
+        const result = [];
+
+        function preorderTraversalFn(root) {
+          // 递归结束的条件是，根节点存在
+          // 根左右
+          if (root) {
+            result.push(root.val);
+            preorderTraversalFn(root.left); // 遍历左子树，递归进行
+            preorderTraversalFn(root.right); // 遍历右子树
+          }
+        }
+
+        preorderTraversalFn(root);
+
+        return result;
+      };
+    </script>
+  </body>
+</html>

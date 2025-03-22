@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 19. 删除链表的倒数第 N 个结点
+
+      // 题目
+      // 给你一个链表，删除链表的倒数第 n 个结点，并且返回链表的头结点。
+
+      // 对比
+      // - 剑指 Offer 22. 链表中倒数第k个节点
+      // - 19. 删除链表的倒数第 N 个结点
+      // - 两个几乎一样，一个是找到，一个是删除
+
+      // 方案
+      // - 滑动窗口 - 快慢指针
+
+      // ------------------------------------------------------------
+      // ------------------------------------------------------------
+      // ------------------------------------------------------------
+      // 方法1
+      // 双指针 - 滑动窗口
+      var getKthFromEnd = function (head, k) {
+        let dummy = new ListNode(null); // dummy虚拟节点，常用套路
+        dummy.next = head;
+        let slow = (fast = dummy);
+
+        // 快指针先移动 k+1
+        while (k + 1) {
+          fast = fast.next;
+          k--;
+        }
+
+        // 滑动窗口，快慢同时后移动
+        // 结束遍历，则 slow 是倒数 k 的前一个位置，因为我们快指针和慢指针差是 k + 1
+        while (fast) {
+          fast = fast.next;
+          slow = slow.next;
+        }
+
+        slow.next = slow.next.next;
+
+        return dummy.next;
+      };
+    </script>
+  </body>
+</html>

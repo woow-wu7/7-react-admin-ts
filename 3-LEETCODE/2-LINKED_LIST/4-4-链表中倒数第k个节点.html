@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 剑指 Offer 22. 链表中倒数第k个节点
+
+      // 题目
+      // 输入一个链表，输出该链表中倒数第k个节点。为了符合大多数人的习惯，本题从1开始计数，即链表的尾节点是倒数第1个节点。
+
+      // 给定一个链表: 1->2->3->4->5, 和 k = 2.
+      // 返回链表 4->5.
+
+      // 链接
+      // 剑指 Offer 22. 链表中倒数第k个节点 https://leetcode.cn/problems/lian-biao-zhong-dao-shu-di-kge-jie-dian-lcof/
+
+      // 对比
+      // ( 删除一个节点 ) 剑指 Offer 18. 删除链表的节点 https://leetcode.cn/problems/shan-chu-lian-biao-de-jie-dian-lcof/
+      // ( 删除多个节点 ) 203. 移除链表元素 https://leetcode.cn/problems/remove-linked-list-elements/
+      // ( 存在重复的节点，就删除重复的靠后的节点 ) 83. 删除排序链表中的重复元素 https://leetcode.cn/problems/remove-duplicates-from-sorted-list/
+      // ( 删除倒数第N个节点 - 滑动窗口 )  19. 删除链表的倒数第 N 个结点 https://leetcode.cn/problems/remove-nth-node-from-end-of-list/
+
+      // 思路
+      // - 双指针 - 或者叫 滑动窗口 ( 只需要一次遍历，也不需要额外空间 )
+      //  - 原理
+      //    - 1. 从head开始，让fast先走k步(题目是: 倒数第k个节点)，即让 ( 快慢指针 ) 相差 ( k ) 个位置
+      //    - 2. 然后以 ( 快慢指针为滑动窗口 )，一起往后移动，快指针遍历到链表结束，则慢指针的位置就是 ( 倒数第k个节点的位置 )
+      //  - 对比
+      //    - 注意对比: 删除倒数第K个节点
+      //    - 3-LEETCODE/2-LINKED_LIST/4-4-删除链表的倒数第N个结点.html
+      // - 数组，收集，取倒数 ( 也是一次遍历，但是需要额外的数据结构 和 空间 )
+
+      // 扩展
+      // - 我们需要利用 虚拟节点 dummy节点，dummy.next = head
+      // - 快指针先走 k+1 步，因为删除当前节点，需要在 ( 当前节点前一个节点来修改指针，所以让快慢指针之间是 k+1 )
+
+      // (1) 快慢指针的运用
+      // - 1. 链表是否有环
+      // - 2. 环形链表的入口
+      // - 3. 链表的中间节点
+      // (2) 滑动窗口的运用
+      // - 1. 删除倒数第k个节点
+      // - 2. 链表中倒数第k个节点
+
+      // ------------------------------------------------------------
+      // ------------------------------------------------------------
+      // ------------------------------------------------------------
+      // 方法1
+      // 双指针 - 滑动窗口
+      // 不用借助dummy节点，双指针之间间隔 k 个节点，当fast节点是尾节点时，slow就是倒数第k个节点
+      var getKthFromEnd = function (head, k) {
+        let fast = (slow = head);
+
+        // 使得 fast 和 slow 之间相隔 k 个位置，这样整体移动fast和slow，slow位置就是倒数k个节点，即滑动窗口
+        while (k) {
+          fast = fast.next;
+          k--;
+        }
+
+        // 滑动窗口，fast和slow同时移动，保证差值间隔不变即可
+        while (fast) {
+          fast = fast.next;
+          slow = slow.next;
+        }
+
+        return slow;
+      };
+
+      // ------------------------------------------------------------
+      // ------------------------------------------------------------
+      // ------------------------------------------------------------
+      // 方法 2
+      // 双指针 - 滑动窗口
+      var getKthFromEnd = function (head, k) {
+        let dummy = new ListNode(null); // dummy虚拟节点，常用套路
+        dummy.next = head;
+        let slow = (fast = dummy);
+
+        // 快指针先移动 k+1
+        while (k + 1) {
+          fast = fast.next;
+          k--;
+        }
+
+        // 滑动窗口，快慢同时后移动
+        // 结束遍历，则 slow 是倒数 k 的前一个位置，因为我们快指针和慢指针差是 k + 1
+        while (fast) {
+          fast = fast.next;
+          slow = slow.next;
+        }
+
+        // slow.next = slow.next.next
+
+        return slow.next;
+      };
+
+      // ------------------------------------------------------------
+      // ------------------------------------------------------------
+      // ------------------------------------------------------------
+      // 方法 3 - 而外空间和数据结构
+      var getKthFromEnd = function (head, k) {
+        const res = [];
+        while (head) {
+          res.push(head);
+          head = head.next;
+        }
+
+        return res.at(-k);
+      };
+    </script>
+  </body>
+</html>

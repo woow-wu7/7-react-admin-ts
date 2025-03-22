@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>img标签的 srcset 属性</title>
+    <style>
+      .image-set {
+        width: 100px;
+        height: 100px;
+
+        background-image: -webkit-image-set(url("./user.png") 2x, url("./notion.png") 3x);
+        background-image: image-set(url("./user.png") 2x, url("./notion.png") 3x);
+        background-position: center;
+        background-size: cover;
+      }
+    </style>
+  </head>
+  <body>
+    <img srcset="./user.png 1200w, ./notion.png 600w" alt="" />
+
+    <div class="image-set"></div>
+  </body>
+  <script>
+    // 调试时 请用在浏览器用手机模式和浏览器模式来回切换
+
+    // 1
+    // <img src="small.jpg " srcset="big.jpg 1440w, middle.jpg 800w, small.jpg 1x" />
+    // - srcset 属性的作用是
+    //   - 1. w: 根据屏幕宽度w，加载不同大小的图片
+    //   - 2. x: 根据屏幕的像素密度x，加载不同大小的图片
+    // - 上面的代码表示
+    //   - 浏览器宽度达到 800px 则加载 middle.jpg ，达到 1400px 则加载 big.jpg
+
+    // 2
+    // background-image: image-set()
+    // background-image: -webkit-image-set(url("./images/11.png") 2x, url("./images/22.png") 3x);
+    // background-image: image-set(url("./images/11.png") 2x, url("./images/22.png") 3x);
+  </script>
+</html>

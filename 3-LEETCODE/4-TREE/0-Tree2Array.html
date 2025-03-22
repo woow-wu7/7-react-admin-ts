@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 扩展
+      // 数组 -> tree 本项目/3-LEETCODE/3-ARRAY/2-ArrayToTree.html
+
+      // 树 -> 数组
+
+      // const targetArr = [
+      //   { id: 1 },
+      //   { id: 2, parentId: 1 },
+      //   { id: 3, parentId: 1 },
+      //   { id: 4, parentId: 3 },
+      // ];
+      
+      const tree = [
+        {
+          id: 1,
+          children: [
+            {
+              id: 2,
+              parentId: 1,
+            },
+            {
+              id: 3,
+              parentId: 1,
+              children: [
+                {
+                  id: 4,
+                  parentId: 3,
+                },
+              ],
+            },
+          ],
+        },
+      ];
+
+      function treeToArray(tree) {
+        const result = [];
+
+        function recursion(arr) {
+          for (let i = 0; i < arr.length; i++) {
+            const item = arr[i];
+            const children = item.children;
+            result.push(item);
+
+            if (children) {
+              recursion(children); // 递归调用，始终操作同一个 result
+              Reflect.deleteProperty(item, "children");
+              // delete arr[i].children; // 扁平后，删除children属性；注意：这里不能是删除 children 变量，而要直接删除 arr[i].children，因为delete是删除对象的属性
+            }
+          }
+        }
+
+        recursion(tree); // 注意：这里的tree包装成了array，便于遍历
+
+        return result;
+      }
+
+      const res = treeToArray(tree);
+      console.log(`res`, res);
+    </script>
+  </body>
+</html>

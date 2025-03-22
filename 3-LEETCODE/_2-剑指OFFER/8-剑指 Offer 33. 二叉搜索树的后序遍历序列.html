@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 剑指 Offer 33. 二叉搜索树的后序遍历序列
+
+      // 题目
+      // 输入一个整数数组，判断该数组是不是某二叉搜索树的后序遍历结果。如果是则返回 true，否则返回 false。假设输入的数组的任意两个数字都互不相同。
+
+      // 参考以下这颗二叉搜索树：
+      //      5
+      //     / \
+      //    2   6
+      //   / \
+      //  1   3
+
+      // 示例 1：
+      // 输入: [1,6,3,2,5]
+      // 输出: false
+
+      // 示例 2：
+      // 输入: [1,3,2,6,5]
+      // 输出: true
+
+      // leetcode
+      // https://leetcode.cn/problems/er-cha-sou-suo-shu-de-hou-xu-bian-li-xu-lie-lcof/
+
+      /**
+       * @param {number[]} postorder
+       * @return {boolean}
+       */
+
+      // 二叉搜索树
+      // - 左子树所有节点 < 根节点
+      // - 右子树所有节点 > 根节点
+
+      // postorder 后续 左右根
+      var verifyPostorder = function (postorder) {
+        if (postorder.length <= 2) return true; // 递归结束条件
+
+        const root = postorder.at(-1); // 根节点 - 就是数组最后一个节点
+        const index = postorder.findIndex((v) => v > root); // 左右子树的 - 边界
+
+        const left = postorder.slice(0, index); // 左子树
+        const right = postorder.slice(index, -1); // 右子树，注意不包含根节点
+
+        // 右子树 和 根节点 的最小值，一定是根节点
+        // 问题: 为什么我们只判断 根和右子树 呢？
+        // 回答: 因为左子树我们在找的过程中，index已经满足前面的都小于root了，而右边却不一定满足，不满足就false
+        if (Math.min(root, ...right) !== root) return false;
+
+        return verifyPostorder(left) && verifyPostorder(right); // 递归遍历左右子树，都需要同时满足以上的判断
+      };
+    </script>
+  </body>
+</html>

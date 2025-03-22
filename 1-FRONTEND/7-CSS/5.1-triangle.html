@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shapes</title>
+    <style>
+      /* Detail: 1-FRONTEND/7-CSS/2-DrawShape */
+
+      .triangle {
+        height: 0;
+        width: 0;
+
+        border-top: 100px solid red;
+        border-right: 100px solid blue;
+        border-bottom: 100px solid green;
+        border-left: 100px solid yellow;
+        /* 四个三角形 */
+
+        border: 100px solid transparent;
+        border-bottom: 100px solid red;
+      }
+
+      .square {
+        display: inline-block;
+        width: 100px;
+        height: 100px;
+        background: #52c41a;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="triangle"></div>
+    <div class="square">宽高100px的正方形</div>
+    <div>注意：扇形sector的实现方式 = 三角形triangle的实现方式 + border-radius: 100%;</div>
+    <div>
+      <span>sector 扇形</span> &nbsp;&nbsp;&nbsp; <span>triangle 三角形</span> &nbsp;&nbsp;&nbsp;
+      <span>rectangle 矩形</span> &nbsp;&nbsp;&nbsp; <span>square 正方形</span> &nbsp;&nbsp;&nbsp;
+      <span>semicircle 半圆</span> &nbsp;&nbsp;&nbsp; <span>parallelogram 平行四边形</span> &nbsp;&nbsp;&nbsp;
+    </div>
+    <div>链接：本项目/2-FRONTEND/CSS/5-sector.html</div>
+    <script>
+      // triangle
+      // - The area of a triangle is half of the product of the base times the height.
+      // - The area of a triangle is equal to one half of the product of the base times the height.
+    </script>
+  </body>
+</html>

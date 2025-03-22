@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 55. 跳跃游戏
+
+      // 题目
+      // 给定一个非负整数数组 nums ，你最初位于数组的 第一个下标 。
+      // 数组中的每个元素代表你在该位置可以跳跃的最大长度。
+      // 判断你是否能够到达最后一个下标。
+
+      // 输入：nums = [2,3,1,1,4]
+      // 输出：true
+      // 解释：可以先跳 1 步，从下标 0 到达下标 1, 然后再从下标 1 跳 3 步到达最后一个下标。
+
+      // 输入：nums = [3,2,1,0,4]
+      // 输出：false
+      // 解释：无论怎样，总会到达下标为 3 的位置。但该下标的最大跳跃长度是 0 ， 所以永远不可能到达最后一个下标。
+
+      // leetcode
+      // 55. 跳跃游戏 https://leetcode.cn/problems/jump-game/
+
+      // 思路
+      // - 贪心算法
+      // - 我们只考虑每次能 ( 覆盖的范围 )，不去计算每次能走几步，如果 终点 在覆盖范围 就一定能到终点
+
+      var canJump = function (nums) {
+        if (nums.length === 1) return true; // 边界
+
+        let cover = nums[0]; // 覆盖范围
+
+        // 遍历: 覆盖范围内 每个位置 能走的覆盖范围
+        for (let i = 0; i <= cover; i++) {
+          cover = Math.max(cover, i + nums[i]); // 更新覆盖范围
+          if (cover >= nums.length - 1) return true; // 1. 已覆盖
+        }
+
+        return false; // 2. 未覆盖
+      };
+    </script>
+  </body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 手写 typeof
+      // - 返回值: number string boolean undefined symbol bigint object function，一共 8 种
+
+      // 思路: 利用 Object.prototype.toString.call() 来实现
+
+      // 注意点
+      //  - 因为 Object.prototype.toString.call() 是对象类型时，会返回具体的对象，比如返回 Date RegExp Error Array
+      //  - 所以我们应该枚举其他类型，剩下的都返回object，我们使用 map 来枚举非对象类型
+
+      // 测试
+      console.log(typeof Symbol());
+      console.log(typeof BigInt(1));
+      console.log(BigInt(1) + 1n);
+
+      const _typeof = (data) => {
+        const typeStr = Object.prototype.toString
+          .call(data)
+          .slice(8, -1)
+          .toLowerCase();
+
+        // 除了map中枚举的类型外，typeof 都返回 object
+        const map = {
+          number: true,
+          string: true,
+          boolean: true,
+          // null: true, // typeof null === 'object'
+          undefined: true,
+          symbol: true,
+          bigint: true,
+          function: true,
+        };
+
+        return map[typeStr] ? typeStr : "object";
+      };
+
+      const type = _typeof([]);
+      console.log("type: ", type);
+    </script>
+  </body>
+</html>

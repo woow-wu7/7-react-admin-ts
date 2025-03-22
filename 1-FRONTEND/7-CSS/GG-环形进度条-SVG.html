@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      svg {
+        border: 1px solid red;
+      }
+
+      #circle {
+        transform: rotate(-90deg); /* 这是让环的起点在圆的顶点 */
+        transform-origin: center;
+
+        transition: all 0.1s linear;
+
+        stroke: rgb(0, 85, 255);
+        stroke-width: 10px;
+        stroke-linecap: round;
+        stroke-dasharray: 596 596;
+        stroke-dashoffset: 496;
+      }
+
+      #circle-background {
+        stroke: rgba(190, 190, 190, 0.5);
+      }
+    </style>
+  </head>
+  <body>
+    <svg width="200" height="200" viewBox="0 0 200 200">
+      <!-- circle -->
+      <!-- cx cy 表示圆心坐标 -->
+      <!-- r 表示半径 -->
+      <!-- fill 表示圆的填充颜色 -->
+      <!-- stroke-width 边框宽度 -->
+      <!-- stroke 边框填充颜色 -->
+      <circle id="circle" cx="100" cy="100" r="95" fill="transparent" />
+      <circle
+        id="circle-background"
+        cx="100"
+        cy="100"
+        r="95"
+        fill="transparent"
+        stroke-width="10"
+      />
+    </svg>
+
+    <button>随机概率</button>
+    <script>
+      const button = document.querySelector("button");
+      const circle = document.querySelector("circle");
+
+      button.addEventListener("click", onRandom, false);
+      function onRandom() {
+        console.log("circle", circle);
+        circle.style["stroke-dashoffset"] = Math.random() * 496;
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quick_sort</title>
+  </head>
+
+  <body>
+    <script>
+      // English
+      // -- raw 生的 未加工的
+      // -- counter 计数器 柜台
+      // -
+      // -- bubble 泡 气泡 冒泡
+      // -- algorithm 算法
+      // --【 bubble sort algorithm. 冒泡排序算法 】
+      // -
+      // -- series 系列 串联 n
+      // --【 a series of test. 一系列测试 】
+      // --【 series circuit. 串联电路 】
+      // --【 parallel circuit. 并联电路 】
+      // --【 electric circuit. 电路 】
+      // -
+      // -- original 最初的 原始
+      // -- origin 起源 源头 n
+      // -
+      // -- resource 资源 资料
+      // -- source 来源 源头
+      // --【 open source code. 开源代码 】
+      // --【 open source module. 开源模块 】
+      // --【 source code analysis. 源码分析 】
+      // -
+      // -- pivot 支点
+      // TIPS: Pay attention to the pronunciation of the 'pivot'
+      // -
+      // -- coordinate 坐标
+      // -- adjacent 相邻的
+      // --【 Our house is 【 adjacent 】 to the park. 我们的房子紧挨着公园 】
+
+      // 1.【 This is a high performance algorithm. 这是一个性能很高的算法 】
+      // 2. Please don't 【 directly 】 operate the 【 original array 】.
+      // 3. Find the position of the minimum value in the array.
+      // 4. The 【 condition 】 for the 【 recursion 】 to end.
+
+      // quick sort
+      // 快排
+      // O(nlogn)
+
+      // bubble_sort = selection_sort = insert_sort =  O(n²)
+      // quick_sort = shell_sort希尔排序 = O(nlogn)
+
+      // 原理：
+      // pivot 支点
+      // 1 选择一个值为 pivot 基准值
+      // 2 所有小于 pivot 的值，都放在左边数组
+      // 3 所有大于 pivot 的值，都放在右边数组
+      // 4 等于 pivot 的值可以放在左边，也可以放在右边，还可以再加一个数组，放中间数组
+      // 5 递归结束条件: 不断重复以上步骤，直到所有子集 ( 只剩下一个元素为止 )，剩一个元素就是递归结束的条件
+      // 6 拼接最终的三个数组 ( 当然每次递归都会再次分三个数组拼接 )，每个数组都是有序的数组
+
+      // 链接
+      // https://juejin.cn/post/6907145602400780296
+
+      const arr = [1, 5, 4, 2, 3, 9, 8, 6, 7];
+
+      const quickSort = (raw) => {
+        const arr = [...raw];
+        const len = arr.length;
+
+        // The 【 condition 】 for the 【 recursion 】 to end.
+        // 递归结束的条件，递归一定要记得写结束条件
+        if (len <= 1) return arr;
+
+        const left = [];
+        const middle = [];
+        const right = [];
+
+        const pivot = Math.floor(Math.random() * len);
+        // 随机下标，注意边界
+        // 注意: 这里不能是 len-1，因为边界值，Math.random是[0, 1)，右边是开区间
+
+        for (let i = 0; i < len; i++) {
+          if (arr[i] < arr[pivot]) left.push(arr[i]);
+          if (arr[i] > arr[pivot]) right.push(arr[i]);
+          if (arr[i] === arr[pivot]) middle.push(arr[i]);
+        }
+
+        return quickSort(left).concat(middle, quickSort(right)); // 递归，quickSort() 的返回值
+      };
+
+      const res = quickSort(arr);
+      console.log("res: ", res);
+    </script>
+  </body>
+</html>

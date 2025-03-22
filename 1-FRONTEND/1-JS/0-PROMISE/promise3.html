@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 执行顺序 - 案例1
+      console.log(1);
+      setTimeout(() => {
+        // 定时器 A
+        console.log(2);
+        Promise.resolve().then(() => {
+          // Promise D
+          console.log(3);
+        });
+      });
+      new Promise((resolve, reject) => {
+        // Promise B
+        console.log(4);
+        resolve(5);
+      }).then((data) => {
+        console.log(data);
+      });
+      setTimeout(() => {
+        // 定时器 C
+        console.log(6);
+      });
+      console.log(7);
+      // 1 4 7  5 2 3 6
+
+      // 第一次执行
+      // 同步任务：1 4 7
+      // 宏任务队列：( 2 promise3 ) 6
+      // 微任务队列：5
+
+      // 第二次执行
+      // 优先会执行微任务队列的：所有微任务 5
+      // 接着执行宏任务队列的：一个宏任务 ( 2 promise3 )
+      // - 2
+      // - 3进入微任务队列
+      // ---- 执行完一个宏任务后，此时：
+      //      - 宏任务队列：6
+      //      - 微任务队列：3
+
+      // 第三次执行
+      // 优先执行所有微任务 3
+      // 接着执行宏任务 6
+
+      // --------------------------------
+      // 147
+      // 5
+      // 2
+      // 3
+      // 6
+      // --------------------------------
+
+      // 1 4 7 5 2 3 6
+
+      // [其他面试题连接](file:///Users/xiawu/work/personal/front-end/8-penetrate/5-INTERVIEW/4-中移.html)
+      // 其他面试题连接：5-INTERVIEW/4-中移.html
+      // 其他面试题连接：5-INTERVIEW/4-中移.html
+      // 其他面试题连接：5-INTERVIEW/4-中移.html
+      // 其他面试题连接：5-INTERVIEW/4-中移.html
+      // 其他面试题连接：5-INTERVIEW/4-中移.html
+      // 其他面试题连接：5-INTERVIEW/4-中移.html
+    </script>
+  </body>
+</html>

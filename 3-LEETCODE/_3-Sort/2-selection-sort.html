@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Selection_sort</title>
+  </head>
+  <body>
+    <script>
+      // English
+      // -- raw 生的 未加工的
+      // -- counter 计数器 柜台
+      // -
+      // -- bubble 泡 气泡 冒泡
+      // -- algorithm 算法
+      // --【 bubble sort algorithm. 冒泡排序算法 】
+      // -
+      // -- series 系列 串联 n
+      // --【 a series of test. 一系列测试 】
+      // --【 series circuit. 串联电路 】
+      // --【 parallel circuit. 并联电路 】
+      // --【 electric circuit. 电路 】
+      // -
+      // -- original 最初的 原始
+      // -- origin 起源 源头 n
+      // -
+      // -- resource 资源 资料
+      // -- source 来源 源头
+      // --【 open source code. 开源代码 】
+      // --【 open source module. 开源模块 】
+      // --【 source code analysis. 源码分析 】
+      // -
+      // -- pivot 支点
+      // TIPS: Pay attention to the pronunciation of the 'pivot'
+      // -
+      // -- coordinate 坐标
+      // -- adjacent 相邻的
+      // --【 Our house is 【 adjacent 】 to the park. 我们的房子紧挨着公园 】
+      
+      // 1.【 This is a high performance algorithm. 这是一个性能很高的算法 】
+      // 2. Please don't 【 directly 】 operate the 【 original array 】.
+      // 3. Find the position of the minimum value in the array.
+      // 4. The 【 condition 】 for the 【 recursion 】 to end.
+
+      // selection sort
+      // 选择排序
+      // O(n²)
+
+      // bubble_sort = selection_sort = insert_sort =  O(n²)
+      // quick_sort = shell_sort希尔排序 = O(nlogn)
+
+      // 原理：
+      // 1. 选取数组第一个元素（min），和余下的（数组Y）元素一一做对比（j），如果 j < min，则把 min=j，直到Y循环完毕，min就得到了一个最小值，交换 i 和 min 的值，则第一个位置就是最小的值
+      // 2. 除去第一个元素，从剩下的数组中，选取第一个元素（min）和余下的数组（Y）一一做对比，重复以上步骤
+
+      // 链接
+      // https://juejin.cn/post/6907145602400780296
+
+      const arr = [1, 6, 4, 2, 5, 3, 9, 8, 7, 7];
+
+      const selectionSort = (raw) => {
+        // Please don't 【 directly 】 operate the 【 original array 】.
+        const arr = [...raw];
+        const len = arr.length;
+
+        for (let i = 0; i < len; i++) {
+          // Find the position of the minimum value in an array.
+          // i 拿出来比较的位置
+          // 这里 min 表示本轮比较的最小值的 位置
+          let min = i;
+
+          for (let j = i + 1; j < len; j++) {
+            // 剩余数组，j 余下的位置
+            if (arr[j] < arr[min]) {
+              // 剩余数组成员 依次和 最小值位置 做对比，谁小就交换位置，该趟的最小值被交换到第一个成员位置
+              min = j; // 将较小值的位置，动态的赋值给min，即min永远是该趟的最小值的位置
+            }
+          }
+
+          // swap
+          // 把当前拿出来比较的元素位置 和 最小值的位置 交换
+          // 交换位置对应的值，每趟找到最小元素位置后，都和本趟第一个元素交换位置
+          [arr[i], arr[min]] = [arr[min], arr[i]];
+        }
+
+        return arr;
+      };
+
+      const res = selectionSort(arr);
+      console.log("res: ", res);
+    </script>
+  </body>
+</html>

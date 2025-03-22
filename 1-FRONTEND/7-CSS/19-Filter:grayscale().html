@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>filter: grayscale(100%) - 可实现 悼念模式</title>
+
+    <!-- filter: grayscale(100%); -->
+    <!-- 所有的文字，图片，iframe 都会变为灰色，可以用来实现 悼念模式 -->
+
+    <style>
+      html {
+        filter: grayscale(100%);
+      }
+
+      div {
+        width: 100px;
+        height: 100px;
+
+        /* 当设置了 filter: grayscale(100%); 后，这个黄色的背景也会变为灰色 */
+        background: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <p>filter: grayscale(100%); 灰度测试 悼念模式</p>
+
+      <!-- 1 -->
+      <!-- 当设置了 filter: grayscale(100%); 后，这个div的黄色的背景也会变为灰色 -->
+      <div></div>
+
+      <!-- 2 -->
+      <!-- 当设置了 filter: grayscale(100%); 后，iframe 也会变为灰色 -->
+      <iframe
+        src="https://assets.pinterest.com/ext/embed.html?id=511228995209395242"
+        height="277"
+        width="236"
+        frameborder="0"
+        scrolling="no"
+      ></iframe>
+    </section>
+  </body>
+</html>

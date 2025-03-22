@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 面试题 01.06. 字符串压缩
+
+      // 题目
+      // 字符串压缩。利用字符重复出现的次数，编写一种方法，实现基本的字符串压缩功能。
+      // 比如，字符串aabcccccaaa会变为a2b1c5a3。若“压缩”后的字符串没有变短，则返回原先的字符串。你可以假设字符串中只包含大小写英文字母（a至z）。
+
+      // 输入："aabcccccaaa"
+      // 输出："a2b1c5a3"
+
+      // 输入："abbaca"
+      // 输出："abbccd"
+      // 解释："abbccd"压缩后为"a1b2c2d1"，比原字符串长度更长。
+
+      /**
+       * @param {string} S
+       * @return {string}
+       */
+
+      // leetcode
+      // https://leetcode.cn/problems/compress-string-lcci/description/
+
+      // English
+      // -
+      // compress 压缩
+
+      var compressString = function (S) {
+        let curStr = S[0];
+        let curCount = 0; // ------ aa. 初始化时是0，因为第一个字符还没有遍历，【 curCount 也可以设置为 1，for循环时 i 从 1 开始 】
+        let res = "";
+
+        for (let i = 0; i < S.length; i++) {
+          if (S[i] === curStr) {
+            curCount++;
+          } else {
+            res = res + `${curStr}${curCount}`; // =========== 1. 注意：这里先进行收集，收集后还有更新两个变量的操作，所以遍历结束后，还要更新一次res
+            curStr = S[i]; // 因为进入else时，i也增加了，所以i此时是下一个和不和S[i]相等的位置
+            curCount = 1; // ------ aa. 注意这里重置的数量为1，不是0；因为如果是0，下一个字符只有一个的话，就会统计为0
+          }
+        }
+
+        res = res + `${curStr}${curCount}`; // =============== 1. 最后还有更新一次res，1有说明
+
+        return res.length < S.length ? res : S; // 如果 压缩的长度 长于 没压缩的长度，就没有必要压缩了，就返回原字符
+      };
+    </script>
+  </body>
+</html>

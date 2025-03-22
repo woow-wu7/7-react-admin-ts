@@ -1,0 +1,298 @@
+{
+  "tabnine.experimentalAutoImports": true,
+  "workbench.iconTheme": "vscode-great-icons",
+  "cSpell.languageSettings": [],
+  "fileheader.configObj": {
+    "autoAdd": false // koro1FileHeader 自动添加文件头部注释 默认开启
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "files.autoSave": "afterDelay",
+  "editor.linkedEditing": true,
+  "editor.formatOnSave": true,
+  "[vue]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.mouseWheelScrollSensitivity": 0.3,
+  "terminal.integrated.tabs.enabled": false,
+  "###############################################################################": "####### 1.todo-tree-start",
+  "todo-tree.filtering.excludeGlobs": [
+    "**/vendor/**",
+    "**/node_modules/**",
+    "**/uni_modules/**",
+    "**/dist/**",
+    "**/bower_components/**",
+    "**/build/**",
+    "**/.vscode/**",
+    "**/.github/**",
+    "**/_output/**",
+    "**/*.min.*",
+    "**/*.map"
+  ],
+  "todo-tree.regex.regex": "((//|#|<!--|;|.|/\\*|^)\\s*($TAGS)|^//\\s*\\[x\\]|^//\\s*\\[ \\])",
+  "todo-tree.general.tags": [
+    "TODO",
+    "MARK",
+    "FIXME",
+    "LOCAL_SET",
+    "LOCAL_GET",
+    "STORE_SET",
+    "STORE_GET",
+    "NAVIGATE",
+    "MAJOR",
+    "TIPS",
+    "EE",
+    "[x]",
+    "[ ]",
+    "#################################################################################分割线#######",
+    "MT",
+    "HL"
+    // "VS"
+  ],
+  "todo-tree.general.tagGroups": {
+    "TODO": ["TODO", "todo"]
+  },
+  "todo-tree.tree.expanded": true,
+  "todo-tree.highlights.customHighlight": {
+    "TODO": {
+      "foreground": "white",
+      "background": "Orange",
+      "type": "tag",
+      "icon": "pencil",
+      "gutterIcon": true,
+      "iconColour": "Orange"
+    },
+    "MARK": {
+      "foreground": "white",
+      "background": "#ff2c4c",
+      "type": "tag",
+      "icon": "history",
+      "gutterIcon": true,
+      "iconColour": "#ff2c4c"
+    },
+    "LOCAL_SET": {
+      "foreground": "white",
+      "background": "#ff2c4c",
+      "type": "tag",
+      "icon": "database",
+      "gutterIcon": true,
+      "iconColour": "#ff2c4c"
+    },
+    "LOCAL_GET": {
+      "foreground": "white",
+      "background": "#ff2c4c",
+      "type": "tag",
+      "icon": "database",
+      "gutterIcon": true,
+      "iconColour": "#ff2c4c"
+    },
+    "STORE_SET": {
+      "foreground": "white",
+      "background": "#00f382",
+      "type": "tag",
+      "icon": "ruby",
+      "gutterIcon": true,
+      "iconColour": "#00f382"
+    },
+    "STORE_GET": {
+      "foreground": "white",
+      "background": "#00f382",
+      "type": "tag",
+      "icon": "ruby",
+      "gutterIcon": true,
+      "iconColour": "#00f382"
+    },
+    "NAVIGATE": {
+      "foreground": "white",
+      "background": "#009ef3",
+      "type": "tag",
+      "icon": "milestone",
+      "gutterIcon": true,
+      "iconColour": "#009ef3"
+    },
+    "MAJOR": {
+      "foreground": "white",
+      "background": "#00FFFF",
+      "type": "tag",
+      "icon": "flame",
+      "gutterIcon": true,
+      "iconColour": "#00FFFF"
+    },
+    "TIPS": {
+      "foreground": "white",
+      "background": "#ff0048",
+      "type": "tag",
+      // "type": "capture-groups:1",
+      "icon": "thumbsup",
+      "gutterIcon": true,
+      "iconColour": "#ff0048"
+    },
+    "TIPS2": {
+      "foreground": "white",
+      "background": "#8800ff",
+      "type": "tag",
+      "icon": "thumbsup",
+      "gutterIcon": true,
+      "iconColour": "#8800ff"
+    },
+    "[x]": {
+      "foreground": "#64dd17",
+      "background": "#008800"
+    },
+    "[ ]": {
+      "foreground": "#f44336",
+      "background": "#592c2c"
+    },
+    "MT": {
+      "foreground": "white",
+      "background": "#8800ff",
+      "type": "tag",
+      "icon": "flame",
+      "gutterIcon": true,
+      "iconColour": "#9500ff"
+    },
+    "HL": {
+      "foreground": "white",
+      "background": "#ff0080",
+      "type": "tag",
+      "icon": "ruby",
+      "gutterIcon": true,
+      "iconColour": "#ff0080"
+    },
+    "EE": {
+      "foreground": "white",
+      "background": "#ff0080",
+      // "opacity": 0.7,
+      "type": "tag-and-subTag",
+      "icon": "skip",
+      "gutterIcon": true,
+      "iconColour": "#ff0080"
+    }
+  },
+  "#################################################################################": "####### 1.todo-tree-end",
+  "#################################################################################": "####### 2.tailwind-start",
+  "editor.quickSuggestions": {
+    "strings": "on"
+  },
+  "#################################################################################": "####### 2.tailwind-end",
+  "gitlens.graph.layout": "editor",
+  "gitlens.graph.minimap.additionalTypes": ["localBranches", "stashes", "tags", "remoteBranches"],
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "cSpell.userWords": [
+    "accidently",
+    "ADMINSTRATOR",
+    "antd",
+    "bodymovin",
+    "ciphertext",
+    "classpath",
+    "clsx",
+    "Configurer",
+    "consigner",
+    "Contentful",
+    "countertop",
+    "datasource",
+    "decompilation",
+    "favourite",
+    "genpkey",
+    "handprint",
+    "handprints",
+    "highlightjs",
+    "IELTS",
+    "immer",
+    "Inno",
+    "installerhome",
+    "jdbc",
+    "Mobaxterm",
+    "mybatis",
+    "myid",
+    "Navicat",
+    "nextjs",
+    "Pinia",
+    "pkeyopt",
+    "preter",
+    "Protocal",
+    "rainforest",
+    "Raycast",
+    "readdir",
+    "repositoryserver",
+    "rootroot",
+    "rupt",
+    "SECRETKEY",
+    "sonner",
+    "standlone",
+    "strs",
+    "tencentcloud",
+    "touid",
+    "tuwen",
+    "USERID",
+    "VARCHAR",
+    "Vimium",
+    "vuepress",
+    "Vuex",
+    "XSTX",
+    "Zhen",
+    "Zhening",
+    "Zong",
+    "zset",
+    "zukeeper",
+    "Zustand"
+  ],
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "workbench.list.mouseWheelScrollSensitivity": 0.2,
+  "editor.guides.bracketPairs": true,
+  "terminal.integrated.mouseWheelScrollSensitivity": 0.5,
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "notebook.formatOnSave.enabled": true,
+  "diffEditor.ignoreTrimWhitespace": false,
+  "launch": {
+    "configurations": [],
+    "compounds": []
+  },
+  "json.schemas": [],
+  "editor.stickyScroll.enabled": false,
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "workbench.settings.applyToAllProfiles": [],
+  "liveServer.settings.donotShowInfoMsg": true,
+  "codesandbox.currentWorkspace": "4d83fc6c-9685-4ff6-af9e-398fa8d2c65c",
+  "editor.fontSize": 14,
+  "security.workspace.trust.untrustedFiles": "open",
+  "editor.tabSize": 2,
+  "javascript.inlayHints.enumMemberValues.enabled": true,
+  "explorer.compactFolders": false,
+  "typescript.inlayHints.enumMemberValues.enabled": true,
+  "prettier.printWidth": 120,
+  "git.autofetch": true,
+  "workbench.colorTheme": "Bearded Theme Milkshake Raspberry",
+  "editor.minimap.enabled": false,
+  "#################################################################################": "####### 3.highlight-start",
+  "highlight.regexes": {
+    "(\\bVS\\b)": [
+      {
+        "backgroundColor": "#ff5e00",
+        "color": "#ffffff"
+      }
+    ],
+    "(TIPS)": [
+      {
+        "backgroundColor": "#ff0000",
+        "color": "#ffffff"
+      }
+    ]
+  },
+  "#################################################################################": "####### 3.highlight-start"
+}

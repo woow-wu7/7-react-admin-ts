@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>1像素物理边框</title>
+    <style>
+      .container {
+        height: 300px;
+        background: yellow;
+        position: relative;
+      }
+      .container::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background: red;
+      }
+
+      @media screen and (-webkit-min-device-pixel-ratio: 2) {
+        .container::after {
+          transform: scaleY(0.5);
+        }
+      }
+
+      @media screen and (-webkit-min-device-pixel-ratio: 3) {
+        .container::after {
+          transform: scaleY(0.33);
+        }
+      }
+
+      /* content用于对比 */
+      .contrast {
+        height: 100px;
+        background: yellow;
+        position: relative;
+        margin-top: 20px;
+      }
+      .contrast::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container"></div>
+    <div class="contrast">下面的div用于对比</div>
+  </body>
+  <script>
+    console.log("window.devicePixelRatio获取屏幕像素比 :>> ", window.devicePixelRatio);
+
+    const Contrast = document.getElementsByClassName("contrast")[0]; // contrast 对比 v
+    const div = document.createElement("div");
+    div.innerHTML = `当前的屏幕像素比是: ${window.devicePixelRatio}`;
+    Contrast.appendChild(div);
+
+    // 移动端 1px 物理边框 ？
+    // - 前置知识
+    //   - 公式: ( `物理像素 = css 像素 * 像素比` )
+    //   - 像素比: 即 几倍屏
+    //   - 如何获取屏幕像素比: `window.devicePixelRatio`
+    // - 实现
+    //   - 1. 给 div 盒子设置 ( 伪元素 [::before or ::after] - 相当于当前元素的第一个子元素，不在 DOM 中，[扩展：display:node 和 visibility:hidden 在 DOM 存在] )，( 高度 1px，绝对定位在盒子底部 )
+    //   - 2. 通过 @media screen and (-webkit-min-device-pixel-ratio: 2 或者 3 ) 命中几倍屏
+    //   - 3. 然后通过 transform: scaleY(0.5) 缩放 伪元素 ( 2 倍屏缩小 0.5，3 倍屏缩小 0.333 )
+
+    // TIPS: Pay attention to the pronunciation of "media". [media-媒体-n]
+  </script>
+</html>

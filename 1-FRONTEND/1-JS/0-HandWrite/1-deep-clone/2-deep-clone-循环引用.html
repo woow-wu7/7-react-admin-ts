@@ -1,0 +1,76 @@
+\<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 深拷贝 - 基础版
+      // 基础版
+      //  - 只能拷贝对象和数组
+      //  - 不能解决 ( 循环引用 )，( symbol类型的key )，( 一些特殊的对象 比如 Date RegExp 等 )
+      const obj = {
+        name: "woow_wu7",
+        score: {
+          en: 10,
+          zh: 20,
+        },
+      };
+      obj.circular = obj; // 循环引用 ------------------------- Map 解决
+      obj[Symbol()] = "symbol"; // Symbol() 类型的 key -------- Reflect.ownKeys()
+
+      const deepClone = (obj, map = new Map()) => {
+        // 1
+        // 保证是基本数据类型时，直接返回
+        // - typeof 返回 number string boolean undefined symbol bigint object function 一共 8 种类型
+        if (typeof obj !== "object" && typeof obj !== "function") {
+          return obj;
+        }
+
+        // 2
+        // 从这里起都是处理 对象 类型，即 ( array object function )
+        const res = Array.isArray(obj) ? [] : {};
+
+        // 3
+        // 处理循环引用
+        if (map.has(obj)) return map.get(obj);
+        map.set(obj, res);
+
+        // 4
+        // array object
+        for (let key in obj) {
+          if (obj.hasOwnProperty(key)) {
+            if (typeof obj[key] === "object") {
+              res[key] = deepClone(obj[key], map);
+            } else {
+              res[key] = obj[key];
+            }
+          }
+        }
+
+        return res;
+      };
+
+      const result = deepClone(obj);
+      console.log("result", result);
+
+      console.log(
+        "obj.score === result.score :>> ",
+        obj.score === result.score
+      ); // false
+
+      // console.log("arr === result", arr === result); // false
+      // arr[0] = 111;
+      // console.log("result", result);
+      // obj.score.en = 400;
+      // console.log(result);
+
+      // 1
+      // 循环引用
+      // - 循环引用需要通过 map 去缓存每一次参数
+    </script>
+  </body>
+</html>

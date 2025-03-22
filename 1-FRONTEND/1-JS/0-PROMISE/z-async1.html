@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // execution order. 执行顺序 - 案例3
+      // async await 函数
+      // 注意执行顺序
+      // - async函数中有await时，执行完await后面的表达式 b()，async函数会让出线程，将await表达式后面的代码放入 ( 微任务队列 56 )，继续执行async函数后面的代码 4
+      const a = async () => {
+        console.log(2);
+
+        await b();
+        // await
+        // 1. 遇到await，会先执行await紧跟着的表达式 b()，并将表达式后面的代码 56 放入 ( 微任务队列 micro task queue )
+        // 2. 然后跳出async函数，执行主线程其他任务 4
+
+        console.log(5);
+        console.log(6);
+        // 5
+        // - 放入 微任务队列
+        // - 即
+        //    1. 将await表示式后面的代码 56 放入 微任务队列
+        //    2. 跳出async函数，继续执行 async 函数后面的代码 4，执行完后，再去微任务队列中 flush 所有的微任务56
+      };
+
+      const b = async () => {
+        console.log(3);
+      };
+
+      console.log(1);
+      a(); // 这里注意：如果 a().then() 时的执行顺序，请看 test4-2-async.html
+      console.log(4);
+      // 1 2 3 4 5 6
+
+      // 1 2 3 4
+      // 微任务队列 5 6
+
+      // --------------------------------
+      // 123 4
+      // 56
+      // --------------------------------
+
+      // 最终 1 2 3 4 5 6
+
+      // [其他面试题连接](file:///Users/xiawu/work/personal/front-end/8-penetrate/5-INTERVIEW/4-中移.html)
+      // 其他面试题连接：5-INTERVIEW/4-中移.html
+      // 其他面试题连接：5-INTERVIEW/4-中移.html
+      // 其他面试题连接：5-INTERVIEW/4-中移.html
+      // 其他面试题连接：5-INTERVIEW/4-中移.html
+      // 其他面试题连接：5-INTERVIEW/4-中移.html
+      // 其他面试题连接：5-INTERVIEW/4-中移.html
+
+      // Contrast
+      // 对比
+      // [promise4-综合](file:///Users/xiawu/work/personal/front-end/8-penetrate/1-FRONTEND/1-JS/0-Promise/promise4-综合.html)
+      // [promise6-综合2](file:///Users/xiawu/work/personal/front-end/8-penetrate/1-FRONTEND/1-JS/0-Promise/promise6-综合2.html)
+      // [async-2](file:///Users/xiawu/work/personal/front-end/8-penetrate/1-FRONTEND/1-JS/0-Promise/async2.html)
+    </script>
+  </body>
+</html>

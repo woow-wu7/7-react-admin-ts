@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>无重复字符的最长子串 Longest Substring Without Repeating Characters.</title>
+  </head>
+  <body>
+    <script>
+      // 题目
+      // 3. 无重复字符的最长子串 Longest Substring Without Repeating Characters.
+
+      // AA
+      //【 滑动窗口 】
+      //【 滑动窗口 】
+      // 思路 - 一般遇到 ( 子串问题 )，可以考虑使用 ( 滑动窗口 - 双指针 ) 的思想
+
+      // BB
+      // 暴力解法
+      // - 1. 找出所有子串
+      // - 2. 判断每个子串是不是 无重复字符的字符串 找到最长的 即可
+
+      // 本题思路
+      // 1. 基本组成: 左右两个指针，一个Set，两个变量 len maxLen
+      // 2. 移动右指针
+      //      - 右指针的值在Set中不存在 - 1.添加进Set，2.然后右移-右指针，3.更新 len 和 maxLen
+      //      - 右指针的值在Set中存在 - 1.删除左指针在set中的值，2.len-- 3.然后右移-左指针，循环再判断右指针的值在set中否存在
+      //          - 不存在 - 就将右指针的值添加进set，并移动右指针，并更新 len 和 maxLen
+      //          - 存在 - 继续删除左指针的值，并移动左指针，len--
+
+      // leetcode
+      // https://leetcode.cn/problems/longest-substring-without-repeating-characters/
+
+      // Tutorial video.
+      // https://www.bilibili.com/video/BV113411v7Ak/?spm_id_from=333.999.0.0&vd_source=a8374ac38c77856369542fc154a1e043
+
+      // 对比
+      // 300. 最长递增子序列 ----- ( 动态规划 )  https://leetcode.cn/problems/longest-increasing-subsequence/
+      // 674. 最长连续递增序列 --- ( 连续 ) https://leetcode.cn/problems/longest-continuous-increasing-subsequence/
+      // 3. 无重复字符的最长子串 -- ( 滑动窗口 + Set ) https://leetcode.cn/problems/longest-substring-without-repeating-characters/
+      // 剑指 Offer 48. 最长不含重复字符的子字符串 https://leetcode.cn/problems/zui-chang-bu-han-zhong-fu-zi-fu-de-zi-zi-fu-chuan-lcof/
+
+      // English
+      // -
+      // repeating 重复的 adj / ing
+      // 【 repeating character. 重复字符 】
+      // -
+      // personality 性格 n
+      // character 特征 字母 性格 n
+      // letter 字母 信 n
+      // 【 repeating character. 重复字符 】
+
+      // Set
+      // 1
+      // 应用:
+      // -- 1. 去除 ( 数组 ) 中的 重复 成员
+      // -- 2. 去除 ( 字符串 ) 中的 重复 字符
+      const arrTest = [1, 2, 4, 2, 4, 3];
+      const strTest = "abbcadef";
+      const arrRes = [...new Set(arrTest)];
+      const strRes = [...new Set(strTest)].join("");
+      console.log("arrRes: ", arrRes);
+      console.log("strRes: ", strRes);
+      // 2
+      // WeakSet
+      // -- 1. WeakSet 的成员只能是 ( 对象 ) 或 ( Symbol 值 )
+      // -- 2. WeakSet 中的对象都是 ( 弱引用 )
+      // -- 3. WeakSet ( 不可遍历 )
+
+      /**
+       * @param {string} s
+       * @return {number}
+       */
+
+      const s = "abcabcbb"; // 3
+      // const s = "bbbbb"; // 1
+      // s = "pwwkew"; // 3
+
+      var lengthOfLongestSubstring = function (s) {
+        // 定义四个变量: 左右指针，当前滑动窗口的长度，滑动窗口的最大长度
+        // - 左右指针 left right
+        // - 当前滑动窗口的长度 len
+        // - 滑动窗口的最大长度 maxLen
+        let left = (right = len = maxLen = 0);
+
+        // set.add
+        // set.has
+        // set.delete
+        let set = new Set();
+
+        // 总的条件: 右指针遍历完 就 结束整个遍历
+        while (right < s.length) {
+          // 1. 右指针的值 在 set 不存在
+          // ------------------------------------------ 这段代码和 YYY 是重复的，可以做优化，这里为了方便理解不做优化了
+          if (!set.has(s[right])) {
+            set.add(s[right]);
+            len++;
+            if (maxLen < len) maxLen = len;
+            right++;
+          }
+          // 2. 右指针的值 在 set 中存在，就移动左指针，直到 right指针的值在set中不存在为止
+          else {
+            // 右指针的值在set中存在
+            while (set.has(s[right])) {
+              set.delete(s[left]); // 删除左指针 在 set 中的值
+              len--;
+              left++;
+            }
+            //  --------------------------------------- YYY
+            set.add(s[right]); // 左指针可以再移动时，将 右指针 的值添加到 set 中
+            len++;
+            if (maxLen < len) maxLen = len;
+            right++; // 右移 右指针
+          }
+        }
+
+        return maxLen;
+      };
+    </script>
+
+    <script>
+      // 暴力求解
+      /**
+       * @param {string} s
+       * @return {number}
+       */
+      // const s = "abcabcbb"; // 3
+      // const s = "bbbbb"; // 1
+      // s = "pwwkew"; // 3
+
+      /**
+        var lengthOfLongestSubstring = function (s) {
+        let res = "";
+        const len = s.length;
+
+        if (!len) return 0;
+
+        const allSame = s.split("").reduce((prev, current) => {
+          return prev === current;
+        });
+        if (allSame) return 1;
+
+        for (let i = 0; i < len; i++) {
+          for (let j = i + 1; j <= len; j++) {
+            const str = s.slice(i, j).split("").sort().join("");
+            let hasSame = false;
+            for (let k = 0; k < str.length; k++) {
+              if (str[k] === str[k + 1]) {
+                hasSame = true;
+              }
+            }
+            if (!hasSame) {
+              if (res.length < str.length) {
+                res = str;
+              }
+            }
+          }
+        }
+        return res.length;
+      };
+      const res = lengthOfLongestSubstring(s);
+      console.log("res: ", res);
+    ***/
+    </script>
+  </body>
+</html>

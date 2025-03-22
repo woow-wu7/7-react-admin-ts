@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>跨域通信-收消息</h1>
+    <script>
+      // 通信
+
+      // 1
+      // BroadcastChannel
+      // const broadcast = new BroadcastChannel("广播唯一标记");
+      // - broadcast 是广播的意思
+      // - channel 是频道，通道的意思
+      // 发消息 - postMessage(‘发送的内容’)
+      // 收消息 - onmessage
+
+      // 2
+      // storage
+      // 当 localStorage 发生变化时，会插入 storage 事件
+      // - 在一个标签页中，改变localStorage的内容
+      // - 在另一个标签页中，监听 storage 事件即可
+
+      // 1
+      const broadcast = new BroadcastChannel("one"); // 注意：这里的 one 要和发送消息页面中的new BroadcastChannel("id") 中的参数相同
+      broadcast.onmessage = (e) => {
+        console.log("e :>>BroadcastChannel接收到的消息内容： ", e);
+        console.log("BroadcastChannel接收到的消息内容：", e.data);
+      };
+
+      // 2
+      window.addEventListener(
+        "storage",
+        function (e) {
+          console.log("e通过storage事件监听变化获取数据", e);
+          console.log("通过storage事件监听变化获取数据", e.newValue);
+        },
+        false
+      );
+
+      // 3
+      window.onmessage = (e) => {
+        console.log("e :>> ", e);
+        console.log("这是通过 window.open() 接收到的消息", e.data);
+      };
+    </script>
+  </body>
+</html>

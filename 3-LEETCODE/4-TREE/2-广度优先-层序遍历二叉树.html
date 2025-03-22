@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 广度优先遍历 BFS
+      // - Breadth First Search
+
+      // Binary tree level order traversal.
+      // 102. 二叉树的层序遍历
+      // - 给你二叉树的根节点 root ，返回其节点值的 层序遍历 。 （即逐层地，从左到右访问所有节点）。
+      // 本题是102的简单版本，成员不是数组
+
+      // 对比
+      // 102. 层序遍历
+      // 199. 右视图 = 层序遍历 + 过滤 每个数组成员的最后一个值
+      // 637. 层平均值 = 层序遍历 + 计算 每个数组成员的平均值
+      // 513. 左下角的值 = 层序遍历 + 找到 最后一层数组的第一个值
+
+      // 扩展
+      // 广度优先: 从做到右，从上到下
+      // 广度优先的两种题型:
+      //  - 2-广度优先-层序遍历二叉树.html
+      //  - 2-广度优先-层序遍历二叉树升级.html
+
+      // DFS Depth First Search 深度优先遍历
+      // BFS Breadth First Search 广度优先遍历
+
+      /**
+       * Definition for a binary tree node.
+       * function TreeNode(val, left, right) {
+       *     this.val = (val===undefined ? 0 : val)
+       *     this.left = (left===undefined ? null : left)
+       *     this.right = (right===undefined ? null : right)
+       * }
+       */
+      /**
+       * @param {TreeNode} root
+       * @return {number[][]}
+       */
+
+      // 11
+      // 问题: 二叉树的层序遍历 - 给你二叉树的根节点 root ，返回其节点值的 层序遍历 。 （即逐层地，从左到右访问所有节点）
+      // 举例: root, 最后要返回 [1, 2, 5, 3, 4, 6 , 7]
+      const root = {
+        val: 1,
+        left: {
+          val: 2,
+          left: {
+            val: 3,
+          },
+          right: {
+            val: 4,
+          },
+        },
+        right: {
+          val: 5,
+          left: {
+            val: 6,
+          },
+          right: {
+            val: 7,
+          },
+        },
+      };
+
+      // -----------------------------------------------------------------------------
+      // -----------------------------------------------------------------------------
+      // 1 队列 + while
+      var levelOrder = function (root) {
+        const res = [];
+        const queue = [root];
+
+        while (queue.length) {
+          const node = queue.shift();
+
+          if (node.val) res.push(node.val);
+          if (node.left) queue.push(node.left);
+          if (node.right) queue.push(node.right);
+        }
+
+        return res;
+      };
+      const res = levelOrder(root);
+      console.log("res: ", res);
+
+      // -----------------------------------------------------------------------------
+      // -----------------------------------------------------------------------------
+      // 2 队列 + 递归
+      var levelOrder2 = function (root) {
+        const result = []; // 最终结果
+        const queue = [root]; // 队列，先进先出，对应 push 和 shift 方法
+
+        const recursive = () => {
+          // 队列中有成员就从前往后弹出，先进先出
+          // - 1. 当2出队时，入队35，则队列中有 [5, 3, 4]
+          // - 2. 下次递归，就是 5 出队，入队67， 则队列中有 [3,4,6,7]
+          // - 3. 正好是广度优先遍历
+          if (queue.length) {
+            const target = queue.shift(); // 左边出队，shift()返回删除的元素
+            if (target) {
+              result.push(target.val);
+              if (target.left) queue.push(target.left); // 左边先入队
+              if (target.right) queue.push(target.right);
+              recursive();
+            }
+          }
+        };
+
+        recursive();
+
+        return result;
+      };
+      const res2 = levelOrder2(root);
+      console.log("res2: ", res2);
+
+      // ---------------------------------------------------------------------------------------------------
+      // ---------------------------------------------------------------------------------------------------
+      // 2
+      // 变通方法
+      // - 方法1: 我们是不断的弹出队列中的第一个元素
+      // - 方法2: 我们可以不弹出来，而是不断添加进来，用指针来表示弹出的元素，这种方法空间利用率不高
+      var levelOrder3 = function (root) {
+        const result = [];
+        const queue = [root]; // 不断push，动态 currentIndex 确定target，空间利用率不高
+        let currentIndex = 0;
+
+        const recursive = () => {
+          // 递归结束条件
+          if (currentIndex < queue.length) {
+            // const target = queue.shift(); // 左边出队
+            const target = queue[currentIndex]; // 指针不断后移
+            if (target) {
+              result.push(target.val);
+              if (target.left) queue.push(target.left); // 左边先入队
+              if (target.right) queue.push(target.right);
+              currentIndex++;
+              recursive();
+            }
+          }
+        };
+
+        recursive();
+
+        return result;
+      };
+      const res3 = levelOrder3(root);
+      console.log("res3: ", res3);
+    </script>
+  </body>
+</html>

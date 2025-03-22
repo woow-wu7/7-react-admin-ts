@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <script>
+      // let const var
+
+      // 1
+      var a = 10;
+      const f1 = () => {
+        console.log("a", a); // undefined
+        var a = 100;
+      };
+      f1();
+
+      // 2
+      var b = 20;
+      const f2 = () => {
+        console.log("b", b); // Uncaught ReferenceError: Cannot access 'b' before initialization
+        let b = 200;
+      };
+      f2();
+    </script>
+    <script>
+      // axios 取消请求
+    </script>
+
+    <script>
+      // this
+      var d = 1000;
+      const obj = {
+        d: 10,
+        e: function () {
+          console.log(this.d); // this -> obj
+        },
+        f: () => {
+          console.log(this.d); // this -> window
+        },
+      };
+      obj.e();
+      obj.f();
+    </script>
+  </body>
+</html>

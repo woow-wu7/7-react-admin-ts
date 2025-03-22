@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>打家劫舍 House Robber.</title>
+  </head>
+  <body>
+    <script>
+      // 198. 打家劫舍 House Robber
+
+      // Question
+      // You are a 【 professional robber 】 planning to rob houses 【 along a street 】.
+      // Each house has 【 a certain amount of 】 money 【 stashed 】,
+      // 1.condition: the only 【 constraint 】 stopping you from robbing each of them is that 【 adjacent 】 houses have security systems connected
+      //             and it will automatically contact the police if two adjacent houses were broken into on the same night.
+      // 2. conditions: Given an 【 integer 】 array nums representing the amount of money of each house,
+      // 3. result: return the maximum amount of money you can rob tonight without alerting the police.
+
+      // 问题
+      // 你是一个专业的小偷，计划偷窃沿街的房屋。
+      // 每间房内都藏有一定的现金，影响你偷窃的唯一制约因素就是相邻的房屋装有相互连通的防盗系统，如果两间相邻的房屋在同一晚上被小偷闯入，系统会自动报警。
+      // 给定一个代表每个房屋存放金额的非负整数数组，计算你 不触动警报装置的情况下 ，一夜之内能够偷窃到的最高金额。
+
+      // leetcode链接
+      // 198. 打家劫舍 https://leetcode.cn/problems/house-robber/
+
+      // 思路
+      // - 动态规划
+
+      // English
+      // -
+      // [1.]
+      // robber 抢劫犯
+      // rob 抢 v
+      // steal 偷 v
+      // -
+      // [2.]
+      // 【 adjacent 相邻的 】
+      // 【 adjacent house. 相邻的房间 】
+      // 【 adjacent side. 相邻的边 】
+      // TIPS: Pay attention to the pronunciation of the word 'adjacent'. [adjacent-相邻的-adj] [adjacent-sides.相邻的边]
+      // -
+      // [3.]
+      // constrain 限制 v
+      // constraint 限制 n
+      // 【 constrain development. 限制发展 v 】
+      // -
+      // [4.]
+      //【 professional 专业的adj 职业的adj 专业的人n 】
+      //【 professional robber. 专业的小偷 】
+      //【 professional skill. 专业的技能 】
+      //【 professional knowledge. 专业的知识 】
+      // professional VS profession VS professor
+      // -
+      // [5.]
+      // dynamic 动态的 adj
+      // programming 规划 程序 n
+      // 【 dynamic programming. 动态规划 】
+      //
+      // - acknowledge 承认 v
+      // - knowledge 知识 n
+      // - .MT【 I 【 acknowledge 】 that he has 【 rich knowledge 】. 我承认他知识丰富 】
+      //
+      // -- along a street. 沿着街道
+      //
+      // -- amount of. ...的数量
+      // -- 【 a certain amount of. 一定数量的 】
+      // -- 【 a large amount of. 大量的 】 - 修饰不可数
+      // -- 【 a large number of. 大量的 】 - 修饰可数
+      // -
+      // -- stash 贮藏
+      // -- constraint 限制
+      // -- integer 整数
+
+      /**
+       * @param {number[]} nums
+       * @return {number}
+       */
+      var rob = function (nums) {
+        const len = nums.length;
+
+        // 1
+        // 边界 - 处理nums的特殊情况
+        // 因为我们在做dp数组时， dp[1] = Math.max(nums[0], nums[1]); 是表示默认nums[0] 和 nums[1] 存在，即长度2起步
+
+        // dp[i] 表示偷到第 i 个房间时，能偷到的最大金额
+        const dp = [];
+
+        // 因为 状态
+        dp[0] = nums[0]; // 边界 ( 只有一家 ) 的偷法 - 第一家只有一种偷法，并且选择偷，保存只有一家能偷到的金额
+        dp[1] = Math.max(nums[0], nums[1]); // 边界 ( 只有两家 ) 的偷法 - 因为不能相邻，所以只有两家就必须选一家大的偷 -- 第二家可以选择偷和不偷，最终就是选一个大的，决定偷还是不偷，即偷到的金额就是前两家的较大值
+
+        for (let i = 2; i < len; i++) {
+          dp[i] = Math.max(dp[i - 2] + nums[i], dp[i - 1]);
+          // xx
+          // 状态转移方程
+          // -> 偷到第i家时的最大金额 = 偷第i家的最大金额 ( dp[i-2] + nums[i] ) + 不偷第i家的最大金额 ( dp[i-1] ) 两者的 较大值
+          // 1. 当偷到 i-2 家时，一定可以偷第 i 家 ---------- 到第i家时，方案1(偷第i家): 偷到的最大金额就是 dp[i-2] + nums[i]
+          // 2. 当偷到 i-1 家时，就不能偷第i-2家和第i家 ------ 到第i家时，方案2(不偷第i家): 偷到的最大金额就是 dp[i-1]
+          // yy
+          // 1. 这里表示，第i家的两种偷法，偷和不偷的状态转移
+          // 2. 即 第i家的偷法最大值 = 第i-2家的偷法最大值 + nums[i] 和 第i-1家的偷法最大值 中选择大者进行偷窃
+        }
+
+        return dp[len - 1]; // 数组最后一个元素的下标是 length - 1
+      };
+    </script>
+  </body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 20. 有效的括号
+
+      // 题目
+      // 给定一个只包括 '('，')'，'{'，'}'，'['，']' 的字符串 s ，判断字符串是否有效。
+
+      // 有效字符串需满足：
+      // - 左括号必须用相同类型的右括号闭合。
+      // - 左括号必须以正确的顺序闭合。
+      // - 每个右括号都有一个对应的相同类型的左括号。
+
+      // 思路：栈
+
+      // 解析
+      // 一共有几种情况，我们以 () [] 为例
+      // 枚举
+      // ()[]
+      // ([])
+      // ][)()
+      // ((([]))
+
+      // - 1. 如果是 ( [ 直接入栈
+      // - 2. 如果是 ) ] 就需要配对，如果栈顶不存在对应的配对的左小括号和中括号 - 就返回false
+      // - 3. 如果第一个就是 ) ]，直接false
+      // - 4. 如果都满足12，但是遍历完，栈不为空，也是false
+
+      // leetcode
+      // 20. 有效的括号 https://leetcode.cn/problems/valid-parentheses/
+
+      /**
+       * @param {string} s
+       * @return {boolean}
+       */
+      var isValid = function (s) {
+        const stack = []; // push pop
+
+        for (let i = 0, len = s.length; i < len; i++) {
+          const cur = s[i];
+
+          // push
+          if (cur === "(" || cur === "[" || cur === "{") {
+            stack.push(s[i]);
+          }
+
+          // pop
+          // 如果是 ) ] } 就需要配对，栈顶必须是 ( [ {，配对就栈顶出栈
+          else if (
+            (cur === ")" && stack.at(-1) === "(") ||
+            (cur === "]" && stack.at(-1) === "[") ||
+            (cur === "}" && stack.at(-1) === "{")
+          ) {
+            stack.pop();
+          }
+
+          // 不满足上面两种情况，就是false，因为是配对的偶数
+          // - 比如一上来就是 ) ] }
+          // - 比如 (])
+          else return false;
+        }
+
+        // 最后栈必须为空 才为 true
+        // return stack.length === 0;
+        return !stack.length;
+      };
+    </script>
+  </body>
+</html>

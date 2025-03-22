@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Binary tree inorder traversal.
+      // 94. 二叉树的 中序遍历
+
+      // 中序遍历二叉树 - 递归
+
+      // - preorder 前序 --------- 根左右
+      // - inorder 中序 ---------- 左根右
+      // - postorder 后序 -------- 左右根
+
+      // English
+      // -- recursion 递归 n
+      // -- traversal 遍历 n
+
+      // DFS Depth First Search 深度优先遍历
+      // BFS Breadth First Search 广度优先遍历
+
+      // leetcode
+      // https://leetcode.cn/problems/binary-tree-inorder-traversal/
+      /**
+       * Definition for a binary tree node.
+       * function TreeNode(val, left, right) {
+       *     this.val = (val===undefined ? 0 : val)
+       *     this.left = (left===undefined ? null : left)
+       *     this.right = (right===undefined ? null : right)
+       * }
+       */
+      /**
+       * @param {TreeNode} root
+       * @return {number[]}
+       */
+      var inorderTraversal = function (root) {
+        // 中序遍历指的是：左子树 - 根 - 右子树
+        // 递归实现
+
+        const result = [];
+
+        // 问题：这里为什么要再声明一个函数，而不直接使用inorderTraversal
+        // 回答：因为要使 result 不被重复声明，类似充当一个闭包变量或者全局变量
+        // 实现：整体思路和前序遍历的实现一样
+        function inorderRecursionFn(root) {
+          if (root) {
+            inorderRecursionFn(root.left); // 左子树的递归
+            result.push(root.val); // 根节点，最左边的叶子节点最先进入数组
+            inorderRecursionFn(root.right); // 右子树的递归
+          }
+        }
+
+        inorderRecursionFn(root);
+
+        return result;
+      };
+    </script>
+  </body>
+</html>

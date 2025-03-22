@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Univalued Binary Tree.
+      // 965. 单值二叉树
+
+      // Question
+      // A binary tree is 【 uni-valued 】 if every node in the tree has the same value.
+      // Given the root of a binary tree, return true if the given tree is uni-valued, or false otherwise.
+
+      // English
+      // uni-valued 单值
+
+      // 题目
+      // 如果二叉树每个节点都具有相同的值，那么该二叉树就是单值二叉树。
+      // 只有给定的树是单值二叉树时，才返回 true；否则返回 false。
+
+      // 示例 1：
+      // 输入：[1,1,1,1,1,null,1]
+      // 输出：true
+
+      // 示例 2：
+      // 输入：[2,2,2,5,2]
+      // 输出：false
+      //
+
+      // 提示：
+      // 给定树的节点数范围是 [1, 100]。
+      // 每个节点的值都是整数，范围为 [0, 99]
+
+      /**
+       * Definition for a binary tree node.
+       * function TreeNode(val, left, right) {
+       *     this.val = (val===undefined ? 0 : val)
+       *     this.left = (left===undefined ? null : left)
+       *     this.right = (right===undefined ? null : right)
+       * }
+       */
+      /**
+       * @param {TreeNode} root
+       * @return {boolean}
+       */
+
+      // 思路
+      // - 任意的二叉树遍历方式都可以
+      // - 遍历时比较 每次的根节点 和 整棵树的根节点 是否相等即可
+
+      // 1
+      // 方法 1 比较好
+      var isUnivalTree = function (root) {
+        // 随便哪种方式遍历都行
+        // 1. DFS preorder inorder postorder
+        // 2. BFS
+        let rootVal = root.val;
+        function preorder(root) {
+          if (!root) return true;
+          if (rootVal !== root.val) return false; // 比较
+          return preorder(root.left) && preorder(root.right);
+        }
+        return preorder(root);
+      };
+
+      // ----------------------------------------------------------------------------------------
+      // 2
+      var isUnivalTree = function (root) {
+        if (!root) return null;
+
+        let isTrue = true;
+        let value = root.val;
+
+        function dfs(node) {
+          if (node) {
+            if (node.val !== value) {
+              isTrue = false;
+              return;
+            }
+            dfs(node.left);
+            dfs(node.right);
+          }
+        }
+        dfs(root);
+
+        return isTrue;
+      };
+    </script>
+  </body>
+</html>

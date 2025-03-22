@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 执行顺序 - 案例5
+
+      async function async1() {
+        console.log("a");
+
+        await async2(); // 执行完 async2，将 b 放入微任务队列，并跳出 async1，去执行 promiseF
+        console.log("b");
+      }
+
+      async function async2() {
+        console.log("c");
+      }
+
+      console.log("d");
+
+      setTimeout(function () {
+        console.log("e");
+      }, 0);
+
+      async1();
+
+      new Promise(function (resolve) {
+        console.log("f");
+        resolve();
+      }).then(function () {
+        console.log("g");
+      });
+
+      console.log("h");
+      // d a c f h   b g   e
+
+      // 现在到 test5 理解起来就很简单了
+      // d 宏任务setTimeout(e) a c 微任务(b) f h 微任务(g)
+
+      // --------------------------------
+      // d a c f h
+      // bg
+      // e
+      // --------------------------------
+
+      // d a c f h
+      // 微任务队列 b g
+      // 宏任务队列 e
+      // 总 -> d a c f h b g e
+
+      // 其他面试题连接：1-INTERVIEW/中移.html
+      // 其他面试题连接：1-INTERVIEW/中移.html
+      // 其他面试题连接：1-INTERVIEW/中移.html
+      // 其他面试题连接：1-INTERVIEW/中移.html
+      // 其他面试题连接：1-INTERVIEW/中移.html
+      // 其他面试题连接：1-INTERVIEW/中移.html
+    </script>
+  </body>
+</html>

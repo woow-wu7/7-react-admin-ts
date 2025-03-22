@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      console.log(1);
+      // A promise
+      new Promise((resolve) => {
+        console.log(2);
+        resolve();
+        // resolve() 后面的 3 也会立即执行
+        // 除非我们使用了 return resolve()，这样后面的 3 就不会执行了，这也是官方推荐的写法，一般情况下 resolve() 后任务就完成了
+        console.log(3);
+      }).then((res) => {
+        // E then
+        console.log(4);
+        // C 定时器
+        setTimeout(() => console.log(5));
+      });
+      console.log(6);
+      // B 定时器
+      setTimeout(() => {
+        console.log(7);
+        // D promise
+        new Promise((resolve) => {
+          console.log(8);
+          resolve();
+        }).then(() => console.log(9)); // F then
+      });
+      console.log(10);
+      // 总的输出顺序：1，2，3，6，10，  4，7，8，9，5
+
+      /**
+       * 第一轮 Event loop
+       * 1 => 同步任务，进入函数调用栈，立即执行
+       * A => A的回调立即执行
+       *      2 => 同步任务，立即执行
+       *      E => 微任务，进入微任务队列
+       *      3 => 同步任务，立即执行
+       * 6 => 同步任务，立即执行
+       * B => 宏任务，B的回调进入宏任务队列
+       * 10 => 同步任务，立即执行
+       * 此时执行情况如下：
+       * 输出：1，2，3，6，10
+       * 微任务：[E]
+       * 宏任务：[B]
+       *
+       * 第二轮 Event loop
+       * 清空微任务队列，取出宏任务队列的第一个成员
+       * E => 4 同步任务，立即执行
+       *      C 宏任务，进入宏任务队列，此时的宏任务队列 [B, C]
+       * B => 7 同步任务，立即执行
+       *      D promise的回调立即执行
+       *        => 8 同步任务，立即执行
+       *        => F 微任务，进入微任务队列，此时的微任务队列 [F]
+       * 此时执行情况如下：
+       * 输出：4，7，8
+       * 微任务：[F]
+       * 宏任务：[C]
+       *
+       * 第三轮 Event loop
+       * 清空微任务队列，取出宏任务队列的第一个成员
+       * F => 9 同步任务，立即执行
+       * C => 5 同步任务，立即执行
+       *
+       * --------------------------------
+       * 1 2 3 6 10
+       * 4
+       * 78
+       * 9
+       * 5
+       * --------------------------------
+       *
+       * 总的输出顺序：1，2，3，6，10，4，7，8，9，5
+       */
+
+      // [其他面试题连接](file:///Users/xiawu/work/personal/front-end/8-penetrate/5-INTERVIEW/4-中移.html)
+      // 其他面试题连接：5-INTERVIEW/4-中移.html
+      // 其他面试题连接：5-INTERVIEW/4-中移.html
+      // 其他面试题连接：5-INTERVIEW/4-中移.html
+      // 其他面试题连接：5-INTERVIEW/4-中移.html
+      // 其他面试题连接：5-INTERVIEW/4-中移.html
+      // 其他面试题连接：5-INTERVIEW/4-中移.html
+    </script>
+  </body>
+</html>

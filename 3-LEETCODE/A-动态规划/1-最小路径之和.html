@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 剑指 Offer II 099. 最小路径之和
+
+      // 对比
+      // - 120. 三角形最小路径和
+      // - 剑指 Offer II 099. 最小路径之和
+      // - 62. 不同路径
+
+      // 题目
+      // 给定一个包含非负整数的 m x n 网格 grid ，请找出一条从左上角到右下角的路径，使得路径上的数字总和为最小。
+      // 说明：一个机器人每次只能向下或者向右移动一步。
+
+      // leetcode
+      // 剑指 Offer II 099. 最小路径之和 https://leetcode.cn/problems/minimum-path-sum/description/
+
+      // 动态规划 思路
+      // 1. 为什么用动态规划: 因为是 ( 最值问题 )
+      // 2. dp数组的含义: dp[i][j] 是 ( 左上角00位置 ) 到 ( 当前ij位置 ) 的 ( 最小路径和 )
+      // 3. 状态转移方程: dp[i][j] = Math.min(dp[i-1][j], dp[i][j-1]) + grid[i][j]
+      // 4. grid[i][j] 是当前位置上的数字
+      // 5. 注意边界问题
+      //    - 1. 00位置 ---------------- dp[0][0] = grid[0][0]
+      //    - 2. 每一行第一列的最小路径和 = 上一行第一列的最小路径和 + 当前位置的数字 ----------------- 除去 第1行第1列，因为是情况1
+      //    - 3. 第一行的每一列的最小路径和 = 第一行的上一列的最小路径和 + 当前位置的数字 ------------- 除去 第1行第1列，因为是情况1
+      //    - 4. i-1> && j-1>0 ------- dp[i][j] = Math.min(dp[i-1][j], dp[i][j-1]) + grid[i][j]
+
+      // leetcode
+      // 62. 不同路径 https://leetcode.cn/problems/unique-paths/
+      // 剑指 Offer II 099. 最小路径之和 https://leetcode.cn/problems/0i0mDW/
+
+      // English
+      // -
+      // non-negative 非负数
+      // positive number. 正数
+      // negative number. 负数
+      // -
+      // passive 消极的 adj
+      // active 积极的 adj
+      // -
+      // minimize 最小化 v ------- min + imize
+      // maximize 最大化 v ------- max + imize
+      // minimal 最小的 adj
+      // maximal 最大的 adj
+      // -
+      // 【 minimal sum. 最小和  】
+
+      /**
+       * @param {number[][]} grid
+       * @return {number}
+       */
+
+      var minPathSum = function (grid) {
+        const row = grid.length; // 总行数
+        const col = grid[0].length; // 总列数
+
+        // 初始化dp 二维数组，长度和行数相等；
+        // dp[i][j] 表示的是 ( 左上角00位置 ) 到 ( 当前ij位置 ) 的 ( 最小路径和 )
+        const dp = new Array(row).fill(0).map(() => []);
+
+        // 1
+        // 特殊情况 - 最左上角的最小路径和就是 grid[0][0] 本身
+        dp[0][0] = grid[0][0];
+
+        // 2
+        // 每一行的第一列，这里 ( 除去了第0行第0列的情况，因为上面已经处理了 dp[0][0] = grid[0][0] )
+        for (let i = 1; i < row; i++) {
+          dp[i][0] = dp[i - 1][0] + grid[i][0]; // 每行第一列的最小路径和 = 上一行第一列最小路径和 + 当前数字
+        }
+
+        // 3
+        // 第一列的每一行，这里 ( 除去了第0行第0列的情况，因为上面已经处理了 dp[0][0] = grid[0][0] )
+        for (let j = 1; j < col; j++) {
+          dp[0][j] = dp[0][j - 1] + grid[0][j]; // 第一行每一列的最小路径和 = 第一行上一列的最小路径和 + 当前数字
+        }
+
+        // 4
+        // 除去123，剩下的满足状态转移方程
+        for (let i = 1; i < row; i++) {
+          for (let j = 1; j < col; j++) {
+            dp[i][j] = Math.min(dp[i - 1][j], dp[i][j - 1]) + grid[i][j]; // 状态转移方程
+          }
+        }
+
+        return dp[row - 1][col - 1]; // 返回最右下角的值
+      };
+
+      // ------------------------------------------------------------
+      // ------------------------------------------------------------
+      // ------------------------------------------------------------
+      // ------------------------------------------------------------
+      // ------------------------------------------------------------
+      // 方法2
+      // 注意边界问题
+      //    - 1. 00位置 ---------------- dp[0][0] = grid[0][0]
+      //    - 2. i-1<0 ---------------- dp[i][j] = dp[i][j-1] + grid[i][j]
+      //    - 3. j-1<0 ---------------- dp[i][j] = dp[i-1][j] + grid[i][j]
+      //    - 4. i-1>0 && j-1>0 ------- dp[i][j] = Math.min(dp[i-1][j], dp[i][j-1]) + grid[i][j]
+      // var minPathSum = function (grid) {
+      //   const row = grid.length; // 总行数
+      //   const col = grid[0].length; // 总列数
+      //   const dp = new Array(row).fill(0).map((row) => new Array(col).fill(0)); // 初始化dp m*n
+
+      //   for (let i = 0; i < row; i++) {
+      //     for (let j = 0; j < col; j++) {
+      //       if (i === 0 && j === 0) dp[i][j] = grid[0][0]; // 00位置
+      //       else {
+      //         if (i - 1 > 0 && j - 1 > 0) {
+      //           dp[i][j] = Math.min(dp[i - 1][j], dp[i][j - 1]) + grid[i][j];
+      //         } else {
+      //           if (i - 1 < 0) {
+      //             dp[i][j] = dp[i][j - 1] + grid[i][j];
+      //           } else {
+      //             dp[i][j] = dp[i - 1][j] + grid[i][j];
+      //           }
+      //         }
+      //       }
+      //     }
+      //     console.log(dp);
+      //   }
+
+      //   return dp[row - 1][col - 1];
+      // };
+    </script>
+  </body>
+</html>

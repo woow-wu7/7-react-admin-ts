@@ -1,0 +1,74 @@
+{
+  "name": "8-penetrate",
+  "version": "1.0.0",
+  "author": "woow_wu7",
+  "contributors": [
+    {
+      "name": "woow_wu7",
+      "email": "woow.wu7@gmail.com",
+      "url": "https://github.com/woow-wu7"
+    }
+  ],
+  "description": "> learning > 算法，前端，设计模式，英语，面试",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "cnpm run dev",
+    "dev": "cross-env NODE_ENV=development webpack serve --config=1-FRONTEND/8-WEBPACK/webpack.config.js",
+    "build:dev": "cross-env NODE_ENV=development webpack --config=1-FRONTEND/8-WEBPACK/webpack.config.js",
+    "node": "node 2-BACKEND/1-NODE/node.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/woow-wu7/6-penetrate.git"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/woow-wu7/6-penetrate/issues"
+  },
+  "homepage": "https://github.com/woow-wu7/6-penetrate#readme",
+  "dependencies": {
+    "webpack": "^5.82.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.21.8",
+    "@babel/preset-env": "^7.21.5",
+    "@types/node": "^20.1.7",
+    "autoprefixer": "^10.4.14",
+    "babel-loader": "^9.1.2",
+    "clean-webpack-plugin": "^4.0.0",
+    "cross-env": "^7.0.3",
+    "css-loader": "^6.7.3",
+    "eslint": "^8.40.0",
+    "eslint-loader": "^4.0.2",
+    "eslint-plugin-vue": "^9.13.0",
+    "eslint-webpack-plugin": "^4.0.1",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^5.5.1",
+    "loader-utils": "^3.2.1",
+    "mini-css-extract-plugin": "^2.7.5",
+    "node-sass": "^8.0.0",
+    "postcss-loader": "^7.3.0",
+    "sass": "^1.62.1",
+    "sass-loader": "^13.2.2",
+    "style-loader": "^3.3.2",
+    "ts-loader": "^9.4.2",
+    "typescript": "^5.0.4",
+    "url-loader": "^4.1.1",
+    "vue": "^3.3.2",
+    "vue-loader": "^17.1.1",
+    "vue-template-compiler": "^2.7.14",
+    "webpack": "^5.82.1",
+    "webpack-cli": "^5.1.1",
+    "webpack-dev-server": "^4.15.0",
+    "webpack-merge": "^5.8.0"
+  },
+  "browserslist": [
+    "defaults",
+    "not ie < 9",
+    "last 3 version",
+    ">1%",
+    "ios 7",
+    "last 3 IOS versions"
+  ]
+}

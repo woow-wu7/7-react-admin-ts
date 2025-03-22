@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      html,
+      body,
+      #container {
+        padding: 0;
+        margin: 0;
+      }
+      #container {
+        width: 100vw;
+      }
+      header {
+        width: 10rem;
+        height: 10rem;
+        background: red;
+      }
+      footer {
+        width: 100px;
+        height: 100px;
+        background: black;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <header></header>
+      <footer></footer>
+    </div>
+    <script>
+      // 750 100 -> 7.5
+      console.log(
+        "document.documentElement.clientWidth :>> ",
+        document.documentElement.clientWidth
+      );
+      console.log("window.devicePixelRatio :>> ", window.devicePixelRatio);
+      const onResize = (e) => {
+        document.documentElement.style.fontSize =
+          document.documentElement.clientWidth / 100 + "px";
+      };
+      window.addEventListener("load", onResize, false);
+      window.addEventListener("resize", onResize, false);
+    </script>
+  </body>
+</html>

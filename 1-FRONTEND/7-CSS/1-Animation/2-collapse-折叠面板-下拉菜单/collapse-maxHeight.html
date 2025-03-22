@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .content {
+        background: yellow;
+        width: 400px;
+
+        max-height: 0;
+        overflow: hidden;
+        transition: all 1s;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root">
+      <button>切换</button>
+      <div class="content" tabindex="1">
+        <p>这是展开的内容</p>
+        <p>这是展开的内容</p>
+        <p>这是展开的内容</p>
+        <p>这是展开的内容</p>
+      </div>
+    </div>
+    <script>
+      const button = document.getElementById("root");
+      const content = document.querySelector(".content");
+
+      let isExpand = false;
+
+      function toggle() {
+        isExpand = !isExpand;
+
+        if (isExpand) {
+          content.style.maxHeight = 999 + "px";
+          // 缺点: 缺点很明显，我们设置了很大的max-height高度，而实际我们看到的高度只有 400px
+          // 所以: 我们展开的动画高度是 999，而不是 400，所以我们动画展开时感觉不到，但是我们收起时能明显感觉到动画有延时，从 999-400 的高度的动画等待
+        } else {
+          content.style.maxHeight = 0 + "px";
+        }
+      }
+      button.addEventListener("click", toggle, false);
+    </script>
+  </body>
+</html>

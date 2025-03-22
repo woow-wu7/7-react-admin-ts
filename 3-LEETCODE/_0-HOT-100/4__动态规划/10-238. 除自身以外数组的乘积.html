@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 238. 除自身以外数组的乘积
+
+      // leetcode https://leetcode.cn/problems/product-of-array-except-self/
+
+      // 题目
+      // 给你一个整数数组 nums，返回 数组 answer ，其中 answer[i] 等于 nums 中除 nums[i] 之外其余各元素的乘积 。
+      // 题目数据 保证 数组 nums之中任意元素的全部前缀元素和后缀的乘积都在  32 位 整数范围内。
+      // 请不要使用除法，且在 O(n) 时间复杂度内完成此题。
+
+      // 示例 1:
+      // 输入: nums = [1,2,3,4]
+      // 输出: [24,12,8,6]
+
+      // 示例 2:
+      // 输入: nums = [-1,1,0,-3,3]
+      // 输出: [0,0,9,0,0]
+
+      // 思路
+      // - 动态规划
+      // - 两个dp数组，分别是 ( 前缀积dp_pre ) 和 ( 后缀积dp_suf )
+      // - 三个 for 循环
+
+      var productExceptSelf = function (nums) {
+        const len = nums.length;
+
+        const dp_pre = new Array(len).fill(1); // 前缀积 和 后缀积 都初始化为1
+        const dp_suf = new Array(len).fill(1);
+
+        dp_pre[1] = nums[0]; // 第二个元素的 前缀积 就是 第一个成员
+        dp_suf[len - 1 - 1] = nums[len - 1]; // 倒数第二个元素 后缀积 就是 最后一个成员
+
+        for (let i = 1; i < len; i++) {
+          dp_pre[i] = dp_pre[i - 1] * nums[i - 1]; // 1. 前缀积 状态转移方程
+        }
+        for (let j = len - 1 - 1; j >= 0; j--) {
+          dp_suf[j] = dp_suf[j + 1] * nums[j + 1]; // 2. 后缀积 状态转移方式
+        }
+
+        for (let k = 0; k < len; k++) {
+          nums[k] = dp_pre[k] * dp_suf[k]; // ------- 3. 除自身 以外的积
+        }
+
+        return nums;
+      };
+    </script>
+  </body>
+</html>

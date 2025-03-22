@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // AA.
+      // bind 的模拟实现
+      // 作用:
+      //  - 1.绑定调用 bind函数 的函数中的this指向
+      //  - 2.返回一个新的函数，新的函数可以是普通调用，也可以是通过new的方式调用
+      // 参数:
+      //  - 1. 第一个参数是this需要绑定的对象，如果是 ( 空，null，undefined ) 则相当于传入 ( 全局对象window|global )
+      //  - 2. 除了第一个参数外，后面的参数会作为返回函数的参数传入
+      // 特点:
+      //  - 1. 返回的函数: 可以 ( 普通调用 )，也可以通过 ( new ) 的方式调用，即可还可以是 ( 构造函数 )
+      //    - 构造函数时:
+      //      - bind时绑定的this失效，因为在构造函数中，this指向的是实例对象
+      //      - 但是传入的参数有效
+      // - 2. 参数:
+      //   - bind时，可以传入部分或全部参数，bind返回的新的函数调用时还能传入其他的部分参数
+
+      // BB.
+      // English
+      // -
+      // invoke 调用
+      // -
+      // parasitism 寄生 n
+      // parasitic 寄生的 adj
+      // -
+      // parameter 参数
+
+      Function.prototype._bind = function (obj, ...params) {
+        const context = obj ? obj : globalThis;
+
+        // 1
+        // ?? 空值合并操作符
+        // -
+        // const context = obj ?? globalThis
+        // ?? 空值合并操作符，当左侧的操作数为 ( null 或者 undefined ) 时，返回其右侧操作数，否则返回左侧操作数
+        // -
+        // const value1 = null;
+        // const value2 = undefined;
+        // const value3 = 0;
+        // const value4 = '';
+        // const value5 = 'Hello';
+        // const result1 = value1 ?? 'Default Value'; // 'Default Value'
+        // const result2 = value2 ?? 'Default Value'; // 'Default Value'
+        // const result3 = value3 ?? 'Default Value'; // 0
+        // const result4 = value4 ?? 'Default Value'; // ''
+        // const result5 = value5 ?? 'Default Value'; // 'Hello'
+        // -
+        // 扩展
+        // 1. 可选链操作符 ?.
+        // 2. 空值合并操作符 ??
+
+        const outParams = params; // 其实这里不需要用变量缓存，这里只是为了更语义化
+
+        const self = this; // 调用bind函数时所在所在的对象，即fn
+
+        // 兼容性 - bind必须通过函数调用
+        if (typeof self !== "function") {
+          throw new Error("bind must be invoked by a function");
+        }
+
+        // 注意：
+        // callbackFn 不能是箭头函数
+        // - 因为箭头函数没有自己的this，则不能作为构造函数，即不能通过new的方式调用
+        // - 箭头函数中的this: 是箭头函数定义时所在作用域的，上层作用域中的this，这里就是 _bind 函数中的 this
+        // - 比如下面的写法
+        // const callbackFn = (...params) => {
+        //   const totalParams = [...outParams, params];
+        //   return this.apply(this instanceof self ? this : context, totalParams); // 返回的函数，可以通过new的方式去调用
+        // };
+
+        function callbackFn(...params) {
+          const totalParams = [...outParams, ...params];
+          return self.apply(this instanceof self ? this : context, totalParams); // 返回的函数，可以通过new的方式去调用
+
+          // 返回的函数的调用方式
+          // 1. new: 如果通过new来调用callbackFn，this就是实例对象，this instanceof self就是true --- 因为 callbackFn.prototype =  new Parasitic().prototype = self.prototype
+          // 2. 正常: 正常调用返回的函数callbackFn，则this绑定在context上
+
+          // 返回值
+          // 返回的函数执行可能有返回值，所以需要 return self.apply(......)
+        }
+
+        // callbackFn.prototype = self.prototype
+        // - 如果不考虑性能，可以直接写 callbackFn.prototype = self.prototype，这样就使得通过new调用时，this instanceof self 是 true
+        // - 我们这里使用了 ( 寄生继承 )，来做优化，如下
+        function Parasitic() {}
+        Parasitic.prototype = self.prototype;
+        callbackFn.prototype = new Parasitic(); // new callbackFn() instanceof self 就是true，如果callbackFn通过new来调用的话
+
+        return callbackFn;
+      };
+
+      const obj = { age: 20 };
+      function fn(name) {
+        this.name = name;
+        console.log("this.age", this.age);
+        console.log("name :>> ", name);
+      }
+      const callbackFn = fn._bind(obj);
+      const resOrdinary = callbackFn("woow_wu7");
+      const resConstructor = new callbackFn("woow_wu7");
+      console.log("resOrdinary", resOrdinary);
+      console.log("resConstructor", resConstructor);
+    </script>
+
+    <!-- ------------具体的过程------------ -->
+    <!-- ------------具体的过程------------ -->
+    <!-- ------------具体的过程------------ -->
+    <!-- ------------具体的过程------------ -->
+    <!-- ------------具体的过程------------ -->
+    <!-- ------------具体的过程------------ -->
+    <!-- ------------具体的过程------------ -->
+    <script>
+      // 过程
+      // bind
+      // 1
+      // 概念
+      //  - a. 将函数体中的 this 绑定到某个对象
+      //  - b. 返回一个新的函数
+      //  - c. 可以只传入部分参数，即bind时可以传入部分参数，剩余的参数在返回的新函数被调用时c
+      //  - d. bind返回的函数，可以作为 ( 构造函数 ) 使用
+      //        - 即可以通过 ( new ) 命名来调用bind返回的函数
+      //        - 当bind返回的函数作为 ( 构造函数 ) 使用时，fn.bind()所绑定的对象失效，因为在构造函数中this指向了实例对象，而不是bind绑定的对象了
+
+      // 第一版
+      // - 先解决ab两个，a绑定this，b返回新函数
+      Function.prototype.bind1 = function () {
+        const self = this;
+        const params = Array.prototype.slice.call(arguments);
+        const context = params.shift();
+        return function () {
+          return self.apply(context, params);
+        };
+      };
+      function fn1() {
+        return this.age;
+      }
+      const obj1 = { age: 30 };
+      const resFn1 = fn1.bind(obj1);
+      const res1 = resFn1();
+      console.log(`res1`, res1);
+
+      // 第二版
+      // - 解决abc，添加解决传惨的逻辑
+      // - 收集参数：主要通过在两层函数中分别收集参数，然后在最后调用的时，拼接收集到的所有参数
+      Function.prototype.bind2 = function () {
+        const paramsBind = [...arguments]; // 第一层函数的参数
+        const context = paramsBind.shift();
+        const self = this;
+        return function () {
+          const paramsOther = [...arguments]; // 第二层函数的参数
+          const paramsTotal = paramsBind.concat(paramsOther); // 拼接
+          return self.apply(context, paramsTotal);
+        };
+      };
+      function fn2(number, number2) {
+        return this.age + number + number2;
+      }
+      const obj2 = { age: 300 };
+      const resFn2 = fn2.bind2(obj2, 100);
+      const res2 = resFn2(100);
+      console.log(`res2`, res2);
+
+      // 第三版
+      // - 解决d，bind返回的函数可以作为构造函数
+      // - 注意点：当bind返回的函数作为 ( 构造函数 ) 使用时，fn.bind()所绑定的对象失效，因为在构造函数中this指向了实例对象，而不是bind绑定的对象了
+      // - 实现原理：修改返回函数的原型来实现
+      //    - 将 ( bind返回函数callbackFn的prototype ) 绑定在 ( bind被绑定函数fn3的prototype ) 上，这样如果通过new调用callbackFn，则实例this就能继承fn3的prototype上的属性和方法
+      //    - 优化的话：可以用 ( 寄生组合式继承 ) 代替 ( 原型链式继承 )
+      Function.prototype.bind3 = function () {
+        const paramsBind = Array.prototype.slice.apply(arguments); // 除了obj3以外的其他参数，这些参数会作为部分参数，传入fn3
+        const context = paramsBind.shift(); // fn3中this需要绑定的对象
+        const self = this; // 外层函数的this，函数运行时决定this指向，这里this执行fn3，即self就是fn3
+
+        // 兼容性 - bind必须通过函数调用
+        if (typeof self !== "function") {
+          throw new Error("bind must be invoked by a function");
+        }
+
+        function callbackFn() {
+          const paramsOther = Array.prototype.slice.apply(arguments);
+          const paramsTotal = paramsBind.concat(paramsOther);
+
+          return self.apply(this instanceof self ? this : context, paramsTotal); // 调用fn3
+          // 1 callbackFn被调用时
+          //    - this instanceof self 如果是true，说明是通过new调用的callbackFn，因为下面已经有了 callbackFn.prototype = self.prototype，---> 最终绑定 this 实例对象
+          //    - this instanceof self 如果是false，说明不是通过new调用，作为普通函数调用，则传入被绑定的对象，----------------------------------> 最终绑定 context 传入的参数对象
+          // 2 instance instanceof constructor 原理
+          //    - 判断 ( 右边构造函数.prototype ) 是否在 ( 左边实例对象 ) 的原型链上
+          //    - 这里：通过new调用的话，fn3.prototype 是 this 的原型对象，所以返回true，返回true就绑定在实例对象this上，否则正常函数调用绑定在参数对象上
+        }
+
+        // callbackFn.prototype = self.prototype
+        // 1 如果 callbackFn 是作为构造函数调用，即通过new命令来调用的话，( 实例 ) 就能继承 ( 被绑定函数prototype ) 上的属性和方法
+        // 2 如果 callbackFn 不是作为构造函数调用，那么self.prototype也是函数的prototype，只要不使用继承属性和方法，影响也不大
+
+        // 优化：用 ( 寄生式继承 - 更进一步的话-寄生组合式继承 ) 代替 ( 原型链式继承 )，这样解决实现 ( 多继承，父类被多次调用 ) 等
+        function ParasiticFn() {}
+        ParasiticFn.prototype = self.prototype;
+        callbackFn.prototype = new ParasiticFn();
+
+        return callbackFn;
+      };
+      function fn3(name, age) {
+        this.name = name;
+        return this.name + age;
+      }
+      fn3.prototype.age = 30000;
+      const obj3 = {
+        name: "woow_wu7",
+      };
+      const resFn3 = fn3.bind3(obj3, "woow_wu8");
+
+      // new调用
+      const res3 = new resFn3(200);
+      console.log(`res3.name`, res3.name);
+      console.log(`res3.age`, res3.age);
+
+      // 普通函数调用
+      const res33 = resFn3(200);
+      console.log(`res33`, res33);
+    </script>
+  </body>
+</html>

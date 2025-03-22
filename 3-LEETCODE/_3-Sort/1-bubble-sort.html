@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bubble_sort</title>
+  </head>
+  <body>
+    <script>
+      // English
+      // -- raw 生的 未加工的
+      // -- counter 计数器 柜台
+      // -
+      // -- bubble 泡 气泡 冒泡
+      // -- algorithm 算法
+      // --【 bubble sort algorithm. 冒泡排序算法 】
+      // -
+      // -- series 系列 串联 n
+      // --【 a series of test. 一系列测试 】
+      // --【 series circuit. 串联电路 】
+      // --【 parallel circuit. 并联电路 】
+      // --【 electric circuit. 电路 】
+      // -
+      // -- original 最初的 原始
+      // -- origin 起源 源头 n
+      // -
+      // -- resource 资源 资料
+      // -- source 来源 源头
+      // --【 open source code. 开源代码 】
+      // --【 open source module. 开源模块 】
+      // --【 source code analysis. 源码分析 】
+      // -
+      // -- pivot 支点
+      // TIPS: Pay attention to the pronunciation of the 'pivot'
+      // -
+      // -- coordinate 坐标
+      // -- adjacent 相邻的
+      // --【 Our house is 【 adjacent 】 to the park. 我们的房子紧挨着公园 】
+
+      // 1.【 This is a high performance algorithm. 这是一个性能很高的算法 】
+      // 2. Please don't 【 directly 】 operate the 【 original array 】.
+      // 3. Find the position of the minimum value in the array.
+      // 4. The 【 condition 】 for the 【 recursion 】 to end.
+
+      // bubble sort algorithm
+      // 冒泡排序
+      // O(n²)
+
+      // bubble_sort = selection_sort = insert_sort =  O(n²)
+      // quick_sort = shell_sort希尔排序 = O(nlogn)
+
+      // 原理
+      // 两层循环
+      // - ( 外层 ) 表示 ( 执行的趟数 ) ------------- 总趟数 = 数组长度 - 1
+      // - ( 里层 ) 表示 ( 每趟比较的次数 ) ---------- 每趟比较的次数 = 总趟数 - 当前的趟数
+
+      // 优化
+      // 1. 优化躺数: 如果第 7 趟就排好序了，就没有必要做 第8趟 第9趟 第10趟 的比较了
+      // 2. 优化每趟比较的次数: 每趟比较的次数 = 总趟数 - 当前的趟数
+
+      // 问题
+      // 问题: 为什么 每趟比较的次数 都要减去 当前趟数
+      // 回答: 因为 每趟都会得到一个最大值
+      // - 第一趟，得到最大值，并冒泡到数组末尾，下一趟比较时，不用再比较最后一个值，因为它是最大值
+      // - 第二趟，得到第二大的值，并冒泡到数组倒数第二的位置，下一趟比较时，不用再比较倒数两个成员，因为他们最大了
+
+      // 英语
+      // 趟数 trip
+
+      // 链接
+      // https://juejin.cn/post/6907145602400780296
+
+      const arr = [1, 5, 4, 2, 3, 9, 8, 6, 7];
+
+      let outCounter = 0;
+      let inCounter = 0;
+
+      const bubbleSort = (raw) => {
+        // Please don't 【 directly 】 operate the 【 original 】 array.
+
+        const arr = [...raw];
+        // const arr = JSON.parse(JSON.stringify(raw));
+
+        const len = arr.length;
+
+        // ------------------------------------------------------------------- 总趟数 = 数组长度 - 1
+        for (let i = 0; i < len - 1; i++) {
+          outCounter++;
+          let isSortOk = true;
+
+          // ----------------------------------------------------------------- 每趟比较的次数 = 总趟数 - 当前趟数
+          for (let j = 0; j < len - 1 - i; j++) {
+            inCounter++;
+
+            if (arr[j] > arr[j + 1]) {
+              // 冒泡
+              isSortOk = false;
+              [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]];
+            }
+          }
+
+          if (isSortOk) break;
+        }
+
+        return arr;
+      };
+
+      const res = bubbleSort(arr);
+      console.log("res: ", res);
+      console.log("arr", arr);
+
+      console.log("outCounter", outCounter);
+      console.log("inCounter", inCounter);
+    </script>
+  </body>
+</html>

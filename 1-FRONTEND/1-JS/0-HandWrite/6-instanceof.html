@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Implement instance function.</title>
+  </head>
+  <body>
+    <script>
+      // 1
+      // instanceof
+      // obj instanceof constructor
+      // 原理: ( 右边构造函数的 prototype 属性 ) 是否在 ( 左边对象 ) 的 ( 原型链上 )
+
+      // 2
+      // Object.getPrototypeOf(instanceObject);
+      // Object.setPrototypeOf(instanceObject, prototypeObject);
+      // Object.prototype.isPrototypeOf()
+
+      // 3
+      // var o1 = {};
+      // var o2 = Object.create(o1);
+      // var o3 = Object.create(o2);
+      // o2.isPrototypeOf(o3) // true
+      // o1.isPrototypeOf(o3) // true
+
+      // English
+      // -
+      // traverse 遍历 v
+      // traversal 遍历 n
+      // -
+      // recursion 递归 n
+      // recursive 递归的 adj -------------- 【 recursive function. 递归函数 n 】
+
+      const _instanceof = (obj, constructor) => {
+        const rightPrototype = constructor.prototype;
+        let leftPrototype = Object.getPrototypeOf(obj); // Object.getPrototypeOf(obj) 是获取 参数对象 的 原型对象 的标准方法
+
+        // recursion 递归 n
+        // recursive 递归的 adj
+        // 【 recursive function. 递归函数 n 】
+        while (leftPrototype) {
+          if (leftPrototype === rightPrototype) return true;
+          leftPrototype = Object.getPrototypeOf(leftPrototype);
+        }
+
+        // traverse 遍历 v
+        // traversal 遍历 n
+        return false;
+
+        // while (true) {
+        //   if (leftPrototype === null) return false; // 如果到了原型链的终点都不想等，则false
+        //   if (leftPrototype === rightPrototype) return true; // 注意：这里是对象和对象的 全等 比较，为什么是true，因为两个对象是同一个引用，即指针指向了同一个堆地址的对象数据
+        //   leftPrototype = Object.getPrototypeOf(leftPrototype); // false 的情况如下；不相等，继续往上寻找原型对象
+        // }
+
+        // 1
+        // 下面注释的写法也是可以的
+        // while (leftPrototype !== null) {
+        //   if (leftPrototype === rightPrototype) return true;
+        //   else leftPrototype = Object.getPrototypeOf(leftPrototype);
+        // }
+        // return false
+
+        // 2
+        // 或者
+        // while (leftPrototype !== rightPrototype) {
+        //   if (leftPrototype === null) return false
+        //   leftPrototype = Object.getPrototypeOf(leftPrototype);
+        // }
+        // return true
+      };
+
+      const arr = [1];
+      const res = _instanceof(arr, Array);
+
+      console.log("res", res); // true
+      console.log(Object.getPrototypeOf(arr) === Array.prototype); // true
+      console.log("arr instanceof Array", arr instanceof Array); // true
+    </script>
+
+    <!-- 下面的写法也可以的 ---------------------------------------------------------------------------->
+    <!-- 下面的写法也可以的 ---------------------------------------------------------------------------->
+    <!-- 下面的写法也可以的 ---------------------------------------------------------------------------->
+    <!-- 下面的写法也可以的 ---------------------------------------------------------------------------->
+    <!-- 下面的写法也可以的 ---------------------------------------------------------------------------->
+    <script>
+      function C() {}
+      const c = new C();
+
+      function _instanceof2(obj, constructor) {
+        const right = constructor.prototype;
+        const left = Object.getPrototypeOf(obj);
+
+        while (left !== null) {
+          if (left === right) return true;
+          else left = Object.getPrototypeOf(left);
+        }
+        // left 是 null 返回 false
+        return false;
+      }
+
+      const res2 = _instanceof2(c, C);
+      console.log("res2: ", res2);
+      console.log("c instanceof C", c instanceof C);
+    </script>
+
+    <!-- 下面的写法也可以的 ---------------------------------------------------------------------------->
+    <!-- 下面的写法也可以的 ---------------------------------------------------------------------------->
+    <!-- 下面的写法也可以的 ---------------------------------------------------------------------------->
+    <!-- 下面的写法也可以的 ---------------------------------------------------------------------------->
+    <!-- 下面的写法也可以的 ---------------------------------------------------------------------------->
+    <script>
+      const _instanceof3 = (obj, constructor) => {
+        const rightPrototype = constructor.prototype;
+        let leftPrototype = Object.getPrototypeOf(obj);
+        while (true) {
+          if (leftPrototype === null) return false;
+
+          if (leftPrototype !== rightPrototype) {
+            leftPrototype = Object.getPrototypeOf(leftPrototype);
+          } else {
+            return true;
+          }
+        }
+
+        return false;
+      };
+      const arr3 = [1];
+      const res3 = _instanceof3(arr3, Array);
+      console.log("res3", res3);
+    </script>
+  </body>
+</html>

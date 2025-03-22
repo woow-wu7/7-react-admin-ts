@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Debounce 防抖</title>
+  </head>
+  <body>
+    <button id="button">debounce</button>
+
+    <br /><br />
+    <div id="scroll-view" style="width: 300px; height: 200px; background: yellow; overflow: scroll">
+      <div>1111111</div>
+      <br /><br /><br />
+      <div>1111111</div>
+      <br /><br /><br />
+      <div>1111111</div>
+      <br /><br /><br />
+      <div>1111111</div>
+      <br /><br /><br />
+    </div>
+
+    <script>
+      // Debounce 防抖函数
+      // -- 降低事件触发的频率
+      // -- Reduce the frequency of triggering an event.
+      // ---- trigger 触发 v
+      // ---- frequency 频率 n
+      // ---- frequent 频繁的 adj
+
+      // 1
+      // Topic
+      // Implement a debounce function in English.
+
+      // 2
+      // Function
+      // A debounce function is used to limit the rate 【 at which 】 a function can fire.
+
+      // 3
+      // Example
+      // 1. Click: If The user clicks the button multiple times, We will run the function only once.
+      // 2. Scroll: If The user scrolls the view multiple times, We will run the function only once.
+
+      // 4
+      // Some words, phrases, sentences.
+      // -- 【 two key concepts. 两个关键概念 】
+      // -
+      // -- 【 fixed frequency. 固定的频率 】
+      // -- 【 in/for/within a period of time. 在一段时间内 】
+
+      // 扩展功能
+      // 1. 是否立即执行
+      // 2. 能否手动取消执行
+      // https://juejin.cn/post/6844904054330490894#heading-1
+
+      // AA.
+      // Button Examples
+      const debounce = (fn, delay) => {
+        let timer = null;
+
+        return (...params) => {
+          console.log("timer :>> ", timer);
+          if (timer) clearTimeout(timer);
+
+          timer = setTimeout(() => {
+            fn(...params);
+          }, delay);
+        };
+      };
+
+      // 1
+      const clickListener = debounce((e) => console.log(1, e), 1000);
+      const button = document.getElementById("button");
+      button.addEventListener("click", (e) => clickListener(e), false);
+
+      // 2
+      // 1 和 2 这两种写法都可以
+      // const fn = (e) => console.log(e);
+      // button.addEventListener("click", debounce(fn, 1000), false);
+    </script>
+
+    <script>
+      // BB
+      // Scroll Examples
+
+      const ScrollView = document.getElementById("scroll-view");
+
+      const scrollListener = debounce((e, isImmediate) => {
+        console.log("isImmediate: ", isImmediate);
+        console.log("e", e);
+      }, 1000);
+
+      ScrollView.addEventListener("scroll", (e) => scrollListener(e, true), false);
+    </script>
+  </body>
+</html>

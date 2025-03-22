@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 总
+
+      // (1)
+      // promise
+      // - 1. promise中错误的处理
+      // - 2. 执行顺序
+      //    - 1. then是异步任务
+      //    - 2. then 和 resolve 执行顺序的处理
+      // - 3. then 的穿透效果，两个回调参数的执行时机
+      // - 4. resolve 和 reject 的三个作用
+      // - 5. 魔法字符串的处理
+
+      // (2)
+      // Promise.all
+      // 特点：
+      //  1. 返回值: 返回一个新的 promise 对象
+      //  2. 参数: 参数是promise实例的组成的数组，成员 不是promise对象 会用 Promise.resolve() 转成 promise对象
+      //  3. 所有fulfilled -> 整个fulfilled
+      //  4. 一个rejected --> 整个rejected
+
+      // (3)
+      // Promise.race
+      // 特点：
+      //  1. 返回值: 返回一个新的 promise 对象
+      //  2. 参数: 参数是promise实例的数组，成员不是promise对象会用Promise.resolve()转成promise对象
+      //  3. 谁先fulfilled -> 整个fulfilled
+      //  4. 谁先rejected --> 整个rejected
+      // 实现:
+      // - Promise.race 和 Promise.all 的实现类似
+
+      // (4)
+      // Promise.finally
+      // - 作用: 不管 promise 状态如何都会执行的操作
+      // - 参数: finally的回调参数函数，不接受任何参数，表示 ( finally 里面的操作与状态无关 )
+      // - 具体: Promise.finally(()=>{...}) 等价于 promise.then(value => value, err => throw err)
+      // - 实现: finally 其实就是 then 的特例。具体实现相见下面
+
+      // 1
+      // ------- ------- ------- ------- ------- -------
+      // ------- ------- ------- ------- ------- -------
+      class _Promise {
+        constructor(executor) {
+          // execute // executor executer
+          // promise中的错误，需要被then的失败回调捕获
+          // executor: 执行器，遗嘱执行人 // 注意发音
+          try {
+            executor(this.resolve, this.reject);
+          } catch (err) {
+            this.reject(err);
+          }
+        }
+
+        // 注意: 这里声明的是 ( 实例属性 )
+        // - 1. 这是新的写法
+        // - 2. 也可以在构造函数中，通过 this.status = _Promise.PENDING
+        status = _Promise.PENDING; // 初始状态 pending
+        value = null;
+        reason = null;
+        onFulfilledCallbacks = []; // 收集 then 方法中的成功回调
+        onRejectedCallbacks = [];
+
+        // resolve
+        // 有三个作用
+        // - 1. 存储终值 value
+        // - 2. 改变状态 pending -> fulfilled
+        // - 3. flush 所有 onFulfilledCallbacks 队列中的函数，因为executor有异步时，then优先于resolve执行，而then的执行需要在状态改变后，所以then在pending时push，resolve执行时flush
+        resolve = (value) => {
+          if (this.status === _Promise.PENDING) {
+            this.value = value;
+            this.status = _Promise.FULFILLED;
+            if (this.onFulfilledCallbacks.length) {
+              this.onFulfilledCallbacks.forEach((fn) => fn(this.value));
+            }
+          }
+        };
+        reject = (reason) => {
+          if (this.status === _Promise.PENDING) {
+            this.reason = reason;
+            this.status = _Promise.REJECTED;
+            if (this.onRejectedCallbacks.length) {
+              this.onRejectedCallbacks.forEach((fn) => fn(this.reason));
+            }
+          }
+        };
+
+        then = (onFulfilled, onRejected) => {
+          // 3
+          // then 具有穿透效果
+          if (typeof onFulfilled !== "function") {
+            onFulfilled = (value) => value;
+          }
+          if (typeof onRejected !== "function") {
+            onRejected = (reason) => {
+              throw new Error();
+            };
+          }
+
+          // 1
+          // onFulfilled(this.value); // ------------------- 1234
+          // 待解决问题：这里需要解决第一个问题：执行顺序1243，而不是1234
+          // 原因：因为 then 的执行是要在所有同步任务执行完后，才会执行
+          // 如何解决：使用 setTimeout 模拟异步来解决
+          if (this.status === _Promise.FULFILLED) {
+            setTimeout(() => onFulfilled(this.value)); // ---- 1243
+            // 要保证then的执行是在 同步任务 执行完后，因为 then 微任务。即 先执行124同步任务，再执行3
+          }
+
+          if (this.status === _Promise.REJECTED) {
+            // onRejected(this.reason);
+            setTimeout(() => onRejected(this.reason));
+          }
+
+          // 2
+          // 待解决问题：当 executor 中有异步任务时，then成功的回调没有执行
+          // 原因：因为 then 执行是在 ( 状态改变后 )，即 ( resolve 或 reject 执行后 ) 改变了状态后，才会执行 then，而当executor有异步时，resolve就会延时执行，then先于resolve执行，所以两个回调并没有执行
+          // 如何解决：在 then 函数内部，当状态没改变时即还是pending时，将参数回调放入队列onFulfilledCallback，在resolve改变状态后取出来执行
+          if (this.status === _Promise.PENDING) {
+            // 这里不用再判断 onFulfilled 和 onRejected 不存在的情况了，上面已经判断了，必须为函数，不是函数会被转成相关函数
+            this.onFulfilledCallbacks.push((value) => {
+              setTimeout(() => onFulfilled(value));
+              // 这里再用 setTimeout 包装，是因为要解决
+              // - 当 executor 函数中有异步任务，异步任务中同时有同步任务，要保证 ( promise-executor中的异步任务中的--同步任务先于then执行 )，即 342，而不是324 ------- 解决方式：在向 onFulfilledCallbacks数组中push方法时，要再用 setTimeout包装，让resolve()后面的代码先执行
+              // - 即 保证 5 比 3 先执行
+            });
+
+            this.onRejectedCallbacks.push((value) => {
+              setTimeout(() => setTimeout((reason) => onRejected(this.reason)));
+            });
+          }
+        };
+      }
+
+      // class 的静态属性，这里是为了避免魔法字符串的产生
+      _Promise.PENDING = "pending";
+      _Promise.FULFILLED = "fulfilled";
+      _Promise.REJECTED = "rejected";
+
+      // ------ promise 测试
+      console.log(1);
+      new _Promise((resolve, reject) => {
+        console.log(2);
+        setTimeout(() => {
+          resolve(3);
+          console.log(5);
+        });
+        // 4
+        // promise中如果有错，需要被then的失败回调捕获
+        // throw new Error("出错了");
+      }).then(
+        (res) => console.log(res),
+        (reason) => console.log(reason)
+      );
+      console.log(4);
+      // 12453
+
+      // 分割线 ------------------------------------------------------------------------------------
+      // 分割线 ------------------------------------------------------------------------------------
+      // 分割线 ------------------------------------------------------------------------------------
+      // 分割线 ------------------------------------------------------------------------------------
+      // 分割线 ------------------------------------------------------------------------------------
+      // 分割线 ------------------------------------------------------------------------------------
+      // 分割线 ------------------------------------------------------------------------------------
+      // 分割线 ------------------------------------------------------------------------------------
+      // 分割线 ------------------------------------------------------------------------------------
+      // 分割线 ------------------------------------------------------------------------------------
+      // 分割线 ------------------------------------------------------------------------------------
+      // 分割线 ------------------------------------------------------------------------------------
+
+      // 2
+      // ------- ------- ------- ------- ------- -------
+      // ------- ------- ------- ------- ------- -------
+      _Promise.all = (promises) => {
+        // Promise.all
+        // 1. 是静态方法
+        // 2. 返回一个新的 promise
+        return new Promise((resolve, reject) => {
+          // res
+          // - 存储终值，即所有都是fulfilled状态下的终值数组
+          const res = [];
+
+          // promiseArr
+          // - 把 promise 数组或类数组对象都转成数组，并把所有数组成员转成promise对象
+          const promiseArr = Array.from(promises).map((p) =>
+            Promise.resolve(p)
+          );
+
+          promiseArr.forEach((p) => {
+            // promise对象可以接着 .then()
+            // 这里给每个promise都使用 then 方法来收集终值
+            p.then(
+              // 成功的回调
+              (value) => {
+                // Data collection
+                // 搜集终值
+                res.push(value);
+
+                if (res.length === promiseArr.length) {
+                  // 结束条件，终值收集满了，说明所有promise的状态都fulfilled了
+                  resolve(res);
+                }
+              },
+              // 失败的回调
+              // - 一个 rejected，整个rejected
+              // - 这里是一个简写形式，相等于 reason => reject(reason)
+              reject
+            );
+          });
+        });
+      };
+
+      // ------ Promise.all 测试
+      const p1 = Promise.resolve(1);
+      const p2 = new Promise((resolve) => setTimeout(() => resolve(2), 2000));
+      const p3 = new Promise((resolve) => setTimeout(() => resolve(3), 3000));
+      _Promise
+        .all([p1, p2, p3])
+        .then((resArr) => console.log("_Promise.all()测试 :>> ", resArr));
+
+      Promise.all([p1, p2, p3]).then((resArr) =>
+        console.log("Promise.all()测试 :>> ", resArr)
+      );
+
+      // 分割线 ------------------------------------------------------------------------------------
+      // 分割线 ------------------------------------------------------------------------------------
+      // 分割线 ------------------------------------------------------------------------------------
+      // 分割线 ------------------------------------------------------------------------------------
+      // 分割线 ------------------------------------------------------------------------------------
+      // 分割线 ------------------------------------------------------------------------------------
+      // 分割线 ------------------------------------------------------------------------------------
+      // 分割线 ------------------------------------------------------------------------------------
+      // 分割线 ------------------------------------------------------------------------------------
+      // 分割线 ------------------------------------------------------------------------------------
+      // 分割线 ------------------------------------------------------------------------------------
+      // 分割线 ------------------------------------------------------------------------------------
+
+      // 3
+      // ------- ------- ------- ------- ------- -------
+      // ------- ------- ------- ------- ------- -------
+      // Promise.race()
+      // - race 是竞赛的意思
+      _Promise.race = (promises) => {
+        return new Promise((resolve, reject) => {
+          const res = [];
+          const promiseArr = Array.from(promises).map((p) =>
+            Promise.resolve(p)
+          );
+
+          promiseArr.forEach((p) => {
+            p.then(
+              (value) => resolve(value),
+              (reason) => reject(reason)
+            );
+          });
+        });
+      };
+      _Promise
+        .race([p1, p2, p3])
+        .then((resArr) => console.log("_Promise.race()测试 :>> ", resArr));
+
+      Promise.race([p1, p2, p3]).then((resArr) =>
+        console.log("Promise.race()测试 :>> ", resArr)
+      );
+
+      // 分割线 ------------------------------------------------------------------------------------
+      // 分割线 ------------------------------------------------------------------------------------
+      // 分割线 ------------------------------------------------------------------------------------
+      // 分割线 ------------------------------------------------------------------------------------
+      // 分割线 ------------------------------------------------------------------------------------
+      // 分割线 ------------------------------------------------------------------------------------
+      // 分割线 ------------------------------------------------------------------------------------
+      // 分割线 ------------------------------------------------------------------------------------
+      // 分割线 ------------------------------------------------------------------------------------
+      // 分割线 ------------------------------------------------------------------------------------
+      // 分割线 ------------------------------------------------------------------------------------
+      // 分割线 ------------------------------------------------------------------------------------
+
+      // 4
+      // ------- ------- ------- ------- ------- -------
+      // ------- ------- ------- ------- ------- -------
+      // Promise.finally()
+      Promise.prototype._finally = function (callback) {
+        const P = this.constructor;
+
+        // 调用_finally时确定this，this指向实例
+        return this.then(
+          (value) => P.resolve(callback()).then(() => value),
+          (err) =>
+            P.resolve(callback()).then(() => {
+              throw err;
+            })
+        );
+      };
+
+      const promise = new Promise((resolve) => resolve(11));
+      promise
+        .then((value) => value)
+        ._finally(() => console.log("测试promise.prototype._finally"))
+        .then((value) => console.log(value));
+
+      promise
+        .then((value) => value)
+        .finally(() => console.log("测试promise.prototype.finally"))
+        .then((value) => console.log(value));
+    </script>
+  </body>
+</html>

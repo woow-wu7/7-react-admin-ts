@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Implement new command.</title>
+  </head>
+  <body>
+    <script>
+      /*
+        1
+        Some words, phrases and sentences
+        -- 【 principle 原则 原理 】
+        -- 【 instance object. 实例对象 】
+        -- 【 expand knowledge. 扩展知识 】
+        -
+        -- // expand 扩展 扩大
+        -- // spend -> spent 花费
+
+        2
+        new 命令
+        - Function: Execute Constructor Function and return instance object.
+        - 作用: 执行构造函数，返回实例对象
+        - 返回值:
+          - return 后面跟一个对象，new命令会返回这个对象
+          - return 后面跟一个基本数据类型，new命令会不管这个值，返回 this 对象
+        - 调用方式
+          - new ConstructorX()
+          - new Constructor
+          - 加不加括号都可以
+        - 继承:
+          - 构造函数: 构造函数中的属性和方法，都是直接生成在实例上的，实例之间不共享，造成资源浪费
+          - 原型链: 实例能继承 constructor.prototype 上的属性和方法，多个实例可以共享，修改(引用类型的数据时)则相互影响
+        - arguments
+          - 实参: arguments 对象是获取所有的 ( 实参 ).
+          - es5: 使用 arguments 的好处: 是在参数个数不确定的情况下，获取任意多的参数
+          - es6: 在箭头函数中没有 arguments 对象，可以用 rest 参数代替，来获取 所有 或 部分 参数
+        - 原理: 手写 new 命令原理
+          1. 新建一个 空对象
+          2. 将 空对象的隐式原型 指向 构造函数的显式原型
+          3. 将 构造函数中的 this 绑定到 空对象上
+          4. 执行构造函数
+          5.【 判断返回值 】，如果构造函数return一个对象，就返回构造函数返回的对象；否则返回空对象即this对象 !!!!!!!
+      */
+
+      /*
+        3
+        Expand knowledge
+        判断数据类型的方法有哪些
+          - 1. typeof ---------------------------------- (一共8种) number string boolean undefined symbol bigint object function
+          - 2. instanceof ------------------------------ 检查 ( 右边构造函数的-原型对象 ) 是否在 ( 左边实例对象 ) 的 ( 原型链 ) 上
+          - 3. Object.prototype.toString.call() -------- 比如  '[object String]'  '[object Array]'
+          - 4. 根据对象的 constructor 来判断
+      */
+
+      /*
+        4
+        Expand Knowledge
+        Object.create()
+        -- const instance = Object.create(prototypeObject)
+        -- function: Create a new instance object, using the existing object as the prototype of the newly created object.
+      */
+
+      // -------------------------------------------------------------------------- 分割线
+      // -------------------------------------------------------------------------- 分割线
+
+      // TIPS: The constructor function can not be an arrow function.
+      // TIPS: Par attention to the pronunciation of the word 'arrow'. [arrow-keys.方向键]
+      // -- arrow 箭 箭头 n
+      // -- arrow keys. 方向键 n
+
+      function Constructor2(name, age) {
+        this.name = name;
+        this.age = age;
+
+        // return "";
+
+        // return this;
+        // return {};
+        // return [];
+        // return [1, 2, 3];
+
+        // return function () {
+        //   console.log("***");
+        // };
+
+        // 1. 如果构造函数返回的不是一个 ( 对象 )，而是基本类型时，构造函数会返回 这个 ( 空对象，即 this 对象 )
+        // 2. 如果这里 ( 没有返回值 )，即下面通过res判断就是undefined，则new返回 this对象
+        // 3. 如果 return 直接返回了对象，则构造函数会返回这个跟着的 对象
+      }
+
+      const _new2 = (constructor, ...params) => {
+        const obj = Object.create(constructor.prototype);
+        const res = constructor.apply(obj, params);
+
+        // 11
+        // 因为: 这里 ( 对象, 数组, 函数 ) 都是返回 res
+        // 所以: 不能只判断对象，数组也是要返回 res 的
+        // return Object.prototype.toString.call(res).includes("Object")
+        //   ? res
+        //   : obj;
+
+        // 22
+        // 不能只判断 对象 和 数组，函数也是直接返回
+        // return typeof res === "object" ? res : obj;
+
+        // object array function
+        return res instanceof Object ? res : obj;
+      };
+
+      const instance2 = _new2(Constructor2, "woow_wu7", 20);
+      console.log("instance2-手写new: ", instance2);
+
+      const instance22 = new Constructor2("woow_wu7", 20);
+      console.log("instance22-原生new: ", instance22);
+    </script>
+
+    <!-- 分隔符 ------------------------------------------------------------------------------------------>
+    <!-- 分隔符 ------------------------------------------------------------------------------------------>
+    <!-- 分隔符 ------------------------------------------------------------------------------------------>
+    <!-- 分隔符 ------------------------------------------------------------------------------------------>
+    <!-- 分隔符 ------------------------------------------------------------------------------------------>
+
+    <script>
+      // 该方法太过于复杂，请使用 1
+      function Constructor(name, age) {
+        this.name = name;
+        this.age = age;
+        // return {};
+        // return [];
+        return function () {
+          console.log("***");
+        };
+      }
+
+      function _new() {
+        const obj = {};
+        // 第一步
+        // 新建一个空对象
+        // 相当于 const obj = new Object()
+
+        const paramsConstructor = Array.prototype.shift.call(arguments);
+        // 将arguments转化成数组，并且取除数组中的第一个元素，即传入的构造函数
+        // 相当于 ([]).prototype.shift.call(arguments)
+        // 相当于 ([]).shift.call(arguments) => 因为数组实例是继承了Array.prototype上的属性和方法
+        // 相当于 Array.prototype.shift.apply(arguments) => call 和 apply 都可以
+        // 注意：
+        // push unshift pop shift都会改变原数组
+        // push unshift 返回值是操作后，数组的长度
+        // pop shift 返回值是删除的元素
+
+        obj.__proto__ = paramsConstructor.prototype;
+        // 第二步
+        // 将 ( 空对象的隐式原型 ) 指向 ( 构造函数的显示原型 )
+        // 这样空对象就可以继承构造函数prototype上的属性和方法
+
+        // 注意：
+        // const obj = {} 和 obj.__proto__ = paramsConstructor.prototype
+        // 可以简写为：const obj = Object.create(paramsConstructor.prototype)
+        // b = Object.create(a)作用是: 以参数对象a为原型，生成实例对象b - 即可以用一个对象创建实例对象，则 b.__proto__ = paramsConstructor.prototype
+
+        const res = paramsConstructor.apply(obj, arguments);
+        // 第三步
+        // 将构造函数中的this绑定到空对象上，并执行构造函数
+        // 注意：
+        // 这里是arguments是去除了构造函数参数后的，剩余参数的集合
+        // _new(constructor, p1, p2, ...)
+
+        return /Object|Array|Function/.test(Object.prototype.toString.call(res)) ? res : obj;
+        // 如果构造函数的返回值
+        // - 是对象，就返回这个对象
+        // - 是原始类型的值，就返回this对象，即空对象
+      }
+
+      const instance = _new(Constructor, "woow_wu7", 20);
+      console.log("instance-手写: ", instance);
+    </script>
+  </body>
+</html>

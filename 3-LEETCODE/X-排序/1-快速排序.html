@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 快速排序 quick sort
+
+      // 原理
+      // 1. 选择一个值为 pivot 基准值
+      // 2. 所有小于 pivot 的值，都放在左边
+      // 3. 所有大于 pivot 的值，都放在右边
+      // 4. 等于 pivot 的值可以放在左边，也可以放在右边，还可以再加一个数组，放中间
+      // 5. 不断重复以上步骤，直到所有子集只剩下一个元素为止
+      // 6. 最后合并 left middle right 保证是升序
+
+      // 链接
+      // https://juejin.cn/post/6907145602400780296/#heading-15
+
+      const arr = [1, 9, 4, 3, 8, 6, 5, 2, 7, 7, 7];
+
+      function quickSort(arr) {
+        const len = arr.length;
+
+        if (len <= 1) return arr; // 递归结束条件
+
+        const left = [];
+        const right = [];
+        const middle = [];
+        const pivot = Math.floor(Math.random() * len); // Math.random() * len ---> [0, 9) ---> floor --> 0-8
+        const pv = arr[pivot];
+
+        for (let i = 0; i < len; i++) {
+          const cur = arr[i];
+          if (cur < pv) left.push(cur);
+          if (cur > pv) right.push(cur);
+          if (cur === pv) middle.push(cur);
+        }
+
+        return quickSort(left).concat(middle, quickSort(right)); // 递归合并 - 拼接顺序，方式保证有序
+      }
+
+      const res = quickSort(arr);
+      console.log("res: ", res);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 5. 最长回文子串
+
+      // leetcode
+      // https://leetcode.cn/problems/longest-palindromic-substring/
+
+      // 1
+      // 动态规划
+
+      // 2
+      // 暴力算法 - 三层循环
+      // - 外面两层循环：找到所有子串
+      // - 第三层循环：判断子串是否是回文 ( 或者使用反转字符串判断是否相等，这样少一层循环 )
+      // - 时间复杂读：( O(n^2) ) 或者 ( O(n^3)如果是三层循环的话 )
+      // 思路
+      //  - 1. 找出所有子串，然后判断哪些子串是回文子串
+      //  - 2. 用一个 max 变量标记最长的回文子串，如果每次得到的回文串比上一次长，则更新为较长的回文子串
+
+      // 对比
+      // 子串: 是 ( 连续 ) 的子字符串
+      // 子序列: 不一定要连续
+
+      const str = "abcdeffed"; // deffed
+      // const str = "ab"; // a
+
+      // ------------------------------------------------------------------------------------------
+      // ------------------------------------------------------------------------------------------
+      // ------------------------------------------------------------------------------------------
+      // 方法1
+      // 动态规划
+      var longestPalindrome = function (s) {
+        if (s.length === 1) return s;
+
+        const len = s.length;
+        let res = s[0];
+
+        // dp[i][j] 表示下标 ij 位置是否是回文串
+        const dp = new Array(len).fill(0).map(() => []);
+
+        // 二维dp数组的对角线上一定是回文字符串，因为 ( 两个指针指向了同一个单个字符 )，单个字符也是回文
+        for (let i = 0; i < len; i++) {
+          dp[i][i] = true;
+        }
+
+        // i < j
+        for (let j = 1; j < len; j++) {
+          for (let i = j - 1; i >= 0; i--) {
+            if (
+              (s[i] === s[j] && j - i === 1) || // i -> j 之间没有其他字符了，即 'aa' 这样
+              (s[i] === s[j] && dp[i + 1][j - 1]) //i -> j 之间，还有字符，状态方程 dp[i][j] =  dp[i + 1][j - 1]，也就是说 i->j是回文，需要 i+1 -> j-1 也是回文才行
+            ) {
+              dp[i][j] = true;
+              if (res.length < j - i + 1) {
+                res = s.slice(i, j + 1); // 更新较大的回文
+              }
+            }
+          }
+        }
+
+        return res;
+      };
+
+      // ------------------------------------------------------------------------------------------
+      // ------------------------------------------------------------------------------------------
+      // ------------------------------------------------------------------------------------------
+      // 方法2
+      // 暴力穷举
+      const maxPalindromeStr = (str) => {
+        let max = "";
+
+        // 两层循环，可以找出所有子串
+        for (let i = 0; i < str.length; i++) {
+          for (let j = i + 1; j <= str.length; j++) {
+            const _str = str.slice(i, j);
+            const _reverseStr = _str.split("").reverse().join("");
+
+            // 是回文串，并且更新较大的回文串
+            if (_str === _reverseStr && _str.length > max.length) {
+              max = _str;
+            }
+          }
+        }
+
+        return max;
+      };
+
+      const res = maxPalindromeStr(str);
+      console.log("res: ", res);
+    </script>
+
+    <script>
+      // 优化
+      // - 缺点: 上面我们是求出所有子串，再反转，判断是不是会问串
+      // - 优化: 我们可以 约束 只有前后两个字符相等的子串，再反转
+      var longestPalindrome2 = function (s) {
+        let maxStr = "";
+        if (s.length <= 1) return s;
+
+        for (let i = 0; i < s.length; i++) {
+          for (let j = i; j < s.length; j++) {
+            if (s[i] === s[j]) {
+              const str = s.slice(i, j + 1);
+              const reverse = str.split("").reverse().join("");
+              if (str === reverse && maxStr.length < str.length) {
+                maxStr = str;
+              }
+            }
+          }
+        }
+
+        return maxStr;
+      };
+
+      const res2 = longestPalindrome2(str);
+      console.log("res2: ", res2);
+    </script>
+  </body>
+</html>

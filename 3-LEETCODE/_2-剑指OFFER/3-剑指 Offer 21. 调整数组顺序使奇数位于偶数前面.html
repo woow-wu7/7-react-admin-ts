@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 剑指 Offer 21. 调整数组顺序使奇数位于偶数前面
+
+      // 题目
+      // 输入一个整数数组，实现一个函数来调整该数组中数字的顺序，使得所有奇数在数组的前半部分，所有偶数在数组的后半部分。
+
+      // 示例：
+      // 输入：nums = [1,2,3,4]
+      // 输出：[1,3,2,4]
+      // 注：[3,1,2,4] 也是正确的答案之一。
+
+      // leetcode
+      // https://leetcode.cn/problems/diao-zheng-shu-zu-shun-xu-shi-qi-shu-wei-yu-ou-shu-qian-mian-lcof/
+
+      // 考察点
+      // - 位运算符 ( 与操作符 & ) 的应用 -- 判断奇偶 (  a & 1 )
+      // - (a&1) === a%2
+      // - 奇前偶后
+      //    - 所以 left 遇到奇数，继续往后，直到遇到偶数停住，等待交换
+      //    - 所以 right 遇到偶数，继续往后，知道遇到奇数停住，等待交换
+      // 1
+      var exchange = function (nums) {
+        let left = 0;
+        let right = nums.length - 1;
+
+        while (left < right) {
+          // 先移动left，奇数则不用处理，因为奇数在前面，直到left是偶数时停住
+          if ((nums[left] & 1) === 1) {
+            left++;
+            continue;
+          }
+          // 当 left 是偶数时，在判断right，移动right直到right是奇数
+          // else {
+          //   if ((nums[right] & 1) === 0) {
+          //     right--;
+          //     continue;
+          //   }
+          // }
+          // 注意: 其实上面的 else 没必要写，因为 continue 后本来就不会执行 else 的部分
+
+          if ((nums[right] & 1) === 0) {
+            right--;
+            continue;
+          }
+
+          // left是偶数，right是奇数 时，交换
+          [nums[left], nums[right]] = [nums[right], nums[left]];
+          // left++;
+          // right--;
+          // 其实上面的left++和right--可以不要，因为交换后，前面的值已经是奇数了，在if时就回后移
+        }
+
+        return nums;
+      };
+
+      // ------------------------------------------------------------------------------------------
+      // ------------------------------------------------------------------------------------------
+      // ------------------------------------------------------------------------------------------
+      // 2
+      var exchange2 = function (nums) {
+        const res = [];
+        for (let i = 0; i < nums.length; i++) {
+          const cur = nums[i];
+          if (cur & (1 === 1)) {
+            res.unshift(cur);
+          } else {
+            res.push(cur);
+          }
+        }
+        return res;
+      };
+    </script>
+  </body>
+</html>

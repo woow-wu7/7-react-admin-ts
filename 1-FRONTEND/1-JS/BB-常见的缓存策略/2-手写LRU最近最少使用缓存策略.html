@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // LRU
+      // - Least recently used 最近最少使用
+      // - vue 中 keep-alive 组件就是 LRU 最近最少使用的内存管理策略
+
+      // 常见的缓存策略 本项目/2-FRONTEND/1-JS/BB-常见的缓存策略/1-常见缓存策略.md
+      // 资料 https://zhuanlan.zhihu.com/p/378782266
+
+      class LRU {
+        constructor(capacity) {
+          this.cache = []; // 类似队列，先进先出 + 访问的数据如果已经存在就往后移动到队列末尾
+          this.capacity = capacity; // capacity 是容量的意思
+        }
+
+        get(key) {
+          const index = this.cache.findIndex((item) => item.key === key);
+          // 访问不存在
+          if (index === -1) {
+            return -1;
+          } else {
+            // 访问存在
+            const value = this.cache[index].value;
+
+            // 核心就是下面两句: 当访问的对象在缓存中存在时，将被访问的对象在原位置删除，放到最后，表示刚刚被使用到
+            this.cache.splice(index, 1);
+            this.cache.push({ key, value });
+
+            return value;
+          }
+        }
+
+        set(key, value) {
+          let index = this.cache.findIndex((item) => item.key === key);
+          // 设置存在 - 移动位置，即删除后在添加
+          if (index > -1) {
+            this.cache.splice(index, 1);
+            this.cache.push({ key, value });
+          }
+          // 设置不存在 - 添加
+          else {
+            this.cache.push({ key, value });
+
+            // 先添加 再 判断容量
+            if (this.cache.length > this.capacity) {
+              this.cache.shift();
+            }
+          }
+        }
+      }
+
+      const lru = new LRU(3);
+      lru.set(1, 11);
+      lru.set(2, 22);
+      lru.set(3, 33);
+      lru.set(2, 22); // 132
+      lru.set(4, 44); // 324
+
+      console.log("lru.cache", lru.cache);
+    </script>
+  </body>
+</html>

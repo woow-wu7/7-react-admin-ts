@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>复习手写promise</title>
+  </head>
+  <body>
+    <script>
+      // English
+      // -- summary 总结 n
+      // -- summarize 总结 v
+      // -- 【 in summary. 总之 】
+
+      // AAA.
+      // original promise.
+      new Promise((resolve, reject) => {
+        resolve(1);
+      }).then(
+        (value) => console.log(value),
+        (reason) => console.log(reason)
+      );
+      // -------------------------------------------------------------------------------------------------------------------------------------------
+      // -------------------------------------------------------------------------------------------------------------------------------------------
+      // -------------------------------------------------------------------------------------------------------------------------------------------
+
+      // 1 - 最基本
+
+      class _Promise {
+        // 1. 实例属性，这种写法通常须放在 ( 类的顶层 )，约定俗成的
+        value = null;
+        reason = null;
+        status = "pending";
+
+        constructor(executor) {
+          executor(this.resolve, this.reject);
+        }
+
+        // resolve 函数的作用 ( 三个作用 )
+        // - 把状态 ( status ) 从 ( pending -> fulfilled ) -------------- 将 promise 的状态从 pending 变成 fulfilled
+        // - 把终值 ( value ) 赋值为 resolve() 函数传入的 ( 参数 ) --------- 在异步操作成功时调用，并将异步操作的结果作为参数传递出去
+        // - 把 ( onFulfilledCallback 数组 ) 中的函数，依次取出执行 -------- 执行状态变为 fulfilled 时，在 then 函数执行却状态没有变化时的，执行 ( 成功回调队列中的所有函数 )
+        //   - 因为: 如果 promise 中存在异步操作时，then()比 resolve()先执行
+        //   - 所以: 所以在 then()方法中，需要向 onFulfilledCallback 数组中 push 进一个将来在 resolve()中状态变成 fulfilled 后，才会执行的函数
+        resolve = (value) => {
+          if (this.status === "pending") {
+            this.status = "fulfilled";
+            this.value = value;
+          }
+        };
+
+        // 2. 原型属性，即在 _Promise.prototype 上的属性
+        reject = (reason) => {
+          if (this.status === "pending") {
+            this.status = "rejected";
+            this.value = reason;
+          }
+        };
+
+        then = (onFulfilled, onRejected) => {
+          if (this.status === "fulfilled") {
+            onFulfilled(this.value);
+          }
+          if (this.status === "reject") {
+            onRejected(this.reason);
+          }
+        };
+      }
+
+      // BBB.
+      // handwrite promise.
+      new _Promise((resolve, reject) => {
+        console.log(11);
+        resolve(33);
+        console.log(22);
+      }).then(
+        // .then 是 _Promise 生成的实例上调用的
+        (value) => console.log(value),
+        (reason) => console.log(reason)
+      );
+      console.log("44"); // 出现问题: 33 比 44 先执行
+
+      // wait to solve.
+      new _Promise((resolve, reject) => {
+        setTimeout(() => {
+          resolve(3);
+        });
+      }).then(
+        (value) => console.log(value), // 出现问题: 并未执行
+        (reason) => console.log(reason)
+      );
+    </script>
+  </body>
+</html>

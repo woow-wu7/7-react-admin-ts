@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>filter:brightness()</title>
+    <style>
+      html,
+      body {
+        height: 100%;
+        background: #0b3060;
+      }
+      .brightness {
+        color: rgb(75, 0, 0);
+        animation: change-brightness 1s ease-in-out 0s infinite alternate forwards;
+
+        /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+        /* iteration 迭代 n */
+        /* alternate 交替的 adj */
+        /* infinite 无限的 adj */
+        /* finite 有限的 adj */
+
+        /* iteration-count: 1 2 infinite; */
+        /* direction: normal reverse alternate alternate-reverse; */
+        /* fill-mode: forwards backwards both none; */
+      }
+
+      @keyframes change-brightness {
+        0% {
+          filter: brightness(100%);
+        }
+        50% {
+          filter: brightness(300%);
+        }
+        100% {
+          filter: brightness(100%);
+        }
+      }
+
+      .animation-test {
+        width: 100px;
+        height: 100px;
+        background: red;
+
+        /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+        /* animation: animation-test 1s ease-in-out 0s 1 backwards; */
+        animation: animation-test 1s ease-in-out 0s 1 forwards;
+        /* 注意点: fill-mode: forwards; 是停在最后一帧 */
+        /* 注意点: fill-mode: backward; 是停在第一帧 */
+      }
+
+      @keyframes animation-test {
+        from {
+          transform: translateX(0px);
+        }
+        to {
+          transform: translateX(100px);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      // filter: brightness(amount)
+
+      // 1
+      // 前置知识：
+      // animation: name duration time-function delay iteration-count direction fill-mode
+      //  - iteration-count: 0-infinite；表示动画执行的次数 0-infinite 之间
+      //  - direction：normal|alternate；表示是否轮流反向播放 ----------- alternate 是轮流的意思
+      //  - fill-mode:none|forwards|backwards;表示动画不播放时的样式 --- forwards是停在最后一帧，backward是停在第一帧，和意思是相反的
+
+      // 2
+      // filer: brightness(amount)
+      // - 作用：表示让图表更亮或者更暗
+      // - 英语：amount 是数量的意思
+    </script>
+    <div class="brightness">测试 filter: brightness 的使用</div>
+
+    <div class="animation-test"></div>
+  </body>
+</html>

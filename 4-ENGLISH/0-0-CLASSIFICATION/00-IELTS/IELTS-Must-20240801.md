@@ -1,0 +1,1261 @@
+###### Must 2024-08-01
+
+- 1
+- `【 in depth. 深入地 adv 】` // ------ 【 depth. 深度 】 【 deep 深的 adj 】 【 shallow 浅的 adj 】
+- `【 in detail. 详细地 adv 】` // ----- 【 detail 细节 详情 n 】
+- `【 in turn. 依次地 adv 】`
+- `【 in advance. 提前 adv 】` // ------ 【 advanced vocabulary. 高级词汇 】 【 advanced equipment. 先进设备 】 // advance advantage
+- `【 in public. 公开的 当众地 adv 】`
+- `【 in secret. 秘密地 adv 】` // ----- 【 secret 秘密 n 】 【 secretary 秘书 】 【 secretly 偷偷地 秘密地 adv 】
+- `【 in total. 总共 adv 】`
+- `【 in a hurry. 匆忙地 忙 急 adv 】`
+- `【 on purpose. 故意地 adv 】`
+-
+- > 【 secretary / laboratory / dormitory / repository / factory / directory / victory / history / mandatory 】
+- > 【 directory / directly / director 】 【 personnel director. 】 【 sales director. 】
+- > 【 labor / laboratory 】 【 labor day. 】 【 labor law. 】 【 labor contract. 】
+- > 【 contact / contract / contrast 】
+- // TIPS: Pay attention to the pronunciation of the word 'depth'.
+-
+- `【 depth 深度 n 】` ----------------- 【 deep / shallow 】// --------`【 deep / deeper / deepest 】` // 【 deep clone. 深拷贝 】 【 shallow sleep. 浅睡 】
+- `【 thickness 厚度 n 】` ------------- 【 thick / thin 】
+- `【 brightness 亮度 n 】` ------------ 【 bright / dim and dark 】 // `【 dim = dark. 】`
+- `【 intensity 强度 n 】` ------------- 【 work intensity. 工作强度 】 【 work overtime. 加班 】 【 mandatory overtime. 强制加班 】 【 overtime pay. 加班费 】
+- `【 density 密度 n 】` --------------- 【 population density. 人口密度 】
+- `【 concentration 浓度 n 】` --------- 【 liquid concentration. 液体浓度 】 【 high concentration. 高浓度 】 // gas liquid/fluid solid
+- `【 humidity 湿度 n 】` -------------- 【 wet / dry 】 // ----------- `【 humid 潮湿的 adj 】` // **【 humidity sensor. 湿度传感器 】**
+- `【 length 长度 n 】` ---------------- 【 long / short 】 ----------- `【 long / longer / longest 】` --- 【 longest river. 最长的河流 】
+- `【 width 宽度 n 】` ----------------- 【 wide / narrow 】
+- `【 height 高度 n 】` ---------------- 【 high / low 】-------------- `【 high / higher / highest 】`---- 【 highest mountain. 最高的山 】
+- `【 speed 速度 n 】` ----------------- 【 fast / slow 】
+- > 【 workload 】 / 【 workaholic 】 / 【 work intensity. 】 / 【 work overtime. 】 / 【 mandatory overtime. 】 / 【 overtime pay. 】
+- > 【 work intensity. 工作强度 】
+- > 【 high work intensity. 工作强度高 】
+- > 【 population density. 人口密度 】
+- > 【 liquid concentration. 液体浓度 】
+-
+- _【 humidity sensor. 湿度传感器 】_
+-
+- _【 shallow breath. 浅呼吸 】_
+- _【 shallow sleep. 浅睡眠 】_
+-
+- _【 scale 秤 尺寸 n 】_
+- _【 kitchen scale. 厨房秤 】_
+- _【 spring scale. 弹簧秤 】_
+- _【 balance scale. 天平 】_
+-
+- // dim 暗淡的 昏暗的 adj // ----------- 【 dim = dark. 昏暗的 adj 】
+- // shallow 浅的 adj // --------------- 【 shallow breath. 浅呼吸 】 【 shallow sleep. 浅睡眠 】
+- // The 【 opposite 】 of the word 'wide' is 'narrow'.
+- // The 【 antonym 】 of the word 'dim' is 'bright'.
+- // The 【 plural 】 of the word 'leaf' is 'leaves'.
+- // What 【 clause 】 is this sentence? // object clause. 宾语从句 // clause 从句
+- // TIPS: Pay attention to the pronunciation of the word 'population'.
+- // EE: [antonym] a word that means the opposite of another word.
+- // EE: [synonym] a word that has the same or nearly the same meaning as another word.
+- // EE: [opposite] completely different.
+- // [completelyOpposite.完全相反]
+- // [completelyUnderstand.完全理解]
+- // Completely opposite, I already completely understand your idea. 完全相反，我已经完全理解了你的想法
+-
+- `【 insult 侮辱 v 】`
+- `【 consult 咨询 v 】` // ------------ 【 consult about sth. 咨询某事 】
+- `【 result 结果 n 】`
+- > 【 result 结果 n 】
+- > 【 consequence 后果 n 】
+- // TIPS: Pay attention to the pronunciation of the words 'insult' and 'consult'.
+-
+- `【 insult 侮辱 v 】`
+- `【 abuse 辱骂 v 】`
+- `【 scold 责骂 v 】` // -------------- 【 cold 感冒 n 寒冷的 adj 】 【 scold 责骂 v 】
+- `【 be mad at sb. 生某人的气 】` // ----【 be mad at sb. = be angry with sb. 生某人的气 】
+- `【 be angry with sb. 生某人的气 】`
+- // TIPS: Pay attention to the pronunciation of the word 'abuse'.
+- // TIPS: Pay attention to the pronunciation of the word 'mad'.
+-
+- `【 act 行动v 行为v 扮演v 】`
+- `【 action 行动 n 】` // --------------【 special action. 特别行动 】 【 urgent action. 紧急行动 】= emergency action
+- `【 activity 活动 n 】`
+- `【 actor 演员 n 】`
+- `【 actress 女演员 n 】`
+- > 【 actor actress / waiter waitress / headmaster headmistress / steward stewardess / prince princess 】
+-
+-
+- [AA.]
+- `【 in depth. 深入地 adv 】`
+- `【 in detail. 详细地 adv 】`
+- **【 Let's 【 talk about 】 this topic 【 in depth 】 and 【 in detail 】. 让我们深入并详细地谈论这个话题 】**
+- // -- 【 talk 说话 谈话 v 】
+- // -- 【 talk about. 谈论 讨论 v 】---- not in depth.
+- // -- 【 discuss 讨论 】-------------- in depth.
+-
+- [BB.]
+- `【 depth 厚度 n 】`
+- `【 deep 深的 】`
+- `【 shallow 浅的 】`
+- **【 We use 【 depth 】 to 【 measure 】 how 【 deep 】 or 【 shallow 】 something 【 is 】. 我们用深度来衡量某物是深还是浅 】**
+- **【 What 【 scheme 】 will you use and what 【 measure 】 will you 【 take 】 to 【 measure 】 the 【 depth 】 of water? 用什么方案和采取什么措施来测量水的深度？ 】**
+- // -- 【 measure 测量 衡量 v 】
+-
+- [CC.]
+- `【 in public. 当众地 公开的 adv 】`
+- `【 in secret. 秘密地 adv 】`
+- `【 act 行动v 扮演v 】`
+- **【 They 【 act 】 【 in secret 】 and never 【 announce 】 【 in public 】. 他们秘密行动，从不公开宣布 】**
+- // -- 【 announce 宣布 v 】
+- // -- 【 declaration 声明 n 】
+-
+- [-DD.]
+- `【 in total. 总共 adv 】`
+- `【 episode 集 n 】`
+- `【 TV series. = TV drama. 电视剧 】`
+- **【 How many 【 episodes 】 of this 【 TV series 】 【 in total 】? 这部电视剧一共有多少集？ 】**
+-
+- [-DD.]
+- `【 on purpose. 故意地 adv 】`
+- **【 I know you are ignoring me 【 on purpose 】. 我知道你是故意不理我. 】**
+-
+- [-DD.]
+- `【 in a hurry. 匆忙地 忙 急 adv 】`
+- **【 Please don't 【 make decisions 】 【 in a hurry 】. 请不要匆忙做决定 】**
+-
+- [DD.]
+- `【 insult 侮辱 v 】`
+- `【 consult 咨询 v 】`
+- `【 in public. 当众地 公开的 adv 】`
+- `【 consequence 后果 n 】`
+- > 【 consult about sth. 咨询某事 】
+- **【 They are 【 consulting about 】 the 【 consequence 】 of 【 insulting 】 others 【 in public 】. 他们正在咨询在公共场合当众辱骂他人的后果 】**
+- **【 You can't 【 insult 】 others 【 in public 】. 总之你不能当众辱骂他人 】**
+- // -- 【 insult 辱骂 v 】
+- // -- 【 consult 咨询 v 】// -------- 【 consult about sth. 咨询某事 】
+- // -- 【 result 结果 n 】
+- // -- 【 consequence 后果 n 】
+- // -- 【 consult about sth. 咨询某事 】
+-
+- [EE.]
+- `【 in turn. 依次地 adv 】`
+- `【 in advance. 提前 adv 】`
+- **【 Please answer this question 【 in turn 】, not 【 in advance 】. 请依次回答这个问题，不要提前回答 】**
+-
+- [FF.]
+- **【 A 【 consequence 】 is the 【 impact 】 【 brought 】 by a 【 result 】. 后果是一个结果带来的影响 】**
+- // -- 【 influence 影响 v n 】 // 动词和名词都能用，所以尽量使用这个单词
+- // -- 【 impact 影响 v n 】
+- // -- 【 affect 影响 v 】
+- // -- 【 effect 影响 效果 v 】
+-
+- [AAAA.]
+- `【 insult 侮辱 v 】`
+- `【 abuse 辱骂 v 】`
+- `【 scold 责骂 v 】`
+- **【 The ways of 【 insulting 】 people include 【 abusing 】 and 【 scolding 】 侮辱人的方式有辱骂和责骂 】**
+-
+- [BBBB.]
+- `【 work intensity. 工作强度 】`
+- **【 【 mandatory overtime 】 means 【 high work intensity 】 and no 【 overtime pay 】. 强制加班意味着工作强度很大，并且没有加班费 】**
+- **【 We should 【 persist in 】 【 resisting 】 the 【 mandatory overtime 】 without 【 overtime pay 】. 我们要坚持抵制没有加班费的加班 】**
+- **【 Does your company 【 require 】 【 mandatory overtime 】? 你们公司要求强制加班吗？ 】**
+-
+- [CCCC.]
+- `【 be mad at sb. 生某人气 】`
+- `【 be angry with sb. 生某人的气 】`
+- `【 have a cold. 感冒 】`
+- **【 After I 【 had a cold 】, she was only 【 mad 】 at me and didn't 【 scold 】 me. 我感冒后，她只是生我气，并没有骂我 】**
+- // -- be mad at sb. = be angry with sb. 生某人的气
+- // -- 【 scold 责骂 v 】
+- // -- 【 abuse 辱骂 v 】
+- // -- 【 insult 侮辱 】
+- // -- 【 consult 咨询 】
+- // -- 【 result 结果 n 】
+- // -- 【 consequence 后果 n 】
+-
+- [DDDD.]
+- **【 The 【 Nile 】 is the 【 longest 】 【 river 】 in the world. 尼罗河是世界上最长的河 】**
+- **【 The 【 Qomolangma 】 is the 【 highest 】 【 mountain 】 in the world. 珠穆朗玛峰是世界上最高的山峰 】**
+- **【 Mercury 】 is the 【 closest 】 【 planet 】 to the 【 sun 】. 水星是距离太阳最近的行星**
+- // -- 【 plant 植物 】
+- // -- 【 planet 行星 】
+- // -- 【 closest 最近的 adj 】
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+- 2
+- `【 download 下载 / upload 上传 】` --- 【 manual download. 手动下载 】 【 automatic download. 自动下载 】 // 【 automatic control. 自动控制 】
+- `【 install 安装 / uninstall 卸载 】`
+- `【 set up. 建立 设置 设立 v 】`
+- `【 configure 配置 v 】` // ----------- 【 configuration. 配置 n 】 【 configure 配置 v 】
+- `【 upgrade 升级 v n 】` // ----------- 【 system upgrade. 系统升级 】
+- `【 update 更新 v n  】`
+- > 【 manual download. 手动下载 】
+- > 【 automatic download. 自动下载 n 】 // 【 automatically download. 自动下载 v 】
+- > 【 automatic control. 自动控制 】
+- > manual 手动的 adj
+- > manually 手动地 adv
+- > automatic 自动的 adj
+- > automatically 自动地 adv
+-
+- `【 account 账号 n 】`
+- `【 accountant 会计 n 】`
+- `【 discount 打折 n 】` = on sale.
+- `【 counter 柜台 】`
+-
+- [AA.]
+- **【 This 【 set of 】 system can 【 automatically download 】, install, update, upgrade. 这套系统会自动下载，自动安装，自动更新，自动升级 】**
+- // -- 【 a set of makeup. 一套化妆品 】
+
+###### Must 2024-08-02
+
+- 1
+- `【 command 命令 指挥 v n 】` // ----- 【 run a command. 运行命令 】 【 command center. 指挥中心 】 【 obey order. 服从命令 】 【 disobey order. 违抗命令 】
+- `【 demand 要求v 】` // ------------- 【 strictly demand. 严格要求 v 】 【 strict demand. 严格的要求 】 // demand = require.
+- `【 recommend 推荐 v 】` ------------ 【 strongly recommend. 强烈推荐 】 //【 introduce 介绍 v 】
+- > 【 run a command. 运行命令 】 ------ command 命令
+- > 【 command center. 指挥中心 】------ command 指挥
+- > 【 demand 要求 v 】 = require.
+- > 【 require 要求 v 】
+- > 【 demand sb to do sth. = require sb to do sth. 要求某人做某事 】
+- _【 strongly recommend. 强烈推荐 】_ //【 strongly recommend. = highly recommend. 】
+-
+- `【 mend 修理 n 】 `
+- `【 recommend 推荐 v 】` ------------ 【 mend 修理 n 】 【 recommend 推荐 v 】 【 strongly recommend. 强烈推荐 】
+- `【 common 普通的 常见的 adj 】`
+-
+- `【 treat 对待 治疗 v 】`
+- `【 retreat 撤退 v 】`
+- `【 revoke 撤销 v  】`
+- `【 refuse 拒绝 v 】`
+- `【 rescue 营救 v 】`
+- `【 reference 参考 引用 v 】`
+- > treat/retreat ---------------------【 treat 对待 治疗 v 】 // ------【 retreat 撤退 v 】
+- > tail/retail -----------------------【 tail 尾巴 n 】 // ------------【 retail 零售 v 】】// - 【 retail store. 零售店 】
+- > tire/retire -----------------------【 tire 轮胎 n 疲劳 n 】// ------ 【 retire 退休 】 // ----【 entire 整个 】
+- > cover/recover ---------------------【 cover 覆盖 v 】// ------------【 recover 恢复 v 】// -- 【 gradually recover. 逐渐恢复 】 // gradually 逐渐地 adv
+- > fund/refund -----------------------【 fund 基金 n 】 // ------------【 refund 退款 v 】 // -- 【 found 创立 建立 v 】
+- > produce/reproduce -----------------【 produce 生产 v 】 // ---------【 reproduce 繁殖 v 】// -【 sexual reproduction. 有性繁殖 】
+- > pair/repair ---------------------- 【 pair 一对 一双 n 】// ---------【 repair 修理 修复 v 】
+- > port/report -----------------------【 port 港口 端口 n 】 // --------【 report 汇报 报告 n 】
+- > form/reform -----------------------【 form 形成 v 构成 v 表格 v 形态 n 】 // 【 reform 改革 】
+- > form/reform -----------------------【 form 形成 v 表格 v 】 // -- 【 reform 改革 】
+- > ward/reward -----------------------【 ward 病房 n 】 // ---------【 reward 奖励 n 】
+- // 【 supplier / dealer / seller 】
+- // 【 fun / fund / refund / found 】
+- // 【 He 【 found 】 a new 【 fun 】 【 fund 】 company. 】
+-
+- `【 retail 零售 v 】` // -------- 【 retail price. 零售价 n 】 // -----【 retail store. 零售店 】
+- `【 wholesale 批发 v 】` // ----- 【 wholesale price. 批发价 n 】// ---【 wholesale market. 批发市场 】
+- `【 discount 打折 v 】` // ------ 【 discount store. 折扣店 】 // -----【 discount intensity. 打折力度 】 【 work intensity. 工作强度 】
+- > 【 count / account / accountant / discount / counter 】
+- > 【 supplier 供应商 n 】
+- > 【 dealer 经销商 n 】
+- > 【 seller 销售者 n 】
+-
+-
+- [AA.]
+- `【 command 命令 指挥 v n 】` // ----- 【 run a command. 运行命令 】 【 command center. 指挥中心 】
+- `【 demand 要求v 】` // ------------- 【 demand = require 】
+- `【 retreat 撤退 v 】` // ----------- 【 treat 对待 治疗 v 】 【 retreat 撤退 v 】
+- `【 treat 对待 治疗 v 】`
+- **【 The new 【 command 】 【 demands 】 us to 【 retreat 】 immediately. 新的命令要求我们立即撤退 】**
+- // -- 【 demand sb to do sth. 要求某人做某人 】
+- // -- 【 require sb to do sth. 要求某人做某人 】
+- // -- 【 immediately = directly. 立即的 adj 】
+- // -- 【 immediately = directly. = right away. 立即 立刻 】
+-
+- [BB.]
+- `【 recommend 推荐 v 】`
+- `【 highly recommend. 强烈推荐 】`
+- **【 I 【 highly recommend 】 this book. 我强烈推荐这本书 】**
+
+###### Must 2024-08-04
+
+- 1
+- `【 cohabit 同居 v 】` // ------- 【 illegal cohabitation. 非法同居 】 【 legal cohabitation. 合法同居 】
+- `【 inhabit 栖息于 v 】` // ------ 【 reside 居住于 v 】 【 inhabit 居住于 v 】
+- `【 inhibit 抑制 v 】`
+- `【 prohibit 禁止 v 】` // ------- 【 forbid 禁止 v 】 【 prohibit 禁止 v 】 // 【 prohibit sb from doing sth. 禁止某人做某事 】
+- `【 exhibit 展览v 展览品 n 】` // - 【 exhibition 展览 n 】 【 exhibition hall. 展览馆 】 【 art exhibition. 艺术展览 】
+- > 【 exhibit 展览 v 】
+- > 【 exhibition 展览 n 】
+- > 【 exhibition hall. 展览馆 n 】
+- > 【 art exhibition. 艺术展览 】
+- _【 prohibit sb from doing sth. 禁止某人做某事 】_
+- // 【 prohibit 禁止 v 】----- 正式
+- // 【 forbid 禁止 v 】------- 非正式
+- // hall 走廊 大厅
+- // TIPS: Pay attention to the different pronunciation between 'exhibit' and 'exhibition'.
+-
+- `【 inhabit 栖息于 v 】` ---------- 动物
+- `【 reside 居住于 v 】` ----------- 人 // `【 reside in. 居住于 】`
+- `【 settle 定居 v 】`
+- > 【 reside in. 居住在... 】
+- > 【 inhabit in. 栖息于... 】
+- > 【 live in. 生活在... 】
+-
+- `【 reside 居住于 v 】` // -------【 reside 居住于 定居于 v 】 【 settle 定居 v 】 【 inhabit 栖息于 v 】
+- `【 resident 居民 n 】` // -------【 local resident. 本地居民 】 【 foreign resident. 外地居民 】
+- `【 president 总统 n 】` // ----- 【 vice president. 副总统 】
+- `【 residence 住宅 n 】`
+-
+- `【 resident 居民 n 】` // -------【 resident 居民 n 】 【 residence 住宅 n 】 【 reside 定居 v 】 【 president 总统 n 】
+- `【 citizen 市民 n 】`
+- `【 immigrant 移民 n 】`
+- `【 migrate 移民 v 】`
+-
+-
+- [AA.]
+- `【 reside 居住于 v 】`
+- `【 resident 居民 n 】`
+- `【 president 总统 n 】`
+- > 【 reside in. 居住于 v 】
+- > 【 inhabit in. 栖息于 v 】
+- **【 The 【 president 】 and the 【 residents 】 【 all 】 【 reside in 】 this city. 总统和居民都生活在这座城市 】**
+- **【 Animals are 【 inhabit in 】 forest, and people are 【 reside in 】 city. 动物居住在森里，人类居住在城市 】**
+- // -- 【 reside in. 居住于 v 】
+- // -- 【 inhabit in. 栖息于 v 】
+-
+- [BB.]
+- `【 inhibit 抑制 v 】`
+- `【 prohibit 禁止 v 】`
+- `【 inhabit 居住于 v 】`
+- > 【 precious 珍贵的 adj 】
+- **【 Bringing drugs which 【 inhibit 】 animal 【 growth 】 is 【 prohibited 】 because many 【 precious animals 】 【 inhabit 】 here. 携带抑制动物生长的药物是被禁止的，因为这里有许多珍稀动物栖息 】**
+- // -- 【 precious 珍贵的 adj 】
+- // -- 【 precious gift. 珍贵的礼物 】
+- // -- 【 precious stone. 宝石 】 = gem
+- // -- _【 gem 宝石 / gym 健身房 】_
+-
+- [CC.]
+- `【 resident 居民 n 】`
+- `【 citizen 市民 n 】`
+- `【 immigrant 移民 n 】`
+- `【 consist of. 由...组成 】`
+- **【 The population of this city 【 consists of 】 【 residents 】, 【 citizens 】 and 【 immigrants 】. 这个城市的人口由居民，市民，移民组成 】**
+- // -- 【 consist of. 由...组成 】
+-
+- [AAAA.]
+- `【 exhibit 展览 v 】`
+- `【 exhibition 展览 n 】`
+- `【 exhibition hall. 展览馆 n 】` // 【 hall 走廊 大厅 n 】
+- `【 art exhibition. 艺术展 】`
+- `【 prohibit 禁止 v 】`
+- **【 selling the 【 exhibits 】 in the 【 exhibition hall 】 is 【 prohibited 】. 禁止在展览馆内出售展品 】**
+
+###### Must 2024-08-06
+
+- 1
+- `【 influence 影响 v n 】` // -------------- `【 profound influence. 深远的影响 】` // 【 have an influence on sb. 对某人有影响 】
+- `【 impact 影响 v n 】`
+- `【 affect 影响 v 】`
+- `【 effect 影响 效果 n 】`
+- > 【 profound influence. 深远的影响 】
+- > 【 positive influence. 正面影响 】
+- > 【 negative influence. 负面影响 】
+- _【 have an influence on sb. 对某人有影响 】_
+- > 【 profound / found / fun / fund / refund 】
+-
+- `【 introvert 内向的人 n 】`
+- `【 extrovert 外向的人 n 】`
+- `【 introverted 内向的 adj 】` // ---------- 【 introverted personality. 内向性格 】 // --- in + troverted
+- `【 extroverted 外向的 adj 】` // ---------- 【 extroverted = outgoing. 外向的 adj 】// --- ex + troverted
+- > 【 introverted personality. 内向的性格 】// 【 personality = character. 性格 】 // ------【 character 性格 特征】
+- > 【 extroverted personality. 外向的性格 】
+- // EE [introvert] Someone who is shy, quiet, and prefer to spend time alone rather than often being with other people.
+- // EE [extrovert] An 【 energetic 】 person who enjoys being with other people.
+- // external 外面的 外部的
+- // This medicine is just for external use, so we can't spray it into our mouth. 这种药只能外用，因此我们不能往嘴里喷
+-
+- `【 positive 积极的 乐观的 正面的 adj 】` // --【 positive / active 主动的 】
+- `【 negative 消极的 悲观的 负面的 adj  】` // -【 negative / passive 被动的 】
+-
+- [AA.]
+- `【 introverted personality. 内向性格 】`
+- `【 profound influence. 深远的影响 】`
+- _【 have an influence on sb. 对某人有影响 】_
+- **【 His 【 introverted personality 】 had a 【 profound influence 】 【 on 】 her. 他内向的性格给她造成了深远的影响 】**
+-
+- [BB.]
+- `【 introvert 内向的人 n 】`
+- `【 extrovert 外向的人 n 】`
+- `【 introverted 内向的 adj 】`
+- `【 extroverted 外向的 adj 】`
+- **【 【 Introverts 】 have the 【 introverted personalities 】, and 【 extroverts 】 have the 【 extroverted personalities 】. 内向的人有内向的性格， 外向的人有外向的性格 】**
+-
+- [CC.]
+- `【 profound 深远的 adj 】` // ---- 【 profound influence. 深远的影响 】
+- `【 found 创建 v 】`
+- `【 fun / fund / refund 】`
+- **【 Under his 【 profound 】 【 influence 】, she 【 found 】 a new 【 fun 】 【 fund 】 company. 在他的深刻影响下，她创建了一家新的有趣的基金公司 】**
+
+###### Must 2024-08-07
+
+- 1
+- `【 store 商店n 存储v 】` ------ 可互换 ---- // 【 storage 存储 n 】 【 store 商店 n 存储 v 】
+- `【 shop 商店n 购物v 】` ------- 可以换 ---- // 【 go shopping. 去购物 】
+-
+- `【 chain store. 连锁店 】` // ------------ 【 chain reaction. 连锁反应 】 【 chain store. 连锁店 】
+- `【 specialty store. 专卖店 】` // -------- 【 specialty food. 特色食物 n 】 // 【 specialty 专业 n 】 【 special 特别的 adj 】
+- // `【 specialty 专业 特色食品 n 】`
+- // `【 specialty = major. 专业 】`
+- // `【 profession = occupation. 职业 】`
+- `【 department store. 百货商场 】` // ----- 【 finance department. 财务部 】 【 department store. 百货商场 】
+- `【 grocery store. 杂货店 】`
+- `【 convenience store. 便利店 】`
+- `【 retail store. 零售店 】` // ----------- 【 tail / retail supplier dealer seller 】
+- `【 drugstore 药店 】` // ----------------- 【 drugstore = pharmacy. 药店 】
+- `【 bookstore 书店 】`
+- > 【 major 专业 专业课 n 】 // ------------- 【 major = specialty. 专业 】
+- > 【 specialty 专业 专长 n 】// ------------ 【 specialty = major 专业 】
+- _【 chain reaction. 连锁反应 】_
+- _【 chain store. 连锁店 】_
+-
+- `【 barber shop. 理发店 】` // ------------- 【 barber 理发师 n 】
+- `【 bar 酒吧 n 】`
+- `【 nightclub. 夜店 】`
+- `【 laundry 洗衣店 】` // ------------------ 【 boundary 边界 n 】 【 laundry 洗衣店 n 】 【 washing machine. 洗衣机 n 】
+- `【 restaurant. 餐馆 饭店 】`
+- > 【 boundary line. 边界线 n 】
+- > 【 national boundary. 国界 n 】
+-
+- `【 retail store. 零售店 】` // ------------ 【 tail / retail 】 【 retail price. 】 【 retail store. 】
+- `【 supplier 供应商 n 】` // --------------- 【 supplier / supply / supplement 补充 v / complement 补语 n 】
+- `【 dealer 经销商 n 】` // ----------------- 【 dealer / deal 】 【 deal with. 处理 v 】 【 deal 处理 经营 v 】
+- `【 seller 卖方 n 】`
+-
+- `【 drugstore 药店 】`
+- `【 Pharmacy 药店 】` // ------------------- 【 pharmacist 药剂师 】
+- `【 clinic 诊所  】` // -------------------- 【 in a clinic. 】 【 in a hospital. 】
+-
+- `【 takeout 外卖 n 】`
+- `【 delivery 快递 n 】` // ----------------- 【 deliver 传递 传送 v 】 【 delivery 快递 n 】
+- > 【 deliver 运送 交付 v 】
+-
+- // TIPS: [Related-link][Must 2024-12-02](./IELTS-Must-20241201.md)
+-
+- [AA.]
+- `【 takeout 外卖 n 】`
+- `【 delivery 快递 n 】`
+- `【 deliver 运送 交付 v 】`
+- **【 My 【 takeout 】 and 【 delivery 】 【 arrived 】 【 at the same time 】.我的外卖和快递同时到了 】**
+- // -- 【 at the same time. 同时 】
+- // -- 【 arrive 到达 v 】
+- // -- 【 arrival 到达 n 】
+-
+- [BB.]
+- `【 chain store. 连锁店 】`
+- `【 specialty store. 专卖店 】`
+- **【 I like to buy things at 【 chain stores 】 and 【 specialty stores 】. 我喜欢在连锁店和专卖店买东西 】**
+
+###### Must 2024-08-09
+
+- 1
+- `【 gunpowder 火药 n 】` // ---------- 【 gunpowder 火药 n 】 【 firecracker 鞭炮 n 】 【 gun 枪 n 】 【 powder 粉 粉末 n 】
+- `【 firecracker 鞭炮 n 】`
+- `【 firework 烟花 n 】` // ----------- 【 firecracker 鞭炮 n 】 【 firework 烟花 n 】
+- > 【 flour 面粉 n 】
+- > 【 flower 花 n 】
+- > 【 powder 粉 粉末 n 】// ----------- 【 gunpowder 火药 n 】
+- > 【 power 力 动力 功率 n 】----------- 【 power station. 电厂 n 】 【 power outage. 断电 】 【 power consumption. 】// 【 power bank. 】 【 power strip. 】
+-
+- `【 weigh 称重 v 】` // --------------- 【 weigh out. 称重 v 】
+- `【 weight 重量 n 】` // -------------- 【 lose weight. 减肥 v 】
+- `【 scale 称 尺寸 n 】` // -------------【 spring scale. 弹簧秤 】 【 balance scale. 天平 】 【 kitchen scale. 厨房秤 】 【 kitchen items. 厨房用品 】
+- > 【 spring scale. 弹簧秤 】 // ------- 【 spring 春天 弹簧 n 】
+- > 【 balance scale. 天平 】 // -------- 【 balance 平衡 余额 n 】
+- > 【 kitchen scale. 厨房秤 】
+- > 【 weigh out. 称重 v 】
+-
+- `【 missile 导弹 n 】` // --------------- 【 intercept missile. 拦截导弹 】
+- `【 miss 错过v 想念v 小姐n 】`
+- `【 dismiss 解雇 v 】` ------------------ 【 lay off. 裁员 v 】 【 dismiss 解雇 v 】 【 dissolve 溶解 v 解散 v 】
+- `【 mission 使命 n 】`
+- _【 intercept missile. 拦截导弹 】_
+- > 【 dismiss 解雇 v 】
+- > 【 dissolve 解散 v / 溶解 v 】
+- > 【 lay off. 裁员 】
+-
+- `【 bomb 炸弹 n 】` // ---------------- 【 atom bomb. 原子弹 】 // 【 bomb / burn 】 // 【 burn out. 燃尽 】
+- `【 atom bomb. 原子弹 n 】`
+- `【 bullet 子弹 n 】` // -------------- 【 bulletproof vest. 防弹背心 】
+- `【 bulletproof vest. 防弹背心 】` // -- 【 proof 证据 n 】 【 roof 屋顶 】 // 【 prove 证明 v 】 【 approve 批准 v 】 【 improve 提升 v 】
+- `【 burn 燃烧 v 】` // ---------------- 【 burn fat. 燃烧脂肪 】 【 burn down. 烧毁 】 【 burn out. = exhausted. 精疲力尽的 adj 】
+- `【 explode 爆炸 v 】` // ------------- 【 explosion 爆炸 n 】 【 explode 爆炸 v 】
+- `【 explosion 爆炸 n 】` // ----------- 【 explosion sound. 爆炸声 n 】
+- `【 ammunition 弹药 n 】` // ---------- 【 ammunition depot. 弹药库 】
+- `【 cannon 炮弹 大炮 n 】`
+- `【 missile 导弹 n 】` // ------------- 【 missile 导弹 n 】 【 mission 使命 n 】 【 dismiss 解雇 v 】 【 miss 错过 想念 v / 小姐 n 】
+- > 【 bomb 炸弹 n 】
+- > 【 tomb 坟墓 n 】
+- > 【 womb 子宫 】
+- _【 explosion sound. 爆炸声 】_
+- _【 burn fat. 燃烧脂肪 】_
+- _【 burn down. 烧毁 】_
+- // 【 vest 背心 】
+- // 【 proof 证明 证据 n 】 【 roof 房顶 n 】 【 evidence 证据 n 】
+- // 【 prove 证明 v 】 【 approve 批准 v 】 【 improve 提升 v 】
+- // proof = evidence. 证据
+- // get approved. 获得批准
+-
+- `【 submarine 潜艇 n 】`
+- `【 soldier 士兵 n 】`
+- `【 sailor 水手 n 】`
+- `【 pilot 飞行员 n 】`
+-
+- // TIPS: Pay attention to the pronunciation of the word 'bomb'. [bomb] /bɑːm/
+- // TIPS: Pay attention to the pronunciation of the word 'tomb'. [tomb] /tuːm/
+- // TIPS: Pay attention to the pronunciation of the word 'womb'. [womb]
+- // TIPS: Pay attention to the pronunciation of the word 'bullet'. [bullet] /ˈbʊl.ɪt/
+- // TIPS: Pay attention to the pronunciation of the word 'dissolve'. [dissolve] /dɪˈzɑːlv/
+- // TIPS: Pay attention to the pronunciation of the word 'vest'. [vest] /vest/
+-
+-
+- [AA.]
+- `【 dismiss 解雇 v 】`
+- `【 dissolve 解散 v / 溶解 v 】`
+- `【 miss 想念v 错过v 小姐n 】`
+- **【 After she was 【 dismissed 】, the company was also 【 dissolved 】, but she 【 misses 】 her 【 colleagues 】 right now. 在她被解雇后，公司也解散了，但她现在想念她的同事 】**
+- // -- 【 colleague 同事 n 】
+- // -- 【 college 大学 学院 n 】
+-
+- [BB.]
+- `【 miss 想念v 错过v 小姐n 】`
+- `【 mission 使命 n 】`
+- `【 dismiss 解雇 v 】`
+- **【 【 Miss 】 Chen, please don't 【 miss 】 our company because our company's 【 mission 】 is not to 【 dismiss 】 any employee. 程女士，不要错过我们公司，因为我们公司的使命是不解雇任意一名员工 】**
+-
+- [CC.]
+- `【 bomb 炸弹 n 】`
+- `【 explode 爆炸 v 】`
+- `【 explosion. 爆炸 n 】`
+- `【 explosion sound. 爆炸声 n 】`
+- **【 After the 【 bomb 】 【 exploded 】 there, a very 【 loud 】 【 explosion sound 】 was heard. 炸弹在那里爆炸后，传来了很大的爆炸声 】**
+- // -- 【 explosion sound. 爆炸声 n 】
+-
+- [DD.]
+- `【 scale 秤 n 】` // -------------- 【 spring scale. 弹簧秤 】 【 balance scale. 天平 】
+- `【 weigh 称重 v 】` // ------------ 【 weigh 称重 v 】 【 weight 重量 n 】 【 lose weight. 减肥 】
+- `【 charge 收费 要价 充电 v 】`
+- `【 accordingly 相应的 照着 adv 】`
+- .HL **【 A 【 spring scale 】 is used to 【 weigh 】 the 【 weight 】 of 【 objects 】. 弹簧秤是用来称物体重量的 】**
+- **【 The 【 restaurant 】 will use a 【 spring scale 】 to 【 weigh 】 your food, and 【 charge 】 you 【 accordingly 】. 餐厅会用弹簧秤来称你食物的重量，然后进行相应的收费 】**
+- // -- 【 according to. 根据 】
+- // -- 【 accord 符合 v 协议 n 】
+- // -- 【 accordingly. 照着 相应的 adv 】
+-
+- [EE.]
+- `【 weigh 称重 v 】`
+- `【 weight 重量 n 】`
+- `【 lose weight. 减肥 v 】`
+- **【 She 【 confirmed 】 whether she 【 succeeded in losing 】 【 weight 】 【 by 】 【 weighing 】 herself. 她通过称重来确认是否减肥成功 】**
+- // -- 【 confirm 确认 证实 v 】
+- // -- 【 succeed in doing sth. 成功做某事 】
+-
+- [FF]
+- `【 proof 证据 n 】` = evidence.
+- `【 prove 证明 v 】`
+- `【 theory 理论 n 】`
+- **【 Please use 【 proof 】 to 【 prove 】 your 【 theory 】 is correct. 请用证据证明你的理论是对的 】**
+- // -- 【 theory 理论 n 】
+- // -- 【 evidence 证据 n 】= proof
+-
+- [GG.]
+- `【 missile 导弹 n 】`
+- `【 aggressive war. 侵略战争 n 】`
+- `【 launch 发射 发动 v  】`
+- **【 They 【 launched 】 the 【 aggressive war 】 【 with 】 【 missiles 】. 他们用导弹发动了侵略战争 】**
+
+###### Must 2024-08-11
+
+- 1
+- `【 approve 批准 v 】` // --------------- 【 approved 批准的 adj 】 【 get approved. 获得批准 】 // 【 approval 批准 n 】
+- `【 improve 提升 v 】`
+- `【 prove 证明 v 】`
+- `【 proof 证据 n = evidence. 】`
+- > 【 roof 屋顶 】 // -------------------- 【 moon roof. 天窗 】
+- > 【 proof 证据 】// -------------------- 【 fireproof vest. 防弹背心 】 【 firecracker 鞭炮 n 】
+- > 【 evidence 证据 】 // ---------------- 【 evidence. = proof. 证据 】
+- > 【 moon roof. 天窗 】
+- > 【 fireproof vest. 防弹背心 】
+- > 【 firecracker 鞭炮 n 】
+- _【 get approved. 获得批准 】_
+-
+- `【 approve 批准 v 】` // --------------- 【 approved 批准的 adj 】 【 get approved. 获得批准 】// 【 approval 批准 n 】
+- `【 apply 申请 v 】` // ---------------- `【 application 申请 n 应用程序 n 】` // --------------- 【 application form. 申请表 】 // fill out the application form.
+- `【 appoint 任命 v 】` // --------------- 【 appointment 任命 n 】
+- `【 authorize 授权 v 】` // ------------- 【 authorization 授权 n 】
+- > 【 apply 申请 v 】// ------------------ 【 application 申请 n 应用程序 n 】 // ---------------- 【 application form. 申请表 】// fill out the application form.
+- > 【 application 申请 n 应用程序 n 】
+- > 【 application form. 申请表 】
+- _【 fill out. 填写 】_ // --------------- Please 【 fill out 】 the 【 application form 】. // - 【 fill out 】 a 【 deposit slip 】.
+- _【 fill up. 装满 】_ // ---------------- Please 【 fill up 】 the 【 gas tank 】 【 with 】 【 gasoline 】 and 【 diesel 】.
+- _【 take up. 占 占用 花费 】_ // --------- Learning 【 takes up 】 【 most of 】 my time. 学习占据了我大部分时间
+- _【 pick up. 接人 捡起 】_ // ------------ I 【 pick up 】 my car key to 【 pick her up 】. 我拿起我的车钥匙去接她
+- _【 speak out. 大声说 】_ // -------------- Please 【 speak out 】 and 【 speak up 】. // ----- `【 speaker mode. 扬声器模式 】` `【 vibrate mode. 振动模式 】`
+- //【 speed up. 加速 】
+- //【 pull up. 减速停下 】// -------------- Please【 pull up 】 the car 【 close to 】 the 【 gas pump 】.
+- //【 pull over. 靠边停下 】// ------------ Slow down, pull over. 减速，靠边停车
+- // **【 most of. 大部分的 大多数的 adj 】**
+-
+- `【 license 许可证 执照 n 】`
+- `【 certificate 证书 n 】` // ----------- 正式，常见
+- `【 credentials 证书 n 】` // ----------- 非正式，不常见
+-
+- `【 driver's license. 驾驶证 n 】`
+- `【 business license. 营业执照 n 】`
+- > 【 revoke a license. 撤销执照 】
+- > 【 revoke 撤销 v 】
+-
+- `【 marriage certificate. 结婚证 n 】`
+- `【 divorce certificate. 离婚证 n 】`
+- `【 appointment certificate. 任命书 】`
+- `【 tax registration certificate. 税务登记证 n 】`
+- > 【 individual income tax. 个人所得税 n 】
+- > 【 additional tax. 附加税 】// ------- 【 additional condition. 附加条件 】 【 additional tax. 附加税 】 // -- 【 addition 附加 n 】 【 additional 附加的 adj 】
+- > 【 register 注册 v 】
+- > 【 registration 注册 n 】
+- // 【 sign in. 登入 】
+- // 【 sign out. 登出 】
+- // 【 sign up. 注册 】
+- _【 in addition to. 除了 】_ // ---------- 补充
+- _【 except for. 除了 】_ // -------------- 排除
+-
+- `【 license plate. 车牌号 牌照 n 】`
+- `【 boarding pass. 登机牌 n 】`
+- `【 passport. 护照 n 】`
+- `【 visa. 签证 n 】` // ----------------- 【 study visa. 学生签证 】 【 tourist visa. 旅游签证 】 【 business visa. 商业签证 】
+- > 【 study visa. 学生签证 】
+- > 【 tourist visa. 旅游签证 】
+- > 【 business visa. 商业签证 】
+- > tour guide. / tourist attraction. / tourist resort. / tourist visa. / tourism industry. / travel agency. / business trip.
+- //【 Once 】 I 【 arrive in 】 China, I must 【 apply for 】 a 【 visa 】 【 via 】 the 【 agency 】 【 once agin 】.
+-
+- `【 addition 附加 n 】`
+- `【 additional 附加的 adj 】`
+- _【 additional tax. 附加税 】_
+- _【 additional condition. 附加条件 】_
+- > 【 in addition to. 除了 】------------ 补充
+- > 【 except for. 除了 】---------------- 排除
+-
+- // TIPS: Pay attention to the pronunciation of the word 'application'. [application]
+-
+-
+- [AA.]
+- `【 approve 批准 v 】`
+- `【 apply 申请 v 】`
+- `【 appoint 任命 v 】`
+- `【 authorize 授权 v 】`
+- **【 He 【 approved 】 my 【 application 】, 【 appointed 】 and 【 authorized 】 me. 他批准了我的申请，任命并授权了我 】**
+- // -- 【 application 申请 n 应用 n 】
+- // TIPS: Pay attention to the pronunciation of the word 'application'. [application]
+-
+- [BB.]
+- `【 prove 证明 v 】`
+- `【 improve 提高 v 】`
+- `【 approve 批准 v 】`
+- `【 get approved. 获得批准 】`
+- **【 The 【 fact 】 【 proves 】 that 【 as long as 】 you 【 improve 】 yourself, you will 【 get approved 】. 事实明证，只要提高自己，就会获得批准 】**
+- // -- 【 get approved. 获取批准 】
+- // -- 【 as long as. 只要 】
+- // -- 【 once 一旦 一次 】
+-
+- [CC.]
+- `【 proof 证据 n 】` = evidence.
+- `【 prove 证明 v 】`
+- `【 theory 理论 n 】`
+- **【 Please use 【 proof 】 to 【 prove 】 your 【 theory 】 is correct. 请用证据证明你的理论是对的 】**
+- // -- 【 theory 理论 n 】
+- // -- 【 evidence 证据 n 】= proof
+-
+- [DD.]
+- `【 vibrate mode. 震动模式 】`
+- `【 speaker mode. 扬声器模式 】`
+- `【 switch 开关n 切换v 】`
+- **【 Please 【 switch 】 your phone from the 【 vibrate mode 】 to the 【 speaker mode 】. 请把手机从震动模式调到扬声器模式 】**
+- **【 Set your phone to 【 vibrate mode 】. 设置手机为震动模式 】**
+-
+- [EE.]
+- `【 take up. 占 占用 花费 占据 v  】`
+- `【 electricity bill. 电费 n 】`
+- `【 a large part of. 大部分 】`
+- **【 The 【 electricity bill 】 【 takes up 】 【 a large part of 】 my 【 expenditure 】. 电费占了我很大一笔支出 】**
+- **【 Learning 【 takes up 】 【 most of 】 my time. 学习占据了我大部分时间 】**
+- **【 The table 【 takes up 】 a lot of space in the room. 这个桌子占据了房间的大多数空间 】**
+- // -- 【 expenditure. 支出 n 】
+- // -- 【 consumption 消费 消耗 n 】
+-
+- [FF.]
+- `【 in addition to. 除了 】` ----- 补充
+- `【 except for. 除了 】` --------- 排除
+- `【 additional condition. 附件条件 n 】`
+- `【 additional tax. 附加税 n 】`
+- > addition 附加 n
+- > condition 条件 n
+- **【 【 In addition to 】 the 【 additional conditions 】, There are 【 additional taxes 】. 除了附件条件，还有附加税 】**
+
+###### Must 2024-08-13
+
+- 1
+- `【 electricity 电 n 】` // -------------【 electricity bill. 电费 n 】
+- `【 electric 电的 adj 】`
+- > 【 electric current. 电流 n 】
+- > 【 electric voltage. 电压 n 】
+- > 【 electric resistance. 电阻 n 】 // - 【 resist 抵抗 v 】 【 resistance 抵抗 n 】 // 【 resist / insist / persist / assist 】
+- > 【 electric power. 电功率 n 】
+- > 【 electric appliance. 电器 n 】 // -- 【 appliance 电器 n 】
+- > 【 electric circuit. 电路 n 】 // ---- 【 circuit 电路 n 】
+- > 【 electric eel. 电鳗 n 】
+- _【 electricity bill. 电费 】_
+- // TIPS: Pay attention to the pronunciation of the word 'resist'. [resist]
+- // TIPS: Pay attention to the pronunciation of the word 'resistance'. [resistance]
+-
+- `【 current 电流 n 】` // --------------- ampere 安培
+- `【 voltage 电压 n 】` // --------------- volt 伏特
+- `【 resistance 电阻 n 】` // ------------ ohm 欧姆
+- `【 power 功率 n 】` // ----------------- watt 瓦特
+- > 【 rated voltage. 额定电压 n 】// ---- 【 rate 速率 n 评价 v 】 【 rated 额定的 adj 】
+- > 【 rated current. 额定电流 n 】
+- > 【 rated power. 额定功率 n 】
+- `【 expenditure 支出 n 】` // --------- 【 expenditure 支出 n 】 【 consumption 消费 消耗 n 】
+- `【 consumption 消费 消耗 n 】` // ----- 【 expenditure 支出 n 】 【 consumption 消费 消耗 n 】
+- _【 fuel consumption. 油耗 】_ // ----- 【 fossil fuel. 化石燃料 】 【 fuel consumption. 油耗 n 】 【 fuel grade. 燃料等级 n 】
+- _【 power consumption. 功耗 】_
+-
+- `【 circuit 电路 n 】`
+- `【 short circuit. 短路 n 】`
+- > 【 parallel circuit. 并联电路 】// --- 【 parallelogram 平行四边形 】
+- > 【 series circuit. 串联电路 】 // ---- 【 a series of test. 一系列测试 】
+- > 【 a series of test. 一系列测试 】
+-
+- `【 power station. 电厂 n 】`
+- `【 power outage. 断电 n 】` // ------ 【 outage 断电 n 】
+- `【 power consumption. 功耗 n 】`
+- `【 power bank. 充电宝 n 】` // ------ 【 river bank. 河岸 】 【 bank / branch 】
+- `【 power strip. 插座 n 】` // ------- 【 outlet 插座 n 】 【 wall outlet. 壁式插座 】
+- > 【 power 力 动力 功率 n 】------【 power station. 电厂 n 】 【 power outage. 断电 】 【 power consumption. 功耗 】 // 【 power bank. 充电宝 】 【 power strip. 插座 】
+- > 【 powder 粉 粉末 n 】// ------【 gunpowder 火药 n 】
+-
+- `【 resist 抵抗 抵制 v 】` // ---------- 【 resistance 电阻 n 抵抗 n 】 【 resist 抵抗 抵制 v 】
+- `【 insist. = persist. 坚持 v 】` // - `【 persist in doing sth. = insist in doing sth. 坚持做某事 】`
+- `【 assist 协助 v 】` // ------------- `【 assist in doing sth. 协助某人做某事 】` //【 assistant 助手 n 】 【 assist 协助 v 】
+- > 【 assistant 助手 n 】
+- > 【 attendant 服务员 n 】 // ---------- 【 attendant 服务员 n 】 【 descendant 子孙 】 【 abundant 丰富的 adj 】
+- > 【 secretary 秘书 n 】
+- > 【 steward 乘服员 n 】 // ------------ 【 steward 乘服员 n 】 【 stewardess. 空姐 n 】
+- // TIPS: Pay attention to the pronunciation of the word 'resist'. [resist]
+- // TIPS: Pay attention to the pronunciation of the word 'resistance'. [resistance]
+-
+-
+- [AA.]
+- `【 persist in doing sth. 坚持做某事 】`
+- `【 insist in doing sth. 坚持做某事 】`
+- `【 resist 抵制 抵抗 v 】`
+- `【 resistance 抵抗n 电阻n 】`
+- **【 We should 【 persist 】 in 【 resisting 】 the 【 mandatory overtime 】 without 【 overtime pay 】. 我们要坚持抵制没有加班费的强制加班 】**
+-
+- [BB.]
+- `【 electricity bill. 电费 n 】`
+- `【 take up. 占 占用 花费 占据 v  】` // -- take up. / fill up. / pick up. / speak up. / pull up. / speed up.
+- `【 a large part of. 大部分 】`
+- **【 The 【 electricity bill 】 【 takes up 】 【 a large part of 】 my 【 expenditure 】. 电费占了我很大一笔支出 】**
+- **【 Learning 【 takes up 】 【 most of 】 my time. 学习占据了我大部分时间 】**
+- **【 The table 【 takes up 】 a lot of space in the room. 这个桌子占据了房间的大多数空间 】**
+- // -- 【 expenditure. 支出 n 】
+- // -- 【 consumption 消费 消耗 n 】
+-
+- [CC.]
+- `【 assist 协助 v 】`
+- `【 assistant 助手 n 】`
+- **【 An 【 assistant 】 is a person who 【 assists 】 others 【 in 】 【 completing 】 tasks. 助理是是辅助他人完成任务的人 】**
+
+###### Must 2024-08-14
+
+- 1
+- `【 profession 职业 n 】` // ---------专业职业-------- 【 professional 职业的 专业的 adj 】 【 professor 教授 】
+- `【 occupation 职业 占有 n 】` // -----一般职业-------- 【 occupy 占领 v 】 【 occupation 占领 n / 职业 n 】
+- `【 specialty 专业 n 】` // ------------------ 【 specialty store. 专卖店 】 // 【 specialty = major. 专业 】 // 【 specialty / major / profession 】
+- `【 major 专业 n 】`
+- `【 industry 行业 n 】`
+- > 【 specialty = major. 专业 】
+- > 【 occupation = profession. 职业 】
+-
+- `【 professional 职业的 专业的 adj 】` // ----- 【 professional manager. 职业经理人 n 】
+- `【 professor 教授 n 】`
+- `【 profession 职业 n 】` // ----------------- 【 profession = occupation 】 【 specialty = major 】
+- _【 professional manager. 职业经理人 】_
+- > 【 professional field. 专业领域 n 】
+- > 【 professional skill. 专业技能 n 】
+- > 【 professional talent. 专业人才 n 】 // --- 【 talent 天赋 才能 天才 人才 】
+- > 【 professional equipment. 专业设备 n 】
+- > 【 professional thief. 专业小偷 n 】
+-
+- `【 expert 专家 n 】` // -------------------- 【 expert = specialist. 专家 】
+- `【 specialist 专家 n 】`
+- `【 specialize 专攻 v 】` // ---------------- 【 specialize in. 专攻 v 】
+- `【 specialty 专业 n 】` // ----------------- 【 specialty store. 专卖店 】 // 【 specialty / major / profession 】
+- `【 special 特别的 adj 】`
+- > 【 eye specialist. 眼科专家 】
+-
+- `【 special 特别的 adj 】`
+- `【 specific 具体的 adj 】`
+- > 【 specific symptom. 具体的症状 n 】
+- > 【 specific goal. 具体的目标 n 】
+- > 【 specific measure. 具体的措施 】// ---- 【 measure 测量 v 措施 n 】
+-
+-
+- [AA.]
+- `【 professional field. 专业领域 】`
+- `【 professional talent. 专业人才 】`
+- `【 professional skill. 专业技能 】`
+- **【 In 【 professional fields 】, we need 【 professional talents 】 with 【 professional skills 】. 在专业的领域需我们要专业的人才拥有专业的技能 】**
+-
+- [BB.]
+- `【 specialist 专家 n 】`
+- `【 specialize in. 专攻 v 】`
+- `【 special field. 特殊领域 n 】`
+- **【 A 【 specialist 】 is a person who 【 specializes in 】 a 【 special field 】. 专家是专攻一个特殊领域的人 】**
+- **【 An 【 assistant 】 is a person who 【 assists 】 others 【 in 】 【 completing 】 tasks. 助理是辅助他人完成任务的人 】**
+-
+- [CC.]
+- `【 specific goal. 具体的目标 n 】`
+- `【 specific measure. 具体的措施 n 】`
+- **【 For this 【 specific goal 】, Do you have any 【 specific measures 】 to 【 achieve 】 it? 对于这个具体的目标，你有什么具体的措施去实现它吗？ 】**
+- // -- 【 measure 测量 v 措施 n 】
+-
+- [DD.]
+- `【 measure 测量 v / 措施 n 】`
+- `【 specific measure. 具体的措施 n 】`
+- **【 Do you have 【 any 】 【 specific measures 】 to 【 measure 】 the 【 depth 】 of the water? 你有什么具体的措施去测量水的深度吗？】**
+- // some 用在疑问句中表示 ------ 期待肯定的回答 ---- 一些
+- // any 用在疑问句中表示 ------- 中立或否定 ------- 任何
+-
+- [EE.]
+- `【 professional manager. 职业经理人 n 】`
+- `【 profession 职业 n 】`
+- `【 professor 教授 n 】`
+- **【 【 Professional managers 】 and 【 professors 】 are two different 【 professions 】. 职业经理人和教授是两种不同的职业 】**
+- **【 【 Professional manager 】 is also 【 a kind of 】 【 profession 】. 职业经理人也是一种职业 】**
+-
+- [FF.]
+- `【 profession 职业 n 】`
+- `【 specialty 专业 n 】` = major. 专业
+- **【 Different 【 professions 】 【 correspond 】 to different 【 specialties 】. 不同职业对应不同的专业 】**
+- // -- 【 correspond 对应 符合 v 】
+- // -- 【 correspond to. 对应 v 】
+-
+- [GG.]
+- `【 occupation 职业 n / 占有 n 】` ------- 一般职业
+- `【 profession 职业 n 】` --------------- 专业职业
+- occupation / occupy
+- **【 The 【 professional manager 】 【 occupied 】 the 【 occupation 】. 职业经理人占领了这个职业 】**
+-
+- [HH.]
+- **【 There are different professions and different specialties in different industries. 不同的行业有不同的职业和不同的专业 】**
+- **【 Different industries have different occupations and different specialities. 不同的行业有不同的职业和不同的专业 】**
+
+###### Must 2024-08-15
+
+- 1
+- `【 meal 一餐 进餐 n 】` // -------------------------------------------【 meal / meat 】
+- `【 meat 肉 n 】`
+- `【 breakfast 早餐 n 】`
+- `【 lunch 午餐 n 】`
+- `【 brunch 早午餐 n 】` ---------------- brunch = breakfast + lunch.
+- `【 dinner 晚餐 n 】` ----------------- 正式的晚餐 // ---------------- 【 dinner / supper 】
+- `【 supper 晚餐 n 】` ----------------- 非正式的晚餐 // --------------- 【 super 超级的 adj 】 【 supper 晚餐 】 【 suffer 遭受 v 】
+- > 【 two dishes. 两道菜 】
+- > 【 two courses. 两道菜 】
+- _【 suffer 遭受 v 】_
+- _【 supper 晚餐 n 】_
+- _【 super 超级的 adj 】_
+-
+- `【 chef 厨师 n 】`
+- `【 kitchen items. 厨房用品 】` // ---- 【 kitchen scale. 厨房秤 】 【 spring scale. 弹簧秤 】 【 balance scale. 天平 】
+- `【 ingredient 原料 成分  n 】` // ---- 【 active ingredient. 有效成分 】 【 essential ingredient. 必要成分 】 【 food ingredient. 食材 】
+- `【 material 材料 n 】` // ----------- 【 raw material. 原材料 】 【 building material. 建筑材料 】 【 composite material. 复合材料 】 【 organic material. 】
+- > 【 active ingredient. 有效成分 】
+- > 【 essential ingredient. 必要成分 】
+- > 【 food ingredient. 食材 】
+- _【 raw material. 原材料 】_
+- _【 building material. 建筑材料 】_
+- _【 composite material. 复合材料 】_
+- _【 organic material. 有机材料 】_
+- _【 organic food. 有机食品 】_
+- // TIPS：Pay attention to the pronunciation of the word 'chef'. [chef]
+- // TIPS：Pay attention to the pronunciation of the word 'ingredient'. [ingredient]
+- // TIPS：Pay attention to the pronunciation of the word 'raw'. [raw]
+-
+- `【 cut 切 v 】` // ------------------ 【 cutting board. 切菜板 】 【 blackboard 黑板 】 【 boarding pass. 登机牌 】 【 dashboard 仪表盘 】
+- `【 slice 切片 v / 片 n 】`
+- `【 peel 削皮 v 】` // --------------- 【 peeler. 削皮器 】
+- `【 chop 切碎 v 】`
+- `【 mince 剁碎 v 】`
+- `【 grind 磨碎 v 】`
+- > 【 cutting board. 切菜板 n 】
+- > 【 billboard 广告牌 n 】
+- > 【 blackboard 黑板 n 】
+- > 【 dashboard 仪表盘 n 】
+- > 【 cupboard 橱柜 n 】
+- _【 boarding pass. 登机牌 】_
+- _【 passport 护照 / visa 签证 】_
+- // TIPS：Pay attention to the pronunciation of the word 'cupboard'. [cupboard]
+-
+- `【 boil 煮 v 】` // ------------------- 【 boiled egg. 水煮蛋 】
+- `【 fry 油炸 油煎 v 】` // -------------- 【 fried egg. 煎鸡蛋 】
+- `【 steam 蒸v 蒸发v 蒸汽n 】` // -------- 【 steamed egg. 蒸蛋 】 // -- 【 gas / liquid / fluid / steam / sap / slap 】
+- `【 stew 顿 v 】`
+- `【 roast 烤 烘烤 v 】`
+- > 【 deep-fry. 油炸 】
+- > 【 pan-fry. 煎 】
+- > 【 Stir-fry. 炒 】// ----------------- 【 stir 搅拌 v 】
+-
+-
+- [AA.]
+- `【 meal 一餐n 进餐v 】`
+- `【 dish 菜 一道菜 n 】`
+- **【 The 【 meal 】 has 【 a total of 】 seven 【 dishes 】. 这一餐一共有 7 道菜 】**
+- **【 Seven 【 dishes 】 are enough to eat for a day. 7 个菜足够吃一天了 】**
+-
+- [BB.]
+- `【 ingredient 成分 原料 n 】`
+- `【 food ingredient. 食材 n 】`
+- `【 chef 厨师 n 】`
+- `【 dish 菜 一道菜 n 】`
+- **【 These 【 food ingredients 】 are enough for 【 chef 】 to make seven 【 dishes 】. 这些食材足够厨师做出 7 道菜了 】**
+- // -- 【 be enough for. 对...来说足够 】
+-
+- [CC.]
+- `【 ingredient 原料 成分 n 】`
+- `【 material 材料 n 】`
+- `【 chef 厨师 n 】`
+- `【 dish 菜 一道菜 n 】`
+- **【 These 【 ingredients 】 and 【 materials 】 are enough for 【 chef 】 to make seven 【 dishes 】. 这些原料和材料足够厨师做出 7 道菜了 】**
+- // -- 【 be enough for. 对...来说足够 】
+-
+- [DD.]
+- `【 chip 芯片 薯条 n 】`
+- `【 cheap 便宜的 adj 】`
+- `【 crisp 薯片 】`
+- **【 The 【 Chip 】 is 【 cheaper 】 than the【 chip 】. 薯条比芯片便宜 】**
+-
+- [EE.]
+- `【 spring scale. 弹簧秤 n 】`
+- `【 kitchen supplies. 厨房用品 n 】`
+- **【 The 【 spring scale 】 is a kind of 【 kitchen supplies 】. 】**
+
+###### Must 2024-08-17
+
+- 1
+- `【 regulation 规定 规则 规章制度 n 】` - 【 comply with regulation. 遵守规定 】 【 strict regulation. 严格的规定 】 // 【 regulate 规定 v 】
+- `【 summary 总结 概要 n 】` // --------- 【 in summary. 总之 】 // 【 summarize 总结 概要 v 】
+- `【 conclusion 结论 n 】` // ---------- 【 clue 线索 n 】
+- `【 consequence 后果 n 】` // --------- 【 result. 结果 n 】 【 consequence. 后果 n 】
+- `【 scheme 方案 n 】` // -------------- 【 color scheme. 配色方案 】
+- `【 measure 措施 n / 测量v 】` // ----- `【 take measure. 采取措施 】` `【 specific measure. 具体措施 】` 【 take note. 做笔记 】
+- > 【 summer 夏天 n 】 // -------------- 【 summer camp. 夏令营 】
+- > 【 summary 概要 总结 n 】 // --------- 【 in summary. = in conclusion. 总之 】
+- > 【 summarize 概要 总结 v 】
+- // 【 conclusion 结论 】--------------- 【 clue 线索 n 】 【 conclusion 结论 n 】
+-
+- `【 comply 遵守 v 】` // -------------------- 【 comply with regulation. 遵守规定 】 【 strictly comply with. 严格遵守 】--- strictly comply with the regulation.
+- `【 apply 申请 v 】` // --------------------- 【 application 申请 n 应用程序 n 】 // ------- 【 apply for. 申请 】---------- apply for a loan. 申请贷款
+- `【 supply 供应 v 】` // -------------------- 【 school supplies. 学习用品 】 【 emergency supplies. 紧急用品 】 // 【 supply / supplier / supplement 】
+- `【 multiply 乘以 v 】` // ------------------ 【 multiple 倍数 n 】 【 multiply 乘以 v / 繁殖 v 】
+- > 【 multiple 倍数 并联 n / 多个的 adj 】// --- **【 The multiple of. ...的倍数 】** 【 multiple parameter. 多个参数 】
+- > 【 multiply 乘以 繁殖 v 】 // -------------- **【 multiplied by. 乘以 】**
+-
+- `【 deduce 推断 推论 v 】` // ----------- 【 infer = deduce. 推断 推论 v 】 // 【 deduce the reason. = infer the reason.推断原因 】
+- `【 reduce 减少 v 】`
+- `【 produce 生产 v 】` // -------------- 【 reproduce 繁殖 v 】 【 produce. 生产 v 】
+- `【 introduce 介绍 v 】`
+-
+- `【 regulation 规定 规则 规章制度 n 】`
+- `【 regulate 规定 v 】`
+- `【 stipulate 规定 v 】` ---------------- 用的多
+- `【 stipulation 规定 n 】`
+- > 【 strictly comply with the regulation. 严格遵守规定 】
+- > 【 strict regulation. 严格的规定 】
+- // comply with. 遵守 v // --------------- 【 comply with law. 遵守法律 】 【 comply with the labor law. 遵守劳动法 】 【 comply with the regulation. 遵守规定 】
+- // apply for. 申请 v
+-
+- `【 concise 简洁的 adj 】`
+- `【 concept 概念 观念 n 】`
+- `【 concern 担心 忧虑 n 】`
+- `【 concert 音乐会 n 】`
+- `【 concentration 浓度 n 】`
+- `【 concrete 混凝土 n 】`
+-
+-
+- [AA.]
+- `【 in summary. = in conclusion. 总之 】`
+- `【 in concise language. 用简洁语言 】`
+- `【 summarize 总结 概要 v 】`
+- `【 summary 总结 概要 n 】`
+- `【 conclusion 结论 n 】`
+- `【 concise 简洁的 adj 】`
+- **【 【 in summary 】, please 【 summarize 】 the 【 concept 】 and 【 conclusion 】 【 in 】 【 concise 】 language. 总之，请用简洁的语言总结一下这个概念和结论 】**
+-
+- [BB.]
+- `【 scheme 方案 n 】`
+- `【 measure 措施 n / 测量 v 】`
+- `【 means 方法 手段 n 】`
+- > 【 take measure. 采取措施 】
+- **【 What 【 scheme 】 will you use and what 【 measure 】 will you 【 take 】 to 【 measure 】 the 【 depth 】 of water? 用什么方案和采取什么措施来测量水的深度？ 】**
+-
+- [CC.]
+- `【 stipulate 规定 v 】`
+- `【 take scheme. 采取方案 】`
+- `【 take measure. 采取措施 】`
+- `【 comply with. 遵守 v 】`
+- `【 regulation 规定 规则 规章制度 n 】`
+- **【 The school 【 stipulates 】 that we should 【 take all schemes 】 and 【 take all measures 】 to 【 make 】 students to 【 comply with 】 the 【 regulations 】. 学校规定采取有所有方案和所有措施让学生遵守规章制度 】**
+-
+- [DD.]
+- `【 take measure. 采取措施 】`
+- `【 take action. 采取行动 】`
+- `【 take picture. = take photo. 拍照 】`
+- `【 take a shower. = take a bath. 洗澡 】` // take a shower. = take a bath.
+- **【 We should 【 take measures 】 and 【 take actions 】 to 【 take pictures 】 to prevent being 【 peeking at 】 when 【 taking a shower 】. 我们要采取措施和采取行动进行拍照，防止洗澡时被偷看 】**
+- // 【 prevent doing sth. 阻止做某事 】
+- // 【 peek at. 偷看 】
+-
+- [EE.]
+- `【 value 值 n 】`
+- `【 multiplied by. 乘以 】`
+- `【 the multiple of. ...的倍数 】`
+- **【 The 【 value 】 of Five 【 multiplied by 】 three is 【 the multiple of 】 five. 五乘以三后的值是五的倍数 】**
+-
+- [AAA.]
+- `【 clue 线索 n 】`
+- `【 conclusion 结论 n 】`
+- **【 This 【 clue 】 can help us to 【 deduce 】 the 【 conclusion 】.这个线索可以帮助我们推导结论 】**
+
+###### Must 2024-08-18
+
+- 1
+- `【 take measure. 采取措施 】` // ------------ 【 measure 测量 v 措施 n 】 // 【 specific measure. 具体措施 】
+- `【 take action. 采取行动 】`
+- `【 take note. 做笔记 】` = make note.
+- `【 take selfie. 自拍 】`
+- `【 take photo. 拍照 】` = take picture. = take a wedding photo.
+- `【 take your time. 慢慢来 】`
+- `【 take a screenshot. 截图 截屏 】`
+- > 【 take a rest. 休息一下 = take a break. 】
+- > 【 take a break. 休息一下 】// ------------- 【 take a break. we'll be right back 休息一下 马上回来 】
+- > 【 take a shower. 洗澡 】// --------------- 【 take a shower. = take a bath. 洗澡 】// ----【 bath 洗澡 浴缸 n 】
+- > 【 take a bath. 洗澡 】
+- > 【 take a nap. 小睡一会 】
+- > 【 take a peek. 偷看一眼 】 // ------------- 【 peek at. 偷看 】 【 look at. 看 】 // -------【 peek 偷看 v 】
+- > 【 take an examination. 参加考试 】--------- 【 take an examination. = take an exam. 参加考试 】
+- _【 take over. 接手 接管 v 】_
+- _【 take up. 占据 占用 v 】_
+- _【 take off. 起飞 / 脱下 v 】_
+- _【 take in. 吸收 】_
+- _【 take out. 取出 】_ // -------------------- 【 take out the takeout. 取出外卖 】 // 【 take out the garbage. 搞垃圾 】
+- _【 takeout. 外卖 】_ // --------------------- 【 take out the takeout. 取出外卖 】 // 【 takeout cabinet. 外卖柜 】 【 cabinet 柜子 n 】
+- // **【 form a habit. 养成习惯 】=【 develop a habit. 养成习惯 】**
+- // **【 take out the takeout. 取出外卖 】**
+- // **【 takeout cabinet. 外卖柜 】**
+-
+- // TIPS: Pay attention to the pronunciation of the word 'nap'. [nap]
+- // TIPS: Pay attention to the pronunciation of the word 'bath'. [bath]
+-
+-
+- [AA.]
+- `【 take action. 采取行动 】`
+- `【 take measure. 采取措施 】`
+- `【 measure 措施n 测量v 】`
+- **【 We should 【 take action 】 and 【 take effective measures 】 to 【 measure 】 the 【 depth 】 of the water? 我们应该采取行动，采取有效的措施去测量水的深度 】**
+- // -- effective -- effectively ------ effect
+- // -- efficient -- efficiently ------ efficiency
+- // -- 【 take effective measure. 采取有效措施 】
+-
+- [BB.]
+- `【 take note. 做笔记 】`
+- `【 take selfie. 拍自拍照 】`
+- `【 take photo. 拍照 】`
+- **【 Please 【 take notes 】: 【 taking a selfie 】 is not equal to 【 taking a photo 】. 请做笔记：自拍不等于拍照 】**
+- // -- 【 be equal to. 等于 】
+-
+- [CC.]
+- `【 take a break. 休息一下 】` = take a rest. 休息一会
+- `【 take a shower. 洗澡 】` = take a bath. 洗澡
+- `【 take a nap. 小睡一会 】`
+- > take a shower. = take a bath. 洗澡
+- **【 Let me 【 take a break 】, 【 take a shower 】, and 【 take a nap 】. 让我休息一会，洗个澡，再小睡一会 】**
+- **【 I'm too tried, let let 【 take a rest 】 【 for a while 】. 我太累了，让我休息一会 】**
+- // -- 【 take a shower. = take a bath. 洗澡 】
+-
+- [DD.]
+- `【 take over. 接手 接管 v 】`
+- `【 take up. 占用 占据 v 】`
+- **【 【 Taking over 】 the old project has 【 taken up 】 a lot of my time. 接手这个老项目占用了我大量的时间 】**
+-
+- [EE.]
+- `【 take out. 取出 】`
+- `【 takeout. 外卖 】`
+- `【 takeout cabinet. 外卖柜 】`
+- **【 I want to 【 take out 】 my 【 takeout 】 from the 【 takeout cabinet 】. 我想从外卖柜里拿出我的外卖 】**
+-
+- [FF.]
+- `【 take your time. 慢慢来 】`
+- `【 in a hurry. 急 充忙 adv 】`
+- **【 I'm not 【 in a hurry 】, please 【 take your time 】and 【 enjoy your meal 】. 我不赶时间，请慢慢吃 】**
+
+###### Must 2024-08-20
+
+- 1
+- `【 leave 离开v 请假n 】`
+- `【 ask for leave. 请假 】`
+- `【 ask for 【 sick 】 leave. 请病假 】`
+- `【 ask for 【 personal 】 leave. 请事假 】`
+- `【 ask for 【 annual 】 leave. 请年假 】`
+- `【 ask for 【 maternity 】 leave. 请产假 】`
+-
+- `【 vacation 假期 】`
+- `【 holiday 假期 】`
+- `【 Statutory holiday. 法定节假日 】` // ------------------ 【 statutory 法定的 adj 】
+- > 【 go on a vacation. = go for a vacation. 去度假 】
+- > 【 go on a trip. = go for a trip. 去旅行 】
+- > 【 go traveling. 去旅行 】
+-
+- `【 pregnant 怀孕的 adj 】`
+- `【 pregnant woman. 孕妇 】`
+
+###### Must 2024-08-22
+
+- 1
+- `【 in a hurry. 急忙 忙于... 】`
+- `【 take your time. 慢慢来 】`
+- **【 I'm not 【 in a hurry 】, please 【 take your time 】and 【 enjoy your meal 】. 我不赶时间，请慢慢吃 】**
+
+###### Must 2024-08-26
+
+- 1
+- `【 garbage 垃圾 n 】` // -------------- 【 garbage can. = garbage bin. 垃圾桶 】 【 garbage bag. 】 【 garbage truck. 垃圾车 】 【 garbage dump. 垃圾场 】
+- `【 trash 垃圾 n 】` // ---------------- 【 trash can. 垃圾桶 】 【 trash bin. 垃圾桶 】
+- `【 rubbish 垃圾 n 】`
+- `【 litter 垃圾n 乱扔v 】` // -----------【 no littering. 禁止乱扔 】 【 no leaning. 禁止依靠 】// ---------- 公共场所的没有在垃圾桶中的垃圾
+- `【 waste 垃圾n 浪费v 废物n 】` // -------【 recyclable waste. 回收垃圾 】 【 residual waste. 干垃圾 】 // -- 用的最广
+- > 【 waste 浪费 v 废物 n 垃圾 n 】
+- > 【 recyclable waste. 可回收垃圾 】 // -- 【 recyclable 可回收的 adj 】 【 recycle 回收 v 】
+- > 【 residual waste. 干垃圾 】` // ------ 【 residual value. 剩余价值 】 【 residual 剩余的 残留的 adj / 剩余 残渣 n 】
+- > 【 wet waste. 湿垃圾 】` // ----------- 【 household food waste. = wet waste. 湿垃圾 n 】
+- 【 waste 浪费 v 垃圾 n 】
+- 【 squander 浪费 v n 】
+- _【 a wast of time. 浪费时间 】_
+- _【 a waste of money. 浪费金钱 】_
+- _【 a waste of life. 浪费生命 】_
+- // 【 residual value. 剩余价值 】
+- // 【 residual waste. 干垃圾 】
+-
+- `【 garbage 垃圾 n 】`
+- `【 garbage bag. 垃圾袋 n 】`
+- `【 garbage can/bin. 垃圾桶 n 】` // --------- garbage can. = garbage bin. = trash bin. = trash can.
+- `【 garbage truck. 垃圾车 n 】`
+- `【 garbage dump. 垃圾场 垃圾堆 n 】` // - 【 dumpling 饺子 n 】 【 dump 倾倒 v / 垃圾场 n 垃圾堆 n 】
+- `【 take out the garbage. 倒垃圾 】`
+- `【 dustbin 垃圾箱 n 】` // ------------- 【 dust 灰尘 n 】 【 bin 箱子 n 】
+- _【 dumb 哑的 愚蠢的 adj 】_
+- _【 dump 倾倒 v 垃圾场 n 垃圾堆 n 】_
+- _【 dumpling 饺子 n 】_
+- > 【 truck 卡车 n 】// ------------------ 【 tractor 拖拉机 n 】 【 truck 卡车 n 】 // 【 garbage truck. 垃圾车 n 】
+- > 【 bin 箱子 n 】
+- > 【 dust 灰尘 粉尘 n 】
+-
+- `【 junk food. 垃圾食品 n 】`
+- `【 junk mail. 垃圾邮件 n 】`
+- > 【 inbox 收件箱 n 】 = mail box. 收件箱
+-
+- `【 dirty 脏的adj  / 弄脏v  肮脏下流的adj 】`
+- `【 clean 干净的adj  / 打扫v  】`
+- `【 messy 乱的 adj 】`
+- > 【 clean 干净的 adj / 打扫 v 】`
+- > 【 clean up. 打扫 清理 v 】
+-
+- `【 take out the garbage. 倒垃圾 】`
+- `【 no littering. 禁止乱扔 】` // --------- 【 litter 垃圾 】// 公共场所的没有在垃圾桶中的垃圾
+- `【 on leaning. 静止依靠 】`
+-
+- `【 expired 过期的 adj 】`
+- `【 out of date. 过时的 adj 】`
+- `【 date 日期n 约会n 】`
+- **【 For 【 cloth 】 and 【 clothes 】, there is no such thing as being 【 expired 】, only being 【 out of date 】. 对于布料和衣服，没有过期这一说，只有过时一说 】**
+- // -- 【 cloth 布料 n 】
+- // -- 【 clothes 衣服 n 】
+- // TIPS: Pay attention to the pronunciation of the word 'cloth'. [cloth]
+- // TIPS: Pay attention to the pronunciation of the word 'clothes'. [clothes]
+-
+-
+- [AA.]
+- `【 garbage 垃圾 n 】`
+- `【 garbage bag. 垃圾袋 n 】`
+- `【 garbage can. 垃圾箱 n 】`
+- `【 garbage truck. 垃圾车 n 】`
+- `【 garbage dump. 垃圾场 垃圾堆 n 】`
+- // 【 throw into. 扔进 】
+- **【 Please 【 throw 】 the 【 garbage 】 into the 【 garbage bag 】, then put the 【 garbage bag 】 into the 【 garbage can 】, after that, the 【 garbage truck 】 will 【 take 】 it to the 【 garbage dump 】. 请把垃圾扔进垃圾袋，然后把垃圾袋放进垃圾桶，之后，垃圾车会把它送到垃圾场 】**
+-
+- [BB.]
+- `【 waste 垃圾n 浪费v 】`
+- `【 residual waste. 干垃圾 】`
+- `【 wet waste. 湿垃圾 】`
+- `【 recyclable waste. 可回收垃圾 】`
+- // 【 residual value. 剩余价值 】
+- **【 【 Waste 】 is divided into 【 residual waste 】, 【 wet waste 】, 【 recyclable waste 】. 垃圾分为干垃圾，湿垃圾，可回收垃圾 】**
+-
+- [CC.]
+- `【 dump 倾倒 v / 垃圾场 n 垃圾堆 n 】`
+- `【 dumpling 饺子 n 】`
+- // 【 expire 过期 到期 v 】
+- // 【 expired 过期的 到期的 adj 】
+- // TIPS: Pay attention to the pronunciation of the word 'expire'. [expire]
+- // TIPS: Pay attention to the pronunciation of the word 'expired'. [expired]
+- **【 Please 【 dump 】 the 【 expired 】 【 dumplings 】 into the 【 garbage can 】. 请把过期的饺子倒在垃圾桶里 】**
+-
+- [DD.]
+- `【 messy 乱的 adj 】`
+- `【 dirty 脏的 adj 】`
+- `【 clean up. 打扫 清扫 v 】`
+- **【 Please 【 clean up 】 the 【 messy 】 and 【 dirty 】 room. 请把这又乱又脏的房间打扫干净 】**
+-
+- [EE.]
+- `【 a matter of. ...的问题 】`
+- `【 principle 原则 原理 规范 n 】`
+- `【 working principle. 工作原理 】`
+- `【 in principle. 原则上 】`
+- > 【 no matter. 无论 】
+- **【 【 In principle 】, it's not just【 a matter of 】 money, It's a matter of 【 principle 】. 原则上，这不仅仅是钱的问题；这是一个原则问题 】**
+- **【 【 In principle 】, 【 littering 】 is 【 prohibited 】. 原则上，禁止乱扔垃圾 】**
+- **【 What's the 【 working principle 】 of the 'scoped' attribute on style tag in Vue? 】**
+-
+- [FF.]
+- `【 expired 过期的 adj 】`
+- `【 out of date. 过时的 adj 】`
+- `【 out of style. 过时的 adj 】`
+- **【 【 Cloths 】 and 【 clothes 】 are not expired, only 【 out of date 】. 布料和衣服，没有过期一说，只有过时一说 】**
+- **【 For 【 cloth 】 and 【 clothes 】, there is no such thing as being 【 expired 】, only being 【 out of date 】. 对于布料和衣服来说，没有过期这一说法，只有过时一说 】**
+- **【 The food is 【 expired 】, not 【 out of date 】. 这个食物是过期了，不是过时了 】**
+- // 【 cloth 布料 n 】
+- // 【 clothes 衣服 】
+- // TIPS: Pay attention to the pronunciation of the word 'cloth'. [cloth-布料]
+- // TIPS：Pay attention to the pronunciation of the word 'clothes'. [clothes-衣服]
+-
+- [GG.]
+- **【 【 Waste paper towels 】 are 【 recyclable waste 】. 废纸巾是可回收垃圾 】**
+- **【 He is just 【 a piece of trash 】, wasting time, money, life. 他就是个垃圾，浪费时间，浪费金钱，浪费生命 】**
+- **【 Remember to 【 take out the garbage 】 when you go out. 出门的时候，记得把垃圾倒一下 】**
+-
+- [HH.]
+- `【 dump 倒 灌 倾泻 v 】`
+- `【 dumpling 饺子 n 】`
+- `【 dumb 愚蠢的 哑的 adj 】`
+- **【 【 Dumping 】 the 【 unexpired 】 【 shrimp dumplings 】 into the 【 trash can 】 is 【 dumb 】. 把没有过期的饺子倒进垃圾桶是愚蠢的 】**
+- // -- trash can. 垃圾桶

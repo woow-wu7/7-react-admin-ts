@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 147. 对链表进行插入排序
+
+      // 题目
+      // 给定单个链表的头 head ，使用 插入排序 对链表进行排序，并返回 排序后链表的头 。
+
+      // 插入排序 算法的步骤:
+      // 插入排序是迭代的，每次只移动一个元素，直到所有元素可以形成一个有序的输出列表。
+      // 每次迭代中，插入排序只从输入数据中移除一个待排序的元素，找到它在序列中适当的位置，并将其插入。
+      // 重复直到所有输入数据插入完为止。
+      // 下面是插入排序算法的一个图形示例。部分排序的列表(黑色)最初只包含列表中的第一个元素。每次迭代时，从输入数据中删除一个元素(红色)，并就地插入已排序的列表中。
+
+      // 示例 1：
+      // 输入: head = [4,2,1,3]
+      // 输出: [1,2,3,4]
+
+      // 示例 2：
+      // 输入: head = [-1,5,3,4,0]
+      // 输出: [-1,0,3,4,5]
+      //
+
+      // 提示：
+      // 列表中的节点数在 [1, 5000]范围内
+      // -5000 <= Node.val <= 5000
+
+      /**
+       * Definition for singly-linked list.
+       * function ListNode(val, next) {
+       *     this.val = (val===undefined ? 0 : val)
+       *     this.next = (next===undefined ? null : next)
+       * }
+       */
+      /**
+       * @param {ListNode} head
+       * @return {ListNode}
+       */
+
+      // leetcode
+      // https://leetcode.cn/problems/insertion-sort-list/submissions/
+
+      // 资料
+      // https://juejin.cn/post/7017988938858184717
+
+      // 对比
+      // 数组插入排序 - 本项目/3-LEETCODE/X-排序/3-插入排序.html
+      // 链表插入排序 - https://leetcode.cn/problems/insertion-sort-list/submissions/
+
+      // 思路
+      // - 1. 我们需要几个变量
+      //    - dummy: 虚拟节点，dummy.next = head;
+      //    - last: 有序链表部分的最后一个节点，初始值 head
+      //    - cur: 无序链表部分的 需要插入的节点
+      //    - pre: 每次需要插入节点时，有序链表的头节点，因为单链表只能从前往后遍历
+      // - 2. 把 ( 原链表 ) 看着两个部分，( 前面是有序链表 - 初始长度1 )，( 后面是无序链表 )
+      // - 3.
+      //    - 如果有序链表最后一个节点 last<= cur，说明本来就是有序的，不需要插入，后移last就相等于插入
+      //    - 如果有序链表最后一个节点 last > cur，说明cur需要插入，就需要从头遍历有序遍历，就需要借助pre，pre初始值指向了有序链表的头节点
+      // - 4. 找到插入位置后，进行插入操作即可
+      //    - last.next = cur.next;
+      //    - cur.next = pre.next;
+      //    - pre.next = cur;
+
+      // 在纸上画画，画明白了，很容易记忆
+
+      var insertionSortList = function (head) {
+        if (!head) return head; // 边界
+
+        let dummy = new ListNode();
+        dummy.next = head; // 虚拟节点，next指向head，因为我们在不断操作head，需要用dummy来返回最后的头节点
+
+        let last = head; // 有序链表的最后一个节点
+        let cur = head.next; // 无序链表需要处理的节点
+
+        // 遍历整个链表
+        while (cur) {
+          // 1
+          // 有序最后的节点 < cur，本来就有序，只需要移动last即可
+          // 注意这里是可以相等的，相等的情况，也不需要移动节点，只需要移动last即可
+          if (last.val <= cur.val) {
+            last = last.next;
+          }
+          // 2
+          // last < cur，就需要插入
+          // 从头开始遍历有序链表，找到插入位置
+          else {
+            let pre = dummy;
+
+            // 因为: 这里用 pre.next 是为了拿到比cur节点大的前一个节点，进行插入
+            // 如果: 使用 pre，找到了比cur大的节点，需要插入该节点的前面，来保证有序升序，就拿不到前面的节点了
+            while (pre.next.val <= cur.val) {
+              pre = pre.next;
+            }
+
+            // 插入
+            // 这里要多画画，单想很难明白
+            // 整体的逻辑是:
+            // - 1.有序链表的最后一个节点last -> 指向下一个需要插入的cur
+            // - 2.需要插入的节点cur -> 指向pre.next，即有序链表的尾节点
+            // - 3.插入位置前一个节点pre -> 指向需要插入的节点cur
+            last.next = cur.next;
+            cur.next = pre.next;
+            pre.next = cur;
+          }
+
+          // 后移cur，进行下一轮插入
+          cur = last.next;
+        }
+
+        // 返回头节点
+        return dummy.next;
+      };
+    </script>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* 整个页面将显示 黄色 */
+      /* 不是红色，说明 :root优先级 > html选择器 */
+
+      :root {
+        background: yellow;
+      }
+
+      html {
+        background: red;
+      }
+
+      /* css变量 请查看 `36-1-变量var-伪类:root{}.html` */
+    </style>
+  </head>
+  <body>
+    <div>整个页面将显示 黄色，说明 :root优先级 > html选择器</div>
+  </body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 222. 完全二叉树的节点个数
+
+      // 题目
+      // 给你一棵 完全二叉树 的根节点 root ，求出该树的节点个数。
+      // 完全二叉树 的定义如下：在完全二叉树中，除了最底层节点可能没填满外，其余每层节点数都达到最大值，并且最下面一层的节点都集中在该层最左边的若干位置。
+      // 若最底层为第 h 层，则该层包含 1~ 2h 个节点。
+
+      // 输入：root = [1,2,3,4,5,6]
+      // 输出：6
+
+      // 输入：root = []
+      // 输出：0
+
+      // 输入：root = [1]
+      // 输出：1
+
+      /**
+       * Definition for a binary tree node.
+       * function TreeNode(val, left, right) {
+       *     this.val = (val===undefined ? 0 : val)
+       *     this.left = (left===undefined ? null : left)
+       *     this.right = (right===undefined ? null : right)
+       * }
+       */
+      /**
+       * @param {TreeNode} root
+       * @return {number}
+       */
+
+      // - preorder 前序 --------- 根左右
+      // - inorder 中序 ---------- 左根右
+      // - postorder 后序 -------- 左右根
+
+      // traversal 是遍历的意思
+      // preorderTraversal 前序遍历
+
+      // leetcode
+      // 222. 完全二叉树的节点个数 https://leetcode.cn/problems/count-complete-tree-nodes/
+
+      // 方法1
+      var countNodes = function (root) {
+        if (!root) return 0; // 递归结束条件
+
+        const left = countNodes(root.left); // 左边节点的数量
+        const right = countNodes(root.right);
+
+        return left + right + 1; // 左子树节点 + 右子树节点 + 根节点
+
+        // 注意：这里的返回值类型很重要
+        //  - 请对比 ( 二叉树的最大深度 ) ( 二叉树的最小深度 ) ( N叉树的最大深度 ) ( 二叉树的直径 ) ( 平衡二叉树 )
+      };
+
+      // ------------------------------------------------------------------------------------------
+      // ------------------------------------------------------------------------------------------
+      // ------------------------------------------------------------------------------------------
+      // 方法2
+      // 遍历二叉树 - DFS - 前序遍历 - preorderTraversal
+      var countNodes2 = function (root) {
+        let count = 0; // 原前序遍历是 const res = [] 来收集所有节点值，则也可以先收集，然后数组长度就是节点数，只是没有count直观
+
+        function preorderTraversal(node) {
+          if (!node) return;
+          count++; // 节点数 +1
+          preorderTraversal(node.left);
+          preorderTraversal(node.right);
+        }
+        preorderTraversal(root);
+
+        return count;
+      };
+    </script>
+  </body>
+</html>

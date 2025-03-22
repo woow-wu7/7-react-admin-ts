@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Proxy vs Object.defineProperty
+
+      const objP = {};
+      const objD = {};
+      let temp = {
+        age: 1,
+      };
+
+      // 1
+      // Object.defineProperty(obj, prop, descriptor)
+      // - 第三个参数: descriptor
+      //    - 描述对象(配置对象)，一共有 两种 类型的属性，注意不能同时存在两种描述符，即 get/set 和 value/writeable 二选一
+      //    - 数据描述符: value writeable
+      //    - 存取描述符: get set
+      //    - 共用的描述符: configurable enumerable
+      //    - 如何记忆: 都是两个属性
+
+      Object.defineProperty(objD, "name", {
+        // 存取描述符
+        get() {
+          return temp.age;
+        },
+        set(newValue) {
+          temp.age = newValue;
+        },
+
+        // 数据描述符，存取描述符 不能和 数据描述符 一起使用，即 get/set 和 value/writeable 二选一
+        // value: "canEnum_own", // 添加的 other 属性的值
+        // writable: true, // 属性可以被修改，只有为true，上面的value属性才能被修改
+
+        // 共用
+        enumerable: true, // 该属性可枚举
+        configurable: true, // 属性描述符可被修改，并且可以被删除，( 数据描述符 和 存取描述符 共享 )
+      });
+
+      console.log("objD.name", objD.name); // 读
+      console.log("objD.name = 2", (objD.name = 2)); // 写
+      console.log("temp.age", temp.age);
+
+      // 分割符 ----------------------------------------------------------------------------------------------------
+      // 分割符 ----------------------------------------------------------------------------------------------------
+      // 2
+      const instanceProxy = new Proxy(objP, {
+        get: function (target, propKey, receiver) {
+          return Reflect.get(target, propKey, receiver);
+        },
+        set: function (target, propKey, value, receiver) {
+          return Reflect.set(target, propKey, value, receiver);
+        },
+      });
+
+      console.log("instanceProxy.count 读", instanceProxy.count);
+      console.log("instanceProxy.count 写", (instanceProxy.count = 1));
+      console.log("instanceProxy.count 读", instanceProxy.count);
+    </script>
+  </body>
+</html>

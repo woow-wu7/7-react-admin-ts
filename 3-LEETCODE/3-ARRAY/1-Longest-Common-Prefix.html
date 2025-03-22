@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 14. Longest Common Prefix
+      // 数组中的 - 最长公共前缀
+
+      // 注意审题：是最长公共 - 前缀 !!!!!!!!
+
+      // 解题思路：
+      // - 找出第12个相同的前缀，再拿这个公共前缀后第3个成员对比，公共前缀在和第4个成员对比，...
+      // - 比如：
+      // 第一次 ( flower flo flight ) -> flo
+      // 第二次 ( flo flight ) -> fl
+
+      // leetcode
+      // 最长公共前缀 https://leetcode.cn/problems/longest-common-prefix/
+
+      const strs = ["flower", "flow", "flight"];
+
+      var longestCommonPrefix = function (strs) {
+        // 迭代
+        return strs.reduce((pre, cur) => {
+          let sameStr = ""; // 每次循环返回的公共前缀
+
+          const len = Math.min(pre.length, cur.length); // 遍历的长度
+
+          for (let i = 0; i < len; i++) {
+            if (pre[i] === cur[i]) sameStr += pre[i];
+            else break; // 不相等，跳出for循环
+          }
+
+          return sameStr; // 返回当前比较的两个成员的公共前缀，继续和下一个成员做对比
+        });
+      };
+
+      const res = longestCommonPrefix(strs);
+      console.log(`res`, res);
+    </script>
+
+    <script>
+      // ------------------------------------------------------------------------------------------
+      // ------------------------------------------------------------------------------------------
+      // ------------------------------------------------------------------------------------------
+      // 2
+      const strs2 = ["flower", "flow", "flight"];
+      var longestCommonPrefix = function (strs) {
+        return strs.reduce((prev, current) => {
+          let result = "";
+
+          // 注意
+          // - 这里不需要遍历 prev 和 current，因为是公共前缀，都是 第一个元素比较第一个元素，第二个元素比较第二个元素
+          // - 不用比较 ( prev第一个元素 ) 和 ( current第二个元素 ) 比较的情况
+          // - 提升性能
+          // - 具体优化，像上面的一个 script 那样
+          for (let i = 0; i < prev.length; i++) {
+            for (let j = 0; j < current.length; j++) {
+              let res = "";
+              for (
+                let k = 0;
+                k < Math.min(prev.length - i, current.length - j);
+                k++
+              ) {
+                if (prev[i + k] === current[j + k]) {
+                  res = res.concat(prev[i + k]);
+                  if (res.length > result.length) result = res;
+                } else {
+                  break;
+                }
+              }
+            }
+          }
+          return result;
+        });
+      };
+      const res2 = longestCommonPrefix(strs2);
+      console.log("res2 ", res2);
+    </script>
+  </body>
+</html>

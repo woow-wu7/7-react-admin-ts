@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 1047. 删除字符串中的所有相邻重复项
+      // 给出由小写字母组成的字符串 S，重复项删除操作会选择两个相邻且相同的字母，并删除它们。
+      // 在 S 上反复执行重复项删除操作，直到无法继续删除。
+
+      // 输入："abbaca"
+      // 输出："ca"
+
+      // leetcode
+      // 1047. 删除字符串中的所有相邻重复项 https://leetcode.cn/problems/remove-all-adjacent-duplicates-in-string/
+
+      // 注意
+      // - 这题 面试 到过
+
+      // 思路
+      // 1. ( 栈 - 后进先出 ) 来存放遍历的每个成员，然后判断 ( 栈顶元素 ) 是否和 ( 当前遍历的成员 ) 相等，
+      //  - 相等 ---- 表示重复，栈顶元素就出栈 --- 相当删除重复的两个成员
+      //  - 不相等 -- 表示没重复，入栈
+      // 2. 最后栈中的元素 即为最终的结果
+
+      const s = "abbaca";
+
+      /**
+       * @param {string} s
+       * @return {string}
+       */
+      var removeDuplicates = function (s) {
+        const stack = []; // 栈 后进先出 push pop
+
+        for (let i = 0; i < s.length; i++) {
+          if (stack.at(-1) === s[i]) stack.pop(); // 重复出栈
+          else stack.push(s[i]); // 没重复入栈
+        }
+
+        return stack.join(""); // array2string
+      };
+
+      // var removeDuplicates = function (s) {
+      //     const del = (s) => {
+      //         for (let i = 0; i < s.length; i++) {
+      //             if (s[i] === s[i + 1]) {
+      //                 const arr = s.split("");
+      //                 arr.splice(i, 2);
+      //                 const str = arr.join("");
+      //                 return del(str);
+      //             }
+      //         }
+      //         return s;
+      //     };
+      //     return del(s);
+      // };
+
+      // var removeDuplicates = function(s) {
+      //     const arr = s.split("");
+      //     const del = (arr) => {
+      //         const len = arr.length;
+      //         for (let i = 0; i < len; i++) {
+      //         if (arr[i] === arr[i + 1]) {
+      //             arr.splice(i, 2);
+      //             del(arr);
+      //         }
+      //         }
+      //         return  arr.join('');
+      //     };
+      //         return del(arr);
+      // };
+    </script>
+  </body>
+</html>

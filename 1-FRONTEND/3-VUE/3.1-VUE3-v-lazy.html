@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  </head>
+  <body>
+    <section id="app">
+      <div>------------------</div>
+      <div>------------------</div>
+      <br /><br /><br /><br /><br /><br /><br /><br />
+      <div>------------------</div>
+      <div>------------------</div>
+      <br /><br /><br /><br /><br /><br /><br /><br />
+      <div>------------------</div>
+      <div>------------------</div>
+      <br /><br /><br /><br /><br /><br /><br /><br />
+      <div>------------------</div>
+      <div>------------------</div>
+      <br /><br /><br /><br /><br /><br /><br /><br />
+      <br /><br /><br /><br /><br /><br /><br /><br />
+      <div>------------------</div>
+      <div>------------------</div>
+      <br /><br /><br /><br /><br /><br /><br /><br />
+      <br /><br /><br /><br /><br /><br /><br /><br />
+      <div>------------------</div>
+      <div>------------------</div>
+      <br /><br /><br /><br /><br /><br /><br /><br />
+      <img
+        alt=""
+        width="200"
+        height="200"
+        v-lazy="'https://api.yimian.xyz/img?type=wallpaper'"
+      />
+      <br /><br /><br /><br /><br /><br /><br /><br />
+      <br /><br /><br /><br /><br /><br /><br /><br />
+      <br /><br /><br /><br /><br /><br /><br /><br />
+      <div>------------------</div>
+      <div>------------------</div>
+      <br /><br /><br /><br /><br /><br /><br /><br />
+      <img
+        alt=""
+        width="200"
+        height="200"
+        v-lazy="'https://cdn.cdnjson.com/tvax3.sinaimg.cn//large/0072Vf1pgy1foxlo0cwkej31kw0w0dzj.jpg'"
+      />
+      <br /><br /><br /><br /><br /><br /><br /><br />
+      <br /><br /><br /><br /><br /><br /><br /><br />
+      <div>------------------</div>
+      <div>------------------</div>
+      <div>------------------</div>
+      <div>------------------</div>
+      <br /><br /><br /><br /><br /><br /><br /><br />
+      <br /><br /><br /><br /><br /><br /><br /><br />
+      <br /><br /><br /><br /><br /><br /><br /><br />
+      <br /><br /><br /><br /><br /><br /><br /><br />
+      <div>------------------</div>
+      <div>------------------</div>
+      <div>------------------</div>
+      <div>------------------</div>
+      <br /><br /><br /><br /><br /><br /><br /><br />
+      <br /><br /><br /><br /><br /><br /><br /><br />
+    </section>
+    <script>
+      // VUE3
+      const { createApp } = Vue;
+      const app = createApp();
+
+      app.directive("lazy", {
+        mounted(el, binding, vnode, prevVnode) {
+          // if (el.tagName !== "IMG") return;
+
+          el.src = "";
+          const imgSrc = binding.value;
+
+          const observerInstance = new IntersectionObserver((entries) => {
+            console.log(
+              "in/out also trigger, so use observerInstance.unobserve(el) only trigger one time"
+            );
+
+            if (entries[0].isIntersecting) {
+              console.log("isVisible");
+              el.src = imgSrc;
+              observerInstance.unobserve(el);
+            }
+          });
+
+          el.observerInstance = observerInstance;
+          observerInstance.observe(el);
+        },
+        unmounted(el) {
+          el.observerInstance.disconnect();
+        },
+      });
+
+      app.mount("#app");
+    </script>
+  </body>
+</html>

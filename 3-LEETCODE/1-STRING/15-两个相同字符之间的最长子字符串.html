@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 1624. 两个相同字符之间的最长子字符串
+
+      // 题目
+      // 给你一个字符串 s，请你返回 两个相同字符之间的最长子字符串的长度 ，计算长度时不含这两个字符。如果不存在这样的子字符串，返回 -1
+
+      // 链接
+      // https://leetcode.cn/problems/largest-substring-between-two-equal-characters/
+
+      var maxLengthBetweenEqualCharacters = function (s) {
+        let max = -1;
+        for (let i = 0; i < s.length; i++) {
+          for (let j = i + 1; j < s.length; j++) {
+            if (s[i] === s[j]) {
+              const _max = j - (i + 1); // 两个字符间的距离计算公式
+              if (max < _max) {
+                max = _max;
+              }
+            }
+          }
+        }
+
+        return max;
+      };
+
+      const res = maxLengthBetweenEqualCharacters("cabbac");
+      console.log("res: ", res);
+    </script>
+  </body>
+</html>

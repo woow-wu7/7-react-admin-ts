@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        position: relative;
+        width: 300px;
+        height: 20px;
+        background: rgb(254, 170, 170);
+
+        overflow: hidden;
+        white-space: nowrap;
+      }
+      .item {
+        position: absolute;
+
+        animation: scroll 10s linear infinite;
+      }
+
+      @keyframes scroll {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-50%);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item">
+        <span>
+          ---需要滚动的文字，需要解决两个问题：1移动的距离不是文字的长度。2文字首尾没有连接;---</span
+        ><span>
+          ---需要滚动的文字，需要解决两个问题：1移动的距离不是文字的长度。2文字首尾没有连接;---
+        </span>
+      </div>
+    </div>
+    <script>
+      // 无限滚动的文字
+
+      // 问题
+      // 需要解决的问题
+      // 1. 文字滚动结束时，文字并没有完全移动出去，即 ( 移动的距离不是文字的长度 )
+      // 2. 文字没有首尾衔接，即 ( 没有实现无缝连接 )
+
+      // 解决
+      // 1. 移动的距离并不是文字的长度 - 我们需要利用脱离文档流的方式解决，因为 transform: translateX() 是基于父元素来定位的
+      // 2. 文字没有收尾相连 - 我们可以通过完全一样的两段文字拼接，并且移动的距离在 translateX(-50%) 时，从新开始动画，在视觉上就是无限拼接滚动
+
+      // 资料
+      // https://juejin.cn/post/6941242335443288077
+    </script>
+  </body>
+</html>

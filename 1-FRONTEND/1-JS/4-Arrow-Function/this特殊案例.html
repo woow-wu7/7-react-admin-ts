@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // this
+      // 1. 构造函数中的this ----------------------- 指向实例对象
+      // 2. 对象方法和函数this --------------------- 调用时确定指向
+      // 3. 箭头函数this -------------------------- 箭头函数声明时所在作用域的上层作用域中的this，始终绑定在父级
+      // 4. 嵌套 - 对象方法中的函数this ------------- 函数声明并且调用在对象的方法中，this指向决定于调用方式 ( 直接调用 和 方法调用 )，而不取决于外部函数的上下文；详解见下面
+
+      var name = "123";
+      var obj = {
+        name: "456",
+        print: function () {
+          console.log(111, this.name); // 456
+          function a() {
+            console.log(222, this.name);
+            // 123，this指向window
+
+            // 注意
+            // - 当 ( 函数定义且调用在对象方法的内部 ) 时，此时 ( 函数的上下文 ) 仅取决于 ( 调用类型 )，而 ( 不取决于外部函数的上下文 )
+            // - 也就是说此时的函数的this任然取决于内部函数在父函数内部的调用方式
+
+            // 扩展
+            // - 调用类型有哪些？
+            //  - 默认绑定/直接调用
+            //  - 隐式绑定/方法调用
+            //  - https://bbs.huaweicloud.com/blogs/330379
+          }
+          a(); // 这里的调用方式是 直接调用 - this指向 ( 非严格模式指向window ) ( 严格模式指向undefined )
+        },
+      };
+      obj.print();
+    </script>
+  </body>
+</html>

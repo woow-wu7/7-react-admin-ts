@@ -1,0 +1,153 @@
+##### Codes 2024-06-26
+
+- 1
+- `【 experience 经验 体验 】`
+- `【 personalized experience. 个性化体验 】` // personalized 个性化的 adj
+- `【 customer experience. 客户体验 】`
+- `【 customer loyalty. 客户忠诚度 】` // loyalty 忠诚 n
+- > 【 customer experience. 客户体验 】
+- **【 【 Customer experience 】 【 is crucial to 】 【 customer loyalty 】. 客户体验对客户忠诚度至关重要 】**
+- **【 【 Excellent 】 【 customer experience 】 is the key to 【 business success 】. 出色的客户体验是商业成功的关键 】**
+- // -- 【 be crucial to. 对...至关重要 】
+- // -- 【 excellent 出色的 杰出的 优秀的 】
+- // -- loyalty 忠诚 忠诚度 n
+- // -- loyal 忠诚的 忠实地 adj
+- // -- success successful succeed
+- // -- failure failed fail
+-
+-
+- 2
+- `【 loyal 忠诚的 忠实的 adj 】`
+- `【 loyalty 忠诚 忠实 忠诚度 n 】`
+- `【 customer loyalty. 客户忠诚度 】`
+- `【 customer experience. 客户体验 】`
+- > 【 drive loyalty. 提高忠诚度 】
+- **【 【 Customer experience 】 【 is crucial to 】 【 customer loyalty 】. 客户体验对客户忠诚度至关重要 】**
+- // -- 【 be crucial to. 对...至关重要 】
+-
+-
+- [3]
+- `【 crucial 关键的 至关重要的 adj 】`
+- `【 be crucial to. 对...至关重要 】`
+- **【 【 Customer experience 】 【 is crucial to 】 【 customer loyalty 】. 客户体验对客户忠诚度至关重要 】**
+- **【 Air 【 is crucial to 】 【 living things 】. 空气对生物来说至关重要 】**
+- // -- living things. 生物
+- // -- organism 生物
+- // -- microorganism 微生物
+-
+-
+- 4
+- `【 interact 交互 互动 相互影响 v 】`
+- `【 interactive 交互的 adj 】`
+- `【 interaction 交互 互动 相互影响 n 】`
+- > 【 interaction design. 交互设计 】$$
+- **【 【 Interaction design 】 has an important function to improve 【 customer experience 】. 交互设计在提高客户体验方面有重要的作用 】**
+-
+-
+-
+-
+- `------- 分割线 ------- ------- ------- ------- ------- ------- ------- `
+-
+-
+- 5
+- `【 seamless 无缝的 无间隙的 】`
+- `【 gap 差距 缝隙 间隙 】`
+- > 【 seamless connection. 无缝连接 】
+- **【 The 【 highlight 】 of this store is the 24-hour 【 seamless connection 】 of online and offline services. 这家商店的亮点是线上和线下服务的 24 小时无缝连接 】**
+- // -- 【 highlight 强调 亮点 】
+-
+-
+- 6
+- `【 craft 手艺 工艺 】`
+- `【 advanced craft. 先进的工艺 】`
+- `【 advanced technology. 先进的技术 】`
+- advance 发展 进步
+- advanced 先进的 高级的
+- **【 【 Advanced technology 】 【 promotes 】 the 【 development 】 of the 【 advanced craft 】. 先进的技术推动了先进工艺的发展 】**
+- // -- 【 promote 促进 提升 晋级 v 】
+- // -- 【 development 发展 n 】
+-
+-
+- [7]
+- `【 transform into. 把...转变成 / 把...转化成 】`
+- **【 He transformed the 【 difficulties 】 into the 【 motivation 】. 他把困难转化成了动力 】**
+- // -- motive 动机 n
+- // -- motivation 动机 动力 n
+-
+-
+- [8]
+- `【 dive into. 潜水 】`
+- **【 He 【 dived into 】 the 【 puddle 】. 他跳入了水坑中 】**
+- // -- puddle 水坑
+- // -- drive / dive
+-
+- 9
+- `【 outcome 结果 效果 后果 】` = consequence = result
+- `【 income 收入 = revenue 】`
+- 【 consequence 结果 后果 】
+- 【 consequence = result = outcome 】
+- **【 It's impossible to 【 predict 】 what the 【 eventual 】 【 outcome 】 will be. 无法预测最终结 】**
+- **【 As an 【 outcome 】, the 【 boxing game 】 ended in a 【 draw 】. 拳击比赛的结果是个平局 】**
+- // -- 【 boxing game. 拳击比赛 】
+- // -- 【 end in a draw. 以平局结束 】
+- // -- draw 画 平局
+- // ---- `【 predict 预言 预测 v 】`
+- // ---- `【 prediction 预言 预测 n 】`
+- // ---- `weather forecast. 天气预报`
+- // ---- `weather prediction. 天气预报`
+-
+-
+- 10
+- `【 convert 转换 转变 转化 v 】`
+- `【 converted 转换的 转变的 转化的 adj 】`
+- **【 【 Convert 】 【 decimal 】 into 【 binary 】. 将十进制转成二进制 】**
+- // -- decimal 小数 十进制 n
+- // -- decimal 小数的 十进制的 adj
+- // -- binary 二进制 n 二进制的 adj
+-
+-
+- 11
+- `【 personalize 个性化 v 】`
+- `【 personalized 个性化的 adj 】`
+- `【 personal 个人的 私人的 adj 】`
+- 【 solution 解决方案 】
+- > 【 personalized experience. 个性化体验 】
+- > 【 personalized solution. 个性化解决方案 】
+- **【 我们会对不同客户提供不同的个性化解决方案 】**
+-
+-
+- 12
+- `【 comprehensive 综合的 adj 】`
+- `【 comprehensive solution. 综合解决方案 】`
+- 【 solution 解决方案 n 】
+- **【 He will 【 provide 】 different 【 comprehensive solutions 】 【 for 】 different customers. 我们会对不同客户提供不同的综合解决方案 】**
+-
+-
+- 13
+- `【 simplify 简化 v 】`
+- `【 simplify the process. 简化流程 】`
+- `【 simplify the development process. 简化开发流程 】`
+- **【 Our goal is 【 to 】 【 simplify the development process 】 and improve the development efficiency. 我门的目标是简化开发流程，提升开发效率 】**
+-
+-
+- 14
+- `【 unify 统一 联合 v 】`
+- `【 unified 统一的 联合的 adj 】`
+- > 【 unified standard. 统一的标准 】
+- **【 The company has 【 unified standard 】 for 【 rewards 】 and 【 punishments 】. 公司对奖励和惩罚都有统一的标准 】**
+- **【 The company needs to 【 unify 】 the 【 opinions 】 of all employees. 公司需要统一所有员工的意见 】**
+- 【 The new leader hopes to 【 unify 】 the country. 新领袖希望把国家统一起来 】
+- 【 The first emperor of Qin unified currency as part of his reforms. 秦始皇在其改革中统一了货币 】
+- // -- punish 惩罚 处罚 v
+- // -- punishment 惩罚 处罚 n
+- // -- reward 奖励 v/n 报酬 n
+- // ---- `【 opinion 意见 观点 看法 n 】`
+- // ---- `【 suggestion 建议 n 】`
+-
+-
+- 15
+- `【 ecosystem 生态系统 】`
+- `【 marine ecosystem. 海洋生态系统 】`
+- `【 natural ecosystem. 自然生态系统 】`
+- **【 We should not 【 destroy 】 the 【 ecosystem 】. 我们不应该去破坏生态系统 】**
+- This unique ecosystem may soon be under pressure. 这个独特的生态系统可能很快就会面临压力

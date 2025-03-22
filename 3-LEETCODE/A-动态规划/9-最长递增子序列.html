@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 300. 最长递增子序列
+
+      // 1
+      // 题目
+      // 给你一个整数数组 nums ，找到其中最长严格递增子序列的长度。
+      // 子序列 是由数组派生而来的序列，删除（或不删除）数组中的元素而不改变其余元素的顺序。例如，[3,6,2,7] 是数组 [0,3,1,6,2,2,7] 的子序列。
+
+      // 2
+      // leetcode
+      // https://leetcode.cn/problems/longest-increasing-subsequence/
+
+      /**
+       * @param {number[]} nums
+       * @return {number}
+       */
+
+      // 思路
+      // - 动态规划
+
+      // 对比
+      // 300. 最长递增子序列 ----- ( 动态规划 )  https://leetcode.cn/problems/longest-increasing-subsequence/
+      // 674. 最长连续递增序列 --- ( 连续 ) https://leetcode.cn/problems/longest-continuous-increasing-subsequence/
+      // 3. 无重复字符的最长子串 -- ( 滑动窗口 + Set ) https://leetcode.cn/problems/longest-substring-without-repeating-characters/
+      // 剑指 Offer 48. 最长不含重复字符的子字符串 https://leetcode.cn/problems/zui-chang-bu-han-zhong-fu-zi-fu-de-zi-zi-fu-chuan-lcof/
+
+      var lengthOfLIS = function (nums) {
+        const len = nums.length;
+
+        // dp
+        // dp[i]: 表示 nums 数组中以 i 结尾的 最长递增子序列 的 ( 长度 )
+        // fill(1): 是因为每个位置的初始长度是 1，即 本身占一个长度
+        const dp = new Array(len).fill(1);
+
+        // max: 表示最终返回的 最长递增子序列的 长度
+        // max 的初始值是1，因为如果只有一个元素时，最长递增子序列的长度就是1，其实就是相当于做了判断，if(nums.length === 1) return 1
+        // let max = 1 等价于下面两句
+        // - let max = 0
+        // - if (nums.length === 1) return 1
+        let max = 1;
+
+        for (let i = 0; i < len; i++) {
+          // j < i 表示的是 i 位置之前的所有位置的 最长递增子序列
+          for (let j = 0; j < i; j++) {
+            // 遍历，找到 ( 每个位置最长递增子序列长度的较大值 + 1 = 当前位置的最长递增子序列长度 )
+            if (nums[j] < nums[i]) {
+              // 1. 找小于nums[i]的值: 这里只找比当前值小的，才能构成递增序列
+              // 2. 因为数组是无序的，所以要找 小于nums[i] 的所有的 dp[j] 中最大的 + 1 为当前的 dp[i]
+              // 3. 这里不能取到=，即 nums[j] <= nums[i] 不可以，因为题目中说了 输入：nums = [7,7,7,7,7,7,7] 输出：1
+              // dp[i] 不断的在迭代，初始值是1，目的就是找到 ( i位置的最长递增子序列长度 )
+              dp[i] = Math.max(dp[j] + 1, dp[i]); // 状态转移方程
+            }
+          }
+
+          // max
+          // 从每个位置最长递增子序列长度中，找到最大的，作为最终的返回值
+          // 我们这里是动态更新的而已
+          max = Math.max(dp[i], max);
+        }
+
+        return max;
+      };
+    </script>
+  </body>
+</html>

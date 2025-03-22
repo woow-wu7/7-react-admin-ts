@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scrolling controls for HTML5 video</title>
+  </head>
+  <!-- 视频: src="https://www.html5rocks.com/en/tutorials/video/basics/devstories.webm" -->
+  <!-- 资料: https://juejin.cn/post/6844903911506067464 -->
+  <body style="height: 10500px">
+    <video
+      id="video"
+      muted
+      src="./images/devstories.webm"
+      style="position: fixed; top: 0; left: 0; width: 100%"
+    ></video>
+    <script>
+      const video = document.getElementById("video");
+      video.pause();
+      window.onscroll = function () {
+        video.pause();
+        // video.currentTime = window.pageYOffset / 300;
+      };
+      setInterval(function () {
+        video.currentTime = window.pageYOffset / 300;
+        // console.log(video.currentTime, window.pageYOffset);
+      }, 40);
+    </script>
+  </body>
+</html>

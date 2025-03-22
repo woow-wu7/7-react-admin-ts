@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 删除字符串中出现次数最少的字符
+      // 实现删除字符串中出现次数最少的字符，若出现次数最少的字符有多个，则把出现次数最少的字符都删除。输出删除这些单词后的字符串，字符串中其它字符保持原来的顺序。
+      // 数据范围：输入的字符串长度满足 1 \le n \le 20 \1≤n≤20  ，保证输入的字符串中仅出现小写字母
+
+      //  "ababac" —— "ababa"
+      // "aaabbbcceeff" —— "aaabbb"
+
+      const str = "aaabbbcceeff";
+
+      const min = (str) => {
+        const map = {};
+        const minKeys = [];
+        let res = str;
+
+        for (let i = 0, len = str.length; i < len; i++) {
+          if (map[str[i]] === undefined) map[str[i]] = 0;
+          map[str[i]]++;
+        }
+
+        // 1
+        // 找到第一个最小的key，这样的key可能有多个
+        const minKey = Object.keys(map).reduce((prev, current) => {
+          if (map[prev] < map[current]) {
+            return prev;
+          }
+          return current;
+        });
+
+        // 2
+        // 找出所有最小的key
+        Object.keys(map).forEach((key) => {
+          if (map[minKey] === map[key]) {
+            minKeys.push(key);
+          }
+        });
+
+        // 替换所有
+        minKeys.forEach((key) => {
+          res = res.replaceAll(`${key}`, "");
+        });
+
+        return res;
+      };
+
+      const res = min(str);
+      console.log("res: ", res);
+    </script>
+  </body>
+</html>

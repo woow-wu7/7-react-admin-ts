@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Two sum. 两数之和</title>
+  </head>
+  <body>
+    <script>
+      // 两数之和
+      // 1. Two Sum
+
+      // 方案
+      // - 1. 双层for循环 ----- 时间复杂度 O(n^2)
+      // - 2. map单层循环 ----- 时间复杂度 O(n)
+
+      // difference 有 ( 差 ) 的意思
+      // leetcode 链接 https://juejin.cn/post/7072149856139083812
+
+      // link
+      // 1. 两数之和  https://leetcode.cn/problems/two-sum/
+
+      // 英语
+      // 和 - sum
+      // 差 - difference
+      // 积 - product
+      // 商 - quotient
+      // -
+      // 加 - add plus
+      // 减 - minus / subtract
+      // 乘 - times / multiplied by
+      // 除 - divide by
+      // -
+      // emotional quotient. 情商 EQ
+      // intelligence quotient. 智商 IQ
+
+      // 注意
+      // - 这题 面试 到过
+
+      /**
+       * @param {number[]} nums
+       * @param {number} target
+       * @return {number[]}
+       */
+
+      // 1. 两数之和  https://leetcode.cn/problems/two-sum/
+
+      // map -> O(n)
+      // 原理: 求出差，在map不存在 就把 ( 当前值 和 下标 ) 添加进 map，存在 直接返回下标
+      // 例子: nums = [2,7,11,15], target = 9
+
+      var twoSum = function (nums, target) {
+        // 1
+        // map
+        // 问题: 这里为什么不用 数组 或者 set，而是要用 map 或者 object 呢？
+        // 回答: 因为题目中返回的是数组的 ( 下标 )，所以我们需要存储 ( value, index ) 键值对
+        // Question: Why don't we use "array" or "set" but we use "map" or "object" here?
+        // Answer: Because the question tells us we need to return the index of the array, so we need save the (value, index) key value using map or object.
+        const map = new Map();
+
+        for (let i = 0; i < nums.length; i++) {
+          const diff = target - nums[i]; // 求出差值 // difference 差
+
+          // 差 在map中不存，就把 ( 当前值和下标 ) 添加进 map
+          // 注意: 这里需要用 undefined 来判断，因为值我们存的是下表，0也会存进去
+          if (!map.has(diff)) {
+            map.set(diff, i);
+          } else {
+            // 注意: map[diff] 一定是比 i 小的，因为 ( 下标 ) 是顺序进入map的，所以正好满足题意
+            return [map.get(diff), i];
+          }
+        }
+      };
+
+      // for -> O(n^2)
+      var twoSum = function (nums, target) {
+        for (let i = 0; i < nums.length; i++) {
+          for (let j = i + 1; i < nums.length; j++) {
+            if (nums[i] + nums[j] === target) {
+              return [i, j];
+            }
+          }
+        }
+      };
+    </script>
+  </body>
+</html>

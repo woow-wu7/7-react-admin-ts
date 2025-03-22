@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>variable hoist. 变量提升</title>
+  </head>
+  <body>
+    <script>
+      // variable hoist 变量提升
+      // - variable 变量n 可变的adj
+      // - hoist 提升 吊起 升起 v
+      // - promotion 提升v 晋升v
+
+      // 1
+      // 优先级: 形参 > 函数声明 > 变量声明
+      // 函数名 已经存在 ---------- 新的覆盖旧的
+      // 变量名 已经存在 ---------- 直接略过 变量的声明
+
+      // 2
+      // 形参 ----- 声明变量，并将 ( 实参赋值给形参 )
+      // 变量提升 - 指的是将 ( 变量的声明提升到头部，并赋值为undefined )，比如 var xx = undefined
+      // 函数提升 - 指的是将函数的声明提升到头部
+
+      // 3
+      // 链接 https://www.yuque.com/woowwu/msyqpd/ph3qtd
+
+      // 4
+      // 案例
+
+      // 1 ===================================================
+      // 例1
+      function a(name) {
+        console.log(1, name);
+        var name = 10;
+        function name() {
+          console.log("20");
+        }
+        console.log(2, name);
+      }
+      a("woow_wu7");
+      // 上面的代码相当于
+      // function a(name) {
+      //   // var name = "woow_wu7"; --------- 形参将被函数声明覆盖，因为 ( 函数名存在，新的覆盖旧的 )，总的逻辑是 ( 形参 > 函数声明 > 变量声明 )
+      //   // var name = undefined ----------- 变量名存在，直接略过变量的声明
+      //   function name() {
+      //     console.log("20");
+      //   }
+      //   console.log(1, name); // function name() { console.log("20"); }
+      //   name = 10; // ---------------------- 变量重新被赋值
+      //   console.log(2, name); // 10
+      // }
+
+      // 2 ===================================================
+      // 例2
+      foo(); // 'foo'
+      bar(); // TypeError bar is not a function，因为变量提升 var bar = undefined，则 bar不是函数而是undefined
+      function foo() {
+        console.log("foo");
+      }
+      var bar = function () {
+        console.log("bar");
+      };
+      //相当于
+      // var bar = undefined; //先提升变量
+      // function foo() {
+      //   //提升函数声明
+      //   console.log("foo");
+      // }
+      // foo();
+      // bar();
+      // bar = function () {
+      //   console.log("bar");
+      // };
+
+      // 3 ===================================================
+      // 例3
+      function a(name) {
+        var name = 10;
+        function name() {
+          console.log("20");
+        }
+        console.log(name); // 10
+      }
+      a("wang");
+      // 实际执行的代码如下：
+      // function a(name) {
+      //     var name = 'wang';
+      //  	 var name = undefined  ------------- 变量已经存在跳过 变量的声明
+      //     function name() { // -------------- 函数名已经存在，覆盖上面的
+      //         console.log('20')
+      //     };
+      //     name = 10; // --------------------- 执行阶从新赋值
+      //     console.log(name); // ------------- 一定要注意打印的位置是创建阶段还是执行阶段！！！！！
+      // }
+      // a('wang')
+    </script>
+  </body>
+</html>

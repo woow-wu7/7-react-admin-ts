@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // ------- ------- ------- ------- ------- ------- -------
+      // 1
+      // let const var 的区别  ( 5个区别 ) ？
+      // - 作用域: let,const是块级作用域，var是全局或函数作用域
+      // - 变量提升: let,const不存在变量提升，var存在变量提升
+      // - 重复声明: let,const不允许重复声明，var允许重复声明
+      // - 全局变量是否和window挂钩: let,const声明的全局变量不和window挂钩，var声明的全局变量和window挂钩即可以通过window.xx来访问
+      // - 暂时性死区: let,const存在暂时性死区，var不存在暂时性死区
+
+      // ------- ------- ------- ------- ------- ------- -------
+      // 2
+      // 数组
+      // 静态方法
+      // - Array.from ---------------- 将 ( 可迭代对象 ) 转成 ( 数组 )
+      // - Array.of ------------------ 将 ( 一组值 ) 转成 ( 数组 )
+      // 实例方法
+      // - find findIndex
+      // - fill
+      // - keys values entries
+      // - includes
+      // - flat flatMap
+      // - at ------------------------ 直接通过下标访问时，不能通过 - 负号表示结束位置, 比如 arr.at(-1) 表示最后一个下标位置的值
+      // - toReversed 对比 reverse --- 不改变原数组
+      // - toSorted 对比 sort -------- 不改变原数组
+      // - toSpliced 对比 splice ----- 不改变原数组
+      // - with(index, value) ------- 代替splice替换数组成员
+      // - group groupMap
+
+      // Expand
+      // ------- The seven functions to change the [ original Array ].
+      // ------- Vue's prototype chain also rewrites the 7 functions which [ modify ] the original Array.
+      // ------- 【 modify 修改 修饰 v 】
+      // - push
+      // - pop
+      // - unshift
+      // - shift
+      // - sort
+      // - reverse
+      // - splice
+
+      // ------- ------- ------- ------- ------- ------- -------
+      // 3
+      // 类 class
+
+      // 2.1
+      // super
+      // - super可以作为 ( 函数 )，也可以作为 ( 对象 )
+      //  - 函数: super() 只能用于 ( 构造函数 ) 中，表示 ( 父类的构造函数 )，( this指向子类实例 )
+      //  - 对象
+      //    - 普通方法中: 表示 ( 父类的原型 )，调用父类方法时，( this 指向 子类实例 )
+      //    - 静态方法中: 表示 ( 父类 )，调用父类方法时，( this 指向 子类 )
+      // - 官网: https://es6.ruanyifeng.com/#docs/class-extends#super-%E5%85%B3%E9%94%AE%E5%AD%97
+
+      const arr = [1, 2, 3, 4];
+      Array.of(1, 2, 3); // [1,2,3]
+      Array.of(undefined); // [undefined]
+      arr.at(-1); // 4
+      // arr.with(2, 33); // [1,2,33,4] 将下标为2的成员的值修改为33 with(index,value) chrome 还未支持
+
+      class Parent {
+        static myMethod(msg) {
+          console.log("static", msg);
+          console.log("this", this);
+        }
+        myMethod(msg) {
+          console.log("instance", msg);
+          console.log("this", this);
+        }
+      }
+
+      class Child extends Parent {
+        constructor() {
+          super(); // ( super作为函数 )，只能在 ( 构造函数 ) 中，表示 ( 父类的构造函数 )，( this表示子类实例 )
+          this.name = "child22";
+        }
+
+        static myMethod(msg) {
+          super.myMethod(msg); // ( super作为对象 )，在 ( 静态方法 ) 中，表示 ( 父类 )，( this表示子类 )
+        }
+        myMethod(msg) {
+          super.myMethod(msg); // ( super作为对象 )，在 ( 普通方法 ) 中，表示 ( 父类的原型 )，( this表示子类的实例 )
+        }
+      }
+
+      Child.myMethod(1); // static 1
+      // 1. super在静态方法中表示父类，所以 super.myMethod(msg) 是父类直接访问myMethod，即父类的静态方法
+      // 2. this 是 子类 Child
+
+      var child = new Child();
+      child.myMethod(2); // instance 2
+      // 1. this 是 子类的实例 child
+    </script>
+  </body>
+</html>

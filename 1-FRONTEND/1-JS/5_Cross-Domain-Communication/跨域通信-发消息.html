@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>跨域通信-发布消息</h1>
+    <button id="button">发消息</button>
+    <script>
+      const button = document.getElementById("button");
+      // 通信
+
+      // 1
+      // BroadcastChannel
+      // const broadcast = new BroadcastChannel("广播唯一标记");
+      // - broadcast 是广播的意思
+      // - channel 是频道，通道的意思
+      // 发消息 - broadcast.postMessage(‘发送的内容’)
+      // 收消息 - broadcast.onmessage
+
+      // 2
+      // storage
+      // 当 localStorage 发生变化时，会插入 storage 事件
+
+      // 3
+      // widow.open
+      // const newWindow = window.open(strUrl新窗口的url, name新窗口的名称, 新窗口的描述参数如尺寸位置是否启用工具栏等)
+      // 发消息：newWindow.postMessage(data, url)
+      // 收消息： window.onmessage
+
+      // 资料
+      // - https://juejin.cn/post/6844903811232825357
+      // - https://blog.csdn.net/qq_41694291/article/details/107877447
+      // - 本项目/STEP_20220319/Manual-handwrite/js/tab-communication/BroadCast-Channel
+
+      // 英语
+      // broadcast 广播
+      // channel 频道
+
+      // 1
+      button.addEventListener(
+        "click",
+        () => {
+          const broadcast = new BroadcastChannel("one");
+          broadcast.postMessage("这是通过 BroadcastChannel 发送的消息内容");
+        },
+        false
+      );
+
+      // 2
+      button.addEventListener(
+        "click",
+        () => {
+          window.localStorage.setItem(
+            "data",
+            JSON.stringify(`这是通过 localStorage 新存储的数据: ${+new Date()}`)
+          );
+        },
+        false
+      );
+
+      // 3
+      const targetWindow = window.open(
+        "file:///Users/wuxia/work/personal/front_end/6-penetrate/FRONTEND/JS/1-cross-domain/%E8%B7%A8%E5%9F%9F%E9%80%9A%E4%BF%A1-%E6%94%B6%E6%B6%88%E6%81%AF.html",
+        "新标签页"
+      );
+      button.addEventListener(
+        "click",
+        () =>
+          targetWindow.postMessage("这是通过 window.open() 发送的消息", "*"),
+        false
+      );
+    </script>
+  </body>
+</html>

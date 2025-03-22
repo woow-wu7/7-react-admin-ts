@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Reflect.ownKeys()
+      // - 相当于 Reflect.ownKey() = Object.getOwnPropertyNames() + Object.getOwnPropertySymbols()
+      const obj = {
+        // complex 复杂的
+        name: "woow_wu7",
+        score: {
+          en: 10,
+          zh: 20,
+        },
+        date: new Date(),
+        regexp: new RegExp("regexp"),
+      };
+      obj.circular = obj; // 循环引用 ------------------------- Map 解决
+      obj[Symbol()] = "symbol"; // Symbol() 类型的 key -------- Reflect.ownKeys()
+
+      function deepClone(params, map = new Map()) {
+        // 参数：再添加一个参数map，用来存储所有的参数，该参数表示的是需要克隆的对象，如果该参数存在，就直接从缓存中取
+
+        // const type = Object.prototype.toString.call(params).slice(8, -1); // '[object Array]' '[object Object]'
+        // let result = null;
+        // if (type === "Array") result = [];
+        // else if (type === "Object") result = {};
+        // else result = params;
+
+        if (typeof params !== "object") {
+          return params;
+        }
+        let result = Array.isArray(params) ? [] : {};
+
+        // 缓存中有，直接返回
+        if (map.has(params)) {
+          return map.get(params);
+        }
+        // 缓存中没有，缓存result
+        map.set(params, result);
+
+        // for (let i in params) { // --------------------- 缺点：不能遍历 symbol 类型的 key
+        //   if (params.hasOwnProperty(i)) {
+        //     if (typeof params[i] === "object") {
+        //       result[i] = deepClone(params[i], map);
+        //     } else {
+        //       result[i] = params[i];
+        //     }
+        //   }
+        // }
+
+        // Reflect.ownKeys(params).forEach((key) => {
+        //   // Reflect.onwKeys(obj) 可以遍历对象 Symbol 的key
+        //   if (typeof params[key] === "object") {
+        //     result[key] = deepClone(params[key], map);
+        //   } else {
+        //     result[key] = params[key];
+        //   }
+        // });
+
+        switch (params.constructor) {
+          case RegExp:
+          case Date: {
+            result = new params.constructor(params);
+            break;
+          }
+          default: {
+            Reflect.ownKeys(params).forEach((item) => {
+              if (typeof params[item] === "object") {
+                result[item] = deepClone(params[item], map);
+              } else {
+                result[item] = params[item];
+              }
+            });
+            break;
+          }
+        }
+
+        return result;
+      }
+
+      const result = deepClone(obj);
+      // console.log("arr === result", arr === result); // false
+      // arr[0] = 111;
+      // console.log("result", result);
+      // obj.score.en = 400;
+      // console.log(result);
+
+      // 1
+      // 循环引用
+      // - 循环引用需要通过 map 去缓存每一次参数
+      console.log("result", result);
+    </script>
+  </body>
+</html>

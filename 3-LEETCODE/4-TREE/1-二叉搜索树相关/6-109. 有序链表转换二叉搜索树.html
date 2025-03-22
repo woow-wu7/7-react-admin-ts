@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 109. 有序链表转换二叉搜索树
+
+      // 题目
+      // 给定一个单链表的头节点  head ，其中的元素 按升序排序 ，将其转换为高度平衡的二叉搜索树。
+      // 本题中，一个高度平衡二叉树是指一个二叉树每个节点 的左右两个子树的高度差不超过 1。
+
+      // 示例 1:
+      // 输入: head = [-10,-3,0,5,9]
+      // 输出: [0,-3,9,-10,null,5]
+      // 解释: 一个可能的答案是[0，-3,9，-10,null,5]，它表示所示的高度平衡的二叉搜索树。
+
+      // 示例 2:
+      // 输入: head = []
+      // 输出: []
+
+      // 提示:
+      // head 中的节点数在[0, 2 * 104] 范围内
+      // -105 <= Node.val <= 105
+
+      /**
+       * Definition for singly-linked list.
+       * function ListNode(val, next) {
+       *     this.val = (val===undefined ? 0 : val)
+       *     this.next = (next===undefined ? null : next)
+       * }
+       */
+      /**
+       * Definition for a binary tree node.
+       * function TreeNode(val, left, right) {
+       *     this.val = (val===undefined ? 0 : val)
+       *     this.left = (left===undefined ? null : left)
+       *     this.right = (right===undefined ? null : right)
+       * }
+       */
+
+      /**
+       * @param {ListNode} head
+       * @return {TreeNode}
+       */
+
+      // leetcode
+      // 109. 有序链表转换二叉搜索树 https://leetcode.cn/problems/convert-sorted-list-to-binary-search-tree/
+
+      // 对比
+      // 108. 将有序数组转换为二叉搜索树  https://leetcode.cn/problems/convert-sorted-array-to-binary-search-tree/
+      // 109. 有序链表转换二叉搜索树 https://leetcode.cn/problems/convert-sorted-list-to-binary-search-tree/
+      // 876. 链表的中间结点 https://leetcode.cn/problems/middle-of-the-linked-list/
+
+      // 思路1
+      // - 1. 通过 ( 快慢指针 ) 找到链表的 ( 中间节点 )
+      // - 2. 找到 ( 中间节点 ) 后，需要 ( 断掉 ) ( 中间之前的链表 )，作为递归的左半部分继续寻找中间节点
+      // - 3. 递归构造
+      // - 知识点: 链表中间节点 + 二叉搜索树的特点
+
+      // 思路2
+      // - 缺点： 需要新的数据结构 ( 数组 )
+      // 1. 遍历链表，数组收集
+      // 2. 找到 mid -> 构造根节点，左树，右树
+
+      // 方法1
+      var sortedListToBST = function (head) {
+        if (!head) return null;
+        if (!head.next) return new TreeNode(head.val); // 以上是边界，递归结束条件
+
+        let fast = head;
+        let slow = head;
+        let prev = head; // pre 主要用来 ( 断掉链表 - 断掉中间节点 ) 的前半部份链表，对象是引用关系，修改相互影响
+
+        // 快慢指针寻找链表中间节点，当快指针是 (奇数长度时fast===null，偶数长度时fast.next===null)，慢指针就是中间节点
+        while (fast && fast.next) {
+          prev = slow; // 一定要先缓存，再移动slow和fast，这样就能保证 pre 是 中间节点 的 前一个节点
+          fast = fast.next.next;
+          slow = slow.next;
+        }
+        prev.next = null; // 断掉 中间节点 的前半部份链表
+
+        // 构造搜索树
+        const root = new TreeNode(slow.val); // slow就是中间节点，pre节点是slow的前一个节点
+        root.left = sortedListToBST(head); // 这里使用head，因为链表已经从中间节点前一个节点断开，没问题
+        root.right = sortedListToBST(slow.next); // 中间节点后面部份链表
+
+        return root;
+      };
+
+      // ------------------------------------------------------------------------------------------
+      // ------------------------------------------------------------------------------------------
+      // ------------------------------------------------------------------------------------------
+      // 方法2
+      var sortedListToBST2 = function (head) {
+        const res = [];
+        // 遍历链表
+        while (head) {
+          res.push(head.val);
+          head = head.next;
+        }
+        // 构造二叉搜索树
+        function constructor(res) {
+          if (!res.length) return null;
+          const mid = Math.floor(res.length / 2);
+          const root = new TreeNode(res[mid]);
+          root.left = constructor(res.slice(0, mid));
+          root.right = constructor(res.slice(mid + 1));
+          return root;
+        }
+        return constructor(res);
+      };
+    </script>
+  </body>
+</html>

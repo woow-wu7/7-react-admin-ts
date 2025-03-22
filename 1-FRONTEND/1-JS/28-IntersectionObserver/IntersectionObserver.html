@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #root {
+        height: 300px;
+        width: 300px;
+        overflow-y: scroll;
+        border: 1px solid red;
+      }
+    </style>
+  </head>
+  <body>
+    <section id="root">
+      <div>滚动的内容，滚动的内容，</div>
+      <br /><br /><br /><br /><br /><br /><br /><br />
+      <div>滚动的内容，滚动的内容，</div>
+      <br /><br /><br /><br /><br /><br /><br /><br />
+      <div>滚动的内容，滚动的内容，</div>
+      <br /><br /><br /><br /><br /><br /><br /><br />
+      <div>滚动的内容，滚动的内容，</div>
+      <br /><br /><br /><br /><br /><br /><br /><br />
+      <div>滚动的内容，滚动的内容，</div>
+      <br /><br /><br /><br /><br /><br /><br /><br />
+      <div>滚动的内容，滚动的内容，</div>
+      <br /><br /><br /><br /><br /><br /><br /><br />
+      <div>滚动的内容，滚动的内容，</div>
+      <br /><br /><br /><br /><br /><br /><br /><br />
+      <div>滚动的内容，滚动的内容，</div>
+      <br /><br /><br /><br /><br /><br /><br /><br />
+    </section>
+
+    <script>
+      let insertCount = 0;
+      const root = document.querySelector("#root");
+
+      const onScroll = (e) => {
+        const target = e.target;
+
+        const canLoad =
+          target.scrollHeight - target.scrollTop - target.clientHeight <= 20;
+        if (canLoad) {
+          const p = document.createElement("p");
+          p.style.padding = "10px 0";
+          p.style.margin = "10px 0";
+          p.style.border = "1px solid yellow";
+          p.style.background = "yellow";
+          p.innerHTML = "这是动态插入的内容";
+          root.appendChild(p);
+          insertCount++;
+          console.log("insertCount", insertCount);
+        }
+      };
+      root.addEventListener("scroll", onScroll, false);
+
+      const io = new IntersectionObserver((entries) => {
+        console.log("1", 1);
+      });
+      io.observe(root, { childList: true, subtree: true });
+    </script>
+  </body>
+</html>

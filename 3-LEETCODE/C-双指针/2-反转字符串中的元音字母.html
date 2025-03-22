@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 345. 反转字符串中的元音字母
+
+      // 题目
+      // 给你一个字符串 s ，仅反转字符串中的所有元音字母，并返回结果字符串。
+      // 元音字母包括 'a'、'e'、'i'、'o'、'u'，且可能以大小写两种形式出现。
+
+      // 示例 1：
+      // 输入：s = "hello"
+      // 输出："holle"
+
+      // 示例 2：
+      // 输入：s = "leetcode"
+      // 输出："leotcede"
+
+      // leetcode
+      // https://leetcode.cn/problems/reverse-vowels-of-a-string/
+
+      /**
+       * @param {string} s
+       * @return {string}
+       */
+
+      // ------------------------------------------------------------
+      // ------------------------------------------------------------
+      // ------------------------------------------------------------
+      // 方法1
+      // - 双指针
+      var reverseVowels = function (s) {
+        const target = ["a", "e", "i", "o", "u", "A", "E", "I", "O", "U"];
+        const result = s.split("");
+
+        let left = 0;
+        let right = s.length - 1;
+
+        while (left < right) {
+          console.log(111);
+          if (target.includes(s[left])) {
+            if (target.includes(s[right])) {
+              [result[left], result[right]] = [result[right], result[left]];
+              left++;
+              right--;
+            } else {
+              right--;
+            }
+          } else {
+            left++;
+          }
+        }
+
+        return result.join("");
+      };
+
+      // ------------------------------------------------------------
+      // ------------------------------------------------------------
+      // ------------------------------------------------------------
+      // 方法2
+      var reverseVowels = function (s) {
+        const target = ["a", "e", "i", "o", "u", "A", "E", "I", "O", "U"];
+        const result = s.split("");
+
+        const arr = [];
+        for (let i = 0; i < s.length; i++) {
+          if (target.includes(s[i])) {
+            arr.push(i);
+          }
+        }
+
+        while (arr.length) {
+          if (arr.length === 1) return result.join(""); // 如果最后，元音字符只有一个(奇数个)，则直接返回之前交换的结果
+          const left = arr.shift();
+          const right = arr.pop();
+          [result[left], result[right]] = [result[right], result[left]];
+        }
+
+        return result.join("");
+      };
+    </script>
+  </body>
+</html>

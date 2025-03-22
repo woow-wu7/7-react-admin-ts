@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 24. 两两交换链表中的节点
+
+      // 题目
+      // 给你一个链表，两两交换其中相邻的节点，并返回交换后链表的头节点。你必须在不修改节点内部的值的情况下完成本题（即，只能进行节点交换）。
+
+      //  输入：head = [1,2,3,4]
+      // 输出：[2,1,4,3]
+
+      // 输入：head = []
+      // 输出：[]
+
+      // 输入：head = [1]
+      // 输出：[1]
+
+      // leetcode
+      //  24. 两两交换链表中的节点 https://leetcode.cn/problems/swap-nodes-in-pairs/
+
+      /**
+       * Definition for singly-linked list.
+       * function ListNode(val, next) {
+       *     this.val = (val===undefined ? 0 : val)
+       *     this.next = (next===undefined ? null : next)
+       * }
+       */
+      /**
+       * @param {ListNode} head
+       * @return {ListNode}
+       */
+
+      // ------------------------------------------------------------------------------------------
+      // ------------------------------------------------------------------------------------------
+      // ------------------------------------------------------------------------------------------
+      // 方法 1
+
+      var swapPairs = function (head) {
+        let dummy = (cur = new ListNode(null)); // dummy虚拟节点，老套路
+        dummy.next = head;
+
+        // 保证 temp1 和 temp2 存在，包含了 ( 奇数和偶数 长度的情况 )
+        while (cur.next && cur.next.next) {
+          let temp1 = cur.next;
+          let temp2 = cur.next.next;
+
+          // 1 -> 2 -> 3 -> 4
+          // 1 -> 3
+          // 2 -> 4
+          // 3 -> 2
+          // 都是 cur 和 temp1 和 temp2 的指向
+          cur.next = temp2;
+          temp1.next = temp2.next;
+          temp2.next = temp1;
+
+          // 后移一位指针
+          cur = temp1;
+        }
+
+        return dummy.next;
+      };
+
+      // ------------------------------------------------------------------------------------------
+      // ------------------------------------------------------------------------------------------
+      // ------------------------------------------------------------------------------------------
+      // 方法 2、
+      // 基本和 方法1 一样
+
+      var swapPairs = function (head) {
+        if (!head || !head.next) return head; // 边界
+
+        let dummy = (pre = new ListNode(null));
+        pre.next = head;
+
+        while (pre.next && pre.next.next) {
+          const cur = pre.next;
+          const next = pre.next.next;
+
+          pre.next = next;
+          cur.next = next.next;
+          next.next = cur;
+
+          pre = cur;
+        }
+
+        return dummy.next;
+      };
+
+      // ------------------------------------------------------------------------------------------
+      // ------------------------------------------------------------------------------------------
+      // ------------------------------------------------------------------------------------------
+      // 方法 3
+      // 1. 先用 ( 数组收集 )，然后数组 ( 两两交换 )
+      // 2. 新建虚拟链表dummy链表，dummy.next=head 便于返回交换后的头节点 ( 常用套路 )，依次设值
+      // 缺点: 需要借助其它的数据结构，内存占用开销
+      var swapPairs = function (head) {
+        if (!head || !head.next) return head;
+
+        const arr = [];
+        while (head) {
+          arr.push(head.val);
+          head = head.next;
+        }
+
+        let dummy = (list = new ListNode(null));
+
+        for (let i = 1; i < arr.length; i = i + 2) {
+          [arr[i - 1], arr[i]] = [arr[i], arr[i - 1]];
+        }
+
+        console.log(arr);
+        for (let j = 0; j < arr.length; j++) {
+          list.next = new ListNode(arr[j]);
+          list = list.next;
+        }
+
+        return dummy.next;
+      };
+    </script>
+  </body>
+</html>

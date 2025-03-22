@@ -1,0 +1,103 @@
+##### Trade
+
+##### (1) **The words that you mast know.**
+
+- [AA.]
+- [Related Links Must 2024-08-04](file:///Users/xiawu/work/personal/front-end/8-penetrate/4-ENGLISH/0-0-CLASSIFICATION/00-IELTS/IELTS-Must-240801.md)
+- `【 exhibit 展览v 展览品n 】`
+- `【 exhibition 展览n 】`
+- > 【 exhibition hall. 展览馆 】
+- > 【 art exhibition. 艺术展览 】
+- `【 exhibit 展览v 展览品 n 】` // - 【 exhibition 展览 n 】 【 exhibition hall. 展览馆 】 【 art exhibition. 艺术展览 】
+- `【 inhabit 栖息于 v 】` // ------ 【 reside 居住于 v 】 【 inhabit 居住于 v 】
+- `【 inhibit 抑制 v 】` // ---------【 inhibit growth. 抑制生长 】
+- `【 prohibit 禁止 v 】` // ------- 【 forbid 禁止 v 】 【 prohibit 禁止 v 】 // 【 prohibit sb from doing sth. 禁止某人做某事 】
+- // TIPS: Pay attention to the different pronunciation between 'exhibit' and 'exhibition'.
+- **【 selling the 【 exhibits 】 in the 【 exhibition hall 】 is 【 prohibited 】. 禁止在展览馆内出售展品 】**
+-
+-
+- [BB.]
+- `【 generic 通用的 adj 】`
+- `【 generic term. 通用术语 】`
+- `【 generic model. 通用术语 】`
+- `【 term 术语 学期 n 】`
+- > 【 generic term. 通用术语 】
+- > 【 banking term. 银行术语 】
+- > 【 financial term. 金融术语 】 // 【 financial statement. 财务报表 】 // 【 finance department. 财务部门 】
+- > 【 term 术语 学期 n 】
+- > 【 long-term. 长期的 adj 】
+- // 【 term = semester. 学期 】
+- // 【 frequently = often. 经常 adv 】
+- // 【 skip class. 旷课 】
+- **【 He has 【 frequently 】 【 skipped class 】 this 【 term 】 and hasn't learned a single 【 generic term 】. 这学期他经常旷课，一个通用术语都没学 】**
+-
+-
+- [CC.]
+- `【 prospect 前景 n 】`
+- **【 This business has a 【 great 】 【 prospect 】. 这个生意很有前景 】**
+-
+-
+- [DD.]
+- `【 associate 关联 v 】`
+- `【 association 关联 n 】`
+- `【 associate with. 关联  与...交往 】` // 【 associate A with B. 关联 A 和 B 】
+- `【 be associate with. 与...有关 】`
+- > 【 associate professor. 副教授 】
+- > 【 associate editor. 副主编 】
+- //【 professor / profession / professional 】
+- 1. **【 We need to 【 associate 】 your ID(identity card) 【 with 】 your system account. 我们需要把你的身份证和系统账号关联起来 】**
+- 2. **【 He was 【 promoted 】 from 【 associate professor 】 to professor. 】**
+- // -- 【 promote 促进 提升 v 】
+- // -- 【 be promoted from A to B. 】 从 A 升级到 B
+-
+-
+- [EE.]
+- `【 start with. 从...开始  以...开始 】`
+- `【 start out. 从...开始  以...开始 】`
+- 1. **【 Let's 【 start with 】 introducing ourselves. 让我们从自我介绍开始 】**
+- 2. **【 Let's 【 start out 】 by 【 introducing 】 ourselves. 让我们从自我介绍开始吧 】**
+- 2. **【 Most interviews will 【 start out 】 with a 【 handshake 】 and some 【 small talk 】. 大多数面试都是从握手和闲聊开始的 】**
+-
+-
+- [FF.]
+- `【 inform 通知 告知 v 】` // ------ 【 information 通知 n 】 【 inform 通知 v 】
+- `【 announce 宣布 通知 v 】`
+- `【 declare 声明 宣布 v 】` // ----- 【 declaration 声明 n 】 【 declare 声明 v 】
+- `【 notice 注意v 通知n 】`
+- **【 We received the 【 information 】 that the new 【 declaration 】 will be 【 announced 】 tomorrow. 我们收到通知新的声明将在明天被公布 】**
+-
+-
+- [GG.]
+- `【 specialize 专攻 专门研究 v 】`
+- `【 specialize in. 专攻 专门研究 】`
+- > 【 special 特别的 特殊的 】
+- > 【 specialist 专家 专科医生 】 // specialist expert
+- > 【 specialize 专攻 专门研究 v 】
+- //【 specific 具体的 特殊的 adj 】
+- //【 specific symptom. 具体的症状 】
+- **【 The person who 【 specializes in 】 a 【 special 】 field is called 【 specialist 】. 专攻某个特殊领域的人称为专家 】**
+-
+-
+- [HH.]
+- `【 benefit 福利n 对...有用 对...有益 】`
+- `【 beneficial 有益的 adj 】`
+- `【 be beneficial to sb. 对...有益 】`
+- **【 These 【 benefits 】 are very 【 beneficial 】 to employees. 这些福利对员工很有用 】**
+-
+-
+- [II.]
+- `【 be in charge of. 负责 】` ------- 管理 控制
+- `【 be responsible for. 负责 】` ---- 责任 义务
+- > 【 charge 收费 要价 充电 v n 】`
+- > 【 charger 充电器 】`
+- > 【 discharge 释放 排出 放电 】`
+- _【 charging port. 充电口 】_
+- _【 charging cable. 充电线 】_
+- _【 charging pile. 充电桩】_
+-
+- 1. **【 What are the 【 responsibilities 】 in this 【 position 】? 这个职位的工作职责是什么？ 】**
+- 2. **【 I was 【 responsible for 】 developing the app. = I was 【 in charge of 】developing the app. 我负责开发这个 app 】**
+-
+- 1. **【 【 How much 】 does the 【 parking lot 】 【 charge 】? 这个停车场怎么收费? 】** // ------------ 1. charge 收费 要价
+- 2. **【 I need to 【 charge 】 the phone which has 【 no battery 】. 我需要给没有电的手机充电 】** // -- 2. charge 充电
+- 3. **【 To 【 charge 】 your phone, you need to connect the 【 charging cable 】 to the 【 charger 】, then plug the charger into the 【 power strip 】. 】**

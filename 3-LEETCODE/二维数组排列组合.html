@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 1
+      // 题目
+      // 数组全排列
+      // 输入 var arr = [["1","2"],["3","4","5"]];
+      // 预期结果 [["1","3"],["1","4"],["1","5"],["2","3"],["2","4"],["2","5"]]
+
+      // 扩展
+      // https://juejin.cn/post/6904554812277260295?searchId=20230804155830DB030A47734300083051
+
+      var arr = [
+        ["1", "2"],
+        ["3", "4", "5"],
+        ["6", "7"],
+        ["8", "9"],
+      ];
+
+      function arrange(arr) {
+        return arr.reduce((a, b) => {
+          const res = [];
+          a.forEach((itemA) => {
+            b.forEach((itemB) => {
+              if (Array.isArray(itemA)) {
+                res.push([...itemA, itemB]);
+              } else {
+                res.push([itemA, itemB]);
+              }
+            });
+          });
+
+          return res;
+        });
+      }
+      const res = arrange(arr);
+      console.log("res: ", res);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 142. 环形链表 II
+      // 剑指 Offer II 022. 链表中环的入口节点
+
+      // Question
+      // Given the head of a linked list, return the node where the cycle begins. If there is no cycle, return null.
+      // There is a cycle in a linked list if there is some node in the list that can be reached again by continuously following the next pointer.
+      // Internally, pos is used to denote the index of the node that tail's next pointer is connected to (0-indexed).
+      // It is -1 if there is no cycle. Note that pos is not passed as a parameter.
+      // Do not modify the linked list.
+
+      // expand
+      // What situation will never meet?
+      // -- 1. fast3 slow1
+      // -- 2. The circular linked has 6 nodes.
+      // illustration
+      // 1 2 3 4 5 6
+      // 1 S F 4 5 6 ...
+      // 1 2 S 4 5 F
+      // 1 2 F S 5 6
+      // 1 2 3 4 S F
+      // 1 2 F 4 5 S
+      // S 2 3 4 5 F
+      // 1 S F 4 5 6 ...
+
+      // 给定一个链表的头节点  head ，返回链表开始入环的第一个节点。 如果链表无环，则返回 null。
+      // 如果链表中有某个节点，可以通过连续跟踪 next 指针再次到达，则链表中存在环。
+      // 为了表示给定链表中的环，评测系统内部使用整数 pos 来表示链表尾连接到链表中的位置（索引从 0 开始）。如果 pos 是 -1，则在该链表中没有环。注意：pos 不作为参数进行传递，仅仅是为了标识链表的实际情况。
+
+      // 输入：head = [3,2,0,-4], pos = 1
+      // 输出：返回索引为 1 的链表节点
+      // 解释：链表中有一个环，其尾部连接到第二个节点。
+
+      // 输入：head = [1,2], pos = 0
+      // 输出：返回索引为 0 的链表节点
+      // 解释：链表中有一个环，其尾部连接到第一个节点。
+
+      // 输入：head = [1], pos = -1
+      // 输出：返回 null
+      // 解释：链表中没有环。
+
+      /**
+       * Definition for singly-linked list.
+       * function ListNode(val) {
+       *     this.val = val;
+       *     this.next = null;
+       * }
+       */
+
+      /**
+       * @param {ListNode} head
+       * @return {ListNode}
+       */
+
+      // leetcode
+      // 剑指 Offer II 022. 链表中环的入口节点 https://leetcode.cn/problems/linked-list-cycle-ii/
+
+      // 对比 1
+      // - 剑指 Offer II 022. 链表中环的入口节点  https://leetcode.cn/problems/linked-list-cycle-ii/
+      // - 160. 相交链表 https://leetcode.cn/problems/intersection-of-two-linked-lists/
+      // - 141. 环形链表(链表是否有环) https://leetcode.cn/problems/linked-list-cycle/
+
+      // 对比 2
+      // 都是对环入口的考核
+      // 剑指 Offer II 022. 链表中环的入口节点  https://leetcode.cn/problems/linked-list-cycle-ii/
+      // 287. 寻找重复数 https://leetcode.cn/problems/find-the-duplicate-number/
+
+      // (1) 快慢指针的运用
+      // - 1. 链表是否有环
+      // - 2. 环形链表的入口
+      // - 3. 链表的中间节点
+      // (2) 滑动窗口的运用
+      // - 1. 删除倒数第k个节点
+      // - 2. 链表中倒数第k个节点
+
+      // 题目: 链表中环的入口节点
+      // 一. 思路
+      // 1. 先判断是否有环
+      // 2. 如果有环，则在 ( 快慢指针相遇时 ) 将 ( 快指针放到头部，然后快慢指针都同时向后一步一步走，相遇点就是环的入口 ) ---- 弗洛伊德算法
+      // 二. 英语
+      // detect 发现查明
+
+      var detectCycle = function (head) {
+        // if (head === null || head.next === null) return null; // 空链表，单节点链表都不是环
+
+        let fast = head;
+        let slow = head;
+
+        let hasCircle = false; // 标志位 - 是否有环
+
+        // while (fast.next !== null && fast.next.next !== null) { // 如果要这样写，上面的if就要加上
+        while (fast !== null && fast.next !== null && fast.next.next !== null) {
+          fast = fast.next.next;
+          slow = slow.next;
+
+          if (fast === slow) {
+            hasCircle = true;
+            break; // 注意: 这里一定要break掉，因为如果有环，就回死循环了 ( break会结束整个while循环 )
+          }
+        }
+
+        if (!hasCircle) return null; // 没环，直接返回null，因为题目中说了没有环就返回null
+
+        // 有环，再寻找环的入口
+        // - 1. 将 fast 移动到头部
+        // - 2. 快慢指针同时后移，( 相遇点 ) 就是 ( 环的入口 )，因为已经判断有环了，所以 fast和slow 必然相遇，不会死循环
+        fast = head;
+        while (fast !== slow) {
+          fast = fast.next;
+          slow = slow.next;
+        }
+
+        return fast; // 返回 fast 或 slow 都可以，因为相遇了
+      };
+    </script>
+  </body>
+</html>

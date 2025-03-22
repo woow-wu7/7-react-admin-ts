@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 160. Intersection of Two Two Linked Lists.
+      // 160. 相交链表
+      // 剑指 Offer II 023. 两个链表的第一个重合节点
+
+      // Question
+      // Given the heads of two singly linked-lists headA and headB,
+      // return the node at which the two lists intersect.
+      // If the two linked lists have no 【 intersection 】 at all, return null.
+
+      // English
+      // -- intersection 相交 十字路口 n
+      // -- intersect 相交 v
+
+      // 题目
+      // 给你两个单链表的头节点 headA 和 headB ，请你找出并返回两个单链表相交的起始节点。如果两个链表不存在相交节点，返回 null 。
+      // 注意：相交的节点要是同一个内存中的同一个数据，不同地址的不算
+
+      /**
+       * @param {ListNode} headA
+       * @param {ListNode} headB
+       * @return {ListNode}
+       */
+
+      // leetcode
+      // 160. 相交链表 https://leetcode.cn/problems/intersection-of-two-linked-lists/
+
+      // 对比
+      // - 剑指 Offer II 022. 链表中环的入口节点  https://leetcode.cn/problems/linked-list-cycle-ii/
+      // - 160. 相交链表 https://leetcode.cn/problems/intersection-of-two-linked-lists/
+
+      // 160. 相交链表
+      // 思路
+      // - a 走完 链表1 继续走 链表2
+      // - b 走完 链表2 继续走 链表1
+      // - 这样 a 和 b 都的路程是相等的，即都是 a+b
+      // - 总结: 经过上面两步之后，( a和b走的路程相等 )，如果有相交，则一定会相遇(同步走，第一个相等的节点，因为可能多个相等的节点)。( 相遇点 ) 就是 ( 相交的起始点 )
+      //    - 相交: 相等，相遇点就是相交点
+      //    - 不相交: a和b都都走完了，即都是null，也满足相等，但不相交，返回null，满足题目意思
+
+      var getIntersectionNode = function (headA, headB) {
+        let l1 = headA;
+        let l2 = headB; // 这里必须缓存 headA 和 headB，因为走完后，后面还要用 headA和headB
+
+        while (l1 !== l2) {
+          if (l1 === null) l1 = headB; // l1走完headA，不相等，就继续走 headB
+          else l1 = l1.next; // 不断往后走
+
+          if (l2 === null) l2 = headA;
+          else l2 = l2.next;
+        }
+
+        // l1 === l2，说明都是 null 或者 相交点
+        // 注意这里包含了两种情况
+        // - 1. 相交: 这里返回 l1 和 l2 都可以，相交点就是 ( 相交的起始点 )
+        // - 2. null: 都走到末尾，没有相交，则都是null，即 l1 和 l2 都是null，返回l1或l2即可，因为 l1 和 l2 的总路程是一样的，所以会同时到达终点null
+        return l1;
+      };
+
+      // ------------------------------------------------------------------------------------------
+      // ------------------------------------------------------------------------------------------
+      // ------------------------------------------------------------------------------------------      // ------------------------------------------------------------------------------------------
+      // ------------------------------------------------------------------------------------------
+      // ------------------------------------------------------------------------------------------      // ------------------------------------------------------------------------------------------
+      // ------------------------------------------------------------------------------------------
+      // ------------------------------------------------------------------------------------------      // ------------------------------------------------------------------------------------------
+      // ------------------------------------------------------------------------------------------
+      // ------------------------------------------------------------------------------------------
+      var getIntersectionNode = function (headA, headB) {
+        // 思路
+        // 遍历第一个链表，map映射
+        // 遍历第二个链表，判断是否在map中，存在说明相交
+
+        if (!headA || !headB) return null; // 任意一个为空，都不相交，返回null
+
+        const map = new Map();
+
+        while (headA) {
+          map.set(headA, true); // map的key对应的值可以随意
+          headA = headA.next; // 后移指针
+        }
+
+        while (headB) {
+          if (map.has(headB)) return headB; // 返回相交的节点
+          headB = headB.next; // 后移指针
+        }
+
+        return null; // map中没找到，不相交，返回null
+      };
+    </script>
+  </body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 1
+      // Question: Implement the 'promisify' function.
+      function delayToEcho(msg, cb) {
+        setTimeout(() => {
+          const err = Date.now() % 2 === 0 ? null : new Error();
+          cb(err, msg);
+        }, 3000);
+      }
+
+      // 正常调用
+      delayToEcho("msg", (err, msg) => {});
+
+      // TIPS
+      // The place to write code.
+      // 请把这个函数实现，能够让以下代码能够成功运行
+      function promisify(fn) {
+        return function (...rest) {
+          return new Promise((resolve, reject) => {
+            fn(...rest, (err, msg) => {
+              if (err) reject(err);
+              else resolve(msg);
+            });
+          });
+        };
+      }
+
+      promisify(delayToEcho)("msg")
+        .then((msg) => {
+          console.log(msg);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    </script>
+
+    <script>
+      // 2
+      // 爬楼梯 Climbing Stairs.
+      // - 假设你正在爬楼梯。需要 n 阶你才能到达楼顶。 每次你可以爬 1 或 2 个台阶。你有多少种不同的方法可以爬到楼顶呢？
+      //     - 输入： 1，输出： 1
+      //     - 输入： 2，输出： 2
+      //     - 输入： 3，输出： 3
+      //     - 输入： 4，输出： 5
+      //     - 输入： 5，输出： 8
+      function ClimbStairs(n) {
+        const dp = [];
+        dp[0] = 0;
+        dp[1] = 1;
+        dp[2] = 2;
+        for (let i = 3; i <= n; i++) {
+          dp[i] = dp[i - 1] + dp[i - 2];
+        }
+        return dp[i];
+      }
+    </script>
+
+    <script>
+      // 3
+      // Question: Implement the function of 'useState'
+      // const [state, setState] = useState(state);
+    </script>
+  </body>
+</html>

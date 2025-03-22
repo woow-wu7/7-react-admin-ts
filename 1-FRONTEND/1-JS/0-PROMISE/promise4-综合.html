@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 执行顺序 - 案例4
+
+      async function a() {
+        console.log("1");
+        await b(); // 执行完 b(), 将 2 放入微任务队列，并跳出 asyncA，去执行 a() 后面的代码 Promise8
+        console.log("2");
+      }
+      async function b() {
+        console.log("3");
+        setTimeout(() => console.log("4"), 0);
+        console.log("5"); // 3 5 都会立即执行
+      }
+      console.log("6");
+      setTimeout(() => console.log("7"), 0);
+      a();
+      new Promise(function (resolve) {
+        console.log("8"); // 8 立即执行
+        resolve();
+      }).then(function () {
+        console.log("9");
+      });
+      console.log("10");
+      // 总 6 1 3 5 8 10   2 9   7 4
+
+      // 同步任务 6 1 3 5 8 10
+      // 宏任务队列：setTimeout7 setTimeout4
+      // 微任务队列：2 9
+
+      // --------------------------------
+      // 同步任务 6 1 3 5 8 10
+      // 2 9
+      // 7
+      // 4
+      // --------------------------------
+
+      // 总
+      // 6 1 3 5 8 10   2 9   7 4
+
+      // 重要
+      // async ... await
+      // -- 当 async 函数中有 await 时，执行完await后面的表达式，async会让出当前线程，将 ( await表达式后面 ) 的 ( 所有 ) 代码放入 ( 微任务队列 ) 中，继续执行 ( async ) 函数后面的代码
+
+      // Contrast
+      // 对比
+      // [promise4-综合](file:///Users/xiawu/work/personal/front-end/8-penetrate/1-FRONTEND/1-JS/0-Promise/promise4-综合.html)
+      // [promise6-综合2](file:///Users/xiawu/work/personal/front-end/8-penetrate/1-FRONTEND/1-JS/0-Promise/promise6-综合2.html)
+      // [async-2](file:///Users/xiawu/work/personal/front-end/8-penetrate/1-FRONTEND/1-JS/0-Promise/async2.html)
+    </script>
+  </body>
+</html>

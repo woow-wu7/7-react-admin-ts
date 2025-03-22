@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Center</title>
+    <style>
+      /* centered horizontally and vertically */
+
+      /* 1 */
+      /* 水平垂直居中 - 绝对定位 */
+
+      .container1 {
+        position: relative;
+        width: 500px;
+        height: 500px;
+        border: 1px solid black;
+        margin: 30px;
+      }
+      .center1 {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+
+        /* a */
+        /* 不知道自身大小 */
+        /* transform: translate(-50%, -50%); */
+
+        /* b */
+        /* 知道自身大小时 */
+        /* 可以用 margin: -自身高度的负一半, -自身宽度的负一半 */
+        /* margin: -50px -100px; */
+
+        width: 200px;
+        height: 100px;
+        background: yellow;
+      }
+
+      /* 2 */
+      /* 水平垂直居中 - grid布局 111111111111111111111111111 - 1.项目上设置 */
+      .container2 {
+        width: 500px;
+        height: 500px;
+        border: 1px solid black;
+        margin: 30px;
+
+        /* 注意: flex布局只需要设置容器即可，而grid布局容器和项目都要设置 */
+        display: grid;
+      }
+      .center2 {
+        justify-self: center;
+        align-self: center;
+
+        width: 200px;
+        height: 100px;
+        background: yellow;
+      }
+
+      /* 2 */
+      /* 水平垂直居中 - grid布局 2222222222222222222222222222 - 2.容器上设置 */
+      .container22 {
+        width: 500px;
+        height: 500px;
+        border: 1px solid black;
+        margin: 30px;
+
+        display: grid;
+        justify-items: center;
+        align-items: center;
+      }
+      .center22 {
+        background: yellow;
+        width: 200px;
+        height: 100px;
+      }
+
+      /* 3 */
+      /* 水平垂直居中 - table-cell布局 */
+      .container3 {
+        width: 500px;
+        height: 500px;
+        border: 1px solid black;
+        margin: 30px;
+
+        display: table-cell;
+        text-align: center;
+        vertical-align: middle;
+      }
+      .center3 {
+        display: inline-block;
+
+        background: yellow;
+        width: 200px;
+        height: 100px;
+      }
+
+      /* 4 */
+      /* 水平垂直居中 - flex布局 */
+      .container4 {
+        width: 500px;
+        height: 500px;
+        border: 1px solid black;
+        margin: 30px;
+
+        /* 注意: flex布局只需要设置容器即可，而grid布局容器和项目都要设置 */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .center4 {
+        background: yellow;
+        width: 200px;
+        height: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 水平垂直居中 - 绝对定位 -->
+    <div class="container1">
+      <div class="center1">绝对定位</div>
+    </div>
+
+    <!-- 水平垂直居中 - grid布局 -->
+    <!-- grid 布局实现 水平垂直居中 有两种写法 -->
+    <div class="container2">
+      <div class="center2">grid1</div>
+    </div>
+    <div class="container22">
+      <div class="center22">grid2</div>
+    </div>
+
+    <!-- 水平垂直居中 - flex布局 -->
+    <div class="container4">
+      <div class="center4">flex</div>
+    </div>
+
+    <!-- 水平垂直居中 - table-cell布局 -->
+    <div class="container3">
+      <div class="center3">table-cell</div>
+    </div>
+  </body>
+</html>

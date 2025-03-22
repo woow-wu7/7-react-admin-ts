@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 326. 3 的幂
+
+      /**
+       * @param {number} n
+       * @return {boolean}
+       */
+
+      // 对比
+      // 231. 2 的幂 https://leetcode.cn/problems/power-of-two/
+      // 326. 3 的幂 https://leetcode.cn/problems/power-of-three/
+      // 342. 4 的幂 https://leetcode.cn/problems/power-of-four/
+
+      // 思路
+      // - 二分法
+      // - 目前求 ( 幂 ) 都可以用 ( 二分法 ) 来决解
+      // - 比如 2的幂 3的幂 4的幂
+
+      // leetcode
+      // https://leetcode.cn/problems/power-of-three/
+
+      // 1
+      // 不断执行 n%3，然后缩小范围 n/3，直到 n <= 1
+      var isPowerOfThree = function (n) {
+        if (n <= 0) return false;
+
+        while (n > 1) {
+          if (n % 3 !== 0) return false;
+          n = n / 3;
+        }
+
+        return true;
+      };
+
+      // 2
+      var isPowerOfThree = function (n) {
+        let left = 0;
+        let right = n;
+
+        while (left <= right) {
+          mid = Math.floor(left + (right - left) / 2);
+
+          if (Math.pow(3, mid) === n) return true; // power 幂的意思
+          if (Math.pow(3, mid) > n) right = mid - 1;
+          if (Math.pow(3, mid) < n) left = mid + 1;
+        }
+
+        return false;
+      };
+    </script>
+  </body>
+</html>

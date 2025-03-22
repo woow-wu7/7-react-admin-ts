@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <script>
+      // N-ary Tree Postorder traversal.
+      // 590. N 叉树的后序遍历
+
+      // Question
+      // Given the root of an n-ary tree, return the postorder traversal of its nodes' values.
+      // Nary-Tree input 【 serialization 】 is represented in their level order traversal.
+      // Each group of children is separated by the null value (See examples)
+
+      // English
+      // -- series 串联 系列 n
+      // -- serialization 序列化 连续剧 连载 n
+
+      // 注意: N叉树的遍历一般只有 前序 和 后序
+      // 因为: 中序 不知道具体是几叉树
+
+      // 590. N 叉树的后序遍历 https://leetcode.cn/problems/n-ary-tree-postorder-traversal/
+      // 589. N 叉树的前序遍历 https://leetcode.cn/problems/n-ary-tree-preorder-traversal/
+      // 144. 二叉树的前序遍历 https://leetcode.cn/problems/binary-tree-preorder-traversal/
+      // 145. 二叉树的后序遍历 https://leetcode.cn/problems/binary-tree-postorder-traversal/
+
+      var postorder = function (root) {
+        const res = [];
+
+        function dfs(node) {
+          if (node) {
+            if (node.children) node.children.forEach((item) => dfs(item));
+            res.push(node.val);
+          }
+        }
+
+        dfs(root);
+
+        return res;
+      };
+    </script>
+  </body>
+</html>

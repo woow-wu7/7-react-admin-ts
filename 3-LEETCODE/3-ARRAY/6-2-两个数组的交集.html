@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 349. 两个数组的交集
+      // 给定两个数组 nums1 和 nums2 ，返回 它们的交集 。输出结果中的每个元素一定是 唯一 的。我们可以 不考虑输出结果的顺序 。
+
+      // 输入：nums1 = [1,2,2,1], nums2 = [2,2]
+      // 输出：[2]
+
+      // 输入：nums1 = [4,9,5], nums2 = [9,4,9,8,4]
+      // 输出：[9,4]
+      // 解释：[4,9] 也是可通过的
+
+      /**
+       * @param {number[]} nums1
+       * @param {number[]} nums2
+       * @return {number[]}
+       */
+
+      // leetcode
+      // https://leetcode.cn/problems/intersection-of-two-arrays/
+
+      // 对比
+      // 2248. 多个数组求交集 https://leetcode.cn/problems/intersection-of-multiple-arrays/
+      // 349. 两个数组的交集 https://leetcode.cn/problems/intersection-of-two-arrays/
+      // 350. 两个数组的交集 II https://leetcode.cn/problems/intersection-of-two-arrays-ii/
+
+      // intersection 是交集的意思
+
+      // 1
+      var intersection = function (nums1, nums2) {
+        const _nums1 = [...new Set(nums1)];
+        const _nums2 = [...new Set(nums2)];
+        const res = [];
+        for (let i = 0; i < _nums1.length; i++) {
+          if (_nums2.includes(_nums1[i])) res.push(_nums1[i]);
+        }
+        return res;
+      };
+
+      // 2
+      var intersection2 = function (nums1, nums2) {
+        const len1 = nums1.length;
+        const len2 = nums2.length;
+        const res = [];
+
+        if (len1 < len2) {
+          for (let i = 0; i < len1; i++) {
+            if (nums2.includes(nums1[i])) {
+              res.push(nums1[i]);
+            }
+          }
+        }
+        if (len1 >= len2) {
+          for (let i = 0; i < len2; i++) {
+            if (nums1.includes(nums2[i])) {
+              res.push(nums2[i]);
+            }
+          }
+        }
+
+        return [...new Set(res)];
+      };
+    </script>
+  </body>
+</html>

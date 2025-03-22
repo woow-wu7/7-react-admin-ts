@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* 1 命中 */
+      /* p:nth-child(2) 当前元素的 父元素 的 第二个子元素，( 父元素的第二个子元素类型 ) 必须和 ( 伪类调用者的类型 ) 一致才会命中 */
+      /* 也就是说 ( 父元素的第二个字元素必须是 p标签，如果是 div 就不会命中 ) */
+      p:nth-child(2) {
+        color: red;
+      }
+
+      /* 2 不命中 */
+      /* 注意 */
+      /* p:nth-child(1) 就不会命中，因为当前元素父元素的第一个子元素是 div 不是 p 类型 */
+      p:nth-child(1) {
+        color: blue;
+      }
+
+      /* 2 命中 */
+      div:nth-child(1) {
+        background: yellow;
+      }
+
+      /* ------- ------- ------- ------- ------- ------- ------- ------- ------- ------- -------  */
+
+      /* p:nth-of-type(2) 选中父元素的第二个子p标签 */
+      p:nth-of-type(2) {
+        color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <div>这段不参与计数 - 通过 p:nth-child(1) 不会命中，因为 父元素的第一个子元素是div，不是p标签。</div>
+      <p>
+        这是第一段 - 通过 p:nth-child(2)命中 ------- 父元素的第二个子元素，( 父元素的第二个子元素类型 ) 必须和 (
+        伪类调用者的类型 ) 一致才会命中
+      </p>
+      <p>这是第二段 - 通过 p:nth-of-type(2)命中 ----- 选中父元素的第二个子p标签</p>
+      <div>这段不参与计数。</div>
+      <p>这是第三段。</p>
+      <p>这是第四段。</p>
+    </div>
+  </body>
+</html>

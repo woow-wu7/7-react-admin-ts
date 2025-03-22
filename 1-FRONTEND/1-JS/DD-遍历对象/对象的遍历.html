@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 前置知识
+
+      // English
+      // - enumerate 枚举 v
+      // - enumeration 枚举 n
+      // - enumerable 可枚举的 adj
+      //
+      // - configure 配置 v
+      // - configuration 配置 n
+      // - configurable 可配置的 adj
+
+      // 1
+      // Object.defineProperty(obj, prop, descriptor)
+      // - 1.参数
+      //  - obj
+      //  - prop 要 定义 或 修改 的对象的属性
+      //  - descriptor 属性描述符
+      //    - 数据描述符: 具有值的属性 value值 writable属性是否可以被修改
+      //    - 存取描述符: get set
+      //      - 共享:
+      //        - configurable: 表示 ( 属性描述符是否可以被修改 ) 和 ( 该属性是否可以被删除 ) ---- 默认 false
+      //        - enumerable: 表示 ( 属性是否可枚举 ) --------------------------------------- 默认 false
+      // - 2.属性描述符总结
+      //    - 数据描述符: configurable enumerable value writeable
+      //    - 存取描述符: configurable enumerable get set
+      //    - 不能同时存在:
+      //      - 数据描述符 和 属性描述符 不能同时存在
+      //      - 共享的属性 configurable enumerable 可以在 数据描述符 和 存取描述符 中存在
+
+      // 2
+      // Object.prototype.hasOwnProperty()
+      // - 作用: 判断 属性 是否对象的 自身属性 ( 原型上的属性返回false )
+      // - 特点: hasOwnProperty 是 JavaScript 之中唯一一个处理对象属性时，不会遍历原型链的方法
+
+      // 3
+      // Object.keys ------------------ 遍历 ( 对象 自身可枚举 的属性 ) --------------------- 不能遍历 ( 自身不可枚举属性，继承的属性, Symbol类型的属性 )
+      // for...in --------------------- 遍历 ( 自身可枚举 + 继承可枚举  ) ------------------- 不能遍历 symbol 类型的 key -> 所以一般用 ( for...in + hasOwnProperty ) 来遍历对象自身可枚举属性
+      // Object.getOwnPropertyNames() - 遍历 ( 自身可枚举 + 自身不可枚举 ) ------------------ 不能遍历 symbol 类型的 key
+      // Reflect.ownKeys() ------------ 遍历 ( 自身可枚举 + 自身不可枚举 + Symbol类型的key ) - 可以遍历 Symbol 类型的 key
+
+      // 4
+      // Reflect.ownKeys() 和 Object.getOwnPropertyNames()
+      // - 相同点: 都是遍历 自身可枚举 + 自身不可枚举
+      // - 不同点: Symbol类型的属性，Reflect.ownKeys()可以遍历，Object.getOwnPropertyNames()不能遍历
+
+      // 5
+      // 资料
+      // 看图表总结: https://juejin.cn/post/7129374520015585317#heading-8
+      // 本项目/2-FRONTEND/1-JS/1-handwrite/1-deep-clone/README.md
+
+      const obj = {
+        name: "",
+        age: 1,
+        [Symbol()]: "symbol",
+      };
+      const objProto = {
+        proto_aa: "",
+        proto_bb: "",
+      };
+
+      // aa --> 将 objProto 设置为 obj 的原型对象
+      Object.setPrototypeOf(obj, objProto);
+
+      // bb --> 可枚举 - obj自身属性的定义
+      Object.defineProperty(obj, "can_Enum_own", {
+        enumerable: true, // 该属性可枚举
+        configurable: true, // 属性描述符 可被修改，并且 可以被删除，( 数据描述符 和 存取描述符 共享 )
+        value: "canEnum_own", // 添加的 can_Enum_own 属性的值
+        writable: true, // 属性可以 被修改
+      });
+
+      // cc --> 不可枚举 - obj自身属性的定义
+      Object.defineProperty(obj, "can_not_Enum_own", {
+        enumerable: false,
+        value: "cannotEnum_own",
+      });
+
+      obj.other = "otherValue2"; // writeable
+      delete obj.other; // configurable
+
+      // 可枚举 - objProto
+      Object.defineProperty(objProto, "can_Enum_proto", {
+        enumerable: true,
+        value: "can_Enum_proto",
+      });
+
+      // 不可枚举 - objProto
+      Object.defineProperty(objProto, "can_not_Enum_proto", {
+        enumerable: false,
+        value: "can_not_Enum_proto",
+      });
+
+      // 分割符 ----------------------------------------------------------------------------------------------------------------
+      // 分割符 ----------------------------------------------------------------------------------------------------------------
+      // 分割符 ----------------------------------------------------------------------------------------------------------------
+
+      // ------ 1
+      const keys = Object.keys(obj);
+      console.log(
+        "Object.keys -> 遍历自身可枚举属性，不能遍历到自身不可枚举属性，不能遍历自身Symbol类型的属性，不能遍历继承的属性: ",
+        keys
+      );
+
+      // ------ 2
+      const arr_1 = [];
+      const arr_2 = [];
+      for (let key in obj) {
+        arr_1.push(key);
+        // for in ( 只遍历 - 自身可枚举属性+继承可枚举属性 )，( 不能遍历 - 自身不可枚举属性 + 继承的不可枚举属性 )
+        // 可以用 Object.prototype.hasOwnProperty() 来只遍历 自身可枚举属性，过滤掉 继承的可枚举属性
+        if (obj.hasOwnProperty(key)) {
+          arr_2.push(key);
+        }
+      }
+      console.log("for...in 可以遍历(自身和继承)的(可枚举)属性，不能遍历Symbol类型的key: ", arr_1); // 包含自身 和 继承 的属性
+      console.log(
+        "for in ( 只遍历 - 自身可枚举属性+继承可枚举属性 )，( 不能遍历 - 自身不可枚举属性 + 继承的不可枚举属性 ) "
+      );
+      console.log("hasOwnProperty-自身可枚举属性===", arr_2);
+
+      // 3
+      const Reflect_ownKeys = Reflect.ownKeys(obj); // 自身枚举 + 自身不可枚举
+      console.log("Reflect_ownKeys: ", Reflect_ownKeys);
+
+      // 4
+      const getOwnPropertyNames = Object.getOwnPropertyNames(obj); // 自身枚举 + 自身不可枚举，不能遍历Symbol类型属性
+      console.log("getOwnPropertyNames: ", getOwnPropertyNames);
+    </script>
+  </body>
+</html>

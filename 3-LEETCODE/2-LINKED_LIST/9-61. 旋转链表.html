@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 61. 旋转链表
+
+      // 题目
+      // 给你一个链表的头节点 head ，旋转链表，将链表每个节点向右移动 k 个位置。
+
+      // 示例 1：
+      // 输入：head = [1,2,3,4,5], k = 2
+      // 输出：[4,5,1,2,3]
+
+      // 示例 2：
+      // 输入：head = [0,1,2], k = 4
+      // 输出：[2,0,1]
+      //
+
+      // 提示：
+      // 链表中节点的数目在范围 [0, 500] 内
+      // -100 <= Node.val <= 100
+      // 0 <= k <= 2 * 109
+
+      /**
+       * Definition for singly-linked list.
+       * function ListNode(val, next) {
+       *     this.val = (val===undefined ? 0 : val)
+       *     this.next = (next===undefined ? null : next)
+       * }
+       */
+      /**
+       * @param {ListNode} head
+       * @param {number} k
+       * @return {ListNode}
+       */
+
+      // leetcode
+      // https://leetcode.cn/problems/rotate-list/submissions/
+
+      // 对比
+      // 61. 旋转链表 https://leetcode.cn/problems/rotate-list/submissions/
+      // 189. 轮转数组 https://leetcode.cn/problems/rotate-array/?favorite=2ckc81c
+      // 剑指 Offer 11. 旋转数组的最小数字 https://leetcode.cn/problems/xuan-zhuan-shu-zu-de-zui-xiao-shu-zi-lcof/
+
+      // 思路 1
+      // - 1. 将 ( 单链表 )，转成 ( 环形链表 ) -------- 因为是 旋转链表，环可以旋转，遍历结束后，将尾节点指向head形成环
+      // - 2. 找到分段点，即断开链表的位置 ------------- ( n - k%n )，即 ( len - k%len )
+      // - 3. 断开链表，返回新的头节点 ---------------- 新的头节点就是分段点的next
+
+      // 方法 1
+      var rotateRight = function (head, k) {
+        if (!head || !head.next) return head; // 边界
+
+        let list = head;
+        let len = 1; // 统计链表长度
+
+        // while
+        // 条件: 这里while的条件是 list.next 而不是 list
+        // 因为: 最后要把尾节点指向head，形成环，所以要拿到尾节点；( 而如果条件是list，list已经是null了 )
+        // 扩展: 这里是拿到父节点(因为链表不能返回，需要利用前一个节点做些事，就必须从条件上下手)，如果需要拿到爷爷节点，则条件就是 list.next.next
+        while (list.next) {
+          list = list.next;
+          len++;
+        }
+        list.next = head; // 尾节点指向头节点，形成环
+
+        let newHead;
+        for (let i = 0; i < len - (k % len); i++) {
+          list = list.next; // 分段点，这里继续使用原尾节点，就不用再声明新的变量了，其实上面的 newHead 也不需要，可以将head直接赋值  aa
+        }
+        newHead = list.next; // 新的头节点，这里也可以不声明newHead，而直接用head少一个变量，即 head = list.next，这里为了方便理解 aa
+        list.next = null; // 断开链表
+
+        return newHead;
+      };
+
+      // ------------------------------------------------------------
+      // ------------------------------------------------------------
+      // ------------------------------------------------------------
+      // ------------------------------------------------------------
+      // ------------------------------------------------------------
+      // ------------------------------------------------------------
+      // ------------------------------------------------------------
+      // ------------------------------------------------------------
+      // ------------------------------------------------------------
+      // 方法 2
+      // 思路: 注意 ( k ) 和 ( 链表的长度 ) 的关系，当k>len时，已经是循环过一次了，只需要计算偏移量
+      var rotateRight = function (head, k) {
+        if (!head) return null;
+        if (!head.next) return head; // 边界
+
+        const res = [];
+        while (head) {
+          res.push(head.val);
+          head = head.next;
+        }
+
+        const len = res.length;
+
+        let times = 0; // 需要变换的次数
+        times = k < len ? k : k % len; // 当 k > len 时就回循环了，所以只需要计算偏移量，而不用200000次就变换200000次
+
+        while (times) {
+          const target = res.pop();
+          res.unshift(target);
+          times--;
+        }
+
+        // 构建链表
+        let dummy = (list = new ListNode(null));
+        for (let i = 0; i < res.length; i++) {
+          list.next = new ListNode(res[i]);
+          list = list.next;
+        }
+
+        return dummy.next;
+      };
+    </script>
+  </body>
+</html>

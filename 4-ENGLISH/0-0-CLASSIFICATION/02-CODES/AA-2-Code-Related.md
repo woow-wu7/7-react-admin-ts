@@ -1,0 +1,101 @@
+##### Code Related English
+
+##### (一)
+
+- 1
+- `principle 原则 原理 规范`
+- _【 working principle. 工作原理 】_
+- _【 in principle. 原则上 】_
+- -
+- **【 【 In principle 】, 【 littering 】 is 【 prohibited 】. 原则上，禁止乱扔垃圾 】**
+- **【 What's the 【 working principle 】 of the 'scoped' attribute on style tag in Vue? 】**
+- //【 takeing out garbage/trash. 扔垃圾 】
+- // -
+- // litter 乱扔 v 垃圾 n
+- // littering 动名词
+- // -
+- // garbage 垃圾 n
+- // trash 垃圾 n
+- // waste 垃圾 n 浪费 v
+- // garbage can. 垃圾桶
+- // trash can. 垃圾桶
+- -
+- **【 It's not 【 a matter of 】 money, It's a matter of 【 principle 】. 这不仅仅是钱的问题；这是一个原则问题 】**
+- // -- work 工作 v n
+- // -- working 工作 adj
+- // --【 a matter of. 关于 是...问题 】
+-
+- AA.
+- `a matter of. ...的问题`
+- **【 It's not 【 a matter of 】 money, It's a matter of 【 principle 】. 这不仅仅是钱的问题；这是一个原则问题 】**
+- **【 It's not a matter of ability, but a matter of attitude. 这不是能力问题，这是态度问题 】**
+- // -- principle 原则 原理 规范 n
+- // -- ability 能力 n
+- // -- attitude 态度 n
+-
+-
+-
+-
+-
+-
+- 2
+- `algorithm 算法 n`
+- _【 sorting algorithm. 排序算法 】_
+- `enumeration 枚举` // e + nu + me + ration
+- _【 enumeration type. 枚举类型 】_
+- **【 The 【 algorithm 】 【 uses 】 an 【 enumeration 】 to search all possible solutions. 该算法使用枚举来搜索所有可能的解决方案 】**
+-
+-
+- 3
+- `traverse 遍历 v`
+- `enumeration 枚举 n`
+- `correct 正确的`
+- **【 This is the 【 correct 】 way to 【 traverse 】 the 'key' attributes of an 【 enumeration 】 type. 这是正确遍历枚举类型 key 属性的方法 】**
+- // -- 【 correct 正确的 adj 】
+- // -- 【 enumeration 枚举 n 】
+- // -- 【 enumeration type. 枚举类型 】
+- // TIPS: Pay attention to the pronunciation of the word _【 traverse 】_.
+- // TIPS: Pay attention to the pronunciation of the word _【 correct 】_.
+-
+-
+- 4
+- `specificity 独特性 n`
+- `specific 具体的 特别的 adj`
+- _【 css specificity. css 权重 】_
+-
+-
+- 5
+- `union type. --------- 联合类型`
+- `intersection type. -- 交叉类型 `
+- // union 联盟 同盟 美国
+- // intersect 相交 v
+- // intersection 十字路口 相交 n
+-
+- `private 私人的 私有的 adj`
+- _【 private property. 私有财产 】_
+- _【 private conversation. 私有谈话 】_
+- _【 personal privacy. 个人隐私 】_
+- // property 财产 属性 n
+- // attribute 属性
+-
+- `protected 保护的 adj`
+- `protect 保护 v`
+-
+- `omit 省略 忽略 v`
+- `ellipsis 省略 n`
+-
+- `parameter 参数` ------ 一般用来表示 形参
+- `argument 参数 争论` --- 一般用来表示 实参
+-
+- `strategy 策略 战略`
+- _【 strategy pattern. 策略模式 】_
+-
+- `temporary 临时的 adj`
+- `temporarily 临时地 adv`
+- _【 temporary file. 临时文件 】_
+- _【 temporarily closed. 临时关闭 】_
+- _【 temporarily close. 临时关闭 】_
+- **【 Due to the bad weather, the 【 airport 】 has been 【 temporarily closed 】. 因为恶劣的天气，机场临时关闭 】**
+- // airport 机场
+- // air 空气 天空
+- // port 端口 港口

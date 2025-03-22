@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // ------------------------------------------------------------------------------------------
+      // ------------------------------------------------------------------------------------------
+      // ------------------------------------------------------------------------------------------
+      // 1
+      // 异步
+      // 结果: 2410 679 1
+      // 资料: https://www.iszy.cc/posts/promise-multi-then-catch-finally/
+      setTimeout(() => {
+        console.log(1);
+      }, 0);
+      const promise = new Promise((resolve, reject) => {
+        console.log(2);
+        reject(3); // 不会中断执行，还是会执行下面的4，除非 return reject(3)
+        console.log(4);
+      });
+
+      promise
+        .then(() => console.log(5))
+        .catch(() => console.log(6)) // catch返回一个新的promise，并且 catch 中没有再抛错，所以返回的promise状态变成fulfilled，会被后面的then成功回调执行
+        .then(() => console.log(7))
+        .catch(() => console.log(8)) // 前面的catch和then都没有抛错，所以不会执行
+        .then(() => console.log(9));
+      console.log(10);
+
+      // ------------------------------------------------------------------------------------------
+      // ------------------------------------------------------------------------------------------
+      // ------------------------------------------------------------------------------------------
+      // 2
+      // 异步升级
+      function testPromise() {
+        return new Promise((resolve, reject) => {
+          reject("失败！");
+        })
+          .then(
+            (res) => {
+              // 1. 不会执行，因为promise的状态是reject，只会被then的第二个参数回调捕获，后这.catch捕获
+              // 2. 但是如何这里有then的第二个参数回调函数，则会执行，并且catch就不会执行了，因为被then的第二个失败的回调捕获了
+              console.log("then 1:", res);
+              return "then 1 return";
+            }
+            // (err) => console.log(222222, err)
+          )
+          .catch((err) => {
+            // 1. catch 返回的是新的promise
+            //    - 如果 catch 中没有抛错，返回的新的promise的状态就是 fulfilled
+            //    - 如果 catch 有抛错，返回的新的promise的状态就是 rejected
+            // throw new Error("catch中也出错了");
+            console.log("catch 1:", err); // catch 1: 失败！
+            return "catch 1 return";
+          })
+          .finally((res) => {
+            console.log("finally 1", res); // finally 1 undefined，====== 注意：finally的回调是不接受任意参数的，值都是undefined ======
+            return "finally 1 return";
+          })
+          .then((res) => {
+            console.log("then 2:", res); // then 2: catch 1 return，====== 注意 res的值是 catch 的返回值，而不是 finally 的返回值 ======
+            return "then 2 return";
+          })
+          .catch((err) => {
+            // 没有错误不会执行
+            console.log("catch 2:", err);
+            return "catch 2 return";
+          })
+          .finally((res) => {
+            console.log("finally 2", res); // finally 2 undefined，====== 注意：finally的回调是不接受任意参数的，值都是undefined ======
+            return "finally 2 return";
+          })
+          .then((res) => {
+            console.log("then 3:", res); // then 3: then 2 return, ====== 注意 res的值是 catch 的返回值，而不是 finally 的返回值 ======
+            return "then 3 return";
+          })
+          .catch((err) => {
+            // 不执行
+            console.log("catch 3:", err);
+            return "catch 3 return";
+          })
+          .finally((res) => {
+            console.log("finally 3", res); // finally 3 undefined，====== 注意：finally的回调是不接受任意参数的，值都是undefined ======
+            return "finally 3 return";
+          });
+      }
+      testPromise();
+
+      // ------------------------------------------------------------------------------------------
+      // ------------------------------------------------------------------------------------------
+      // ------------------------------------------------------------------------------------------
+      // 3
+      // ?.、??、!.、_、** 等符号的含义？
+      // ?. ------ 可选链
+      // ?? ------ 空值合并
+      // ! ------- ( 在 !x 时表示非 ) ( 在 x! 是表示非空断言 )
+      // ** ------ 指数操作符，比如 2**3 = 8
+      // _ ------- 数字分隔符，比如 const a = 1_000
+      // 资料: https://github.com/Advanced-Frontend/Daily-Interview-Question/issues/529
+
+      // ------------------------------------------------------------------------------------------
+      // ------------------------------------------------------------------------------------------
+      // ------------------------------------------------------------------------------------------
+      // 4
+      // `Exclude`、`Omit`、`Merge`、`Intersection`、`Overwrite`的作用
+      //    Exclude<T, U> 从 T 中排除出可分配给 U的元素
+      //    Omit<T, K> 的作用是忽略T中的某些属性
+      //    Merge<O1, O2> 是将两个对象的属性合并
+      //    Compute<A & B> 是将交叉类型合并
+      //    Intersection<T, U>的作用是取T的属性,此属性同样也存在与U
+      //    Overwrite<T, U> 是用U的属性覆盖T的相同属性
+      // 资料: https://juejin.cn/post/6999985372440559624
+      // 实战: 本项目/2-FRONTEND/TS/README.md
+      // 扩展
+      //  - Record
+      //  - Partial (可选)
+      //  - ReadOnly (只读)
+      //  - ReturnType (返回值)
+      //  - Exclude (排除)
+      //  - Pick (选取) ------------------ 注意 和 Omit 的区别
+      //  - Omit (省略) ------------------ 注意 和 Pick 的区别
+      //  - 资料: https://juejin.cn/post/6999985372440559624
+      //  - 实战: 本项目/2-FRONTEND/TS/README.md
+
+      // ------------------------------------------------------------------------------------------
+      // ------------------------------------------------------------------------------------------
+      // ------------------------------------------------------------------------------------------
+      // 5
+      // 算法
+      // - 两数之和 ------------ map ---------- 本项目/3-LEETCODE/两数之和.html
+      // - 删除重复字符 --------- stack ------- 本项目/3-LEETCODE/5-STACK/3-删除字符串中的所有相邻重复项.html
+
+      // ------------------------------------------------------------------------------------------
+      // ------------------------------------------------------------------------------------------
+      // ------------------------------------------------------------------------------------------
+      // 6
+      // public private protected 的区别？
+      // - public 公有属性
+      // - private 私有属性 ------- 不能在声明它的类的外部使用，比如 ( 子类 或 实例 或 子类实例 都不能访问 )
+      // - protected 保护属性 ----- 实例不能访问，子类实例不能访问，但是 ( 子类可以访问 )
+      // - 实战 本项目/2-FRONTEND/TS/index.ts
+    </script>
+  </body>
+</html>

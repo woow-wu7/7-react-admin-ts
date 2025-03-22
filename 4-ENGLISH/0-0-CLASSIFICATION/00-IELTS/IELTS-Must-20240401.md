@@ -1,0 +1,285 @@
+###### 2024-04-01
+
+- 1
+- `positive 积极的 正数 乐观的`
+- `negative 消极的 负数 不利的`
+- `active 主动的 积极的 adj` // --- actively
+- `passive 被动的 adj` // -------- passively
+-
+- _【 positive mindset. 积极的心态 】_
+- _【 positive emotion. 积极的情绪 】_
+- _【 positive attitude. 积极的态度 】_
+- -
+- _【 positive image. 正面的形象 】_
+- -
+- _【 positive charge. 正电荷 】_
+- _【 positive number. 正数 】_
+- -
+- _【 passive voice. 被动语态 】_ // voice 嗓音 音量 语态
+- _【 active voice. 主动语态 】_
+-
+-
+- AA.
+- `emotion 情感 情绪 n`
+- `emotional 情感的 情绪的 adj`
+- _【 be filled with. 被...充满 】_
+- **【 He is 【 a 】 very 【 emotional 】 man. 他是个很【情绪化】的人 】**
+- **【 Are you 【 an 】 【 emotional 】 man? 他是个很【情绪化】的人 】**
+- -
+- **【 He is a person in rich 【 emotions 】. 他是一个【情感】丰富的人 】** // emotion
+- **【 The movie 【 was filled with 】 【 emotion 】, making many views cry. 这部电影充满了情感，让许多观众落泪 】** // emotion
+-
+-
+- BB.
+- `quotient 商(除法)`
+- `intelligence 智力 n`
+- _【 emotional quotient. 情商 】_ // -------- EQ
+- _【 intelligence quotient. 智商】_ // ------ IQ
+- **【 Her 【 emotional quotient 】 and 【 intelligence quotient 】 are both very high. 她的情商和智商都很高 】**
+-
+-
+- CC.
+- `intelligent 聪明的 adj` // ----- intelligen + t
+- `intelligence 智力 n`// --------- intelligen + ce
+- **【 The project required 【 intelligent 】 people with high 【 intelligence 】. 这个项目需要有高智力的聪明人才 】**
+-
+-
+- DD.
+- `passive 被动的 adj`
+- `active 主动的 积极的 adj`
+- `passively 被动地 adv`
+- `actively 主动地 adv`
+- _【 passive voice. 被动语态 】_
+- _【 active voice. 主动语态 】_
+- **【 Can you explain what the 【 passive voice 】 and the 【 active voice 】 are? 你能解释一下什么是被动语态和主动语态吗？ 】**
+- **【 We need to learn 【 actively 】, not 【 passively 】. 我们需要主动去学习，而不是被动去学习 】**
+- // 1. Do you know when the next bus comes? 你知道下一班公共汽车什么时候来吗
+- // 1. Do you know where the nearest station is?
+- // 1. Do you know where she is right now?
+- // -
+- // 2. Can you tell me where the nearest bus stop is?
+-
+-
+-
+-
+-
+-
+-
+- 2
+- `scene 场景 现场 n`
+- `sense 感觉`
+- `scenery 风景`
+- _【 crime scene. 犯罪现场 】_
+- **【 He is collecting 【 evidence 】 at the 【 crime scene 】. 他正在【犯罪现场】收集【证据】 】**
+-
+-
+-
+-
+-
+-
+-
+- 3
+- `wipe 擦 抹 v`
+- `swipe 刷卡 刷 v`
+- `sweep 打扫`
+- > towel 毛巾 纸巾 抹布
+- > rag 抹布
+-
+- AA.
+- wipe
+- _【 wipe away. 擦掉 擦去 】_
+- **【 Please 【 wipe away 】 the 【 tears 】, and 【 continue 】 to work hard. 请擦掉眼泪，继续努力 】**
+- **【 I'm using the 【 towel 】 to wipe the 【 door 】. 】**
+- // -
+- // continue to do sth. 继续做某事
+- // wipe away. 擦掉 擦去 v
+- // -
+- // `tear 撕裂 撕碎 v`
+- // `tear 眼泪 n`
+- // TIPS: Pay attention to the pronunciation of the word 'tear'.
+- // TIPS: Pay attention to the pronunciation of the word 'tears'.
+-
+-
+- BB.
+- swipe
+- **【 Please 【 swipe 】 your card to enter and exit the station. 请刷卡入站和出站 】**
+- // -
+- // enter 进入 v
+- // exit 出去 v
+- // -
+- // entrance 入口 n
+- // exit 出口 n
+-
+-
+- CC.
+- sweep
+- mop
+- _【 sweep the floor. 扫地 】_
+- _【 mop the floor. 拖地 】_
+- **【 First 【 sweep 】 the floor with a 【 broom 】, then use a 【 mop 】 to 【 mop 】 the floor. 先用扫把扫地，然后用拖把拖地 】**
+- // -
+- // broom 扫帚
+- // mop 拖把 n 拖 v
+- // -
+- //【 sweep the floor. 扫地 】
+- //【 mop the floor. 拖地 】
+-
+-
+-
+-
+-
+-
+-
+- 4
+- `pine 松树`
+- `pine cone. 松果`
+- `pine nut. 松子`
+- > root
+- > stem
+- > leaf -> leaves
+- > trunk
+- > branch
+- > bark
+- > 【 sprout 发芽 v 新芽 n 】
+- > flower
+- > petal
+- > bud
+- > pollen
+- > fruit
+- > seed
+- **【 【 pine cone 】 【 fell down 】 from the pine tree. 】**
+- // -
+- // fall -> fell
+
+###### 2024-04-20
+
+- 1
+- `和 sum`
+- `差 difference`
+- `积 product` // product 产品 乘积
+- `商 quotient`
+- // emotional quotient. 情商 EQ
+- // intelligence quotient. 智商 IQ
+-
+- `加 plus / add`
+- `减 minus / subtract`
+- `乘 times / multiply`
+- `除 divide`
+- // multiple 多个的 adj 多种的 adj 倍数 n
+-
+- `等 equal`
+-
+- `大于 greater than.`
+- `小于 less than. = smaller than.`
+-
+- 和 **【 【 The sum of 】 one 【 plus 】 one 【 equals / is 】 two. 】**
+- 差 **【 【 The difference of 】 nine 【 minus 】 three 【 equals 】 six. 】**
+- 积 **【 【 The product of 】 one 【 times 】 two is two. 】**
+- 商 **【 【 The quotient of 】 nine 【 divided by 】three is three. 】**
+- Product **【 This 【 product 】 can 【 calculate 】 【 the product of 】two 【 times 】 three. 这个产品可以计算出 2 乘以 3 的乘积 】**
+-
+- 大于 **【 Is five 【 greater than 】 three? 】**
+- 小于 **【 Is three 【 smaller than / less than 】 five? 】**
+- **【 Three is 【 greater than 】 two and 【 less than 】 four. 】**
+-
+- [AA.]
+- plus add
+- **【 One plus one 【 equals 】 two. 】**
+- **【 One plus one 【 is equal to 】 two. 】**
+- **【 One plus one is two. 】**
+- **【 One add one equals two. 】**
+- > What is one plus two?
+- > What is the result of one plus two?
+- > What's the sum of one plus one?
+-
+- [BB.]
+- minus subtract
+- **【 nine 【 minus 】 two 【 equals 】 seven. 】**
+- **【 nine 【 subtracted by 】 two equals seven. 】**
+- > What's the difference of nine minus two?
+-
+- [CC.]
+- times multiply
+- **【 Two 【 times 】 three equals six. 】**
+- **【 Two 【 multiplied by 】 three equals six 】**
+- > What's product of one times two?
+-
+- [DD.]
+- divide
+- **【 Ten 【 divided by 】 two equals five. 】**
+- > What's quotient of ten divided by two?
+-
+-
+- 111.
+- `time 时间 次数 乘以`
+- AA
+- `a waste of time. 浪费时间`
+- // It's 【 a waste of time 】 and 【 energy 】. 那是浪费【时间】和【精力】
+- // please don't waste time. 请不要浪费时间
+- // -- energy 精力 能量
+- BB
+- `times 专门用来表示 乘法 和 次数 --> (  表示乘法时都用 times )`
+- // one times one equals one.
+- // one times two equals two.
+- **【 I have been to Beijing three times. 我去过北京三次 】**
+
+###### 2024-04-24
+
+- 1
+- `contact 联系 接触 v`
+- `contract 合同`
+- `contrast 对比 对照 v`
+-
+-
+-
+-
+-
+-
+-
+-
+- 2
+- `headmaster 男校长`
+- `headmistress 女校长`
+- `actor 男演员`
+- `actress 女演员`
+- `prince  王子`
+- `princess 公主`
+-
+- `president 总统`
+- `vice-president 副总统`
+- `principal 校长`
+- `vice-principal 副校长`
+-
+- `【 deputy 副手 副职 】`
+- `deputy manager. 副经理`
+- `deputy mayor. 副市长`
+- `deputy editor. 副编辑`
+- // TIPS: Pay attention to the pronunciation of the word 'deputy'.
+
+###### 2024-04-26
+
+- 1
+- `how long`
+-
+- [AA.]
+- **【 How long have you been 【 working 】here ? 你在这里工作多久了？ 】**
+- **【 How long have you been 【 learning 】 English? 你学英语多久了？ 】**
+- **【 How long have you been 【 waiting 】 【 for 】 me? 你等我多久了？】**
+- **【 How long have you been 【 living 】 【 in 】 this city? 你在这个城市生活多久了？】**
+- **【 How long have you been 【 running 】? 你跑步多久了？】**
+-
+- **【 How many years have you been 【 learning 】 English? 你学英语多久了？】**
+- **【 How many years have you being 【 working 】? 你工作多少年了 】**
+- // I have been working for five years.
+- // I have been learning English for five years.
+- // I have been running for 30 minutes.
+-
+- [BB.]
+- **【 How long have you 【 known 】 each other? 你们认识多久了？ 】**
+- **【 How long have you 【 had 】 these symptoms? 你出现这些症状多久了 】**
+- **【 How long have you 【 been 】 married? 你结婚多久了? 】**
+-
+-
+- **【 Are you married? 你结婚了吗？】** // -------- married 在这里是 adjective
+- **【 Have you 【 been 】 married? 你结婚了吗 】** // --- married 在这里是 verb
+- **【 How man years have you 【 been 】 married? 你结婚几年了？】**

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #container {
+        position: relative;
+        box-sizing: border-box;
+        border: 1px solid black;
+      }
+      #container > span {
+        display: inline-block;
+        margin-right: 20px;
+        margin: 10px;
+        cursor: pointer;
+      }ˆ
+      .line {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 6px;
+        box-sizing: border-box;
+        background: rgb(191, 191, 191);
+      }
+      .bar {
+        background: red;
+        height: 6px;
+        width: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <span class="one">用户管理</span>
+      <span class="two">配置管理2</span>
+      <span class="three">角色管理333333</span>
+
+      <div class="line">
+        <div class="bar"></div>
+      </div>
+    </div>
+    <script>
+      const div = document.getElementById("container");
+      const bar = document.querySelector(".bar");
+      const one = document.querySelector(".one");
+
+      function init() {
+        const left = one.getBoundingClientRect().left;
+        const width = one.getBoundingClientRect().width;
+
+        bar.style.width = width + "px";
+        bar.style.transform = `translateX(${left - 10}px)`;
+      }
+      init();
+
+      div.addEventListener(
+        "click",
+        (e) => {
+          const target = e.target;
+          console.log("target.tagName", target.tagName);
+          if (target.tagName !== "SPAN") return;
+
+          const left = e.target.getBoundingClientRect().left;
+          const width = e.target.getBoundingClientRect().width;
+          console.log("width: ", width);
+          console.log("left: ", left);
+
+          bar.style.width = width + "px";
+          bar.style.transform = `translateX(${left - 10}px)`;
+          bar.style.transition = "all 0.2s";
+        },
+        false
+      );
+    </script>
+  </body>
+</html>

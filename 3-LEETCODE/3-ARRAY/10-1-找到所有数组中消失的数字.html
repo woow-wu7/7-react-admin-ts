@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 448. 找到所有数组中消失的数字
+
+      // 题目
+      // 给你一个含 n 个整数的数组 nums ，其中 nums[i] 在区间 [1, n] 内。请你找出所有在 [1, n] 范围内但没有出现在 nums 中的数字，并以数组的形式返回结果。
+
+      // 示例 1：
+      // 输入：nums = [4,3,2,7,8,2,3,1]
+      // 输出：[5,6]
+
+      // 示例 2：
+      // 输入：nums = [1,1]
+      // 输出：[2]
+
+      /**
+       * @param {number[]} nums
+       * @return {number[]}
+       */
+
+      // leetcode
+      // https://leetcode.cn/problems/find-all-numbers-disappeared-in-an-array/
+
+      // 对比
+      // [1, n] ---- 448. 找到所有数组中消失的数字 https://leetcode.cn/problems/find-all-numbers-disappeared-in-an-array/
+      // [0, n] ---- 268. 丢失的数字 https://leetcode.cn/problems/missing-number/
+      // [0, n-1] -- 剑指 Offer 53 - II. 0～n-1中缺失的数字 https://leetcode.cn/problems/que-shi-de-shu-zi-lcof/
+
+      // 方法 1
+      // - 标记
+      // - 原地标记，把出现过的数字打上标记
+      // - 我们用 ( -负号 ) 来做标记
+
+      // 0,1,2,3,4,5,6,7  ----- Y-1
+      // 4,3,2,7,8,2,3,1  ----- Y
+      var findDisappearedNumbers = function (nums) {
+        const res = [];
+        const len = nums.length;
+
+        // loop 1
+        // 给 nums[i] 数字对应的 index 位置上对应的数字打上标记，( 加上-负号 )
+        for (let i = 0; i < len; i++) {
+          const index = Math.abs(nums[i]) - 1; // 这里因为可能已经打上标记过，即可能是负数，所以我们需要用绝对值
+          if (nums[index] > 0) nums[index] = -nums[index]; // 只对没有标记过的位置的数字做处理，( 标记过的已经是负数了，不做处理 )
+        }
+
+        // loop2
+        // 再次loop，如果大于0，说明没有被标记过，该值对应的 ( 下标 + 1 ) 就是缺失的数字
+        for (let j = 0; j < len; j++) {
+          if (nums[j] > 0) res.push(j + 1);
+        }
+
+        return res;
+      };
+
+      // ------------------------------------------------------------
+      // ------------------------------------------------------------
+      // ------------------------------------------------------------
+      // 方法 2
+      // 缺点
+      // - 1. 需要借助额外的空间，res 和 arr
+      var findDisappearedNumbers = function (nums) {
+        const len = nums.length;
+        const arr = new Array(len + 1).fill(0);
+        const res = [];
+
+        for (let i = 0; i < len; i++) {
+          arr[nums[i]] += 1;
+        }
+
+        for (let j = 1; j < arr.length; j++) {
+          if (arr[j] == 0) {
+            res.push(j);
+          }
+        }
+
+        return res;
+      };
+
+      // ------------------------------------------------------------
+      // ------------------------------------------------------------
+      // ------------------------------------------------------------
+      var findDisappearedNumbers3 = function (nums) {
+        const len = nums.length;
+        const res = new Array(len + 1).fill(0);
+        for (let i = 0; i < len; i++) {
+          res[nums[i]] = res[nums[i]] + 1;
+        }
+        const result = [];
+        for (let i = 1; i < res.length; i++) {
+          if (res[i] === 0) result.push(i);
+        }
+        return result;
+      };
+    </script>
+  </body>
+</html>

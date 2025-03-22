@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <style>
+      html,
+      body,
+      .wrap {
+        padding: 0;
+        margin: 0;
+      }
+
+      /* 文档根元素 */
+      :root {
+        --global-bg-color: red;
+      }
+
+      .wrap {
+        height: 100vh; /* 給 Safari 以外的浏览器读取，保证兼容性 */
+        height: calc(var(--vh), 100vh); /* 使用css变量 --vh，不存在就使用100vh默认值 */
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <div class="wrap" ref="wrap">
+        <div class="one">这是内容</div>
+        <div class="two">这是内容</div>
+        <div>这是内容</div>
+        <div>这是内容</div>
+        <div>这是内容</div>
+        <div>这是内容99</div>
+        <div>这是内容100</div>
+      </div>
+      <div class="footer"></div>
+    </div>
+    <script>
+      new Vue({
+        el: "#app",
+        mounted() {
+          this.vhHack()
+        },
+        methods: {
+          vhHack() {
+            const height = window.innerHeight;
+            this.$refs.wrap.style.setProperty('--vh', height + 'px'); // 在 wrap 类中声明css变量 --vh
+
+            // 窗口变化
+            window.addEventListener('resize', function() {
+              window.document.querySelector('.wrap').style.setProperty('--vh', height + 'px');
+            });
+          }
+        },
+      });
+    </script>
+  </body>
+</html>

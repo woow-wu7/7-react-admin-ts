@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>traverse/forIn/Reflect.ownKes/</title>
+  </head>
+  <body>
+    <script>
+      const obj = { name: "woow_wu7", age: 20 };
+      const objPrototype = { gender: "male" };
+      const arr = [1, 2, 3];
+
+      // extends
+      Object.setPrototypeOf(obj, objPrototype);
+
+      // 1. objPrototype enumerable
+      Object.defineProperty(objPrototype, "can_enum_prototype", {
+        // It can be traversed by for...in.
+        enumerable: true,
+        writable: true,
+        configurable: true,
+        value: "true",
+      });
+      // 1. objPrototype can not enumerable
+      Object.defineProperty(objPrototype, "can_not_enum_prototype", {
+        // It can not be traversed by for...in.
+        enumerable: false,
+        writable: true,
+        configurable: true,
+        value: "false",
+      });
+
+      // 2. obj enumerable
+      Object.defineProperty(obj, "can_enum", {
+        // It can be traversed by for...in.
+        enumerable: true,
+        writable: true,
+        configurable: true,
+        value: "true",
+      });
+      // 2. obj can not enumerable
+      Object.defineProperty(obj, "can_not_enum", {
+        // It can not be traversed by for...in.
+        enumerable: false,
+        writable: true,
+        configurable: true,
+        value: "false",
+      });
+
+      // ----------------------- 分割线 ----------------------- ----------------------- ----------------------- -----------------------
+      for (let key in obj) {
+        console.log("key", key); // name age can_enum gender can_enum_prototype
+
+        if (obj.hasOwnProperty(key)) {
+          console.log("key-------", key); // name age gender
+        }
+
+        // result: name age can_enum - gender can_enum_prototype
+        // -- 1. Own enumerable properties: This means the for...in function can traverse object's own enumerable properties.
+        // -- 2. Inherited enumerable properties: This means the for...in function can traverse inherited enumerable properties.
+        // -- for...in can't traverse obj's own innumerable properties and inherited innumerable properties.
+      }
+
+      // ----------------------- 分割线 ----------------------- ----------------------- ----------------------- -----------------------
+      const resOwnKeysByReflect = Reflect.ownKeys(obj);
+      // Reflect.ownKeys(obj) can traverse obj's own enumerable and innumerable properties.
+      console.log("resOwnKeysByReflect: ", resOwnKeysByReflect); // ['name', 'age', 'can_enum', 'can_not_enum']
+
+      // ----------------------- 分割线 ----------------------- ----------------------- ----------------------- -----------------------
+      // [link](file:///Users/xiawu/work/personal/frontend/8-penetrate/1-FRONTEND/1-JS/DD-遍历对象/对象的遍历.html)
+      // [link](file:///Users/xiawu/work/personal/frontend/8-penetrate/1-FRONTEND/1-JS/0-HandWrite/1-deep-clone/_README.md)
+    </script>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 代码题】 叠词的数量
+
+      //Input: 'abcdaaabbccccdddefgaaa'
+      // Output: 4
+
+      // 方法
+      // - 正则
+      // - 遍历，寻找
+
+      const s = "abcdaaabbccccdddefgaaa";
+
+      function reduplication(s) {
+        const res = new Set();
+        let str = "";
+        for (let i = 0; i <= s.length; i++) {
+          if (s[i] === s[i + 1]) {
+            str = str + s[i];
+          } else {
+            if (str) res.add(str);
+            str = "";
+          }
+        }
+        return res.length;
+      }
+
+      const res = reduplication(s);
+      console.log("res: ", res);
+    </script>
+  </body>
+</html>

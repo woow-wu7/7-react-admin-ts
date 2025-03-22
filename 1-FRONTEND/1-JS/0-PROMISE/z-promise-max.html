@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // ------------------------------------------------------------------------------------------
+      // ------------------------------------------------------------------------------------------
+      // ------------------------------------------------------------------------------------------
+      // 1
+      // 异步
+      // 结果: 24 10 679 1
+      // 资料: https://www.iszy.cc/posts/promise-multi-then-catch-finally/
+      setTimeout(() => {
+        console.log(1);
+      }, 0);
+      const promise = new Promise((resolve, reject) => {
+        console.log(2);
+        reject(3);
+        console.log(4); // reject() 和 resolve() 不会终止后面的代码执行，所以 24 先执行，所以一般通过 return 来终止，因为solve和reject后，promise的任务逻辑上已经结束了
+      });
+
+      promise
+        .then(() => console.log(5)) // 因为在promise中是 reject(3); 所以这里不会执行
+        .catch(() => console.log(6)) // catch返回一个新的promise，并且 catch 中没有再抛错，所以返回的promise状态变成fulfilled，会被后面的then成功回调执行
+        .then(() => console.log(7))
+        .catch(() => console.log(8)) // 前面的catch和then都没有抛错，所以不会执行
+        .then(() => console.log(9));
+      console.log(10);
+
+      // ------------------------------------------------------------------------------------------
+      // ------------------------------------------------------------------------------------------
+      // ------------------------------------------------------------------------------------------
+      // 2
+      // 异步升级
+      function testPromise() {
+        return new Promise((resolve, reject) => {
+          reject("失败！");
+        })
+          .then(
+            (res) => {
+              // 1. 不会执行，因为promise的状态是reject，只会被then的第二个参数回调捕获，后这.catch捕获
+              // 2. 但是如何这里有then的第二个参数回调函数，则会执行，并且catch就不会执行了，因为被then的第二个失败的回调捕获了
+              console.log("then 1:", res);
+              return "then 1 return";
+            }
+            // (err) => console.log(222222, err)
+          )
+          .catch((err) => {
+            // 1. catch 返回的是新的promise
+            //    - 如果 catch 中没有抛错，返回的新的promise的状态就是 fulfilled
+            //    - 如果 catch 有抛错，返回的新的promise的状态就是 rejected
+            // throw new Error("catch中也出错了");
+            console.log("catch 1:", err); // catch 1: 失败！
+            return "catch 1 return";
+          })
+          .finally((res) => {
+            console.log("finally 1", res); // finally 1 undefined，====== 注意：finally的回调是不接受任意参数的，值都是undefined ======
+            return "finally 1 return";
+          })
+          .then((res) => {
+            console.log("then 2:", res); // then 2: catch 1 return，====== 注意 res的值是 catch 的返回值，而不是 finally 的返回值 ======
+            return "then 2 return";
+          })
+          .catch((err) => {
+            // 没有错误不会执行
+            console.log("catch 2:", err);
+            return "catch 2 return";
+          })
+          .finally((res) => {
+            console.log("finally 2", res); // finally 2 undefined，====== 注意：finally的回调是不接受任意参数的，值都是undefined ======
+            return "finally 2 return";
+          })
+          .then((res) => {
+            console.log("then 3:", res); // then 3: then 2 return, ====== 注意 res的值是 catch 的返回值，而不是 finally 的返回值 ======
+            return "then 3 return";
+          })
+          .catch((err) => {
+            // 不执行
+            console.log("catch 3:", err);
+            return "catch 3 return";
+          })
+          .finally((res) => {
+            console.log("finally 3", res); // finally 3 undefined，====== 注意：finally的回调是不接受任意参数的，值都是undefined ======
+            return "finally 3 return";
+          });
+      }
+      testPromise();
+    </script>
+  </body>
+</html>

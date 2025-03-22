@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Draw a sector</title>
+    <style>
+      /* Detail: 1-FRONTEND/7-CSS/2-DrawShape */
+
+      #sector {
+        width: 0;
+        height: 0;
+        border: 100px solid transparent;
+        border-bottom: 100px solid red;
+        /* 以上css其实就是画一个三角形 */
+
+        border-radius: 100%;
+        /* 这里是 画扇形，其实就是在 三角形 的基础上设置 border-radius: 100%; */
+      }
+
+      #triangle {
+        width: 0;
+        height: 0;
+        border: 100px solid transparent;
+        border-bottom: 100px solid red;
+        /* 以上css其实就是画一个三角形 */
+      }
+    </style>
+  </head>
+  <body>
+    <div id="sector"></div>
+    <div id="triangle"></div>
+
+    <div>扇形=在三角形的基础上 + border-radius:100%;</div>
+
+    <div>
+      <span>sector 扇形</span> &nbsp;&nbsp;&nbsp; <span>triangle 三角形</span> &nbsp;&nbsp;&nbsp;
+      <span>rectangle 矩形</span> &nbsp;&nbsp;&nbsp; <span>square 正方形</span> &nbsp;&nbsp;&nbsp;
+      <span>semicircle 半圆</span> &nbsp;&nbsp;&nbsp; <span>parallelogram 平行四边形</span> &nbsp;&nbsp;&nbsp;
+    </div>
+    <script>
+      // css 实现扇形
+      // - css实现扇形的方式和实现三角形的方式差不多
+      // - css三角形的基础上 + border-radius: 100%;
+
+      // 英语
+      // sector 扇形
+      // triangle
+      // rectangle
+      // square
+      // semicircle
+      // parallelogram
+    </script>
+  </body>
+</html>

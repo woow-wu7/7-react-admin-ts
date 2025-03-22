@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // class 的属性
+      // 1. 实例属性: 有两种定义的方式
+      // - 在构造函数中声明
+      // - 在class的 ( 最顶层 ) 通过 ( key = value ) 的方式定义，注意需要写在最顶层，也要在 constructor 的前面
+      // 2. 原型属性也有两种写法
+      // - 如下
+
+      class A {
+        attr1 = 1; // ------------ 1. 实例属性，这种写法通常须放在 ( 类的顶层 )，约定俗成的
+
+        constructor() {
+          this.attr2 = 2; // ----- 1. 实例属性
+        }
+
+        // ----------------------- 2. 原型属性，即在 A.prototype 上的属性
+        getAttrs() {
+          console.log("this.attr1", this.attr1);
+        }
+      }
+      A.prototype.attr4 = 4; // -- 2. 原型属性
+
+      const instance = new A();
+      const instance2 = new A();
+
+      console.log("instance", instance);
+      console.log("instance2.attr1--111111", (instance2.attr1 = 111111));
+      console.log("instance.attr1-1-因为attr1是实例属性，修改实例都只会影响实例本身", instance.attr1);
+
+      console.log("A.prototype", (A.prototype.attr4 = 44444));
+      console.log("instance.attr4-44444-原型属性，修改每个实例都会受到影响", instance.attr4);
+      console.log("instance2.attr4-44444-原型属性，修改每个实例都会受到影响", instance2.attr4);
+    </script>
+  </body>
+</html>

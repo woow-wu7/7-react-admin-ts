@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 给出两个数字，求 m - n 之间连续数字之和
+
+      // 1. for
+      // 2. 递归
+
+      // 1
+      const sum = (m, n) => {
+        let res = 0;
+        for (let i = m; i <= n; i++) {
+          res = res + i;
+        }
+        return res;
+      };
+
+      // 2
+      const sumRecursive = (m, n) => {
+        if (n === m) return m; // 递归结束条件
+        return n + sumRecursive(m, n - 1);
+      };
+
+      const res = sum(2, 5); // 2+3+4+5 = 14
+      const res2 = sumRecursive(2, 5); // 2+3+4+5 = 14
+
+      console.log("res: ", res);
+      console.log("res2: ", res2);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      span,
+      div {
+        width: 300px;
+        height: 300px;
+        /* 行内元素设置 width 和 height 无效 */
+
+        margin: 100px;
+        /* 行内元素的 margin 只在水平方向有效 */
+
+        border: 10px solid red;
+      }
+    </style>
+  </head>
+  <body>
+    <a>测试</a>
+    <span>测试行内元素的 padding margin width height</span>
+    <a>测试</a>
+
+    <div>这是同样属性的div元素 - padding margin width height</div>
+  </body>
+
+  <script>
+    // 行内元素
+    // 1. 行内元素设置 width 和 height 无效
+    // 2. 行内元素的 margin 只在水平方向有效
+  </script>
+</html>

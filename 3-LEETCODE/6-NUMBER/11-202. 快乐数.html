@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 202. 快乐数
+
+      // 题目
+      // 编写一个算法来判断一个数 n 是不是快乐数。
+
+      // 「快乐数」 定义为：
+      // 对于一个正整数，每一次将该数替换为它每个位置上的数字的平方和。
+      // 然后重复这个过程直到这个数变为 1，也可能是 无限循环 但始终变不到 1。
+      // 如果这个过程 结果为 1，那么这个数就是快乐数。
+      // 如果 n 是 快乐数 就返回 true ；不是，则返回 false 。
+
+      // 示例 1：
+
+      // 输出：true
+      // 解释：
+      // 12 + 92 = 82
+      // 82 + 22 = 68
+      // 62 + 82 = 100
+      // 12 + 02 + 02 = 1
+
+      // 示例 2：
+      // 输入：n = 2
+      // 输出：false
+
+      // 提示：
+      // 1 <= n <= 231 - 1
+
+      /**
+       * @param {number} n
+       * @return {boolean}
+       */
+
+      // leetcode
+      // https://leetcode.cn/problems/happy-number/
+
+      var isHappy = function (n) {
+        const map = new Map();
+
+        while (n !== 1) {
+          n = String(n)
+            .split("")
+            .map((v) => Number(v) ** 2)
+            .reduce((pre, cur) => pre + cur);
+          // 注意: 这里不能 reducer((pre, cur) => pre**2 + cur**2)
+          // 因为: 如果数组只有一个元素时，会直接返回该元素，而不会求2次方
+          // 所以: 我们先用 map 进行2次方
+
+          // 题目中说了：可能是 无限循环 但始终变不到 1。
+          // 所以我们需要用 map 来做判断，是否重复循环了
+          if (!map.has(n)) {
+            map.set(n, true);
+          } else return false; // 说明这个数之前已经计算过了，则肯定无限循环了，说明一定不是 快乐数
+        }
+
+        return true;
+      };
+    </script>
+  </body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Binary Tree Postorder Traversal.
+      // 145. 二叉树的后序遍历
+
+      // leetcode
+      // https://leetcode.cn/problems/binary-tree-postorder-traversal/
+
+      // - preorder 前序 --------- 根左右
+      // - inorder 中序 ---------- 左根右
+      // - postorder 后序 -------- 左右根
+      // --
+      // - preorder traversal. 前序遍历
+      // - inorder traversal.
+      // - postorder traversal.
+      // --
+      // - traverse 遍历 v
+      // - traversal 遍历 n
+      // --
+
+      // English
+      // -- recursion 递归 n
+      // -- traversal 遍历 n
+
+      // - 都是深度优先遍历 DFS - Depth First Search
+
+      // DFS Depth First Search 深度优先遍历
+      // BFS Breadth First Search 广度优先遍历
+
+      /**
+       * Definition for a binary tree node.
+       * function TreeNode(val, left, right) {
+       *     this.val = (val===undefined ? 0 : val)
+       *     this.left = (left===undefined ? null : left)
+       *     this.right = (right===undefined ? null : right)
+       * }
+       */
+      /**
+       * @param {TreeNode} root
+       * @return {number[]}
+       */
+
+      var postorderTraversal = function (root) {
+        const res = [];
+
+        // 深度优先 - 后序遍历 - 左右根
+        function recursion(node) {
+          if (node) {
+            traversal(node.left);
+            traversal(node.right);
+            res.push(node.val);
+          }
+        }
+
+        recursion(root);
+
+        return res;
+      };
+    </script>
+  </body>
+</html>

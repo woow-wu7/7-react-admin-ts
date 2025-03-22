@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 92. 反转链表 II
+
+      // Question
+      // Given the head of a 【 singly linked list 】 and two integers left and right where left <= right,
+      // reverse the nodes of the list from position left to position right, and return the reversed list.
+
+      // English
+      // -- singly linked list. 单链表
+      // -- doubly linked list. 双向链表
+      // -- circular linked list. 环形链表
+      // -
+      // -- traverse 遍历 v
+      // -- traversal 遍历 n
+      // -- Determine the starting location of traversal.
+
+      /**
+       * Definition for singly-linked list.
+       * function ListNode(val, next) {
+       *     this.val = (val===undefined ? 0 : val)
+       *     this.next = (next===undefined ? null : next)
+       * }
+       */
+      /**
+       * @param {ListNode} head
+       * @param {number} left
+       * @param {number} right
+       * @return {ListNode}
+       */
+
+      // 92. 反转链表 II
+      // 给你单链表的头指针 head 和两个整数 left 和 right ，其中 left <= right 。请你反转从位置 left 到位置 right 的链表节点，返回 反转后的链表 。
+
+      // 示例 1：
+      // 输入：head = [1,2,3,4,5], left = 2, right = 4
+      // 输出：[1,4,3,2,5]
+
+      // 示例 2：
+      // 输入：head = [5], left = 1, right = 1
+      // 输出：[5]
+
+      // leetcode
+      // 92. 反转链表 II https://leetcode.cn/problems/reverse-linked-list-ii/
+
+      // 对比
+      // 92. 反转链表 II  https://leetcode.cn/problems/reverse-linked-list-ii/
+      // 206. 反转链表 https://leetcode.cn/problems/reverse-linked-list/
+
+      // 对比
+      // 都会用到 ( 链表中间节点 ) ( 反转链表 ) ( 合并链表 ) ( 链表相等 )
+      // 143. 重排链表 https://leetcode.cn/problems/reorder-list/
+      // 234. 回文链表  https://leetcode.cn/problems/palindrome-linked-list/
+
+      // 前置知识 - 关联知识
+      // - 0. 回文链表 https://leetcode.cn/problems/palindrome-linked-list/
+      // - 1. 重排链表  https://leetcode.cn/problems/reorder-list/
+      // - 2. 寻找链表中间节点 https://leetcode.cn/problems/convert-sorted-list-to-binary-search-tree/
+      // - 3. 反转链表 https://leetcode.cn/problems/fan-zhuan-lian-biao-lcof/
+      // - 4. 合并两个有序链表 https://leetcode.cn/problems/he-bing-liang-ge-pai-xu-de-lian-biao-lcof/
+      // ------------------------------------------------------------------------------------------
+      // ------------------------------------------------------------------------------------------
+      // ------------------------------------------------------------------------------------------
+      // 方法1
+      var reverseBetween = function (head, left, right) {
+        let [pre, cur] = [null, head];
+
+        // 1
+        // Determine the starting location of traversal.
+        // 移动 cur 到 left 位置，即需要反转的位置，并保证 pre 在 cur 的前一个位置
+        // 注意下标 left 是从 1 开始，不是 0；所以我们用下标的方式的话，需要 left-1
+        // 题目中 left 和 right 的范围是 1 <= left <= right <= n
+        for (let i = 0; i < left - 1; i++) {
+          pre = cur;
+          cur = cur.next;
+        }
+
+        // 2
+        // 我们还要保存(占位) pre 和 cur 的位置，因为最后反转完，需要链接 ( 反转部分 ) 的 ( 前面 )和 ( 后面 ) 的指针
+        // 这里不需要在变化，所以用 const
+        const pre2 = pre;
+        const cur2 = cur;
+
+        // 3
+        // 遍历 left 到 right 之间的次数
+        // 反转
+        // 上面的for我们用的是下标，这里我们用自然数，用下标的话是 for(let i = left-1-1; i < right-1; i++)
+        // - 下面的代码 就和 ( 反转链表1 ) 一样的代码了
+        for (let i = left - 1; i < right; i++) {
+          const next = cur.next; // cache next node
+          cur.next = pre; // reverse
+
+          pre = cur; // move
+          cur = next;
+        }
+
+        // 最后修改 pre 和 cur 的指针，链接整个链表
+        // 两种情况
+        // 1. 如果 left = 1，即从头开始的部分原链表需要反转，那么反转后的整个链表的头节点就是 pre
+        // 2. 如果 left > 1, 说明原链表的前面有部分是没变的，反转后的头节点仍然是原来链表的head节点
+        if (left > 1) {
+          pre2.next = pre; // AA ----> pre2 指向 反转后的那部分的头节点
+        } else {
+          head = pre; // left=1 时，反转后的头节点就是整个链表的头节点
+        }
+
+        cur2.next = cur; // BB ---------> 反转后的那部分的尾节点 指向 后面的部分
+
+        return head;
+      };
+
+      // ------------------------------------------------------------------------------------------
+      // ------------------------------------------------------------------------------------------
+      // ------------------------------------------------------------------------------------------
+      // ------------------------------------------------------------------------------------------
+      // ------------------------------------------------------------------------------------------
+      // ------------------------------------------------------------------------------------------
+      // ------------------------------------------------------------------------------------------
+      // ------------------------------------------------------------------------------------------
+      // ------------------------------------------------------------------------------------------
+      // 方法2
+      // - 借助数组 一般最好不要借助其他数据结构
+      var reverseBetween = function (head, left, right) {
+        if (!head || !head.next) return head; // 边界
+
+        // 数组搜集 val
+        const arr = [];
+        while (head) {
+          arr.push(head.val);
+          head = head.next;
+        }
+
+        // 反转 left - right
+        let reversedArr = [];
+        const leftArr = [];
+        const rightArr = [];
+        const middleArr = [];
+        for (let i = 0; i < arr.length; i++) {
+          if (i < left - 1) {
+            leftArr.push(arr[i]);
+          } else if (i > right - 1) {
+            rightArr.push(arr[i]);
+          } else {
+            middleArr.push(arr[i]);
+          }
+        }
+        middleArr.reverse();
+        reversedArr = reversedArr.concat(leftArr, middleArr, rightArr);
+
+        // 新链表组装
+        const dummy = (list = new ListNode(null));
+        for (let i = 0; i < reversedArr.length; i++) {
+          list.next = new ListNode(reversedArr[i]);
+          list = list.next;
+        }
+
+        return dummy.next;
+      };
+    </script>
+  </body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Strict mode. 严格模式</title>
+  </head>
+
+  <body>
+    <script>
+      "use strict";
+
+      // 1
+      // 严格模式: 全局变量必须显示声明
+      // num = 10;
+      // console.log('num', num) // 报错 Uncaught ReferenceError: num is not defined
+
+      // 2
+      // 严格模式: 禁止 this 指向全局变量
+      // 严格模式下 this 不是输出 window，而是输出 undefined
+      function fn() {
+        console.log("this", this); // undefined
+      }
+      fn();
+
+      // 3
+      // 严格模式: 不允许删除变量
+      let color = "red";
+      delete color; // 'delete' cannot be called on an identifier in strict mode.
+
+      // 4
+      // 严格模式: 对象
+      // - 不允许修改 对象的只读属性 // 正常模式下，对一个对象的只读属性进行赋值，不会报错，只会默默地失败；严格模式下会报错
+    </script>
+  </body>
+</html>

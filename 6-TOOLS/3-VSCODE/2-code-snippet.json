@@ -1,0 +1,270 @@
+{
+  // Place your global snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and
+  // description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope
+  // is left empty or omitted, the snippet gets applied to all languages. The prefix is what is
+  // used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+  // $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders.
+  // Placeholders with the same ids are connected.
+  // Example:
+  // "Print to console": {
+  // 	"scope": "javascript,typescript",
+  // 	"prefix": "log",
+  // 	"body": [
+  // 		"console.log('$1');",
+  // 		"$2"
+  // 	],
+  // 	"description": "Log output to console"
+  // }
+  // ----------------------------------------------------------------
+  // ----------------------------------------------------------------
+  // 0
+  // console
+  "clw": {
+    "prefix": "clw",
+    "body": ["console.warn('${1:first}', ${1:first})"],
+    "description": "console.warn"
+  },
+  "cle": {
+    "prefix": "cle",
+    "body": ["console.error('${1:first}', ${1:first})"],
+    "description": "console.error"
+  },
+  "clt": {
+    "prefix": "clt",
+    "body": ["console.table(${1:first})"],
+    "description": "console.table"
+  },
+  "cll": {
+    "prefix": "cll",
+    "body": ["console.log('[${1:first}]'=========>>${1:second})"],
+    "description": "console.log"
+  },
+  // 1
+  // Todo-Tree
+  "tdt": {
+    "prefix": "tdt",
+    "body": ["// TIPS: ${1:text}"],
+    "description": "tips"
+  },
+  "tde": {
+    "prefix": "tde",
+    "body": ["// EE: ${1:text}"],
+    "description": "english"
+  },
+  "tdlg": {
+    "prefix": "tdlg",
+    "body": ["// LOCAL_GET: ${1:text}"],
+    "description": "localstorage get"
+  },
+  "tdls": {
+    "prefix": "tdls",
+    "body": ["// LOCAL_SET: ${1:text}"],
+    "description": "localstorage set"
+  },
+  "tdsg": {
+    "prefix": "tdsg",
+    "body": ["// STORE_GET: ${1:text}"],
+    "description": "storage get"
+  },
+  "tdss": {
+    "prefix": "tdss",
+    "body": ["// STORE_SET: ${1:text}"],
+    "description": "storage set"
+  },
+  "tdng": {
+    "prefix": "tdss",
+    "body": ["// NAVIGATE_GET: ${1:text}"],
+    "description": "navigate get"
+  },
+  "tdns": {
+    "prefix": "tdns",
+    "body": ["// NAVIGATE_SET: ${1:text}"],
+    "description": "navigate set"
+  },
+  // 2
+  // React 组件
+  "rafcei": {
+    "prefix": "rafcei",
+    "body": [
+      "import React from 'react';",
+      "",
+      "interface ${1:FunctionName}Props {}",
+      "",
+      "const ${1:FunctionName}: React.FC<${1:FunctionName}Props> = () => {",
+      "  return <div>${2:text}</div>;",
+      "};",
+      "",
+      "",
+      "export default ${1:FunctionName};"
+    ]
+  },
+  // 3
+  // const相关
+  "const a = data": {
+    "prefix": "cbs",
+    "body": ["const ${1:a} = ${2:data}"]
+  },
+  "const arr = []": {
+    "prefix": "car",
+    "body": ["const ${1:arr} = ${2:[]}"]
+  },
+  "const obj = {}": {
+    "prefix": "cob",
+    "body": ["const ${1:obj} = { ${2: key} : ${3: value} }"]
+  },
+  // 4
+  // let相关
+  "let a = data": {
+    "prefix": "lbs",
+    "body": ["let ${1:a} = ${2:data}"]
+  },
+  "let arr = []": {
+    "prefix": "lar",
+    "body": ["let ${1:arr} = ${2:[]}"]
+  },
+  "let obj = {}": {
+    "prefix": "lob",
+    "body": ["let ${1:obj} = { ${2: key} : ${3: value} }"]
+  },
+  // 5
+  // return相关
+  "return rebs": {
+    "prefix": "rebs",
+    "body": ["return ${1:res}"]
+  },
+  "return reob": {
+    "prefix": "reob",
+    "body": ["return {", "  ${1:key}: ${2:value}", "}"]
+  },
+  "return rear": {
+    "prefix": "rear",
+    "body": ["return [${1:key}]"]
+  },
+  // 6
+  // style相关
+  // less
+  "import styles from './styles.less'": {
+    "prefix": "imsl",
+    "body": ["import styles from './index.less'"]
+  },
+  "import styles from './styles.scss'": {
+    "prefix": "imss",
+    "body": ["import styles from './index.scss'"]
+  },
+  "className": {
+    "prefix": "clm",
+    "body": ["className={styles.${1:className}}"]
+  },
+  // import antd
+  "import {} from 'antd'": {
+    "prefix": "imat",
+    "body": ["import { ${1:name} } from 'antd'"]
+  },
+  // import type
+  "import type": {
+    "prefix": "imt",
+    "body": ["import type { ${1: Type } } from '${2}' "]
+  },
+  // useLocalStorageState
+  "useLocalStorageState": {
+    "prefix": "uls",
+    "body": ["const [${1:state}, set${1/(.*)/${1:/capitalize}/}] = useLocalStorageState('${2:key}', ${3:initValue});"]
+  },
+  // function
+  "function": {
+    "prefix": "func",
+    "body": ["function ${1:name}() {", "  ${2}", "}"]
+  },
+  // onClick
+  "onClick": {
+    "prefix": "onc",
+    "body": ["onClick={${1:fn}}"]
+  },
+  // hooks
+  // useEffect
+  "useEffect": {
+    "prefix": "usee",
+    "body": ["useEffect(() => {", "  ${1:first}", "}, [])"]
+  },
+  // VUE
+  "vue3": {
+    "prefix": "vue3",
+    "body": [
+      "<template>",
+      " <section></section>",
+      "</template>",
+      "",
+      "<script setup lang='ts'>",
+      "</script>",
+      "",
+      "<style scoped lang='scss'>",
+      "</style>",
+      "",
+      ""
+    ]
+  },
+  "import {} from vue": {
+    "prefix": "imv",
+    "body": ["import  { ${1: name } } from 'vue' "]
+  },
+  "import type {} from vue": {
+    "prefix": "imvt",
+    "body": ["import  type { ${1: name } } from 'vue' "]
+  },
+  "defineProps": {
+    "prefix": "dp",
+    "body": ["const props = defineProps({${1:key}: ${2:value}})"]
+  },
+  "defineOptions": {
+    "prefix": "do",
+    "body": ["defineOptions({${1:key}: ${2:value}})"]
+  },
+  "defineModel": {
+    "prefix": "dm",
+    "body": ["const ${1: name } = defineModel()"]
+  },
+  "defineEmits": {
+    "prefix": "dem",
+    "body": ["const emits = defineEmits([''])"]
+  },
+  "defineExpose": {
+    "prefix": "dep",
+    "body": ["defineExpose({})"]
+  },
+  "useSlots": {
+    "prefix": "cus",
+    "body": ["const slots = useSlots()"]
+  },
+  "useAttrs": {
+    "prefix": "cua",
+    "body": ["const attrs = useAttrs()"]
+  },
+  "const state=reactive()": {
+    "prefix": "ret",
+    "body": ["const state = reactive({${1:key}: ${2:value}})"]
+  },
+  "const state=ref()": {
+    "prefix": "ref",
+    "body": ["const ${1: name } = ref()"]
+  },
+  "onMounted": {
+    "prefix": "onM",
+    "body": ["onMounted(() => { ${1: name } })"]
+  },
+  "onUnmounted": {
+    "prefix": "onU",
+    "body": ["onUnmounted(() => { ${1: name } })"]
+  },
+  "provide": {
+    "prefix": "pro",
+    "body": ["provide(${1: key }, ${2: value } )"]
+  },
+  "inject": {
+    "prefix": "inj",
+    "body": ["const ${1: name } = inject(${1: key })"]
+  },
+  "computed": {
+    "prefix": "com",
+    "body": ["const ${1: name }  = computed(() => { ${2: value } });"]
+  }
+}

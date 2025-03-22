@@ -1,0 +1,320 @@
+###### Must 2025-03-01
+
+- 1
+- `【 incense 香 n 】` // ---------------------- 【 light a stick of incense. 点燃一根香 n 】
+- `【 intense 激烈的 adj 】` // ----------------- 【 intense competition. 激烈的竞争 n 】 【 cruel competition. 残酷的竞争 n 】
+- `【 tense 紧张的 紧的 adj 】` // --------------- 【 tense atmosphere. 紧张的气氛 n 】 // [tense-紧张的-adj] VS [nervous-紧张的-adj]
+- `【 license 许可证 n 】` // ------------------- 【 business license. 营业执照 n 】 【 driver's license. 驾驶证 n 】 // 【 license plate. 车牌 n 】
+- > 【 intense competition. 激烈的竞争 n 】
+- > 【 cruel competition. 残酷的竞争 n 】
+- _【 light a stick of incense. 点燃一根香 n 】_
+- _【 tense atmosphere. 紧张的气氛 n 】_
+- [incense-香-n] VS [license-许可证-n]
+- [intense-激烈的-adj] VS [tense-紧张的-adj]
+- [tense-紧张的-adj] VS [nervous-紧张的-adj]
+- // TIPS: Pay attention to the pronunciation of the word 'atmosphere'. [atmosphere-气氛-氛围-大气-n]
+- AA.
+- _【 compete 竞争 v 】_
+- _【 competition 竞争 n 】_ // ----------------- 【 intense competition. 激烈的竞争 n 】 【 cruel competition. 残酷的竞争 n 】
+- _【 competitor 竞争者 n 】_
+- > 【 opponent 对手 n 】 // -------------------- 【 overcome opponent. 战胜对手 】 【 overcome fear. 克服恐惧 v 】 【 overcome difficulty. 战胜困难 v 】
+- > 【 competitor 竞争者 n 】
+- .MT **【 We will 【 face 】 the 【 intense competition 】 and 【 cruel competition 】 【 from 】 our 【 opponents 】. 我们面临着对手的激烈的竞争和残酷的竞争 】**
+- BB.
+- _【 incense 香 n 】_
+- > 【 a stick of incense. 一根香 n 】
+- .MT **【 The 【 monk 】 and 【 nun 】 【 lit 】 【 a stick of 】 【 incense 】 and a 【 candle 】 in the 【 temple 】. 和尚和尼姑在寺庙里点了一根香和一根蜡烛 】**
+- // -- monk 和尚 n
+- // -- nun 尼姑 n // 难
+- // -- light -> lit 点燃 v 光 n
+- // -- a stick of. 一根
+- // -- 【 candle 蜡烛 n 】
+- // -- [temple-庙-太阳穴-n] VS [temper-脾气-n]
+- // **【 if you have a 【 short temper 】, you can 【 massage 】 your 【 temples 】. 如果你脾气暴躁，可以柔柔太阳穴 】**
+- // **【 He has a 【 short temper 】, and easily 【 lose his temper 】. 他是一个暴脾气，很容易发脾气 】**
+- CC.
+- _【 temple 寺庙 太阳穴 n 】_
+- _【 temper 脾气 n 】_ // --------------------- 【 lose temper. 发脾气 v 】 【 short temper. 暴躁脾气 n 】
+- > 【 lose temper. 发脾气 v 】
+- > 【 short temper. 暴脾气 n 】
+- .MT **【 He has a 【 short temper 】, and easily 【 lose his temper 】. 他是一个暴脾气，很容易发脾气 】**
+- .MT **【 if you have a 【 short temper 】, you can 【 massage 】 your 【 temples 】. 如果你脾气暴躁，可以柔柔太阳穴 】**
+- CC.
+- _【 license 执照 许可证 n 】_ VS 【 incense 香 n 】
+- _【 license plate. 车牌 n 】_
+- _【 driver's license. 驾驶证 n 】_ // ---------- 【 apply for a driver's license. 申请驾驶证 】
+- _【 business license. 营业执照 n 】_
+- _【 revoke license. 吊销执照 n 】_ // ----------- [license-执照-n] VS [incense-香-n] // [revoke-撤销-撤回-v] VS [invoke-调用-v]
+- _【 apply for a driver's license. 申请驾驶证 v 】_
+- DD.
+- `【 light 光n / 轻的 adj / 点燃v / 照亮 v 】` // ----- _【 a beam of light. 一束光 n 】_【 light up. 照亮 】 【 light rain. 小雨 】 // light -> lit
+- `【 lighting 照亮 v 】`
+- `【 lightning 闪电 n 】` // ------------------------ _【 a bolt of lightning. 一道闪电 】_
+- `【 lighter 打火机 n 】` // ------------------------ 【 match 比赛/火柴 VS lighter 打火机 】 // 【 semifinal match. 半决赛 n 】
+- `【 slight 轻微的 adj 】` // ------------------------ 【 slight spicy. 微辣 n 】 【 slight pain. 轻微疼痛 n 】
+- _【 light 光 n / 轻的 adj / 点燃 照亮 v 】_ // -------- [heavy-重的-adj] VS [light-轻的-adj] VS [weight-重量-n] VS [scale-秤-n]
+- _【 slight 轻微的 adj 】_
+- _【 slight pain. 轻微疼痛 n 】_
+- _【 slight injury. 轻伤 n 】_ // injure VS injury
+- _【 slight spicy. 微辣 n 】_
+- > 【 high beam light. 远光灯 n 】`
+- > 【 low beam light. 近光灯 n 】`
+- > 【 a beam of light. 一束光 】`
+- > 【 a bolt of lightning. 一道闪电 】`
+- weight / heavy / light
+- .MT **【 The 【 light 】 【 emitted by 】 the 【 lighter 】 【 lighted 】 the whole room. 打火机发出的光照亮了整个屋子 】**
+- .MT **【 【 The beam of light 】 comes from 【 a bolt of lightning 】. 这一束光来自一道闪电 】**
+- **【 【 lighters 】 can 【 emit 】 【 light 】. 打火机可以发光 】**
+- **【 There must be 【 thunder 】 after 【 lightning 】. 闪电过后一定有雷声 】**
+-
+-
+-
+-
+-
+- `【 instinct 本能 n 】` // -------------------- [instinct-本能-n] VS [potential-潜能-n]
+- `【 intension 目的 意图 打算 n 】`
+- > 【 instinct 本能 n 】
+- > 【 potential 潜能 n / 潜在的 adj 】 // ------- 【 potential customer. 潜在客户 n 】 【 potential risk. 潜在风险 n 】 // 【 inspire potential. 激发潜能 n 】
+- _【 potential customer. 潜在客户 n 】_
+- _【 potential risk. 潜在风险 n 】_
+- _【 inspire potential. 激发潜能 v 】_ // ------- 【 inspiration curiosity. 激发好奇心 v 】
+- _【 inspire curiosity. 激发好奇心 v 】_ // ----- 【 satisfy curiosity. 满足好奇心 v 】
+- _【 inspire inspiration. 激发灵感 v 】_ // ----- 【 creative inspiration. 创作灵感 】
+- .HL **【 This is my 【 instinct 】, not my 【 potential 】. 这是我的本能，而不是潜能 】**
+- .HL **【 This 【 potential risk 】 may 【 cause 】 us to lose our 【 potential customers 】. 这个潜在风险有可能让我们失去潜在客户 】**
+- .MT **【 This is my 【 instinct 】, There is no 【 intension 】 【 at all 】. 这是我的本能，完全没有任何意图 】**
+- **【 It's 【 not 】 difficult to learn English well 【 at all 】. 学好英语一点也不难 】**
+- **【 He was 【 not happy at all 】 after 【 getting a promotion 】. 升职后他一点也不开心 】**
+- // -- 【 not at all. 一点也不 】
+- // -- 【 cause 引起 v 】
+- // TIPS: Pay attention to the pronunciation of the word 'cause'. [cause-引起-v]
+- AA.
+- `【 inspire 激励 鼓励 激发 v 】` // ---------【 inspire potential. 激发潜能 n 】 【 inspire curiosity. 激发好奇心 v 】 【 inspire inspiration. 激发灵感 】
+- `【 inspiration 灵感 n 】` // ------------- 【 creative inspiration. 创作灵感 】 【 inspire inspiration. 激发灵感 v 】
+- `【 expire 到期 过期 v 】` // -------------- 【 be about to expire. 即将过期 】 // 【 expiration time. 过期时间 n 】 【 expired dumpling. 过期的饺子 】
+- `【 outdate 过时 v 】` // ----------------- 【 out of date. 过时的 adj 】 // `【 go out of date. 过时 】`
+- > 【 inspire potential. 激发潜能 】// ------ 【 potential 潜力潜能 n / 潜在的 adj 】 // 【 potential customer. 潜在客户 】 【 potential risk. 潜在风险 】
+- > 【 inspire curiosity. 激发好奇心 】 // --- 【 curiosity 好奇心 n 】 // --------------【 satisfy curiosity. 满足好奇心 】 【 inspire curiosity. 激发好奇心 】
+- > 【 inspire inspiration. 激发灵感 】
+- BB.
+- _【 curiosity 好奇心 】_
+- _【 inspire curiosity. 激发好奇心 】_
+- _【 satisfy curiosity. 满足好奇心 】_
+- _【 strong curiosity. 强烈的好奇心 】_
+- CC.
+- > 【 expire 过期 v 】// -------------------- _【 be about to expire. 即将过期 】_ // -----------【 be about to. 即将 】
+- > 【 expired 过期的 adj 】 // --------------- 【 valid 有效的 adj 】 【 invalid 无效的 adj 】---- 【 expired dumpling. 过期的饺子 】
+- > 【 expiration 过期 n 】// ----------------- 【 expiration time. 过期时间 n 】
+- > 【 expiration time. 过期时间 n 】 // ------ 【 valid time. 有效时间 n 】 【 invalid time. 无效时间 n 】
+- > 【 expired dumpling. 过期的饺子 】
+- _【 【 Valid 】 is the 【 antonym 】 of the word 【 expired / invalid 】. 】_
+- > 【 be about to. 即将 】
+- > 【 be about to expire. 即将过期 】
+- .MT **【 Clothes are only 【 out of date 】, they don't 【 expire 】. 衣服只会过时，不会过期 】**
+- **【 Please 【 throw away 】 the food that 【 is about to 】 【 expire 】. 请把即将过期的食物丢掉 】**
+- // TIPS: Pay attention to the pronunciation of the word 'valid'. [valid-有效的-adj]
+-
+-
+-
+-
+-
+- `【 intuition 直觉 n 】` // ---------------- [tuition-fee-学费-n] VS [tutor-家庭教师-n] VS [tutorial-教程-n] // [institution-机构] VS [intuition-直觉-n]
+- `【 insult 辱骂 v 】` // ------------------- [consult-咨询-v] VS [insult-侮辱-v] VS [result-结果-n]
+- `【 internal 内部的 adj 】` // ------------- 【 internal contradiction. 内部矛盾 n 】 【 internal structure. 内部结构 】
+- `【 inform 通知 v 】` // ------------------- [inform-通知-v] VS [notice-通知-v-n] VS [notification-通知-n]
+- > 【 internal contradiction. 内部矛盾 n 】
+- > 【 internal structure. 内部结构 n 】
+- **【 I have an 【 intuition 】 that if you 【 insult 】 others, you will receive an 【 internal notice 】. 我有一种直觉如果你辱骂他人，你会收到内部通知 】**
+- // -- 【 notice 通知 n v 】
+- // -- 【 notification 通知 n 】
+- // -- 【 inform 通知 v 】
+- AA.
+- _【 contradiction 矛盾 n 】_
+- _【 internal contradiction. 内部矛盾 n 】_
+- _【 social contradiction. 社会矛盾 n 】_ // 【 social welfare. 社会福利 n 】
+- _【 family contradiction. 家庭矛盾 n 】_
+- BB.
+- _【 social welfare. 社会福利 n 】_ // ------ 【 welfare state. 福利国家 n 】
+- _【 social contradiction. 社会矛盾 n 】_
+- _【 social status. 社会地位 n 】_
+- _【 social media. 社交媒体 n 】_
+- _【 social security. 社保 n 】_
+- CC.
+- > 【 status 身份 状态 地位 n 】 // --------- 【 social status. 社会地位 n 】 【 social media. 社交媒体 n 】 【 social contradiction. 社会矛盾 n 】
+- > 【 statue 雕像 n 】 // ------------------ _【 The statue of liberty. 自由女神像 n 】_
+- > 【 state 状态 国家 n 】 // --------------- 【 welfare state. 福利国家 n 】 【 social welfare. 社会福利 n 】
+- **【 This 【 statue 】 【 symbolizes 】 that he has high 【 social status 】. 这个雕像象征着他有很高的社会地位 】**
+- // -- 【 symbol 符号 象征 n 】
+- // -- 【 symbolize 象征 v 】
+-
+-
+-
+-
+- `【 invent 发明 创造 编造 v 】` // --------- 【 invent an excuse. 编造借口 v 】 // invention 发明 n
+- `【 involve 涉及 v 】`
+- `【 invest 投资 v 】` // ------------------ 【 investor 投资者 n 】 【 angel investor. 天使投资人 n 】
+- `【 invoice 发票 n 】` // ----------------- 【 issue an invoice. 开发票 v 】// [invoice-发票-n] VS [receipt-收据-n] VS [recipe-配方-食谱-n]
+- > 【 issue an invoice. 开发票 】
+- **【 His 【 invention 】 【 involves 】 how to 【 invest 】 and how to 【 issue invoices 】. 他的发明涉及到如何投资，如何开发票 】**
+- // -- invent 发明 创造 编造 v
+- // -- invention 发明 创造 编造 n
+- // -- inventor 发明家 n
+- AA.
+- _【 invoice 发票 n 】_
+- _【 receipt 收据 n 】_
+- _【 recipe 食谱 配方 n 】_
+- > 【 issue an invoice. 开发票 v 】
+- **【 We have the 【 receipt 】 and 【 invoice 】 for this 【 recipe 】. 我们有这个食谱的收据和发票 】**
+-
+-
+-
+-
+- `【 instrument 仪器 仪表 乐器 n 】`
+- `【 inspect 检查 v 】`
+- `【 interface 接口 界面 n 】`
+- **【 This 【 instrument 】 can 【 automatically 】 【 inspect 】 the software 【 interface 】 . 这个仪器可以自动检查软件的界面 】**
+- **【 We need to 【 inspect 】 【 various 】 【 aspects 】 of the 【 equipment 】. 我们要检查设备的各个方面 】**
+- // -- automatically 自动地 adv
+- // -- automatic 自动的 adj
+- // TIPS: Pay attention to the pronunciation of the word 'automatically'. [automatically-自动地-adv]
+- AA.
+- _【 inspect 检查 v 】_
+- _【 aspect 方面 n 】_
+- _【 respect 尊敬 v 】_
+- _【 expect 期望 v 】_
+- **【 We need to 【 inspect 】 【 various 】 【 aspects 】 of the 【 equipment 】. 我们要检查设备的各个方面 】**
+- // -- various 各种个样的 各个的 adj
+-
+-
+- `【 inflate 充气 膨胀 v 】`
+- `【 infant 婴儿 n 】`
+- **【 The 【 infant 】 toy can be 【 inflated 】. 这个婴儿玩具可以充气 】**
+-
+-
+- `【 indeed 的确 确实 adv 】`
+- **【 This product can not replaced 【 indeed 】. 这个产品确实不可代替 】**
+-
+- `【 inspire 激励 v 】`
+- `【 instead 代替 adv 】`
+
+###### Must 2025-03-02
+
+- `【 organic 有机的 adj 】` // ------------ 【 organic food. 有机食物 n 】 【 organic fertilizer. 有机肥料 n 】
+- `【 mechanic 机械师 n 】`
+- `【 clinic 诊所 n 】` // ----------------- 【 dental clinic. 牙医诊所 n 】 【 private clinic. 私人诊所 n 】 【 specialist clinic. 专科诊所 n 】
+- `【 picnic 野餐 v n 】`
+- `【 ironic 讽刺的 adj 】`
+- `【 volcanic 火山 n 】`
+- `【 electronic 电子的 】` // -------------- 【 electronic watch. 电子表 】
+
+###### Must 2025-03-03
+
+- `【 physical 物理的 身体的 adj 】`
+- `【 mental 精神的 思想的 心里的 ajd  】`
+- _【 mental health. 心理健康 n 】_
+- _【 physical health. 身体健康 n 】_
+- > 【 physical examination. 体检 】 // ----- 【 regular physical examination. 定期体检 n 】
+- > 【 physical health. 身体健康 n 】
+- > 【 physical activity. 体育活动 n 】
+- > 【 physical strength. 体力 n 】
+- > 【 physical relationship. 肉体关系 n 】
+- AA.
+- _【 physical activity. 体育活动 n 】_
+- _【 physical strength. 体力 n 】_
+- _【 physical health. 身体健康 n 】_
+- **【 【 Participating in 】 【 physical activities 】 【 is beneficial to 】 【 recovering 】 【 physical strength 】 and keep 【 physical health 】. 】**
+- 参加体育活动有力于恢复体力和保持身体健康
+- // --
+- // 【 participate in. 参加 v 】
+- // 【 strength 长处 体力 力量 强度 n 】
+- // --
+- // 【 be beneficial to doing sth. 有利于做某事 】
+- BB.
+- _【 exercise 运动 锻炼 v 】_ VS _【 work out. 锻炼 v 】_
+- _【 work out. 锻炼 v 】_
+- CC.
+- `【 regular 定期的 正式的 普通的 adj 】`
+- > 【 regular physical examination. 定期体检 n 】
+- > 【 regular employee. 正式员工 n 】 // ------------------- 【 outsourced employee. 外包员工 n 】
+- > 【 regular gas. 普通汽油 n 】// ------------------------- 【 premium gas. 高级汽油 n 】
+- _【 regular gas. 普通汽油 n 】_ // 87
+- _【 premium gas. 高级汽油 n 】_ // 93
+- _【 regular employee. 正式员工 n 】_
+- _【 outsourced employee. 外包员工 n 】_
+- **【 The 【 regular employees 】 add 【 premium gas 】, and the 【 outsourced employees 】 add 【 regular gas 】. 正式员工加高级汽油，外包员工加普通汽油 】**
+
+###### Must 2025-03-15
+
+- 1
+- `【 subject 主语 主题 课程 科目 n 】`
+- `【 object 宾语 对象 物体 n 】`
+- > 【 subjective 主观的 adj 】 // ----------------- 1. 【 subjective thought. 主观想法 n 】
+- > 【 objective 客观的 adj 】 // ------------------ 2. 【 objective fact. 客观事实 n 】
+- _【 rational 理性的 adj 】_ // ------------------- 3. 【 rational person. 理性的人 n 】
+- _【 emotional 感性的 情绪的 情感的 adj 】_ // ------ 4. 【 emotional person. 感性的人 n 】
+- _【 reasonable 合理的 adj 】_ // ----------------- 【 reasonable requirement. = reasonable demand. 合理的需求 n 】
+- .HL **【 It's 【 an 】 【 objective fact 】 【 rather than 】 a 【 subjective thought 】 that he is a 【 rational 】 person. 他是理性的人，这是客观事实不是主观想法 】**
+- .MT **【 The best 【 reasonable 】 【 explanation 】 is that he is a 【 rational person 】 【 rather than 】 a 【 emotional person 】. 最合理的解释是：他是一个理性的人，而不是一个感性的人 】**
+- // --
+- // 【 rather than. 而不是 】
+- // --
+- // objective fact. 客观事实
+- // subjective thought. 主观想法
+- // rational person. 理性的人
+- // --
+- // 【 reasonable 合理的 adj 】
+- // 【 reasonable requirement. 合理的需求 n 】
+- // 【 reasonable demand. 合理的需求 n 】 // demand VS command
+- // --
+- // 【 explain 解释 v 】 VS 【 complain 抱怨 投诉 v 】 VS 【 explant 投诉 n 】
+- // 【 explanation 解释 n 】
+- AA.
+- _【 emotion 情绪 情感 n 】_ // ------------------- 【 vent emotion. 发泄情绪 v 】 【 control emotion. 控制情绪 v 】 【 express emotion. 表达情感 v 】
+- _【 emotional 感性的 情绪的 情感的 adj 】_ // ------ 【 emotional value. 情绪价值 n 】 【 emotional quotient. 情商 】VS 【 intelligence quotient. 智商 n 】
+- > 【 emotional value. 情绪价值 n 】
+- > 【 emotional quotient. 情商 n 】
+- > 【 intelligence quotient. 智商 n 】
+- > 【 artificial intelligence. 人工智能 n 】
+- .HL **【 【 Artificial intelligence 】 has a high 【 emotional quotient 】 and 【 intelligence quotient 】. 人工智能有很高的情商和智商 】**
+-
+- `【 subway 地铁 n 】` = 【 metro 地铁 】
+- `【 submarine 潜水艇 n 】`
+- `【 subtitle 附标题 字幕 n 】` = 【 caption 字幕 说明文字 】 VS 【 captain 船长 n 】
+- _【 caption 说明文字 n 】_
+- _【 captain 机长 船长 n 】_
+-
+- `【 sub-health 亚健康 n 】`
+- > 【 side effect. 副作用 n 】
+- > 【 aftereffect 后遗症 n 】
+- > 【 special effect. 特效 n 】
+- .HL **【 The 【 side effects 】 of the 【 COVID-19 virus 】 and 【 COVID-19 vaccines 】 are 【 aftereffects 】. 新冠病毒和新冠疫苗的副作用是后遗症 】**
+- // -- COVID-19 virus. 新冠病毒
+- // -- COVID-19 vaccine. 新冠疫苗
+-
+- `【 submit 提交 v 】`
+- `【 subscribe 订阅 v 】`
+- .MT **【 He 【 subscribed 】 to the newspaper and 【 submitted 】 the order. 他订阅了报纸，提交了订单 】**
+
+###### Must 2025-03-16
+
+- 1
+- `【 draft 草稿 n 】` VS 【 overdraft 透支 n 】 VS 【 overdraw 透支 v 】
+- `【 raft 木筏 n 】` VS【 bamboo raft. 竹筏 n 】
+- `【 craft 工艺 n 】` VS 【 aircraft. 飞机 n 】
+- > box office. 票房 n / 售票处 n
+- > boxing 拳击 n
+- > inbox 收件箱
+- > junk mail. = spam 垃圾邮件
+- > junk food. 垃圾食物
+- AA.
+- _【 draft 草稿 n 】_
+- _【 overdraft 透支 n 】_ VS 【 overdraw 透支 v 】
+- _【 overdraw 透支 v 】_
+- > 【 overdraw a credit card. 透支信用卡 v 】
+- > 【 overdraw body. 透支身体 v 】
+- .HL **【 He is calculating how many 【 credit cards 】 he has 【 overdrawn 】 on the 【 draft 】. 他正在在草稿上计算透支了多少张信用卡 】**
+- BB.
+- > 【 craft 工艺 n 】
+- > 【 aircraft 飞机 n 】
+- .HL **【 The 【 craft 】 of the 【 aircraft 】 is 【 advanced 】. 这个飞机的工艺很先进 】**
+- // -- advanced 先进的 高级的 adj

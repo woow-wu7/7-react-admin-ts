@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="requestButton">请求</button>
+    <button id="cancelButton">点击取消请求</button>
+    <script>
+      // axios
+      // - 1.请求响应拦截
+      // - 2.取消请求
+      // - [axios-源码分析-github](https://github.com/woow-wu7/7-react-admin-ts/tree/master/src/SOURCE-CODE-ANALYSIS/AXIOS)
+      // - [axios-源码分析-掘金](https://juejin.cn/post/6844904147532120072)
+
+      // - [axios-源码分析](https://github.com/woow-wu7/7-react-admin-ts/tree/master/src/SOURCE-CODE-ANALYSIS/AXIOS)
+      // - [axios-源码分析-掘金](https://juejin.cn/post/6844904147532120072)
+      // - [axios-手写中间件-手写取消请求](https://github.com/woow-wu7/6-penetrate/blob/main/2-FRONTEND/1-JS/8-promise/AXIOS-MIDDLEWARE/axios-middleware.html)
+      // - [XHMHttpRequest 和 fetch 终止请求的区别](https://github.com/woow-wu7/6-penetrate/blob/main/2-FRONTEND/1-JS/HH-AbortController)
+k
+      // 拦截器
+      class Interceptor {
+        handlers = []; // [{resolve, reject}, ...]
+
+        use = function (resolve, reject) {
+          this.handlers.push({ resolve, reject });
+        };
+
+        foreach = function (fn) {
+          this.handlers.forEach((obj) => {
+            if (obj) fn(obj);
+          });
+        };
+      }
+
+      // 取消请求
+      class CancelToken {
+        constructor(executor) {
+          this.token = {};
+
+          var resolvePromise;
+          this.promise = new Promise((resolve) => (resolvePromise = resolve));
+
+          const self = this;
+          executor(function cancel(message) {
+            self.token = { message };
+            resolvePromise(self.token);
+          });
+        }
+      }
+      CancelToken.source = function source() {
+        var cancel;
+        var token = new CancelToken(function executor(c) {
+          cancel = c;
+        });
+
+        return {
+          cancel,
+          token,
+        };
+      };
+
+      // axios
+      class Axios {
+        dispatch = function (params) {
+          return new Promise((resolve, reject) => {
+            console.log("params", params);
+            if (params.cancelToken) {
+              params.cancelToken.promise.then((value) => {
+                return reject(value);
+              });
+            }
+            // return fetch(params)
+            setTimeout(() => {
+              resolve("请求成功");
+            }, 4000);
+          });
+        };
+
+        chain = [this.dispatch, null];
+
+        request = function request(config) {
+          const self = this;
+          let promise = Promise.resolve(config);
+
+          // request 在前
+          this.interceptors.request.foreach(function (obj) {
+            self.chain.unshift(obj.resolve, obj.reject);
+          });
+
+          // response 在后
+          this.interceptors.response.foreach(function (obj) {
+            self.chain.push(obj.resolve, obj.reject);
+          });
+
+          while (this.chain.length) {
+            promise = promise.then(this.chain.shift(), this.chain.shift());
+          }
+
+          return promise;
+        };
+
+        interceptors = {
+          request: new Interceptor(),
+          response: new Interceptor(),
+        };
+
+        CancelToken = CancelToken;
+      }
+
+      // 分割线 ------------------------------------------------------------------------------------------
+      // 分割线 ------------------------------------------------------------------------------------------
+      // 分割线 ------------------------------------------------------------------------------------------
+      const axios = new Axios();
+
+      axios.interceptors.request.use(
+        (config) => {
+          console.log("请求拦截");
+          console.log("config", config);
+          config.token = `xxx`;
+          return config;
+        },
+        (err) => console.log("err", err)
+      );
+
+      axios.interceptors.response.use(
+        (response) => {
+          console.log("响应拦截");
+          console.log("response", response);
+          return response;
+        },
+        (err) => console.log("err", err)
+      );
+
+      const { token, cancel } = axios.CancelToken.source();
+
+      const request = () =>
+        axios.request({
+          cancelToken: token,
+          method: "GET",
+          url: "https://cdn.cdnjson.com/tvax3.sinaimg.cn//large/0072Vf1pgy1fodqi5vxrij31630rsu0x.jpg",
+          params: {
+            name: "",
+          },
+          headers: {
+            Origin: "*",
+          },
+          mode: "cors",
+          credentials: "include",
+        });
+
+      // request
+      const requestButton = document.getElementById("requestButton");
+      requestButton.addEventListener("click", request, false);
+      // cancel
+      const cancelButton = document.getElementById("cancelButton");
+      cancelButton.addEventListener("click", () => cancel("取消请求"), false);
+    </script>
+  </body>
+</html>

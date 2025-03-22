@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Implement Object.create() function.</title>
+  </head>
+  <body>
+    <script>
+      /*
+        // 1
+        Object.create 模拟实现
+        - 作用:
+          - 以 参数对象 为 原型，生成 实例对象
+          - 即可以让一个对象继承另一个对象，实例对象 完全继承 参数对象 的属性和方法
+        - 实现原理:
+          - 【 原型链继承 】 : 利用 ( 中间函数 - 中间函数没有任何属性和方法 ) 式 ( 原型链继承 )
+
+        // ------- ------- ------- ------- ------- ------- -------
+        // 2
+        // temporary 临时的 暂时的 adj
+        // -
+        // parasitism 寄生 n
+        // parasitic 寄生的 adj
+      */
+
+      const obj = { name: "woow_wu7" };
+
+      const _create = (prototypeObj) => {
+        // parasitic 寄生的 adj
+        // parasitism 寄生 n
+        function Parasitism() {} // 因为 中间函数构造函数 内没有任何代码，所以不存在 ( 构造函数式继承，即生成的实例本身没有任何属性和方法 )
+        Parasitism.prototype = prototypeObj; // 将 中间函数的 prototype 属性指向 参数对象，这样中间函数的实例就能继承参数对象的属性和方法
+        Parasitism.prototype.constructor = Parasitism; // 修改 prototype 后记得修改 constructor 的指向
+
+        return new Parasitism(); // 其实就是实现一个 ( 原型链继承 - 寄生原型链继承 )
+      };
+
+      // const Object._create = function(prototypeObj) {
+      //   function Parasitism() {}
+      //   Parasitism.prototype = prototypeObj;
+      //   Parasitism.prototype.constructor = Parasitism;
+      //   return new Parasitism();
+      // }
+
+      const instance = _create(obj);
+      console.log("instance :>> ", instance.name);
+      console.log("instance.constructor", instance.constructor);
+
+      const instance2 = Object.create(obj);
+      console.log("instance2: ", instance2.name);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 柯里化 阶段一
+
+      // 原理：
+      // - 有参数: 收集参数
+      // - 没参数: 执行计算
+      // - 闭包: 收集参数
+      // 缺点:
+      // - 1. 多了一次没有参数的调用，( 利用没有参数时来确定参数已经收集完毕，从而执行计算 )
+      // - 2. 计算的逻辑耦合在了 curry 函数中，可以抽离出计算逻辑
+
+      // 英语
+      // curry 柯里化
+
+      // 最终版
+      // 直接看柯里化 阶段三
+
+      const curry = (...params) => {
+        let allParams = [];
+        if (params.length) allParams = allParams.concat(params);
+
+        function closure(...params) {
+          if (params.length) {
+            allParams = allParams.concat(params);
+            return closure;
+          } else {
+            return allParams.reduce((total, current) => total + current);
+          }
+        }
+
+        return closure;
+      };
+
+      const res = curry(1)(2, 3, 4)();
+      console.log("res", res);
+    </script>
+  </body>
+</html>

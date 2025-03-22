@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 434. 字符串中的单词数
+
+      // 题目
+      //  统计字符串中的单词个数，这里的单词指的是连续的不是空格的字符。
+      // 请注意，你可以假定字符串里不包括任何不可打印的字符。
+
+      // 输入: "Hello, my name is John"
+      // 输出: 5
+      // 解释: 这里的单词是指连续的不是空格的字符，所以 "Hello," 算作 1 个单词。
+
+      // 注意点
+      // 1. "        " 应该返回0
+      //    - 不能用 trim，如果用 Array.prototype.trim() 会出现 "    "会返回1
+
+      var countSegments = function (s) {
+        return s.split(" ").filter((item) => item).length;
+      };
+    </script>
+  </body>
+</html>

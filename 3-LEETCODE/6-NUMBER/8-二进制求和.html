@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 67. 二进制求和
+
+      // 题目
+      // 给你两个二进制字符串 a 和 b ，以二进制字符串的形式返回它们的和。
+
+      // 示例 1：
+      // 输入:a = "11", b = "1"
+      // 输出："100"
+
+      // 示例 2：
+      // 输入：a = "1010", b = "1011"
+      // 输出："10101"
+
+      // 提示：
+      // 1 <= a.length, b.length <= 104
+      // a 和 b 仅由字符 '0' 或 '1' 组成
+      // 字符串如果不是 "0" ，就不含前导零
+      /**
+       * @param {string} a
+       * @param {string} b
+       * @return {string}
+       */
+
+      // leetcode
+      // https://leetcode.cn/problems/add-binary/description/
+
+      // 扩展
+      // 面试题 本项目/5-INTERVIEW/8-阅文集团.html
+
+      var addBinary = function (a, b) {
+        let res = "";
+        let carry = 0; // 进位，carry是进位，携带的意思
+
+        let ai = a.length - 1; // 从后往前遍历
+        let bi = b.length - 1;
+
+        // 都遍历完才结束遍历
+        while (ai >= 0 || bi >= 0) {
+          const va = a[ai] ? Number(a[ai]) : 0; // 这里可以换成 a[ai] ?? 0，并且在 sum 时转换类型 number[a[ai]]
+          const vb = b[bi] ? Number(b[bi]) : 0;
+
+          let sum = va + vb + carry;
+          if (sum >= 2) {
+            sum = sum - 2;
+            carry = 1;
+          } else carry = 0;
+
+          res = String(sum) + res; // 注意相加顺序，其实这里可以不用 String() 来转换，因为 + '' 会发生运算符重载，变为拼接
+
+          ai--;
+          bi--;
+        }
+
+        // 最后的进位
+        // - 这里一定不要忘记了，最后一个最高的可能有进位
+        if (carry === 1) {
+          res = "1" + res;
+        }
+
+        return res;
+      };
+    </script>
+  </body>
+</html>

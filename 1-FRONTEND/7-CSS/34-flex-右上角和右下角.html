@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* 
+        问题：flex实现两个div，一个在右上角，一个在右下角？
+        链接: https://www.ruanyifeng.com/blog/2015/07/flex-grammar.html
+        英语: 
+        - axis 轴 轴心 坐标轴 n
+        - intersection 十字路口 相交 交点 n
+        - junction 交叉点 
+        - junction station. 枢纽站
+        - conjunction 连接词
+      */
+
+      .container {
+        /* 1 */
+        /* 右上角 和 右下角 */
+        /* top-right-corner  bottom-right-corner */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        /* 1 */
+        /* 右上角 和 右下角 */
+        /* top-right-corner  bottom-right-corner */
+        align-items: flex-end;
+
+        height: 500px;
+        width: 600px;
+        border: 1px solid black;
+      }
+
+      .right-top,
+      .right-bottom {
+        width: 300px;
+        height: 200px;
+        background: red;
+      }
+
+      /* 2 */
+      /* 左上角 和 右下角 */
+      /* top-right-corner  bottom-right-corner */
+      .right-top {
+        align-self: flex-start;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="right-top">top</div>
+      <div class="right-bottom">bottom</div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // bubble sort 冒泡排序
+
+      // 本项目/2-FRONTEND/JS/1-handwrite/4-sort/4-bubble-sort.html
+
+      // 原理
+      // 两层循环
+      // - ( 外层 ) 表示 ( 执行的趟数 ) ------------- 总趟数 = 数组长度 - 1
+      // - ( 里层 ) 表示 ( 每趟比较的次数 ) ---------- 每趟比较的次数 = 总趟数 - 当前的趟数
+
+      // 问题
+      // 问题: 为什么 每趟比较的次数 都要减去 当前趟数
+      // 回答: 因为 每趟都会得到一个最大值
+      // - 第一趟，得到最大值，并冒泡到数组末尾，下一趟比较时，不用再比较最后一个值，因为它是最大值
+      // - 第二趟，得到第二大的值，并冒泡到数组倒数第二的位置，下一趟比较时，不用再比较倒数两个成员，因为他们最大了
+
+      let outCount = 0;
+      let inCount = 0;
+      const arr = [1, 9, 4, 3, 8, 6, 5, 2, 7, 7, 7];
+
+      function bubbleSort(arr) {
+        const len = arr.length;
+
+        for (let i = 0; i < len; i++) {
+          outCount++;
+          let isSortOk = true;
+
+          for (let j = 0; j < len - i; j++) {
+            inCount++;
+            if (arr[j] > arr[j + 1]) {
+              [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]];
+              isSortOk = false;
+            }
+          }
+
+          if (isSortOk) break; // 已经排好序，结束整个循环 即 结束外层循环
+        }
+
+        return arr;
+      }
+
+      const res = bubbleSort(arr);
+      console.log("res: ", res);
+      console.log("outCount", outCount);
+      console.log("inCount", inCount);
+    </script>
+  </body>
+</html>

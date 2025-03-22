@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const async1 = async () => {
+        console.log(1);
+        await async2();
+        console.log(2);
+      };
+
+      const async2 = async () => {
+        console.log(3);
+        await async3();
+        console.log(4);
+      };
+
+      // async3
+      // - 1. 该 promise 优先于 【 await async3()后的的 log(4) 】 进入微任务队列
+      // - 2. 之后是 【 log(4) 】 进入微任务对立，再然后是 【 log(2) 】 进入微任务队列
+      // - 这几个async函数的总顺序: 7 4 2
+      const async3 = async () => {
+        console.log(5);
+        Promise.resolve().then(() => console.log(7));
+        console.log(6);
+      };
+
+      console.log(8);
+      setTimeout(() => {
+        console.log(12);
+        Promise.resolve().then(() => console.log(14));
+      });
+      async1();
+
+      new Promise((resolve) => {
+        console.log(9);
+        setTimeout(() => {
+          console.log(10);
+          resolve();
+        });
+      }).then(() => console.log(11));
+
+      console.log(13);
+      // 8 1 3 5 6 9 13, 7 4 2, 12 14, 10 11
+
+      // 同步任务: 8 1 3 5 6 9 13
+      // 微任务队列: [ 7 4 2 ]
+      // 宏任务队列: [ [12, 微任务14], [10, 微任务11] ]
+
+      // Contrast
+      // 对比
+      // [promise4-综合](file:///Users/xiawu/work/personal/front-end/8-penetrate/1-FRONTEND/1-JS/0-Promise/promise4-综合.html)
+      // [promise6-综合2](file:///Users/xiawu/work/personal/front-end/8-penetrate/1-FRONTEND/1-JS/0-Promise/promise6-综合2.html)
+      // [async-2](file:///Users/xiawu/work/personal/front-end/8-penetrate/1-FRONTEND/1-JS/0-Promise/async2.html)
+    </script>
+  </body>
+</html>

@@ -1,0 +1,1297 @@
+###### 2024-03-01
+
+- 1
+- `appointment 预约 约会 n`
+- _【 make an appointment. 预约 】_
+- _【 have an appointment. 有一个预约 或 有一个约会 】_
+- -
+- **【 Can you 【 make an appointment 】【 for 】 me 【 with 】 the 【 dentist 】 【 for 】 tomorrow. 你能帮我预约明天的牙医吗？ 】**
+- // -- dentist 牙科医生 牙医症所
+- // -- would like to. = want to.
+- > // EE: dentist: A person whose job is treating people's teeth.
+- -
+- **【 I'd like to 【 make an appointment 】 【 with 】 Dr.Brown, please. 我想和布朗医生预约一下 】** // with
+- **【 I would like to 【 make an appointment 】 【 to see 】 Dr.William. 我想要预约看诊威廉医生 】** // to see
+- -
+- **【 I 【 made an appointment 】 for next week to discuss the project. 我预约了下周讨论这个项目 】**
+- **【 I 【 have an appointment 】 at 3 pm. 我下午 3 点有个约会 】** // have an appointment.
+-
+-
+-
+-
+- 2
+- `inhibit 抑制 v`
+- `prohibit 禁止 v`
+- `inhabit 居住于 栖息于 v`
+- `exhibit 炫耀 展览`
+- _【 art exhibition. 艺术展览 】_
+- _【 prohibit doing sth. 禁止做某事 】_
+- _【 prevent sb from doing sth. 阻止某人做某事 】_
+- > // EE: prohibit: to 【 officially 】 refuse to allow something. 正式拒绝允许某件事
+- > // EE: inhibit: to 【 slow down 】 a 【 process 】 or the growth of something.
+- > // EE: inhabit: to live in place.
+- -
+- inhibit
+- **【 High temperatures 【 inhibit 】 bacteria/bacterial growth. 】**
+- -
+- prohibit
+- _【 prohibit doing sth. 禁止做某事 】_
+- **【 The law 【 prohibit smoking 】in public places. 】**
+- **【 Parking is 【 prohibited 】 in this area. 】**
+- **【 Never do what is prohibited by law. 永远不要做法律禁止的事情 】**
+- -
+- inhabit
+- _【 tropical forest. 热带雨林 】_
+- **【 They 【 inhabit 】 the 【 tropical forest 】. 】**
+- **【 The buildings is now 【 inhabited 】 by birds. 】**
+- // 【 tropical forest. 热带雨林 】
+- // 【 primeval forest. 原始森林 】
+- // -
+- // 【 primitive values. 原始值 】
+- // 【 primitive man. 原始人 】
+- // 【 primitive culture. 原始文化 】
+- // 【 primeval forest. 原始森林 】
+- // -
+- // 【 human civilization. 人类文明 】
+- // 【 aline civilization. 外星文明 】
+- **【 Fire is 【 an essential part of 】【 human civilization 】. 火是【人类文明】的【重要组成部分】 】**
+- -
+- exhibit
+- _【 art exhibition. 艺术展览 】_
+- // The teacher took the students to an 【 art exhibition 】. 老师带学生们去参观了一个艺术展
+- -
+- _【 prevent sb from doing sth. 阻止某人做某事 】_
+- **【 We need to prevent children from playing with fire. 我们需要防止孩子们玩火 】**
+-
+-
+-
+-
+- 3
+- `schedule 安排v 预定v 工作计划n 日程安排n`
+- _【 make a schedule. 制定时间表 】_
+- _【 make a goal. 制定一个目标 】_
+- _【 make an appointment. 预约 】_
+- -
+- 【 make a good work schedule. 做好工作计划 】
+- 【 make a schedule. 制定一个时间表 】
+- 【 set up a schedule. = make a schedule. 制定一个时间表 】
+- -
+- - 【 check the schedule. 查看日程 】
+- -
+- // `ahead of schedule. 提前`
+- // `behind schedule. 落后于计划`
+- // `1. We finished the work 【 ahead of the schedule 】. 我们提前完成了工作`
+- // `2. The flight was 【 behind the schedule. 】 航班晚点了 `
+- -
+- **【 What's your schedule like next week. 你下周的日程安排如何？ 】**
+- **【 What's on your schedule. 你的日程安排是什么 】**
+- -
+- **【 The schedule is tight. 日程安排很紧 】**
+- **【 I have a full schedule. 我的日程很满 】**
+- **【 I'm already behind the schedule. 我已经落后于进度了 】**
+- -
+- `I need to schedule a meeting 【 with 】 my boss. 我需要安排与我老板的会议` // schedule 安排 v
+- `I need to schedule a meeting 【 for 】 my boos. 我需要为我的老板安排一个会议` // schedule 安排 v
+- // -- on schedule. 按计划 按时
+- // -- The project is on schedule. 项目按计划进行
+- // -- The train arrived on schedule. 火车按时到达
+-
+-
+-
+-
+- 4
+- `succeed 成功 v`
+- `success 成功 n` // TIPS: Pay attention to the pronunciation of 'succeed' and 'success'
+- `successful 成功 adj`
+- `fail 失败 v`
+- `failure 失败n 失败的人n`
+- `failed 失败adj / v的过去式`
+- -
+- **【 `succeed in doing sth. 成功做成某事` 】**
+- **【 He finally has【 succeeded in achieving 】 his goal. 最终成功地实现了他的目标 】** // ----- Present Prefect Tense.
+- **【 I finally 【 succeeded in passing 】 the exam. 我终于成功通过了考试 】** // -------------- Simple Past Tense.
+- // finally -> 'Simple Past Tense'. or 'Present Perfect Tense'. 一般过去时/现在完成时
+- // achieve a goal. 实现目标
+- // tense 时态 n 紧张的 adj
+- -
+- **【 If you persist, you will 【 succeed 】. 】** // --------- v -> 注意 will 后面接 动词
+- **【 If you persist, you will be 【 successful 】. 】** // --- adj
+- **【 If you persist, you will achieve 【 success 】. 】** // - n
+- -
+- **【 He is a very 【 successful 】 businessman .他是一个非常成功的商人 】**
+- **【 hard work is a key to 【 success 】. 努力工作是成功的关键 】** // the key to. ...关键
+- -
+- -
+- **【 As a 【 failure 】, I have a 【 failed 】 business experience. 做为一个失败者，我有一段失败的经商经历 】**
+- **【 【 failure 】 is the mother of 【 success 】. 失败是成功之母 】**
+- **【 The 【 probability 】 of 【 failure 】 is very low. 【失败】的【概率】很低 】**
+-
+- AA
+- `persist in doing sth. 坚持做某事`
+- `persist 坚持 v`
+- `persistence 坚持 n`
+- _【 long-term persistence. 长期坚持 】_
+- _【 lose weight. 减肥 】_
+- _【 persist in doing sth. 坚持做某事 】_
+- **【 【 Lose weight 】 require 【 long-term persistence 】. 减肥需要长期坚持 】**
+- **【 We should 【 persist in exercising 】 and learning. 我们应该坚持锻炼和学习 】**
+- -
+- **【 If you persist, you will 【 succeed 】. 】** // --------- v -> 注意 will 后面接 动词
+- **【 If you persist, you will be 【 successful 】. 】** // --- adj
+- **【 If you persist, you will achieve 【 success 】. 】** // - n
+
+###### 2024-03-05
+
+- 1
+- `profession 职业 行业 n`
+- `professor 教授 讲师 n`
+- `professional 职业的 专业的 adj / 专家 n`
+- proposal 求婚 建议 n ------【 make a proposal. 求婚/提出建议 】
+- purpose 目的 意图
+- occupation 职业 ------- 一般职业
+- profession 职业 ------- 专业性较强的职业，需要经过训练才能完成的职业
+- > // EE: profession: Any type of work that needs 【 special 】 training or a 【 particular 】 skill.
+- > // EE: professional: relating to work that needs special training or education.
+- _【 noble profession. 崇高的职业 】_
+- _【 legal profession. 法律职业 】_ // legal major. 学校里的法律专业
+- _【 sometime professor. 曾经的教授 】_
+- _【 health professional. 健康专家 】_ // ----- n
+- _【 professional staff. 专业人员 】_ // ------ adj
+- _【 professional skill. 专业技能 】_ // ------ adj
+- _【 professional equipment.专业设备 】_ // - adj
+- _【 make a proposal. 求婚/提出建议 】_
+- **【 【 Since ancient times 】, teaching has been a 【 noble profession 】. 自古以来，教书就是一份高尚的【职业】 】** // 职业
+- **【 In this 【 profession 】, women 【 outnumber 】 men by two to one. 在这个【行业】，女性人数是男性的两倍 】** // 行业
+- **【 The four people have different 【 professions 】. 这四个人有着不同的【职业】 】**
+- 【 He was 【 promoted 】 from 【 associate professor 】 to 【 professor 】. 】
+- **【 He was a 【 sometime professor 】 of 【 physics 】 at the university. 他曾是该大学的物理学教授 】**
+- **【 The man standing in front of the whiteboard is a 【 professor 】. 站在白板前面的男人是一位教授 】**
+- -
+- **【 Builder should wear 【 professional equipment 】 to protect themselves. 建筑工人需要穿着专业装备来保护自己 】**
+- **【 She is a 【 professional archer 】 who always shoots with high 【 accuracy 】. 她是一名职业射箭手，总是射得很准 】**
+- **【 Adults take 1 vegetarian 【 capsule 】 daily with water, or as directed by your 【 health professional 】. 】**
+- -
+- purpose
+- **【 The 【 purpose 】 of this meeting is to discuss our marketing 【 strategy 】. 这次会议的目的是讨论我们的营销策略 】**
+- -
+- proposal
+- `make a proposal. 求婚/提出建议`
+- **【 He 【 made a proposal 】 to his girlfriend. 他向他的女朋友求婚了 】**
+- **【 She accepted his marriage 【 proposal 】. 它接受了他的求婚 】**
+- -
+- // -- since ancient times. 自古以来
+- // -- outnumber 多于 v
+- // -
+- // -- physics 物理学
+- // -- economics 经济学
+- // -
+- // -- archer 弓箭手
+- // -- accuracy 精确度 准确度 n
+- // -- relate to. 涉及 有关
+- // -- strategy 策略 战略
+- // -- capsule 胶囊
+- // -
+- // purpose 目的 意图
+- // strategy 策略 战略
+-
+-
+-
+-
+-
+-
+- 2
+- `relevant 相关的 adj`
+- `relate 涉及 联系 v`
+- `related 有关的 相关的 有联系的 adj`
+- _【 relate to. 涉及 】_
+- _【 be related to. 与...有关 】_
+- -
+- _【 relevant skills. 相关技能 】_
+- _【 relevant experience. 相关经验 】_
+- _【 relevant field. 相关领域 】_
+- _【 relevant issues. 相关问题 】_
+- _【 relevant market. 相关市场 】_
+- -
+- _【 relevant skills. 相关技能 】_
+- _【 professional skill. 专业技能 】_
+- _【 professional equipment. 专业设备 】_
+- -
+- _【 relevant filed. 相关领域 = related field. 】_ = related field. 相关领域
+- _【 related filed. 相关领域 】_ = relevant field. 相关领域
+- late 晚的 迟的 adj / adv
+- relate 联系 涉及 v
+- -
+- **【 Do you have any 【 relevant skills and experience 】【 relate to 】 front-end development? 有【涉及】前端的【相关】技能和相关经验? 】**
+- **【 Do you have any 【 relevant experience 】 【 in 】 using the React framework? 您是否有使用 react 框架的相关经验？ 】**
+- **【 Do you have any questions about the 【 position 】? 你对该【职位】有任何疑问吗？ 】**
+- // front-end development. 前端开发
+- -
+- **【 His illness 【 is related to 】his 【 unhealthy 】【 lifestyle 】. 他的病与他不健康的【生活方式】【有关】 】**
+- **【 The problem may 【 be related to 】 the 【 software 】 update. 这个问题可能与软件更新有关 】**
+- `【 English vocabulary related to illness. 生病相关的英语词汇 】`
+- `【 Vocabulary related to coding. 与编码有关的词汇 】`
+- // -- software 软件
+- // -- hardware 硬件
+- // -
+- // -- healthy 健康的 adj
+- // -- health 健康 n
+- // -
+- // -- lifestyle 生活方式 n
+
+###### 2024-03-06
+
+- 1
+- `model 模型 模特` // ------------- 【 role model. 榜样 】 // v-model
+- `module 模块` // ---------------- 【 open source module. 开源模块 】 【 main module. 主要模块 】
+- `medal 奖牌 奖章` // ------------- 【 gold medal. 金牌 】 【 silver medal. 银牌 】 【 bronze model. 铜牌 】
+- `metal 金属` // ----------------- 【 rare metal. 稀有金属 】
+- `mode 模式 方式`
+- _【 open source module. 开源模块 】_
+- _【 open source code. 开源代码 】_
+- _【 source code analysis. 源码分析 】_
+- _【 main module. 主要模块 】_
+- -
+- _【 form of. ...的形式 】_
+- _【 in the form of. 以...的形式 】_
+-
+- AA.
+- medal
+- 1. **【 This 【 model 】 is our 【 role model 】, she won the 【 second prize 】 which includes a 【 silver medal 】 and 【 a large amount of 】 【 cash bonus 】. 这个模特是我们的榜样，她获得了二等奖，包含一枚银牌和大量现金奖金 】**
+- **【 The 【 model 】【 won 】 the gold 【 medal 】. 这个模特获得了金牌 】**
+- **【 The 【 second prize 】 is a 【 silver medal 】 and a large 【 cash 】【 bonus 】. 二等奖是一枚银牌和大量现金奖金 】**
+- **【 She received a 【 bonus 】 【 as 】 a 【 reward 】 【 for 】 her hard work. 她因为努力工作而获得了奖金作为奖励 】**
+- **【 The 【 bonus 】 was given 【 in the form of 】 【 cash 】. 奖金以现金的形式发放 】**
+- // -- first prize. 一等奖
+- // -- second prize. 二等奖
+- // -- third prize. 三等奖
+- // -- _【 grand prize. 大奖 】_ // grand brand
+- // -- _【 Nobel Prize. 诺贝尔奖 】_
+- // ---- grand 大 宏大的
+- // ---- brand 品牌
+- // -
+- // -- gold medal. 金牌
+- // -- silver medal. 银牌
+- // -- bronze medal. 铜牌
+- // -- _【 medal of honor. 荣誉勋章 】_ // honor 荣誉 n
+- // -
+- // -- rare metal. 稀有金属
+- // -- rare species. 稀有物种
+- // -- rare resource. 稀有资源
+- // -
+- // -- rare resource. 稀有资源
+- // -- natural resource.
+- // -- marine resource.
+- // -- forest resource.
+- // -
+- // -- rear view mirror. 后视镜
+- // -- rear view camera. 后视摄像头
+- // -- rear camera. 后置摄像头
+- // -- front facing camera. 前置摄像头
+- // -
+- // -- _【 bonus 奖金 】_
+- // -- _【 reward 奖励 】_
+- // -- _【 salary 薪水 】_ ---------- 固定的，定期支付的 工资 // salary -> salaries
+- // -- _【 wage 工资 】_ ------------ 按小时，工作量支付的 工资
+- // -- _【 benefit 福利 】_
+- // -- _【 performance 绩效 表演 】_
+- // -- **【 【 Performance 】 affects employees' 【 salaries 】 and 【 bonus 】. 绩效影响员工的薪水和奖金 】**
+- // -- **【 The company's【 benefit 】includes【 performance bonuses 】 and【 medical insurance 】. 福利包括绩效奖金和医疗保险 】**
+- // -- **【 The company offers 【 generous 】【 benefits 】 to its 【 employees 】. 公司为员工提供丰厚的福利 】**
+- // -- // 注意 employee's 和 employees'
+- // -- // Performance affects the salary of employee. 绩效影响者员工的薪水
+- // -
+- // -- cash 现金
+- // -- cache 缓存
+- // -- win/won 赢
+- // -
+- // -- performance bonus. 绩效奖金
+- // -- medical insurance. 医疗保险
+-
+- BB.
+- module
+- `【 open source module. 开源模块 】`
+- `【 open source code. 开源代码 】`
+- `【 source code analysis. 源码分析 】`
+- **【 Our project uses an 【 open source module 】 to 【 enhance 】 【 functionality 】. 我们的项目使用了一个开源模块来增强功能 】**
+- // -- functionality. 功能性 // function + ality
+- // -- enhance 增强 v
+- // -- enhancer 增强器 n
+-
+- CC.
+- model
+- **【 The new 【 model 】 of the car has improved 【 fuel efficiency 】. 这款汽车的新模型提高了燃油效率 】** // model 模型
+- **【 She is a 【 successful 】 【 model 】. 她是一个成功的模特 】** // model 模特
+- **【 The 【 model 】【 won 】 the gold 【 medal 】. 这个【模特】获得了【金牌】 】** // model 模特
+- // -- _【 successful 成功的 adj 】_
+- // -- _【 success 成功 n 】_
+- // -- _【 succeed 成功 v 】_ // succeed in doing sth.
+- // -- _【 failed 失败的 adj 】_
+- // -- _【 failure 失败 失败的人 n 】_
+- // -- _【 fail 失败 v 】_
+- // -
+- // -- _【 work efficiency. 工作效率 】_
+- // -- _【 fuel efficiency. 燃油效率 】_
+- // -- efficient 有效率的 adj
+- // -- efficiency 效率 n
+- // -- √ **【 【 Successful people 】 have a high【 work efficiency 】. 成功人士的工作效率都很高 】**
+- // -- √ **【 The 【 work efficiency 】 of 【 successful people 】 is always high. 成功人士的工作效率都很高 】**
+-
+- DD.
+- `succeed in doing sth. 成功做成某事`
+- **【 He finally has 【 succeeded in achieving 】 his 【 goal 】. 最终成功地实现了他的目标 】**
+- **【 As a 【 failure 】, I have a 【 failed 】 business experience. 做为一个失败者，我有一段失败的经商经历 】**
+- **【 【 Failure 】 is the mother of the 【 success 】. 失败是成功之母 】**
+- // If you persist, you will succeed.
+- // If you persist, you will achieve success.
+- // If you persist, you will be successful.
+- // -
+- // -- goal 目标 ----------- ( 用的更多和更广泛 ) 长期的目标
+- // -- target 目标 --------- 短期的目标
+- // -
+- // -- achieve / achieving 实现
+-
+- EE.
+- `form 表单 形态 形式`
+- `【 in the form of. 以...的形式  】`
+- `【 form of. ...的形式 】`
+- **【 Water has three 【 forms 】: gas, solid, liquid. 】** // form 形态
+- **【 The 【 bonus 】 was given 【 in the form of 】 【 cash 】. 奖金以现金的形式发放 】** // in the form of.
+- **【 Swimming is a good 【 form of 】 exercise. 游泳是很好的锻炼方式 】** // form of. // form 形式
+- **【 We have introduced two 【 form of 】 code reused in Vue. 】** // form of.
+- // -- 【 liquid 液体 】
+- // -- 【 fluid 液体 】
+- // -- 【 sap 植物的汁液 】 【 slap 扇耳光 】
+- // -- exercise 锻炼 // TIPS: Pay attention to the pronunciation of the 'exercise'.
+-
+-
+-
+-
+-
+-
+- 2
+- `【 source 来源 源头 】`
+- `【 resource 资源 资料 】`
+-
+- _【 source of. ...的来源 】_
+- -
+- _【 open source code. 开源代码 】_
+- _【 open source module. 开源模块 】_
+- _【 source code analysis. 源码分析 】_
+-
+- > 【 water source. 水源 】
+- > 【 power source. 电源 】
+- > 【 primary source. 主要来源 】
+- > // pure water. 纯净水
+- > // pure gold. 纯金
+- -
+- _【 natural resource. 自然资源 】_
+- _【 marine resource. 海洋资源 】_
+- _【 forest resource. 森林资源 】_
+- _【 rare resource. 稀有资源 】_
+- _【 mineral resource. 矿产资源 】_
+- -
+- _【 rare resource. 稀有资源 】_
+- _【 rare species. 稀有物种 】_
+- _【 rare metal. 稀有金属 】_ // metal medal model module
+- -
+- _【 rear view mirror. 后视镜 】_
+- _【 rear view camera. 后视摄像头 】_
+- _【 front facing camera. 前置摄像头 】_
+- _【 rear camera. 后置摄像头 】_
+- -
+- _【 natural scenery. 自然景观 】_
+- _【 natural resource. 自然资源 】_
+- _【 natural gas. 天然气 】_
+- -
+- _【 natural gas. 天然气 】_
+- _【 regular gas. 普通天然气 】_
+- _【 premium gas. 高级天然气 】_
+- -
+- _【 gas pump. 加油机 】_
+- _【 gas tank. 油箱 】_
+- _【 gas cap. 油箱盖 】_
+- _【 gas nozzle. 加油枪 】_
+- -
+- **【 a new job can be 【 a huge source of 】【 stress 】 and 【 anxiety 】. 一份新工作可能是【压力】和【焦虑】的巨大【来源】 】** // source
+- **【 What is their main 【 source 】 of income? 他们的主要收入来源是什么？ 】** // source
+- -
+- **【 The world's 【 resource 】 are 【 finite 】. 世界的【资源】是【有限】的 】** // resource
+- **【 We depend on the Earth's 【 resources 】 to survive. 我们依靠地球提供的资源生存 】** // resource
+- // -- stress 压力 n 强调 v
+- // -
+- // -- `anxiety 焦虑 n`
+- // -- `anxious 焦虑的 adj`
+- // -- _【 be anxious about sth. 对某事感到焦虑 】_
+- // -- **【 The 【 employees 】 【 are very anxious about 】 【 unemployment 】. 员工们对失业感到十分焦虑 】**
+- // -
+- // -- 【 finite 有限的 】 // TIPS: Pay attention to the pronunciation of 'finite'.
+- // -- 【 infinite 无限的 】 // TIPS: Pay attention to the pronunciation of 'infinite'.
+- // -- **【 Time is 【 finite 】, knowledge is 【 infinite 】. 时间有限，知识无限 】**
+-
+- AA.
+- `employee 员工`
+- `employer 雇主 老板`
+- `employment 雇佣`
+- `unemployment 失业`
+- // interviewee 被面试者
+- // interviewer 面试官
+- // interview 面试 v
+- _【 result in. 导致 】_
+- _【 be anxious about sth. 对某事感到焦虑 】_
+- **【 【 employer 】 as a 【 interviewer 】 is 【 interviewing 】 【 candidates 】. 雇主作为面试官，正在面试候选人 】**
+- **【 The 【 personnel director 】 is interviewing the 【 sales director 】. 人事总监正在面试销售总监 】**
+- // -- 【 personnel director. 人事总监 】
+- // -- 【 sales director. 销售总监 】
+- // -- candidate 候选人
+- -
+- _【 The company offers 【 generous 】【 benefits 】 to its 【 employees 】. 公司为员工提供丰厚的福利 】_
+- // -- generous 慷慨的
+- // -- benefit 福利
+- // -- salary wage performance bonus reward
+- -
+- **【 The 【 employer 】【 fired 】 his 【 employees 】, 【 resulting in 】 【 a large number of 】 employees losing their jobs. 】**
+- **【 The 【 employees 】 【 are very anxious about 】 【 unemployment 】. 员工们对失业感到十分焦虑 】**
+- **【 He lost his job in the wave of 【 unemployment 】. 在失业潮中，他丢掉了工作 】**
+- The greedy 【 employer 】 exploits his workers for his own profits. 这个贪婪的老板为了自己的利益剥削工人
+- // -
+- // -- a number of. 许多 一定数量的
+- // -- _【 a large number of. 大量的 】_
+- // -- **【 【 A number of students 】 are 【 absent 】 today. 今天有许多学生缺席 】**
+- // -
+- // -- _【 lose weight. 减肥 】_
+- // -- _【 long-term. 长期的 】_
+- // -- _【 long-term persistance. 长期坚持 】_
+- // -- √ **【 【 losing weight 】 require 【 long-term 】 【 persistence 】. 减肥需要长期的坚持 】**
+- // -- X **【 lose weight should a long time persist. 减肥需要长期的坚持 】**
+- // -- lose lost losing 失去 v
+- // -- win is the opposite lose.
+- // -- persistence 坚持 n
+- // -- persist 坚持 v
+-
+- BB.
+- `stress 压力n 强调v`
+- _【 work stress. 工作压力 】_
+- _【 mental stress. 精神压力 】_ // physical health. // mental health.
+- _【 stress test. 压力测试 】_
+- _【 impact on. = affect = effect. 影响 】_
+- **【 【 Work stress 】 can have a 【 negative 】 【 impact on 】 your health. 】**
+- **【 He is under a lot of 【 stress 】 because he has so much work to do. 有太多的工作等着做，他感到压力巨大 】** // stress 压力 n
+- **【 I must 【 stress 】 that everything I've told you is strictly confidential. 我必须强调，一切都要严加保密 】** // stress 强调 v
+- // -- affect 影响
+- // -- effect 影响 效果
+- // -- impact on. 影响
+- // -- negative 消极的 负面的
+- // -- positive 积极的 正面的
+-
+- CC.
+- `negative 负面的 消极的`
+- `positive 正面的 积极的`
+- _【 positive attitude. 积极的态度 】_
+- _【 negative emotion. 负面【情绪】 】_
+- _【 a positive mindset. 积极的【心态】 】_
+- -
+- _【 negative emotion. 负面情绪 】_
+- _【 negative image. 负面形象 】_
+- -
+- _【 negative charge. 负电荷 】_
+- _【 positive charge. 正电荷 】_
+- -
+- _【 positive mindset. 积极的【心态】 】_
+- -
+- **【 A 【 positive attitude 】 helps us to 【 defeat 】【 negative emotions 】 and 【 maintain 】 【 positive mindset 】. 】**
+- **【 He decided to 【 keep away from 】 the 【 negative influences 】 to maintain his 【 positive mindset 】. 】**
+- // -
+- // -- defeat 打败 战胜 v
+- // -
+- // -- keep away from. 远离
+- // -- mindset 心态
+- // -- decide to do. 决定做某事
+- // -- maintain 保持 v
+- // -
+- // -- motion 运动 n
+- // -- emotion 情绪 情感 n
+- // -- emotional 情绪的 adj
+- // -- _【 emotional intelligence. 情商 】_
+- // -- _【 a sense of ownership. 主人翁意识 】_
+- // -- **【【 positive emotions 】 can help us to improve our【 emotional intelligence 】. 【积极的情绪】有助于我们提高【情商】 】**
+-
+-
+-
+-
+-
+-
+-
+- 3
+- `value 值 价值`
+- `valuable 有价值的 adj`
+- `invaluable 无价的 adj`
+- -
+- `treasure 金银财宝 宝藏`
+- `chest 胸 箱子`
+- _【 a chest of. 一箱 】_
+- **【 【 pirate ship 】 and 【 pirate flag 】 are both 【 invaluable 】 to 【 pirates 】. 海盗船和海盗旗对海盗来说都是无价的 】**
+- **【 The 【 pirate 】 found 【 a chest full of 】 【 invaluable 】 【 treasures 】.【海盗】发现了【一箱】【价值连城】【珍宝】 】**
+- -
+- **【 Her advice was 【 invaluable 】 to me during that difficult time. 在那个困难时期，她的建议对我来说是无价的 】**
+- **【 Her 【 presence 】 at the meeting was greatly appreciated, as she brought her 【 valuable 】【 insight 】 to the discussion. 】**
+- // -- insight 洞察力 眼光 见解 n
+- // -- presence 在场 出席 n
+- // -- pirate 海盗
+- // -- treasure 金银财宝 宝藏
+-
+- AA.
+- `pirate 海盗`
+- _【 pirate ship. 海盗船 】_
+- _【 pirate flag. 海盗旗 】_
+- **【 【 pirate ship 】 and 【 pirate flag 】 are both 【 invaluable 】 to 【 pirates 】. 海盗船和海盗旗对海盗来说都是无价的 】**
+- **【 The 【 pirate 】 found 【 a chest full of 】 【 invaluable 】 【 treasures 】.【海盗】发现了【一箱】【价值连城】【珍宝】 】**
+-
+- BB.
+- `insight 洞察力 眼光 见解`
+- _【 business insight. 商业洞察力 】_
+- _【 market insight. 市场洞察力 】_
+- **【 He has 【 keen 】 【 market insight 】. 他有【敏锐的】【市场洞察力】 】**
+- // -- keen 敏锐的 adj
+
+###### 2024-03-11
+
+- 1
+- `sign 签名v 标志n `
+- `assign 分配 v`
+- `resign 辞职 v` // 【 resignation 辞职 n 】 // TIPS: Pay attention to the pronunciation of the 'resign'.
+- `design 设计 v/n`
+- > 【 resignation application. 离职申请 n 】
+- > 【 resignation letter. 辞职信 】
+- -
+- `sign 签名v 标志n`
+- `signature 签名n`
+- _【 sign a contract. 签合同 】_
+- _【 digital signature. 数字签名 】_
+- _【 sign up. 注册 】_
+- _【 sign in. 登陆 】_
+- _【 sign out. 登出 】_
+- -
+- `assign 分配 v`
+- `assignment 任务 作业 n`
+- _【 be assigned to. 被分配给... 】_
+- homework 作业 -------- 英式英语
+- assignment 作业 ------ 美式英语
+- task 任务
+- -
+- `resign 辞职` -------- 比较正式
+- `quit 辞职` ---------- 比较口语
+- quite 相当的
+- quiet 安静的
+- _【 resign from. 辞职 】_
+- -
+- `design 设计 v/n`
+- _【 design pattern. 设计模式 】_
+- _【 graphic design. 平面设计 】_
+- _【 adaptive design. 自适应设计 】_
+- -
+- `signal 信号`
+- _【 turn signal. 转向灯 】_
+- _【 full signal. 满信号 】_
+- _【 no signal. 没信号 】_
+- _【 four bars of signal. 四格信号 】_
+- _【 My phone signal is not good. 我的电话信号不好 】_
+- -
+- assign
+- **【 assign a value to an array. 】**
+- **【 assign an initial value of 1 to your variable. 】**
+- -
+- **【 I will assign some tasks to you. 】**
+- **【 I have an assignment for you. 】**
+- **【 The teacher assigned each of children a different task. 】**
+- -
+- be assigned to
+- **【 Except for the first parameter, the rest parameters 【 are all assigned to 】 'recursion' function. 】**
+- -
+- sign
+- **【 These three road 【 signs 】 telling us we have to go another way. 】**
+- **【 We will 【 contact 】 you to 【 sign 】 the 【 contract 】. 】**
+- // -- contact 联系
+- // -- contract 合同
+- -
+- signature
+- **【 Each person's 【 signature 】 is unique. 】**
+- -
+- resign
+- resign from.
+- **【 I plan to 【 travel 】 after 【 resigning 】. 辞职后我准备去旅行 】**
+- **【 After much consideration, the employee 【 resign 】 from his job. 深思熟虑后，这位员工辞职了 】**
+- **【 He 【 resigned from 】 his job to do 【 web design 】. 他辞职去做了 web 设计 】**
+- // -- travel 旅行 ------ 长时间的旅行
+- // -- trip 旅行 -------- 短时间的旅行
+-
+-
+-
+-
+-
+-
+- 2
+- `kindergarten 幼儿园`
+- `primary school. 小学`
+- `middle school. 中学`
+- `junior high school. 初中`
+- `senior high school. 高中`
+- `university 大学`
+- `college 学院 大学`
+- _【 primary school student. 小学生 】_
+- _【 middle school student. 中学生 】_
+- _【 junior high school student. 初中生 】_
+- _【 senior high school student. 高中生 】_
+- _【 college student. = university student. 大学生 】_ // college student 用的比较多
+-
+- `Bachelor's degree. 学士学位`
+- `Master's degree. 硕士学位`
+- `Doctor's degree. 博士学位`
+- `bachelor 学士 单身汉`
+- `master 硕士 主人 掌握`
+- `doctor 博士 医生`
+- `【 entrance examination. 升学考试 】`
+- -
+- _【 freshman 大一 】_
+- _【 sophomore 大二 】_ // -- soph + o + more
+- _【 junior 大三 】_ // ----- ju + nior
+- _【 senior 大四 】_ // ----- se + nior
+- -
+- `undergraduate 本科生` // under + graduate
+- `postgraduate 研究生` // post + graduate // post order traversal. 后序遍历
+- `college student. 专科生`
+- `intern 实习生`
+-
+- AA.
+- doctor master
+- **【 His 【 old brother 】 is 【 doctor 】, and he is a 【 master 】. 他哥哥是博士，他是硕士 】**
+- **【 His old brother has a doctor's degree and he has a master's degree. 】**
+-
+- BB.
+- `intern 实习生`
+- `internship 实习期`
+- _【 intern position. 实习岗 】_
+- **【 Interns 】 don't receive 【 salaries 】 during the 【 internship 】 【 period 】. 实习生在实习期没有工资**
+- // -- during 在...期间
+- // -- period 时期 一段时间
+- // -- TIPS: Pay attention to the pronunciation of the word 'period'.
+-
+- CC.
+- `primary 主要的 初级的 小学教育的 adj`
+- _【 primary school. 小学 】_
+- _【 primary source. 主要来源 】_
+- -
+- _【 primary source. 主要来源 】_
+- _【 water source. 水源 】_
+- _【 power source. 电源 】_
+- _【 open source code. 开源代码 】_
+- _【 open source module. 开源模块 】_
+- _【 source code analysis. 源码分析 】_
+-
+- DD.
+- `tutor 家庭教师`
+- `professor 教授`
+- `associate professor. 副教授`
+- `headmaster 男校长`
+- `headmistress 女校长`
+- `vice principal. 副校长`
+-
+-
+-
+- 3
+- `first of all. 首先` ------------ 口语 书面语
+- `firstly 首先 第一` -------------- 书面语
+- `in the first place. 首先 第一` -- 书面语
+- `first up. 首先` ----------------- 更口语化
+- **【 【 Firstly 】, I 【 would like to 】 thank everyone for coming. 首先，我要感谢大家的光临 】**
+- **【 【 First up 】, I'll introduce myself and the we can start the discussion. 】**
+- // -- would like to. = want to. 想要
+- // -- would like to. 更委婉
+- // -
+- // -- First of all, adding new items. 首先，添加新条目
+- // -- Firstly, adding new items. 首先，添加新条目
+- // -- First up, adding new items. 首先，添加新条目
+-
+-
+-
+-
+-
+-
+- 4
+- `appreciate 欣赏 感激 v`
+- `pleasure 高兴 愉快 n`
+-
+- AA.
+- appreciate
+- **【 Appreciate your 【 encouragement 】. 】**
+- **【 Appreciate your 【 suggestion 】. 】** // TIPS: Pay attention to the pronunciation of "suggestion"
+- **【 Appreciate your 【 invitation 】. 】**
+- **【 Appreciate your 【 cooperation 】. 】**
+- **【 I really 【 appreciate 】 your help. 我真的很感激你的帮助 】**
+- **【 I 【 appreciate 】 your service to help me to 【 keep healthy 】. 我感谢你的服务，帮助我保持健康 】** // keep health.
+- **【 We 【 appreciate 】 your 【 cooperation 】 to 【 make payment 】. 感谢您配合付款 】**
+- **【 I really appreciate it. 我真的很感激 】**
+- // -- You are welcome, It's my pleasure. 别客气，这是我的荣幸
+- // --【 Thank you so much for learning English with me. 】
+- // --【 Thank you for your cooperation. 谢谢您的合作 】
+- // --【 Thank you for your encouragement. 】
+- // --【 Thank you for calling me 】
+-
+- BB.
+- pleasure
+- **【 You are welcome, It's my pleasure. 别客气，这是我的荣幸 】**
+- **【 It was a pleasure to meet you. 认识你是我的荣幸 】**
+- **【 It’s been a pleasure meeting you. 】**
+- -
+- **【 Reading is my 【 greatest 】 pleasure. 阅读是我最大的乐趣 】**
+- // -- great 伟大的 大的 大
+- // -- greatest 最伟大的 最大的
+- // -- `greatest = biggest 最大的`
+- // -- _【 greatest regret. 最大的遗憾 】_
+- // -- _【 My greatest/biggest regret is not marring her. 我最大的遗憾是没有娶她 】_ // marring 是动名词形式
+- // -- _【 My greatest/biggest regret is not to marry her. 我最大的遗憾是没有娶她 】_
+- // -
+- // -- _【 What's your 【 biggest 】 【 accomplishment 】 from this job? 这份工作最大的【成就】是什么？ 】_
+- // -- _【 What's your 【 greatest 】 【 achievement 】 from the work? 你在工作中最大的成就是什么？ 】_
+- // -
+- // -- Watching TV is our only pleasure. 看电视是我们惟一的乐趣
+- // -- work and pleasure. 工作与娱乐
+
+###### 2024-03-16
+
+- 1
+- `waste 浪费v 垃圾n` ------ 用的最广
+- `garbage 垃圾` ---------- 1.garbage / 2.garbage can.
+- `trash 垃圾` ------------ 1.trash / 2.trash can.
+- `rubbish 垃圾`
+- `litter 垃圾n 乱扔v` ---- 公共场所的小块垃圾
+- `littering 乱丢废物n / vIng`
+- _【 junk food. 垃圾食品 】_
+- _【 spam email. 垃圾邮件 】_ // spam 垃圾邮件/不可数名词
+- -
+- **【 recyclable waste. 可回收垃圾 】**
+- **【 take out the garbage. 倒垃圾 】**
+- -
+- _【 trash can. 垃圾桶 】_
+- _【 garbage can. 垃圾桶 】_
+- _【 bin 垃圾箱 箱子 】_
+- _【 dustbin 垃圾箱 垃圾桶 // 指户外的垃圾箱 】_
+- -
+- _【 watering can. 喷壶 】_
+- _【 trash can. 垃圾桶 】_
+- _【 garbage can. 垃圾桶 】_
+- -
+- _【 littering is prohibited. 禁止乱扔 】_
+- _【 take out the garbage. 倒垃圾 】_
+- **【【 takeing out garbage 】 does not mean 【 littering 】. 倒垃圾并不意味着乱扔垃圾 】**
+- -
+- **【 【 In principle 】, 【 littering is prohibited 】. 原则上，禁止乱扔垃圾 】**
+- **【 What's the 【 working principle 】 of the 'scoped' attribute on style tag in Vue? 】**
+- // --【 in principle. 原则上 】
+- // --【 working principle. 工作原理 】
+- // -- principle 原则 原理 规范
+- // -
+- // -- prohibit 禁止 v
+- // -- prohibited 禁止的 adj / V 过去式或分词
+-
+- **【 I'm throwing the 【 trash 】 into the 【 trash can 】. 】**
+- // -- I ran for the garden hose and filled the watering can. 我跑去拿花园水管并装满喷壶
+- // -- _【 take out the garbage. 倒垃圾 】_
+- // -- take out the trash.
+- // -- talk rubbish.
+-
+- AA.
+- `recycle 回收利用 v`
+- `recyclable 可回收利用的 adj`
+- _【 recyclable waste. 可回收垃圾 】_
+- _【 paper towel. 纸巾 】_
+- _【 waste paper towel. 废纸巾 】_
+- **【【 Waste paper towels 】 are 【 recyclable waste 】. 废纸巾是可回收垃圾 】**
+- // -- towel 毛巾 纸巾
+- // -- paper towel. 纸巾
+- // -- waste paper towel. 废纸巾
+-
+- BB.
+- `principle 原则 原理 规范 n`
+- _【 in principle. 原则上 】_
+- _【 working principle. 工作原理 】_
+- **【 【 In principle 】, 【 littering 】 is 【 prohibited 】. 原则上，禁止乱扔垃圾 】**
+- **【 What's the 【 working principle 】 of the 'scoped' attribute on style tag in Vue? 】**
+- **【 It's not 【 a matter of 】 money, It's a matter of 【 principle 】. 这不仅仅是钱的问题；这是一个原则问题 】**
+-
+- CC.
+- `take out. 取出 扔掉`
+- _【 take out the garbage. 倒垃圾 】_
+- **【 Remember to 【 take out the garbage 】 when you go out. 出门的时候，记得把垃圾倒一下 】**
+- **【 【 take out 】 your English book from your 【 schoolbag 】. 从书包里取出你的英语书 】**
+-
+-
+-
+-
+-
+-
+- 2
+- `by the weekend. 强调: 在周末之前完成某件事` -------- 最迟在周末
+- `before the weekend. 在周末之前完成某件事` --------- 不包含周末
+- `in the weekend. 强调: 在周末这段时间内发生的事`
+- _【 finish doing sth. 完成做某事 】_
+- **【 I need to complete this project 【 by the weekend 】. 我需要在周末之前完成这个项目 】** （ 最迟在周末 ）
+- **【 I need to complete this project 【 before the weekend 】. 我需要在周末之前完成这个项目 】** （ 周末之前，不包含周末 ）
+- **【 I need to complete this project 【 in the weekend 】. 我需要在周末期间完成这个项目 】**
+-
+- **【 I 【 plan to 】 【 finish reading 】 this book 【 by the weekend 】. 我计划在周末之前读完这本书 】**
+- // -- need to do sth. 需要做某事
+- // -- plan to do sth. 计划做某事
+- // -- _【 finish doing sth. 完成做某事 】_
+
+###### 2024-03-18
+
+- 1
+- `social 社会的 adj`
+- `society 社会 n`
+- _【 social status. 社会地位 】_
+- _【 social media. 社交媒体 】_
+- _【 social welfare. 社会福利 】_
+- -
+- _【 primitive society. 原始社会 】_
+- _【 agricultural society. 农业社会 】_
+- _【 industrial society. 工业社会 】_
+-
+- AA.
+- `agriculture 农业 n` // culture 文化
+- `industry 工业 n`
+- _【 equally important. 同等重要 】_
+- **【 【 Agriculture 】 and 【 industry 】 are 【 equally important 】. 农业和工业同等重要 】**
+- // -- equally 同等地 相等地
+- // -- culture 文化
+- // -- agriculture 农业
+- // --【 equally important. 同等重要 】
+-
+- BB.
+- `culture 文化`
+- `agriculture 农业`
+- _【 culture heritage. 文化遗产 】_ // heritage 遗产
+- **【 【 Agriculture 】 is the 【 foundation 】 of our 【 society 】. 农业是我们社会的基础 】**
+-
+- CC.
+- `status 状态 身份 地位 n`
+- `state 状态 n`
+- `statue 雕像 n`
+- _【 social status. 社会地位 】_
+- _【 statue of liberty. 自由女神像 】_ // liberty 自由 n
+- **【 You can 【 obtain 】 the 【 status 】 of the SDK by listening to the chat event. 通过监听聊天事件来【获取】SDK 的【状态】 】**
+- **【 Statue of Liberty 】 is a famous symbol of America. 自由女神像是美国著名的象征**
+- // -- obtain 获得 v
+-
+-
+-
+-
+-
+- 2
+- `extremely 非常地 极其地 极端地 adv`
+- `extreme 极端的 极度的 adj`
+-
+- _【 extremely important. 极其重要 】_
+- _【 extremely dangerous. 极其危险 】_
+- _【 extremely difficult. 极其困难 】_
+- _【 extremely useful. 非常有用 】_
+- -
+- _【 extreme weather. 极端天气 】_
+- _【 extreme cold. 极度寒冷 】_
+- **【 This 【 mission/task 】 is 【 extremely important 】 and dangerous. 这次任务极其重要也极其危险 】**
+-
+-
+-
+-
+-
+- 3
+- `as well. 也`
+- `as well as. 也 既...又...  以及`
+- `as long as. 只要  和...一样长`
+- -AA.
+- .MT **【 You can come to the meeting 【 as well 】, if you’re interested. 如果你感兴趣的话，你也可以来参加会议 】**
+- AA.
+- _【 as well as. 也 以及 既...又...】_
+- **【 Computers require 【 hardware 】 【 as well as 】 【 software 】. 计算机需要硬件，同时也需要软件 】**
+- **【 He is a mathematician 【 as well as 】 a scientist. 】**
+-
+- BB.
+- _【 as long as. 只要 】_
+- **【 【 As long as 】 you 【 work hard 】, you will 【 succeed 】. 只要努力，就会成功 】**
+- **【 I'll go with you 【 as long as 】 it doesn't rain. 只要不下雨，我就和你一起去 】**
+- // -- succeed 成功 v
+- // -- successful 成功的 adj
+- // -- success 成功 n
+- // -
+- // -- fail 失败 v
+- // -- failed 失败的 adj
+- // -- failure 失败 n
+-
+- CC.
+- _【 as long as. 一样长 】_
+- **【 The road as long as that one. 这条路和那条路一样长 】**
+-
+-
+-
+-
+-
+-
+- 4
+- `specific 具体的 特定的`
+- _【 specific symptom. 具体症状 】_
+- _【 specific example. 具体例子 】_
+- -
+- _【 specific requirement. 具体要求 】_
+- -
+- _【 specific skills. 具体技能 】_
+- _【 specific purpose. 具体目的 】_
+- _【 specific situation. 具体情况 】_
+- _【 specific indicator. 具体指标 】_
+- _【 specific place. 特定地点/具体地点 】_
+- -
+- // EE: specific: 【 relating to 】 one thing and not others; particular
+- // TIPS: Pay attention to the pronunciation of the word 'specific'.
+- **【 What 【 specific symptoms 】 do you have? Please give some 【 specific examples 】. 】**
+- **【 There are several 【 specific indicators 】 of success. 成功有几个【 具体的指标 】 】**
+- // -- require 要求 需要 v
+- // -- requirement 要求 n
+-
+-
+-
+-
+-
+-
+-
+- 5
+- `qualified 合格的 adj`
+- `qualify 合格 v`
+- quality 质量
+- _【 qualified product. 合格的产品 】_
+- _【 product quality. 产品质量 】_
+- **【 We should ensure 【 product quality 】 and 【 produce 】 【 qualified products 】. 】**
+- **【 She is a 【 qualified 】 doctor. 她是一名合格的医生 】**
+
+###### 2024-03-20
+
+- 1
+- `proficient 熟练的 精通的 adj`
+- `proficiency 熟练 精通 n`
+- _【 be proficient in. 精通于... 】_
+- _【 have a proficiency in. 精通于... 】_
+- 【 be proficient in. = have a proficiency in. 】
+-
+- AA.
+- proficient
+- **【 He 【 is proficient in 】 several 【 programming languages 】, 【 including 】 Java, python, Javascript. 】**
+- **【 I am proficient in development language. 】**
+- **【 She is proficient in multiple language. 】**
+- **【 Please answer this question in 【 concise 】 language. 请用简洁的语言回答这个问题 】**
+- // -- _【 be proficient in. 精通于... 】_
+- // -
+- // -- _【 programming language. 程序语言 】_
+- // -- _【 development language. 开发语言 】_
+- // -- _【 concise language. 简洁的语言 】_
+- // -
+- // -- including 多用于举例
+- // -- concise 简洁的
+-
+- BB.
+- proficiency
+- _【 have a proficiency in. 精通于... 】_
+- _【 intermediate proficiency. 中等熟练程度 】_
+- **【 I need to improve my 【 proficiency 】 【 in 】 spoken English. 我需要提高我的英语口语熟练度 】**
+- **【 She has a proficiency in English. 她精通英语 】**
+-
+-
+-
+-
+-
+-
+- 2
+- `and stuff. 等等` --------- 口语，非正式
+- `etc = et cetera 等等` ---- 书面语，正式
+- `and so on. 等等` --------- 介于上面两者之间
+- **【 My job includes 【 typing 】, making phone calls, etc(et cetera). 我的工作包括打字，打电话等等. 】**
+- **【 My job includes typing, making phone calls, 【 and stuff 】. 我的工作包括打字，打电话等等. 】**
+- **【 My job includes typing, making phone calls, 【 and so on 】. 我的工作包括打字，打电话等等. 】**
+- // -
+- // type 打字 v 类型 n
+- // typing 打字 n
+-
+-
+-
+-
+-
+-
+- 3
+- `wealth 财富 n`
+- `health 健康 n`
+- _【 accumulate wealth. 累积财富 】_
+- _【 precious wealth. 宝贵的财富 】_
+- -
+- _【 precious wealth. 宝贵的财富 】_
+- _【 precious gift. 珍贵的礼物 】_
+- _【 precious memory. 珍贵的回忆 】_
+- -
+- _【 physical health. 生理健康 】_
+- _【 mental health. 心理健康 】_
+- _【 mental state. 心理状态 】_
+- -
+- **【【 Physical health 】 and 【 mental health 】 are both 【 precious 】【 wealth 】. 生理健康和心理健康都是宝贵的财富 】**
+- **【 The computer can 【 simulate 】 【 the process of 】 his 【 wealth 】 【 accumulation 】. 计算机可以模拟他财富的积累过程 】**
+-
+- AA.
+- precious
+- _【 precious wealth. 宝贵的财富 】_
+- _【 precious gift. 珍贵的礼物 】_
+- _【 precious memory. 珍贵的回忆 】_
+- **【 This 【 precious gift 】 is her most 【 precious memory 】. 这个珍贵的礼物是她最珍贵的回忆 】**
+- **【【 Physical health 】 and 【 mental health 】 are both 【 precious 】【 wealth 】. 生理健康和心理健康都是宝贵的财富 】**
+-
+- BB.
+- accumulate
+- `accumulation 累积 n`
+- `accumulate 累积 v`
+- `accumulator 累积器 n`
+- _【 wealth accumulate. 财富积累 】_
+- **【 The computer can 【 simulate 】 【 the process of 】 his 【 wealth accumulation 】. 计算机可以模拟他财富的积累过程 】**
+-
+- CC.
+- simulate
+- **【 It can【 simulate 】 the real 【 physical structures 】 such as walls or 【 corridors 】 using different shapes. 】**
+- // -
+- // simulate 模拟
+- // the process of. ...的过程
+- // -
+- // _【 organizational structure. 组织结构 】_
+- // _【 physical structure. 物理结构 】_
+- // _【 data structure. 数据结构 】_
+- // -
+- // `corridor 走廊`
+- // `hallway 走廊`
+
+###### 2024-03-29
+
+- 1
+- `arrive 到达 v`
+- `arrival 到达 n`
+- _【 arrive at. 到达 ---- 小地点 - 机场 车站 等 】_
+- _【 arrive in. 到达 ---- 大地点 - 城市 国家 等 】_
+- -
+- _【 arrival time. 到达时间 】_
+- _【 departure time. 出发时间 】_
+- -
+- **【 We will 【 arrive in 】 China at 6 o'clock, then 【 arrive at 】 Shanghai at 8 o'clock. 】**
+- **【 A computer screen shows 【 arrival 】 and 【 departure 】 times. 电脑屏幕显示出到达和离开的–时间 】**
+- **【 The train 【 arrived 】 on time. 】**
+-
+- AA.
+- `depart 离开 v`
+- `departure 离开 n`
+- 【 depart departure / arrive arrival 】
+- _【 depart from A to B. 离开 A 去 B 】_
+- _【 leave A for B. 离开 A 去 B 】_
+- 【 depart from A to B. = leave A for B. 】
+- **【 We will depart from China to 【 United States 】. 我们将离开中国去美国 】**
+- **【 We will leave China for United States. 我们将离开中国去美国 】**
+- **【 The train will depart from the platform. 火车将要从站台离开 】**
+-
+- BB.
+- `leave somewhere. 离开某地`
+- `leave for somewhere. 离开去某地`
+- `leave A for B. 离开A去B`
+- leave -> left
+- // TIPS: Pay attention to the different pronunciation between 'leave' adn 'left'.
+- **【 She left Shanghai. 她离开了上海 】**
+- **【 She has left for Shanghai. 她已经去上海了 】**
+- **【 She has left Shanghai for Beijing. 她已经离开上海去北京了 】**
+-
+- CC.
+- `leave sth to sb. 把某物留给某人`
+- `leave A for B. 离开A去B`
+- **【 She left some money to her children. 她给孩子们留了一些钱 】**
+- **【 She has left Shanghai for Beijing. 她已经去上海了 】**
+-
+- DD.
+- `on time. 准时`
+- `in time. 及时`
+- _【 go to work. 去上班 】_
+- _【 get to work. 开始工作 】_
+- _【 get off work. 下班 】_
+- -
+- _【 get off work. 下班 】_
+- _【 get off the bus. 下公交车 】_
+- _【 get out of the car. 下出租车 】_
+- **【 I 【 get in 】 a taxi, then 【 get out of 】 the taxi, then 【 get on 】 a train, then 【 get off 】 the tain. 】**
+- **【 Because he 【 got off work 】 【 on time 】, he was able to 【 get home 】 【 in time 】. 因为准时下班，他才能及时赶到家里 】**
+- **【 He 【 got out of 】 the taxi, then 【 got on 】 the bus. 他下了出租车，然后上了公交车 】**
+-
+- EE.
+- `get on/off. 上下比较大的车，可以正常走出来，比如 bus/train/plane`
+- `get in/out of. 上下比较小的车，需要弯腰的车，比如 car/taxi`
+- get in a car. 上车
+- get out of a car. 下车
+- get on the bus. 上公交车
+- get off the bus. 下公交车
+- **【 I 【 get in 】 a taxi, then 【 get out of 】 the taxi, then 【 get on 】 a train, then 【 get off 】 the tain. 】**
+- // -- get up. 起床
+- // -- go to work. 上班
+- // -- get to work. 开始工作
+- // -- get off work. 下班
+- // -- get off bus. 下公交
+-
+-
+-
+-
+-
+-
+- 2
+- `tooth 牙齿`
+- `teeth 复数`
+- `dentist 牙医`
+- `dental 牙齿的 adj`
+- `oral 口腔的 adj`
+- _【 toothpaste 牙膏 】_ // paste 粘贴 v 膏 n
+- _【 toothbrush 牙刷 】_
+- _【 toothpick 牙签 】_
+- -
+- _【 dental floss. 牙线 】_ // floss 丝线
+- _【 dental braces. 牙套 】_
+- _【 dental care. 口腔护理 】_
+- _【 dental office. 牙科诊所 】_ // TIPS: Pay attention to the pronunciation of the 'office'.
+- -
+- _【 oral hygiene. 空腔卫生 】_ // oral 空腔的
+- _【 dental care. 口腔护理 】_
+- -
+- _【 oral medicine. 口服药 】_
+- _【 oral cavity. 口腔 】_
+- _【 oral promise. 口头承诺 】_
+- _【 oral English. 口语 】_
+- -
+- _【 Bluetooth. 蓝牙 】_
+- _【 tooth decay. 蛀牙 】_
+- _【 wisdom teeth. 智齿 】_
+- -
+- _【 toothache 牙痛 n 】_ // tooth + ache
+- _【 headache 头痛 n 】_
+- _【 backache 背痛 n 】_
+- _【 stomachache 胃痛 n 】_ // stomach 胃 // stomach + ache
+- -
+- **【 I 【 squeeze 】 the 【 toothpaste 】 onto the 【 toothbrush 】, then brush my teeth, and then use a 【 toothpick 】 to remove the stuff between my teeth. 我把牙膏挤在牙刷上，然后刷牙，再然后用牙签去掉牙缝里的东西 】**
+- -
+- **【 Both 【 dental braces 】 and 【 dental floss 】 can clean teeth. 牙套和牙线都能清洁牙齿 】**
+- -
+- **【【 Dental care 】 can 【 relieve 】 【 toothache 】. 口腔护理可以减轻牙痛 】**
+- -
+- **【 I'm going to the 【 dental office 】 for 【 dental care 】. 我要去牙科诊所做口腔护理 】**
+-
+- _【 have you ever been to the dentist? 你有去过看牙医吗？ 】_
+- _【 I have never been to the dentist. 我从没看过牙医 】_
+-
+- // -- paste 粘贴 v 膏 n
+- // -- pick 选择 挑选 v n
+- // -
+- // -- floss 丝线
+- // -- loss 失去 损失 n
+- // -
+- // -- lose 失去 v ------ lost
+- // -- loss 失去 n
+- // -
+- // -- 【 squeeze 挤压 n 】
+- // -- // TIPS: Pay attention to the pronunciation of the word 'squeeze'.
+- // -
+- // -- relieve 减轻 缓解 解除 v
+-
+-
+-
+-
+-
+-
+- 3
+- `egg 蛋 鸡蛋`
+- `eggshell 蛋壳`
+- _【 egg yolk. 蛋黄 】_ // yolk 蛋黄
+- _【 egg white. 蛋清 】_
+- _【 eggshell. 蛋壳 】_
+- -
+- _【 fried egg. 煎蛋 】_ // fry 油炸 v // fried 油炸的 adj 过去式
+- _【 boiled egg. 水煮蛋 】_
+- _【 hatch egg. 孵蛋 】_
+- // Neither of them likes it. 两者都不喜欢 翻译
+- // The color of these shoes is red. 这双鞋的颜色是红色
+- -
+- _【 duck egg. 鸭蛋 】_
+- _【 bird egg. 鸟蛋 】_
+- _【 goose egg. 鹅蛋 零分 】_
+-
+- AA.
+- _【 What does an egg 【 consist of 】? 鸡蛋由什么组成 】_
+- _【 What is an egg 【 composed of 】? 鸡蛋由什么组成 】_ // passive voice. 被动语态
+- _【 What is an egg 【 made of 】? 鸡蛋由什么组成 】_ // passive voice. 被动语态
+- **【 Eggs consist of 【 eggshell 】, 【 egg white 】, and 【 egg yolk 】. 鸡蛋由蛋壳，蛋清，蛋黄组成 】**
+- **【 Eggs 【 are composed of 】 【 eggshell 】, 【 egg white 】, and 【 egg yolk 】. 鸡蛋由蛋壳，蛋清，蛋黄组成 】**
+- // -
+- // -- 【 consist of. 由...组成 】[D 由 abc 组成]
+- // -- 【 be made of. 由...制成 】----------- // passive voice. 被动语态
+- // -- 【 be composed of. 由...组成 】------- // passive voice. 被动语态 [abc 组成 D]
+- // TIPS: Pay attention to the pronunciation of the word 'consist'.
+- // ggg: dd
+- // -
+- // --【 passive voice. 被动语态 】 // ---- 【 passively accept. 被动接受 】
+- // --【 active voice. 主动语态 】 // ----- 【 actively pursue. 主动追求 】 // chase fugitive(refugee/refuge). 追捕逃犯 // chase dream. // purse happiness.
+- // -- passive 被动的 消极的 adj // dizzy // bookmark 书签 // label tab 标签
+- // -- active 主动的 积极的 adj
+- // -- voice 声音 语态 n
+-
+- BB.
+- `rooster 公鸡` // 英国
+- `cock 公鸡` // 美国
+- `hen 母鸡`
+- `chick 小鸡`
+- `chicken 小鸡 鸡肉 n`
+- `crow 打鸣v 乌鸦n`
+- _【 chick 小鸡 】_
+- _【 chicken 鸡肉 小鸡 】_
+- -
+- _【 get married. 结婚 】_
+- _【 give birth to. 生 】_
+- **【 The 【 rooster 】 and the 【 hen 】 【 got married 】 and 【 gave birth to 】 a 【 chick 】. 公鸡和母鸡结婚后生了一个小鸡 】**
+-
+- CC.
+- `crow 打鸣v 乌鸦n`
+- **【 【 crow 】 doesn't 【 crow 】, but 【 rooster 】 does. 乌鸦不会打鸣，而公鸡会 】**
+-
+- DD.
+- `hatch 孵化 v`
+- _【 hatch out. 孵化出 】_
+- _【 hatch into 孵化成 】_
+- **【 The baby chickens finally 【 hatch out 】. 】** // hatch out
+- **【 Eggs can 【 hatch into 】 chickens. 鸡蛋可以孵化成鸡 】** // hatch into
+-
+- EE.
+- `boil 煮v 沸腾n`
+- `boiled 沸腾的 adj / v过去式`
+- _【 boiled egg. 水煮蛋 】_
+- _【 fried egg. 煎蛋 】_
+- -
+- _【 prefer doing sth. 更喜欢做某事 】_
+- **【 Do you 【 prefer 】 eating 【 boiled egg 】 or 【 fried egg 】 ? 你喜欢吃水煮蛋还是煎蛋 】**
+- **【 Which one do you prefer. 你更喜欢哪个】**
+- // -- 【 prefer doing sth. 更喜欢做某事 】
+-
+- FF.
+- **【 He is a bad egg. 他是一个坏蛋 】**
+- **【 Don't put all your eggs in one basket. 不要孤注一掷 】**
+-
+- GG.
+- `boiling water. 开水`
+- `doneness 熟度`
+- `according to. 根据`
+- according to. 根据
+- **【 【 According to 】 your 【 resume 】, you have several years of office experience. 根据您的简历，您有 多年的办公室经验 】**
+- **【 【 According to 】 the 【 weather forecast 】, it will rain today. 根据天气预报，今天会下雨 】**
+- **【 They hire and fire workers 【 according to 】 the level of business. 他们根据业务水平雇用和解雇工人。 】**
+
+###### 2024-03-30
+
+- 1
+- `Valentine's Day. 情人节`

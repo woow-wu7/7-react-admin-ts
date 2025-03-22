@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* - 实战
+      - 1-FRONTEND/5-CSS/33-background-attachment.html
+      - 1-FRONTEND/5-CSS/33-transform-style.html
+      - 1-FRONTEND/5-CSS/DD-视差滚动.html */
+      html {
+        height: 100%;
+      }
+      body {
+        height: 100%;
+        transform-style: preserve-3d;
+        perspective: 1px;
+      }
+      * {
+        padding: 0;
+        margin: 0;
+      }
+
+      div {
+        height: 100%;
+        background-attachment: fixed;
+        /* background-attachment: local; */
+      }
+
+      .one {
+        background-image: url("./images/11.png");
+      }
+      .two {
+        background-image: url("./images/22.png");
+      }
+      .three {
+        background-image: url("./images/33.png");
+      }
+    </style>
+  </head>
+  <body>
+    <div class="one">
+      <p>测试文字 one</p>
+    </div>
+    <div class="two">
+      <p>测试文字 two</p>
+    </div>
+    <div class="three">
+      <p>测试文字 three</p>
+    </div>
+  </body>
+</html>

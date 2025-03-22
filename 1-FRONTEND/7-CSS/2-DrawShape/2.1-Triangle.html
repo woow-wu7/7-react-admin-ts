@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /*
+        Draw a triangle shape.
+
+        // AA
+        // adjacent 相邻的 adj
+        // semi-circle 半圆
+        // sector 扇形
+        // right triangle 直角三角形
+        // -
+        // Our house is 【 adjacent 】 to the park.
+
+        // BB
+        // link https://www.webhek.com/post/40-css-shapes/
+
+        // CC
+        // 1. sector = triangle + border-radius: 100%;
+        // 2. trapezoid = triangle + with: xxx px;
+        
+        width: 100px
+        TIPS: if the width attribute is assigned to some values, then the triangle will change to trapezoid.
+
+        border-radius: 100%;
+        TIPS: if the 'border-radius:100%;' attribute is been added, then the triangle will change to sector.
+
+        English
+        // -
+        // triangle
+        // - The area of a triangle is half of the product of the base times the height.
+        // - The area of a triangle is equal to one half of the product of the base times the height.
+      */
+
+      #right-triangle {
+        width: 0;
+        height: 0;
+
+        border-top: 100px solid red;
+        border-right: 100px solid transparent;
+      }
+
+      #common-triangle {
+        height: 0;
+        width: 0;
+
+        /* width: 100px */
+        /*
+          if the width attribute is assigned to some values, then the triangle will change to 【 trapezoid 】.
+        */
+
+        /* border-radius: 100%; */
+        /*
+          TIPS: if the 'border-radius:100%;' attribute is been added, then the triangle will change to 【 sector 】.
+        */
+
+        /* border: 100px solid transparent; */
+        /*
+          TIPS: It's best not to set the border attribute, which will 【 occupy 】 a large space.
+        */
+
+        border-bottom: 100px solid red;
+        border-left: 50px solid transparent;
+        border-right: 50px solid transparent;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="right-triangle">Right Triangle</div>
+    <div id="common-triangle">common Triangle</div>
+  </body>
+</html>

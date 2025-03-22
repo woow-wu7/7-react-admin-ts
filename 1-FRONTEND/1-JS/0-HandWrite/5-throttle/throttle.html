@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Throttle 截流</title>
+  </head>
+  <body>
+    <button id="button">throttle</button>
+    <script>
+      // Throttle 截流函数
+      // -- 以固定的频率执行某个函数
+      // -- Execute a function at a fixed frequency.
+      // ---- execute 执行 v
+
+      // 1
+      // Implement a throttle function.
+
+      // 2
+      // Function
+      // A throttle function is also used to limit the rate 【 at which 】 a function can fire.
+
+      // 3
+      // Example
+      // If the user clicks the button multiple times,
+      // the throttle function will only be executed once at a 【 fixed frequency / fixed rate 】 【 within/for/in a period of time 】.
+
+      // 5
+      // some words, phrases, sentences.
+      // -- 【 fixed frequency. 固定的频率 】
+      // -- 【 in/for/within a period of time. 在一段时间内 】
+      // -
+      // --【 two key concepts. 两个关键概念 】
+
+      // 实现方式
+      // 1. 定时器
+      // 2. 时间戳
+      // 3. 闭包 closure
+      // https://juejin.cn/post/6844904054330490894#heading-8
+
+      const throttle = (fn, delay) => {
+        let isRun = true;
+        return (...params) => {
+          if (!isRun) return;
+          isRun = false;
+
+          const timer = setTimeout(() => {
+            fn(...params);
+            isRun = true;
+            clearTimeout(timer);
+          }, delay);
+        };
+      };
+
+      // 1
+      const clickListener = throttle((e) => console.log(1, e), 2000);
+      const button = document.getElementById("button");
+      button.addEventListener(
+        "click",
+        (e) => clickListener(e), // TIPS: Please compare the two kinds of methods. 1
+        {
+          capture: false,
+        },
+        false
+      );
+
+      // 2
+      const button2 = document.querySelector("button");
+      button2.addEventListener(
+        "click",
+        throttle((e) => console.log("2", e), 2000), // TIPS: Please compare the two kinds of methods. 2
+        false
+      );
+    </script>
+  </body>
+</html>

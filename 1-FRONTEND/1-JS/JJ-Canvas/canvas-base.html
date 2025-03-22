@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <canvas
+      id="canvas"
+      width="800"
+      height="800"
+      style="border: 1px solid red"
+    ></canvas>
+    <script>
+      const canvas = document.getElementById("canvas");
+
+      console.log("canvas.getContext", canvas.getContext);
+
+      // 1
+      // 通过 getContext 判断浏览器是否支持 canvas
+      if (!canvas.getContext) {
+        throw new Error("你的浏览器不支持Canvas!");
+      }
+
+      var ctx = canvas.getContext("2d");
+
+      // 矩形
+      ctx.fillRect(20, 20, 100, 100); // 填充矩形，fillRect(x, y, width, height) xy表示矩形左上角的坐标，原点是左上角00位置
+      ctx.clearRect(55, 55, 30, 30); // 清除矩形区域，使其清除部分完全透明
+      ctx.strokeRect(140, 20, 100, 100); // 矩形框
+
+      // 三角形
+      ctx.beginPath(); //------------------------------------------ 一个路径的开始
+      ctx.moveTo(500, 30); // ----- 起始点
+      ctx.lineTo(450, 120); // ------ 直线的第二个点
+      ctx.lineTo(550, 120); // ----- 直线的第三个点
+      ctx.closePath(); // ----------------------------------------- 一个路径的结束
+      ctx.lineWidth = 4; // -------- 直线的宽度
+      ctx.strokeStyle = "red"; // ------ 直线的颜色，需要在绘画前设置
+      ctx.stroke(); // --------------------------------------------- 描边 (绘制)
+      ctx.fillStyle = "yellow"; // ------ 填充的颜色，需要在绘画前设置
+      ctx.fill(); // ----------------------------------------------- 填充 (绘制)
+
+      // 直线
+      ctx.beginPath();
+      ctx.moveTo(300, 30);
+      ctx.lineTo(400, 30);
+      ctx.closePath();
+      ctx.lineWidth = 2;
+      ctx.strokeStyle = "blue";
+      ctx.stroke();
+
+      // 圆弧
+      // arc(x, y, radius, startAngle, endAngle, anticlockwise)
+      //以x,y为圆心，radius为半径， startAngle和endAngle为角度，anticlockwise是否为逆时针方向的 圆弧（圆）
+      // startAngle, endAngle代表的是( 弧度 )，而不是角度
+      // 注意：起始角度为三点钟位置，并且是以弧度计算的
+      ctx.beginPath();
+      ctx.arc(60, 200, 40, (90 * Math.PI) / 180, 1.5 * Math.PI, false);
+      ctx.stroke();
+
+      // 圆
+      ctx.beginPath();
+      ctx.arc(180, 200, 40, 0, 2 * Math.PI, false);
+      ctx.fill();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 剑指 Offer II 052. 展平二叉搜索树
+
+      // 题目
+      // 给你一棵二叉搜索树，请 按中序遍历 将其重新排列为一棵递增顺序搜索树，使树中最左边的节点成为树的根节点，并且每个节点没有左子节点，只有一个右子节点。
+
+      // 示例 1：
+      // 输入：root = [5,3,6,2,4,null,8,1,null,null,null,7,9]
+      // 输出：[1,null,2,null,3,null,4,null,5,null,6,null,7,null,8,null,9]
+
+      // 示例 2：
+      // 输入：root = [5,1,7]
+      // 输出：[1,null,5,null,7]
+
+      /**
+       * Definition for a binary tree node.
+       * function TreeNode(val, left, right) {
+       *     this.val = (val===undefined ? 0 : val)
+       *     this.left = (left===undefined ? null : left)
+       *     this.right = (right===undefined ? null : right)
+       * }
+       */
+      /**
+       * @param {TreeNode} root
+       * @return {TreeNode}
+       */
+
+      // leetcode
+      // 剑指 Offer II 052. 展平二叉搜索树 https://leetcode.cn/problems/NYBBNL/
+
+      // 对比
+      // ( 链表 -> 二叉搜索树 ) 109. 有序链表转换二叉搜索树 https://leetcode.cn/problems/convert-sorted-list-to-binary-search-tree/
+      // ( 二叉搜索树 -> 链表 ) 剑指 Offer II 052. 展平二叉搜索树 https://leetcode.cn/problems/NYBBNL/submissions/
+
+      // 知识点
+      // - 1. 二叉搜索树的 中序遍历 是 升序有序 的
+      // - 2. 构造链表，移动指针，虚拟头节点
+
+      var increasingBST = function (root) {
+        // 1. 先 inorder 中序遍历 二叉搜索树，记录到数组中
+        const res = [];
+        function inorderTraversal(node) {
+          if (!node) return null;
+          inorderTraversal(node.left);
+          res.push(node.val);
+          inorderTraversal(node.right);
+        }
+        inorderTraversal(root);
+
+        // 2. 构造树 - 也可以叫做链表，因为 该树 只有 右节点
+        let dummy = (list = new TreeNode(null));
+        for (let i = 0; i < res.length; i++) {
+          list.right = new TreeNode(res[i]);
+          list.left = null;
+          list = list.right; // 移动指针，可以把 ( 该种类型的树 ) 看作 ( 链表 )
+        }
+
+        return dummy.right;
+      };
+    </script>
+  </body>
+</html>

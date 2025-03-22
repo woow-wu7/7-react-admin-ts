@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // sleep 函数
+      // - 一共有三种实现方式
+      //  - 定时器
+      //  - promise
+      //  - async await
+
+      // 扩展题目
+      // - 实现红绿灯 - 红灯亮5s，黄灯亮2s，绿灯亮3s这样的顺序无限循环
+      // - 每一秒打印当前在亮的灯
+
+      // 思路
+      // sleep + recursive
+
+      // 资料
+      // - https://juejin.cn/post/6920492226594373639#heading-3
+      // - https://juejin.cn/post/7065883877121720333
+
+      const sleep = (time, light) =>
+        new Promise((resolve) => {
+          const timerInterval = setInterval(() => console.log(light), 1000);
+          const timerTimeout = setTimeout(() => {
+            resolve();
+            if (timerInterval) clearInterval(timerInterval);
+            if (timerTimeout) clearTimeout(timerTimeout);
+          }, time);
+        });
+
+      const run = () => {
+        sleep(5000, "红灯")
+          .then(() => sleep(2000, "黄灯"))
+          .then(() => sleep(3000, "绿灯"))
+          .finally(() => run());
+        // .then(() => {
+        //   main(); // then 和 finally 都可以
+        // });
+      };
+
+      run();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <script>
+      // N-try Tree preorder traversal.
+      // 589. N 叉树的前序遍历
+
+      // 题目
+      // 给定一个 n 叉树的根节点  root ，返回 其节点值的 前序遍历 。
+      // n 叉树 在输入中按层序遍历进行序列化表示，每组子节点由空值 null 分隔（请参见示例）。
+
+      // 示例 1：
+      // 输入：root = [1,null,3,2,4,null,5,6]
+      // 输出：[1,3,5,6,2,4]
+
+      // 示例 2：
+      // 输入：root = [1,null,2,3,4,5,null,null,6,7,null,8,null,9,10,null,null,11,null,12,null,13,null,null,14]
+      // 输出：[1,2,3,6,7,11,14,4,8,12,5,9,13,10]
+
+      /**
+       * // Definition for a Node.
+       * function Node(val, children) {
+       *    this.val = val;
+       *    this.children = children;
+       * };
+       */
+
+      /**
+       * @param {Node|null} root
+       * @return {number[]}
+       */
+
+      // leetcode
+      // 590. N 叉树的后序遍历 https://leetcode.cn/problems/n-ary-tree-postorder-traversal/
+      // 589. N 叉树的前序遍历 https://leetcode.cn/problems/n-ary-tree-preorder-traversal/
+      // 144. 二叉树的前序遍历 https://leetcode.cn/problems/binary-tree-preorder-traversal/
+      // 145. 二叉树的后序遍历 https://leetcode.cn/problems/binary-tree-postorder-traversal/
+
+      // 注意: N叉树的遍历一般只有 前序 和 后序
+      // 因为: 中序 不知道具体是几叉树
+
+      var preorder = function (root) {
+        // if (!root) return []; 这里的判断不需要，因为我们在 dfs 中做了判断，node不存在时，是直接认会res，即空数组
+
+        const res = [];
+
+        function dfs(node) {
+          if (node) {
+            res.push(node.val);
+
+            // 1
+            node.children.forEach((item) => dfs(item));
+
+            // 2
+            // const children = node.children;
+            // if (children) {
+            //   for (let i = 0; i < children.length; i++) {
+            //     dfs(children[i]);
+            //   }
+            // }
+
+            // 以上 1 和 2 两种写法都是可以的
+          }
+        }
+
+        dfs(root);
+
+        return res;
+      };
+    </script>
+  </body>
+</html>

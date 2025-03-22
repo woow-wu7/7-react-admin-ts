@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // (一)
+      // 数字相加
+      // - 存在问题: 大数字存在溢出，计算不精确
+      // - 思路:
+      //  - 1. BigInt
+      //  - 2. 转成字符串，每个位相加
+
+      // 扩展
+      //  - 本项目/3-LEETCODE/6-NUMBER/8-二进制求和.html
+
+      // leetcode
+      // 链表求和: https://leetcode.cn/problems/sum-lists-lcci/
+      // 两数相加: https://leetcode.cn/problems/add-two-numbers/
+      // https://leetcode.cn/problems/add-binary/description/
+
+      const a = "6112343212353233";
+      const b = "7212316473288322";
+      // result 13324659685641555
+      // error 直接数字相加将发生错误，溢出 13324659685641556
+
+      // 1
+      const result = BigInt(6112343212353233) + BigInt(7212316473288322);
+      console.log("result: ", result);
+
+      // 2
+      const sum = (a, b) => {
+        let len = Math.max(a.length, b.length);
+        let res = "";
+        let curValue = 0;
+        for (let i = 0; i < len; i++) {
+          const currentIndex = len - 1 - i;
+          const curA = a[currentIndex] ? a[currentIndex] : 0;
+          const curB = b[currentIndex] ? b[currentIndex] : 0;
+          res = Number(curA) + Number(curB) + curValue + res;
+          if (Number(curA) + Number(curB) > 10) {
+            // 注意这里转成 number
+            curValue = 1;
+          } else {
+            curValue = 0;
+          }
+        }
+        return res;
+      };
+      const res = sum(a, b);
+      console.log("res", res);
+
+      // 2 优化
+      // - 上面存在两个问题
+      //    - 1. 如果 a和b 长度不相同时将发生错误
+      //    - 2. 最后的进位，需要考虑进去
+      const sum2 = (a, b) => {
+        let res = "";
+        let carry = 0; // 进位
+
+        let ia = a.length - 1;
+        let ib = b.length - 1;
+
+        while (ia >= 0 || ib >= 0) {
+          const va = a[ia] ?? 0;
+          const vb = b[ib] ?? 0;
+
+          let sum = Number(va) + Number(vb) + carry;
+
+          if (sum >= 10) {
+            sum = sum - 10;
+            carry = 1;
+          } else {
+            carry = 0;
+          }
+
+          res = sum + res;
+
+          ia--;
+          ib--;
+        }
+
+        if (carry === 1) {
+          res = "1" + res;
+        }
+
+        return res;
+      };
+
+      const res2 = sum(a, b);
+      console.log("res2", res2);
+      console.log("res === res2", res === res2);
+    </script>
+
+    <script>
+      // 二
+      // 实现 Collapse 折叠面板
+      // - 详见: 1-FRONTEND/7-CSS/1-动效收集/2-collapse-折叠面板/collapse.html
+
+      // CSS
+      // <style>
+      //   .content {
+      //     background: yellow;
+      //     width: 400px;
+      //     height: 0;
+      //     overflow: hidden;
+      //   }
+      // </style>
+
+      // HTML
+      // <div id="root">
+      //   <button>切换</button>
+      //   <div class="content">
+      //     <p>这是展开的内容</p>
+      //     <p>这是展开的内容</p>
+      //     <p>这是展开的内容</p>
+      //     <p>这是展开的内容</p>
+      //   </div>
+      // </div>
+
+      // JS
+      const button = document.getElementById("root");
+      const content = document.querySelector(".content");
+      let isExpand = false;
+      function toggle() {
+        isExpand = !isExpand;
+        if (isExpand) {
+          content.style.transition = "none";
+          content.style.height = "auto";
+          const height = content.offsetHeight;
+          console.log("height", height);
+          // 以上是为了获取content的真实高度
+
+          // 获取到高度后，以下是为了展开动画
+          content.style.height = 0;
+          content.offsetHeight; // 注意: 这里一定要强制回流，不然展开是没有动画效果的
+          content.style.height = height + "px"; // 展开时，高度从 0 - height，再添加 transition
+          content.style.transition = "all 0.3s";
+        } else {
+          content.style.height = "0";
+        }
+      }
+    </script>
+
+    <script>
+      // 三
+      // 实现 相对路径转 绝对路径
+      // - 思路: 栈
+      //  - 将 'a/b/c/.././../' 推入栈
+      //  - 遇到 ../ 出栈
+      //  - 遇到 ./ 不做操作
+      //  - 最后如果栈有剩余，就是 绝对路径
+    </script>
+
+    <script>
+      // 四
+      var f = function g() {
+        return 23;
+      };
+
+      typeof g(); // 报错，VM146:1 Uncaught ReferenceError: g is not defined
+    </script>
+  </body>
+</html>

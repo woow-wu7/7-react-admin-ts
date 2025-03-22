@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const obj = {
+        a: 1,
+        b: "2",
+        c: true,
+      };
+      Object.defineProperty(obj, "d", {
+        enumerable: true, // 该属性可枚举
+        configurable: true, // 属性描述符可被修改，并且可以被删除，( 数据描述符 和 存取描述符 共享 )
+        value: "d", // 添加的 d 属性的值
+        writable: true, // 属性可以被修改
+      });
+
+      const objPrototype = {
+        e: undefined,
+      };
+      Object.defineProperty(objPrototype, "f", {
+        enumerable: true, // 该属性可枚举
+        configurable: true, // 属性描述符可被修改，并且可以被删除，( 数据描述符 和 存取描述符 共享 )
+        value: "f", // 添加的 d 属性的值
+        writable: true, // 属性可以被修改
+      });
+
+      Object.setPrototypeOf(obj, objPrototype);
+
+      // -----------------------------------------------------------------
+      // 1
+      // Object.keys();
+      // -- 可以遍历 ( 自身可枚举属性 )
+      const v1 = Object.keys(obj);
+      console.log("v1: ", v1);
+
+      // -----------------------------------------------------------------
+      // 2
+      // for...in
+      // -- 遍历 ( 自身属性 ) 和 ( 继承的属性 )
+      for (let i in obj) {
+        console.log("i", i);
+        if (obj.hasOwnProperty(i)) {
+          
+        }
+      }
+
+      // let arr = [3, 5, 7];
+      // arr.foo = "hello";
+      // for (let i in arr) {
+      //   console.log(i); // "0", "1", "2", "foo"
+      // }
+      // for (let i of arr) {
+      //   console.log(i); //  "3", "5", "7"
+      // }
+    </script>
+  </body>
+</html>

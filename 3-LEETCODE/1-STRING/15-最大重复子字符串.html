@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 1668. 最大重复子字符串
+
+      // 题目
+      //给你一个字符串 sequence ，如果字符串 word 连续重复 k 次形成的字符串是 sequence 的一个子字符串，那么单词 word 的 重复值为 k 。单词 word 的 最大重复值 是单词 word 在 sequence 中最大的重复值。如果 word 不是 sequence 的子串，那么重复值 k 为 0 。
+      // 给你一个字符串 sequence 和 word ，请你返回 最大重复值 k 。
+
+      // 对比
+      // 1668. 最大重复子字符串 https://leetcode.cn/problems/maximum-repeating-substring/
+      // 459. 重复的子字符串 https://leetcode.cn/problems/repeated-substring-pattern/
+
+      // 示例 1：
+      // 输入：sequence = "ababc", word = "ab"
+      // 输出：2
+      // 解释："abab" 是 "ababc" 的子字符串。
+
+      // 示例 2：
+      // 输入：sequence = "ababc", word = "ba"
+      // 输出：1
+      // 解释："ba" 是 "ababc" 的子字符串，但 "baba" 不是 "ababc" 的子字符串。
+
+      // 示例 3：
+      // 输入：sequence = "ababc", word = "ac"
+      // 输出：0
+      // 解释："ac" 不是 "ababc" 的子字符串。
+
+      // leetcode
+      // https://leetcode.cn/problems/maximum-repeating-substring/
+
+      /**
+       * @param {string} sequence
+       * @param {string} word
+       * @return {number}
+       */
+
+      // 方法1
+      var maxRepeating = function (sequence, word) {
+        let repeat = 0; // 重复的次数
+        let curWord = word;
+
+        // 注意边界：可以相等
+        // while (curWord.length <= sequence.length) {
+        //   if (sequence.includes(curWord)) {
+        //     repeat++;
+        //     curWord = curWord + word; // 不断累加自己，直到不被包含为止
+        //   } else {
+        //     break; // 不包含了，说明已经统计完毕，结束循环
+        //   }
+        // }
+
+        // 简化上面的while
+        while (sequence.includes(curWord)) {
+          repeat++;
+          curWord = curWord + word;
+        }
+
+        return repeat;
+      };
+    </script>
+  </body>
+</html>

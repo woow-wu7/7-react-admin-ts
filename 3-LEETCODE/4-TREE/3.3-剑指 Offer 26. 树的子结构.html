@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 剑指 Offer 26. 树的子结构
+
+      // 题目
+      // 输入两棵二叉树A和B，判断B是不是A的子结构。(约定空树不是任意一个树的子结构)
+      // B是A的子结构， 即 A中有出现和B相同的结构和节点值。
+
+      // 例如:
+      // 给定的树 A:
+      //      3
+      //     / \
+      //    4   5
+      //   / \
+      //  1   2
+      // 给定的树 B：
+      //    4
+      //   /
+      //  1
+      // 返回 true，因为 B 与 A 的一个子树拥有相同的结构和节点值。
+
+      // 示例 1：
+      // 输入：A = [1,2,3], B = [3,1]
+      // 输出：false
+
+      // 示例 2：
+      // 输入：A = [3,4,5,1,2], B = [4,1]
+      // 输出：true
+      // 限制：
+
+      // 0 <= 节点个数 <= 10000
+
+      // leetcode
+      // https://leetcode.cn/problems/shu-de-zi-jie-gou-lcof/
+
+      // 对比
+      // - 100. 相同的树 https://leetcode.cn/problems/same-tree/
+      // - ( 子树 ) ---- 572. 另一棵树的子树 https://leetcode.cn/problems/subtree-of-another-tree/
+      // - ( 子结构 ) -- 剑指 Offer 26. 树的子结构 https://leetcode.cn/problems/shu-de-zi-jie-gou-lcof/
+
+      // 注意
+      // 子结构 和 子树 的区别
+      // - 子结构 vs 子树
+      // - 下面的是 ( 子结构 ) 而不是 ( 子树 )
+      // 给定的树s:
+      //     3
+      //     / \
+      //   4   5
+      //   / \
+      // 1   2
+      //     /
+      //   0
+      // 给定的树t:
+      //   4
+      //   / \
+      // 1   2
+
+      /**
+       * Definition for a binary tree node.
+       * function TreeNode(val) {
+       *     this.val = val;
+       *     this.left = this.right = null;
+       * }
+       */
+      /**
+       * @param {TreeNode} A
+       * @param {TreeNode} B
+       * @return {boolean}
+       */
+
+      // 对比
+      // - 100. 相同的树 https://leetcode.cn/problems/same-tree/
+      // - ( 子树 ) ---- 572. 另一棵树的子树 https://leetcode.cn/problems/subtree-of-another-tree/
+      // - ( 子结构 ) -- 剑指 Offer 26. 树的子结构 https://leetcode.cn/problems/shu-de-zi-jie-gou-lcof/
+
+      // 注意
+      // - 子结构 vs 子树
+      // - 下面的是 ( 子结构 ) 而不是 ( 子树 )
+      // 给定的树s:
+      //     3
+      //     / \
+      //   4   5
+      //   / \
+      // 1   2
+      //     /
+      //   0
+      // 给定的树t:
+      //   4
+      //   / \
+      // 1   2
+
+      // 思路
+      // - 1. 递归判断A的每个节点是否包含B
+      // - 2. 如果判断是否包含？
+      //      - a. B树不存在 -> 包含了两种情况 ( A存在B不存在 ) ( A B 都不存在 )
+      //      - b. 根节点相等 -> A左子树包含B左子树 && A右子树包含B右子树
+
+      var isSubStructure = function (A, B) {
+        function isInclude(A, B) {
+          // if (!B) return true; // 只要B不存在，不管A存不存在，都是true，因为 ( A存在，则A还有剩余，必然包含 )，( A不存在，A和B两颗树相同 )
+          if (A && !B) return true; // !!!!!!! 和判断是否是子树，只有这里不同 !!!!!!!，也就是说，A树还有剩余，而B树已经遍历完了，并且之前的比较都是相等，则是包含关系
+          if (!A && B) return false;
+          if (!A && !B) return true;
+          if (A.val !== B.val) return false; // AB都存在，但根不等
+
+          // AB都存在，且根相等，则判断 ( A左子树是否包含B左子树 && A右子树是否包含B右子树 )
+          return isInclude(A.left, B.left) && isInclude(A.right, B.right);
+        }
+
+        if (!A || !B) return false;
+        if (isInclude(A, B)) return true; // A包含B
+
+        // A不包含B，缩小范围，继续递归
+        // 只需要保证任意一边包含即可，即 左子树包含目标子树 或者 右子树包含目标子树
+        return isSubStructure(A.left, B) || isSubStructure(A.right, B);
+      };
+    </script>
+  </body>
+</html>

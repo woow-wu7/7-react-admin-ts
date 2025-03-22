@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Draw a trapezoid shape.</title>
+    <style>
+      /* 
+        Draw a trapezoid shape.
+
+        // AA
+        // adjacent 相邻的 adj 
+        // semi-circle 半圆
+        // sector 扇形
+        // right triangle 直角三角形
+        // trapezoid 梯形
+        // -
+        // Our house is 【 adjacent 】 to the park. 
+
+        // BB
+        // link https://www.webhek.com/post/40-css-shapes/
+
+        // CC
+        // 1. sector = triangle + border-radius: 100%;
+        // 2. trapezoid = triangle + with: xxx px;
+
+        width: 100px
+        TIPS: if the width attribute is assigned to some values, then the triangle will change to trapezoid.
+
+        border-radius: 100%;
+        TIPS: if the 'border-radius:100%;' attribute is been added, then the triangle will change to sector.
+      */
+
+      #trapezoid {
+        height: 0;
+        width: 100px;
+        /* width: 0; */
+
+        border-bottom: 100px solid red;
+        border-left: 50px solid transparent;
+        border-right: 50px solid transparent;
+
+        /* background: yellow; */
+      }
+    </style>
+  </head>
+  <body>
+    <div id="trapezoid">Trapezoid</div>
+  </body>
+</html>

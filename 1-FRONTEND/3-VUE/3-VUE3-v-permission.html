@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script> -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <button v-permission="{target:[1,2,3], current: [1]}">按钮1</button>
+      <button v-permission="{target:[1,2,3], current: [2,3]}">按钮2</button>
+      <button v-permission="{target:[1,2,3], current: [4]}">按钮3</button>
+    </div>
+    <script>
+      // 自定义指令
+      // v-permission 权限指令
+
+      // 1
+      // vue内置指令
+      // - v-if v-show
+      // - v-text v-html
+      // - v-for v-bind v-on
+      // - v-model v-slot v-once
+      // - v-pre v-cloak
+      // -------------------
+
+      // 2
+      // 应用
+      // - 获取焦点 v-focus
+      // - 防抖
+      // - 图片懒加载
+      // - 一键copy
+      // - 点击外部触发事件 v-click-out
+      // - 源码地址：https://github.com/woow-wu7/vue2-research/blob/master/src/views/Directive.vue
+      // - 6个常用自定义指令：https://juejin.cn/post/6953879183600648229#heading-3
+
+      // 3
+      // 思考：为什么是通过 指令 来实现，而不是直接使用全局函数来实现？
+      // 因为: 这里的逻辑最终都是为了操作DOM的显示隐藏，而指令就是为了方便操作DOM的一段逻辑
+
+      // 4
+      // - 注册: 指令需要注册 ( 全局 app.directive() ) 和 局部
+      // - 钩子函数参数:  created(el, binding, vnode, prevVnode) { }
+      // - 官网链接: https://cn.vuejs.org/guide/reusability/custom-directives.html
+
+      // --------------------------------------------------------------------------------------------------------------
+      // VUE3
+      const { createApp } = Vue;
+      const app = createApp();
+
+      function compose(...fns) {
+        if (fns.length === 0) return (arg) => arg;
+        if (fns.length === 1) return fns[0];
+        return fns.reduce(
+          (a, b) =>
+            (...args) =>
+              a(b(...args))
+        );
+      }
+
+      function hasPermission(value) {
+        const { target, current } = value;
+        return target.some((value) => current.includes(value));
+      }
+
+      function validate(el, binding) {
+        const values = binding.value;
+        function isRemove(hasPermission) {
+          if (!hasPermission) {
+            el.parentNode && el.parentNode.removeChild(el);
+          }
+        }
+        compose(isRemove, hasPermission)(values);
+      }
+
+      app.directive("permission", {
+        mounted(el, binding, vnode, prevVnode) {
+          validate(el, binding);
+        },
+        updated(el, binding, vnode, prevVnode) {
+          validate(el, binding);
+        },
+      });
+
+      app.mount("#app");
+
+      // --------------------------------------------------------------------------------------------------------------
+      // VUE2
+      // Vue.directive("permission", {
+      //   // inserted - 在 被绑定元素插入父节点时调用 (仅保证父节点存在，但不一定已被插入文档中)
+      //   inserted: function (el, binding, vnode, oldVnode) {
+      //     // 权限判断
+      //     const hasPermission = (value) => {
+      //       const permissionArray = [1, 3, 4, 5]; // 可以显示的权限数组
+      //       return permissionArray.includes(value);
+      //     };
+      //     // 根据权限 - 是否显示
+      //     const isShow = (hasPermission) => {
+      //       // 没有显示权限，就删除改DOM
+      //       if (!hasPermission) {
+      //         console.log("el.parentNode", el.parentNode);
+      //         el.parentNode && el.parentNode.removeChild(el);
+      //       }
+      //     };
+      //     // compose
+      //     // - 高阶函数，右边函数执行的结果，会作为左边函数的参数传入
+      //     // - redux中间键的原理
+      //     const compose = (...fns) => {
+      //       if (fns.length === 0) {
+      //         return (args) => args;
+      //       }
+      //       if (fns.length === 1) {
+      //         return fns[0];
+      //       }
+      //       return fns.reduce(
+      //         (a, b) =>
+      //           (...args) =>
+      //             a(b(...args))
+      //       );
+      //     };
+
+      //     const value = binding.value; // 获取指令的值
+      //     compose(isShow, hasPermission)(value);
+      //   },
+      // });
+      // new Vue({
+      //   el: "#app",
+      //   data() {
+      //     return {};
+      //   },
+      // });
+      // 最终 13显示，2不会显示
+    </script>
+  </body>
+</html>

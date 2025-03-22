@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 26. 删除有序数组中的重复项
+
+      // 题目
+      // 给你一个 非严格递增排列 的数组 nums ，请你 【 原地 】 删除重复出现的元素，使每个元素 只出现一次 ，返回删除后数组的新长度。元素的 相对顺序 应该保持 一致 。然后返回 nums 中唯一元素的个数。
+      // 考虑 nums 的唯一元素的数量为 k ，你需要做以下事情确保你的题解可以被通过：
+      // 更改数组 nums ，使 nums 的前 k 个元素包含唯一元素，并按照它们最初在 nums 中出现的顺序排列。nums 的其余元素与 nums 的大小不重要。
+      // 返回 k 。
+
+      // ideas of solving the problem
+      // -- 双指针
+      // -- left right 把不相同的值往前移，这样最后数组前面的一定是不重复的所有值。
+      // -- 1. 注意题目中说的是 ( 原地删除 )
+      // -- 2. left 和 right 分别只想数组最前面的元素
+      // -- 3. 如果left和right指向的值 不相等，说明我们要移动元素，讲 right 位置的值移动到 left + 1 位置。不断重复以上步骤
+      // -- 4. 最后 题目要返回 不重复的元素个数，其实就是 ( left所在位置 以及 的前面的所有值 )，因为left是下标，个数就是 left+1
+
+      // link
+      // [26. 删除有序数组中的重复项](https://leetcode.cn/problems/remove-duplicates-from-sorted-array/description/)
+
+      // 双指针
+      var removeDuplicates = function (nums) {
+        let left = 0;
+        let right = 1;
+
+        while (right < nums.length) {
+          // 1
+          // 不相等
+          // aa. 不相等，就移动 right所在位置的值到 left+1 位置，使得前面没有重复值
+          // bb. 移动完成后，需要移动 left，用于下一次再把不相等的值right移动到left+1位置
+          if (nums[left] !== nums[right]) {
+            nums[left + 1] = nums[right];
+            left++;
+          }
+
+          // aa. 相等 或 不相等 我们都要移动 right，移动就行下一轮比较
+          // bb. 也就是说: 只有相等时，才会移动 left。而right都需要移动作为下一次的比较
+          right++;
+        }
+
+        // 返回不重复的元素个数
+        // - 因为移动后，left所在位置以前的元素都是不重复且有序的 ( 包含left位置以及以前的所有元素 )
+        // - left是下标，所有 length = left + 1
+        return left + 1;
+      };
+    </script>
+  </body>
+</html>

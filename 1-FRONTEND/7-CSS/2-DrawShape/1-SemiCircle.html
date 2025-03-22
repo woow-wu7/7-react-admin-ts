@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* 
+        Draw a semi-circle.
+        - 1. The long side must be two times longer than the short side.
+        - 2. The two points that set the border-radius value must be 【 adjacent 】 and both on the long side.
+
+        // AA
+        //【 adjacent 相邻的 adj 】
+        // semi-circle 半圆
+        // sector 扇形
+        // -
+        // Our house is 【 adjacent 】 to the park. 
+
+        // BB
+        // link https://www.webhek.com/post/40-css-shapes/
+       */
+
+      #semi-circle {
+        width: 200px;
+        height: 100px;
+        border-radius: 100px 100px 0 0;
+
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="semi-circle">Semi-circle</div>
+
+    <div>
+      <div>semicircle</div>
+      <div>
+        1. The long side must be two times longer than the short side.
+        长边必须是短边的两倍
+      </div>
+      <div>
+        2.The two points that set the border-radius value must be adjacent and
+        both on the long side.设置 border-radius 值的两个点必须相邻 并且
+        都在长边上
+      </div>
+    </div>
+  </body>
+</html>

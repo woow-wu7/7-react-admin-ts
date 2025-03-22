@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>伪类 :nth-child(odd)(even)(-n+3)(n+4)</title>
+    <style>
+
+      /* :nth-child() */
+
+      /* 1 */
+      /* 奇数 */
+      /* 相当于  div:nth-child(2n+1) */
+      div:nth-child(odd) {
+        color: red;
+      }
+
+      /* div:nth-child(2n + 1) {
+        color: green;
+      } */
+
+      /* 2 */
+      /* 偶数 */
+      div:nth-child(even) {
+        background: yellow;
+      }
+
+      /* 前三个 */
+      div:nth-child(-n + 3) {
+        border: 10px solid red;
+      }
+
+      /* 第7个以后 */
+      div:nth-child(n + 7) {
+        border: 10px solid black;
+      }
+    </style>
+  </head>
+  <script>
+    // English
+    // - even number. 偶数
+    // - odd number. 奇数
+    // - odd job. = temporary job. = casual job. = part-time job. 临时工作 n
+  </script>
+  <body>
+    <!-- 资料 -->
+    <!-- https://cloud.tencent.com/developer/article/1538496 -->
+
+    <div>111111111</div>
+    <div>222222222</div>
+    <div>333333333</div>
+    <div>444444444</div>
+    <div>555555555</div>
+    <div>666666666</div>
+    <div>777777777</div>
+    <div>888888888</div>
+    <div>999999999</div>
+  </body>
+</html>

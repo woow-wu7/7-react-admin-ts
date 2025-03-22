@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      html,
+      body {
+        height: 100%;
+      }
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .root {
+        width: 300px;
+        height: 300px;
+        border: 1px solid black;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .circle {
+        width: 200px;
+        height: 200px;
+        border-radius: 100%;
+        background: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="root">
+      <div class="circle"></div>
+    </div>
+
+    <script>
+      const root = document.querySelector(".root");
+
+      const onClick = (e) => {
+        const mouse_root_x = e.offsetX; // 鼠标在root上的 横坐标
+        const mouse_root_y = e.offsetY;
+
+        const box = root.getBoundingClientRect();
+        const circle_x = box.width / 2; // 圆心坐标
+        const circle_y = box.height / 2;
+
+        // 如果 ( 鼠标的x坐标 - 圆心X坐标 )^2 + (鼠标的Y坐标 - 圆心Y坐标)^2 的和，在开方 < 半径 --- 则说明在圆形区域内
+        // 三角形勾股定理
+        var len = Math.sqrt(
+          Math.abs(Math.pow(mouse_root_x - circle_x, 2)) +
+            Math.abs(Math.pow(circle_y - circle_x, 2))
+        );
+
+        // 这里半径是100
+        if (len <= 100) {
+          console.log("半径为100的圆");
+        }
+      };
+      root.addEventListener("click", onClick, false);
+    </script>
+  </body>
+</html>

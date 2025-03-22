@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 637. 二叉树的层平均值
+
+      /**
+       * Definition for a binary tree node.
+       * function TreeNode(val, left, right) {
+       *     this.val = (val===undefined ? 0 : val)
+       *     this.left = (left===undefined ? null : left)
+       *     this.right = (right===undefined ? null : right)
+       * }
+       */
+      /**
+       * @param {TreeNode} root
+       * @return {number[]}
+       */
+
+      // leetcode
+      // https://leetcode.cn/problems/average-of-levels-in-binary-tree/
+
+      // 对比
+      // 199. 二叉树的右视图 https://leetcode.cn/problems/binary-tree-right-side-view/
+      // 637. 二叉树的层平均值 https://leetcode.cn/problems/average-of-levels-in-binary-tree/
+      // 513. 找树左下角的值 https://leetcode.cn/problems/find-bottom-left-tree-value/
+
+      // 对比
+      // 102. 层序遍历
+      // 199. 右视图 = 层序遍历 + 过滤 每个数组成员的最后一个值
+      // 637. 层平均值 = 层序遍历 + 计算 每个数组成员的平均值
+      // 513. 左下角的值 = 层序遍历 + 找到 最后一层数组的第一个值
+
+      // 思路
+      // - 1. level order traversal层序遍历 BFS，收集每层node
+      // - 2. 计算平均值
+      var averageOfLevels = function (root) {
+        if (!root) return [];
+
+        const res = [];
+        const queue = [
+          {
+            ...root,
+            level: 0,
+          },
+        ];
+
+        while (queue.length) {
+          const target = queue.shift();
+          const level = target.level;
+
+          if (!res[level]) res[level] = [];
+          res[level].push(target.val);
+
+          if (target.left) queue.push({ ...target.left, level: level + 1 });
+          if (target.right) queue.push({ ...target.right, level: level + 1 });
+        }
+
+        return res.map((item) => item.reduce((a, b) => a + b) / item.length);
+      };
+    </script>
+  </body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 700. 二叉搜索树中的搜索
+
+      // 题目
+      // 给定二叉搜索树（BST）的根节点 root 和一个整数值 val。
+      // 你需要在 BST 中找到节点值等于 val 的节点。 返回以该节点为根的子树。 如果节点不存在，则返回 null 。
+
+      // 示例 1:
+      // 输入：root = [4,2,7,1,3], val = 2
+      // 输出：[2,1,3]
+
+      // 示例 2:
+      // 输入：root = [4,2,7,1,3], val = 5
+      // 输出：[]
+
+      // 数中节点数在 [1, 5000] 范围内
+      // 1 <= Node.val <= 107
+      // root 是二叉搜索树
+      // 1 <= val <= 107
+
+      /**
+       * Definition for a binary tree node.
+       * function TreeNode(val, left, right) {
+       *     this.val = (val===undefined ? 0 : val)
+       *     this.left = (left===undefined ? null : left)
+       *     this.right = (right===undefined ? null : right)
+       * }
+       */
+      /**
+       * @param {TreeNode} root
+       * @param {number} val
+       * @return {TreeNode}
+       */
+
+      // leetcode
+      // https://leetcode.cn/problems/search-in-a-binary-search-tree/
+
+      // 思路
+      // - inorderTraversal
+
+      var searchBST = function (root, val) {
+        let res = null;
+        function inorder(root) {
+          if (!root) return null;
+          inorder(root.left);
+          if (root.val === val) res = root;
+          inorder(root.right);
+        }
+        inorder(root);
+
+        return res;
+      };
+    </script>
+  </body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // anonymous 匿名的
+
+      // 说明
+      // - 1. 不设置 cors 的话 canvas 是可以直接使用 不同域名下的图片的
+      // - 2. 如果整个项目需要设置cors来跨域的话，就需要用 img.crossOrigin 来获canvas对跨域图片的信任
+
+      const getImage = async () => {
+        return await new Promise((resolve) => {
+          const img = new Image();
+          img.width = 600;
+          // img.crossOrigin = "anonymous";
+          img.src =
+            "https://tva3.sinaimg.cn/large/0072Vf1pgy1foxkfj2rfrj31hc0u04ln.jpg";
+          img.onload = () => {
+            document.body.appendChild(img);
+            resolve(img);
+          };
+        });
+      };
+
+      getImage().then((img) => {
+        const canvas = document.createElement("canvas");
+        const context = canvas.getContext("2d");
+        context.drawImage(img, 0, 0);
+        document.body.appendChild(canvas);
+      });
+    </script>
+  </body>
+</html>

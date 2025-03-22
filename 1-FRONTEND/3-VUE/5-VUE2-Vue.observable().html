@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <div>
+        <button @click="add">count++</button>
+        <div>{{countNumber}}</div>
+      </div>
+      <Child></Child>
+    </div>
+    <script>
+      // Vue.observable(object)
+      // - 1. 让一个 ( 对象 ) 可响应，即 ( 把普通对象 转成 响应是对象 )
+      // - 2.  返回的对象可以直接用于 ( 渲染函数 ) 和 ( 计算属性 ) 内，并且会在发生变更时触发相应的更新。也可以作为最小化的跨组件状态存储器
+
+      // Vue.observable
+      const state = Vue.observable({
+        count: 1,
+      });
+
+      // mixin
+      // - 在 父子组件 中都具有该 computed
+      Vue.mixin({
+        computed: {
+          countNumber() {
+            return state.count;
+          },
+        },
+      });
+
+      // component
+      const Child = Vue.component("A", {
+        template: "<div>Child Component {{countNumber}}</div>",
+      });
+
+      new Vue({
+        el: "#app",
+        components: {
+          Child,
+        },
+        methods: {
+          add() {
+            state.count++;
+          },
+        },
+        data() {
+          return {
+            test: "test",
+          };
+        },
+        beforeCreate() {
+          console.log("beforeCreated-data", this.test); // beforeCreated 中获取不到 data
+          console.log("beforeCreated-el", this.$el); // beforeCreated 中获取不到 el
+        },
+        created() {
+          console.log("created-data", this.test); // created 可以获取 data，因为已经生成了vue实例
+          console.log("created-el", this.$el); // created 中获取不到 el
+        },
+        mounted() {
+          console.log("mounted-data", this.test);
+          console.log("mounted-el", this.$el);
+        },
+      });
+    </script>
+  </body>
+</html>

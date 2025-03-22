@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="add">添加节点</button>
+    <button id="change">修改属性</button>
+    <button id="edit">修改子节点</button>
+
+    <br />
+    <button id="stop">停止观察</button>
+    <section id="target">
+      <div id="target__content">these are some text content 1</div>
+      <div id="target__content2">these are some text content 2</div>
+    </section>
+    <script>
+      const targetNode = document.getElementById("target");
+      const config = {
+        subtree: true, // 监听以 target 为根节点的整个子树，包括子树中所有节点的属性，而不仅仅是针对 target
+        childList: true, // 监听 Target节点 新增 和 删除
+        attributes: true, // 监听 Target节点 属性
+        // attributeFilter: false, // 一个用于声明哪些属性名会被监听的数组。如果不声明该属性，所有属性的变化都将触发通知
+        // attributeOldValue: false, // 当为 true 时，记录上一次被监听的节点的属性变化；可查阅监听属性值了解关于观察属性变化和属性值记录的详情。默认值为 false
+      };
+
+      const callback = (mutationsList, observer) => {
+        console.log("callback running");
+        console.log("mutationList", mutationsList);
+        console.log("observer", observer);
+      };
+
+      const observer = new MutationObserver(callback); // 1. ----------------- 开始观察
+
+      observer.observe(targetNode, config);
+
+      // add
+      const Add = document.getElementById("add");
+      Add.onclick = () => {
+        const span = document.createElement("span");
+        span.innerHTML = "this is a span tag";
+        targetNode.appendChild(span);
+        // Add.remove(); 用来删除该节点
+      };
+
+      // change
+      const Change = document.getElementById("change");
+      Change.onclick = () => {
+        targetNode.setAttribute("data-href", "http://baidu.com");
+      };
+
+      // edit
+      const Edit = document.getElementById("edit");
+      const child = document.getElementById("target__content2");
+      Edit.onclick = () => {
+        child.innerHTML = "these are some text content 3";
+      };
+
+      var mutations = observer.takeRecords(); // 3. --------------------------- 返回一个MutationRecord 对象列表，每个对象都描述了应用于 DOM 树某部分的一次改动
+      if (mutations) {
+        callback(mutations);
+      }
+
+      // stop
+      const Stop = document.getElementById("stop");
+      Stop.onclick = () => {
+        observer.disconnect(); // 2. ------------------------------------------ 停止观察
+      };
+    </script>
+  </body>
+</html>

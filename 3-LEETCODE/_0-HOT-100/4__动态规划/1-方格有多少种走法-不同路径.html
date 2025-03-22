@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>方格有多少种走法 不同路径</title>
+  </head>
+  <body>
+    <script>
+      // 62. 不同路径  Unique Paths
+
+      // Question
+      // 1. grid: -> There is a robot on an m x n grid.
+      // 2. initial position: -> The robot is initially 【 located at 】 the top-left corner (i.e., grid[0][0]).
+      // 3. destination: -> The robot tries to move to the bottom-right corner (i.e., grid[m - 1][n - 1]).
+      // 4. condition: -> The robot can only move 【 either down or right 】 at any point in time.
+      // Given the two 【 integers 】 m and n, return the number of possible unique paths that the robot can take to reach the bottom-right corner.
+      // The test cases are generated so that the answer will be less than or equal to 2 * 109.
+
+      // 题目
+      // 一个机器人位于一个 m x n 网格的左上角 （起始点在下图中标记为 “Start” ）。
+      // 机器人每次只能向下或者向右移动一步。机器人试图达到网格的右下角（在下图中标记为 “Finish” ）。
+      // 问总共有多少条不同的路径？
+
+      // 输入：m = 3, n = 7
+      // 输出：28
+
+      // 对比
+      // - 120. 三角形最小路径和
+      // - 剑指 Offer II 099. 最小路径之和
+      // - 62. 不同路径
+
+      // leetcode
+      // 62. 不同路径 https://leetcode.cn/problems/unique-paths/
+      // 剑指 Offer II 099. 最小路径之和 https://leetcode.cn/problems/0i0mDW/
+
+      // 原理
+      // 1. 只有一种走法的网格: 在 ( 第一行的所有列 - 只有一种走法(向右) ) 和 ( 第一列的所有行 - 只有一种走法(向下) ) 都只有一种走法
+      // 2. 利用 ( 动态规划 ) 找到 ( 状态转移方程 )
+
+      // 思路
+      // - 动态规划
+      // - 状态转移方程: dp[i][j] = dp[i - 1][j] + dp[i][j - 1] 表示 ( 当前的位置的走法数 = 左边走法数 + 上边走法数 )
+
+      // English
+      // -- locate at. 位于
+      // -- either or. 要么...要么... 不是...就是...
+      // -- integer 整数
+      // -- top-left corner. 左上角
+
+      var uniquePaths = function (m, n) {
+        const dp = new Array(m).fill(0).map(() => []);
+        // 1
+        // dp
+        // 是个二维数组
+        // dp[i][j] 表示 来表示网格的每个位置上一共有多少种走法
+
+        // 2 状态转移方程
+        // dp[i][j] = dp[i - 1][j] + dp[i][j - 1];
+        // 状态转移方程 ( 本行本列的走法 = 本行前一列(右走一步) + 本列前一行(下走一步)  ) 的走法的 和
+
+        // 每行的第一列 ( 只有一种走法 - 只能向下走 )
+        for (let i = 0; i < m; i++) {
+          dp[i][0] = 1;
+        }
+
+        // 第一行的所有列都 ( 只有一种走法 - 只能向右走 )
+        for (let j = 0; j < n; j++) {
+          dp[0][j] = 1;
+        }
+
+        // 除了 ( 第一行所有列  ) 和  ( 第一列的所有行 ) 以外的其他情况 = 都用 ( 状态转移方程 ) 来实现
+        // 注意 i j 都是从 1 开始
+        for (let i = 1; i < m; i++) {
+          for (let j = 1; j < n; j++) {
+            dp[i][j] = dp[i - 1][j] + dp[i][j - 1]; // 状态转移方程 ( 本行本列的走法 = 本行前一列(右走一步) + 本列前一行(下走一步)  ) 的走法的 和
+          }
+        }
+
+        // 返回最后一个位置上记录的走法，注意 ( 数组长度 ) 和 ( 数组下标 ) 的关系
+        return dp[m - 1][n - 1];
+      };
+
+      const res = uniquePaths(4, 4);
+      console.log("res: ", res);
+
+      // [1, 1, 1, 1]
+      // [1, 2, 3, 4]
+      // [1, 3, 6, 10]
+      // [1, 4, 10, 20]
+    </script>
+  </body>
+</html>

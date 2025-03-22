@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 203. 移除链表元素
+
+      // 题目
+      // 给你一个链表的头节点 head 和一个整数 val ，请你删除链表中所有满足 Node.val == val 的节点，并返回 新的头节点 。
+
+      // 输入：head = [1,2,6,3,4,5,6], val = 6
+      // 输出：[1,2,3,4,5]
+
+      // 输入：head = [], val = 1
+      // 输出：[]
+
+      // 输入：head = [7,7,7,7], val = 7
+      // 输出：[]
+
+      /**
+       * Definition for singly-linked list.
+       * function ListNode(val, next) {
+       *     this.val = (val===undefined ? 0 : val)
+       *     this.next = (next===undefined ? null : next)
+       * }
+       */
+      /**
+       * @param {ListNode} head
+       * @param {number} val
+       * @return {ListNode}
+       */
+
+      // leetcode
+      // 203. 移除链表元素 https://leetcode.cn/problems/remove-linked-list-elements/
+      // 其实可以用同样的写法
+
+      // 对比
+      // ( 删除一个节点 ) 剑指 Offer 18. 删除链表的节点 https://leetcode.cn/problems/shan-chu-lian-biao-de-jie-dian-lcof/
+      // ( 删除多个节点 - 就是不要break就行 ) 203. 移除链表元素 https://leetcode.cn/problems/remove-linked-list-elements/
+      // ( 存在重复的节点，就删除重复的靠后的节点 ) 83. 删除排序链表中的重复元素 https://leetcode.cn/problems/remove-duplicates-from-sorted-list/
+      // ( 删除倒数第N个节点 - 滑动窗口 )  19. 删除链表的倒数第 N 个结点 https://leetcode.cn/problems/remove-nth-node-from-end-of-list/
+
+      // English
+      // -- dummy 假的
+
+      var removeElements = function (head, val) {
+        const pre = (list = new ListNode(null)); // 新建空节点，空链表。即 dummy 虚拟节点，dummy是假，虚假的的意思
+        pre.next = head; // 空节点指向head，则可以通过 pre.next 遍历整个链表
+
+        // let list = pre; // 缓存，便于返回头节点，因为 list 要不断后移
+
+        while (list.next) {
+          if (list.next.val === val) {
+            list.next = list.next.next; // 相当于删除操作；注意对比只删除一个的情况找到就break了 => 3-LEETCODE/2-LINKED_LIST/4-1-删除链表节点.html
+            // break; 没有break是 和 剑指Offer18.删除链表的节点 的区别
+          } else {
+            list = list.next; // 后移指针
+          }
+        }
+
+        return pre.next;
+      };
+
+      // --------------------------------------------------------------------------------------------
+      // --------------------------------------------------------------------------------------------
+      // 方法2
+      // 下面的更精简
+      var removeElements2 = function (head, val) {
+        let dummy = (list = new ListNode(null));
+        dummy.next = head;
+        while (list.next) {
+          if (list.next.val === val) {
+            list.next = list.next.next;
+          } else {
+            list = list.next;
+          }
+        }
+        return dummy.next;
+      };
+    </script>
+  </body>
+</html>

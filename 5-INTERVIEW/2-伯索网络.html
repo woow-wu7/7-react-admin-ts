@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 题一
+      // 问题：输入一个数字，通过交换其中的两位(最多交换一次，可以不交换)，输出可以得到对应的最大值。如输入1234，交换 1,4，得到4231; 请实现对应的change方法
+      // 思路: 找出所有交换位置的数，和上一次较大的值比较，动态更新为较大的值
+
+      // 扩展问题
+      //  - 给出一段英文连续的英文字符窜，找出重复出现次数最多的字母？
+      //  - 解决的总体思路都差不多
+
+      // 对比
+      // 1323. 6 和 9 组成的最大数字
+      // leetcode
+      // https://leetcode.cn/problems/maximum-69-number/
+
+      const findMax = (num) => {
+        const arr = String(num).split("");
+
+        let max = num;
+
+        for (let i = 0; i < arr.length; i++) {
+          for (let j = 1; j < arr.length; j++) {
+            [arr[i], arr[j]] = [arr[j], arr[i]];
+            const next = Number(arr.reduce((prev, next) => prev + next)); // 交换后的值，因为+存在重载，当是字符串+时，是相连，所以不影响
+            if (next > max) {
+              max = next;
+            }
+            [arr[i], arr[j]] = [arr[j], arr[i]]; // 交换后，再交换回来，则不影响下一次比较
+          }
+        }
+
+        return max;
+      };
+
+      const res = findMax(1234);
+      console.log("res: ", res);
+
+      // ----------------------------------------------------------------------------------------------------
+      // ----------------------------------------------------------------------------------------------------
+      // 题二
+      // this指向问题
+      // 扩展: this 的使用场景
+      // - 构造函数中的 this -----------------------> 是指向实例对象
+      // - 函数和对象方法中的 this ------------------> 在函数调用时确定指向
+      // - 箭头函数中的 this -----------------------> 没有自己的this，指代的是 ( 箭头函数声明时所在所用域 ) 的 ( 上层作用域中的 this )
+      // - ( 嵌套 ) 函数声明并且调用在对象的方法中时 ---> 此时 this 取决于 调用类型 ( 直接调用 和 方法调用 )，而不取决于外部函数的上下文；
+      //    - ( 直接调用: 非严格模式this指向window，严格模式this指向undefined )
+      //    - ( https://bbs.huaweicloud.com/blogs/330379 )
+      //    - ( 2-FRONTEND/JS/15-arrow-function/this特殊案例.html )
+
+      var name = "123";
+      var obj = {
+        name: "456",
+        print: function () {
+          console.log(111, this.name); // 456
+          function a() {
+            console.log(222, this.name);
+            // 123，this指向window
+
+            // 注意
+            // - 当 ( 函数定义且调用在对象方法的内部 ) 时，此时 ( 函数的上下文 ) 仅取决于 ( 调用类型 )，而 ( 不取决于外部函数的上下文 )
+            // - 也就是说此时的函数的this任然取决于内部函数在父函数内部的调用方式
+
+            // 扩展
+            // - 调用类型有哪些？
+            //  - 默认绑定/直接调用
+            //  - 隐式绑定/方法调用
+            //  - https://bbs.huaweicloud.com/blogs/330379
+          }
+          a(); // 这里的调用方式是 直接调用 - this指向 ( 非严格模式指向window ) ( 严格模式指向undefined )
+        },
+      };
+      obj.print();
+
+      // ----------------------------------------------------------------------------------------------------
+      // ----------------------------------------------------------------------------------------------------
+      // 题三
+      // 100万条数据渲染优化
+      // - 分页 -------------------------- 减少请求量
+      // - DocumentFragment 文档片段 ----- 减少DOM渲染的次数
+      // - requestAnimationFrame -------- 多线程
+    </script>
+  </body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      section {
+        position: relative;
+
+        display: inline-block;
+        padding-bottom: 4px;
+        background: yellow;
+        cursor: pointer;
+      }
+
+      section:before {
+        position: absolute;
+
+        content: "";
+        bottom: 0;
+        height: 4px;
+        background: red;
+
+        left: 50%;
+        right: 50%;
+        transition: all 0.1s;
+      }
+
+      section:hover::before {
+        left: 0;
+        right: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <section>hover-从中间向两边过渡动效</section>
+  </body>
+</html>

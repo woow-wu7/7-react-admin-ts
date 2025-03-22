@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // N 叉树的最大深度
+      // - 实现方式和二叉树的最大深度一样，至少需要遍历所有分支
+
+      // leetcode
+      // https://leetcode.cn/problems/maximum-depth-of-n-ary-tree/
+
+      // 对比
+      // - 1. 二叉树的直径 ------ 需要用到树的深度 ---- https://leetcode.cn/problems/diameter-of-binary-tree/
+      // - 2. 平衡二叉树 ------- 需要用到树的深度 ----- https://leetcode.cn/problems/balanced-binary-tree/
+      // - 3. 二叉树的深度 -------------------------- https://leetcode.cn/problems/maximum-depth-of-binary-tree/
+      // - 4. N叉树的深度 --------------------------- https://leetcode.cn/problems/maximum-depth-of-n-ary-tree/
+
+      // 注意：这里的返回值类型很重要
+      //  - 请对比 ( 二叉树的最大深度 ) ( 二叉树的最小深度 ) ( N叉树的最大深度 ) ( 二叉树的直径 ) ( 平衡二叉树 )
+
+      var maxDepth = function (root) {
+        if (!root) return 0; // root不存在
+
+        const children = root.children;
+        if (!children || !children.length) return 1; // root存在，但是children不存在，或者children是空数组
+
+        return Math.max(...children.map((item) => maxDepth(item))) + 1;
+      };
+    </script>
+  </body>
+</html>

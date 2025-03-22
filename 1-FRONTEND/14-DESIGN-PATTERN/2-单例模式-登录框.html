@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button class="login">登录1</button>
+    <button class="login2">登录2</button>
+    <script>
+      // singleton
+      // 单例模式 - 登录框
+    </script>
+    <script>
+      // 闭包的方式实现 单例
+      const singleton = (() => {
+        let instance = null;
+        return (fn, arg) => {
+          if (!instance) {
+            instance = fn.call(null, arg);
+          }
+          return instance;
+        };
+      })();
+
+      // 创建单例对象 和 管理单例 分别在不同的函数中
+      // 满足 单一职责 和 开放封闭 原则
+      const createModal = ({ title, content }) => {
+        const container = document.createElement("div");
+        container.style = "width: 300px; height: 100px; border: 1px solid red";
+
+        const titleDOM = document.createElement("p");
+        titleDOM.innerHTML = `${title}`;
+
+        const contentDOM = document.createElement("div");
+        contentDOM.innerHTML = `${content}`;
+
+        container.appendChild(titleDOM);
+        container.appendChild(contentDOM);
+
+        return container;
+      };
+
+      const modal = singleton(createModal, {
+        title: "登录框",
+        content: "用户名",
+      });
+
+      // 只有一个实例 modal
+      const showLogin1 = () => {
+        modal.firstChild.innerHTML = "登录框1";
+        modal.lastChild.innerHTML = "用户名1";
+        document.body.appendChild(modal);
+      };
+      const showLogin2 = () => {
+        modal.firstChild.innerHTML = "登录框2";
+        modal.lastChild.innerHTML = "用户名2";
+        document.body.appendChild(modal);
+      };
+
+      const button = document.getElementsByClassName("login")[0];
+      button.addEventListener("click", showLogin1, { capture: false });
+      const button2 = document.getElementsByClassName("login2")[0];
+      button2.addEventListener("click", showLogin2, { capture: false });
+    </script>
+  </body>
+</html>

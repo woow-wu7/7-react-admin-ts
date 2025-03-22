@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 剑指 Offer 07. 重建二叉树
+
+      // 题目
+      // 剑指 Offer 07. 重建二叉树
+      // 输入某二叉树的前序遍历和中序遍历的结果，请构建该二叉树并返回其根节点。
+      // 假设输入的前序遍历和中序遍历的结果中都不含重复的数字。
+
+      // 示例 1:
+      // Input: preorder = [3,9,20,15,7], inorder = [9,3,15,20,7]
+      // Output: [3,9,20,null,null,15,7]
+
+      // 示例 2:
+      // Input: preorder = [-1], inorder = [-1]
+      // Output: [-1]
+
+      // leetcode
+      // https://leetcode.cn/problems/zhong-jian-er-cha-shu-lcof/
+
+      /**
+       * Definition for a binary tree node.
+       * function TreeNode(val) {
+       *     this.val = val;
+       *     this.left = this.right = null;
+       * }
+       */
+      /**
+       * @param {number[]} preorder
+       * @param {number[]} inorder
+       * @return {TreeNode}
+       */
+
+      // preorder 前序
+      // inorder 中序
+      // postorder 后续
+
+      // 思路
+      // - 1. 根节点: preorder 的第一个节点一定是根节点
+      // - 2. 左右子树: 拿着 ( 根节点 ) 在 ( inorder ) 找到根节点的位置，然后 inorder 中 ( 根节点的前面就是左子树 ) ( 根节点的后面就是右子树 )
+      // - 3. 递归: 左右子树右是一个新的树，继续123，进行递归即可
+
+      var buildTree = function (preorder, inorder) {
+        if (!preorder.length || !inorder.length) return null; // 递归终止条件
+
+        const cur = preorder.shift(); // 根节点
+        const cur_inorder_index = inorder.findIndex((v) => v === cur); // 根节点在中序中的位置
+
+        const root = new TreeNode(cur); // 构建二叉树
+        root.left = buildTree(preorder, inorder.slice(0, cur_inorder_index)); // preorder因为每次都在shift，所以长度一直在变化，shift后，剩下的第一个节点一定是子树根节点
+        root.right = buildTree(preorder, inorder.slice(cur_inorder_index + 1));
+
+        return root;
+      };
+    </script>
+  </body>
+</html>

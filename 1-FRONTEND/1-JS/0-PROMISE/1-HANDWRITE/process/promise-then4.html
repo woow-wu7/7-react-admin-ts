@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>复习手写promise</title>
+  </head>
+  <body>
+    <script>
+      // -------------------------------------------------------------------------------------------------------------------------------------------
+      // -------------------------------------------------------------------------------------------------------------------------------------------
+      // -------------------------------------------------------------------------------------------------------------------------------------------
+
+      // (一)
+      // 234 都是解决 then 的执行顺序
+      // 2 - 解决 - then 是异步函数的情况，即要先执行完所有的同步任务，才会去执行 then
+      // 3 - 解决 - 当 executor 函数中有异步任务时，then() 比 resolve() 先执行，而then的执行需要状态改变为fulfilled或者rejected，而then执行时，resolve()或reject()并未执行，状态没变，导致then中的逻辑并未执行
+      // 4 - 解决 - 当 executor 函数中有异步任务，异步任务中同时有同步任务，要保证 ( promise-executor中的异步任务中的--同步任务先于then执行 )，即 342，而不是324 ------- 解决方式：在向 onFulfilledCallbacks数组中push方法时，要再用 setTimeout包装，让resolve()后面的代码先执行
+
+      class _Promise {
+        constructor(executor) {
+          executor(this.resolve, this.reject);
+        }
+
+        value = null;
+        reason = null;
+        status = "pending";
+
+        onFulfilledCallbacks = []; // 成功回调的队列
+        onRejectedCallbacks = [];
+
+        resolve = (value) => {
+          if (this.status === "pending") {
+            this.status = "fulfilled";
+            this.value = value;
+            this.onFulfilledCallbacks.forEach((fn) => fn(value));
+          }
+        };
+
+        reject = (reason) => {
+          if (this.status === "pending") {
+            this.status = "rejected";
+            this.value = reason;
+            this.onRejectedCallbacks.forEach((fn) => fn(reason));
+          }
+        };
+
+        then = (onFulfilled, onRejected) => {
+          if (this.status === "fulfilled") {
+            setTimeout(() => onFulfilled(this.value)); // setTime 用来模拟 then() 函数是异步的，即输出 32，而不是23
+          }
+          if (this.status === "rejected") {
+            setTimeout(() => onRejected(this.reason));
+          }
+
+          if (this.status === "pending") {
+            // 问题：这里为什么要把onFulfilled在外面再包装一层函数
+            // 回答：因为这里要是保证 onFulfilled 可以在调用时传参，在resolve中调用时，传入终值，然后在传给 onFulfilled，---- 因为: resolve() 未执行时，是不知道终值value是多少的
+            this.onFulfilledCallbacks.push((value) =>
+              setTimeout(() => onFulfilled(value))
+            );
+            this.onRejectedCallbacks.push((reason) =>
+              setTimeout(() => {
+                onRejected(reason);
+              })
+            );
+          }
+        };
+      }
+
+      new _Promise((resolve, reject) => {
+        setTimeout(() => {
+          resolve(2);
+          console.log(4); // 这里要保证 4 比 2 先执行，所有要在 then 中向 onFulfilledCallbacks 中 push 成功回调时，在经过一层 setTimeout 包装
+        }); // 当 promise 的 executor 函数中，有异步任务时，then不会执行，因为then先于resolve执行，状态并未改变，所以 ---- 我们需要用两个队列来实现执行顺序
+      }).then(
+        (value) => console.log(value),
+        (reason) => console.log(reason)
+      );
+      console.log(3);
+      // 未处理前执行顺序: 3 2 4
+      // 真正正确的执行顺序是: 3 4 2
+    </script>
+  </body>
+</html>

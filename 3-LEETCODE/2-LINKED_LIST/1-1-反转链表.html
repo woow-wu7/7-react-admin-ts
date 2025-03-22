@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 反转链表
+      // 206. 反转链表 Reverse Linked List.
+      // 剑指 Offer II 024. 反转链表
+
+      // Question
+      // Given the head of a 【 singly linked list 】, reverse the list, and return the reversed list.
+
+      // English
+      // -- singly linked list. 单链表
+      // -- doubly linked list. 双向链表
+      // -- circular linked list. 环形链表
+
+      /**
+       * Definition for singly-linked list.
+       * function ListNode(val, next) {
+       *     this.val = (val===undefined ? 0 : val)
+       *     this.next = (next===undefined ? null : next)
+       * }
+       */
+      /**
+       * @param {ListNode} head
+       * @return {ListNode}
+       */
+
+      // 1
+      // 扩展
+      // 链表 和 数组 的区别？
+      // - 查找
+      //   - 数组: 数组的 ( 内存空间 ) 是 ( 连续 ) 的，可以通过 ( 计算偏移量 ) 来寻找，( 效率高 )
+      //   - 链表: 链表的 ( 内存空间 ) 是 ( 不连续 )，链表是通过 ( 地址指针 ) 来寻找目标节点，每次都需要从头遍历，( 效率低 )
+      // - 添加 和 删除
+      //   - 数组: 数组的 ( 添加和删除 ) 元素后，( 由于要填充之前的位置，需要移动很多元素 )，所以 ( 数组的添加和删除 - 效率低 )
+      //   - 链表: 链表的 ( 添加和删除 ) 只需要求改指针的指向，是不需要移动内存空间的内容的，所以 ( 链表的添加删除的 - 效率高 )
+      // - 总结
+      //   - 数组查找效率高，链表添加和删除效率高
+
+      // 2
+      // 题目
+      // 给你单链表的头节点 head ，请你反转链表，并返回反转后的链表。
+      // ---
+      // 输入： head = [1,2,3,4,5]
+      // 输出： [5,4,3,2,1]
+      // ---
+      // 输入：head = []
+      // 输出：[]
+      // ---
+
+      // leetcode
+      // 206. 反转链表 https://leetcode.cn/problems/fan-zhuan-lian-biao-lcof/
+
+      // 对比
+      // 92. 反转链表 II  https://leetcode.cn/problems/reverse-linked-list-ii/
+      // 206. 反转链表 https://leetcode.cn/problems/reverse-linked-list/
+
+      // 对比
+      // 都会用到 ( 链表中间节点 ) ( 反转链表 ) ( 合并链表 ) ( 链表相等 )
+      // 143. 重排链表 https://leetcode.cn/problems/reorder-list/
+      // 234. 回文链表  https://leetcode.cn/problems/palindrome-linked-list/
+
+      // 前置知识 - 关联知识
+      // - 0. 回文链表 https://leetcode.cn/problems/palindrome-linked-list/
+      // - 1. 重排链表  https://leetcode.cn/problems/reorder-list/
+      // - 2. 寻找链表中间节点 https://leetcode.cn/problems/convert-sorted-list-to-binary-search-tree/
+      // - 3. 反转链表 https://leetcode.cn/problems/fan-zhuan-lian-biao-lcof/
+      // - 4. 合并两个有序链表 https://leetcode.cn/problems/he-bing-liang-ge-pai-xu-de-lian-biao-lcof/
+
+      var reverseList = function (head) {
+        // if (!head) return null;
+        // if (!head.next) return head;
+        // if (!head || !head.next) return head; // 边界，等价于上面两句代码
+        // 注意: 上面三个判断都不需要，因为下面有判断 cur 是否存在，( cur.next 可以不存在, 因为后面赋值给 cur，cur会判断是否存在 )
+
+        let [pre, cur] = [null, head];
+        // 声明两个变量
+        // pre: 当前正在遍历的节点的前一个节点，初始时是 null
+        // cur: 当前正在遍历的节点，初始时时 head
+        // 这里是多个变量声明的一个技巧，数组解构赋值
+
+        // 如果当前节点存在，即不存在时结束遍历，不存在就遍历到了链表结尾
+        // 遍历结束时，cur == null, 所以反转后的链表的头节点应该是 pre
+        while (cur) {
+          const next = cur.next; // 用来缓存当前正序的下一个节点，因为之后会去修改cur指向pre，链表就断开了，就不知道下一个节点是指向谁了，所以先缓存起来
+
+          cur.next = pre; // 反转链表，指向反转链表的头节点 ( 即将当前节点的指针指向上一个节点 )
+
+          // 以下是反转链表后的处理，即 ( 往后移动指针 )，进行下一次遍历
+          // 注意:
+          // - 顺序: 这里必须 ( 先后移pre，再后移cur )
+          // - 因为: 如果先后移cur，pre就找不到移动前的cur了
+          pre = cur; // pre后移 - 反转链表的头节点就是cur，当前的pre就是上一次的cur
+          cur = next; // cur后移动 - 正序的链表指针向后移，进行下一轮处理
+        }
+
+        return pre;
+        // 返回 反转后的链表 头节点
+        // 注意不是cur，此时的cur是null，应该是cur前一个节点pre，pre即反转后的头节点，即正序链表的最后一个节点
+      };
+    </script>
+  </body>
+</html>

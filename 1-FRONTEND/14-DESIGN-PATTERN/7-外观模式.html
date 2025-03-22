@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 外观模式
+      // facade
+
+      // - 概念
+      //   - 是一种通过给多个复杂的子系统提供一个 ( 一致的接口 )，而使得这些子系统更容易被访问的模式
+      //   - 外部: 不同关心系统内容的过程和具体细节，从而降低复杂度，提高可维护性
+      // - 类比
+      //   - 之前需要到 5 个不同的部门才能办理万房产证，现在只需要一个 ( 综合部门 ) 办理即可，他们会帮我们去 5 个部门去办理
+      // - **角色**
+      //   - Facade 外观
+      //   - Sub 子系统
+      //   - Client 客户
+
+      class Sum {
+        sum(a, b) {
+          return a + b;
+        }
+      }
+      class Subtract {
+        subtract(a, b) {
+          return a - b;
+        }
+      }
+
+      // 外观模式
+      // - 集成了 加减乘除 的工能
+      class Calculate {
+        sum = new Sum();
+        subtract = new Subtract();
+
+        sumFn = (a, b) => this.sum.sum(a, b);
+        subtractFn = (a, b) => this.subtract.subtract(a, b);
+      }
+
+      const calculate = new Calculate();
+      const sum = calculate.sumFn(1, 2);
+      console.log("sum: ", sum);
+    </script>
+  </body>
+</html>

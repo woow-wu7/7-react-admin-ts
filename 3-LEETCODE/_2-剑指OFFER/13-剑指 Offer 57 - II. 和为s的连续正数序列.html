@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 剑指 Offer 57 - II. 和为s的连续正数序列
+
+      // 题目
+      // 输入一个正整数 target ，输出所有和为 target 的连续正整数序列（至少含有两个数）。
+
+      // 序列内的数字由小到大排列，不同序列按照首个数字从小到大排列。
+
+      // 示例 1：
+      // 输入：target = 9
+      // 输出：[[2,3,4],[4,5]]
+
+      // 示例 2：
+      // 输入：target = 15
+      // 输出：[[1,2,3,4,5],[4,5,6],[7,8]]
+
+      // 限制：
+      // 1 <= target <= 10^5
+
+      /**
+       * @param {number} target
+       * @return {number[][]}
+       */
+
+      // leetcode
+      // https://leetcode.cn/problems/he-wei-sde-lian-xu-zheng-shu-xu-lie-lcof/
+
+      // 思路
+      // 双指针
+      // - 1. 连续正整数数组的求和公式 sum = ( right + left ) * ( right - left + 1 ) / 2
+      // - 2. while的循环结束条件：right<=target，可以优化为 ( right < (Math.ceil(target/2)) )，这是规律，因为题目说了至少两个数，并且要连续
+
+      var findContinuousSequence = function (target) {
+        let left = 1;
+        let right = 2;
+
+        const res = [];
+
+        while (right <= Math.ceil(target / 2)) {
+          const sum = ((right + left) * (right - left + 1)) / 2;
+
+          if (sum > target) left++; // sum大了，就右移left，使sum减小
+          if (sum < target) right++; // sum小了，就右移right，使sum增大
+          if (sum === target) {
+            const item = [];
+            for (let i = left; i <= right; i++) {
+              item.push(i);
+            }
+            res.push(item);
+            left++; // 相等，收集结果，并且右移left，使sum减小，则又会进行3个if的判断
+          }
+        }
+
+        return res;
+      };
+    </script>
+  </body>
+</html>

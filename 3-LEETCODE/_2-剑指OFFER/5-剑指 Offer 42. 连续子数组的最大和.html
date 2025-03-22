@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 剑指 Offer 42. 连续子数组的最大和
+      // 53. 最大子数组和
+      // 这两道题是一样的
+
+      // 给你一个整数数组 nums ，请你找出一个具有最大和的连续子数组（子数组最少包含一个元素），返回其最大和。
+      // 子数组 是数组中的一个连续部分。
+
+      // 输入：nums = [-2,1,-3,4,-1,2,1,-5,4]
+      // 输出：6
+      // 解释：连续子数组 [4,-1,2,1] 的和最大，为 6 。
+
+      // 输入：nums = [1]
+      // 输出：1
+
+      // 方法
+      // - 动态规划 O(n)
+      // - 穷举 O(n**2)
+
+      // leetcode
+      // 剑指 Offer 42. 连续子数组的最大和 https://leetcode.cn/problems/lian-xu-zi-shu-zu-de-zui-da-he-lcof/
+      // 53. 最大子数组和 https://leetcode.cn/problems/maximum-subarray/submissions/
+
+      // 对比
+      // - 和最大子数组 ----------------- 53. 最大子数组和
+      // - 乘积最大子数组 --------------- 152. 乘积最大子数组
+
+      /**
+       * @param {number[]} nums
+       * @return {number}
+       */
+      // 1
+      // 动态规划
+      // - 1. dp[i] 表示 i 位置上所有子数组的和的最大值
+      // - 2. 状态转移方程: dp[i] = Math.max(dp[i-1]+nums[i], nums[i])
+      //      - i位置有两种选择
+      //        - dp[i-1]+nums[i] ------ 继续添加数组
+      //        - nums[i] -------------- 新建一个数组
+
+      // 扩展
+      // 和 - sum
+      // 差 - difference
+      // 积 - product
+      // 商 - quotient
+
+      var maxSubArray = function (nums) {
+        // 这里 nums 必然长度 >= 1，因为题目说了 1 <= arr.length <= 10^5
+
+        // 特殊情况，这里多余了，因为下面已经包含了数组长度为1的情况，for循环不满足，直接返回max
+        // if (nums.length === 1) return nums[0];
+
+        const dp = [nums[0]]; // dp[0] 只能是 nums[0]
+        let max = nums[0]; // 记录最大值，max初始值就是nums[0]，注意：初始值不能赋值为0，因为有 [1] 只有一个值的情况
+
+        // i 从 1 开始遍历，因为 dp[0] 就是 nums[0]，上面已经取得了，并且这里 dp[i-1] 也不能越界
+        for (let i = 1; i < nums.length; i++) {
+          const currentMax = Math.max(dp[i - 1] + nums[i], nums[i]);
+          dp[i] = currentMax; // 状态转移方程
+          if (currentMax > max) max = currentMax; // 更新最大值
+        }
+
+        return max;
+      };
+
+      // ------------------------------------------------------------------------------------------
+      // ------------------------------------------------------------------------------------------
+      // ------------------------------------------------------------------------------------------
+      // 2
+      // 穷举
+      var maxSubArray = function (nums) {
+        let max = nums[0];
+        for (let i = 0; i < nums.length; i++) {
+          for (let j = i; j < nums.length; j++) {
+            const res = nums.slice(i, j + 1).reduce((a, b) => a + b);
+            if (res > max) max = res;
+          }
+        }
+
+        return max;
+      };
+    </script>
+  </body>
+</html>

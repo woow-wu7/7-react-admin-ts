@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 876. 链表的中间结点
+
+      // 题目
+      // 给定一个头结点为 head 的非空单链表，返回链表的中间结点。
+      // 如果有两个中间结点，则返回第二个中间结点。
+
+      // 输入：[1,2,3,4,5]
+      // 输出：此列表中的结点 3 (序列化形式：[3,4,5])
+
+      // 输入：[1,2,3,4,5,6]
+      // 输出：此列表中的结点 4 (序列化形式：[4,5,6])
+      // 由于该列表有两个中间结点，值分别为 3 和 4，我们返回第二个结点。
+
+      // leetcode
+      // 876. 链表的中间结点 https://leetcode.cn/problems/middle-of-the-linked-list/
+
+      /**
+       * Definition for singly-linked list.
+       * function ListNode(val, next) {
+       *     this.val = (val===undefined ? 0 : val)
+       *     this.next = (next===undefined ? null : next)
+       * }
+       */
+      /**
+       * @param {ListNode} head
+       * @return {ListNode}
+       */
+      // ------------------------------------------------------------------------------------------
+      // ------------------------------------------------------------------------------------------
+      // ------------------------------------------------------------------------------------------
+
+      // 对比
+      // 都会用到 ( 链表中间节点 ) ( 反转链表 ) ( 合并链表 ) ( 链表相等 )
+      // 143. 重排链表 https://leetcode.cn/problems/reorder-list/
+      // 234. 回文链表  https://leetcode.cn/problems/palindrome-linked-list/
+
+      // 前置知识 - 关联知识
+      // - 0. 回文链表 https://leetcode.cn/problems/palindrome-linked-list/
+      // - 1. 重排链表  https://leetcode.cn/problems/reorder-list/
+      // - 2. 寻找链表中间节点 https://leetcode.cn/problems/convert-sorted-list-to-binary-search-tree/
+      // - 3. 反转链表 https://leetcode.cn/problems/fan-zhuan-lian-biao-lcof/
+      // - 4. 合并两个有序链表 https://leetcode.cn/problems/he-bing-liang-ge-pai-xu-de-lian-biao-lcof/
+
+      // 方法1
+      // 思路: 快慢指针
+      // - 原理：fast指针一次两步，slow指针一次一步，当fast遍历到末尾时，slow就是中间位置
+      // - 因为: 每次都快一倍，当快指针遍历完时，总的路程 快指针 也是 慢指针的 两倍
+
+      // (1) 快慢指针的运用
+      // - 1. 链表是否有环
+      // - 2. 环形链表的入口
+      // - 3. 链表的中间节点
+      // (2) 滑动窗口的运用
+      // - 1. 删除倒数第k个节点
+      // - 2. 链表中倒数第k个节点
+
+      var middleNode = function (head) {
+        // let fast = head;
+        // let slow = head;
+        let fast = (slow = head); // 上面两句可以简写为这样
+
+        // 奇数长度: fast遍历完指向了 fast === null
+        // 偶数长度: fast遍历完 fast.next === null
+        // 所以: 循环结束条件 fast !== null && fast.next !== null
+        while (fast && fast.next) {
+          fast = fast.next.next;
+          slow = slow.next;
+        }
+
+        return slow;
+      };
+
+      // 方法 2
+      // - 方法 2 用了一个节点，来获取中间节点的前一个节点，这种方法常用在 ( 需要操作的题目中 - 比如 删除中间节点， 反转中间节点后的链表，回文链表 )
+      var middleNode2222222222222 = function (head) {
+        if (head.next === null) return head;
+        let fast = (slow = cut = head);
+        while (fast && fast.next) {
+          cut = slow;
+          fast = fast.next.next;
+          slow = slow.next;
+        }
+        return cut.next;
+      };
+
+      // ------- ------- ------- ------- ------- ------- ------- ------- ------- ------- -------
+      // ------- ------- ------- ------- ------- ------- ------- ------- ------- ------- -------
+      // 方法 3
+      // 1. 遍历统计 len
+      // 2. 遍历找到中间节点
+      var middleNode = function (head) {
+        let temp = head;
+        let length = 0;
+
+        while (head) {
+          length++;
+          head = head.next;
+        }
+
+        // 奇数长度: 下标就是 center
+        // 偶数长度: 两个中间节点，返回第二个，下标也是 center
+        const center = Math.floor(length / 2);
+
+        for (let i = 0; i < center; i++) {
+          temp = temp.next;
+        }
+
+        return temp;
+      };
+    </script>
+  </body>
+</html>

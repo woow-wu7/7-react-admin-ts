@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      class Cat {}
+      class Dog {}
+      class ChineseCat extends Cat {} // 中国猫
+      class ChineseDog extends Dog {} // 中国狗
+      class EnglishCat extends Cat {} // 美国猫
+      class EnglishDog extends Dog {} // 美国狗
+
+      class AnimalFactory { // ------------------------------- 抽象工厂类 => 抽象动物工厂
+          createCat()
+          createDog()
+      }
+
+      class ChineseAnimalFactory extends AnimalFactory { // ----------- 实现类 => 中国动物工厂
+        createCat() {
+          return new ChineseCat()
+        }
+        createDog() {
+          return new ChineseDog()
+        }
+      }
+
+      class EnglishAnimalFactory extends AnimalFactory { // ----------- 实现类 => 美国动物工厂
+        createCat() {
+          return new EnglishCat()
+        }
+        createDog() {
+          return new EnglishDog()
+        }
+      }
+
+      const chineseAnimal = new ChineseAnimalFactory() // ------------- 中国动物
+      const chineseCat = chineseAnimal.createCat() // ----------------- 中国猫
+      console.log(chineseCat)
+    </script>
+  </body>
+</html>

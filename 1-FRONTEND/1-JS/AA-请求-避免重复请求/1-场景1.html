@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 1
+      // 需求场景1:
+      // 问题: 一个页面多次调用同一个组件(比如首页头部和尾部都要加载同一个卡片组件，则请求的数据相同-请求的方法在组件内)，则请求会发起多次
+      // 需求: 我们需要只请求一次，其他的请求直接从缓存中获取结果。( 注意: 请求是异步的 )
+      // 注意: 这里之所以做缓存，数据该数据的变化频度就不是很高，不然会造成误差 ( 比如: 有1000个人都在通过post改一个数据，我们在get时做缓存就会造成数据不是实时的 )
+      // 资料:
+      // https://juejin.cn/post/6965644352022380552
+      // https://juejin.cn/post/7155401532303753229
+
+      // 2
+      // The most 【 easiest 】 example is to contrast the "throttle" function.
+
+      let count = 0;
+      let requestList = [];
+
+      const request = (url, params) => {
+        console.log("请求只执行了 %i 次", ++count);
+        return new Promise((resolve) => setTimeout(() => resolve(), 1000));
+      };
+
+      // fetch
+      const fetch = (url, params) => {
+        const sameRequest = requestList.find(
+          (item) => item.url === url && JSON.stringify(item.params) === JSON.stringify(params) // 这里比较两个对象相同只做简单处理
+        );
+        const removeRequest = () =>
+          requestList.filter((item) => item.url !== url && JSON.stringify(item.params) !== JSON.stringify(params));
+
+        // 1. 请求已经存在
+        // -- 直接返回请求的 promise 对象
+        // -- 注意该 promise 对象有三种状态，即每次请求的返回值 可能是pending状态的promise对象 等
+        if (sameRequest) return sameRequest.result;
+
+        // 2. 请求不存在
+        const result = new Promise((resolve, reject) => {
+          request(url, params)
+            .then((res) => resolve(res))
+            .catch((err) => reject(err))
+            .finally(() => {
+              // 请求完成后，删除该请求
+              // 注意: 因为相同的请求，立即返回了 { url, params, result }.result，所以这里异步删除没有影响
+              requestList = removeRequest();
+            });
+          // 3. 请求完成后，删除该请求，是为了
+          // -- 如果相同的请求很多，比如有30个，15个都用了第一个请求的缓存，当第1个请求完成后，后面的15个又可以发起新的请求了
+          // -- 这样就能保证数据的 ( 比较好的实时性，因为此场景是针对数据变化不是很快的场景，但是对于经常变化的数据，就不该做缓存 )
+        });
+
+        // 4
+        // 注意
+        // -- result 是立即返回的，只是这个对象的状态可能还没值，处于pending状态
+        // -- 所以 第二次请求，一定就能判断是不是重复的请求
+        const current = { url, params, result };
+        requestList.push(current);
+
+        return result;
+      };
+
+      // usage 使用 用法 n
+      fetch("/path", { data: "20230417" }).then(() => console.log(1));
+      fetch("/path", { data: "20230417" }).then(() => console.log(2));
+      fetch("/path", { data: "20230417" }).then(() => console.log(3));
+      setTimeout(() => {
+        fetch("/path", { data: "20230417" }).then(() => console.log(4));
+        fetch("/path", { data: "20230417" }).then(() => console.log(5));
+        fetch("/path", { data: "20230417" }).then(() => console.log(6));
+      }, 2000);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 透明单例
+      // - 优点：解决 简单单例 中的需要调用 createInstance 函数来生成对象的缺点，这里直接通过 new 调用
+      // - 缺点：
+      //   - 不符合单一职责原则，这个对象其实负责了两个功能：单例和创建对象
+      //   - 我们希望的是: ( 创建对象 ) 和 ( 管理单例 ) 被分布在不同的方法中
+      var Singleton = (function () {
+        var instance = null;
+        return function (name) {
+          if (instance) return instance;
+          this.name = name;
+          return (instance = this); // 返回实例对象，instance仅仅是为了做判断
+        };
+      })(); // IIFE返回一个构造函数
+      const a = new Singleton("A");
+      const b = new Singleton("B");
+      console.log("a === b", a === b);
+      console.log("a", a);
+
+      // ------------------------------------------------------
+      // es6 实现方式
+      class Singleton2 {
+        constructor() {
+          if (!Singleton2.instance) {
+            Singleton2.instance = this;
+          }
+          return Singleton2.instance;
+        }
+      }
+
+      const instance2 = new Singleton2();
+      const instance3 = new Singleton2();
+      console.log("instance2 === instance3", instance2 === instance3);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Intersection VS union</title>
+    <style>
+      * {
+        margin: 0;
+        height: 0;
+      }
+
+      div {
+        width: 400px;
+        height: 200px;
+      }
+
+      .rectangle1 {
+        background: red;
+        position: absolute;
+        /* top: 210px; */
+        left: 440px;
+      }
+
+      .rectangle2 {
+        background: yellow;
+        position: absolute;
+        left: 30px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="rectangle1"></div>
+    <div class="rectangle2"></div>
+    <script>
+      // English
+      // -- raw 生的 未加工的
+      // -- counter 计数器 柜台
+      // -
+      // -- bubble 泡 气泡 冒泡
+      // -- algorithm 算法
+      // --【 bubble sort algorithm. 冒泡排序算法 】
+      // -
+      // -- series 系列 串联 n
+      // --【 a series of test. 一系列测试 】
+      // --【 series circuit. 串联电路 】
+      // --【 parallel circuit. 并联电路 】
+      // --【 electric circuit. 电路 】
+      // -
+      // -- original 最初的 原始
+      // -- origin 起源 源头 n
+      // -
+      // -- resource 资源 资料
+      // -- source 来源 源头
+      // --【 open source code. 开源代码 】
+      // --【 open source module. 开源模块 】
+      // --【 source code analysis. 源码分析 】
+      // -
+      // -- pivot 支点
+      // TIPS: Pay attention to the pronunciation of the 'pivot'
+      // -
+      // -- coordinate 坐标
+      // -- adjacent 相邻的
+      // --【 Our house is 【 adjacent 】 to the park. 我们的房子紧挨着公园 】
+
+      // English
+      // -- triangle
+      // -- rectangle
+      // -- square
+      // -- diamond
+      // -- parallelogram  --  parallel 平行的 平行 并联
+      // -- trapezoid 梯形
+      // -
+      // -- oval 椭圆
+      // -- circle
+      // -- semicircle 半圆形
+      // -- sector 扇形
+      // -
+      // -- polygon 多边形
+      // -- pentagon 五边形
+      // -- hexagon 六边形
+      // -
+      // -- sphere 球
+      // -- cube 正方体
+      // -- cylinder 圆柱体
+      // -- cone 圆锥体
+      // -
+      // ---- parallel 平行的 平行 并联的
+      // ---- series 串联的
+      // ---- 【 parallel circuit. 并联电路 】
+      // ---- 【 series circuit. 串联电路 】
+      // ---- 【 electric circuit. 电路 】
+
+      // Topic: The intersection of the two rectangles.
+      // 题目: 求两个矩形的交集？
+
+      // 思路
+      // - 两个矩形的 宽高 w1 w2 h1 h2
+      // - 两个矩形的 中心点距离绝对值 w h
+
+      // - 取两个矩形的 ( 中心点 )，如果 ( 相交 ) 满足   w <= ( w1 + w2 ) / 2 且 h <= ( h1 + h2 ) / 2
+      //    - (w1+w2)/2 表示水平方向上两个矩形 相邻
+      //    - (h1+h2)/2 表示垂直方向上两个矩形 相邻
+
+      const rectangle1 = document.querySelector(".rectangle1");
+      const rectangle2 = document.querySelector(".rectangle2");
+
+      const bound1 = rectangle1.getBoundingClientRect();
+      const bound2 = rectangle2.getBoundingClientRect();
+
+      // Get the coordinates of the center point.
+      const getCenter = (shape) => ({
+        x: (shape.right - shape.left) / 2 + shape.left,
+        y: (shape.bottom - shape.top) / 2 + shape.top,
+      });
+
+      const center1 = getCenter(bound1);
+      const center2 = getCenter(bound2);
+
+      const getCenterDistance = (center1, center2) => {
+        return {
+          w: Math.abs(center1.x - center2.x),
+          h: Math.abs(center1.y - center2.y),
+        };
+      };
+
+      // const getCenterAdjacent = (center1, center2) => {
+      //   return {
+      //     x: Number(center1.x + center2.x) / 2,
+      //     y: Number(center1.y + center2.y) / 2,
+      //   };
+      // };
+
+      const getAdjacentDistance = (bound1, bound2) => {
+        return {
+          w: Math.abs((bound1.width + bound2.width) / 2),
+          h: Math.abs((bound1.height + bound2.height) / 2),
+        };
+      };
+
+      const centerDistance = getCenterDistance(center1, center2);
+      const centerAdjacent = getAdjacentDistance(bound1, bound2);
+
+      if (centerDistance.w <= centerAdjacent.w && centerDistance.h <= centerAdjacent.h) {
+        console.log("true", true);
+      } else {
+        console.log("false", false);
+      }
+
+      // 资料
+      // https://juejin.cn/post/7000712693728411684
+    </script>
+  </body>
+</html>

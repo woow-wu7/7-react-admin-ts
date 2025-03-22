@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Promise.all() function implementation</title>
+  </head>
+  <body>
+    <script>
+      // English
+      // -
+      // succeed 成功 v
+      // success 成功 n
+      // successful 成功 adj
+      // -
+      // fail 失败 v
+      // failure 失败n 失败的人n
+      // failed 失败 adj / v过去式
+
+      // Promise.all function implementation
+
+      // Promise.all
+      // - 返回值: 返回一个新的 promise 对象，所以可以接着 then
+      // - 参数: ( 数组 ) 或 ( 具有Iterator接口的数据结构，返回值必须是promise对象 )，成员必须是promise对象
+      //  - 数组成员是promise：参数是数组的话，每个成员都要是promise实例对象
+      //  - 数组成员不是promise：如果成员不是则会先调用 Promise.resolve() 将成员转成 promise对象
+
+      // 注意
+      // TIPS: pay attention to the order of the parameters and return values.
+      // 参数 和 返回值 的顺序问题
+      // Details: 2-_promise.all-optimization.html
+      // Links: https://juejin.cn/spost/6844903823429861389
+
+      // 静态方法
+      Promise._all = (args) => {
+        return new Promise((resolve, reject) => {
+          const result = [];
+          const arr = Array.from(args); // 因为可能是数组，也可能是Iterator数据结构，所以都先转成数组
+
+          // AAAA
+          // TIPS: The variable of index is used to 【 ensure 】 that the parameters and return values of the Promise._all function are in the same order.
+          // -- ensure 确保 确认
+          // -- in the same order. 以相同的顺序
+          // -- in the same way. 以相同的方式
+          let index = 0;
+
+          arr.forEach((_promise, i) => {
+            // 1. 如果参数数组成员不是promise对象，则会先调用Promise.resolve()将其转换成promise对象
+            // 2. promise 对象就可以 .then() 来获取 ( 终值value ) 和 ( 拒因reason )
+            Promise.resolve(_promise).then(
+              (p) => {
+                // AAAA
+                // TIPS: attention, there is a question of order. Please compare the original function with the implementation function.
+                // result.push(p); // 将真正的promise对象的，( fulfilled状态 ) 下的 ( 终值 ) 添加进 ( 数组 )
+                // if (result.length === arr.length) resolve(result);  // 当所有参数成员的状态都是fulfilled时，整个状态变成fulfilled
+
+                result[i] = p;
+                index++; // The variable of index is used to 【 ensure 】 that the parameters and return values of the Promise._all function are in the same order.
+                if (index === arr.length) resolve(result);
+
+                // if (result.length === arr.length) resolve(result);
+                // 问题: 这里不能用 if (result.length === arr.length) resolve(result);
+                // 原因: 因为在这个例子中，1s时，result[1] = 1, 此时 result=[empty,1]，数组长度是2，和arr.length相等，但是 【 3s的那个promise还没有执行 】
+                // 所以: index 能保证最长时间的那个promise也执行了，所以就可以 resolve 了
+              },
+              reject
+              // reject
+              // - 等价: 这里 reject 是 reason => reject(reason) 的简写
+              // - 表示：如果每个promise的状态任何一个如果是reject时，就把整个要返回的promise的对象的状态变成rejected，即调用reject方法
+              // - 注意点：这里的 reject 是把 ( 整个新的promise的reject ) 赋值给了 (Promise.resolve(_promise).then()的第二个参数，即失败的回调 )
+            );
+          });
+        });
+      };
+
+      // 测试
+      const p1 = new Promise((resolve) => setTimeout(() => resolve(3), 3000));
+      const p2 = new Promise((resolve) => setTimeout(() => resolve(1), 1000));
+      const list = [p1, p2];
+
+      Promise.all(list).then((values) => console.log("original", values));
+      Promise._all(list).then((values) => console.log("implementation", values));
+    </script>
+  </body>
+</html>

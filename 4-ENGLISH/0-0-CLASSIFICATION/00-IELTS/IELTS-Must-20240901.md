@@ -1,0 +1,957 @@
+###### Must 2024-09-05
+
+- 1
+- `【 ingredient 成分 原料 n 】` // --- 【 active ingredient. 活性成分 n 】 【 common ingredient. 常见成分 n 】 【 ingredient list. 成分表 】
+- `【 material 材料 n 】` // --------- 【 raw material. 原材料 】 【 building material. 建筑材料 】 【 composite material. 复合材料 】 【 reading material. 阅读材料 】
+- AA.
+- _【 raw material. 原材料 n 】_ // ----------------------- 【 raw rice. 生米 n 】 【 cooked rice. 熟米 n 】
+- _【 building material. 建筑材料 n 】_ // ---------------- 【 building structure. 建筑结构 】 【 building material. 建筑材料 】 // 【 construction site. 建筑工地 】
+- _【 composite material. 复合材料 n 】_ // -------------- _【 composite 合成的 复合的 adj 】_
+- _【 reading material. 阅读材料 n 】_
+- > 【 building material. 建筑材料 n 】
+- > 【 building structure. 建筑结构 n 】
+- > 【 physical structure. 物理结构 】
+- > 【 compact structure. 紧凑的结构 】
+- > 【 data structure. 数据结构 】
+- > 【 organization structure. 组织结构 】
+- > 【 overall structure. 整体结构 n 】
+- _【 infrastructure 基础设施 基础结构 】_
+- _【 structure 结构 建筑物 】_
+- > 【 construction site. 建筑工地 】
+- > 【 construction worker. 建筑工人 】
+- // TIPS: Pay attention to the pronunciation of the word 'composite'. [composite-合成的-adj] [composite-material.合成材料]
+- BB.
+- constructor 构造器 建造者 n
+- // 【 construction site. 建筑工地 】
+- // 【 construction worker. 建筑工人 】
+- // structure 结构
+- // 【 build structure. 建筑结构 】
+- BB.
+- > 【 common ingredient. 常见成分 n 】
+- > 【 active ingredient. 有效成分 n 】 // ---------------- 【 actively pursue. 主动追求 v 】 【 active voice. 主动语态 n 】
+- > 【 ingredient list. 成分表 n 】 // list
+- CC.
+- _【 actively pursue. 主动追求 】_ // ---------------------【 pursue 追求 追逐 v 】
+- _【 passively accept. 被动接受 】_
+- _【 active voice. 主动语态 】_
+- _【 passive voice. 被动语态 】_
+- // TIPS: Pay attention to the pronunciation of the word 'list'. [list-列表-n]
+- DD.
+- `【 raw 生的 未加工的 原始的 adj 】`
+- `【 raw rice. 生米 】` // ---------------------------- 【 cooked rice. 熟米 】
+- `【 raw material. 原材料 】`
+- // **【 Cook raw rice into cooked rice. 】**
+- EE.
+- [building-material.建筑材料] // ----------------------- 【 raw material. 】 【 composite material. 】
+- [constructor-建造者-构造函数-n]
+- [construction-建筑-n]
+- [construction-site.建筑工地] // ----------------------- 【 construction site. 建筑工地 n 】 【 construction work. 建筑工人 】
+- // 【 Construction workers 】 work 【 on 】 the 【 construction site 】. 建筑工人在建筑工地工作
+- > 【 raw material. 原材料 】
+- > 【 raw rice. 生米 n 】
+- > 【 cooked rice. 熟米 n 】
+- // **【 Cook raw rice into cooked rice. 】**
+-
+- `【 sense 感觉 感应 v 】` // ---------------------------- 【 common sense. 常识 n 】 【 make sense. 有道理 】 // 【 a sense of ownership. 主人翁意识 n 】
+- `【 scene 场景 现场 n 】` // ---------------------------- 【 crime scene. 犯罪现场 】 【 accident scene. 事故现场 n 】
+- `【 scenery 风景 n 】` // ------------------------------ 【 natural scenery. 自然风景 n 】
+- > 【 common sense. 常识 n 】` // ------------------------ 【 sense 意义 含义 n 】 【 scene 场景 n 】 【 phenomenon 现象 n 】
+- > 【 make sense. 有道理 n 】
+- > 【 a sense of ownership. 主人翁意识 n 】
+- sense of achievement 成就感
+- sense of responsibility 责任感
+- sense of security 安全感
+- sense of direction 方向感
+- sense of balance 平衡感
+- sense of justice 正义感
+- sense of language 语感
+- sense of humor 幽默感
+- sense of honor 荣誉感
+- sense of beauty 美感
+- > 【 common sense. 常识 n 】` // ------------------------ 【 sense 意义 含义 n 】 【 scene 场景 n 】 【 phenomenon 现象 n 】
+- > 【 common ingredient. 常见成分 n 】
+- > 【 common phenomenon. 常见现象 n 】
+- > 【 common usage. 常用用法 n 】 // --------------------- 【 usage 用法 使用 n 】
+- _【 crime scene. 犯罪现场 】_
+- _【 accident scene. 事故现场 】_
+- > 【 natural scenery. 自然风景 n 】
+- // TIPS: Pay attention to the pronunciation of the word 'usage'. [usage-使用/用法-n]
+- // TIPS: pay attention to the pronunciation of the word 'scenery'. [scenery-风景-n]
+-
+- `【 form 形成v 构成v 表n 形态n 】`
+- `【 compose 组成 v 】`
+- `【 consist of. 由...组成 】`
+-
+- [AA.]
+- `【 material 材料 n 】` // raw material. // building material.
+- `【 ingredient 成分 原料 n  】` // common ingredient. // active ingredient.
+- `【 wood 木材 木头 n 】`
+- `【 carbon 碳 n 】`
+- > 【 carbon dioxide. 二氧化碳 n 】
+- > 【 oxygen. 氧气 n 】
+- > 【 hydrogen. 氢 n 】
+- > 【 nitrogen. 氮 n 】
+- **【 The 【 material 】 of the table is 【 wood 】, and its 【 ingredient 】 is 【 carbon 】. 这张桌子的材料是木头，成分是碳 】**
+- // -- 【 carbon 碳 n 】carbon is a uncountable noun.
+- // -- 【 wood 木头 木材 n 】
+-
+- [BB.]
+- `【 common ingredient. 常见成分 n 】`
+- `【 active ingredient. 活性成分 n 】`
+- `【 raw material. 原材料 n 】`
+- `【 building material. 建筑材料 n 】`
+- **【 Both the 【 common ingredient 】 and 【 active ingredient 】 of the 【 raw material 】 are 【 carbon 】. 这个原材料的常见成分和活性成分都是碳 】**
+- // -- 【 caron 碳 n 】// carbon is a uncountable noun.
+- // -- 【 carbon dioxide. 二氧化碳 n 】--- CO2
+- // -- 【 oxygen. 氧气 n 】--------------- O
+- // -- 【 hydrogen. 氢 n 】--------------- H
+- // -- 【 nitrogen. 氮 n 】--------------- N
+-
+- [BB.]
+- `【 common sense. 常识 n 】`
+- `【 accident scene. 事故现场 n 】`
+- `【 scenery 风景 n 】`
+- **【 It's a 【 common sense 】 that the 【 accident scene 】 is not a 【 scenery 】. 事故现场不是风景是一个常识 】**
+-
+- [CC.]
+- `【 ingredient list. 成分表 n 】`
+- `【 active ingredient. 活性成分 n 】`
+- `【 common ingredient. 常见成分 n 】`
+- `【 raw material. 原材料 n 】`
+- **【 The 【 ingredient list 】 contains the 【 active ingredients 】 and 【 common ingredients 】 of the 【 raw material 】. 这个成分表包含了这个原材料的有效成分和活性成分 】**
+-
+- [DD.]
+- `【 building material. 建筑材料 n 】` // raw material.
+- `【 construction site. 建筑工地 n 】`
+- **【 There are many 【 building materials 】 【 besides 】 the 【 construction site 】. 建筑工地旁边有很多建筑材料 】**
+-
+- [EE.]
+- `【 construction worker. 建筑工人 】`
+- `【 construction site. 建筑工地 】`
+- `【 building material. 建筑材料 】`
+- `【 building structure. 建筑结构 】`
+- **【 The 【 construction workers 】 are researching 【 building material 】 and 【 building structure 】 on the 【 construction site 】. 建筑工人正在建筑工地研究建筑材料和建筑结构 】**
+
+###### Must 2024-09-08
+
+- 1
+- `【 internship 实习 实习期 n 】` // -----------【 internship position. 实习岗 】 【 intern 实习生 】
+- `【 scholarship 奖学金 n 】` // ------------- 【 full scholarship. 全额奖学金 n 】 【 scholar 学者 n 】 // _【 full marks. 满分 】_ _【 full scholarship. 】_
+- > 【 internship position. 实习岗 n 】
+- > 【 internship 实习期 n 实习 n 】
+- > 【 intern 实习生 n 】 // ------------------ 【 graduate 毕业生 n / 毕业 v 】
+- > 【 internal 内部的 adj 】 // -------------- `【 internal contradiction. 内部矛盾 n 】` 【 social contradiction. 社会矛盾 n 】 【 family contradiction. 】
+- > 【 external 外部的 adj 】// ----------------【 external medicine. 外用药 】 【 injectable/oral/external/traditional Chinese/western medicine. / 】
+- // full scholarship. 全额奖学金
+- // full marks. 满分
+- // math scores. 数学成绩
+- // academic performance. 学习成绩
+- // tuition fees. 学费 n
+- > 【 tuition fees. 学费 n 】 // ---------- **【 The 【 tuition fees 】 for 【 overseas students 】 are high. 留学生的学费很高 】** // tutorial tutor
+- _【 contradiction 矛盾 反驳 n 】_ // ------- `【 internal contradiction. 内部矛盾 n 】` 【 internal structure. 内部结构 n 】 【 family contradiction. 家庭矛盾 n 】
+- _【 internal structure. 内部结构 n 】_
+- _【 internal contradiction. 内部矛盾 n 】_
+- _【 social contradiction. 社会矛盾 n 】_
+- _【 family contradiction. 家庭矛盾 n 】_
+- _【 generate contradiction. 产生矛盾 v 】_ // `【 generate contradiction. 产生矛盾 v 】`
+- > 【 full scholarship. 全额奖学金 n 】
+- > 【 be full of. 充满 】
+- _【 social 社会的 adj 】_ // ----------------- 【 social status. 社会地位 】 【 social media. 社交媒体 】 【 social contradiction. 社会矛盾 】
+- _【 society 社会 n 】_ // ------------------ **【 modern society. 现代社会 】**
+- _【 social status. 社会地位 】_
+- _【 social media. 社交媒体 】_
+- _【 social welfare. 社会福利 】_ // ---------- 【 welfare state. 福利国家 n 】 【 socialist country. 社会主义国家 n 】
+- _【 social contradiction. 社会矛盾 】_
+- _【 social phenomenon. 社会现象 】_
+- // TIPS: Pay attention to the pronunciation of the word 'society'. [society-社会-n]
+-
+- `【 worship 崇拜 v n 】` // ---------------- 【 worship idol. 崇拜偶像 】 【 idol of worship. 崇拜的偶像 】 // 【 super idol. 超级偶像 】 【 idol 偶像 n 】
+- `【 warship 战舰 n 】` // ------------------ 【 frigate / submarine / aircraft carrier. 】
+- > 【 worship idol. 崇拜偶像 】
+- > 【 greatly worship. 非常崇拜 】
+- > 【 greatly appreciate. 非常感谢 】
+- _【 idol 偶像 n 】_ // --------------------- 【 super idol. 超级偶像 n 】 【 worship idol. 崇拜偶像 v 】
+- _【 super idol. 超级偶像 】_
+- _【 worship idol. 崇拜偶像 】_
+- _【 the idol of worship. 崇拜的偶像 】_
+- > 【 ship 船 n 】
+- > 【 pirate ship. 海盗船 】
+- > 【 pirate flag. 海盗旗 】 // -------------- 【 pirate. 海盗 n 】
+- > 【 national flag. 国旗 】 【 national anthem. 国歌 】 【 national assets. 国有资产 】 【 National Day. 国庆节 】 // **【 national territory. 国家领土 】**
+- _【 navy 海军 n 】_
+- _【 envy 羡慕 嫉妒 v 】_
+- _【 envy sb for doing sth. 羡慕某人做某事 】_
+- > 【 worship 崇拜 v n 】 // --------------- 【 worship idol. 崇拜偶像 】 【 greatly worship. 非常崇拜 】
+- > 【 admire 钦佩 欣赏 赞赏 v 】
+-
+- `【 membership 会员 n 】` // ---------------- 【 membership card. 会员卡 】
+- > 【 membership card. 会员卡 】 // ---------- 【 membership 会员 n 】
+- > 【 points card. 积分卡 = loyalty card. 】 //【 points. 积分 n 】
+- > 【 meal card. 饭卡 】= food card.
+- > 【 medical insurance card. 医保卡 】
+- _【 swipe card. 刷卡 】_
+- .MT **【 I need to 【 top up / recharge 】 my 【 meal card 】, 【 bus card 】, 【 membership card 】. 我需要给我的饭卡，公交卡，会员卡充值 】**
+-
+- `【 hardship 艰辛 n 】`
+- .MT **【 Everyone should 【 experience 】 the 【 hardship 】 of the farmers. 每个人都应该体验农民的艰辛 】**
+- // -- experience 经验 体验 v n
+-
+- `【 relationship 关系 n 】` // --------- 【 stable relationship. 稳定的关系 】 【 cooperative relationship. 合作关系 】 // 【 physical relationship. 肉体关系 】
+- `【 ownership 所有权 n 】` // ------------【 a sense of ownership. 主人翁意识 n 】 【 common sense. 常识 】 // 【 sense 感觉 感应 感到 v n 】
+- `【 friendship 友情 友谊 n 】`
+- `【 leadership 领导力 n 】`
+- `【 spaceship 宇宙飞船 】` // ----------- 【 spaceman 宇航员 n 】
+- > 【 interpersonal relationship. 人际关系 n 】 // personnel personal interpersonal personality
+- > 【 stable relationship. 稳定的关系 n 】
+- > 【 steady relationship. 稳定的关系 n 】
+- > 【 physical relationship. 肉体关系 n 】
+- > 【 romantic relationship. 恋爱关系 n 】
+- > 【 cooperative relationship. 合作关系 n 】
+- // 【 establish the cooperative relationship. 建立合作关系 】 // cooperate cooperation cooperative
+- // 【 establish the romantic relationship. 确立了恋爱关系 】
+- // -------
+- _【 a sense of ownership. 主人翁意识 n 】_
+- _【 make sense. 有道理 】_
+- _【 common sense. 常识 】_
+- // -------
+- 【 scene 场景 现场 n 】 // -------------- 【 accident scene. 事故现场 】 【 crime scene. 犯罪现场 n 】
+- 【 sense 感觉 】// --------------------- 【 a sense of ownership. 主人翁意识 n 】 【 make sense. 有道理 】 【 common sense. 常识 n 】
+- 【 scenery 风景 n 】
+-
+-
+- [AA.]
+- `【 intern 实习生 n 】`
+- `【 internship 实习期n 实习n 】`
+- `【 internship position. 实习岗 n 】`
+- `【 scholarship 奖学金 n 】`
+- **【 The 【 intern 】 【 is full of 】 【 strength 】 and received a 【 full scholarship 】 for his 【 internship position 】 during his 【 internship 】. 这个实习生充满了力量， 在实习期实习岗中获得了全额奖学金 】**
+- // -- 【 be full of. 充满 v 】
+- // -- 【 strength 力量 体力 n 】
+- // -- 【 be full of strength. 充满力量 】
+- // -- 【 full scholarship. 全额奖学金 n 】
+- // TIPS: Pay attention to the pronunciation of the word 'during.' [during]
+-
+- [BB.]
+- `【 worship 崇拜 v n 】` // 【 worship idol. 崇拜偶像 】
+- `【 warship 战舰 n 】`
+- **【 I 【 greatly 】 【 worship 】 the 【 navy 】 who 【 operate the 【 warships 】 】 and the 【 pirate 】 who 【 sail pirate ships 】. 我十分崇拜开战舰的海军和开海盗船的海盗 】**
+- // -- 【 greatly 非常 adv 】
+- // -- 【 navy 海军 n 】
+- // -- 【 envy 羡慕 嫉妒 v 】
+-
+- [CC.]
+- `【 worship 崇拜 v 】`
+- `【 super idol 超级偶像 n 】`
+- `【 worship idol. 崇拜偶像 】`
+- `【 once 曾经 一次 一旦 adv 】` ------ 用于肯定句
+- `【 ever 曾经 永远 adv 】` ---------- 用于否定句
+- `【 idol 偶像 n 】`
+- **【 I also 【 greatly 】 【 worship 】 the 【 idol 】 she 【 once 】 【 worshiped 】. 我也十分崇拜她曾经崇拜的偶像 】**
+- **【 He 【 once 】 told me that you will lose confidence 【 once 】 you give up. 他曾经告诉我一旦放弃就会失去信心 】**
+- // -- 【 once 曾经 一次 一旦 adv 】
+- // -- `【 Once 】 you have been there 【 once 】, you will 【 be full of praise 】 for the tourist attraction. 一旦你去过一次，你就会对这个旅游景点赞不绝口 】`
+- // -- `【 once upon a time. 很久以前 】`
+- // -- 【 greatly worship. 非常崇拜 】
+- // -- 【 greatly appreciate. 非常感谢 】
+-
+- [DD.]
+- `【 contradiction 矛盾 n 】`
+- `【 internal contradiction. 内部矛盾 n 】`
+- `【 get along with sb. 与某人相处 】`
+- `【 get along peacefully with sb. 与某人和平相处 】`
+- _【 generate contradiction. 产生矛盾 v 】_
+- **【 They had many 【 contradictions 】 【 in the process of 】 【 getting along 】. 他们在相处的过程中有很多矛盾 】**
+- **【 We should learn to 【 get along peacefully with 】 others. 我们要学会与别人和平相处 】**
+- // -- 【 get along with sb. 与某人相处 】
+- // -- 【 get along peacefully with sb. 与某人和平相处 】
+-
+- [EE.]
+- `【 social status. 社会地位 n 】`
+- `【 modern society. 现代社会 n 】`
+- **【 【 Social status 】 is very important in 【 modern society 】. 社会地位在现代社会中很重要 】**
+-
+- [FF.]
+- `【 contradict 矛盾 反驳 v 】`
+- `【 contradiction 矛盾 n 】`
+- `【 internal contradiction. 内部矛盾 n 】`
+- `【 family contradiction. 家庭矛盾 n 】`
+- `【 social contradiction. 社会矛盾 n 】`
+- **【 He didn't 【 contradict 】 the 【 internal contradictions 】 between us. 他对我们之间的矛盾没有进行任何反驳 】**
+-
+- [GG.]
+- `【 common sense. 常识 n 】`
+- `【 make sense. 有道理 】`
+- > 【 make a lot of sense. 很有道理 】
+- **【 What you said about the 【 common sense 】 【 makes sense 】. 你说的常识很有道理 】**
+- **【 It makes sense about the common sense that you said. 你说的常识很有道理 】**
+
+###### Must 2024-09-12
+
+- 1
+- `【 overcome 克服 战胜 v 】` // ------------- 【 overcome fear. 克服恐惧 】 【 overcome difficulty. 克服困难 】 【 overcome opponent. 战胜对手 】
+- `【 overlook 忽视 忽略 v n 】` // ----------- 【 overlook detail. 忽略细节 】 // overlook = ignore.
+- > 【 overcome fear. 克服恐惧 】
+- > 【 overcome difficulty. 克服困难 】
+- > 【 overcome opponent. 战胜对手 】 // ------ 【 opponent 对手 敌手 n 】 【 component 组件 n 】
+- > 【 encounter difficulty. 遇到困难 】 // --- 【 encounter setback. 遭遇挫折 】
+- > 【 suffer difficulty. 遭受困难 】
+- _【 overcome opponent. 战胜对手 】_ // ------ 【 opponent 对手 n 】 【 strong opponent. 强大的对手 】
+- _【 defeat opponent. 打败对手 】_
+- _【 strong opponent. 强大的对手 】_
+- > 【 overlook = ignore. 忽略 】
+- > 【 overlook detail. = ignore detail. 忽略细节 】
+- > 【 detailed plan. 详细计划 】
+- > 【 detailed report. 详细报告 】
+- 【 in detail. 详细地 adv 】
+- 【 Can you describe the whole process 【 in detail 】? 你能详细地述整个过程吗？ 】
+- _【 detail 细节 n 】_ // ------------------- 【 in detail. 详细地 adv 】 【 detailed 详细地 adj 】 // 【 detailed plan. 详细的计划 】 【 detailed report. 】
+- _【 tail 尾巴 n 】_
+- _【 retail 零售 n 零售的 adj 】_ // --------- 【 retail price. 零售价 】
+- _【 wholesale 批发 n 批发的 adj 】_ // ------ 【 wholesale price. 批发价 】
+- [difficulty-困难-n]
+- [difficult-困难地-adj]
+-
+- `【 overtake 超过 超车 v 】` // 用在比赛中 ---- 【 overtake smoothly. 平稳超车 】
+- `【 overtaking 超过 超车 n 】`
+- > 【 overtake -> overtook. 超过 超车 】
+- > 【 overtake smoothly. 平稳超车 】
+- _【 exceed 超过 超越 v 】_
+- _【 beyond 超过 】_
+- _【 overtake 超过 超车 v 】_
+-
+- `【 overview 概述 总览 n 】` // ------------- 【 general overview. 总体概述 】
+- `【 overall 总体的 adj 】` // --------------- 【 overall structure. 整体结构 】
+- > 【 general 一般的 总的 普遍的 adj 】
+- > 【 general overview. 总体概述 n 】
+- > 【 overall structure. 整体结构 n 】
+- > **【 This 【 section of text 】 describe the 【 overall structure 】 of 【 the section of road 】. 这段文字描述了这段路的整体结构 】**
+- // -- the section of road. 这段路
+- // -- the section of text. 这段文字
+-
+- `【 overdraw 透支 v 】` // ----------------- 【 overdraw body. 透支身体 】 【 overdraw credit card. 透支信用卡 】 // 【 lottery draw. 】 【 lottery ticket. 】
+- `【 overtime 加班 超时 adj n 】` // -------- 【 work overtime. 加班 】
+- `【 overwork 劳累过度 v n 】`
+- `【 maxed out. 刷爆 v 】`
+- > 【 overdraw body. 透支身体 】
+- > 【 overdraw credit card. 透支信用卡 】
+- > 【 lottery draw. 抽奖 v 】
+- > 【 lottery ticket. 彩票 n 】
+- > 【 minor drawback. 小缺点 n 】
+- _【 draw 绘画 抽签 v 】_
+- _【 overdraw 透支 v 】_ // ----------------- 【 overdraw your body. 透支你的身体 】 【 overdraw credit card. 透支信用卡 n 】
+- _【 withdraw 取 提取 v 】_ // -------------- 【 withdraw money. 取钱 v 】
+- _【 drawback 缺点 】_ // ------------------- 【 minor drawback. 小缺点 n 】
+- _【 minor drawback. 小缺点 】_
+- // 【 I have a 【 credit card 】, but I never 【 overdraw 】. 我有信用卡，但是我从来都不用透支的 】
+- // 【 He has 【 maxed out 】 three 【 credit cards 】 already. 他已经刷爆三张信用卡了 】
+-
+- `【 overcoat 大衣 n 】`
+- `【 overwrite 重写 v 】`
+-
+- `【 knock over. 撞倒 】`
+- `【 pull over. 靠边停下 】`
+- `【 take over. 接收 接管 v 】`
+-
+-
+- [AA.]
+- `【 overcome 克服 v 】`
+- `【 overlook 忽视 v 】`
+- `【 overcome difficult. 克服困难 】`
+- `【 overcome fear. 克服恐惧 】`
+- `【 overlook detail. = ignore detail. 忽略细节 】` = ignore detail.
+- > 【 the key to doing sth. 做某事的关键... 】
+- **【 【 The key to 】 【 overcoming difficulties 】 and 【 overcoming fear 】 is not to 【 overlook details 】. 克服困难和克服恐惧的关键是不能忽略细节 】**
+- **【 We need to 【 overcome difficulty 】 and 【 overcome fear 】 to 【 overcome our opponents 】. 我们需要克服困难、克服恐惧去战胜对手 】**
+- **【 We don't 【 overlook 】 this problem, we should 【 overcome 】 it. 我们不能忽视这个问题，而是要克服这个问题 】**
+- // -- 【 the key to doing sth. 做某事的关键... 】
+-
+- [BB.]
+- `【 work overtime. 加班 】`
+- `【 overdraw 透支 v 】`
+- **【 【 Working overtime 】 not only 【 makes you tired 】 but also 【 overdraws 】 your body. 加班不止让你累，还透你的支身体 】**
+-
+- [CC.]
+- `【 overview 概述 n 】` // an
+- `【 general overview. 总体概述 n 】`
+- `【 overall structure. 整体结构 】`
+- **【 This is an 【 general overview 】 of the 【 overall structure 】. 这是对整体结构的总体概述 】**
+-
+- [DD.]
+- `【 pull over. 靠边停车 】`
+- `【 knock over. 撞倒 v 】`
+- `【 pedestrian 行人 n 】`
+- **【 Please 【 slow down 】 and【 pull over 】to the side, don't 【 knock over 】 the 【 pedestrian 】. 请靠边停车，别撞到行人 】**
+- // -- 【 pedestrian. 行人 n 】
+-
+- [EE.]
+- `【 defeat 打败  v 】`
+- `【 overcome 克服 战胜 v 】`
+- `【 opponent 对手 n 】`
+- `【 strong opponent. 强大的对手 n 】`
+- **【 We should 【 defeat 】 and 【 overcome 】 【 strong opponents 】. 我们应该打败并战胜强大的对手 】**
+- // -- 【 opponent 对手 n 】
+- // -- 【 component 组件 n 】
+- // -- 【 strong opponent. 强大的对手 n 】
+- // -- 【 overcome opponent. 战胜对手 】
+- // -- 【 defeat opponent. 打败对手 】
+
+###### Must 2024-09-13
+
+- 1
+- `【 welfare 福利n 福利的adj 】` // ------ 【 social welfare. 社会福利 n 】 【 welfare state. 福利国家 】 【 state secret. 国家机密 】 // -- 【 fare 票价 / fee 费用 】
+- `【 benefit 福利 利益 n 】`
+- `【 allowance 津贴 补助 n 】` // -------- 【 travel allowance. 差旅津贴 n 】
+- > 【 social welfare. 社会福利 n 】
+- > 【 welfare state. 福利国家 n 】
+- > 【 high welfare state. 高福利国家 n 】
+- _【 fare 票价 n 】_
+- _【 fee 费用 n 】_
+- > 【 state 状态 n / 国家 n / 陈述 v 】
+- > 【 welfare state. 福利国家 n 】
+- > 【 state secret. 国家机密 n 】
+- > 【 state-owned assets. 国有资产 n 】
+- > 【 good state. 良好的状态 n 】
+- // TIPS: Pay attention to the pronunciation of the word 'allow'. [allow-允许-n]
+- // TIPS: Pay attention to the pronunciation of the word 'allowance'. [allowance-津贴-n]
+-
+- `【 salary 薪水 】` // -------- 长时间
+- `【 wage 工资 】` // ---------- 短时间
+- `【 pay 工资n 支付v 】` -------- 长时间 和 短时间 都可以
+- `【 bonus 奖金 】` // ------------------------- 【 performance bonus. 绩效奖金 】 【 annual bonus. 年终奖 n 】= year-end bonus.
+- `【 performance 绩效 表演 】` // --------------- 【 performance bonus. 绩效奖金 】
+- `【 reward 奖励 】` // ------------------------ 【 reward / award 将 n 颁奖 v 】
+- `【 award 授予v 奖n 】` // ------------------- `【 ward / reward / award / coward / awkward = embarrassed. 】` 【 award ceremony. 】 【 award winner. 】
+- `【 benefit 福利n 】`
+- `【 benefit = welfare. 福利 】`
+- `【 revenue = income. 收入 】`
+- > 【 prize 奖 奖金 奖品 n 】
+- > 【 first prize. 一等奖 n 】 【 first place. 第一名 n 】
+- > 【 first place. 第一名 n 】
+- > 【 award ceremony. 颁奖典礼 n 】
+- > 【 award winner. 获奖者 n 】
+- _【 gold medal. 金牌 n 】_
+- _【 silver medal. 银牌 n 】_
+- _【 bronze medal. 铜牌 n 】_
+- _【 copper 铜 n 铜的 adj 】_
+-
+- `【 currency 货币 】`
+- `【 cash 现金 】` // 【 cash 纸币 / cache 缓存 】
+- `【 bill 账单 钞票 】`
+- `【 coin 硬币 】` // 【 coin 硬币 / corn 玉米 】
+- `【 cheque 支票 】`
+- `【 lottery 彩票 】` // --------------------------【 lottery ticket. 彩票 】 【 lottery draw. 抽奖 】
+- `【 share 股份n 分享v 】`// -----------------------【 market share. 市场占有率 】
+- > 【 lottery draw. 抽奖 n 】 // ----------------- 【 overdraw your body. 透支你的身体 】 【 drawback 缺点 】
+- > 【 lottery ticket. 彩票 n 】
+- _【 drawback 缺点 v 】_ // ---------------------- 【 minor drawback. 小缺点 】 【 serious setback. 严重的挫折 】
+- _【 overdraw 透支 v 】_ // ---------------------- 【 overdraw your body. 透支你的身体 】 【 overdraw credit card. 透支信用卡 】
+- _【 lottery draw. 抽奖 】_
+-
+- `【 asset 资产 】` // ----------------------------【 fixed asset. 固定资产 n 】 【 current asset. 浮动资产 n 】 // 【 asset 资产 / property 财产 】
+- `【 share 股份n 分享v 】` // ----------------------【 share sth with sb. 给某人分享某事 】
+- `【 lottery 彩票 】` // --------------------------【 lottery ticket. 彩票 】 【 lottery draw. 抽奖 v 】
+- `【 cheque 支票 】`
+- `【 bond 债卷 】`
+- `【 fund 基金 】` // ---------------------------- 【 found / profound 】 【 fun / fund / refund 】
+- > 【 fixed asset. 固定资产 n 】
+- > 【 current asset. 浮动资产 n 】
+- > 【 current 目前的 adj / 电流 流 n 】
+- // TIPS: Pay attention to the pronunciation of the word 'asset'. [asset-资产]
+-
+-
+- [AA.]
+- `【 allowance 津贴 补助 n 】`
+- `【 welfare 福利n 福利的adj 】`
+- **【 【 Allowance 】 is also 【 a kind of 】 【 social welfare 】. 补助也是一种社会福利 】**
+-
+- [BB.]
+- `【 social welfare. 社会福利 n 】`
+- `【 welfare state. 福利国家 n 】`
+- **【 The 【 social welfare 】 of the 【 welfare state 】 is very good. 福利国家的社会福利很好 】**
+-
+- [CC.]
+- `【 social phenomenon. 社会现象 n 】`
+- `【 social status. 社会地位 n 】`
+- `【 social welfare. 社会福利 n 】`
+- `【 welfare state. 福利国家 n 】`
+- **【 The 【 social phenomenon 】 in a high 【 welfare state 】 is that everyone has a high s【 social status 】 and high 【 social welfare 】. 高福利国家的社会现象是每个人都有很高的社会地位和很高的社会福利 】**
+-
+- [DD.]
+- `【 coin 硬币 n 】`
+- `【 bill 账单 纸币 n 】`
+- `【 cash 现金 n 】`
+- **【 【 Bills 】 and the 【 coins 】Both are 【 cash 】. 钞票和硬币都是现金 】**
+-
+- [EE.]
+- `【 lottery ticket. 彩票 n 】`
+- `【 lottery draw. 抽奖 v 】`
+- `【 overdraw 透支 v 】`
+- **【 The 【 lottery ticket 】 for 【 this period 】 is 【 in the process of 】 【 lottery draw 】. 这期彩票正在抽奖 】**
+- // 【 this period. 本期 n 】
+- // 【 in the process of. 在...的过程中 】
+-
+- [FF.]
+- `【 drawback 缺点 n 】` // 【 minor drawback. 小缺点 】
+- `【 overdraw 透支 v 】`
+- **【 The 【 minor drawback 】 of 【 working overtime 】 is that it can 【 overdraw 】 your body. 加班的小缺点是会透支你的身体 】**
+
+###### Must 2024-09-15
+
+- 1
+- `【 social 社会的 社交的 adj 】`
+- `【 social phenomenon. 社会现象 n 】` // -------- 【 common phenomenon. 常见现象 n 】 【 rare phenomenon. 罕见现象 n 】 【 natural phenomenon. 自然现象 n 】
+- `【 social contradiction. 社会矛盾 n 】` // ----- 【 family contradiction. 家庭矛盾 n 】 【 internal contradiction. 内部矛盾 n 】
+- `【 social welfare. 社会福利 n 】` // ----------- 【 welfare state. 福利国家 n 】 【 social welfare. 社会福利 n 】
+- `【 social status. 社会地位 n 】` // ------------ 【 historical status. 历史地位 n 】 【 social statue. 社会地位 n 】 【 status / state / statue 】
+- `【 social medial. 社交媒体 】`
+- > 1. 【 phenomenon. 现象 n 】
+- > 【 natural phenomenon. 自然现象 】
+- > 【 common phenomenon. 普遍现象 】
+- > 【 rare phenomenon. 罕见现象 】
+- > 【 social phenomenon. 社会现象 】
+- 2.  _【 contradiction 矛盾 n 】_
+- _【 social contradiction. 社会矛盾 n 】_
+- _【 family contradiction. 家庭矛盾 n 】_
+- _【 internal contradiction. 内部矛盾 n 】_
+- _【 external medicine. 外用药 】_
+- // TIPS: Pay attention to the pronunciation of the word 'contradiction'. [contradiction-矛盾]
+- // TIPS: Pay attention to the pronunciation of the word 'phenomenon'. [phenomenon-现象]
+-
+- `【 statue 雕像 n 】` // ----------------------- 【 bronze statue. 铜像 n 】 【 statue of liberty. 自由女神像 】
+- `【 status 身份 状态 地位 n 】` // -------------- 【 social status. 社会地位 n 】 【 historical status. 历史地位 n 】
+- `【 state 状态 国家 n / 陈述v 】` // ------------ 【 welfare state. 福利国家 n 】 【 social welfare. 社会福利 n 】
+- _【 state 状态 n / 国家 n / 陈述 v 】_ // ------- 【 state / country (county) / nation (national nationality) 】
+- _【 good state. 良好的状态 n 】_
+- _【 welfare state. 福利国家 n 】_
+- _【 state secret. 国家机密 n 】_
+- _【 state-owned assets. 国有资产 n 】_
+- > 【 bronze statue. 铜像 n 】
+- > 【 statue of liberty. 自由女神像 n 】 // ------ 【 liberty 自由 n 】 【 freedom 自由 n 】
+- _【 social status. 社会地位 n 】_
+- _【 historical status. 历史地位 n 】_
+- // TIPS: Pay attention to the pronunciation of the word 'statue'. [statue-雕像]
+-
+-
+- [AA.]
+- `【 social phenomenon. 社会现象 n 】`
+- `【 social contradiction. 社会矛盾 n 】`
+- `【 social status. 社会地位 n 】`
+- `【 social welfare. 社会福利 n 】`
+- `【 welfare state. 福利国家 n 】`
+- **【 The 【 social phenomenon 】 in a high 【 welfare state 】 is that everyone has a high 【 social status 】 and high 【 social welfare 】. 高福利国家的社会现象是每个人都有很高的社会地位和很高的社会福利 】**
+-
+- [BB.]
+- `【 natural phenomenon. 自然现象 n 】`
+- `【 common phenomenon. 常见现象 n 】`
+- `【 rare phenomenon. 罕见现象 n 】`
+- `【 social phenomenon. 社会现象 n 】`
+- **【 This 【 natural phenomenon 】 isn't a 【 common phenomenon 】 but a 【 rare phenomenon 】. 这种自然现象不是一种常见现象是一种罕见现象 】**
+-
+- [CC.]
+- `【 symbol 象征 符号 n 】`
+- `【 symbolize 象征 v 】`
+- `【 statue 雕像 n 】`
+- `【 freedom = liberty. 自由 n 】`
+- **【 This 【 statue 】 【 symbolizes 】 【 freedom 】. 这个雕像象征着自由 】**
+- // -- 【 symbolize 象征 v 】
+- // -- 【 symbol 象征 符号 n 】
+- // -- free 自由的 adj / 自由地 adv
+- // -- freedom 自由 n
+-
+- [DD.]
+- `【 state 状态n 国家n 陈述v 】`
+- `【 state secret. 国家机密 n 】`
+- `【 welfare state. 福利国家 n 】`
+- **【 Please 【 state 】 the 【 state secrets 】 of the 【 welfare state 】 【 in detail. 】 请你详细陈述一下福利国家的国家机密 】**
+
+###### Must 2024-09-16
+
+- 1
+- `【 free 自由的adj / 自由地adv 】` // ------------ 【 free will. 自由意志 n 】 【 free fall. 自由落体 n 】 【 free trial. 免费使用 】
+- `【 freedom 自由 n 】` // ----------------------- 【 desire freedom. 渴望自由 】 【 pursue freedom. 追求自由 】 【 freedom of speech. 言论自由 n 】
+- > 【 free will. 自由意志 n 】
+- > 【 free fall. 自由落体 n 】
+- > 【 free trial. 免费试用 】 // ------------------ 【 have a free trail. 免费试用 v 】 // 【 trial 试用 实验 n v 】 // 【 trial / rail 】
+- > 【 free time. 空闲时间 】 // ------------------- 【 in free time. 在空闲时间 】
+- 【 for free. 免费地 adv 】
+- 【 free trial. 免费试用 v 】
+- 【 have a free trial. 免费试用 v 】
+- _【 desire freedom. 渴望自由 】_ // -------------- 【 desire 愿望 渴望 v n 】
+- _【 pursue freedom. 追求自由 】_
+- _【 freedom of speech. 言论自由 n 】_
+- > 【 willing 心甘情愿的 adj 】
+- > 【 unwilling 不愿意的 adj 】
+- > 【 free will. 自由意志 n 】
+- // TIPS: Pay attention to the pronunciation of the word 'trial'. [trial-试用/试验-vn]
+- .MT **【 You can 【 have a free trial 】 for the 【 first trial 】. 初次尝试可以免费试用 】**
+-
+- `【 freeze 结冰 冻结 v n 】` // ------------------ 【 frozen 冻结的 adj / 动词时是 freeze 的过去式 】
+- `【 freezer 冰柜 冷冻柜 n 】`
+- > 【 freezer 冰柜 冷冻柜 n 】
+- > 【 refrigerator 冰箱 】` // fridge 也是冰箱的意思
+-
+- `【 freelancer 自由职业者 n 】`
+- `【 freeway = highway. 高速公路 n 】` // -------- `【 highway 高速公路 n 】`
+- > 【 high speed rail. 高铁 n 】 // ------------- `【 high speed rail. 高铁 n 】`
+- > 【 highway. = freeway. 高速公路 n 】
+- > 【 footway = pavement. 人行道 n 】
+- > 【 bikeway 自行车道 n 】
+- > 【 driveway 车道 n 】
+- > 【 subway 地铁 n 】
+- > 【 railway 铁路 n 】
+- _【 high speed rail. 高铁 】_
+- _【 highway 高速公路 = freeway 】_
+-
+- [AA.]
+- `【 free 自由的adj 自由地adv 】`
+- `【 freedom 自由 n 】`
+- `【 desire 渴望 愿望 v n 】`
+- **【 The 【 free 】 person 【 desires 】 【 freedom 】. 自由的人渴望自由 】**
+-
+- [BB.]
+- `【 free trial. 免费试用 n 】`
+- `【 for free. 自由地 adv 】`
+- `【 be taken away. 被带走 】`
+- **【 【 Free trial 】 means that all the goods can 【 be taken away 】 【 for free 】. 免费试用意味着所有善品都可以免费带走 】**
+-
+- [CC.]
+- `【 freezer 冰柜 n 】`
+- `【 refrigerator 冰箱 n 】`
+- `【 frozen 结冰的adj / v过去式 】` // freeze 结冰 v
+- **【 In the 【 household appliances 】, both the 【 freezer 】 and the 【 refrigerator 】 are 【 frozen 】. 在家用电器中，冰柜和冰箱这都结冰了 】**
+- // -- `【 household appliance. 家用电器 n 】`
+- // -- `【 household 家庭 n / 家庭的 adj 】`
+-
+- 1. **【 Freelancer 】 don't need to 【 work on-site 】 in the 【 office 】. 自由职业者不需要在办公司现场办公**
+- 2. **【 He decide to be a 【 freelancer 】 【 so that 】 he could have time to balance work and life. 他决定成为一位自由职业者，以便可以有时间来平衡工作和生活 】**
+
+###### Must 2024-09-18
+
+- 1
+- `【 county 县 n 】` // --------------------------【 county government. 县镇府 n 】 【 county court. 县法院 n 】 // 【 court 法院 n 】
+- `【 country 国家n / 国家的 adj 】` // ------------【 nation / state / country 】 // 【 state 状态 国家 n / 陈述 v 】 // 【 developed|developing country. 】
+- `【 countryside 乡村 农村 n 】` // -------------- 【 in the countryside. 在乡村 】
+- > 【 developed country. 发达国家 n 】
+- > 【 developing country. 发展中国家 n 】
+- > 【 socialist country. 社会主义国家 n 】 // ----- 【 social / socialist 】 // social status. / social phenomenon. / social contradiction. / social welfare
+- > 【 capitalist country. 资本主义国家 n 】 // ---- 【 capital / capitalist 】
+- 【 welfare state. 福利国家 n 】 【 social welfare. 社会福利 n 】
+- 【 United Nations. 联合国 】 【 United Nations. 联合国 】 【 United Nations. 联合国 】
+- 【 first tier city. 一线城市 】
+- _【 county government. 县政府 n 】_
+- _【 county court. 县法院 n 】_
+- > 【 country / province / city / district 区 / county 县 】
+- 【 strict 严格的 adj 】 // -------------------- 【 strict regulation. 严格的规定 n 】
+- 【 district 区 区域 地区 n 】 // --------------- 【 business district. 商业区 n 】 【 residential district. 住宅区 n 】
+- 【 restrict 限制 v 】 // ---------------------- 【 restrict access. 禁止访问 】 【 restrict usage. 禁止使用 】 // restrict VS prohibit
+- [link][Words Must **2024-12-27**-4](../00-IELTS/3_WORDS/WORDS_Must-20241201.md)
+- _【 social welfare. 社会福利 】_
+- _【 welfare state. 福利国家 】_
+- _【 state secret. 国家机密 n 】_
+-
+- `【 count 计数 v 】` // -------------------------- 【 count down. 倒计时 】
+- `【 discount 打折 v n 】` // --------------------- **【 discount coupon. 折扣劵 n 】** 【 discount rate. 折扣率 n 】 【 at a discount. = on sale. 打折 】
+- `【 counter 计数器 柜台 n 】` // ------------------ 【 bank counter. 银行柜台 n 】 【 service counter. 服务台 n 】
+- `【 encounter 遭遇 v n 】` // -------------------- **【 encounter setback. 遭遇挫折 】** 【 encounter difficulty. 遭遇困难 】 【 overcome difficulty. 克服困难 】
+- `【 countable 可数的 adj 】` // ------------------ 【 countable noun. 可数名词 】 【 uncountable noun. 不可数名词 】
+- `【 uncountable 不可数的 adj 】`
+- > 【 encounter setback. 遭遇挫折 n 】 // 【 suffer setback. 遭受挫折 n 】
+- > 【 encounter difficulty. 遭遇困难 n 】
+- > 【 overcome difficulty. 克服困难 】 ------------ 【 overcome / overlook / overview / overall / overdraw / overtime / overwork 】
+- > 【 overcome fear. 克服恐惧 n 】
+- > 【 overcome opponent. 战胜对手 】
+- _【 count down. 倒计时 】_
+- > 【 bank counter. 银行柜台 n 】
+- > 【 service counter. 服务台 n 】
+- _【 countable noun. 可数名词 】_
+- _【 uncountable noun. 不可数名词 】_
+- > 【 discount coupon. 折扣劵 n 】 // ------------- 【 coupon. 优惠券 n 】
+- > 【 discount rate. 折扣率 n 】
+- // TIPS: Pay attention to the pronunciation of the word 'coupon'. [coupon-优惠卷-n]
+- // TIPS: Pay attention to the pronunciation of the word 'countable'. [countable-可数的-adj]
+-
+- `【 account 账号 n 】` // ----------------------- 【 bank account. 银行账号 n 】 【 recover account. 恢复账号 】
+- `【 accountant 会计 n 】` // -------------------- 【 junior accountant. 初级会计师 】 【 senior accountant. 高级会计师 】
+-
+- `【 nation 国家 名族 n 】` // -------------------- **【 United Nations. 联合国 】** //【 nation / state / country 】 // 【 national 国家的 民族的 adj 】
+- `【 national 国家的 民族的 adj 】` // ------------- 【 national flag. 国旗 】 【 national anthem. 国歌 】 【 national asset. 国有资产 】 【 National Day. 】
+- `【 nationality 国籍 民族 n 】` // --------------- 【 foreign nationality. 外国国籍 n 】 【 dual nationality. 双重国籍 】
+- > 【 United Nations. 联合国 n 】
+- _【 National Day. 国庆节 n 】_ // ----------------- 注意都需要大写
+- _【 national flag. 国旗 n 】_
+- _【 national anthem. 国歌 n 】_ // ---------------【 anthem 国歌 n 】
+- _【 national territory. 国家领土 】_ // ---------- `【 defend territory. 保护领土 】` 【 expand territory. 扩大领土 】 `【 national territory. 国家领土 n 】`
+- _【 national assets. 国有资产 n 】_ // ------------【 asset 资产 】
+- _【 national interests. 国家利益 】_ // ----------- interest 兴趣 利息 利益 n
+- **【 【 National assets 】 【 represent 】 【 national interests 】 and can not be 【 inherited 】. 国有资产代表着国家利益，不能被继承 】**
+- > 【 destination 目的地 】
+- > 【 examination 考试 检查 n 】
+- _【 foreign nationality. 外国国籍 n 】_
+- _【 dual nationality. 双重国籍 n 】_
+- _【 dual identities. 双重身份 n 】_
+- // TIPS: Pay attention to the pronunciation of the word 'anthem'. [anthem-国歌]
+- // TIPS: Pay attention to the pronunciation of the word 'nation'. [nation-国家/名族]
+- // TIPS: Pay attention to the pronunciation of the word 'national'. [national-国家的-名族的-adj]
+- // TIPS: Pay attention to the pronunciation of the word 'nationality'. [nationality-国籍]
+- // TIPS: Pay attention to the pronunciation of the word 'destination'. [destination-目的地]
+- // TIPS: Pay attention to the pronunciation of the word 'asset'. [asset-资产-n]
+- // TIPS: Pay attention to the pronunciation of the word 'united'. [united-联合的-adj]
+-
+- `【 dual 双的 双重的 adj 】`
+- `【 dual nationality. 双重国籍 n 】` // ----------- 【 foreign nationality. 外国国籍 n 】
+- `【 dual identities. 双重身份 n 】` // ------------ 【 identity 身份 / identify 识别 】
+- `【 dual purpose. 双重目的 】` // ----------------- 【 purpose / propose / pursue 】
+-
+- `【 district 区 地区 区域 n 】` // ---------------- 【 business district. 商业区 n 】 【 residential district. 居民区 n 】
+- `【 strict 严格的 adj 】` // --------------------- 【 strict regulation. 严格的规定 n 】
+- `【 restrict 限制 v 】` // ----------------------- 【 restrict access. 禁止访问 v 】 【 restrict usage. 禁止使用 】 // 【 be restricted from doing sth. 被禁止做某事 】
+- > 【 business district. 商业区 n 】
+- > 【 residential district. 居民区 n 】 // -------- 【 resident / residential 】
+- > 【 prime location. 黄金地段 n 】
+- > 【 residential address. 居民地址 n 】
+- _【 residential 居民的 adj 】_ // ----------------【 residential district. 居民区 n 】 【 business district. 商业区 n 】
+- _【 resident 居民 n 】_
+- _【 president 总统 n 】_
+- _【 citizen 市民 】_
+- _【 pedestrian 行人 n 】_
+- _【 immigrant 移民 n 】_ // ----------------------- `【 migrate 移民 迁移 v 】` // --------------------【 migrate / immigrant 】
+- _【 refugee 难民 n 】_ // -------------------------【 refuse 拒绝 v 】 【 refugee 难民 n 】// -------【 refugee / refuse / rescue 】
+- _【 fugitive 逃犯 n 】_ // ------------------------ **【 chase fugitive. 追扑逃犯 】** // **【 chase dream. 追逐梦想 】** // 【 chase 追逐 追扑 / pursue 追求 】
+- _【 bystander 旁观者 n 】_ // ---------------------【 standard 标准 n / 标准的 adj 】 【 bystander 旁观者 n 】 【 stand 站立 v 立场 n 】
+- _【 alien 外国人 外星人 n 】_ // -------------------【 alien civilization. 外星文明 】
+- _【 crowd 人群 群从 n / 拥挤 v 】_ // --------------【 A crowd of. 一群 】 【 crowd into. 涌入 v 】 `【 crow 乌鸦 / crowd 人群 拥挤 】`
+- _【 civilization 文明 】_ // --------------------- 【 alien civilization. 外星文明 n 】 【 advanced civilization. 高等文明 】
+- // TIPS: Pay attention to the pronunciation of the word 'migrate'. [migrate-移民-v]
+- // TIPS: Pay attention to the pronunciation of the word 'immigrant'. [immigrant-移民-n]
+-
+- `【 regular 定期地 规则的 普通的 adj 】` // -------- 【 regular check-up. 定期检查 】 【 regular verb. 规则动词 】 【 regular gas. 普通汽油 】
+- `【 regulate 规定 v 】`
+- `【 regulation 规定 n 】` // --------------------- 【 strict regulation. 严格的规定 n 】
+- > 【 regular check-up. 定期检查 定期体检 】
+- > 【 regular verb. 规则动词 】// -------------------【 irregular verb. 非规则动词 】 // 【 auxiliary verb. 助动词 n 】
+- > 【 regular gas. 普通汽油 】 // -------------------【 premium gas. 优质的汽油 】
+- _【 strict regulation. 严格的规定 】_ // -----------【 strict / district 】
+-
+- `【 encounter 遭遇 v 】` // ---------------------- 【 encounter setback. 遭遇挫折 】 【 encounter difficulty. 遭遇困难 】
+- `【 suffer 遭受 v 】` // ------------------------- 【 suffer setback. 遭受挫折 】
+- > 【 suffer from. 遭受 v 】
+-
+-
+- [AA.]
+- `【 account 账户 n 】`
+- `【 accountant 会计 会计师 n 】`
+- `【 encounter 遭遇 v 】`
+- **【 The 【 account 】 of the 【 accountant 】 has 【 encountered 】 an 【 attack 】. 这个会计的账号遭遇了攻击 】**
+- // -- 【 attack 攻击 v n 】
+-
+- [BB.]
+- `【 country 国家 n 】`
+- `【 national flag. 国旗 n 】`
+- `【 national anthem. 国歌 n 】`
+- `【 national assets. 国有资产 n 】`
+- **【 Every 【 country/state/nation 】 has its own 【 national flag 】 and 【 national anthem 】. 每个国家都有自己的国旗和国歌 】**
+- // -- 【 anthem 国歌 n 】
+- // -- 【 national anthem. 国歌 n 】
+-
+- [CC.]
+- `【 dual nationality. 双重国籍 n 】` // 【 foreign nationality. 外国国籍 n 】
+- `【 dual identities. 双重身份 n 】`
+- **【 He has【 dual nationality 】 and 【 dual identities 】. 他有双重国籍和双重身份 】**
+-
+- [DD.]
+- `【 country 国家 n 】`
+- `【 province 省 n 】`
+- `【 city 市 n 】`
+- `【 district 区 n 】`
+- `【 county 县 n 】`
+- **【 This 【 country 】 has many 【 provinces 】, 【 cities 】, 【 districts 】, and 【 counties 】. 这个国家有很多省，市，区，县 】**
+- // -- 【 district 区 地区 区域 n 】
+-
+- [EE.]
+- `【 strict 严格的 adj 】`
+- `【 district 区 地区 区域 n 】`
+- `【 business district. 商业区 n 】`
+- `【 residential district. 住宅区 n 】`
+- `【 strict regulation. 严格的规定 】`
+- **【 There are 【 strict 】 【 regulations 】 【 for 】 【 residents 】 in both 【 business district 】 and 【 residential district 】. 商业区和居民区对居民都有严格的规定 】**
+-
+- [FF.]
+- `【 overcome difficulty. 克服困难 v 】`
+- `【 overcome fear. 克服恐惧 v 】`
+- `【 overcome opponent. 战胜对手 v 】`
+- **【 We need to 【 overcome difficulty 】 and 【 overcome fear 】 to 【 overcome opponent 】. 我们需要克服困难和克服恐惧去战胜对手 】**
+-
+- [GG.]
+- `【 socialist country. 社会主义国家 n 】`
+- `【 capitalist country. 资本主义国家 n 】`
+- **【 The 【 welfare 】 【 in 】 【 socialist countries 】 is better than 【 capitalist countries 】. 社会主义国家比资本主义国家福利好 】**
+
+###### Must 2024-09-19
+
+- 1
+- `【 setback 挫折 n 】` // ----------------------- 【 serious setback. 严重挫折 】 // --【 suffer setback. 遭受挫折 】 【 encounter setback. 遭遇挫折 】
+- `【 drawback 缺点 n 】` // ---------------------- 【 minor drawback. 小缺点 】 // -----【 overdraw your body. 透支你的身体 】 【 lottery draw. 抽奖 】
+- `【 look back. 回顾 v 】` // -------------------- `【 look back on sth. 回顾... 】` // 【 look back. = review 回顾 v 】
+- `【 back down. 让步 退让 v 】` // ---------------- 【 For this 【 issue 】, I will never 【 back down 】 】
+- _【 major / minor / patch / alpha / beta 】_
+- _【 minor drawback. 小缺点 n 】_
+- > 【 serious setback. 严重挫折 】 // -------------【 serious 严肃的 认真的 严重的 adj 】
+- > 【 suffer setback. 遭受挫折 】
+- > 【 encounter setback. 遭遇挫折 】
+- _【 look back. = review 回顾 】_
+- _【 book back on sth. 回顾某事 】_
+- // -------
+- > 【 drawback = shortcoming = weakness = disadvantage. 缺点 】
+- > 【 acknowledge shortcoming. 承认缺点 】
+- > 【 minor drawback. 小缺点 n 】
+- > 【 overdraw your body. 透支你的身体 】 【 overdraw credit card. 透支信用卡 】
+- > 【 lottery draw. 抽奖 】
+- _【 overdraw 透支 v 】_ // --------------------- 【 overdraw on a credit card. 透支信用卡 v 】
+- _【 withdraw 取 提取 v 】_ // ------------------- 【 withdraw money. 取钱 v 】
+-
+- `【 backup 备份 n 】` // ------------------------ 【 back up. 备份 v 】 【 backup. 备份 n 】
+- `【 backtrack 回溯 v 】` // --------------------- 【 track 追踪 v / 轨道 n 】 // 【 trace 追踪 v / 痕迹 n 】
+- > 【 track 追踪 v / 轨道 n 】
+- > 【 trace 追踪 v / 痕迹 n 】
+- > 【 truck 卡车 】 // --------------------------- 【 garbage truck. 垃圾车 】 【 sprinkler truck. 洒水车 】
+- > 【 stuck 卡住 困住 陷于 v 】 // ---------------- 【 get stuck in. 陷入 】
+- _【 fall back. 后退 撤退 v 】_
+- _【 fall back. = retreat. 撤退 】_
+- .MT **【 The 【 instrument 】 can 【 track 】 the 【 traces 】 left by 【 truck 】. 这仪器能追踪卡车留下的痕迹 】**
+- **【 My screen is stuck. 我的屏幕卡住了 】**
+-
+-
+- `【 feedback 反馈 n 】` // ---------------------- 【 feedback in time. 及时反馈 】 【 give feedback on. 反馈... 】
+- `【 kickback 回扣 n 】` // ---------------------- 【 take kickback. 收取回扣 】
+-
+- `【 backache 背痛 】`
+- `【 backbone 脊柱 n 】` // ---------------------- 【 bone 骨头 】
+- `【 backpack 背包 】`
+-
+- `【 back up. 备份 v 】` // -----------------------【 back up. 备份 v 】 【 backup. 备份 n 】
+- `【 pay back. 归还 偿还 v 】`
+-
+- [AA.]
+- `【 drawback 缺点 n 】` // 【 minor drawback. 小缺点 】
+- `【 kickback 回扣 n 】`
+- `【 feedback 反馈 n 】`
+- > 【 give feedback on. 反馈... 】
+- **【 The 【 drawback 】 of this store is that there is no 【 kickback 】 and no 【 feedback 】. 这家店的缺点是没有任何回扣和任何反馈 】**
+- **【 He 【 gave feedback on 】 many 【 minor drawbacks 】 of this product. 他反馈了这件商品的很多小缺点 】**
+- // -- 【 give feedback on. 反馈... 】
+-
+- [BB.]
+- `【 drawback 缺点 n 】`
+- `【 setback 挫折 n 】`
+- > 【 suffer setback. 遭受挫折 】
+- > 【 encounter setback. 遭遇挫折 】
+- **【 His 【 minor drawback 】 is that he easily 【 gives up 】 after suffering 【 setbacks 】. 他的小缺点是遭受挫折后容易放弃 】**
+-
+- [CC.]
+- `【 setback 挫折 n 】`
+- `【 serious setback. 严重的挫折 】`
+- **【 No 【 serious setback 】 can 【 defeat 】 him. 任何严重的挫折都不能打败他 】**
+- **【 Let's 【 look back on / review 】 the 【 serious setback 】 that he 【 suffered 】. 让我们回顾一下他遭受的严重挫折 】**
+- // -- 【 serious 严肃的 认真的 严重的 adj 】
+- // -- 【 defeat 打败 v / overcome 战胜 克服 v 】
+- // -- 【 serious setback. 严重挫折 n 】
+-
+- [DD.]
+- `【 look back on sth. 回顾某事 】`
+- **【 Let me 【 go back 】 to the classroom to 【 look back on 】 what learned yesterday. 让我回到教室回顾一下昨天知识 】**
+- // -- 【 look back on. 回顾 v 】
+-
+- [EE.]
+- `【 back up. 备份 v 】`
+- `【 backup 备份 n 】`
+- `【 backtrack 回溯 v 】`
+- **【 Please 【 back up 】 this file 【 for 】 【 backtrack 】. 备份这份文件用来回溯 】**
+-
+- [FF.]
+- `【 backbone 脊柱 n 】`
+- `【 backpack 背包 n 】`
+- **【 There are 【 backbones 】 in his 【 backpack 】. 他的背包里装着脊柱 】**
+-
+- [GG.]
+- `【 back down. 让步 退让 v 】`
+- **【 For this 【 issue 】, I will never 【 back down 】. 对于这个问题，我绝不会让步 】**
+-
+- [HH.]
+- `【 back up. 备份 v 】`
+- `【 backtrack 回溯 v 】`
+- **【 Please 【 back up 】 【 first 】, then 【 backtrack 】 to 【 previous version 】. 请先备份，再回滚到上一个版本 】**
+- // -- 【 previous version. 上一个版本 n 】
+
+###### Must 2024-09-21
+
+- 1
+- `【 fade away. 逐渐消失 v 】` // ------------------- 【 fade away. = gradually disappear. 逐渐消失 v 】
+- `【 gradually disappear. 逐渐消失 v 】` // --------- 【 gradually recover. = gradually restore. 逐渐恢复 v 】 【 gradually improve. 逐渐改善 v 】
+- `【 disappear 消失 v 】`
+- _【 improve 提升 改善 v 】_
+- > 【 gradually recover. 逐渐恢复 v 】 // ------------【 body gradually recover. 身体逐渐恢复 】 // ---- 【 gradually recover strength. 逐渐恢复体力 】
+- > 【 gradually improve. 逐渐改善 v 】 // ------------【 condition gradually improve. 病情逐渐改善 】 // 【 improve 提高 改善 v 】 // 【 condition 病情 条件 n 】
+- > 【 gradually disappear. 逐渐消失 】// -------------【 symptom gradually disappear. 症状逐渐消失 】
+- _【 recover health. 恢复健康 】_ // ---------------- 【 keep healthy. 保持健康 】
+- _【 recover economy. 恢复经济 】_
+- _【 recover strength. 恢复体力 】_ // -------------- 【 strength 体力 强度 长处 n 】 _【 recover physical strength. 恢复体力 】_
+- _【 recover state. 恢复状态 】_
+- // 【 supplement nutrition. 补充营养 】 // ----------【 supplement 补充 v / supplier / dealer / seller 】
+- // 【 supplement energy. 补充能量 】
+- // 【 recover strength. 恢复体力 】
+- // 【 recover physical strength. 恢复体力 】
+- // TIPS: Pay attention to the pronunciation of the word 'gradually'. [gradually-逐渐地-adv]
+- // TIPS: Pay attention to the pronunciation of the word 'economy'. [economy-经济-n] // ------------- [restore-economy-恢复经济]
+- // TIPS: Pay attention to the pronunciation of the word 'economic'. [economic-经济的-adj] // ------- [economic-crisis-经济危机]
+- // TIPS: Pay attention to the pronunciation of the word 'crow'. [crow-乌鸦-n]
+- // TIPS: Pay attention to the pronunciation of the word 'crowd'. [crowd-人群-n]
+-
+-
+- `【 appear 出现 v 】`
+- `【 gradually appear. 逐渐出现 v 】`
+- > 【 gradually 逐渐地 adv 】`
+- > 【 graduation 毕业 v 】` // --------------------- 【 graduate 毕业 v 】
+-
+- `【 strength 力量 强度 力气 n 】`
+- > 【 military force. 军事力量 】 // ---------------- 【 military 军事的 adj 军队 n 】
+- > 【 physical strength. 体力 】
+- > 【 recover physical strength. 恢复体力 】
+- > 【 mental strength. 精神力量 】
+- **【 He 【 is full of 】 【 physical strength 】 and don't need to 【 recover physical strength 】. 他的体力很充沛，不需要恢复体力 】**
+- // -- 【 be full of. 充满 】
+-
+- [AA.]
+- `【 graduation 毕业 n 】`
+- `【 gradually 逐渐的 adv 】`
+- **【 after 【 graduation 】, they 【 gradually 】 lost 【 contact 】. 毕业之后，他们逐渐失去了联系 】**
+-
+- [BB.]
+- `【 gradually disappear. 逐渐消失 v 】`
+- `【 gradually disappear into. 逐渐消失在...】`
+- **【 The 【 crow 】 【 gradually 】 【 disappeared into 】 the 【 crowd 】. 这只乌鸦逐渐消失在人群中 】**
+- // -- 【 crow 乌鸦 n 】
+- // -- 【 crowd 人群 n 】
+- // TIPS: Pay attention to the pronunciation of the word 'crow'. [crow-乌鸦-n]
+- // TIPS: Pay attention to the pronunciation of the word 'crowd'. [crowd-人群-n]
+-
+- [CC.]
+- `【 gradually improve. 逐渐改善 v 】`
+- `【 gradually recover. 逐渐恢复 v 】` // 【 recover strength. 恢复体力 】 // 【 recover physical strength. 恢复体力 】
+- `【 fade away. 逐渐消失 v = gradually disappear. 】`
+- **【 His 【 condition 】 【 gradually 】 【 improved 】, his body 【 gradually recovered 】, his symptoms 【 gradually disappear 】. 他的病情逐渐改善，身体逐渐恢复，症状逐渐消失 】**
+- // 【 condition 病情 条件 n 】
+- // 【 improve 改善 改进 提高 v 】
+- // 【 condition gradually improve. 病情逐渐改善 】
+- // 【 body gradually recover. 身体逐渐恢复 】
+- // 【 symptom gradually disappear. 症状逐渐消失 】
+-
+- [DD.]
+- `【 academic performance. 学习成绩 n 】`
+- `【 gradually improve. 逐渐提高 v 】`
+- **【 His 【 academic performance 】 【 gradually improved 】. 他的学习成绩逐渐提高了 】**
+-
+- [EE.]
+- `【 supplement nutrition. 补充营养 v 】`
+- `【 supplement energy. 补充能量 v 】`
+- `【 recover physical strength. 恢复体力 v】`
+- **【 【 Supplementing nutrition 】 and 【 supplementing energy 】 can 【 recover physical strength 】. 补充营养和补充能量能够恢复体力 】**

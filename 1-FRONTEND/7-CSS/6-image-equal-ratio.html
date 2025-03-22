@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /*
+        图片等比例方法缩小
+        - 三种方法
+        - 三种方法都是把 width 设置为100%，再进行操作
+        - 这里不一定要100%，但是一定是要一个比值 或 相对单位
+        - aspect 外观 方面 层面 n
+      */
+      .container {
+        width: 30%;
+        border: 1px solid black;
+        margin-top: 40px;
+      }
+
+      /* 1 -------- 方法1 */
+      .image1 {
+        /* 指定其宽度或者高度值，另一边自动计算就可以了 */
+        /* 注意：在测试中发现，其实只需要设置 width: 100%; 就可以了，是不需要设置 height: auto; 的 */
+        width: 100%;
+        /* height: auto; */
+      }
+
+      /* 2 -------- 方法2 */
+      .container2 {
+        /* 容器：宽度100%，高度设置为0，然后padding使用百分比 */
+        /* 内容：绝对定位填充满容器就行 */
+        width: 100%;
+        height: 0;
+        padding-bottom: 100%; /* 1:1 - 在高度设置为0后，使用padding-bottom: 百分数来设置高度 */
+        border: 1px solid black;
+      }
+
+      .image2 {
+        width: 100%;
+      }
+
+      /* 3 -------- 方法3 */
+      /* aspect-ratio: <width-ratio>/<height-ratio> */
+      .image3 {
+        /* aspect-ratio: <width-ratio>/<height-ratio> */
+
+        /* aspect 是外观，外貌的意思 */
+        /* 注意点：需要设置一下宽度或者高度，一般情况下设置宽度 */
+        width: 100%;
+        aspect-ratio: 4/3;
+        /* aspect-ratio: 宽/高 */
+        /* aspect 英语是外观，方向，的意思 */
+      }
+
+      /* 资料：https://juejin.cn/post/6844904070679887886 */
+      /* 知道图片的宽高
+      ---
+      1. 可以 calc 进行计算
+      2. js获取到后，进行计算
+      */
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <img src="./images/notion.png" class="image1" />
+    </div>
+
+    <div class="container">
+      <div class="container2">
+        <img src="./images/notion.png" class="image2" />
+      </div>
+    </div>
+
+    <div class="container">
+      <img src="./images/notion.png" class="image3" />
+    </div>
+  </body>
+</html>

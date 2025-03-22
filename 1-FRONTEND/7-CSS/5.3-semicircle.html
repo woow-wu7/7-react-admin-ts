@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Draw a semi-circle.</title>
+    <style>
+      /** 
+
+        Detail: 1-FRONTEND/7-CSS/2-DrawShape
+
+        Draw a semi-circle.
+        - 1. The long side must be two times longer than the short side.
+        - 2. The two points that set the border-radius value must be 【 adjacent 】 and both on the long side.
+
+        // AA
+        //【 adjacent 相邻的 adj 】
+        // semi-circle 半圆
+        // sector 扇形
+        // -
+        // Our house is 【 adjacent 】 to the park. 
+
+        // BB
+        // link https://www.webhek.com/post/40-css-shapes/
+       */
+
+      .semicircle {
+        /* 上右下左 */
+        border-radius: 1000px 1000px 0 0;
+        width: 300px;
+        height: 150px;
+
+        background: red;
+        display: inline-block;
+      }
+
+      .rectangle {
+        width: 300px;
+        height: 150px;
+        background: blue;
+
+        display: inline-block;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- css画半圆 -->
+
+    <div class="semicircle"></div>
+    <div class="rectangle"></div>
+
+    <div>semicircle半圆</div>
+    <div>
+      <div>semicircle</div>
+      <div>1. The long side must be two times longer than the short side. 长边必须是短边的两倍</div>
+      <div>
+        2.The two points that set the border-radius value must be adjacent and both on the long side.设置 border-radius
+        值的两个点必须相邻 并且 都在长边上
+      </div>
+    </div>
+
+    <br />
+    <div>
+      <span>sector 扇形</span> &nbsp;&nbsp;&nbsp; <span>triangle 三角形</span> &nbsp;&nbsp;&nbsp;
+      <span>rectangle 矩形</span> &nbsp;&nbsp;&nbsp; <span>square 正方形</span> &nbsp;&nbsp;&nbsp;
+      <span>semicircle 半圆</span> &nbsp;&nbsp;&nbsp; <span>parallelogram 平行四边形</span> &nbsp;&nbsp;&nbsp;
+    </div>
+  </body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 题目：js实现一个 push pop min max 时间复杂度为 O(1) 的栈
+
+      // 关键点
+      // - push pop 本来就是 O(1)
+      // - min max 可以分别用其他的两个栈来维护，mixStack有序的栈顶元素最小，maxStack有序栈顶最大
+
+      // 栈
+      // - 后进先出 对应数组的push和pop
+
+      class OoneStack {
+        stacks = [];
+        minStacks = []; // 栈顶始终是最小的值
+        maxStacks = []; // 栈顶始终是最大的值
+
+        push = (element) => {
+          if (isEmpty()) {
+            this.stacks.push(element);
+            this.minStacks.push(element);
+            this.maxStacks.push(element);
+          } else {
+            // 较小的入栈
+            const min =
+              this.minStacks[this.minStacks.length - 1] < element
+                ? this.minStacks[this.minStacks.length - 1]
+                : element;
+
+            // 较大的入栈
+            const max =
+              this.maxStacks[this.minStacks.length - 1] > element
+                ? this.maxStacks[minStacks.length - 1]
+                : element;
+
+            this.stacks.push(element);
+            this.minStacks.push(min); // 较小的入栈
+            this.maxStacks.push(max); // 较大的入栈
+          }
+        };
+
+        pop = () => {
+          this.stacks.pop();
+          this.minStacks.pop();
+          this.maxStacks.pop();
+        };
+
+        min = () => this.minStacks[this.maxStacks.length - 1]; // 栈顶就是最小值
+        max = () => this.maxStacks[this.maxStacks.length - 1]; // 栈顶就是最大值
+        isEmpty = () => this.stacks.length === 0; // 因为三个栈的操作是同步的，所以只需要判断 stacks 就可以
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let a = 0;
+      function computed(getter) {
+        let ref = 0;
+        setTimeout(() => {
+          ref = getter();
+        }, 1000);
+        return ref;
+      }
+      a = computed(() => 1);
+      // 1s后，打印 a，值是 0
+
+      // -------
+      let b = {};
+      function computed2(getter) {
+        let ref = {
+          value: 0,
+        };
+        setTimeout(() => {
+          ref.value = getter();
+        }, 1000);
+        return ref;
+      }
+      b = computed2(() => 1);
+      // 1s后打印 b，值是 { value: 1 }
+
+      // (一)
+      // 比较以上 computed 和 computed2 中的 ref 的区别
+
+      // 1. 1s后a的值还是 0
+      // - 因为 computed 中的 ref 是 ( 值类型 )，为return的值类型，返回后就不变了
+
+      // 2. 1s后b的值变成了 { value: 1 }
+      // - 因为 computed2 中的 ref 是 ( 引用类型 )，为return的引用类型，返回的是 ( 值的引用 )，1s后引用被修改了，所以 b 就会变化
+
+      // (二)
+      let aa = 100;
+      let bb = aa;
+      aa = 200;
+      console.log(bb); // 100
+
+      let cc = { count: 1 };
+      let dd = cc;
+      cc.count = 100;
+      console.log(dd); // { count: 100 };
+    </script>
+  </body>
+</html>

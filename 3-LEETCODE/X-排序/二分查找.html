@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 二分查找
+
+      // 给定一个 n 个元素有序的（升序）整型数组 nums 和一个目标值 target  ，写一个函数搜索 nums 中的 target，如果目标值存在返回下标，否则返回 -1。
+
+      // https://leetcode.cn/problems/binary-search/
+
+      // 输入: nums = [-1,0,3,5,9,12], target = 9
+      // 输出: 4
+
+      // 输入: nums = [-1,0,3,5,9,12], target = 2
+      // 输出: -1
+
+      /**
+       * @param {number[]} nums
+       * @param {number} target
+       * @return {number}
+       */
+      var search = function (nums, target) {
+        let left = 0;
+        let right = nums.length - 1; // 注意边界
+
+        while (left <= right) {
+          // const pivot = Math.floor( (left + right)/2 );
+          // - 当right和left都很大的时候，(right+left)/2 就可能出现 ( 整型溢出 ) 的问题
+          // - 所以用下面的方法 left + (right - left) / 2
+
+          const pivot = Math.floor(left + (right - left) / 2);
+
+          if (nums[pivot] === target) {
+            return pivot;
+          } else if (nums[pivot] > target) {
+            right = pivot - 1;
+          } else if (nums[pivot] < target) {
+            left = pivot + 1;
+          }
+        }
+
+        return -1;
+      };
+    </script>
+  </body>
+</html>

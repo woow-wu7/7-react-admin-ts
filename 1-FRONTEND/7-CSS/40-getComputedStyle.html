@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <style>
+    section {
+      color: blue;
+      border: 1px solid blue;
+      position: relative;
+    }
+
+    section:hover {
+      background: green;
+    }
+  </style>
+  <link href="./40-getComputedStyle.css" rel="stylesheet">
+  </link>
+</head>
+
+<body>
+  <section class="container" style="color: red; background: yellow">
+    内容
+  </section>
+  <script>
+    const section = document.querySelector('section', ':hover');
+
+    const style = section.style;
+    const computedStyle = window.getComputedStyle(section);
+
+    console.log('style.color', style.color) // red
+    console.log('style.border', style.border,) // ''
+    console.log('style.margin', style.margin) // '' 无值
+
+
+    console.log('computedStyle.color', computedStyle) // rgb(255, 0, 0) 是rgb方式的red颜色，因为 行内样式 权重最大
+    console.log('computedStyle.border', computedStyle.border) // 有值
+    console.log('computedStyle.margin', computedStyle.margin)
+  </script>
+</body>
+
+</html>

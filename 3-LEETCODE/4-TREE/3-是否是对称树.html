@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 101. 对称二叉树
+      // 剑指 Offer 28. 对称的二叉树
+
+      // leetcode
+      // 101. 对称二叉树 https://leetcode.cn/problems/symmetric-tree/
+      // 剑指 Offer 28. 对称的二叉树 https://leetcode.cn/problems/dui-cheng-de-er-cha-shu-lcof/
+
+      // 对比
+      // - 101. 对称二叉树 https://leetcode.cn/problems/symmetric-tree/
+      // - 100. 相同的树 https://leetcode.cn/problems/same-tree/
+      // - 两个思路基本相同
+
+      // 对比
+      // - 100. 相同的树 https://leetcode.cn/problems/same-tree/
+      // - ( 子树 ) ---- 572. 另一棵树的子树 https://leetcode.cn/problems/subtree-of-another-tree/
+      // - ( 子结构 ) -- 剑指 Offer 26. 树的子结构 https://leetcode.cn/problems/shu-de-zi-jie-gou-lcof/
+
+      // 英语
+      // symmetric 对称的 adj.adjective
+
+      /**
+       * Definition for a binary tree node.
+       * function TreeNode(val) {
+       *     this.val = val;
+       *     this.left = this.right = null;
+       * }
+       */
+      /**
+       * @param {TreeNode} root
+       * @return {boolean}
+       */
+
+      //     1
+      //    / \
+      //   2   2
+      //  / \ / \
+      // 3  4 4  3
+
+      var isSymmetric = function (root) {
+        if (!root) return true; // 边界
+
+        function check(left, right) {
+          // if (!left && !right) return true; // 比较的两个节点不存在 -------------------------> 对称，注意这里不能调换三个if判断的顺序，要保证第一个if始终在最上面
+          // if (!left || !right) return false; // 比较的两个节点，一边存在，一边不存在 -----------> 非对称
+          // if (left.val !== right.val) return false; // 比较的两个节点，都存在但是不相等 -------> 非对称
+
+          // 1
+          // 注意：上面的三个if必须保证顺序，很容易出错，所以我们用下面的写法，不用简写形式，容易出错
+          if (!left && right) return false;
+          if (left && !right) return false;
+          if (!left && !right) return true;
+
+          // 2
+          // 以下是 left 和 right 都存在的情况
+
+          // 2
+          // left 和 right 都存在 ，但不相等
+          if (left.val !== right.val) return false; // 左右子树都存在，但是值不等
+
+          // 2
+          // 左右子树都存在，且值相等，则 递归比较
+          // 以上都没命中，说明 left === right ，则递归继续继续往下
+          // ( 左子树的左节点 和 右子树的右节点 相等 ) 并且 ( 左子树的右节点 和 右子树的左节点 相等) -> 对称
+          return check(left.left, right.right) && check(left.right, right.left);
+        }
+
+        return check(root.left, root.right);
+      };
+    </script>
+  </body>
+</html>

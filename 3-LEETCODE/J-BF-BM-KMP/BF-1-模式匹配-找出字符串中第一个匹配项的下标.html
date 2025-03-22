@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 28. 找出字符串中第一个匹配项的下标
+
+      // 题目
+      // 给你两个字符串 haystack 和 needle ，请你在 haystack 字符串中找出 needle 字符串的第一个匹配项的下标（下标从 0 开始）
+      // 如果 needle 不是 haystack 的一部分，则返回  -1 。
+
+      // 输入：haystack = "sadbutsad", needle = "sad"
+      // 输出：0
+      // 解释："sad" 在下标 0 和 6 处匹配。
+      // 第一个匹配项的下标是 0 ，所以返回 0 。
+
+      // 输入：haystack = "leetcode", needle = "leeto"
+      // 输出：-1
+      // 解释："leeto" 没有在 "leetcode" 中出现，所以返回 -1 。
+
+      // 思路
+
+      // 方法
+      // - BF算法: 找出所有子串，然后判断是否相等
+      // - 暴力穷举
+      // - 双指针
+
+      /**
+       * @param {string} haystack
+       * @param {string} needle
+       * @return {number}
+       */
+
+      // ------------------------------------------------------------------------------------------
+      // ------------------------------------------------------------------------------------------
+      // ------------------------------------------------------------------------------------------
+      // 方法1 - BF
+      // 1 遍历
+      // - 匹配 i++ j++
+      // - 不匹配 回溯
+      //    - i = i - j + 1
+      //    - j = 0
+      // 2. 子串遍历完毕 ----------------- 匹配成功
+      // 3. 主串遍历完，但是子串没有遍历完 -- 匹配失败
+      // 4. 匹配成功，i-j 就是串匹配开始的位置
+      var strStr = function (haystack, needle) {
+        let i = 0;
+        let j = 0;
+
+        // 任意一个串遍历完，则结束遍历
+        while (haystack[i] && needle[j]) {
+          // 1 相等后移
+          if (haystack[i] === needle[j]) {
+            i++;
+            j++;
+          }
+          // 不相等 回溯
+          // - 公式 i = i - j + 1
+          else {
+            i = i - j + 1;
+            j = 0;
+          }
+        }
+
+        // 子串遍历完毕，匹配成功
+        if (!needle[j]) return i - j; // 返回开始位置
+
+        // 子串遍历完毕，匹配失败
+        return -1;
+
+        // 注意: 不能先判断 主串 是否遍历完毕
+        // 因为: 存在 主串 和 子串 同时遍历完毕的情况，此时是匹配成功，而不是匹配失败
+        // if (!haystack[i] ) return -1;
+        // return  i - j
+      };
+
+      // ------------------------------------------------------------------------------------------
+      // ------------------------------------------------------------------------------------------
+      // ------------------------------------------------------------------------------------------
+      // 方法2 - 暴力穷举
+      var strStr = function (haystack, needle) {
+        for (let i = 0; i < haystack.length; i++) {
+          for (let j = i + 1; j <= haystack.length; j++) {
+            const str = haystack.slice(i, j); // 所有子串
+            if (str === needle) return i;
+          }
+        }
+
+        // 没有找到相等的子串
+        return -1;
+      };
+    </script>
+  </body>
+</html>

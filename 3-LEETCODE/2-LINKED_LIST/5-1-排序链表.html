@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 148. 排序链表
+
+      // 题目
+      // 给你链表的头结点 head ，请将其按 升序 排列并返回 排序后的链表 。
+
+      // leetcode
+      //148. 排序链表  https://leetcode.cn/problems/sort-list/
+
+      // 方法
+      // 1. 归并排序
+      // 2. 利用数组排序，在新建一条链表
+
+      /**
+       * Definition for singly-linked list.
+       * function ListNode(val, next) {
+       *     this.val = (val===undefined ? 0 : val)
+       *     this.next = (next===undefined ? null : next)
+       * }
+       */
+      /**
+       * @param {ListNode} head
+       * @return {ListNode}
+       */
+
+      // 方法1
+      // - 数组 + 新建链表
+      var sortList = function (head) {
+        let arr = [];
+
+        while (head) {
+          arr.push(head.val);
+          head = head.next;
+        }
+
+        // 排序 - 升序，sort改变原数组
+        // 扩展: sort 和 toSorted 的区别
+        // 扩展: toSorted() toReverse() toSpliced()
+        // 扩展: vue 原型上重写的7种方法，都会改变原数组，push pop shift unshift splice reverse sort
+        arr.sort((a, b) => a - b);
+
+        let dummy = (list = new ListNode(null)); // 虚拟节点
+
+        // 构造新的链表
+        for (let i = 0, len = arr.length; i < len; i++) {
+          list.next = new ListNode(arr[i]); // 建立链表
+          list = list.next; // 后移指针
+        }
+
+        return dummy.next; // 新链表头节点
+      };
+    </script>
+  </body>
+</html>

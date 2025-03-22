@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 19. 删除链表的倒数第 N 个结点
+
+      // 题目
+      // 给你一个链表，删除链表的倒数第 n 个结点，并且返回链表的头结点。
+
+      // 对比
+      // - 剑指 Offer 22. 链表中倒数第k个节点
+      // - 19. 删除链表的倒数第 N 个结点
+      // - 两个几乎一样，一个是找到，一个是删除
+
+      // leetcode
+      // 19. 删除链表的倒数第 N 个结点 https://leetcode.cn/problems/remove-nth-node-from-end-of-list/description/
+
+      // 对比
+      // ( 删除一个节点 ) 剑指 Offer 18. 删除链表的节点 https://leetcode.cn/problems/shan-chu-lian-biao-de-jie-dian-lcof/
+      // ( 删除多个节点 ) 203. 移除链表元素 https://leetcode.cn/problems/remove-linked-list-elements/
+      // ( 存在重复的节点，就删除重复的靠后的节点 ) 83. 删除排序链表中的重复元素 https://leetcode.cn/problems/remove-duplicates-from-sorted-list/
+      // ( 删除倒数第N个节点 - 滑动窗口 )  19. 删除链表的倒数第 N 个结点 https://leetcode.cn/problems/remove-nth-node-from-end-of-list/
+
+      // 方案
+      // - 滑动窗口 - 快慢指针
+
+      // (1) 快慢指针的运用
+      // - 1. 链表是否有环
+      // - 2. 环形链表的入口
+      // - 3. 链表的中间节点
+      // (2) 滑动窗口的运用
+      // - 1. 删除倒数第k个节点
+      // - 2. 链表中倒数第k个节点
+
+      // ------------------------------------------------------------
+      // ------------------------------------------------------------
+      // ------------------------------------------------------------
+      // 方法1
+      // 双指针 - 滑动窗口
+      var getKthFromEnd = function (head, k) {
+        let dummy = (fast = slow = new ListNode(null)); // dummy虚拟节点，常用套路，我们用dummy是因为删除后，需要返回链表的头节点
+        dummy.next = head;
+
+        // 快指针先移动 k+1
+        // - 对比: dummy k+1 和 head k
+        // - 对比: 本项目/3-LEETCODE/2-LINKED_LIST/4-4-链表中倒数第k个节点.html
+        // - 注意:
+        //  - 1. 找: 我们找倒数第k个节点时，可以直接从head节点开始遍历，因为不用删除
+        //  - 2. 删: 我们必须从head节点的前一个节点开始，因为如果用当前节点是倒数第k个节点的话，就需要让 当前节点前一个节点 -> 指向当前节点后一个节点，我们拿不到当前节点的前一个节点了
+        // -- 这里之所以是 k+1，是为了保证 slow 是倒数第k个节点的 ( 前一个节点 - 这样才能删除第k个节点，因为删除时需要在要删除节点的前一个节点删除 )
+        while (k + 1) {
+          fast = fast.next;
+          k--;
+        }
+
+        // 滑动窗口，快慢同时后移动
+        // 结束遍历，则 slow 是倒数 k 的前一个位置，因为我们快指针和慢指针差是 k + 1
+        while (fast) {
+          fast = fast.next;
+          slow = slow.next;
+        }
+
+        slow.next = slow.next.next; // 删除
+
+        return dummy.next; // 返回头节点
+      };
+    </script>
+  </body>
+</html>

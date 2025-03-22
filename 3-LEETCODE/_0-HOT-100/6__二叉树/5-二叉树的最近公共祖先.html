@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 236. 二叉树的最近公共祖先
+
+      /**
+       * Definition for a binary tree node.
+       * function TreeNode(val) {
+       *     this.val = val;
+       *     this.left = this.right = null;
+       * }
+       */
+      /**
+       * @param {TreeNode} root
+       * @param {TreeNode} p
+       * @param {TreeNode} q
+       * @return {TreeNode}
+       */
+
+      // -----------------------
+      // (一)
+      // 1
+      // 问题: 某个节点的 祖先节点 是哪些节点？
+      // 回答: 某个节点 X 的祖先节点是 ( 根节点 到 该节点 路径上的 所有节点 )
+
+      // 2
+      // 问题: 两个节点的 祖先节点 是哪些节点？
+      // 回答: 是这 ( 两个节点 ) 分别到 ( 根节点 ) 的两条路径下的 ( 相同部分节点 )
+
+      // 3
+      // 问题: 什么是两个节点的 最近公共祖先 ？
+      // 回答: ( 两个节点公共祖先节点 ) 中 ( 离两个节点最近的节点 )
+
+      // 思路 1
+      // 1. 分别找出 两个节点的 公共祖先节点 --------------------------- ( DFS先序遍历 + 栈-访问结束出栈 )
+      // 2. 在公共祖先节点中 找出 ( 最后一个相同节点 ) 即为最近公共祖先 ---- ( 从根开始比较，相同指针后移进行比较 )
+
+      // -----------------------
+      // (二)
+      // - 最近公共祖先:
+      //  - 一定是: 如果一个节点，从左子树能找到一个节点，从右子树能找到另一个节点，说明该节点是最近公共祖先
+      //  - 因为: 如果 ( 左子树及左子树后代节点 或 右子树及右子树后代节点 ) 有一个没找到目标节点，则一定不是最近公共祖先，说明另一侧内必然存在一个更近的公共祖先
+      // - q p 在 root 同一侧
+      //    - 另一侧就不需要在找了
+      // - q p 在不同侧
+      //    - root 就是 p 和 q 的最近公共祖先
+      // - 递归上边的过程
+
+      // leetcode
+      // 236. 二叉树的最近公共祖先 https://leetcode.cn/problems/er-cha-shu-de-zui-jin-gong-gong-zu-xian-lcof/
+
+      // 对比
+      // 236. 二叉树的最近公共祖先 -------------------- ( 二叉树 ) https://leetcode.cn/problems/er-cha-shu-de-zui-jin-gong-gong-zu-xian-lcof/
+      // 剑指 Offer 68 - I. 二叉搜索树的最近公共祖先 --- ( 二叉搜索树 ) https://leetcode.cn/problems/er-cha-sou-suo-shu-de-zui-jin-gong-gong-zu-xian-lcof/
+
+      var lowestCommonAncestor = function (root, p, q) {
+        // 1
+        // 边界1
+        // 如果树为空，或者递归超过了叶子节点，则返回空
+        if (root == null) return null;
+
+        // 1
+        // 边界2
+        // - 特殊情况的处理，q,p其中一个就是root，直接是父子关系
+        // - 这里为什么直接返回 root，因为两种情况
+        //    - 1. p是root(某次递归的根节点)，q是root的子树中的任意节点，最近公共公共祖先就是 root
+        //    - 2. p是root(某次递归的根节点)，但是q不在p的同一侧，则是另一种情况，即直接返回root的情况
+        //    - 所以无论哪种情况，都是包含在了代码中
+        if (root == p || root == q) return root;
+
+        // 否则就分别在左右子树找目标节点pq。
+        const left = lowestCommonAncestor(root.left, p, q);
+        const right = lowestCommonAncestor(root.right, p, q);
+
+        // 123
+        // 寻找的结果会存在三种情况：pq都在左子树 / pq都在右子树 / pq分别在左子树和右子树
+
+        // 1
+        // 左子树不包含pq节点，就回返回null，说明pq都在右子树
+        // 则返回右子树中找到的结果
+        if (left == null) return right;
+
+        // 2
+        // 右子树不包含pq节点，说明pq都在左子树
+        if (right == null) return left;
+
+        // 3
+        // 左右子树，一边找到一个目标节点，该节点就是最近公共祖先
+        // 能到这一步说明左右子树都找到了目标节点，说明pq分别在左子树和右子树，当前根节点就是pq共同最近父节点
+        // 此时的条件相当于 if (left && right) { return root }
+        return root;
+      };
+    </script>
+  </body>
+</html>

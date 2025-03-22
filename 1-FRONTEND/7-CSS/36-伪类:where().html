@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      :where(header, footer) {
+        color: red;
+      }
+
+      /* p标签是蓝色，而不是红色 */
+      :is(p) {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body></body>
+  <header>header</header>
+  <footer>
+    <div>footer-div</div>
+    <p>footer-p</p>
+  </footer>
+</html>

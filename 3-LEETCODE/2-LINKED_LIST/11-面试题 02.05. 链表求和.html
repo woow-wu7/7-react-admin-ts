@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 2. 两数相加
+      // 面试题 02.05. 链表求和
+
+      // 题目
+      // 给你两个 非空 的链表，表示两个非负的整数。它们每位数字都是按照 逆序 的方式存储的，并且每个节点只能存储 一位 数字。
+      // 请你将两个数相加，并以相同形式返回一个表示和的链表。
+      // 你可以假设除了数字 0 之外，这两个数都不会以 0 开头。
+
+      // leetcode
+      // 链表求和: https://leetcode.cn/problems/sum-lists-lcci/
+      // 两数相加: https://leetcode.cn/problems/add-two-numbers/
+
+      // 分析
+      // 1. 如果整个l1和1l遍历完，相加后，还有进位，则还要添加一个节点 val=1，next=null
+      // 2. 遍历结束的条件是 l1 和 l2 都要遍历完
+      // 3. 任意一个遍历完
+      //    - 遍历完的链表当前节点val就补上0，好相加
+      //    - 当前节点就始终是最后一个节点不变
+
+      /**
+       * Definition for singly-linked list.
+       * function ListNode(val, next) {
+       *     this.val = (val===undefined ? 0 : val)
+       *     this.next = (next===undefined ? null : next)
+       * }
+       */
+      /**
+       * @param {ListNode} l1
+       * @param {ListNode} l2
+       * @return {ListNode}
+       */
+      var addTwoNumbers = function (l1, l2) {
+        let dummy = (list = new ListNode(0, null)); // 声明一个空的虚拟节点作为头节点，后者叫占位节点
+        let carry = 0; // 进位，比如 5+6 需要向前进1位，( carry是进位的意思 )
+
+        // 条件: 都遍历完则结束
+        while (l1 || l2) {
+          // 1
+          // 计算 sum 和 carry
+          const v1 = l1 ? l1.val : 0; // l1 没遍历完取值val，如果遍历完了取值就是 0
+          const v2 = l2 ? l2.val : 0;
+          let sum = v1 + v2 + carry; // 记得要加上进位，初始carry是0
+          // 注意边界
+          if (sum >= 10) {
+            sum = sum - 10;
+            carry = 1; // 大于10，记录进位1
+          } else carry = 0; // 即时修改回来，不然会一直累加
+
+          // 2
+          // 处理
+          list.next = new ListNode(sum, null); // 新建链表
+
+          // 3
+          // 移动，下一轮做准备
+          list = list.next;
+          l1 = l1 ? l1.next : l1; // l1后移，如果已经到末尾，则不在移动
+          l2 = l2 ? l2.next : l2;
+        }
+
+        // 4
+        // 特殊情况，如果最高位还有进位
+        if (carry === 1) {
+          list.next = new ListNode(1, null);
+        }
+
+        // 5
+        // 返回 相加后的 头节点
+        return dummy.next;
+      };
+    </script>
+  </body>
+</html>

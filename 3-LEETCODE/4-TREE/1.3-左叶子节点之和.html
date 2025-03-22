@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Sum of the left leaves.
+      // 404. 左叶子之和
+
+      // English
+      // Given the root of a binary tree, return the sum of all left leaves.
+      // A leaf is a node with no children.
+      // A left leaf is a leaf that is the left child of another node.
+
+      // 输入: root = [3,9,20,null,null,15,7]
+      // 输出: 24
+      // 解释: 在这个二叉树中，有两个左叶子，分别是 9 和 15，所以返回 24
+
+      //  输入: root = [1]
+      // 输出: 0
+
+      /**
+       * Definition for a binary tree node.
+       * function TreeNode(val, left, right) {
+       *     this.val = (val===undefined ? 0 : val)
+       *     this.left = (left===undefined ? null : left)
+       *     this.right = (right===undefined ? null : right)
+       * }
+       */
+      /**
+       * @param {TreeNode} root
+       * @return {number}
+       */
+
+      // leetcode
+      // 404. 左叶子之和 https://leetcode.cn/problems/sum-of-left-leaves/
+
+      // 注意
+      // - 是叶子节点，即不能有左右孩子
+      // - 左叶子结点: 即是 叶子节点 并且 是其他节点的 左子节点
+
+      // DFS - 前序遍历，并在 父节点做判断
+      // 1
+      var sumOfLeftLeaves = function (root) {
+        let sum = 0; // 收集左叶子节点和
+
+        function dfs(node) {
+          if (node === null) return; // 递归结束条件
+
+          // 在父节点位置判断是否是 ( 左叶子节点 )
+          // - 左节点存在，并且是 叶子节点
+          if (
+            node.left &&
+            node.left.left === null &&
+            node.left.right === null
+          ) {
+            sum = sum + node.left.val;
+          }
+
+          // DFS - preorder traversal 前序遍历
+          dfs(node.left);
+          dfs(node.right);
+        }
+
+        dfs(root);
+
+        return sum;
+      };
+    </script>
+
+    <script>
+      // 2
+      var sumOfLeftLeaves = function (root) {
+        const res = [];
+        function dfs(node) {
+          if (node) {
+            if (node.left && !node.left.left && !node.left.right) {
+              res.push(node.left.val);
+            }
+            dfs(node.left);
+            dfs(node.right);
+          }
+        }
+        dfs(root);
+
+        if (!res.length) return 0;
+        return res.reduce((a, b) => a + b);
+      };
+    </script>
+  </body>
+</html>

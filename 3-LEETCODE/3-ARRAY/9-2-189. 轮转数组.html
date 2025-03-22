@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 189. 轮转数组
+
+      // 题目
+      // 给你一个数组，将数组中的元素向右轮转 k 个位置，其中 k 是非负数。
+
+      // 示例 1:
+      // 输入: nums = [1,2,3,4,5,6,7], k = 3
+      // 输出: [5,6,7,1,2,3,4]
+      // 解释:
+      // 向右轮转 1 步: [7,1,2,3,4,5,6]
+      // 向右轮转 2 步: [6,7,1,2,3,4,5]
+      // 向右轮转 3 步: [5,6,7,1,2,3,4]
+
+      // 示例 2:
+      // 输入：nums = [-1,-100,3,99], k = 2
+      // 输出：[3,99,-1,-100]
+      // 解释:
+      // 向右轮转 1 步: [99,-1,-100,3]
+      // 向右轮转 2 步: [3,99,-1,-100]
+
+      /**
+       * @param {number[]} nums
+       * @param {number} k
+       * @return {void} Do not return anything, modify nums in-place instead.
+       */
+
+      // leetcode
+      // https://leetcode.cn/problems/rotate-array/
+
+      // 对比
+      // 61. 旋转链表 https://leetcode.cn/problems/rotate-list/submissions/
+      // 189. 轮转数组 https://leetcode.cn/problems/rotate-array/?favorite=2ckc81c
+      // 剑指 Offer 11. 旋转数组的最小数字 https://leetcode.cn/problems/xuan-zhuan-shu-zu-de-zui-xiao-shu-zi-lcof/
+
+      // 思路
+      // - 1. k 代表要轮转的次数
+      // - 2. 当 ( k > 数组长度 ) 时，需要轮转的次数是 ( k%len )
+      // - 综上: k%len 就是需要轮转的次数
+
+      var rotate = function (nums, k) {
+        const len = nums.length;
+
+        let step = k % len;
+
+        while (step) {
+          let target = nums.pop();
+          nums.unshift(target);
+          step--;
+        }
+
+        return nums;
+      };
+    </script>
+  </body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 1
+      // 变量提升
+      // - 变量名已经存在，略过变量的声明
+      // - 扩展
+      //  - 1. 形参 > 函数声明 > 变量声明
+      //  - 2. 函数名已经存在，新的覆盖旧的
+      //  - 3. 变量名已经存在，直接略过变量的声明
+      var a = 11;
+      var a;
+      console.log(a); // 11
+      // 相当于
+      // var a = undefined;
+      // // var a = undefined; // 变量名已经存在，直接略过变量的声明
+      // a = 11;
+      // console.log(a);
+
+      // ---------------------------------------------------------------------------------------------------------------
+      // 2
+      // clientWidth
+      // - clientWidth = width + padding
+      // --- div{width: 100px; padding: 20px; border: 20px solid red; margin: 20px}
+      // --- clientWidth = 100 + 20*2 = 140px;
+
+      // ---------------------------------------------------------------------------------------------------------------
+      // 3
+      // suspense
+      // - 显示 <Spinner> 组件直至 OtherComponent 加载完成
+      <React.Suspense fallback={<Spinner />}>
+        <OtherComponent />
+      </React.Suspense>;
+
+      // ---------------------------------------------------------------------------------------------------------------
+      // 4
+      class B {
+        constructor() {
+          this.attr = 1; // 实例属性，同名
+        }
+        attr = () => console.log(2); // 实例属性的另一种写法，同名
+        attr3 = () => console.log(3);
+      }
+      const b = new B();
+      console.log(b.attr); // 1
+      console.log(b.attr3); // () => console.log(3)
+
+      // ---------------------------------------------------------------------------------------------------------------
+      // 4
+      // css3 新增伪类
+    </script>
+  </body>
+</html>

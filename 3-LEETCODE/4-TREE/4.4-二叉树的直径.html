@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 543. 二叉树的直径
+
+      // 题目
+      // 给定一棵二叉树，你需要计算它的直径长度。一棵二叉树的直径长度是任意两个结点路径长度中的最大值。这条路径可能穿过也可能不穿过根结点。
+
+      // 示例 :
+      // 给定二叉树
+      //           1
+      //          / \
+      //         2   3
+      //        / \
+      //       4   5
+      // 返回 3, 它的长度是路径 [4,2,1,3] 或者 [5,2,1,3]
+
+      /**
+       * Definition for a binary tree node.
+       * function TreeNode(val, left, right) {
+       *     this.val = (val===undefined ? 0 : val)
+       *     this.left = (left===undefined ? null : left)
+       *     this.right = (right===undefined ? null : right)
+       * }
+       */
+      /**
+       * @param {TreeNode} root
+       * @return {number}
+       */
+
+      // leetcode
+      // 543. 二叉树的直径 https://leetcode.cn/problems/diameter-of-binary-tree/
+
+      // 什么是二叉树的直径
+      // - 一棵二叉树的直径长度是任意两个结点路径长度中的最大值。这条路径可能穿过也可能不穿过根结点
+      // - 其实就是: 每个节点的 ( 左子树高度 ) + ( 右子树高度 ) = ( 高度和 ) 的 最大值
+
+      // 对比
+      // - 1. 二叉树的直径 ------ 需要用到树的深度 ---- https://leetcode.cn/problems/diameter-of-binary-tree/
+      // - 2. 平衡二叉树 ------- 需要用到树的深度 ----- https://leetcode.cn/problems/balanced-binary-tree/
+      // - 3. 二叉树的深度 -------------------------- https://leetcode.cn/problems/maximum-depth-of-binary-tree/
+      // - 4. N叉树的深度 --------------------------- https://leetcode.cn/problems/maximum-depth-of-n-ary-tree/
+
+      // 注意：这里的返回值类型很重要
+      //  - 请对比 ( 二叉树的最大深度 ) ( 二叉树的最小深度 ) ( N叉树的最大深度 ) ( 二叉树的直径 ) ( 平衡二叉树 )
+
+      // diameter 是直径的意思
+
+      var diameterOfBinaryTree = function (root) {
+        let maxDiameter = 0; // diameter 是直径的意思
+
+        // 获取二叉树的深度(或者说-最大深度)
+        function getDeep(node) {
+          if (!node) return 0;
+
+          const left = getDeep(node.left);
+          const right = getDeep(node.right);
+
+          maxDiameter = Math.max(left + right, maxDiameter); // 获取 左树 和 右树 的高度和，最大值 就是直径
+
+          return Math.max(left, right) + 1;
+        }
+
+        getDeep(root);
+
+        return maxDiameter;
+      };
+    </script>
+  </body>
+</html>

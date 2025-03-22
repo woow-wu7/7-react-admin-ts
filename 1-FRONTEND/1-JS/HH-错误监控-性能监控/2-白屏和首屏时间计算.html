@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      window.whiteTimeStart = new Date();
+      window.firstPageTimeStart = new Date();
+    </script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script>
+      // 白屏时间
+      // 方式 1
+      // - 把 ( 资源的加载全部放在head标签内 )，然后在head标签的 ( 最上面 和 最下面 ) 打上 timestamp，计算差值
+      window.whiteTimeEnd = new Date();
+      console.log("白屏时间1", window.whiteTimeEnd - window.whiteTimeStart);
+
+      // 白屏时间
+      // 方式 2
+      // - 白屏时间 = domloading - fetchStart
+      window.onload = function () {
+        const timing = window.performance.timing;
+        const time = timing.domLoading - timing.fetchStart;
+        console.log("白屏时间2", time);
+      };
+    </script>
+  </head>
+  <body>
+    <section id="root">
+      <header>header</header>
+      <main>{{count}}</main>
+      <footer>footer</footer>
+    </section>
+    <script>
+      const { createApp } = Vue;
+      const app = createApp({
+        data() {
+          return {
+            count: 1,
+          };
+        },
+      });
+      app.mount("#root");
+
+      // 首屏时间
+      // 首屏结束时间
+      window.firstPageTimeEnd = Date.now();
+      const firstPageTime = window.firstPageTimeEnd - window.firstPageTimeStart;
+      console.log("首屏时间: ", firstPageTime);
+    </script>
+  </body>
+</html>

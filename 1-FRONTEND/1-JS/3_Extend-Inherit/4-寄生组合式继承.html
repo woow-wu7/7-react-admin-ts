@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Parasitic Composition inheritance. 寄生组合式继承</title>
+  </head>
+  <body>
+    <script>
+      // 寄生组合式继承
+      // - Parasitic Composition inheritance.
+
+      // 解决的问题
+      // - 两次调用父类: 主要解决了在组合继承中两次调用父类的问题，这导致子类实例的自身属性中有父类实例的属性，子类实例的原型链中也有父类实例原型中的属性
+
+      // 原理
+      // - 1. 新建一个没有任何属性和方法的 构造函数Parasitic
+      // - 2. 将 ( 子类.prototype ) 指向 ( Parasitic.prototype )，这样子 ( 类实例就只能继承父类.prototype上的属性和方法 )，而不能 ( 继承到父类实例上的属性和方法 )
+
+      function Super(name1) {
+        this.name1 = name1;
+      }
+      Super.prototype.age1 = 1;
+
+      function Sub(name1, name2) {
+        Super.call(this, name1); // [1.] constructor borrowing inheritance.
+        this.name2 = name2;
+      }
+
+      function Parasitic() {} // 没有任何 属性 和 方法 的 中间函数 [3.] Parasitic Composition inheritance.
+      Parasitic.prototype = Super.prototype; // Parasitic内没有任何属性，这样就没有执行父类（Super构造函数），而是间接的只 ( 继承了父类实例原型上的属性 )
+      Sub.prototype = new Parasitic(); // [2.] prototype chain inheritance.
+      Sub.prototype.constructor = Sub; // 修改prototype要同时修改constructor指向
+      Sub.prototype.age2 = 2;
+
+      const sub = new Sub(1, 2);
+      console.log("sub: ", sub);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,341 @@
+##### Marriage
+
+- 1
+- `【 marry 结婚 v 】`
+- `【 marriage 婚姻 结婚 n 】` // ----【 marriage certificate. 结婚证 】 【 propose marriage. 求婚 】 // 【 divorce certificate. 离婚证 】
+- // TIPS: Pay attention to the pronunciation of the word 'marry'.
+-
+- `【 divorce 离婚 v n 】` // -------【 divorce certificate. 离婚证 】 【 divorce rate. 离婚率 】 `【 divorced 离婚的 adj 】`
+- `【 break up. 分手 v 】` // -------【 break up. 分手 打碎 解散 v 】
+-
+- `【 get engaged. 订婚 v 】`
+- `【 engagement 订婚 n 】`
+- `【 engage 从事 v 】`
+- > 【 engage 从事 v 】
+- > 【 engagement 订婚 n 】
+- **【 After he 【 got engaged 】, he 【 engage 】 【 in 】 other 【 industries 】. 他订婚后从事了其他行业 】**
+-
+- `【 propose 求婚 v 】` // ------- `【 propose marriage. 求婚 】` 【 proposal 求婚 n 】// 【 pose 姿势 vn / propose / purpose / pursue 】
+- `【 purpose 目的 意图 n 】` // --- `【 on purpose. 故意的 adv 】`
+- `【 pursue 追求 追逐 v 】` // ------【 pursue happiness. 追求幸福 】 【 pursue dream. 追求梦想 】 【 pursue a goal. 追求目标 】 // pursue pursuit
+- _【 propose to sb. 向某人求婚 】_
+- _【 in depth. / in detail. / in turn. / in advance. / in public. / in secret. / in total. / on purpose. 】_
+- // TIPS: Pay attention to the pronunciation of the word 'propose'. [propose]
+- // TIPS: Pay attention to the pronunciation of the word 'purpose'. [purpose]
+- // TIPS: Pay attention to the pronunciation of the word 'pursue'. [pursue]
+- // TIPS: Pay attention to the different pronunciation between 'propose' and 'purpose'.
+-
+- `【 elope 私奔 v 】` // -----------【 slope 斜坡 n 】 【 elope 私奔 v 】 【 envelope 信封 n 】
+- `【 fiancee 未婚妻 n 】`
+- > 【 elope 私奔 v 】
+- > 【 slope 斜坡 n 】 // -----------【 slide 滑行 v / 滑梯 n 】 // 【 slide -> slid 】
+- > 【 envelope 信封 n 】
+-
+- `【 wedding 婚礼 n 】` // -------- 【 wedding photo. 结婚照 】// 【 take wedding photo. 拍婚纱照 】// 【 take selfie. 拍自拍照 】
+- `【 wedding dress. 婚纱 n 】`
+- `【 wedding ring. 婚戒 n 】` // -- 【 onion ring. 洋葱圈 】 【 ring finger. 无名指 】
+- `【 wedding photo. 结婚照 】`
+- `【 wedding anniversary. 结婚周年纪念日 】` // 【 anniversary 周年纪念日 】
+- > 【 hold a wedding. 举办婚礼 】
+- > 【 take a wedding photo. 拍婚纱照 】
+- > 【 take a photo. = take a picture. 拍照 】
+- > 【 take a selfie. 拍自拍照 】
+- > 【 take action. / take measure. / take notes. / take a break. / take a shower. / take a nap. / take over. / take up. / take out. / takeout. 】
+-
+- `【 groom 新郎 】` // --------------【 groomsman 伴郎 n 】 // ---- mushroom 蘑菇
+- `【 bride 新娘 】` // --------------【 bridesmaid 伴娘 n 】// ---- bridge 桥
+- `【 fiancee 未婚妻 n 】`
+- `【 widow 寡妇 】` //---------------【 window 窗户 】
+- `【 pregnant woman. 孕妇 n 】` // -- pregnant 怀孕的 // fragment 片段 // My wife is three months 【 pregnant 】. 我老婆怀孕 3 个月了
+- > 【 gynecologist 妇科医生 】
+- // TIPS: Pay attention to the pronunciation of the word 'fiancee'. [fiancee]
+- // TIPS: Pay attention to the pronunciation of the word 'pregnant'. [pregnant]
+-
+- `【 spouse 配偶 n 】`
+-
+- `【 groomsman 伴郎 】` // groom
+- `【 bridesmaid 伴娘 】` // bride
+- `【 matchmaker 红娘 媒人 n 】`
+- `【 fairy 仙女 小精灵 】` // fair fairy fail tail tale // 【 fairy tale. 童话故事 】 【 fairyland 仙境 n 】
+- `【 fall in love at first sight. 一见钟情 】`
+- > 【 soulmate 灵魂伴侣 】
+- > 【 playmate 玩伴 】
+- > 【 teammate 队友 】
+- > 【 workmate = colleague. 同事 】
+- > 【 classmate 同学 】
+- > 【 roommate 室友 】
+- // TIPS: pay attention to the pronunciation of the word 'bridesmaid'.
+-
+- `【 womb 子宫 】` // ------------------- 生 born
+- `【 tomb 坟墓 = grave 】` // ----------- 死 die ----------------- 【 tomb = grave. 坟墓 】 【 grave / brave 】
+- `【 embryo 胚胎n 胚胎的 adj 】`// -------【 embryo stage. 胚胎阶段 】
+- `【 fetus 胎儿 】`
+- `【 infant 婴儿 n 】` // ---------------【 baby 婴儿 宝贝 】
+- > 【 womb 子宫 】
+- > 【 tomb 坟墓 】
+- > 【 bomb 炸弹 n 】` // ---------------- bomb / tomb / womb ----- 【 explode / explosion sound. 】
+- _【 brave vs grave 】_
+- _【 date of birth. 出生日期 】_
+- > 【 be born in. 出生于 】 //------------ 主动语态
+- > 【 die in. 死于 】 // ----------------- 主动语态
+- > 【 born (V) -> birth (N) 】 // ------ 【 birth rate. 出生率 】
+- > 【 die (V) -> death (N) 】 // ------- 【 death rate. 死亡率 】
+- .HL **【 He 【 was born in 】 China，worked in 【 Germany 】 and 【 died in 】 America. 他出生在中国，工作在德国，死在美国 】**
+- .MT **【 The 【 rooster 】 and the 【 hen 】 【 got married 】 and 【 gave birth to 】 a 【 chick 】. 公鸡和母鸡结婚后生了一个小鸡 】**
+- // TIPS: Pay attention to th pronunciation of the word 'infant'. [infant]
+- // TIPS: Pay attention to th pronunciation of the word 'embryol'. [embryol]
+-
+- `【 miscarry 流产 v 】` -------- 意外流产 【 miscarry -> miscarriage 】
+- `【 abort 流产 中止 v n 】` ----- 主动流产 【 abort ----> abortion 】
+- // TIPS: Pay attention to the pronunciation of the word 'miscarry'.
+- // TIPS: Pay attention to the pronunciation of the word 'abort'.
+-
+- `【 honeymoon 蜜月 】` // 【 honey 蜂蜜 宝贝 】 【 bee 蜜蜂 】 // 【 go on a honeymoon. 度蜜月 】 【 go on a vacation. 休假 】
+- `【 Valentine's day. 情人节 】`
+- `【 wedding anniversary. 结婚周年纪念日 】` // anniversary 周年纪念日
+- > 【 go on a honeymoon. 度蜜月 】`
+- > 【 go on a vacation. 度假 】`
+- > 【 moon roof. 玻璃天窗 】
+-
+- `【 first love. = puppy love. 初恋 】` // puppy 小狗
+- `【 ex-girlfriend = former girlfriend. 前女友 】` // former 前者 以前的 adj
+- > ex 前任
+- > exes. 前任(复数)
+- > former 前者 以前的 adj
+- > latter 后者 较后的 adj
+-
+- `【 fetus 胎儿 n 】`
+- `【 infant 婴儿 n 】`
+- `【 teenager 青少年 n 】`
+- `【 adult 成年人 n 】`
+- `【 middle-aged person. 中年人 n 】`
+-
+- `【 grave 坟墓 】` = tomb
+- `【 brave 勇敢的 adj 】`
+- `【 bravery 勇敢 n 】`
+- > 【 lie in. 在于 】
+-
+- `【 marriage certificate. 结婚证 】`
+- `【 divorce certificate. 离婚证 】`
+-
+- `【 wedding photo. 结婚照 】`
+- `【 wedding anniversary. 结婚纪念日 】`
+- `【 marriage certificate. 结婚证 】`
+-
+- _【 wedding feast. 婚宴 n 】_
+- **【 This 【 wedding feast 】 is a 【 feast 】 for the eyes. 这场婚是一场视觉盛宴 】**
+-
+- `【 stepfather 继父 】`
+- `【 father-in-law. 岳父 】`
+- `【 mother-in-law. 岳母 丈母娘 】`
+- // TIPS: Pay attention to the pronunciation of the word 'stepfather'.
+-
+- `【 selfie 自拍 】`
+- `【 selfie stick. 自拍杆 】`
+- `【 take selfie. 拍自拍照 】`
+- `【 wedding photo. 结婚照 】`
+-
+- `【 take photo. 拍照 】` = take picture.
+- `【 take selfie. 拍自拍照 】`
+- `【 take wedding photo. 拍结婚照 】`
+-
+- `【 record video. 录像 】`
+- `【 make a radio. 录音 】`
+-
+-
+- [-AA.]
+- `【 envelope 信封 n 】`
+- `【 elope 私奔 v 】`
+- `【 slope 斜坡 n 】`
+- **【 He 【 picked up 】 the 【 envelope 】, 【 ran down 】 the 【 slope 】 and prepared to 【 elope 】 【 with 】 his 【 fiancee 】. 他拿起信封，跑下斜坡，准备和他的未婚妻私奔 】**
+- // -- 【 pick up. 捡起 接人 v 】
+- // -- 【 fiancee 未婚妻 n 】
+-
+- [-BB.]
+- `【 propose 求婚 v 】`
+- `【 purpose 目的 n 】`
+- `【 pursue 追求 v 】`
+- > 【 pursue happiness. 追求幸福 】
+- > 【 pursue dream. 最求梦想 】
+- **【 The 【 purpose 】 of 【 proposing 】 is to 【 pursue happiness 】and 【 pursue dream 】. 求婚的目的是追求幸福和最求梦想 】**
+-
+- [-CC.]
+- `【 brave 勇敢 adj 】` ----- 【 bravely 勇敢地 adv 】
+- `【 grave 坟墓 n 】`
+- `【 courage 勇气 n 】`
+- `【 encourage 鼓励 v 】`
+- `【 discourage 阻碍 v 】`
+- **【 He 【 bravely 】 opened the 【 grave 】. 他勇敢地打开了坟墓 】**
+-
+-
+- [AA.]
+- `【 hold a wedding. 举办婚礼 】`
+- `【 marriage certificate. 结婚证 】`
+- 1. **【 after 【 obtain 】 the 【 marriage certificate 】, They prepare to 【 hold the wedding 】. 领完结婚证后，准备举办婚礼 】**
+- 2. **【 Would you like to 【 marry 】 me? 你愿意嫁给我吗？】**
+- 2. **【 I want to 【 marry 】 you. 我想娶你 】**
+- // -- 【 hold a wedding. 举报婚礼 】
+- // -- obtain 获得
+-
+-
+- [BB.]
+- `【 honeymoon 蜜月 】`
+- `【 wedding photo. 结婚照 】`
+- `【 go on a honeymoon. 度蜜月 】`
+- `【 take wedding photo. 照结婚照 】`
+- `【 marriage certificate. 结婚证 】`
+- `【 divorce certificate. 离婚证 】`
+- **【 They plan to 【 go on a honeymoon 】 after 【 taking wedding photos 】 and getting the 【 marriage certificate 】. 他们准备拍完结婚照和领到结婚证后，就去度蜜月 】**
+- // -- 【 take photo. = take picture. 拍照 】
+- // -- 【 take wedding photo. 拍婚纱照 】
+- // -- 【 go on a honeymoon. 度蜜月 】
+- // -- 【 go on a vacation. 度假 】
+-
+-
+- [CC.]
+- `【 break up. 分手 】` // break up. 分手 打破 解散
+- `【 divorce 离婚 】`
+- **【 This 【 divorced 】 【 couple 】 has 【 broken up 】 many times before. 这对离婚的夫妇之前分手过很多次 】**
+- **【 After【 breaking up 】, we shouldn't 【 keep in touch with 】 【 former girlfriend 】. 分手后，我们就不应该和前女友保持联系 】**
+- **【 After【 breaking up 】, should we still 【 keep in touch with 】 our 【 exes 】? 分手后，我们还应该和前任保持联系吗？ 】**
+- // -- divorced 离婚的 adj
+- // -- divorce 离婚 v
+- // ---- 【 break -> broke -> broken 】
+- // ---- 【 break up. 分手 打碎 解散 v 】
+-
+-
+- [DD.]
+- `【 pregnant 怀孕的 adj 】`
+- `【 miscarry 流产 v 】`
+- `【 miscarriage 流产 n 】`
+- `【 abort 中止 流产 v 】` // abortion 流产 n
+- **【 【 As long as 】 you are【 pregnant 】, There is 【 a risk of 】 【 miscarriage 】. 只要怀孕就有流产的风险 】**
+- // -- 【 as long as. 只要 】
+- // -- 【 a risk of. ...的风险 】
+-
+-
+- [EE.]
+- `【 ex-girlfriend. = former girlfriend. 前女友 】`
+- `【 first love. = puppy love. 初恋 】`
+- **【 She is my 【 former girlfriend 】 and also my 【 first love 】. 她是我的前女友也是我的初恋 】**
+- **【 After 【 breaking up 】, we shouldn't 【 keep in touch with 】 【 former girlfriend 】. 分手后，我们就不应该和前女友保持联系 】**
+-
+-
+- [FF.]
+- `【 ex-girlfriend. = former girlfriend. 前女友 】`
+- **【 After 【 breaking up 】, we shouldn't 【 keep in touch with 】 【 ex-girlfriend 】. 分手后，我们就不应该和前女友保持联系 】**
+- **【 She is my 【 former girlfriend 】 and also my 【 first love 】. 她是我的前女友也是我的初恋 】**
+- // -- 【 keep in touch with. 和...保持联系 】
+- // -- 【 break up. 分手 打碎 解散 v 】
+-
+-
+- [GG.]
+- `【 groom 新郎 】` // groom mushroom
+- `【 bride 新娘 】` // bride bridge
+- **【 The 【 groom 】 put the 【 wedding dress 】 on the 【 bride 】, put the 【 wedding ring 】 on her finger, and 【 held the wedding 】on the 【 wedding anniversary 】. 在结婚纪念日这天，新郎给新娘穿上了婚纱，带上了婚戒，举行了婚礼 】**
+- // -- wedding dress. 婚纱
+- // -- wedding ring. 婚戒
+- // -- wedding anniversary. 结婚纪念日
+- // -- hold wedding. 举行婚礼
+-
+-
+- [HH.]
+- `【 groomsman 伴郎 】` // groom
+- `【 bridesmaid 伴娘 】` // bride
+- `【 groom 新郎 】`
+- `【 bride 新娘 】`
+- **【 The 【 groom 】, 【 bride 】, 【 groomsman 】, 【 bridesmaid 】 and others 【 attended 】 the 【 wedding 】. 新郎，新娘，伴郎，伴娘等参加了婚礼 】**
+-
+-
+-
+- [II.]
+- `【 bride 新娘 】`
+- `【 pregnant woman. 孕妇 】`
+- `【 widow 寡妇 】`
+- `【 fairy 仙女 小精灵 】`
+- **【 If the 【 bride 】 can't become a 【 pregnant woman 】, she can only become a 【 widow 】. 如果一个新娘做不了孕妇，就只能做寡妇 】**
+- // -- groom 新郎
+- // -- mushroom 蘑菇
+- // -- bride 新娘
+- // -- bridge 桥
+- // -- widow 孕妇
+- // -- window 窗户
+- // -- pregnant woman. 孕妇
+- // -- miscarry(V) -> miscarriage(N). 流产
+- // -- abort(V) ->
+-
+-
+- [JJ.]
+- `【 stepfather. 继父 】`
+- `【 father-in-law. 岳父 】`
+- **【 Her 【 stepfather 】 is my 【 father-in-law 】. 她的继父是我的岳父 】**
+-
+-
+- [KK.]
+- `【 selfie 自拍 】`
+- `【 selfie stick. 自拍杆 】`
+- **【 She 【 takes a selfie 】 with 【 selfie stick 】, and then upload the 【 selfie 】 to 【 social platform 】.她用自拍杆进行自拍，然后把自拍照上传到了社交平台 】**
+- // -- He uses a selfie stick to take a selfie, and then uploads the selfie to the social platform.
+- // -- `【 social 社会的 社交的 】`
+- // -- `【 social media. 社交媒体 】`
+- // -- `【 social status. 社会地位 】`
+- // -- `【 social welfare. 社会福利 】`
+-
+-
+- [LL.]
+- `【 propose 求婚 v 】`
+- `【 elope 私奔 】`
+- 【 propose vs purpose 】
+- **【 After the 【 groom 】 【 successfully 】 【 propose 】 to the 【 bride 】, they 【 eloped 】 together. 新郎向新娘求婚成功后，一起私奔了 】**
+- // groom 新郎 -> groomsman
+- // bride 新娘 -> bridesmaid
+-
+-
+-
+- [MM.]
+- `【 purpose 目的 意图 n 】`
+- `【 propose 求婚 n 】`
+- > 【 propose to sb. 向某人求婚 】
+- **【 The 【 purpose 】 of the 【 groom 】 is to 【 propose 】 to the 【 bride 】. 新郎的目的是向新娘求婚 】**
+- **【 Can I 【 propose 】 to you? 我能向你求婚吗 】**
+-
+- [NN.]
+- `【 womb 子宫 】`
+- `【 tomb 坟墓 】` = grave // grave 坟墓 // brave 勇敢的
+- `【 fetus 胎儿 】`
+- `【 baby 婴儿 宝贝 】`
+- > 【 be born in. 出生于 】
+- > 【 die in. 死于 】
+- _【 be born in. 出生于 】_
+- _【 die in. 死于 】_
+- > born (V) -> birth (N)
+- > die (V) -> death (N)
+- **【 The 【 fetus 】 【 is born in 】 【 womb 】, and 【 dies 】 in 【 tomb 】. 胎儿出生在子宫，死在坟墓 】**
+- **【 His 【 bravery 】 【 lies in 】 that he has 【 courage 】 to walk through the 【 grave 】. 他的勇敢在于他有勇气走过坟墓 】**
+-
+-
+- [OO.]
+- `【 grave 坟墓 = tomb 】`
+- `【 brave 勇敢的 adj 】`
+- `【 bravery 勇敢 n 】`
+- `【 courage 勇气 】`
+- brave -> bravery
+- > 【 lie in. 在于 】
+- **【 His 【 bravery 】 【 lies in 】 that he has 【 courage 】 to walk through the 【 grave 】. 他的勇敢在于他有勇气走过坟墓 】**
+- **【 The 【 fetus 】 【 is born in 】 【 womb 】, and 【 dies 】 in 【 tomb 】. 胎儿出生在子宫，死在坟墓 】**
+- // -- 【 lie in. 在于 】
+- // -- brave 勇敢的 adj
+- // -- bravery 勇敢 n
+-
+-
+- [PP.]
+- `【 lie in. 在于 】`
+- `【 the key to. ...的关键 】`
+- **【 【 The key to 】 success 【 lies in 】 hard work and 【 persistence 】. 成功的关键在于努力和坚持 】**
+-
+-
+- [RR.]
+- `【 purpose 目的 意图 n 】`
+- `【 pursue 追求 追逐 v 】`
+- `【 propose 求婚 v 】`
+- **【 The 【 purpose 】 of his 【 proposing 】 was to 【 pursue 】 【 fame 】. 他求婚的目的是追求名声 】**

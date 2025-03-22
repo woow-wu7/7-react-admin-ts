@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 扩展
+      // tree->array 本项目/3-LEETCODE/4-TREE/0-Tree2Array.html
+
+      // Array to Tree
+
+      // const targetTree = {
+      //   id: 1,
+      //   children: [
+      //     {
+      //       id: 2,
+      //       parentId: 1,
+      //     },
+      //     {
+      //       id: 3,
+      //       parentId: 1,
+      //       children: [
+      //         {
+      //           id: 4,
+      //           parentId: 3,
+      //           children: {
+      //             id: 5,
+      //             parentId: 4,
+      //           },
+      //         },
+      //       ],
+      //     },
+      //   ],
+      // };
+
+      const arr = [
+        { id: 1, parentId: -1 },
+        { id: 2, parentId: 1 },
+        { id: 3, parentId: 1 },
+        { id: 4, parentId: 3 },
+        { id: 5, parentId: 4 },
+      ];
+
+      const array2tree = (arr) => {
+        const map = {};
+        const res = [];
+
+        const len = arr.length;
+
+        // 1
+        // 先给每项添加children属性，map中的每项的值中也就具有了children属性
+        for (let i = 0; i < len; i++) {
+          arr[i].children = [];
+          map[arr[i].id] = arr[i]; // key是id，value是每一项对象
+        }
+
+        // 2
+        // res中只会收集parentId=-1的对象，因为这是树的根节点，返回树的根节点
+        for (let j = 0; j < len; j++) {
+          const cur = arr[j];
+
+          if (cur.parentId === -1) {
+            res.push(cur);
+          } else {
+            // 如果没有上面的 if 的话，会报错，因为 parentId = -1 在 map 中的key没有-1
+            // 具有引用关系，所以map和原数据都会改变，因为是引用类型的数据
+            map[cur.parentId].children.push(arr[j]);
+          }
+
+          // Reflect.deleteProperty(cur, "parentId"); // 用于删掉 parentId
+        }
+
+        return res.pop();
+        // 1. 这里返回的是类似 tree 的数组
+        // 2. 如果要真正的转成 tree，可以获取数组中的第一个成员
+      };
+
+      const res = array2tree(arr);
+      console.log("Array2Tree", res);
+
+      // 分隔符 --------------------------------------------------------------------------------
+      // 分隔符 --------------------------------------------------------------------------------
+      // 分隔符 --------------------------------------------------------------------------------
+      // 优化
+      const arrToTreeTest = (arr) => {
+        const res = [];
+        const map = {};
+
+        arr.forEach((item) => {
+          map[item.id] = item;
+          item.children = [];
+        });
+
+        arr.forEach((item) => {
+          if (item.parentId === -1) res.push(item);
+          else map[item.parentId].children.push(item);
+
+          // Reflect.deleteProperty(item, "parentId");
+        });
+
+        return res.pop();
+      };
+    </script>
+  </body>
+</html>

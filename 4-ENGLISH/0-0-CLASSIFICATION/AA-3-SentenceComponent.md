@@ -1,0 +1,476 @@
+##### The Components Of A Sentence. 句子成分
+
+- 1
+- [tense]
+- [intense】]
+- `【 past tense. 过去时态 过去式  】` // ------------ 【 tense 紧张的 adj / 时态 n 】 【 intense competition. 激励的竞争 】
+- `【 present tense. 现在时态 】` // ---------------- 【 simple present tense. 一般现在时 】 【 present perfect tense. 现在完成时 】 // 【 present / current 】
+- `【 future tense. 将来时态 】`
+- > 【 present tense. 现在时态 】
+- > 【 【 simple 】 present tense. 一般现在时态 】 // ----- 【 simple 简单的 简朴的 n 】 【 sample 样本 样品 n 】
+- > 【 present 【 perfect 】 tense. 现在完成时态 】
+- > 【 present 【 continuous 】 tense. 现在进行时 】 // ---【 continuous 持续的 连续的 adj 】 VS 【 continue 继续 持续 v 】 VS 【 last for. 持续 v 】
+- AA.
+- **【 tense 时态 n / 紧张的 adj 】**// ------------ `【 tense situation. 紧张的局势 n 】` // ------【 present tense. 现在时态 】 【 simple present tense. 】
+- **【 intense 激烈的 adj 】** // ------------------ 【 intense competition. 激烈的竞争 n 】 // ---【 compete V / competitive ADJ / competition N 】
+- _【 what 【 tense 】 is this sentence? 这个句子是什么时态 】_
+- _【 what 【 clause 】 is this sentence? 这个句子是什么从句 】_
+- // TIPS: Pay attention to the pronunciation of the word 'present'. [present-目前-现在-n]
+- BB.
+- _【 present 目前 n / 礼物 n / 目前的 adv 】_
+- _【 at present. 目前 adv 】_
+- CC.
+- 【 simple 简单的 VS temple 寺庙 VS sample 样本案 例 】
+- DD.
+- `【 present tense. 现在时态 】`
+- `【 simple present tense. 一般现在时态 】`
+- `【 present 【 perfect 】 tense. 现在完成时态 】`
+- `【 present 【 continuous 】 tense. 现在进行时态 】`
+- > 【 progressive 进步的 进行时态的 adj 】`
+- > 【 progressive tense. 进行时态 】
+- > 【 progressive youth. 进步青年 】
+- > make a progress. 取得进步
+- _【 continuous 持续的 连续的 adj 】_
+- _【 continue 继续 持续 v 】_ // --------------------- 【 last for. 持续 v 】 VS 【 continue 继续 持续 v 】
+- _【 last for. 持续 v 】_
+- // 【 动词的 (过去式) : ------- 用在 ( 一般过去时 ) 中 】
+- // 【 动词的 (过去分词): ------ 用在 ( 完成时 和 被动语态 ) 中 】
+- // -- have/have + V 的过去分词
+- // -- be + V 的过去分词
+- // TIPS: Pay attention to the pronunciation of the word 'progressive'. [progressive-进步的-adj]
+- EE.
+- _【 continuous 连续的 持续的 不断的 adj 】_
+- _【 present continuous tense. 现在进行时 】_
+- **【 【 As long as 】 you 【 make an effort 】 to 【 learn present continuous tense 】, you will 【 make progress 】. 只要努力学习现在进行时，就一个会取得进步 】**
+- // -- 【 make progress. 取得进步 v 】
+- // -- 【 make an effort to do sth. 努力做某事 】
+-
+- 1.1
+- **【 voice 语态 声音 n 】**
+- `【 passive voice. 被动语态 】` // ---------------- 【 passively accept. 被动接受 v 】
+- `【 active voice. 主动语态  】` // ---------------- 【 actively pursue. 主动追求 v 】 // 【 pursue happiness. 追求幸福 】 // 【 chase dream. 追逐梦想 】
+- > 【 actively pursue. 主动追求 v 】 // ------------ 【 pursue happiness. 追求幸福 】 // -【 chase dream. 追逐梦想 】 【 chase fugitive. 追扑逃犯 】
+- > 【 passively accept. 被动接受 v 】
+- > 【 what's 【 clause 】 of this sentence? 这个句子是什么从句 】
+- > 【 what's 【 tense 】 of this sentence? 这个句子是什么时态 】
+-
+- 1.2
+- **【 clause 从句 子句 n 】**
+- `【 object clause. 宾语从句 】` // -----------------【 clause 子句 从句 分句 n 】
+- `【 attributive clause. 定语从句 】`
+- `【 adverbial clause. 状语从句 】` // ------------- 【 verb / adverb / adverbial / proverb 】
+- > 【 what's 【 clause 】 of this sentence? 这个句子是什么从句 】
+- > 【 what's 【 tense 】 of this sentence? 这个句子是什么时态 】
+-
+- 1.3
+- **【 sentence 句子 n 】**
+- `【 interrogative sentence. 疑问句 】`
+- `【 declarative sentence. 陈述句 】`
+- _【 interrogative 疑问的 adj 】_
+- _【 declarative 陈述的 adj 】_
+-
+-
+-
+-
+-
+-
+-
+-
+- 2
+- `【 conjunction 连词 连接词 n 】` --- 【 in conjunction with. 结合... 】 // 【 connect 连接 v 】 【 conjunction 连接词 n 】
+- `【 part of speech. 词性 n 】` ----- 【 What's 【 part of speech 】 of this word? 这个单词是什么词性？ 】 // 【 speech 演讲 讲话 n 】
+- `【 auxiliary verb. 助动词 n 】` // -- 【 auxiliary / regular / irregular 】
+- `【 countable noun. 可数名词 n 】` -- 【 uncountable noun. 不可数名词 n 】
+- `【 singular noun. 单数名词 n 】` --- 【 plural noun. 复数名词 n 】
+- > 【 You can use the 【 conjunction 】 to 【 connect 】 the 【 object clause 】 and the 【 attributive clause 】. 】
+- > 【 What's 【 part of speech 】 of the word 'leaf' ? 叶子这个词的词性是什么？ 】
+- AA.
+- _【 conjunction 连词 n 】_ // ------- 【 in conjunction with. 结合 ... 】
+- _【 junction 交叉路口 枢纽站 n 】_ // - 【 junction station. 枢纽站 n 】
+- _【 intersection 十字路口 n 】_ // --- 【 intersection point. 交点 n 】
+- _【 interaction 交互 】_ // ---------- 【 interaction design. 交互设计 】 【 package design. 包装设计 】
+- _【 section 段 】_ // ---------------- 【 a section of road. 一段路 】 【 a section of text. 一段文字 】
+- _【 interjection 感叹词 n 】_ VS _【 exclamation mark. 感叹号 n 】_
+- // TIPS: Pay attention to the pronunciation of the word 'adjective'. [auxiliary-辅助的-adj]
+-
+- `【 antonym 反义词 n 】` ------------- anto + nym // opposite
+- `【 synonym 同义词 n 】` ------------- syno + nym
+- `【 singular 单数 单数的 】` // ------ 【 singular noun. 单数名词 n 】 // 【 every single day. 每一天 】
+- `【 plural 复数 复数的 】` // -------- 【 plural noun. 复数名词 n 】
+- > What's the 【 antonym 】 of the word 'dim'? [dim->bright]
+- > What's the 【 opposite 】of the word 'dim'? [dim->bright]
+- > What's the 【 synonym 】of the word 'dim'? [dim->dark]
+- > What's the 【 singular 】of the word 'leaves'? [leaves->leaf]
+- > What's the 【 plural 】of the word 'leaf'? [leaf->leaves]
+- > What's the 【 past tense 】 of 【 leave 】? [leave->left]
+- > 【 What's 【 part of speech 】 of the word 'leaf' ? 叶子这个词的词性是什么？ 】
+- > 【 what 【 clause 】 is this sentence? 这个句子是什么从句 】
+- // 【 single 单身的 单个的 adj 】 ----- 【 every single day. 每一天 】
+- // 【 singular 单数的 adj 】 --------- 【 singular noun. 单数名词 n 】 【 plural noun. 复数名词 n 】
+- // TIPS: Pay attention to the pronunciation of the word 'plural'. [plural-复数的/复数]
+-
+-
+-
+-
+-
+-
+-
+- 3
+- [符号-symbol][symbol-象征-符号-标志-n]
+- `【 comma 逗号 n 】` // --------------------------------------- 【 TV drama. = TV series. 电视剧 】 // 【 TV program. 电视节目 】
+- `【 period 句号 n / 时期 n 】` = full stop. // ----------------- 【 period [一段时间] [句号] 】 // a period of time. // warranty period. 保修期
+- `【 full stop. 句号 n 】` = period.
+- `【 semicolon 分号 n 】`
+- _【 mark 标记 记号 分数 n 】_ VS symbol VS sign
+- `【 question mark. 问号 n 】 = question point.` // ------------ _【 full marks. 满分 】_ 【 question mark. 问号 n 】
+- `【 exclamation mark. 感叹号 n 】= exclamation point. ` // ---- `【 exclamation 感叹 n 】` // **【 exclamation mark. 感叹号 】** VS **【 interjection 感叹词 n 】**
+- `【 ellipsis mark. 省略号 n 】`
+- `【 single quotation marks. 单引号 n 】` // ------------------- 【 quote 引用 v n 】 【 quotation 引用 n 】
+- `【 double quotation marks. 双引号 n 】`
+- `【 bookmark 书签 n 】`
+- `【 full marks. 满分 n 】`
+- _【 brackets 括号 支架 n 】_ // ------------------------------- _【 bracket 支架 括号 n 】_ VS _【 racket 球拍 n 】_
+- `【 round brackets. 小括号 n 】` // ---------------------------- 【 this round of. 这一轮的 】 // This round of layoffs.
+- `【 square brackets. 中括号 n 】` // --------------------------- 【 square 广场 正方形 平方 adj 】
+- `【 curly brackets. 大括号 n 】` // ---------------------------- 【 curly hair. 卷发 n 】 【 curly brackets. 大括号 】 // 【 curly 卷曲的 adj 】
+- _【 comparison symbol. 比较符 n 】_
+- `【 greater than. 大于 】` // ---------------------------------- 【 greater than symbol. 大于符号 n 】
+- `【 less than. 小于 】` // ------------------------------------- 【 less than symbol. 小于符号 n 】
+- `【 greater than symbol. 大于符号 n 】` // ---------------------- symbol 象征 符号 n
+- `【 less than symbol. 小于符号 n 】`
+- // TIPS: Pay attention to the pronunciation of the word 'quote'. [quote-引用-v] [quotation-引用-n]
+- // TIPS: Pay attention to the pronunciation of the word 'exclamation'. [exclamation-感叹词-n]
+- -AA.
+- > 【 bracket 括号 支架 n 】
+- > 【 racket 球拍 n 】
+- **【 He put the 【 badminton racket 】 on the 【 brackets 】. 他把羽毛球拍放在了支架上 】**
+- AA.
+- _【 curly hair. 卷发 n 】_
+- _【 curly brackets. 大括号 n 】_
+- .MT **【 Her 【 curly hair 】 【 looks like 】 many 【 curly brackets 】. 她的卷发像很多大括号 】**
+- **【 The 【 shape 】 of His 【 curly hair 】 is 【 likes 】 【 curly brackets 】. 她卷发的形状像个大括号 】**
+- // -- 【 look like. 看起来像 】
+- BB.
+- _【 period 句号 一段时间 n 】_
+- _【 warranty period. 保修期 n 】_
+- _【 validity period. 有效期 n 】_
+- _【 trial period. 试用期 n 】_
+- _【 internship period. 实习期 n 】_
+- _【 shelf life. 保质期 n 】_
+- [link][Must 2024-12-01](./00-IELTS/IELTS-Must-20241201.md)
+- CC.
+- > 【 academic performance. 学习成绩 】 // ------------------- 【 academic research. 学术研究 】
+- > 【 full marks. 满分 】 // --------------------------------- full marks. // question mark. // single quotation marks. // double quotation marks.
+- > 【 math score. 数学成绩 】
+- > 【 question mark. = question point. 问号 】
+- DD.
+- **=【 There is 【 an 】 【 interjection 】 before the 【 exclamation mark 】. 感叹号前面是感叹词 】**
+- // TIPS: Pay attention to the pronunciation of the word 'bracket'. [bracket-括号-支架-n]
+- // TIPS: Pay attention to the pronunciation of the word 'square'. [square-广场-正方形-平方-adj]
+- // TIPS: Pay attention to the pronunciation of the word 'curly'. [curly-卷曲的-adj]
+- // TIPS: Pay attention to the pronunciation of the word 'exclamation'. [exclamation-感叹号-感叹-n]
+- Ee.
+- exclamation mark. 感叹号 n
+- **【 You need to 【 pay particular attention 】 to the position of the 【 exclamation mark 】 in the sentence. 你需要特别注意感叹号在这个句子中的位置 】**
+- FF.
+- greater than. 大于
+- greater than symbol. 大于符号
+- **【 【 Since 】 7 is 【 greater than 】 6, the 【 greater than symbol 】 should be used. 因为 7 大于 6，所以要使用大于符号 】**
+- **【 Four is 【 greater than 】 three and 【 less than 】 five. 4 大于 3 小于 5 】**
+- // -- since 自从 因为
+- GG.
+- .MT **【 An 【 exclamation mark 】 follows an 【 interjection 】. 感叹词后面跟感叹号 】**
+-
+-
+-
+-
+-
+-
+- 4
+- `【 noun 名词 】` // ----------------- 【 countable noun. 可数名词 】 【 uncountable noun. 不可数名词 】
+- `【 pronoun 代词 】` // -------------- 【 personal pronoun. 人称代词 n 】 【 possessive pronoun. 物主代词 n 】 【 reflexive pronoun. 反身代词 】
+- `【 verb 动词 】` // ----------------- 【 irregular verb. 不规则动词 】 【 regular verb. 规则动词 】
+- `【 adverb 副词 】` // ---------------- verb adverb adverbial
+- `【 adjective 形容词 】`
+- `【 preposition 介词 】` // ---------- 【 position 位置 岗位 】 【 preposition 介词 】
+- `【 quantifier 量词 】` // ----------- 【 quantifier 量词 】 【 quantity 数量 】 【 quality 质量 】
+- `【 conjunction 连词 】` // ---------- 【 in conjunction with. 结合... 】 // Please learn this file 【 in conjunction with 】 that file.
+- `【 interjection 感叹词 】` // ------- `【 interjection 感叹词 n 】 VS 【 intersection 十字路口 n 】 VS interaction VS conjunction VS junction VS section`
+- `【 auxiliary verb. 助动词 】`
+- `【 regular verb. 规则动词 】` // ----- 【 regular 普通的 规则的 定时的 】 // 1. regular gas. // 2. regular check-up. // regular verb. irregular verb.
+- `【 irregular verb. 不规则动词 】`
+- `【 countable noun. 可数名词 n 】` // - 【 count / discount / counter / encounter / account / accountant / county / country / countryside 】
+- `【 uncountable noun. 不可数名词 n 】`
+- `【 singular noun. 单数名词 n 】`
+- `【 plural noun. 复数名词 n 】`
+- > What's the 【 position 】 of the 【 preposition 】 in the sentence?
+- > What's the 【 position 】 of the 【 auxiliary verb 】 in the sentence? 助动词在句子中的位置是什么？
+- > You need to 【 pay particular attention 】 to the position of the 【 exclamation mark 】 in the sentence. 你需要特别注意感叹号在这个句子中的位置
+- // TIPS: Pay attention to the pronunciation of the word 'adjective'. [adjective-形容词-n]
+-
+- `【 tone 语气 音调 n 】` // ----------- [痛] // 【 tone / tongue 】
+- `【 tongue 舌头 】` // ---------------- [烫]
+- `【 accent 口音 n 】` // ------------- 【 heavy accent. 重口音 】 【 light accent. 轻口音 】
+- `【 mandarin 普通话 】` // ----------- 【 standard mandarin. 标准普通话 n 】 **【 standard mandarin. 标准普通话 】**
+- `【 dialect 方言 n 】` // ------------ 【 local dialect. 本地方言 n 】 // - **【 dialog 对话 / dialect 方言 】**
+- `【 idiom 成语 方言 n 】`
+- `【 pronunciation 发音 n 】`
+- > 【 heavy accent. 重口音 】
+- > 【 light accent. 轻口音 】
+- > 【 a heavy foreign accent. 很重的外国口音 】
+- // TIPS: Pay attention to the pronunciation of the word 'tone'. [tone-语调]
+- // TIPS: Pay attention to the pronunciation of the word 'tongue'. [tongue-舌头]
+- // TIPS: Pay attention to the pronunciation of the word 'idiom'. [idiom-成语]
+-
+- `【 greater than. 大于 】` // ---------- 【 greater than sign. 大于符号 n 】
+- `【 less than. 小于 】` // ------------- 【 less than sign. 小于符号 n 】
+- > 【 greater than sign. 大于符号 n 】
+- > 【 less than sign. 大于符号 n 】
+- **【 Four is 【 greater than 】 three and 【 less than 】 five. 4 大于 3 小于 5 】**
+-
+-
+- `【 noun 名词 n 】`
+- `【 countable noun. 可数名词 n 】`
+- `【 uncountable noun. 不可数名词 n 】`
+- `【 singular noun. 单数名词 n 】`
+- `【 plural noun. 复数名词 n 】`
+- // TIPS: Pay attention to the pronunciation of the word 'countable'. [countable]
+-
+- `【 verb 动词 】`
+- > 【 auxiliary verb. 助动词 】 // ---- 【 auxiliary verb. 助动词 n 】 // 【 auxiliary 辅助的 adj 】
+- > 【 regular verb. 规则动词 】
+- > 【 irregular verb. 不规则动词 】
+- // TIPS: Pay attention to the pronunciation of the word 'auxiliary'. [auxiliary]
+-
+-
+-
+-
+-
+-
+-
+-
+- 5
+- `【 subject 主语 】` // ---------------- 【 subjective thought. 主观想法 】 【 subjective feeling. 主观感受 】 // subjective 主观的 adj
+- `【 predicate 谓语 】` // -------------- 【 weather predication. 天气预报 】 【 weather forecast. 天气预报 】
+- `【 object 宾语 物体 对象 】` ----------- objective 客观的 adj
+- `【 attributive 定语 】` // ------------ 【 attribute 属性 】
+- `【 adverbial 状语 】` // -------------- 【 adverb 副词 】 // 【 verb 动词 】
+- `【 complement 补语n 补充v 补足v 】` // - 【 supplement / complement 】 // 【 supplement energy. 】 【 supplement nutrition. 】
+- > 【 supplement 补充 v 】 // ------------- supplement energy. supplement nutrition.
+- > 【 complement 补充 v 】
+- > 【 complementary 互补的 补充的 adj 】// 【 complementary colors. 互补色 n 】
+- AA.
+- _【 subjective 主观的 adj 】_ // ------ 【 subjective thought. 主观想法 n 】 【 subjective feeling. 主观感觉 n 】
+- _【 objective 客观的 adj 】_ // ------- 【 objective fact. 客观事实 n 】
+- **【 This is your 【 subjective thought 】, not an 【 objective fact 】. 这是你主观的想法，并不是客观的事实 】**
+- // TIPS: pay attention to the pronunciation of the word 'thought'. [thought-想法-n]
+-
+-
+-
+-
+-
+-
+-
+-
+- 6
+- [quantifier-量词-n]
+- `【 a layer of dust. 一层灰尘 】`
+- `【 a mass of books. 大量的书 】`
+- `【 a handful of rice. 一把米 】`
+- `【 a grain of rice. 一粒米 】`
+- `【 a bowl of rice. 一碗米 】`
+- `【 a clove of garlic. 一瓣大蒜 // garlic 大蒜 】`
+- `【 a set of makeup. 一套化妆品 】`
+- `【 a series of test. 一系列测试 】`
+- `【 a stick of incense. 一根香 】`
+- `【 a carton of milk. 一盒牛奶 】`
+- `【 a cup of tea. 一杯茶 】`
+- `【 a bottle of water. 一瓶水 】`
+- `【 a glass of water. 一杯水 】`
+- `【 a piece of leaf. 一片叶子 】`
+- `【 a bunch of flowers 一束花 】`
+- `【 a tub of popcorn. 一桶爆米花 】`
+- `【 a roll of paper. 一卷纸 】`
+- `【 a head of garlic. 一颗蒜 】`
+- `【 a couple of socks. 一双袜子 】`
+-
+-
+- [letter]
+- `【 vowel 元音 】` // ------------------ 【 vowel letter. 元音字母 】
+- `【 consonant 辅音 】`
+- > 【 capital 首都 资本 大写字母 】
+-
+- [EXPAND-01]
+- `【 grammar 语法 n 】`
+- `【 grammatical 语法的 adj 】`
+- `【 grammatically 语法地 adv 】`
+- **【 【 grammatically 】 correct. 语法上是正确的 】**
+-
+- [EXPEND-02]
+- `【 modify 修改 修饰 v 】`
+- `【 technical scheme. 技术方案 n 】`
+- **【 【 adjectives 】 are used to 【 modify 】 【 nouns 】. 形容词用来修饰名词 】**
+- **【 We need to 【 modify 】 our 【 technical scheme 】. 我们需要修改技术方案 】**
+- // -- technique 技术 n
+- // -- technology 技术 n
+- // -- technical 技术的 adj
+- // TIPS: Pay attention to the pronunciation of the word 'technical'. [technical-技术的-adj]
+-
+-
+- `【 word 单词 】`
+- `【 phrase 短语 】`
+- `【 sentence 句子 】`
+- `【 fixed collocation. 固定搭配 】` // 【 collocation 搭配 】
+- `【 conversation 对话 n 】` // ------- 口语中【 conversation 交谈 】 【 conversion 转换 】
+- `【 dialog 对话 n 】` // ------------- 书面语 **【 dialogue 对话 v】**
+- `【 dialogue 对话 v 】`
+- `【 vocabulary. 词汇 n 】`
+- // 【 collocation 搭配 】
+- > 【 convert 转换 v 】
+- > 【 conversion 转换 n 】
+- > 【 conversation 交谈 n 】
+-
+- `【 countable noun. 可数名词 】`
+- `【 uncountable noun. 不可数名词 】`
+- `【 count 计数 】` // -------------------【 count down 倒计时 】
+- `【 discount 打折 v 】` // ------------- _【 discount coupon. 优惠卷 】_ _【 discount rate. 打折率 】_
+- `【 counter 计数器 柜台 】` // -----------【 bank counter. 银行柜台 n 】
+- `【 encounter 遭遇 v 】` // -------------【 encounter difficulty. 遭遇困难 】 【 encounter setback. 遭遇挫折 】 【 overcome difficulty. 克服困难 】
+- `【 account 账户 】` // -----------------【 bank account. 银行账户 n 】 【 recover account. 回复账户 】
+- `【 accountant 会计 n 】` // ----------- 【 junior accountant. 初级会计 n 】 【 senior accountant. 高级会计 n 】
+- `【 county 县 n 】` // ------------------【 county government. 县政府 】 【 county court. 县法院 n 】
+- `【 country 国家 n 】` // -------------- 【 developing country. 发展中国家 n 】 【 developed country. 开发中国家 n 】 【 country / state / nation 】
+- `【 countryside 乡村 n 】`
+- > country / state / nation
+- > 1. welfare state. 福利国家 // --------- social welfare. 社会福利
+- > 2. united nations. 联合国 n
+- > 3. National Day. 国庆节 // ----------- national flag. // national anthem. // national assets.
+- > 4. foreign nationality. 外国国籍 // --- dual nationality. 双重国籍 n
+-
+- `【 prefix 前缀 n 】`
+- `【 suffix 后缀 n 】`
+- `【 start with. 以...开头 】`
+- `【 end with. 以...开头 】`
+- **【 The word 'good' starts with the prefix 'g' and ends with the suffix 'd'. good 这个单词以前缀 g 开头，以 d 后缀结尾 】**
+-
+- [AA.]
+- `【 position 位置 职位 n 】`
+- `【 preposition 介词 】`
+- **【 Please pay attention to the 【 position 】 of the 【 preposition 】 【 in 】 the sentence. 请注意这个介词在句子中的位置 】**
+-
+- [BB.]
+- `【 past tense. 过去时 】`
+- `【 present tense. 现在时 】`
+- `【 future tense. 将来时 】`
+- **【 【 Frozen 】 is the 【 past tense 】 of 【 freeze 】. frozen 是 freeze 的过去式 】**
+- **【 This sentence uses the 【 past tense 】.这个句子使用的是过去时态 】**
+- // [antonym]: What's the antonym of the word 'dim'?
+- // [synonum]: What's the synonym of the word 'dim'?
+- // [opposite]: What's the opposite of the word 'dim'?
+- // [plural]: What's the plural of the word 'leaf'?
+- // [past-tense]: What's the past tense of the word 'freeze'？
+-
+- [CC.]
+- `【 interrogative sentence. 疑问句 】`
+- `【 declarative sentence. 陈述句 】`
+- **【 Sentences 【 are divided into 】 【 interrogative sentences 】 and 【 declarative sentences 】. 句子分为疑问句和陈述句 】**
+- // 【 be divided into. 被分为... 】
+-
+- [DD.]
+- `【 fixed collocation. 固定搭配 】`
+- **【 There are many 【 fixed collocations 】 【 in 】 English language. 英语中有很多固定搭配 】**
+-
+- [EE.]
+- `【 object clause. 宾语从句 n 】`
+- `【 attributive clause. 定语从句 】`
+- **【 Is this an 【 object clause 】 or 【 attributive clause 】? 这是宾语从句还是定语从句？ 】**
+-
+- [FF.]
+- `【 conjunction 连接词 】` // connect conjunction
+- `【 in conjunction with. 结合... 】`
+- **【 You can use the 【 conjunction 】 to 【 connect 】 the 【 object clause 】 and the 【 attributive clause 】. 你可以用连接词连接宾语从句和定语从句 】**
+- **【 Please learn this file 【 in conjunction with 】 that file. 请把这个文件和那个文件结合起来学习 】**
+-
+- [GG.]
+- `【 auxiliary verb. 助动词 n 】`
+- **【 'Do' is 【 an 】 【 auxiliary 】. Do 是一个助动词 】**
+-
+- [HH.]
+- `【 passive voice. 被动语态 n 】`
+- `【 active voice. 主动语态 n 】`
+- > 【 actively pursue. 主动争取 】
+- > 【 passively accept. 被动接受 】
+- **【 We should 【 actively 】 【 pursue 】, not 【 passively 】 【 accept 】. 我们应该主动争取，不应该被动接受 】**
+-
+- [JJ.]
+- `【 countable noun. 可数名词 n 】`
+- `【 uncountable noun. 不可数名词 n 】`
+- **【 【 nouns 】 can 【 be divided into 】 【 countable nouns 】 and 【 uncountable nouns 】. 名词分为可数名词和不可数名词 】**
+-
+- [HH.]
+- `【 encounter difficulty. 遭遇困难 v 】`
+- `【 overcome difficulty. 克服困难 v 】`
+- **【 When we 【 encounter a difficulty 】, we should 【 overcome the difficulty 】. 当我们遭遇困难，我们就需要去克服困难 】**
+-
+- [II.]
+- `【 simple 简单的 简朴的 adj 】`
+- `【 sample 样品 样本 n 】`
+- **【 This is a 【 simple 】 【 sample 】. 这是一个简单的样品 】**
+-
+- [JJ.]
+- `【 dialogue 对话 v 】`
+- `【 dialog 对话 n 】`
+- `【 local dialect 本地方言 n 】`
+- **【 They like to 【 dialogue 】 in 【 local dialect 】. 他们喜欢用方言对话 】**
+-
+- [KK.]
+- **【 What are the 【 components 】 of this sentence? 这个句子的组成部分是什么？ 】**
+-
+- [LL.]
+- `【 tense situation. 紧张局势 n 】`
+- `【 intense competition 激烈竞争 n 】`
+- **【 There is 【 tense situation 】 and 【 intense competition 】. 这里有紧张的局势和激烈的竞争 】**
+-
+- [MM.]
+- `【 present tense. 现在时态 】`
+- `【 simple present tense. 一般现在时 】`
+- `【 present perfect tense. 现在完成时 】`
+- **【 The 【 present tense 】 【 is divided into 】 the 【 simple present tense 】 and the 【 present perfect tense 】. 现在时分为一般现在时和现在完成时 】**
+- // -- 【 be divide into. 被分为... 】
+-
+- [NN.]
+- `【 accent 口音 n 】`
+- `【 dialect 方言 n 】`
+- > 【 have influence on. 对...有影响 】
+- **【 【 Accent 】 have a litter 【 influence 】 【 on 】 English. but 【 dialect 】 has a great influence on English. 口音对英语的影响比较小，但是方言对英语的影响很大 】**
+-
+- [OO.]
+- `【 question mark. 问号 】`
+- `【 full marks. 满分 】`
+- **【 I made a big 【 question mark 】 about whether he got 【 full marks 】 【 in 】 【 math 】. 我对他数学成绩是否得了满分要打一个大大的问号 】**
+-
+- [PP.]
+- `【 round brackets. 小括号 】`
+- `【 square brackets. 中括号 】`
+- `【 curly brackets. 大括号 】`
+- **【 【 Brackets 】 are divided into 【 round brackets 】, 【 square brackets 】, and 【 curly brackets 】. 括号分为小括号，中括号，和大括号 】**
+-
+- [QQ.]
+- `【 curly hair. 卷发 n 】`
+- `【 curly brackets. 大括号 n 】`
+- **【 The shape of His 【 curly hair 】 is 【 likes 】 【 curly brackets 】. 她卷发的形状像个大括号 】**
+- // -- like 作为像时是 preposition
+-
+- [RR.]
+- `【 complementary 互补的 补充的 adj 】`
+- **【 These two roles are 【 complementary 】. 这两个角色是互补的 】**
+-
+- [SS.]
+- `【 present 目前n 礼物n 目前的adj 】`
+- `【 at present. 目前 adv 】`
+- **【 【 At present 】, I don't received any 【 present 】. 目前我没有收到任何礼物 】**
+-
+- [TT.]
+- `【 subjective thought. 主观想法 】`
+- `【 objective fact. 客观事实 】`
+- **【 This is your 【 subjective thought 】, not an 【 objective fact 】. 这是你主观的想法，并不是客观的事实 】**

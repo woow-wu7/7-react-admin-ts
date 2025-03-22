@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 希尔排序
+      // 希尔排序是 ( 插入排序 ) 的升级版，将原来 ( 插入排序的 O(n^2) ) 的时间复杂度降为 O(n*logn)
+
+      // bubble_sort = selection_sort = insert_sort =  O(n²)
+      // quick_sort = shell_sort希尔排序 = O(nlogn)
+
+      // 原理
+      // 原理: 希尔排序需要取 ( 间隔 gap ) - （ 将原数组分割成 gap 个组，然后对每个组进行插入排序 ）
+      // 总的趟数: 就是从原数组的 gap 位置开始，到原数组的最后位置
+
+      // 原理总结：
+      // 希尔排序是按一定的间隔对数组进行分组，然后在每一个分组中做插入排序，然后逐次缩小间隔，直到间隔为1时，结束整个函数
+      // - 注意：gap的最小值一定要是1，即最后所有元素都只在一个数组内进行插入排序
+
+      // 英语
+      // gap 间隔 缺口
+
+      // 链接
+      // https://juejin.cn/post/6907145602400780296
+
+      // 图解希尔排序
+      // https://www.jianshu.com/p/fe5ccc63d523
+
+      const arr = [1, 5, 8, 7, 6, 3, 2, 4];
+
+      const shell_sort = (arr) => {
+        let gap = Math.floor(arr.length / 2);
+
+        // 该 for 也可以用 do...while 来实现
+        for (; gap >= 1; gap = Math.floor(gap / 2)) {
+          // 每趟 (插入排序) 范围都缩小一半，直到 gap 大于等于1，因为最小分组就是分为一组，( gap表示分成几组 )
+          // 注意：gap最后一定是1，因为整个数组作为一个数组，要整个执行插入排序依次
+
+          // 以下是插入排序的部分，只是每次的步调不是1，而是gap
+          // 插入排序，从 gap 开始
+          // 从 gap 开始，到 arr.length 结束
+          for (let i = gap; i < arr.length; i++) {
+            const cache = arr[i]; // 无序数组取第一个值
+
+            let j = i - gap; // 有序数组最后一个值
+
+            while (j >= 0 && arr[j] > cache) {
+              arr[j + gap] = arr[j];
+              j = j - gap;
+            }
+
+            // 该 for 用上面的 while 代替
+            // for (; j >= 0 && arr[j] > cache; j = j - gap) {
+            //   arr[j + gap] = arr[j];
+            // }
+
+            arr[j + gap] = cache;
+          }
+        }
+
+        return arr;
+      };
+
+      const res = shell_sort(arr);
+      console.log("res: ", res);
+    </script>
+  </body>
+</html>

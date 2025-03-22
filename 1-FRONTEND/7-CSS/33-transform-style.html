@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* - 实战
+      - 1-FRONTEND/5-CSS/33-background-attachment.html
+      - 1-FRONTEND/5-CSS/33-transform-style.html
+      - 1-FRONTEND/5-CSS/DD-视差滚动.html */
+      #root {
+        perspective: 1px;
+
+        height: 60vh;
+        border: 1px solid red;
+        overflow-y: scroll;
+        overflow-x: hidden;
+      }
+
+      #app {
+        width: 100vw;
+        height: 2000px;
+        transform-style: preserve-3d;
+        /* perspective-origin: 100% 50%; */
+      }
+      .one {
+        width: 400px;
+        height: 400px;
+        background: #409eff;
+        /* transform: translate3D(0, -120px, -1px) scale(0.5); */
+        transform: translateZ(-2px);
+      }
+      .two {
+        width: 400px;
+        height: 400px;
+        background: #67c23a;
+        transform: translateZ(-1px);
+        -webkit-transform: translateZ(-1px);
+      }
+      .three {
+        width: 500px;
+        height: 500px;
+        background: #e6a23c;
+        transform: translateZ(0px);
+        -webkit-transform: translateZ(0px);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root">
+      <div id="app">
+        <div class="one">one</div>
+        <div class="two">two</div>
+        <div class="three">three</div>
+      </div>
+    </div>
+  </body>
+</html>

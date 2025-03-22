@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 2351. 第一个出现两次的字母
+      // First Letter to Appear Twice
+
+      // 对比
+      // 2351. 第一个出现两次的字母 https://leetcode.cn/problems/first-letter-to-appear-twice/
+      // 387. 字符串中的第一个唯一字符 https://leetcode.cn/problems/first-unique-character-in-a-string/
+
+      // 对比
+      // - 387. 字符串中的第一个唯一字符  https://leetcode.cn/problems/first-unique-character-in-a-string/
+      // - 136. 只出现一次的数字 https://leetcode.cn/problems/single-number/
+
+      /**
+       * @param {string} s
+       * @return {character}
+       */
+      var repeatedCharacter = function (s) {
+        const map = {};
+
+        for (let i = 0; i < s.length; i++) {
+          const cur = s[i];
+          if (!map[cur]) map[cur] = cur;
+          else return cur;
+          // 只要这个 cur 被标记过，那么现在一定是第二次出现了，直接返回
+        }
+      };
+    </script>
+  </body>
+</html>

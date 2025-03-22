@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 1
+      // let const var 的区别  ( 5个区别 ) ？
+      // - 作用域: let,const是块级作用域，var是全局或函数作用域
+      // - 变量提升: let,const不存在变量提升，var存在变量提升
+      // - 重复声明: let,const不允许重复声明，var允许重复声明
+      // - 全局变量是否和window挂钩: let,const声明的全局变量不和window挂钩，var声明的全局变量和window挂钩即可以通过window.xx来访问
+      // - 暂时性死区: let,const存在暂时性死区，var不存在暂时性死区
+
+      // 0 1 2 3 4
+      for (var a = 0; i < 5; a++) {
+        console.log("a", a);
+      }
+
+      // 0 1 2 3 4
+      // - 说明这个和 ( 表达式先加+1 ) 还是 ( 变量先+1 ) 无关，因为下一轮循环时，都已经加 1 了
+      // - 其他注意点: 在有 ( 定时器 ) 时, b 大于条件，不在执行循环体，但取到的是当前的 变量值，会比这里多1，详见 4.
+      for (var b = 0; b < 5; ++b) {
+        console.log("b", b);
+      }
+
+      // 0 1 2 3 4 5
+      for (var c = 0; c <= 5; ++c) {
+        console.log("c", c);
+      }
+
+      // ------ ------ ------ ------ ------ ------ ------
+
+      // i
+      // 每秒都输出 6，一共 6 个 6
+      // - 其他注意点: 在有 ( 定时器 ) 时, b 大于条件，不在执行循环体，但取到的是当前的 变量值，会比这里多1，详见 4.
+      for (var d = 0; d <= 5; d++) {
+        setTimeout(() => {
+          console.log("d", d);
+        }, 1000 * d);
+      }
+
+      // 每秒都输出 5，一共 5 个 5
+      // var
+      for (var j = 0; j < 5; j++) {
+        setTimeout(() => {
+          console.log("jj1", j);
+        }, 1000 * j);
+      }
+
+      // j
+      // 每秒输出 0 1 2 3 4
+      // let
+      for (let j = 0; j < 5; j++) {
+        setTimeout(() => {
+          console.log("jj2", j);
+        }, 1000 * j);
+      }
+
+      // k
+      // 每秒输出 0 1 2 3 4 5
+      // 注意边界条件 k <= 5
+      for (var k = 0; k <= 5; k++) {
+        (function (k) {
+          setTimeout(() => {
+            console.log("kkk", k);
+          }, 1000 * k);
+        })(k);
+      }
+
+      // L
+      // 每秒输出 0 1 2 3 4
+      for (var L = 0; L < 5; L++) {
+        function fn(L) {
+          setTimeout(() => {
+            console.log("LLLL", L);
+          }, 1000 * L);
+        }
+        fn(L);
+      }
+
+      // 每秒都输出 5，一共 5 个 5
+      // 注意: 没有形参
+      for (var m = 0; m < 5; m++) {
+        function fn() {
+          setTimeout(() => {
+            console.log("mmmmm", m);
+          }, 1000 * m);
+        }
+        fn(m);
+      }
+
+      // 立即输出 0 1 2 3 4
+      // 注意:
+      // - 1. 把 setTimeout 的回调，包装成立即执行函数，则会立即执行
+      // - 2. 立即执行函数的 形参存不存在，结果都是一样的
+      for (var n = 0; n < 5; n++) {
+        setTimeout(
+          ((n) => {
+            console.log("nnnnnn", n);
+          })(n),
+          1000 * n
+        );
+      }
+
+      // p
+      var arr = [];
+      for (var p = 0; p < 3; p++) {
+        arr[p] = function () {
+          console.log("p", p);
+        };
+      }
+      arr[0](); // 3
+      arr[1](); // 3
+      arr[2](); // 3
+    </script>
+  </body>
+</html>

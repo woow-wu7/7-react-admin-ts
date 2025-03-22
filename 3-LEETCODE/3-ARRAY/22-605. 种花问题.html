@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 605. 种花问题
+
+      // 题目
+      // 假设有一个很长的花坛，一部分地块种植了花，另一部分却没有。可是，花不能种植在相邻的地块上，它们会争夺水源，两者都会死去。
+      // 给你一个整数数组 flowerbed 表示花坛，由若干 0 和 1 组成，其中 0 表示没种植花，1 表示种植了花。另有一个数 n ，能否在不打破种植规则的情况下种入 n 朵花？能则返回 true ，不能则返回 false 。
+
+      // 示例 1：
+      // 输入：flowerbed = [1,0,0,0,1], n = 1
+      // 输出：true
+
+      // 示例 2：
+      // 输入：flowerbed = [1,0,0,0,1], n = 2
+      // 输出：false
+
+      // 思路
+      // 1. 在前后各添加一个 0 ---- 这样就不用判断奇偶性
+      // 2. 连续三个0，则表示可以种植
+      // 3. 可以种植时，将值改为1，这样才能进行下面的遍历，来确定是否可以种植
+
+      var canPlaceFlowers = function (flowerbed, n) {
+        let count = 0;
+
+        flowerbed.push(0);
+        flowerbed.unshift(0); // 前后各添加一个0
+
+        console.log(flowerbed);
+
+        // 连续 3个0 表示可以种植
+        // 种植 即把当前值改为 1
+        for (let i = 0; i < flowerbed.length; i++) {
+          if (
+            flowerbed[i] === 0 &&
+            flowerbed[i - 1] === 0 &&
+            flowerbed[i + 1] === 0
+          ) {
+            flowerbed[i] = 1;
+            count++;
+          }
+        }
+
+        return count >= n;
+      };
+    </script>
+  </body>
+</html>

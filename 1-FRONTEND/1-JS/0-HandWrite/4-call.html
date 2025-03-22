@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Implement call function.</title>
+  </head>
+  <body>
+    <script>
+      // 1
+      // call 方法的模拟实现
+      // - 作用: 绑定函数的this指向，并且在指定的作用域中执行该函数
+      // - 参数:
+      //  - 第一个参数: this需要绑定的对象
+      //    - 应该是一个 ( 对象 )
+      //    - 如果传入的参数是 ( null, undefined, 空 ) 则默认传入 ( 全局对象window/global/globalThis )
+      //    - 如果参数是 ( 原始值 ) 那么这个原始值会自动转成对应的 ( 包装对象 )，然后传入call方法
+      //  - 第一个参数后面的参数
+      //    - 将作为 函数调用时，该函数的参数传入
+      // - 应用:
+      //  - call方法的一个应用就是 - 调用对象的原生方法
+      //    - 当一个对象调用继承的属性时，如果该对象自身也有一个同名的属性时，将会发生覆盖
+      //    - call方法可以把继承的方法的原始定义放在该对象上执行，这样无论该对象是否有同名的属性，都不会受影响
+      // - English
+      //    - reflect 反映 反射 v
+
+      // 简洁版
+      function fn(name, age) {
+        return this.name + this.age + name + age;
+      }
+      const obj2 = {
+        name: "woow_wu7",
+        age: 20,
+      };
+
+      Function.prototype._call = function (obj, ...params) {
+        const context = obj ? obj : globalThis;
+
+        context.fn = this;
+
+        const res = context.fn(...params);
+
+        Reflect.deleteProperty(context, "fn");
+
+        return res;
+      };
+
+      const res2 = fn._call(obj2, 1, 6);
+      console.log("res2: ", res2);
+    </script>
+
+    <script>
+      // es5
+      const obj = {
+        name: "woow_wu7",
+        age: 18,
+      };
+      function fn(address, sex) {
+        return this.name + this.age + sex + address;
+      }
+
+      Function.prototype._call = function (obj) {
+        const context = obj || globalThis;
+        // const context = obj || window;
+        // 相当于 const context = obj ? obj : window;
+        // fn.call() 当参数为空，null，undefined时，默认是传入window对象
+        // 空，null，undefined的布尔值都是false
+
+        const params = [];
+        // 用于收集arguments中出去第一个参数外，剩下的每一个参数
+
+        for (let i = 1; i < arguments.length; i++) {
+          params.push("arguments[" + i + "]");
+        }
+        // 注意：循环是从 1 开始的，因为arguments[0] 是fn中this绑定的对象，这里是收集传入fn的参数
+        // arguments是类似数组的对象，具有length属性
+        // params相当于 ['arguments[1]', 'argument[2]']
+
+        context.fn = this;
+        // --- 第一步：在对象上添加一个函数属性fn（对象中应该叫做方法）
+        // 函数的值是this，即 fn 函数
+        // this这里指的是 fn 函数，因为this就是函数调用时所在的对象，fn._call()是fn在调用，所以this指向fn
+
+        const res = eval("context.fn(" + params + ")");
+        // fn函数可能有返回值
+        // + 号是存在（重载）的，即可以是（相加）或者（相连）
+        // 当 + 运算子存在对象时，会先将对象转成原始类型的值，即先执行 valueOf -> 对象本身 -> toStirng -> 出object外，都是返回该类型对象的字符串形式
+        // params数组会被转成 'arguments[1],arguments[2]'这样的形式
+        // 例如：[1,'2',3,'4'].toString() -> "1,2,3,4"->  数组返回数组的字符串形式
+        // 最终是这样的： const res = eval('context.fn(arguments[1],arguments[2])')
+
+        Reflect.deleteProperty(context, "fn");
+        // delete context.fn
+        // 删掉对象上的函数
+        // 注意：delete context.fn 这样的旧的写法会逐渐被抛弃
+
+        return res;
+        // fn可能有返回值，需要返回结果
+      };
+
+      const res = fn._call(obj, "chongqing", "man");
+      console.log(res, "res");
+    </script>
+
+    <script>
+      // es6
+
+      // const obj = {
+      //   name: 'woow_wu7',
+      //   age: 18
+      // }
+      // function fn(address, sex) {
+      //   return this.name + this.age + sex + address
+      // }
+
+      // Function.prototype._call = function(context) {
+      //   context = context ? context : window;
+      //   context.fn = this;
+      //   const res = context.fn(...[...arguments].slice(1));
+
+      //   Reflect.deleteProperty(context, 'fn')
+      //   //delete context.fn;
+
+      //   return res;
+      // }
+      // const res = fn._call(obj, 'chongqing', 'man')
+      // console.log(res, 'res')
+    </script>
+  </body>
+</html>

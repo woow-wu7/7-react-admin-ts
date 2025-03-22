@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 143. 重排链表
+
+      // 题目
+      // 给定一个单链表 L 的头节点 head ，单链表 L 表示为：
+      // L0 → L1 → … → Ln - 1 → Ln
+      // 请将其重新排列后变为：
+      // L0 → Ln → L1 → Ln - 1 → L2 → Ln - 2 → …
+      // !!!!!!!!!!!!!!! 不能只是单纯的改变节点内部的值，而是需要实际的进行节点交换。
+      // !!!!!!!!!!!!!!! 不能只是单纯的改变节点内部的值，而是需要实际的进行节点交换。
+      // !!!!!!!!!!!!!!! 不能只是单纯的改变节点内部的值，而是需要实际的进行节点交换。
+      // !!!!!!!!!!!!!!! 不能只是单纯的改变节点内部的值，而是需要实际的进行节点交换。
+
+      // 示例 1：
+      // 输入：head = [1,2,3,4]
+      // 输出：[1,4,2,3]
+
+      // 示例 2：
+      // 输入：head = [1,2,3,4,5]
+      // 输出：[1,5,2,4,3]
+
+      /**
+       * Definition for singly-linked list.
+       * function ListNode(val, next) {
+       *     this.val = (val===undefined ? 0 : val)
+       *     this.next = (next===undefined ? null : next)
+       * }
+       */
+      /**
+       * @param {ListNode} head
+       * @return {void} Do not return anything, modify head in-place instead.
+       */
+
+      // leetcode
+      // https://leetcode.cn/problems/reorder-list/
+
+      // 思路
+      // 1. 第一步: 找到链表 ( 中间节点 ) ----------------- 快慢指针
+      // 2. 第二步: 反转链表中间节点的 ( 后面部分 ) --------- 双指针
+      // 3. 第三步: 合并两个链表
+
+      // 注意点:
+      // - 不需要断开链表
+      // - 对比需要断开链表的例子 ( 6-109. 有序链表转换二叉搜索树 - https://leetcode.cn/problems/convert-sorted-list-to-binary-search-tree/ )
+
+      // 对比
+      // 都会用到 ( 链表中间节点 ) ( 反转链表 ) ( 合并链表 ) ( 链表相等 )
+      // 143. 重排链表 https://leetcode.cn/problems/reorder-list/
+      // 234. 回文链表  https://leetcode.cn/problems/palindrome-linked-list/
+
+      // 前置知识 - 关联知识
+      // - 0. 回文链表 https://leetcode.cn/problems/palindrome-linked-list/
+      // - 1. 重排链表  https://leetcode.cn/problems/reorder-list/
+      // - 2. 寻找链表中间节点 https://leetcode.cn/problems/convert-sorted-list-to-binary-search-tree/
+      // - 3. 反转链表 https://leetcode.cn/problems/fan-zhuan-lian-biao-lcof/
+      // - 4. 合并两个有序链表 https://leetcode.cn/problems/he-bing-liang-ge-pai-xu-de-lian-biao-lcof/
+
+      var reorderList = function (head) {
+        let fast = head;
+        let slow = head;
+
+        // 1
+        // 中间节点: 快慢指针找中间节点，slow即中间节点
+        // 链表长度: 长度是奇数和偶数的两个条件作为 while 循环的条件
+        while (fast && fast.next) {
+          fast = fast.next.next;
+          slow = slow.next;
+        }
+
+        // 2
+        // 反转链表后面的部分，即 slow 为头节点的部分
+        let pre = null;
+        let cur = slow;
+        while (cur) {
+          const temp = cur.next;
+          cur.next = pre;
+          pre = cur;
+          cur = temp;
+        }
+
+        // 3
+        // 合并两个链表
+        let l1 = head;
+        let l2 = pre;
+        while (l2.next) {
+          const temp1 = l1.next;
+          const temp2 = l2.next;
+
+          l1.next = l2;
+          l1 = temp1;
+          l2.next = temp1;
+          l2 = temp2;
+        }
+
+        return head;
+      };
+    </script>
+  </body>
+</html>

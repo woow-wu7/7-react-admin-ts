@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 1790. 仅执行一次字符串交换能否使两个字符串相等
+
+      // 题目
+      // 给你长度相等的两个字符串 s1 和 s2 。一次 字符串交换 操作的步骤如下：选出某个字符串中的两个下标（不必不同），并交换这两个下标所对应的字符。
+      // 如果对 其中一个字符串 执行 最多一次字符串交换 就可以使两个字符串相等，返回 true ；否则，返回 false 。
+
+      // leetcode
+      // https://leetcode.cn/problems/check-if-one-string-swap-can-make-strings-equal/
+
+      // 输入：s1 = "bank", s2 = "kanb"
+      // 输出：true
+      // 解释：例如，交换 s2 中的第一个和最后一个字符可以得到 "bank"
+
+      // 输入：s1 = "attack", s2 = "defend"
+      // 输出：false
+      // 解释：一次字符串交换无法使两个字符串相等
+
+      // 输入：s1 = "kelb", s2 = "kelb"
+      // 输出：true
+      // 解释：两个字符串已经相等，所以不需要进行字符串交换
+
+      // 输入：s1 = "abcd", s2 = "dcba"
+      // 输出：false
+
+      // 对比
+      // 1790. 仅执行一次字符串交换能否使两个字符串相等 https://leetcode.cn/problems/check-if-one-string-swap-can-make-strings-equal/
+      // 859. 亲密字符串 https://leetcode.cn/problems/buddy-strings/
+
+      // 思路
+      // 经过 1次交换 就能相等
+      // 1. 说明 ( 两个字符串只有两个位置的值不想等，其他位置的值都是一样的 )
+      // 2. 说明 必须满足 ( 交叉想等 )，交叉想等的意思是 ( 两个字符串两个不想等位置的值要交叉想等 )
+      // 2. 交叉想等 即 str1[index1] === str2[index2] && str1[index2] =str2[index1]
+
+      /**
+       * @param {string} s1
+       * @param {string} s2
+       * @return {boolean}
+       */
+
+      // ------------------------------------------------------------------------------------------
+      // ------------------------------------------------------------------------------------------
+      // ------------------------------------------------------------------------------------------
+      // 方法1
+      // 思路
+      // - 只交换一次，两个字符串就能相等，说明两个字符串上只有两个位置上的字符不相等，其他位置的字符都应该相等
+      // - 不相等的两个位置，一定要 ( 交叉相等 )，就能交换后两个串相等
+      var areAlmostEqual = function (s1, s2) {
+        // 1
+        if (s1 === s2) return true;
+
+        const cache = [];
+
+        // 2
+        // 收集同一位置字符不相等的位置
+        for (let i = 0; i < s1.length; i++) {
+          if (s1[i] !== s2[i]) cache.push(i);
+        }
+
+        // 3
+        // cache.length 不为2
+        // 只能是两个位置的字符不相等，不然一次交换后两个串不可能相等
+        if (cache.length !== 2) return false;
+
+        // 4
+        // cache.length 等于2，再做以下判断
+        // 如果两个串的交叉位置字符相等的话，就返回true
+        //【 交叉相等 】
+        return s1[cache[0]] === s2[cache[1]] && s1[cache[1]] === s2[cache[0]];
+      };
+
+      // ------------------------------------------------------------------------------------------
+      // ------------------------------------------------------------------------------------------
+      // ------------------------------------------------------------------------------------------
+      // 方法2
+      // - 利用数组
+      var areAlmostEqual = function (s1, s2) {
+        if (s1 === s2) return true; // 相等直接返回
+
+        s1 = s1.split(""); // 转数组
+        s2 = s2.split("");
+
+        // 穷举 - 找出所有可以交换的情况
+        for (let i = 0; i < s1.length; i++) {
+          for (let j = i + 1; j < s1.length; j++) {
+            [s1[i], s1[j]] = [s1[j], s1[i]]; //
+            if (s1.join("") === s2.join("")) return true;
+            else [s1[i], s1[j]] = [s1[j], s1[i]]; // 不等，还原数组，继续交换比较
+          }
+        }
+
+        return false;
+      };
+    </script>
+  </body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>三数之和 three sum.</title>
+  </head>
+  <body>
+    <script>
+      // 15. 三数之和 three sum.
+
+      // 题目
+      // 给你一个整数数组 nums ，判断是否存在三元组 [nums[i], nums[j], nums[k]] 满足 i != j、i != k 且 j != k ，同时还满足 nums[i] + nums[j] + nums[k] == 0 。请
+      // 你返回所有和为 0 且不重复的三元组。
+      // 注意：答案中不可以包含重复的三元组。
+
+      // leetcode
+      // https://leetcode.cn/problems/3sum/
+
+      // Tutorial video.
+      // https://www.bilibili.com/video/BV15J41167kn/?spm_id_from=333.999.0.0&vd_source=a8374ac38c77856369542fc154a1e043
+
+      // 思路
+      // - 双指针
+      // 1. 排序
+      // 2. i left right 三个指针
+      // 3. 去重 i left right
+      // 4. arr[i] + arr[left] + arr[right] > 0，大了，因为是升序有序数组，左移右边界right--，逐渐去接近0
+      // 5. arr[i] + arr[left] + arr[right] < 0，小了，因为是升序有序数组，右移左边边界left--，逐渐去接近0
+      // 6. arr[i] + arr[left] + arr[right] === 0，收集结果
+
+      // English
+      // -
+      // vector 矢量  向量
+      // -
+      // recursion 递归 n
+      // recursive 递归的 adj
+      // recursively 递归地 adv
+      // 【 recursively traverse. 递归地遍历 v 】
+      // -
+      // traverse 遍历 v
+      // 【 recursively traverse. 递归地遍历 v 】g
+
+      /**
+       * @param {number[]} nums
+       * @return {number[][]}
+       */
+      var threeSum = function (nums) {
+        const result = [];
+
+        // 1
+        // 排序 - 升序 - sort改变原数组
+        // 问题: 为什么要排序？
+        // 回答: 因为是求的三数的和，和顺序没有关系，题目中说了: 输出的顺序和三元组的顺序并不重要。
+        nums.sort((a, b) => a - b);
+
+        const len = nums.length;
+        for (let i = 0; i < len - 2; i++) {
+          // 2
+          // 问题: 为什么是 i < nums.length - 2
+          // 回答: 因为是 i left right 三个指针，占据三位，并且保证 i < left < right -------- 如何条件不满足 nums.length - 2, right 就越界了
+
+          // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>【 1111. 去重 】 - 也就是说 i left right 都需要做去重判断
+          if (i === 0 || nums[i] !== nums[i - 1]) {
+            // 3
+            // 问题: 为什么要做上面这个if判断
+            // 回答: 因为要对 i 去重
+            // 详细:
+            // AA. 当 i === 0 时，是初始情况，直接进入逻辑
+            // BB. 当 nums[i] !== nums[i - 1]，说明 i 和 i-1 位置的元素重复，跳过所有逻辑，即 i++
+
+            // 4
+            // 问题: 为什么是 nums[i] !== nums[i-1]，而不是 nums[i] !== nums[i+1]
+            // 回答: 因为 i 是从前往后遍历的
+            // 回答: 因为 nums[i] !== nums[i+1] 是我们的结果集中去重，不对的
+
+            // 5
+            // i === 0 是因为 nums[i] !== nums[i-1] 时，i - 1 越界了
+            let left = i + 1;
+            let right = len - 1;
+
+            // 这里不能娶到相等，left <= right 时，left和right指向了同一个位置，而我们是要三个位置的成员
+            while (left < right) {
+              if (nums[i] + nums[left] + nums[right] === 0) {
+                // aa. 三数之和 === 0 ----------------------------------------------------- 收集结果，并移动指针，并做去重判断
+                result.push([nums[i], nums[left], nums[right]]);
+                left++;
+                right--;
+
+                // 两个while做去重 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 【 2222. 去重 】- 也就是说 i left right 都需要做去重判断
+                while (left < right && nums[left] === nums[left - 1]) left++;
+                while (left < right && nums[right] === nums[right + 1]) right--;
+              }
+              // bb. 三数之和 > 0，说明大了，而数组是升序有序数组，则right--去接近0
+              else if (nums[i] + nums[left] + nums[right] > 0) right--;
+              // cc. 三数之和 < 0，
+              else left++;
+            }
+          }
+        }
+
+        return result;
+      };
+    </script>
+  </body>
+</html>

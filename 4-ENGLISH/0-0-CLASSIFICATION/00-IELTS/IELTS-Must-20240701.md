@@ -1,0 +1,1335 @@
+###### Must 2024-07-01
+
+- 1
+- `【 product 产品 n 】` // --------- 【 product requirement. 产品需求 】// 【 product quality. 产品质量 】
+- `【 produce 生产 制造 v 】` // ----- 【 produce product. 生产产品 】
+- `【 reproduce 繁殖 v 】` // ------- 【 reproduce / reproduction 】
+- > 【 product requirement. 产品需求 】
+- > 【 product quality. 产品质量 】// 【 quality 质量 】 【 quantity 数量 】 【 quantifier 量词 】
+-
+- `【 reproduction 繁殖 n 】` // ---- 【 sexual reproduction. 有性繁殖 】 // 【 asexual reproduction. 无性繁殖 】
+- `【 production 生产 制造 n 】` // -- 【 mass production. 批量生产 】
+- _【 mass production. 批量生产 】_ // 名词短语
+- > 【 sexual reproduction. 有性繁殖 】
+- > 【 asexual reproduction. 无性繁殖 】
+- // TIPS: Pay attention to the different pronunciation between 'produce' and 'product'.
+- // TIPS: Pay attention to the pronunciation of the word 'product'.
+- // -- _【 quantifier 量词 】_
+- // -- _【 quantity 数量 】_
+- // -- _【 quality 质量 】_
+- // -- _【 The 【 quantifier 】 is used to 【 modify 】 the 【 quantity 】 of the sentence. 量词用于修饰句子的数量 】_
+-
+- `【 produce 生产 制造 v 】` // --【 production 生产 制造 n 】
+- `【 reproduce 繁殖 v 】` // ----【 reproduction 繁殖 n 】
+- > 【 sex 性 n 性交 v 】
+- > 【 sexual 性的 adj 】
+- > 【 sexual reproduction. 有性繁殖 】
+- > 【 asexual reproduction. 无性繁殖 】
+- 【 sexual asexual 】
+- 【 synchronous synchronous 】
+-
+- `【 descendant 子孙 后代 】` // --- abundant / descendant / attendant // assistant // assist
+- `【 ancestor 祖先 】`
+-
+- `【 descendant 子孙 后代 】`
+- `【 attendant 服务员 】` // ------- attendant / assistant / secretary
+- `【 abundant 丰富的 大量的 adj 】`
+- `【 assistant 助手 助理 】` // 1. secretary assistant attendant // 2. assist assistant
+- `【 secretary 秘书 】` // secret secretary
+- > 【 steward 乘务员 】
+- > 【 stewardess 空姐 】
+- > > > 【 actor / actress 】
+- > > > 【 waiter / waitress 】
+- > > > 【 prince / princess 】
+- > > > 【 headmaster / headmistress 】
+- > > > 【 steward / stewardess 】
+-
+- // EE: [product] something that 【 is made to 】 be sold.
+- // EE: [produce] to make something or bring something into 【 existence 】.
+- // EE: [descendant] a person who 【 is related to 】 you and who lives after you. such as your child or 【 grandchild 】.
+- // EE: [ancestor] a person 【 related to 】 you who lived 【 a long time ago 】.
+- // -- existence 存在 生存 n
+- // -- exist 存在 生存 v
+- // -- 【 be made to do sth. 被制成去做某事 】
+- // -- 【 be related to. 和...有关 】
+- // -- 【 a long time ago. 很久以前 】
+-
+- [AA.]
+- `【 produce 生产 制造 v 】`
+- `【 reproduce 繁殖 v 】`
+- `【 reproduction 繁殖 n 】`
+- `【 descendant 子孙 后代 n 】`
+- **【 Plants 【 produce 】 seeds 【 to 】 【 reproduce 】 their 【 descendants 】. 植物产生种子用来繁殖后代 】**
+- **【 High temperature can 【 inhibit 】 the 【 reproduction 】 of 【 bacteria 】. 高温可以抑制细菌的繁殖 】**
+- // -- 【 inhibit 抑制 】
+- // -- 【 bacteria 细菌 】
+- // -- 【 fungus 真菌 】
+- // -- 【 virus 病毒 】
+-
+- [BB.]
+- `【 product requirement. 产品需求】`
+- `【 product quality. 产品质量 】`
+- `【 mass production. 批量生产 】`
+- **【 The new 【 product requirement 】 is how to improve the 【 product quality 】 of the 【 product 】 【 in the process of 】 【 mass production 】. 新的产品需求是如何在批量生产中提高该产品的产品质量 】**
+- // -- 【 in the process of. 在...过程中 】
+-
+- [CC.]
+- `【 abundant 丰富的 大量的 adj 】` // abundant / attendant / descendant / assistant / assist
+- `【 mineral resource. 矿产资源 】` // natural./rare./forest./marine./mineral./various. resources.
+- `【 descendant 子孙 后代 】`
+- `【 attendant 服务员 】`
+- **【 The 【 Abundant 】【 mineral resources 】 can 【 ensure 】 our 【 descendants 】 don't work 【 as 】 【 attendants 】. 丰富的矿产资源能够保证我们的子孙后代不从事服务员的工作 】**
+- // -- 【 mine 我的 / 矿 n / 开采 v 】
+- // -- 【 mineral 矿物的 adj 】
+- // -- `【 mineral resources. 矿产资源 】`
+- // -- `【 enable 能够使 使有机会 】`
+- // -- natural resource.
+- // -- marine resource.
+- // -- forest resource.
+- // -- rare resource.
+- // -- mineral resource. 矿产资源
+-
+- [DD.]
+- `【 ancestor 祖先 n 】`
+- `【 descendant 后代 n 】`
+- 【 descendant of. ...的后代 】
+- **【 We are all the 【 descendants 】 of our 【 ancestors 】. 我们都是祖先的后代 】**
+- // -- 【 descendant of. ...的后代 】
+- // -- 【 pirate 海盗 n 】
+- // -- My 【 ancestor 】 was a 【 pirate 】, and I'm his 【 descendant 】.
+-
+- [EE.]
+- `【 product 产品 】`
+- `【 product requirement. 产品需求 】`
+- `【 product quality. 产品质量 】` // quality 质量 // quantity 数量
+- `【 mass production. 批量生产 n 】`
+- 【 reasonable 合理的 adj 】
+- 【 unreasonable 不合理的 adj 】
+- 【 reason 原因 n 】
+- **【 The new 【 product requirement 】 is how to improve the 【 product quality 】 of the 【 product 】 【 in the process of 】 【 mass production 】. 新的产品需求是如何在批量生产中提高产品质量 】**
+- **【 Do you think whether the 【 product requirement 】 is 【 reasonable 】? 你觉得这个产品需求是否合理？ 】**
+- // -- reasonable 合理的 adj
+- // -- reason 原因 n
+-
+- [FF.]
+- `【 sexual reproduction. 有性繁殖 】`
+- `【 asexual reproduction. 无性繁殖 】`
+- **【 Some plants have both the 【 abilities 】 of 【 sexual reproduction 】 and 【 asexual reproduction 】 【 at the same time 】. 有些植物同时具有有性繁殖和无性繁殖两种繁殖能力 】**
+- // -- 【 at the same time. 同时 】
+-
+- [GG.]
+- `【 quantifier 量词 】`
+- `【 quantity 数量 】`
+- > quality 质量
+- **【 The 【 quantifier 】 【 is used to 】 【 modify 】 the 【 quantity 】of the sentence. 量词是用来修饰句子中的数量 】**
+- // -- 【 modify 修饰 v 】
+
+###### Must 2024-07-02
+
+- 2
+- `【 supplement 补充 v n 】` // ------------【 supplement energy. 补充能量 】 // 【 supplement nutrition. 补充营养 】
+- `【 supply 供应 供给 补给品 日常用品 v 】` // 【 school supplies. 学习用品 】 // 【 urgent supplies. = emergency supplies. 】
+- `【 provide 提供 】` // ------------------ 【 supply 供应 供给 / provide 提供 】
+- > 【 supplement energy. 补充能量 】
+- > 【 supplement nutrition. 补充营养 】 // nutrition // malnutrition 营养不良
+- // nutrition 营养 n
+- // malnutrition 营养不良 n
+- > 【 school supplies. 学习用品 】
+- > 【 urgent supplies. 紧急物资 = emergency supplies. 】
+- // TIPS: Pay attention to the pronunciation between 'supplement' and 'supply'.
+-
+- `【 supplier 供应商 供应者 n 】`
+- `【 supply 供应vn 供给vn 日常用品n 】` // ----【 supply 供应 供给 v 】 // 【 provide 提供 v 】
+- `【 provide 提供 v 】`
+- > 【 provide sb with sth. 给某人提供某物 】
+- // product produce reproduce reproduction sexual asexual
+-
+- `【 supplier 供应商 】`
+- `【 dealer 经销商 】` // ------------------- 【 deal with. 处理 】
+- `【 seller 销售者 】`
+-
+- `【 abundant 丰富的 大量的 adj 】` // ------- abundant descendant attendant assistant
+- `【 be rich in. 富含... 】`
+-
+- `【 sufficient 充足的 足够的 adj 】` // ----- 【 sufficient time. 】 【 sufficient space. 】
+- `【 insufficient 不足的 adj 】` // --------- 【 insufficient 】 // in + sufficient
+- > 【 sufficient time. 充足的时间 】
+- > 【 sufficient space. 足够的空间 】
+- > 【 self-sufficient. 子给自足的 adj 】`
+-
+- `【 nutrition 营养 n 】`
+- `【 malnutrition 营养不良 n 】`
+- `【 supplement nutrition. 补充营养 】`
+-
+- // EE:[supplement] something that is added to 【 something else 】 in order to improve it or complete it.
+- // EE:[supply] to provide something that is wanted or needed. often in large quantities and 【 over a long period of time 】.
+- // -- _【 something else. 其他事物 别的东西 】_
+- // -- _【 over a long period of time. 在很长一段时间内 】_
+-
+- [AA.]
+- `【 provide 提供 】` // provide sb with sth. 给某人提供某物
+- `【 supply 供应v 供给v 日常用品n 】` // school supplies. // urgent supplies. = emergency supplies.
+- `【 sufficient 充足的 足够的 adj 】` // sufficient time. // sufficient space.
+- _【 provide sb with sth. 给某人提供某物 】_
+- **【 The company 【 provides 】 【 sufficient 】 milk 【 supply 】. 公司提供充足的牛奶供应 】**
+- **【 We have 【 sufficient time 】 to 【 grind 】 the 【 beans 】 into the 【 powder 】. 我们有足够的时间把豆子磨成粉 】**
+- **【 There is 【 sufficient time 】 for us to 【 dissolve 】 the 【 tablet 】 into the water. 有足够的时间把药片溶解在水里 】**
+- // -- 【 sufficient 充足的 足够的 adj 】
+- // -- 【 sufficient time. 足够的时间 】
+- // -- 【 sufficient space. 足够的空间 】
+- // -- 【 dissolve 溶解 v 】
+- // -- 【 tablet 药片 平板 匾 】 // tablet pill capsule
+-
+- [BB.]
+- `【 supplement 补充 v n 】` // 【 supplement energy. 补充能量 】 // 【 supplement nutrition. 补充营养 】
+- `【 supply 供应 供给 日常用品 n 】` // 【 school supplies. 学习用品 】 // 【 urgent supplies. = emergency supplies. 紧急物资 】
+- `【 abundant 丰富的 大量的 adj 】` // 【 abundant protein. 丰富的蛋白质 】
+- _【 provide sb with sth. 给某人提供某物 】_
+- **【 Both the 【 egg white 】 and the 【 egg yolk 】 of eggs 【 are rich in 】 【 abundant 】 【 protein 】. 】**
+- **【 These 【 meats 】 【 provide 】 us 【 with 】 【 abundant 】 【 protein 】 to 【 supplement energy 】. 肉可以提供丰富的蛋白质来补充我们的能量 】**
+- **【 We should 【 supplement nutrition 】 and 【 supplement energy 】 【 at the same time 】. 我们需要同时补充营养和能量 】**
+- // -- protein 蛋白质
+- // -- 【 countable noun. 可数名词 】
+- // -- 【 uncountable noun. 不可数名词 】
+- // TIPS: The 'protein' is a 【 uncountable noun 】.
+- // -- meat 肉
+- // -- egg white.
+- // -- egg yolk.
+- // -- 【 provide sb with sth. 给某人提供某物 】
+- // -- 【 abundant 丰富的 大量的 adj 】
+- // -- 【 sufficient time. 充足的时间 】
+- // -- 【 sufficient space. 足够的空间 】
+- // -- `【 supplement nutrition. 补充营养 】`
+- // -- `【 supplement energy. 补充能量 】`
+- // -- _【 at the same time. 同时 】_
+-
+- [CC.]
+- `【 sufficient 充足的 足够的 adj 】`
+- 【 sufficient time. 充足的时间 】
+- 【 sufficient space. 足够的空间 】
+- **【 We have 【 sufficient time 】 to 【 grind 】 the 【 beans 】 into the 【 powder 】. 我们有足够的时间把豆子磨成粉 】**
+- **【 There is 【 sufficient time 】 for us to 【 dissolve 】 the 【 tablet 】 into the water. 足够的时间把药片溶解在水里 】**
+- // --【 grind into. 磨成... 】
+- // -- dissolve 溶解
+- // -- powder 面粉
+- // -- tablet 药片
+-
+- [DD.]
+- `【 supplier 供应商 供应者 n 】`
+- `【 supply 供应v 提供v 日常用品n 】`
+- `【 provide 提供 v 】`
+- **【 This 【 supplier 】 【 provides 】 the 【 supply 】 of the 【 supplies 】. 该供应商提供日常用品的供给 】**
+- // -- supplier
+- // -- dealer
+- // -- seller
+-
+- [EE.]
+- `【 be rich in. 富含... 】`
+- **【 Both the 【 egg white 】 and the 【 egg yolk 】 of eggs 【 are rich in 】 【 abundant 】 【 protein 】. 鸡蛋的蛋白和蛋黄都富含大量的蛋白质 】**
+- // -- egg white.
+- // -- egg yolk.
+- // -- protein is uncountable noun.
+- // -- 【 protein 是不可数名词 】
+- // -- 【 abundant 丰富的 大量的 adj 】
+- // -- 【 vitamin 是可数名词 】
+-
+- [FF.]
+- `【 sufficient 充足的 足够的 adj 】`
+- `【 insufficient 不充足的 adj 】` // insufficient = in + sufficient.
+- _【 sufficient time. 充足的时间 】_
+- _【 sufficient space. 足够的空间 】_
+- **【 Although we don't have 【 sufficient space 】, we have 【 sufficient time 】. 虽然没有足够的空间，但是有足够的时间 】**
+-
+- [GG.]
+- `【 supplier 供应商 n 】`
+- `【 dealer 经销商 n 】`
+- `【 seller 销售人员 n】`
+- **【 The 【 supplier 】 【 provides 】 goods, and the 【 dealer 】 sells goods. 供应商提供商品，经销售销售商品 】**
+- // -- 【 provide 提供 】
+
+###### Must 2024-07-04
+
+- 1
+- `【 fear 害怕 v n 】` // ------- 【 be afraid of. 害怕... 】 // be afraid of 用的比较多，而 fear 用的少
+- `【 fare 票价 n 】` // ---------- fee 费用 // fare 票价
+- `【 tear 流泪v 泪水n 撕裂v 】` // 【 in tears. 流泪 】
+- `【 swear 发誓 】`
+- > 【 in tears. 流着泪 含着泪 】
+- > 【 tear up. 撕毁 撕碎 】
+-
+- `【 tire 疲劳v 轮胎n 】` // --- 【 spare tire. 备胎 】 // 【 flat tire. 爆胎 】
+- `【 retire 退休 v 】` // ------ retire retirement
+- `【 entire 整个的 adj 】` // -- entire whole
+-
+- `【 tier 层 阶层 】` // ------- 【 first-tier city. 】 // developed city. // developing city. // coastal city.
+- `【 tear 撕裂v 眼泪n 】`
+- `【 tire 疲劳v 轮胎n 】`
+-
+- `【 be mad at sb. 生某人的气 】` // 【 be mad at sb. = be angry with sb. 生某人气 】
+- `【 be angry with sb. 生某人的气 】`
+- `【 scold 责骂 】`
+- `【 cold 冷的adj 感冒n 】` // scold cold
+-
+-
+- [AA.]
+- `【 swear 发誓 v 】`
+- `【 fear 害怕 v n 】`
+- `【 tear 流泪v 泪水n 撕碎v 】`
+- **【 I 【 swear 】 that I will not 【 tear 】 【 even though 】 I 【 fear 】. 我发誓就算害怕也不会流泪 】**
+- **【 I'm 【 afraid 】 my teacher will 【 scold 】 me. 我害怕老师会骂我 】**
+- **【 I 【 swear 】 I will not 【 curse 】 others 】**
+- // -- 【 scold 责骂 】
+- // -- 【 be mad at. 生气 】
+- // -- 【 swear 发誓 咒骂 v 】
+- // -- 【 curse 咒骂 v 】
+-
+- [BB.]
+- `【 tier 层 阶层 】`
+- `【 first-tier city. 一线城市 】`
+- > 【 coastal city. 沿海城市 】
+- > 【 developed city. 发达城市 】
+- > 【 developing city. 发展中城市 】
+- > 【 first-tier city. 一线城市 】
+- **【 【 coastal cities 】 are usually 【 developed cities 】 and【 first-tier cities 】. 沿海城市一般都是发达城市，也是一线城市 】**
+- // city -> cities
+-
+- [CC.]
+- `【 tire 疲劳v 轮胎n 】`
+- `【 entire 真个的 adj 】`
+- `【 tear 撕碎v 眼泪n 】` // tear -> tore
+- > 【 tear up. 撕毁 撕碎 】
+- > 【 in tears. 含着泪 流着泪 】
+- **【 He was 【 in tears 】 and prepared to 【 tear up 】 the 【 contract 】. 他含着泪，准备撕毁这个合同 】**
+- **【 She 【 tore up 】 the 【 wedding photo 】 【 in tears 】. 她流着眼泪撕碎了结婚照 】** // 【 in tears. 流着泪 含着泪 】
+- 1. **【 The 【 typhoon 】 【 tears 】 the 【 entire 】 【 tire 】. 台风撕裂了整个轮胎 】**
+- 2. **【 The 【 entire 】 【 tire 】 was 【 torn 】. 整个轮胎都撕裂了 】**
+- // -- tear -> torn
+- // -- 【 weeding photo. 结婚照 】
+- // -- 【 marriage certificate. 结婚证 】
+- // -- 【 divorce certificate. 离婚证 】
+-
+- [DD.]
+- `【 first-tier city. 一线城市 】`
+- `【 tier 层 层级 】`
+- `【 retire 退休 v 】`
+- `【 retirement 退休 n 】` // retire v // retirement n
+- **【 After 【 retirement 】, he plans to travel to 【 first-tier city 】. 退休之后，他准备去一线城市旅游 】**
+- **【 【 coastal cities 】 are usually 【 developed cities 】 and【 first-tier cities 】. 沿海城市一般都是发达城市，也是一线城市 】**
+-
+- [EE.]
+- `【 tear up. 撕毁 撕碎 】`
+- `【 in tears. 含着泪 留着泪 】`
+- tear -> tore
+- **【 He was 【 in tears 】 and prepared to 【 tear up 】 the 【 contract 】. 他含着泪，准备撕毁这个合同 】**
+-
+- [FF.]
+- `【 cold 感冒n 寒冷的adj 】`
+- `【 scold 责骂 v 】`
+- `【 be mad at. = be angry with. 生气 】`
+- **【 After I 【 had a code 】, she was only 【 mad 】 at me and didn't 【 scold 】 me. 我感冒后，她只是生气并没有责骂我 】**
+- .MT **【 I 【 regretted 】 that I didn't 【 apologize 】 to her when she 【 was mad at 】 me. 我很后悔在她生气的时候没有给她道歉 】**
+- // -- 【 have a cold. 感冒 】
+
+###### Must 2024-07-05
+
+- 1
+- `【 nutrition 营养 】` // ----------【 supplement nutrition. 补充营养 】 // 【 supplement energy. 补充能量 】
+- `【 malnutrition 营养不良 】`
+-
+- `【 protein 蛋白质 n 】` // ------- 【 high protein. 高蛋白 】
+- `【 vitamin 维生素 n 】` // ------- 【 vitamin C. 维生素 C 】
+- `【 fat 脂肪n 肥胖的adj 】` // ----- `【 burn fat. 燃烧脂肪 】` // `【 bomb explode. 炸弹爆炸 】` // 【 burn 燃烧 v 】
+- `【 fiber 纤维 】` // ---------- // 【 plant fiber. 植物纤维 】
+- `【 mineral 矿物质n 矿物的adj 】` // 【 mineral water. 矿泉水 】 // 【 mineral resource. 矿物资源 】
+- > 【 mineral water. 矿泉水 】
+- > 【 mineral resource. 矿物资源 】
+- // 【 various resources. 各种资源 】
+- // 【 various aspects. 各种方面 】
+- // 【 marine/natural/forest/rare/various/mineral resource 】
+- // TIPS: Pay attention to the pronunciation of the word 'fat'.
+- // _【 born 出生 v 】_ // ----- _【 be born in. 出生于 】_
+- // _【 burn 燃烧 v 】_ //------ _【 burn fat. 燃烧脂肪 】_
+- // _【 explode 爆炸 v 】_ // -- _【 bomb explode. 炸弹爆炸 】_
+- // _【 explosion 爆炸 n 】_
+-
+- `【 fertilizer 肥料 化肥 】` // ----【 chemical fertilizer. 化肥 】
+- `【 chemical fertilizer 化肥 】`
+- `【 calcium 钙 n 】` // ---------- 【 calcium tablet. 钙片 】 // 【 tablet 药片 】 【 pill 药丸 】 【 capsule 胶囊 】
+- `【 iron 铁 n 】`
+- // 【 chemical 化学的 adj 】
+- // TIPS: Pay attention to the pronunciation of the word 'chemical'
+-
+- `【 cell 细胞 】`
+- `【 tissue 组织 】` // tissue issue
+- `【 organ 器官 】`
+-
+- `【 absorb 吸收 】`
+- `【 discharge = release 释放 v 】`
+-
+- `【 various 各种 各种各样的 adj 】`
+- `【 various resources. 各种资源 】`
+- `【 various aspects. 各个方面 】`
+- > 【 various resources. 各种资源 】 // various/natural/marine/forest/rare/mineral resources.
+- > 【 various aspects. 各个方面 】
+-
+- [AA.]
+- `【 mineral 矿物质 】` // ------【 mineral water. 矿泉水 】 【 mineral resource. 矿产资源 】
+- `【 fertilizer 肥料 化肥 】` // 【 chemical fertilizer 化肥 】
+- `【 chemical fertilizer. 化肥 】`
+- **【 【 Minerals 】 are not 【 chemical fertilizers 】. 矿物质不是化肥 】**
+-
+- [BB.]
+- `【 vitamin 维生素 】` // 【 vitamin C. 维生素 C 】
+- `【 protein 蛋白质 】` // 【 high protein. 高蛋白 】
+- `【 malnutrition 营养不良 】` // nutrition malnutrition
+- **【 【 Lack of 】 【 vitamins 】 can 【 affect/impact/influence 】 【 organs 】 to 【 absorb 】 the 【 protein 】, leading to 【 malnutrition 】. 缺乏维生素会影响器官吸收蛋白质，从而引起营养不良 】**
+- // -- lead to. 导致
+- // -- led to. 导致 ( 过去式 )
+- // ---- affect 影响
+- // ---- impact 影响
+- // ---- influence 影响
+-
+- [CC.]
+- `【 mineral water. 矿泉水 】`
+- `【 mineral resource. 矿产资源 】`
+- `【 various resources. 各种资源 】`
+- `【 various aspects. 各个方面 】`
+- **【 【 Mineral water 】 【 is rich in 】 【 various 】 【 minerals 】 矿泉水富含多种矿物质 】**
+-
+- [DD.]
+- `【 chemical fertilizer 化肥 】`
+- `【 calcium 钙 】` // 【 calcium tablet. 钙片 】
+- `【 iron 铁 】`
+- **【 【 Chemical fertilizers 】 contain 【 calcium 】 and 【 iron 】. 化肥中含有钙和铁 】**
+
+###### Must 2024-07-06
+
+- 1
+- `【 identity 身份 n 】` // 【 identity card. 身份证 】
+- `【 identify 识别 v 】` // 【 identify the identity. 识别身份 】
+- > 【 identify the identity. 识别身份 】
+- > 【 identity card. 身份证 】
+-
+- `【 verify 验证 v 】` // 【 verification code. 验证码 】
+- `【 validate 验证 v 】`
+- > 【 verification code. 验证码 】
+- > identify identification
+- > verify verification
+-
+- **【 identify 识别 】** // 【 identify the identity. 识别身份 】
+- **【 verify 验证 】** // 【 verification code. 验证码 】
+- **【 simplify 简化 v 】** // 【 simplify the process. 简化流程 】
+- **【 specify 指定 明确说明 】** // 【 specific symptom. 具体症状 】 // specific specify
+-
+- `【 recognize 识别 v 】` -------- 通过熟悉度认出
+- `【 identify 识别 v 】` --------- 通过鉴定认出 --- identify the identity
+- `【 identification 识别 n 】`
+- > identify identification
+- > verify verification
+-
+- `【 fingerprint 指纹 】`
+- `【 verification code. 验证码 】`
+-
+- [AA.]
+- `【 identify 识别 v 】`
+- `【 identity 身份 n 】`
+- **【 This system can 【 automatically 】 【 identify 】 the 【 identity 】. 这个系统可以自动识别身份 】**
+- // -- 【 automatic 自动的 adj 】
+- // -- 【 automatically 自动地 adv 】
+-
+- [BB.]
+- `【 verify 验证 v 】`
+- `【 verification code. 验证码 】`
+- `【 identity card. 身份证 】`
+- **【 Please enter the 【 verification code 】 to 【 verify 】 【 whether 】 the 【 identity card 】 number of the 【 customer 】 is correct. 请输入验证码来验证顾客身份证号码是否正确 】**
+- **【 Please 【 verify 】 that there is 【 sufficient 】 memory available before loading the program. 加载程序之前，请验证是否有足够的可用内存 】**
+- // -- 【 sufficient 足够的 充足的 adj 】
+- // -- 【 sufficient time. 充足的时间 】
+- // -- 【 sufficient space. 足够的空间 】
+- // -- memorize 记住 v
+- // -- memory 记忆 回忆 记忆力 n
+-
+-
+-
+-
+-
+-
+- 2
+- `【 look for. 寻找 】`
+- `【 whereabouts 下落 去向 】`
+-
+- `【 ask sb to do sth. 要求某人做某事 】`
+- `【 look forward to sb doing sth. 期待某人做某事 】`
+- `【 look forward to doing. 期待做某事 】`
+- -
+- `【 airline 航空公司 】`
+- `【 airport 机场 】`
+- `【 airplane 飞机 】`
+- `【 runway 跑道 】`
+- > 【 take off. 起飞 】
+- > 【 land 降落 v 陆地 n 】
+- > 【 flight 航班 】
+- > 【 timetable 时间表 时刻表 】
+- > 【 arrival time. 到达时间 】
+- > 【 departure time. 离开时间 】
+-
+- **【 People 【 look forward to 】 the government 【 asking 】 the 【 airline 】 to 【 look for 】 the 【 whereabouts 】 of the missing people. 人们期待政府去要求航空公司去寻找失事人员的下落 】**
+- // -- ask sb to do sth. 要求某人做某事
+- // -- look forward to sb doing sth. 期待某人做某事
+- // -- whereabouts 下落 去向
+
+###### Must 2024-07-07
+
+- 1
+- `【 labor 劳动 工人 n 】` // 【 labor day. 劳动节 】 【 labor law. 劳动法 】 【 labor contract. 劳动合同 】 【 labor worker. 】
+- `【 laboratory 实验室 】`
+- > 【 labor day. 劳动节 】
+- > 【 labor law. 劳动法 】`
+- > 【 labor worker. 劳务工 】
+- > 【 labor contract. 劳动合同 】
+- // 【 contract contact contrast 】
+- // 【 law lawyer layer 】
+- // TIPS: Pay attention to the pronunciation between the 'labor' and 'laboratory'.
+-
+- `【 laboratory 实验室 】`
+- `【 dormitory 宿舍 】`
+- `【 factory 工厂 】`
+- `【 repository 仓库 】` // -----【 code repository. 代码仓库 】
+- `【 directory 目录 】` // ------【 director 导演 董事 】 // 【 direct 直接的 】 // 【 personnel director. 人事总监 】
+- `【 mandatory 强制的 adj 】` // 【 mandatory overtime. 强制加班 】
+- `【 history 历史 】`
+- `【 victory 胜利 】`
+- // vocabulary 词汇
+-
+- `【 directory 目录 】`
+- `【 director 导演 董事 主任 】`
+- `【 direct 直接的 adj 】`
+- `【 directly 直接的 adv 】`
+- > 【 sales director. 销售总监 】
+- > 【 personnel director. 人事总监 】
+-
+- [AA.]
+- `【 laboratory 实验室 】`
+- `【 dormitory 学生宿舍 】`
+- `【 repository 仓库 】`
+- `【 factory 工厂 】`
+- **【 The 【 laboratory 】 in our 【 dormitory 】 was 【 converted 】 from the 【 repository 】 of the 【 factory 】 by the 【 labors 】. 我们宿舍的实验室是工人用工厂的仓库改装的 】**
+- // -- 【 be converted from. 由...改装而来 】
+-
+- [BB.]
+- `【 history 历史 】`
+- `【 victory 胜利 】`
+- **【 The 【 victory 】 of the 【 labors 】 has been written into the 【 history 】. 劳动人民的胜利已经写进历史 】**
+- // write -> written
+-
+- [CC.]
+- `【 directory 目录 】` // directory / director 导演董事主任
+- `【 repository 仓库 】`
+- _【 code repository. 代码仓库 】_
+- **【 This code 【 repository 】 contains many 【 directories 】. 这个代码仓库包含了很多目录 】**
+-
+- [DD.]
+- > 【 comply with. 遵守 】
+- `【 director 导演 董事 主管 】`
+- `【 directly 直接地 adv 】` // direct
+- `【 labor law. 劳动法 】`
+- `【 labor worker. 劳务工 】`
+- _【 comply with. 遵守 】_
+- **【 The 【 director 】 【 directly 】 【 announced 】 that all the 【 labor workers 】 must 【 comply with 】【 labor laws 】. 导演直接宣布所有劳动工人必须遵守劳动法 】**
+- // -- 【 announce 宣布 宣告 】
+- // -- 【 declare 声明 宣布 】
+- // ---- `【 comply 遵守 v 】`
+- // ---- `【 comply with. 遵守 】`
+- // ---- We must 【 comply with 】 the company 【 regulations 】. 我们必须遵守公司规定
+- —
+-
+-
+-
+-
+- 2
+- `【 advanced 先进的 adj 】` // 【 advanced technology. 先进技术 】
+- `【 advantage 优势 优点 n 】`
+- `【 disadvantage 劣势 】` // advantage 优势 // disadvantage 劣势
+- > 【 in advance. 提前 】
+- **【 our 【 advantage 】 is that we have the 【 advanced 】 technology. 我们的优势是具有先进的技术 】**
+- **【 Both frameworks have their own 【 advantages 】 and 【 disadvantages 】. 这两种框架都有自己的【优点】和【缺点】 】**
+
+###### Must 2024-07-10
+
+- 1
+- `【 optimize 优化 v 】` // 【 optimize performance. 优化性能 】// ---- optimize(v) / optimized(adj) / optimization(n)
+- `【 customize 定制 v 】` //【 customize development. 定制开发 】// --- customize(v) / customized(adj)
+- `【 minimize 减少 最小化 v 】`
+-
+- `【 custom 习俗 风俗 n 】`
+- `【 customer 顾客 n 】`
+- `【 customize 定制 v 】` // 【 customize development. 定制开发 】
+- `【 customized 定制的 adj / v过去式 】`
+-
+- > 【 optimize performance. 优化性能 】
+- > 【 customize development. 定制开发 】
+- > 【 software development. 软件开发 】
+-
+- [AA.]
+- `【 customize 定制 自定义 v 】`
+- `【 custom 风俗 习惯 习俗 n 】`
+- `【 customer 顾客 n 】`
+- **【 We can 【 customize 】 the different 【 versions 】 of the software 【 according to 】 the 【 custom 】 of our 【 customers 】. 我们可以根据客户的习惯自定义不同版本的软件 】**
+-
+- [BB.]
+- `【 customer 顾客 n 】` // customer custom customize customized
+- `【 customize 定制 v 】` // customized 定制的 adj
+- `【 optimize 优化 v 】` // optimization 优化 n
+- **【 we 【 customized 】 an 【 optimized 】 software for our 【 customers 】. 我们为客户定制一款经过优化的软件 】**
+-
+-
+-
+-
+-
+-
+-
+- 2
+- `【 retail 零售 v 】` // -------- 【 retail price. 零售价 n 】 // -----【 retail store. 零售店 】
+- `【 wholesale 批发 v 】` // ----- 【 wholesale price. 批发价 n 】// ---【 wholesale market. 批发市场 】
+- `【 discount 打折 v 】` // ------ 【 discount store. 折扣店 】 // -----【 discount intensity. 打折力度 】 【 work intensity. 工作强度 】
+- > 【 discount intensity. 打折力度 】
+- > 【 on sale. = discount. 打折 】
+- > 【 tail 尾巴 / retail 打折 】
+- > 【 count / account / accountant / discount / counter 】
+-
+- `【 treat/retreat 】` ---------------------【 treat 对待 治疗 v 】 // ---【 retreat 撤退 v 】
+- `【 tail/retail 】` -----------------------【 tail 尾巴 n 】 // ---------【 retail 零售 v 】】// - 【 retail store. 零售店 】 【 retail price. 零售价 n 】
+- `【 tire/retire 】` -----------------------【 tire 轮胎 n 疲劳 n 】// --- 【 retire 退休 】 // ----【 entire 整个 = whole. 】
+- `【 cover/recover 】` ---------------------【 cover 覆盖 v 】// ---------【 recover 恢复 v 】// -- 【 gradually recover. 逐渐恢复 】 // gradually 逐渐地 adv
+- `【 fund/refund 】` -----------------------【 fund 基金 n 】 // ---------【 refund 退款 v 】 // -- 【 found 创立 建立 v 】 【 fun / fund / refund / found 】
+- `【 produce/reproduce 】` -----------------【 produce 生产 v 】 // ------【 reproduce 繁殖 v 】// -【 sexual reproduction. 有性繁殖 】
+- `【 pair/repair 】` ---------------------- 【 pair 一对 一双 n 】// ------【 repair 修理 修复 v 】
+- `【 port/report 】` -----------------------【 port 港口 端口 n 】 // -----【 report 汇报 报告 n 】
+- `【 form/reform 】` -----------------------【 form 形成 v 表格 v 】 // -- 【 reform 改革 】
+- `【 ward/reward 】` -----------------------【 ward 病房 n 】 // ---------【 reward 奖励 n 】
+- > 【 fun / fund / refund / found 】
+-
+- > 【 supplier 供应商 n 】
+- > 【 dealer 经销商 n 】
+- > 【 seller 销售者 n 】
+-
+- `【 deal 处理 经营 交易 v 】` // - 【 deal with. 处理 】
+- `【 dealer 经销商 n 】` // ------ 【 dealer deal 】
+- `【 retail store. 零售店 n 】`
+- `【 retail price. 零售价 n 】`
+-
+- `【 repository 仓库 】` // repository directory laboratory dormitory factory victory history mandatory
+- `【 warehouse 仓库 】`
+-
+- `【 retail 零售 v 】`
+- `【 tail 尾巴 】`
+- `【 tale 故事 】` // 【 fairy tale. 童话故事 】
+-
+-
+- [AA.]
+- `【 retail 零售 v 】`
+- `【 wholesale 批发 v】`
+- `【 discount 打折 v 】`
+- //【 discount intensity. 打折力度 】
+- //【 discount = on sale. 打折 】
+- **【 The 【 discount intensity 】 for 【 retail 】 and 【 wholesale 】 is different. 零售和批发打折的力度不一样 】**
+-
+- [BB.]
+- `【 dealer 经销商 n 】` // dealer supplier seller
+- `【 retail store. 零售店 】`
+- **【 The 【 goods 】 were not sold through 【 dealers 】 but were sold directly to customers by 【 retail stores 】. 商品没有经过经销商，而是零售店直接卖给消费者 】**
+- **【 The 【 laboratory 】 in our 【 dormitory 】 was 【 converted 】 from the 【 repository 】 of the 【 factory 】 by the 【 labors 】. 我们宿舍的实验室是工人用工厂的仓库改装的 】**
+-
+- [CC.]
+- `【 supplier 供应商 n 】`
+- `【 dealer 经销商 n 】`
+- **【 The 【 supplier 】 【 provides 】 goods, and the 【 dealer 】 sells goods. 供应商提供商品，经销售销售商品 】**
+
+###### Must 2024-07-11
+
+- 1
+- `【 comment 评论 v 】`
+- `【 recommend 推荐 v 】`
+- _【 recommend doing sth. 推荐做某事 】_
+- _【 comment on. 评论 】_
+- **【 Some 【 comments 】 we don't 【 recommend 】 you to see. 有些评论我们不推荐你去看 】**
+- **【 We don't 【 recommend 】 【 maliciously 】 【 commenting 】 【 on 】 others. 我们不推荐恶意评论他人 】**
+
+###### Must 2024-07-15
+
+- 1
+- `【 past tense. 过去时态 过去式  】` // ------------ 【 tense 紧张的 adj / 时态 n 】 【 intense competition. 激励的竞争 】
+- `【 present tense. 现在时态 】` // ---------------- 【 simple present tense. 一般现在时 】 【 present perfect tense. 现在完成时 】 // 【 present / current 】
+- `【 future tense. 将来时态 】`
+- _【 present 目前 n / 礼物 n / 目前的 adv 】_
+- _【 at present. 目前 adv 】_
+- > 【 present tense. 现在时态 】
+- > 【 【 simple 】 present tense. 一般现在时态 】 // -【 simple 简单的 简朴的 n 】 【 sample 样本 样品 n 】
+- > 【 present 【 perfect 】 tense. 现在完成时态 】
+- **【 tense 时态 n / 紧张的 adj 】**// ------------ `【 tense situation. 紧张的局势 n 】` // -------【 present tense. 现在时态 】 【 simple present tense. 】
+- **【 intense 激烈的 adj 】** // ------------------- 【 intense competition. 激烈的竞争 n 】 // ---【 compete V / competitive ADJ / competition N 】
+- _【 what 【 tense 】 is this sentence? 这个句子是什么时态 】_
+- _【 what 【 clause 】 is this sentence? 这个句子是什么从句 】_
+- // TIPS: Pay attention to the pronunciation of the word 'present'. [present-目前-现在-n]
+-
+- `【 present tense. 现在时态 】`
+- `【 【 simple 】 present tense. 一般现在时态 】`
+- `【 present 【 perfect 】 tense. 现在完成时态 】`
+- // 【 动词的 (过去式) : ------- 用在 ( 一般过去时 ) 中 】
+- // 【 动词的 (过去分词): ------ 用在 ( 完成时 和 被动语态 ) 中 】
+- // -- have/have + V 的过去分词
+- // -- be + V 的过去分词
+-
+- `【 passive voice. 被动语态 】` // ---------------- 【 passively accept. 被动接受 v 】
+- `【 active voice. 主动语态  】` // ---------------- 【 actively pursue. 主动追求 v 】 // 【 pursue happiness. 追求幸福 】 // 【 chase dream. 追逐梦想 】
+- > 【 actively pursue. 主动追求 v 】 // ------------ 【 pursue happiness. 追求幸福 】 // -【 chase dream. 追逐梦想 】 【 chase fugitive. 追扑逃犯 】
+- > 【 passively accept. 被动接受 v 】
+-
+- **【 clause 从句 子句 n 】**
+- `【 object clause. 宾语从句 】` // -----------------【 clause 子句 从句 分句 n 】
+- `【 attributive clause. 定语从句 】`
+- `【 adverbial clause. 状语从句 】`
+- > 【 what 【 clause 】 is this sentence? 这个句子是什么从句 】
+- > 【 what 【 tense 】 is this sentence? 这个句子是什么时态 】
+-
+- `【 interrogative sentence. 疑问句 】`
+- `【 declarative sentence. 陈述句 】`
+- _【 interrogative 疑问的 adj 】_
+- _【 declarative 陈述的 adj 】_
+-
+- `【 conjunction 连词 连接词 n 】` --- 【 in conjunction with. 结合... 】 // 【 connect 连接 v 】 【 conjunction 连接词 n 】
+- `【 part of speech. 词性 n 】` ----- 【 What's 【 part of speech 】 of this word? 这个单词是什么词性？ 】 // 【 speech 演讲 讲话 n 】
+- `【 auxiliary verb. 助动词 n 】` // -- 【 auxiliary / regular / irregular 】
+- `【 countable noun. 可数名词 n 】` -- 【 uncountable noun. 不可数名词 n 】
+- `【 singular noun. 单数名词 n 】` --- 【 plural noun. 复数名词 n 】
+- > 【 You can use the 【 conjunction 】 to 【 connect 】 the 【 object clause 】 and the 【 attributive clause 】. 】
+- > 【 What's 【 part of speech 】 of the word 'leaf' ? 叶子这个词的词性是什么？ 】
+- _【 conjunction 连词 n 】_
+- _【 junction 交叉路口 枢纽站 n 】_ // - 【 junction station. 枢纽站 n 】
+- // TIPS: Pay attention to the pronunciation of the word 'adjective'. [auxiliary-辅助的-adj]
+-
+- `【 antonym 反义词 n 】` ------------- anto + nym // opposite
+- `【 synonym 同义词 n 】` ------------- syno + nym
+- `【 singular 单数 单数的 】` // ------ 【 singular noun. 单数名词 n 】 // 【 every single day. 每一天 】
+- `【 plural 复数 复数的 】` // -------- 【 plural noun. 复数名词 n 】
+- > What's the 【 antonym 】 of the word 'dim'? [dim->bright]
+- > What's the 【 opposite 】of the word 'dim'? [dim->bright]
+- > What's the 【 synonym 】of the word 'dim'? [dim->dark]
+- > What's the 【 singular 】of the word 'leaves'? [leaves->leaf]
+- > What's the 【 plural 】of the word 'leaf'? [leaf->leaves]
+- > What's the 【 past tense 】 of 【 leave 】? [leave->left]
+- > 【 What's 【 part of speech 】 of the word 'leaf' ? 叶子这个词的词性是什么？ 】
+- > 【 what 【 clause 】 is this sentence? 这个句子是什么从句 】
+- // 【 single 单身的 单个的 adj 】 ----- 【 every single day. 每一天 】
+- // 【 singular 单数的 adj 】 --------- 【 singular noun. 单数名词 n 】 【 plural noun. 复数名词 n 】
+- // TIPS: Pay attention to the pronunciation of the word 'plural'. [plural-复数的/复数]
+-
+- [符号-symbol][symbol-象征-符号-标志-n]
+- `【 comma 逗号 n 】` // --------------------------------------- 【 TV drama. = TV series. 电视剧 】 // 【 TV program. 电视节目 】
+- `【 period 句号 n 】` = full stop. // ------------------------- 【 period [一段时间] [句号] 】 // a period of time. // warranty period. 保修期
+- `【 full stop. 句号 n 】` = period.
+- _【 mark 标记 记号 分数 n 】_ VS symbol VS sign
+- `【 question mark. 问号 n 】 = question point.` // ------------ _【 full marks. 满分 】_ 【 question mark. 问号 n 】
+- `【 single quotation marks. 单引号 n 】` // ------------------- 【 quote 引用 v n 】 【 quotation 引用 n 】
+- `【 double quotation marks. 双引号 n 】`
+- `【 exclamation mark. 感叹号 n 】= exclamation point. ` // ---- `【 exclamation 感叹 n 】`
+- `【 ellipsis mark. 省略号 n 】`
+- _【 brackets 括号 n 】_
+- `【 round brackets. 小括号 n 】` // ---------------------------- 【 this round of. 这一轮的 】 // This round of layoffs.
+- `【 square brackets. 中括号 n 】` // --------------------------- 【 square 广场 正方形 平方 adj 】
+- `【 curly brackets. 大括号 n 】` // ---------------------------- 【 curly hair. 卷发 n 】 【 curly brackets. 大括号 】 // 【 curly 卷曲的 adj 】
+- // TIPS: Pay attention to the pronunciation of the word 'quote'. [quote-引用-v] [quotation-引用-n]
+- // TIPS: Pay attention to the pronunciation of the word 'exclamation'. [exclamation-感叹词-n]
+- AA.
+- _【 curly hair. 卷发 n 】_
+- _【 curly brackets. 大括号 n 】_
+- .MT **【 Her 【 curly hair 】 【 looks like 】 many 【 curly brackets 】. 她的卷发像很多大括号 】**
+- **【 The shape of His 【 curly hair 】 is 【 likes 】 【 curly brackets 】. 她卷发的形状像个大括号 】**
+- // -- 【 look like. 看起来像 】
+- BB.
+- _【 period 句号 一段时间 n 】_
+- _【 warranty period. 保修期 n 】_
+- _【 validity period. 有效期 n 】_
+- _【 trial period. 试用期 n 】_
+- _【 internship period. 实习期 n 】_
+- _【 shelf life. 保质期 n 】_
+- [link][Must 2024-12-01](./00-IELTS/IELTS-Must-20241201.md)
+- CC.
+- > 【 academic performance. 学习成绩 】 // ------------------- 【 academic research. 学术研究 】
+- > 【 full marks. 满分 】 // --------------------------------- full marks. // question mark. // single quotation marks. // double quotation marks.
+- > 【 math score. 数学成绩 】
+- > 【 question mark. = question point. 问号 】
+- DD.
+- **=【 There is 【 an 】 【 interjection 】 before the 【 exclamation mark 】. 感叹号前面是感叹词 】**
+- // TIPS: Pay attention to the pronunciation of the word 'bracket'. [bracket-括号-支架-n]
+- // TIPS: Pay attention to the pronunciation of the word 'square'. [square-广场-正方形-平方-adj]
+- // TIPS: Pay attention to the pronunciation of the word 'curly'. [curly-卷曲的-adj]
+- // TIPS: Pay attention to the pronunciation of the word 'exclamation'. [exclamation-感叹号-感叹-n]
+-
+- [EXPAND-01]
+- `【 grammar 语法 n 】`
+- `【 grammatical 语法的 adj 】`
+- `【 grammatically 语法地 adv 】`
+- **【 【 grammatically 】 correct. 语法上是正确的 】**
+-
+- [EXPEND-02]
+- `【 modify 修改 修饰 v 】`
+- `【 technical scheme. 技术方案 n 】`
+- **【 【 adjectives 】 are used to 【 modify 】 【 nouns 】. 形容词用来修饰名词 】**
+- **【 We need to 【 modify 】 our 【 technical scheme 】. 我们需要修改技术方案 】**
+- // -- technique 技术 n
+- // -- technology 技术 n
+- // -- technical 技术的 adj
+- // TIPS: Pay attention to the pronunciation of the word 'technical'. [technical-技术的-adj]
+-
+- `【 subject 主语 】` // ---------------- 【 subjective thought. 主观想法 】 【 subjective feeling. 主观感受 】 // subjective 主观的 adj
+- `【 predicate 谓语 】` // -------------- 【 weather predication. 天气预报 】 【 weather forecast. 天气预报 】
+- `【 object 宾语 物体 对象 】` ----------- objective 客观的 adj
+- `【 attributive 定语 】` // ------------ 【 attribute 属性 】
+- `【 adverbial 状语 】` // -------------- 【 adverb 副词 】 // 【 verb 动词 】
+- `【 complement 补语n 补充v 补足v 】` // - 【 supplement / complement 】 // 【 supplement energy. 】 【 supplement nutrition. 】
+- > 【 supplement 补充 v 】 // ------------- supplement energy. supplement nutrition.
+- > 【 complement 补充 v 】
+- > 【 complementary 互补的 补充的 adj 】// 【 complementary colors. 互补色 n 】
+- AA.
+- _【 subjective 主观的 adj 】_ // ------ 【 subjective thought. 主观想法 n 】 【 subjective feeling. 主观感觉 n 】
+- _【 objective 客观的 adj 】_ // ------- 【 objective fact. 客观事实 n 】
+- **【 This is your 【 subjective thought 】, not an 【 objective fact 】. 这是你主观的想法，并不是客观的事实 】**
+- // TIPS: pay attention to the pronunciation of the word 'thought'. [thought-想法-n]
+-
+- `【 noun 名词 】` // ----------------- 【 countable noun. 可数名词 】 【 uncountable noun. 不可数名词 】
+- `【 pronoun 代词 】` // -------------- 【 personal pronoun. 人称代词 n 】 【 possessive pronoun. 物主代词 n 】 【 reflexive pronoun. 反身代词 】
+- `【 verb 动词 】` // ----------------- 【 irregular verb. 不规则动词 】 【 regular verb. 规则动词 】
+- `【 adverb 副词 】` // ---------------- verb adverb adverbial
+- `【 adjective 形容词 】`
+- `【 preposition 介词 】` // ---------- 【 position 位置 岗位 】 【 preposition 介词 】
+- `【 quantifier 量词 】` // ----------- 【 quantifier 量词 】 【 quantity 数量 】 【 quality 质量 】
+- `【 conjunction 连词 】` // ---------- 【 in conjunction with. 结合... 】 // Please learn this file 【 in conjunction with 】 that file.
+- `【 interjection 感叹词 】` // ------- `【 interjection 感叹词 n 】 VS 【 intersection 十字路口 n 】 VS interaction VS conjunction VS junction VS section`
+- `【 auxiliary verb. 助动词 】`
+- `【 regular verb. 规则动词 】` // ----- 【 regular 普通的 规则的 定时的 】 // 1. regular gas. // 2. regular check-up. // regular verb. irregular verb.
+- `【 irregular verb. 不规则动词 】`
+- `【 countable noun. 可数名词 n 】` // - 【 count / discount / counter / encounter / account / accountant / county / country / countryside 】
+- `【 uncountable noun. 不可数名词 n 】`
+- `【 singular noun. 单数名词 n 】`
+- `【 plural noun. 复数名词 n 】`
+- > What's the 【 position 】 of the 【 preposition 】 in the sentence?
+- > What's the 【 position 】 of the 【 auxiliary verb 】 in the sentence? 助动词在句子中的位置是什么？
+- // TIPS: Pay attention to the pronunciation of the word 'adjective'. [adjective-形容词-n]
+-
+- `【 noun 名词 n 】`
+- `【 countable noun. 可数名词 n 】`
+- `【 uncountable noun. 不可数名词 n 】`
+- `【 singular noun. 单数名词 n 】`
+- `【 plural noun. 复数名词 n 】`
+- // TIPS: Pay attention to the pronunciation of the word 'countable'. [countable]
+-
+- `【 verb 动词 】`
+- > 【 auxiliary verb. 助动词 】 // ---- 【 auxiliary verb. 助动词 n 】 // 【 auxiliary 辅助的 adj 】
+- > 【 regular verb. 规则动词 】
+- > 【 irregular verb. 不规则动词 】
+- // TIPS: Pay attention to the pronunciation of the word 'auxiliary'. [auxiliary]
+-
+- `【 tone 语气 音调 n 】` // ----------- [痛] // 【 tone / tongue 】
+- `【 tongue 舌头 】` // ---------------- [烫]
+- `【 pronunciation 发音 n 】`
+- `【 accent 口音 n 】` // ------------- 【 heavy accent. 重口音 】 【 light accent. 轻口音 】
+- `【 mandarin 普通话 】` // ----------- 【 standard mandarin. 标准普通话 n 】 **【 standard mandarin. 标准普通话 】**
+- `【 dialect 方言 n 】` // ------------ 【 local dialect. 本地方言 n 】 // - **【 dialog 对话 / dialect 方言 】**
+- `【 idiom 成语 方言 n 】`
+- > 【 heavy accent. 重口音 】
+- > 【 light accent. 轻口音 】
+- > 【 a heavy foreign accent. 很重的外国口音 】
+- // TIPS: Pay attention to the pronunciation of the word 'tone'. [tone-语调]
+- // TIPS: Pay attention to the pronunciation of the word 'tongue'. [tongue-舌头]
+- // TIPS: Pay attention to the pronunciation of the word 'idiom'. [idiom-成语]
+-
+- `【 word 单词 】`
+- `【 phrase 短语 】`
+- `【 sentence 句子 】`
+- `【 fixed collocation. 固定搭配 】` // 【 collocation 搭配 】
+- `【 conversation 对话 n 】` // ------- 口语中【 conversation 交谈 】 【 conversion 转换 】
+- `【 dialog 对话 n 】` // ------------- 书面语 **【 dialogue 对话 v】**
+- `【 dialogue 对话 v 】`
+- `【 vocabulary. 词汇 n 】`
+- // 【 collocation 搭配 】
+- > 【 convert 转换 v 】
+- > 【 conversion 转换 n 】
+- > 【 conversation 交谈 n 】
+-
+- `【 countable noun. 可数名词 】`
+- `【 uncountable noun. 不可数名词 】`
+- `【 count 计数 】` // -------------------【 count down 倒计时 】
+- `【 discount 打折 v 】` // ------------- _【 discount coupon. 优惠卷 】_ _【 discount rate. 打折率 】_
+- `【 counter 计数器 柜台 】` // -----------【 bank counter. 银行柜台 n 】
+- `【 encounter 遭遇 v 】` // -------------【 encounter difficulty. 遭遇困难 】 【 encounter setback. 遭遇挫折 】 【 overcome difficulty. 克服困难 】
+- `【 account 账户 】` // -----------------【 bank account. 银行账户 n 】 【 recover account. 回复账户 】
+- `【 accountant 会计 n 】` // ----------- 【 junior accountant. 初级会计 n 】 【 senior accountant. 高级会计 n 】
+- `【 countermeasure 对策 n 】`
+- `【 county 县 n 】` // ------------------【 county government. 县政府 】 【 county court. 县法院 n 】
+- `【 country 国家 n 】` // -------------- 【 developing country. 发展中国家 n 】 【 developed country. 开发中国家 n 】 【 country / state / nation 】
+- `【 countryside 乡村 n 】`
+- > country / state / nation
+- > 1. welfare state. 福利国家 // --------- social welfare. 社会福利
+- > 2. united nations. 联合国 n
+- > 3. National Day. 国庆节 // ----------- national flag. // national anthem. // national assets.
+- > 4. foreign nationality. 外国国籍 // --- dual nationality. 双重国籍 n
+-
+- `【 greater than. 大于 】` // ---------- 【 greater than sign. 大于符号 n 】
+- `【 less than. 小于 】` // ------------- 【 less than sign. 小于符号 n 】
+- > 【 greater than sign. 大于符号 n 】
+- > 【 less than sign. 大于符号 n 】
+- **【 Four is 【 greater than 】 three and 【 less than 】 five. 4 大于 3 小于 5 】**
+-
+- `【 prefix 前缀 n 】`
+- `【 suffix 后缀 n 】`
+- `【 start with. 以...开头 】`
+- `【 end with. 以...开头 】`
+- **【 The word 'good' starts with the prefix 'g' and ends with the suffix 'd'. good 这个单词以前缀 g 开头，以 d 后缀结尾 】**
+-
+- [AA.]
+- `【 position 位置 职位 n 】`
+- `【 preposition 介词 】`
+- **【 Please pay attention to the 【 position 】 of the 【 preposition 】 【 in 】 the sentence. 请注意这个介词在句子中的位置 】**
+-
+- [BB.]
+- `【 past tense. 过去时 】`
+- `【 present tense. 现在时 】`
+- `【 future tense. 将来时 】`
+- **【 【 Frozen 】 is the 【 past tense 】 of 【 freeze 】. frozen 是 freeze 的过去式 】**
+- **【 This sentence uses the 【 past tense 】.这个句子使用的是过去时态 】**
+- // [antonym]: What's the antonym of the word 'dim'?
+- // [synonum]: What's the synonym of the word 'dim'?
+- // [opposite]: What's the opposite of the word 'dim'?
+- // [plural]: What's the plural of the word 'leaf'?
+- // [past-tense]: What's the past tense of the word 'freeze'？
+-
+- [CC.]
+- `【 interrogative sentence. 疑问句 】`
+- `【 declarative sentence. 陈述句 】`
+- **【 Sentences 【 are divided into 】 【 interrogative sentences 】 and 【 declarative sentences 】. 句子分为疑问句和陈述句 】**
+- // 【 be divided into. 被分为... 】
+-
+- [DD.]
+- `【 fixed collocation. 固定搭配 】`
+- **【 There are many 【 fixed collocations 】 【 in 】 English language. 英语中有很多固定搭配 】**
+-
+- [EE.]
+- `【 object clause. 宾语从句 n 】`
+- `【 attributive clause. 定语从句 】`
+- **【 Is this an 【 object clause 】 or 【 attributive clause 】? 这是宾语从句还是定语从句？ 】**
+-
+- [FF.]
+- `【 conjunction 连接词 】` // connect conjunction
+- `【 in conjunction with. 结合... 】`
+- **【 You can use the 【 conjunction 】 to 【 connect 】 the 【 object clause 】 and the 【 attributive clause 】. 你可以用连接词连接宾语从句和定语从句 】**
+- **【 Please learn this file 【 in conjunction with 】 that file. 请把这个文件和那个文件结合起来学习 】**
+-
+- [GG.]
+- `【 auxiliary verb. 助动词 n 】`
+- **【 'Do' is 【 an 】 【 auxiliary 】. Do 是一个助动词 】**
+-
+- [HH.]
+- `【 passive voice. 被动语态 n 】`
+- `【 active voice. 主动语态 n 】`
+- > 【 actively pursue. 主动争取 】
+- > 【 passively accept. 被动接受 】
+- **【 We should 【 actively 】 【 pursue 】, not 【 passively 】 【 accept 】. 我们应该主动争取，不应该被动接受 】**
+-
+- [JJ.]
+- `【 countable noun. 可数名词 n 】`
+- `【 uncountable noun. 不可数名词 n 】`
+- **【 【 nouns 】 can 【 be divided into 】 【 countable nouns 】 and 【 uncountable nouns 】. 名词分为可数名词和不可数名词 】**
+-
+- [HH.]
+- `【 encounter difficulty. 遭遇困难 v 】`
+- `【 overcome difficulty. 克服困难 v 】`
+- **【 When we 【 encounter a difficulty 】, we should 【 overcome the difficulty 】. 当我们遭遇困难，我们就需要去克服困难 】**
+-
+- [II.]
+- `【 simple 简单的 简朴的 adj 】`
+- `【 sample 样品 样本 n 】`
+- **【 This is a 【 simple 】 【 sample 】. 这是一个简单的样品 】**
+-
+- [JJ.]
+- `【 dialogue 对话 v 】`
+- `【 dialog 对话 n 】`
+- `【 local dialect 本地方言 n 】`
+- **【 They like to 【 dialogue 】 in 【 local dialect 】. 他们喜欢用方言对话 】**
+-
+- [KK.]
+- **【 What are the 【 components 】 of this sentence? 这个句子的组成部分是什么？ 】**
+-
+- [LL.]
+- `【 tense situation. 紧张局势 n 】`
+- `【 intense competition 激烈竞争 n 】`
+- **【 There is 【 tense situation 】 and 【 intense competition 】. 这里有紧张的局势和激烈的竞争 】**
+-
+- [MM.]
+- `【 present tense. 现在时态 】`
+- `【 simple present tense. 一般现在时 】`
+- `【 present perfect tense. 现在完成时 】`
+- **【 The 【 present tense 】 【 is divided into 】 the 【 simple present tense 】 and the 【 present perfect tense 】. 现在时分为一般现在时和现在完成时 】**
+- // -- 【 be divide into. 被分为... 】
+-
+- [NN.]
+- `【 accent 口音 n 】`
+- `【 dialect 方言 n 】`
+- > 【 have influence on. 对...有影响 】
+- **【 【 Accent 】 have a litter 【 influence 】 【 on 】 English. but 【 dialect 】 has a great influence on English. 口音对英语的影响比较小，但是方言对英语的影响很大 】**
+-
+- [OO.]
+- `【 question mark. 问号 】`
+- `【 full marks. 满分 】`
+- **【 I made a big 【 question mark 】 about whether he got 【 full marks 】 【 in 】 【 math 】. 我对他数学成绩是否得了满分要打一个大大的问号 】**
+-
+- [PP.]
+- `【 round brackets. 小括号 】`
+- `【 square brackets. 中括号 】`
+- `【 curly brackets. 大括号 】`
+- **【 【 Brackets 】 are divided into 【 round brackets 】, 【 square brackets 】, and 【 curly brackets 】. 括号分为小括号，中括号，和大括号 】**
+-
+- [QQ.]
+- `【 curly hair. 卷发 n 】`
+- `【 curly brackets. 大括号 n 】`
+- **【 The shape of His 【 curly hair 】 is 【 likes 】 【 curly brackets 】. 她卷发的形状像个大括号 】**
+- // -- like 作为像时是 preposition
+-
+- [RR.]
+- `【 complementary 互补的 补充的 adj 】`
+- **【 These two roles are 【 complementary 】. 这两个角色是互补的 】**
+-
+- [SS.]
+- `【 present 目前n 礼物n 目前的adj 】`
+- `【 at present. 目前 adv 】`
+- **【 【 At present 】, I don't received any 【 present 】. 目前我没有收到任何礼物 】**
+-
+- [TT.]
+- `【 subjective thought. 主观想法 】`
+- `【 objective fact. 客观事实 】`
+- **【 This is your 【 subjective thought 】, not an 【 objective fact 】. 这是你主观的想法，并不是客观的事实 】**
+
+###### Must 2024-07-18
+
+- 1
+- `【 prove 证明 v 】`
+- `【 approve 批准 同意 v 】`
+-
+- `【 certificate 证书 证明 证件 n 】`
+- `【 credential 证书 证明 证件 n 】`
+-
+- `【 right 权利 】`
+- `【 authority 权威 权利 权限 n 】` // 【 authority agency. 权威机构 】 // 【 author 作家 作者 n 】
+- `【 authority agency. 权威机构 】`
+-
+- `【 author 作者 作家 n 】`
+- `【 authority 权威 权利 权限 n 】`
+- > 【 authority agency. 权威机构 】
+-
+-
+- [AA.]
+- `【 prove 证明 v 】`
+- `【 approve 批准 同意 v 】`
+- `【 authority 权威 权利 权限 n 】`
+- **【 Fact have 【 proved 】 that The 【 authority agency 】 has the 【 right 】 to 【 approve 】 the 【 certificate 】of the 【 author 】. 事实证明权威机构有权利批准作家的证书 】**
+-
+- [BB.]
+- `【 prove 证明 v 】`
+- `【 certificate 证书 证明 证件 n 】`
+- `【 credential 证书 证明 证件 n 】`
+- **【 You need a 【 certificate 】 to 【 prove 】 you have the 【 permission 】 to open the computer. 你需要证书来证明你有权限打开电脑 】**
+
+- **【 His 【 proposal 】 was 【 approved 】 because he has already 【 proven 】 its corrects. 他的方案得到了批准，因为他已经证明了改方案的正确性 】**
+- // -- 【 scheme 方案 】
+- // -- prove -> proved -> proven
+-
+-
+-
+-
+-
+-
+- 2
+- `【 steward 乘务员 空少 】`
+- `【 stewardess 空姐 】`
+-
+- `【 waiter 男服务员 】` // ---- wai ter ---- // water 一般只餐厅服务员
+- `【 waitress 女服务员 】` // -- wai tres
+-
+- `【 attendant 服务员 】` // --【 gas station attendant. 加油站服务员 】 【 parking attendant. 停车场管理员 】
+- `【 waiter 服务员 】` // ----- water 一般只餐厅服务员
+-
+- `【 cleaner 清洁工 n 】`
+- `【 landlord 房东 业主 n 】`
+-
+- `【 attendant 服务员 n 】`
+- `【 assistant 助理 n 】` // --【 assist 帮助 协助 】
+- `【 descendant 后代 n 】` // -【 ancestor 祖先 】
+- `【 abundant 丰富的 n 】`
+- `【 secretary 秘书 n 】` // --【 secret 秘密 】
+-
+- `【 actor 男演员 】` // actor // tractor
+- `【 actress 女演员 】`
+- `【 waiter 男服务员 】`
+- `【 waitress 女服务员 】`
+- `【 headmaster 男校长 】`
+- `【 headmistress 女校长 】`
+- `【 prince 王子 】` // prince // province
+- `【 princess 公主 】`
+- `【 steward 服务员 】`
+- `【 stewardess 空姐 】`
+-
+- > 【 secretary 秘书 n 】 // --【 secret 秘密 】
+- > 【 laboratory 实验室 n 】 // labor 【 labor day. 】 【 labor law. 】 【 labor contract. 】 【 labor worker. 】
+- > 【 dormitory 宿舍 n 】
+- > 【 repository 仓库 n 】 // -【 code repository. 代码仓库 】
+- > 【 directory 目录 n 】// ---【 file directory. 文件目录 】 // 【 sale director. 销售总监 】 // 【 personnel director. 人事总监 】
+- > 【 factory 工厂 n 】
+- > 【 victory 胜利 n 】
+- > 【 history 历史 n 】
+- > 【 mandatory 强制的 】 // 【 mandatory overtime. 强制加班 】 【 overtime pay. 加班费 】
+-
+- **【 This 【 actress 】 【 participated in 】 a 【 50-episode 】 【 TV series 】, and 【 acted as 】 a 【 princess 】. 这个女演员参加了 50 集的连续剧，并扮演了公主 】**
+
+###### Must 2024-07-20
+
+- 1
+- `【 infant 婴儿 n 】` // -------------- infant = baby. 婴儿
+- `【 teenager 青少年 n 】`
+- `【 adult 成年人 n 】` // ------------- 【 adult education. 成年教育 】
+- `【 middle-aged person. 中年人 n 】`
+- // TIPS: Pay attention to the pronunciation of the word 'infant'.
+- // TIPS: Pay attention to the pronunciation of the word 'teenager'.
+-
+- `【 born 出生 v 】` // ---- born birth // 【 be born in. 出生在... 】
+- `【 die 死亡 v 】` // ----- die death // -【 died in. 死亡在... 】
+- `【 pass away. 去世 v 】`
+- `【 birth 出生 n 】` // --------------- 【 birth rate. 出生率 n 】
+- `【 death 死亡 n 】` // --------------- 【 death rate. 死亡率 n 】
+- > 【 birth rate. 出生率 n 】
+- > 【 death rate. 死亡率 n 】
+- _【 be born in. 出生在... 】_
+- _【 died in. 出生在... 】_
+-
+- `【 innate 先天的 天生的 adj 】` // ---- 【 innate condition. 先天条件 】
+- `【 acquired 后天的 习得的 adj 】` // -- 【 acquired condition. 后天条件 】 // 【 acquired effort. 后天的努力 】
+- > 【 innate condition. 先天条件 】
+- > 【 acquired condition. 后天条件 】
+- > 【 acquired effort. 后天的努力 】
+- // acquire 获得 得到 v
+- // acquired 获得的 得到的 adj / past tense.
+-
+- `【 ancestor 祖先 n 】`
+- `【 descendant 后代 n 】`
+-
+- `【 countryside 乡村 农村 n 】`
+- `【 city 城市 n 】`
+-
+- `【 born 出生 v 】` // 【 be born in. 出生在... 】
+- `【 burn 燃烧 】` // - 【 burn fat. 燃烧脂肪 】
+-
+- [AA.]
+- `【 infant 婴儿 n 】`
+- `【 be born in. 出生在... 】`
+- `【 died in. 死亡在... 】`
+- `【 countryside 乡村 农村 n 】`
+- **【 The 【 infant 】 【 was born in 】 the 【 countryside 】, and 【 died in 】 the city. 这个婴儿出生在农村，死在城市 】**
+-
+- [BB.]
+- `【 innate condition. 先天条件 n 】`
+- `【 acquired condition. 后天条件 n 】`
+- **【 The success of a person is not only 【 determined by 】 【 innate conditions 】 but also by 【 acquired conditions 】. 一个人的成功不仅取决于先天条件，也取决于后天条件 】**
+- // -- 【 determine 决定 决心 v 】
+- // -- 【 be determined by. 由...决定 】
+-
+- [CC.]
+- `【 innate 天生的 先天的 adj 】`
+- `【 birth 出生 n 】`
+- **【 After 【 birth 】, we discovered her language talent was 【 innate 】.出生之后，我们发现她的语言天赋是天生的 】**
+-
+- [DD.]
+- `【 birth rate. 出生率 】`
+- `【 death rate. 出生率 】`
+- **【 【 interest 】 【 is related to 】 【 interest rate 】, but not to 【 birth rate 】 and 【 death rate 】. 利息和利率有关，和出生率和死亡率无关 】**
+- // -- 【 interest rate. 利率 】
+- // -- 【 interest. 利息 】
+
+###### Must 2024-07-24
+
+- 1
+- `【 memorize 记住 v 】`
+- `【 memory 记忆 记忆力 回忆 内存 n 】` // 【 memory 内存 n 】 【 capacity 容量 n 】
+-
+- `【 remember 记得 v 】` // -------------【 remember 记得 / memorize 记住 】
+- `【 recite 背诵 v 】`
+- `【 review 回顾 v 】`
+-
+- `【 imagine 想象 v 】`
+- `【 image 形象 图像 n 】`
+- // TIPS: Pay attention to the pronunciation of the word 'imagine'. // imagine
+- // TIPS: Pay attention to the pronunciation of the word 'image'. // image
+-
+- [AA.]
+- `【 remember 记得 v 】`
+- `【 memorize 记住 v 】`
+- `【 recite 背诵 v 】`
+- **【 I 【 remember 】 I 【 memorized 】 20 poems and 【 recited 】 10 【 poems 】 last year. 记得我去年记住了 20 首诗，背诵了 10 首诗 】**
+- // -- 【 poem 诗 】
+-
+- [BB.]
+- `【 imagine 想象 v 】`
+- `【 image 形象 图像 n 】`
+- **【 Can you 【 imagine 】 the tall 【 image 】 of a hero? 你能想象英雄高大的形象吗？ 】**
+- // TIPS: Pay attention to the pronunciation of the word 'imagine'.
+- // TIPS: Pay attention to the pronunciation of the word 'image'.
+-
+- [CC.]
+- `【 remember 记得 v 】`
+- `【 memory 内存 记忆 回忆  n 】`
+- **【 Do you 【 remember 】 the 【 capacity 】 of 【 the memory 】? 你记得这个内存的容量是多少吗？ 】**
+- // -- 【 capacity 容量 n 】
+
+###### Must 2024-07-30
+
+- 1
+- `【 accent 口音 n 】` // ------- 【 heavy accent. 重口音 】 【 light accent. 轻口音 】 【 a heavy foreign accent. 很重的外国口音 】
+- `【 pronunciation 发音 n 】` // -【 poor pronunciation. 糟糕的发音 】 // 【 pronounce 发音 v 】 【 pronunciation 发音 n 】
+- `【 tone 语气 音调 n 】` // ----- 【 tongue 舌头 】 【 tone 音调 语调 n 】
+- > 【 heavy accent. 重口音 】
+- > 【 light accent. 轻口音 】
+- > 【 a heavy foreign accent. 很重的外国口音 】
+- > The opposite of the word 'heavy' is 'light'.
+- > 【 high pitch. 高音 】
+- > 【 low pitch. 低音 】
+-
+- `【 standard 标准的adj 标准n 】` // 【 unified standard. 统一的标准 】 【 international standard. 国际标准 】
+- `【 fluent 流利的 adj 】`
+- > 【 unified standard. 统一的标准 】
+- > 【 unify 统一 v 】
+- > 【 unified 统一的 adj 】
+-
+- `【 spell 拼写 v 】`
+- `【 recite 背诵 v 】` // --------- 【 recite repeatedly. 反复背诵 】
+- > 【 repeat 重复 v 】
+- > 【 repeated 重复的 adj 】
+- > 【 repeatedly. 重复地 adv 】
+-
+- `【 memorize 记住 v 】` // ------- 【 memory 记忆 n 内存 n 】 // 【 memory leak. 内存泄露 】 // 【 memory overflow. 内存溢出 】
+- `【 remember 记得 v 】`
+- `【 recite 背诵 v 】` // --------- 【 recite repeatedly. 反复背诵 】
+- `【 imagine 想象 v 】` // -------- 【 image 形象 图像 n 】 【 imagine 想象 v 】
+- > 【 memorize 记住 v 】
+- > 【 memory 内存 n 】
+- > 【 memory leak. 内存泄露 】
+- > 【 memory overflow. 内存溢出 】
+-
+- [AA.]
+- `【 accent 口音 n 】`
+- `【 heavy accent. 重口音 】`
+- `【 light accent. 轻口音 】`
+- > 【 a heavy foreign accent. 很重的外国口音 】
+- **【 He speaks 【 with 】 a heavy foreign 【 accent 】. 他说话很重的国外口音 】**
+- **【 you don't have 【 a heavy foreign accent 】 when you speak. 你说话没有很重的国外口音 】**
+-
+- [BB.]
+- `【 pronunciation 发音 n 】`
+- `【 accent 口音 n 】`
+- `【 tone 音调 语调 n 】`
+- > 【 poor pronunciation. 糟糕的发音 】
+- **【 I think your 【 pronunciation 】, 【 accent 】, and 【 tone 】 are 【 all 】 very good. 我认为你的发音，口音，音调都很好 】**
+-
+- [CC.]
+- `【 recite repeatedly. 反复背诵 】`
+- `【 memorize 记住 v 】`
+- **【 I need to 【 recite repeatedly 】 to 【 memorize 】 these words. 我需要反复背诵才能记住这些单词 】**
+- [DD.]
+- **【 Please don't 【 talk 】 to me 【 in 】 this 【 tone 】. 请不要用这样的语气很我说话 】**
+-
+-
+-
+-
+-
+-
+- 2
+- `【 admire 佩服 钦佩 欣赏 v 】` // -【 admire sb for doing sth. 佩服某人做某事 】 // 【 mire 泥潭 n 】 【 admire 佩服 v 】
+- `【 envy 羡慕 v 】` // -----------【 envy sb for doing sth. 羡慕某人做某事 】 // --【 navy 海军 n 】 【 envy 羡慕 v 】
+- `【 respect 尊敬 v 】`
+- > 【 admire 佩服 钦佩 v 】
+- > 【 mire 泥潭 n 】
+- > 【 envy 羡慕 v 】
+- > 【 navy 海军 n 】
+- > 【 envy sb for doing sth. 羡慕某人做某事 】
+- > 【 admire sb for doing sth. 佩服某人做某事 】
+-
+- `【 envy 羡慕 v 】` // -----------【 envy sb for doing sth. 羡慕某人做某事 】 【 navy 海军 n 】 【 envy 羡慕 v 】
+- `【 envious 羡慕的 adj 】`
+- `【 jealous 嫉妒的 adj 】` // ----【 be jealous of sb. 嫉妒某人 】
+- > 【 be jealous of sb. 嫉妒某人 】
+- _【 envious 羡慕的 adj 】_
+- _【 serious 严肃的 认真的 严重的 adj 】_
+- _【 various 各种 各种个样的 adj 】_ // 【 various aspect. 各个方面 】 【 various resources. 各种资源 】
+-
+- `【 courage 勇气 n 】` // -------- 【 take courage. 鼓起勇气 】 【 take note. 做笔记 】
+- `【 encourage 鼓励 v 】`
+- `【 discourage 阻止 劝阻 v 】` // --【 discourage sb from doing sth. 阻止某人做某事 】
+-
+- `【 pure 纯洁的 纯的 adj 】`
+- `【 plain 朴素的adj 平原n 】` // ---【 plain sailing. 一帆风顺 】
+- > 【 plain 朴素的 adj 平原 n 】
+- > 【 explain 解释 v 】
+- > 【 complain 抱怨 v 】 // --------【 complain about sb. 抱怨某人 】
+- // TIPS: Pay attention to the pronunciation of the work 'pure'.
+-
+- `【 secretly 偷偷地 adv 】` // ---- 【 secret 秘密 n 】 【 secretary 秘书 n 】 【 secretly 偷偷地 adv 】
+- `【 excellent 杰出的 优秀的 adj 】`
+- `【 rare 稀少的 adj 】` // -------- 【 rare metal. 稀有金属 】 【 rare resource. 稀有资源 】 【 rare species. 稀有物种 】
+- > 【 rare 稀少的 adj 】// ----------【 rare metal. 稀有金属 】 【 rare resource. 稀有资源 】 【 rare species. 稀有物种 】
+- > 【 rear 后方的 adj // ------------【 rear view mirror. 后视镜 】
+- > 【 first tier city. 一线城市 】
+-
+- `【 talent 天赋 才能 才华 n 】`
+-
+- // EE: [admire]: to find someone or something 【 attractive 】 and 【 pleasant 】 to look at.
+- // EE: [envy]: To 【 wish 】 that you had something that another person has.
+- // EE: [pure]: not mixed with 【 anything else 】.
+- // -- 【 pleasant 令人愉快的 adj 】
+- // -- 【 anything else. 其他任何东西 】
+-
+- [AA.]
+- `【 admire sb for doing sth. 钦佩某人做某事 】`
+- `【 courage 勇气 n 】`
+- **【 I 【 admire 】 you for having 【 courage 】 to do what you like. 我很佩服你有勇气做你喜欢做的事情 】**
+-
+- [BB.]
+- `【 navy 海军 n 】`
+- `【 envy 羡慕 v 】`
+- `【 envy sb for doing sth. 羡慕某人做某事 】`
+- **【 I 【 envy 】 the 【 navy 】 for being able to watch the sea. 我很羡慕海军可以看海 】**
+-
+- [CC.]
+- `【 encourage 鼓励 v 】`
+- `【 courage 勇气 n 】`
+- `【 discourage 阻止 劝阻 v 】`
+- **【 I didn't 【 encourage 】 you, but you have 【 courage 】, and nobody can 【 discourage 】 you. 我并没有鼓励你，而是你自己有勇气，没有人能阻止你 】**
+-
+- [DD.]
+- `【 talent 天赋 才能 n 】`
+- `【 envious 羡慕的 adj 】`
+- `【 jealous 嫉妒的 adj 】`
+- **【 Your 【 talent 】 makes me both 【 envious 】 and 【 jealous 】. 你的才华，我既羡慕又嫉妒 】**
+-
+- [EE.]
+- `【 plain 朴素的 adj 平原 n 】`
+- `【 explain 解释 v 】`
+- `【 complain 抱怨 v 】`
+- `【 pure 纯洁的 adj 】`
+- _【 complain about sb. 抱怨某人 】_
+- **【 After 【 explaining 】 this thing clearly, the 【 plain 】 her stopped 【 complaining 】 about me. 在清楚地解释了这件事之后，朴素的她不再抱怨我了 】**
+- **【 You are a 【 pure 】 and 【 plain 】 person.你是一个纯洁和朴素的人 】**
+- // -- 【 complain about sb. 抱怨某人 】
+-
+- [FF.]
+- `【 secretly 偷偷地 adv 】`
+- **【 Can you 【 secretly 】 learn English 【 while 】 working? 你能在工作的时候偷偷的学英语吗？】**
+- // -- 【 while 当...的时候 / 一会儿 n 】
+- // -- 【 for a while. 一会 】
+- // -- 【 meanwhile 与此同时 】

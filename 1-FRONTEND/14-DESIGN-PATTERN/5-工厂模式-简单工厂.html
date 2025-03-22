@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 工厂模式
+
+      // 1
+      // 未使用工厂模式
+      // - 缺点: 我们要分别去三家门店买不同的小动物
+      class Dog {}
+      class Cat {}
+      class Mouse {}
+
+      // 2
+      // 简单工厂
+      // - 解决: 不需要分别去三家不同的店买三种不同的小动物，而是一家超市，里面有各种小动物
+      // - 简单工厂: `门店 -> 工厂创建产品`
+      // - 工厂方法: `门店 -> 根据类型，创建工厂 -> 工厂创建产品`
+      class Animals {
+        create = (name) => {
+          // 根据传入的类型，调用不同的构造函数，创建不同的实例
+          // 即调用不同的工厂 生产 不同的产品
+          switch (name) {
+            case "cat":
+              return new Cat();
+            case "Dog":
+              return new Dog();
+            case "Mouse":
+              Animals;
+              return new Mouse();
+            default:
+              return new Error("error");
+          }
+        };
+      }
+      const dog = Animals.create("dog"); // 生产dog
+      const cat = Animals.create("cat"); // 生产cat
+      console.log(dog);
+      console.log(cat);
+    </script>
+  </body>
+</html>

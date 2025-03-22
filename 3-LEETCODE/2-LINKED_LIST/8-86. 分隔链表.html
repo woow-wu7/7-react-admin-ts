@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 86. 分隔链表
+
+      // 题目
+      // 给你一个链表的头节点 head 和一个特定值 x ，请你对链表进行分隔，使得所有 小于 x 的节点都出现在 大于或等于 x 的节点之前。
+      // 你应当 保留 两个分区中每个节点的初始相对位置。
+
+      // 示例 1：
+      // 输入：head = [1,4,3,2,5,2], x = 3
+      // 输出：[1,2,2,4,3,5]
+
+      // 示例 2：
+      // 输入：head = [2,1], x = 2
+      // 输出：[1,2]
+      //
+
+      // 提示：
+      // 链表中节点的数目在范围 [0, 200] 内
+      // -100 <= Node.val <= 100
+      // -200 <= x <= 200
+
+      /**
+       * Definition for singly-linked list.
+       * function ListNode(val, next) {
+       *     this.val = (val===undefined ? 0 : val)
+       *     this.next = (next===undefined ? null : next)
+       * }
+       */
+      /**
+       * @param {ListNode} head
+       * @param {number} x
+       * @return {ListNode}
+       */
+
+      // leetcode
+      // https://leetcode.cn/problems/partition-list/
+
+      // 题意
+      // - 在 < x 的链表
+      // - 在 >= x 的链表，保证在原链表中的相对顺序
+
+      // 思路
+      // - 1. 遍历原链表，依次找到小于x的节点，并构建新的链表
+      // - 2. 再次遍历原链表，一次找到大于x的节点，并在 1 的链表尾部继续添加节点
+      // - 缺点: 遍历了两次原链表，性能差
+
+      // 思路2
+      // - 优化: 我们遍历一次链表，然后新建两个链表，分别搜集 小于 和 大于等于 的节点，然后拼接
+
+      // 方法 1
+      var partition = function (head, x) {
+        let dummy1 = (list1 = new ListNode(null));
+        let dummy2 = (list2 = new ListNode(null));
+
+        while (head) {
+          if (head.val < x) {
+            list1.next = new ListNode(head.val);
+            list1 = list1.next;
+          }
+          if (head.val >= x) {
+            list2.next = new ListNode(head.val);
+            list2 = list2.next;
+          }
+          head = head.next;
+        }
+
+        list1.next = dummy2.next;
+
+        return dummy1.next;
+      };
+
+      // ------------------------------------------------------------
+      // ------------------------------------------------------------
+      // ------------------------------------------------------------
+      // 方法 2
+      var partition = function (head, x) {
+        let list1 = (list11 = head);
+        let dummy = (list2 = new ListNode(null));
+        // 1
+        // 构建 < x 的链表
+        while (list1) {
+          console.log(1);
+          if (list1.val < x) {
+            list2.next = new ListNode(list1.val);
+            list2 = list2.next;
+          }
+          list1 = list1.next;
+        }
+        // 2
+        // 在 1 的构建的链表尾部，继续构建 >= x 的链表
+        while (list11) {
+          if (list11.val >= x) {
+            list2.next = new ListNode(list11.val);
+            list2 = list2.next;
+          }
+          list11 = list11.next;
+        }
+        return dummy.next;
+      };
+    </script>
+  </body>
+</html>

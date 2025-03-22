@@ -1,0 +1,8 @@
+# node_modules
+node_modules
+
+# koa
+/2-FRONTEND/10-KOA/node_modules/
+
+# webpack dist
+1-FRONTEND/8-WEBPACK/dist

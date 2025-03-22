@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .out-container {
+        border: 1px solid red;
+        height: 400px;
+        width: 600px;
+
+        overflow: hidden;
+        position: relative;
+      }
+
+      .in-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: -18px;
+        bottom: 0;
+        overflow: auto;
+
+        box-sizing: border-box;
+      }
+
+      .bar {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100px;
+        width: 10px;
+        background: rgb(125, 115, 146);
+        border-radius: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="out-container">
+      <div class="in-container">
+        <div class="content" style="width: 1000px">
+          <p>
+            这是滚动的内容，这是滚动的内容，这是滚动的内容，这是滚动的内容，这是滚动的内容，
+            这是滚动的内容，这是滚动的内容，这是滚动的内容，这是滚动的内容，这是滚动的内容，
+          </p>
+          <br /><br /><br />
+          <p>这是滚动的内容，这是滚动的内容</p>
+          <br /><br /><br />
+          <p>这是滚动的内容，这是滚动的内容</p>
+          <br /><br /><br />
+          <p>这是滚动的内容，这是滚动的内容</p>
+          <br /><br /><br />
+          <p>这是滚动的内容，这是滚动的内容</p>
+          <br /><br /><br />
+          <p>这是滚动的内容，这是滚动的内容</p>
+          <br /><br /><br />
+          <p>这是滚动的内容，这是滚动的内容</p>
+          <br /><br /><br />
+          <p>这是滚动的内容，这是滚动的内容</p>
+          <br /><br /><br />
+          <p>这是滚动的内容，这是滚动的内容</p>
+          <br /><br /><br />
+          <p>这是滚动的内容，这是滚动的内容</p>
+          <br /><br /><br />
+          <p>这是滚动的内容，这是滚动的内容</p>
+          <br /><br /><br />
+          <p>这是滚动的内容，这是滚动的内容</p>
+          <br /><br /><br />
+          <p>这是滚动的内容，这是滚动的内容</p>
+          <br /><br /><br />
+        </div>
+      </div>
+      <div class="bar"></div>
+    </div>
+    <script>
+      // 资料
+      // https://www.cnblogs.com/bydzhangxiaowei/p/9319453.html
+      // https://www.jb51.net/css/604495.html
+
+      // divine-plus 说明文档 http://120.53.220.141:8090/
+      // github 仓库地址 https://github.com/woow-wu7/8-divine-plus/tree/main/packages/components/scrollbar
+
+      const containerDOM = document.querySelector(".in-container");
+      const barDOM = document.querySelector(".bar");
+
+      const ratio =
+        (containerDOM.scrollHeight - containerDOM.offsetHeight) /
+        (containerDOM.offsetHeight - barDOM.offsetHeight);
+
+      // 1
+      let isDragging = false;
+      let dragOffset = 0;
+
+      barDOM.addEventListener(
+        "mousedown",
+        (event) => {
+          // event.clientY ---------------------------- 鼠标 距离 视口 的 垂直位置
+          // barDOM.getBoundingClientRect().top ------- bar 距离 视口 的 垂直位置
+          isDragging = true;
+          dragOffset = event.clientY - barDOM.getBoundingClientRect().top;
+        },
+        false
+      );
+      document.addEventListener(
+        "mousemove",
+        (event) => {
+          if (isDragging) {
+            // bar滚动的距离 = 鼠标距视口的距离 - containerDOM距离视口的距离 - 鼠标距离bar顶部的距离
+            const scrollbarPosition =
+              event.clientY -
+              dragOffset -
+              containerDOM.getBoundingClientRect().top;
+
+            containerDOM.scrollTop = ratio * scrollbarPosition;
+            barDOM.style.transform = `translateY(${scrollbarPosition}px)`;
+          }
+        },
+        false
+      );
+      document.addEventListener(
+        "mouseup",
+        () => {
+          isDragging = false;
+        },
+        false
+      );
+
+      // 2
+
+      let preScrollTop = 0;
+
+      containerDOM.addEventListener(
+        "scroll",
+        (e) => {
+          let curScrollTop = containerDOM.scrollTop;
+          if (
+            curScrollTop > preScrollTop &&
+            curScrollTop >=
+              containerDOM.scrollHeight - containerDOM.offsetHeight - 20
+          ) {
+            curScrollTop =
+              containerDOM.scrollHeight - containerDOM.offsetHeight - 20;
+          } else if (curScrollTop <= 10) {
+            curScrollTop = 10;
+          }
+          preScrollTop = curScrollTop;
+
+          console.log("222", containerDOM.scrollHeight);
+          console.log("222", containerDOM.scrollTop);
+
+          const top = curScrollTop / ratio;
+          barDOM.style.transform = `translateY(${top}px)`;
+        },
+        false
+      );
+    </script>
+  </body>
+</html>

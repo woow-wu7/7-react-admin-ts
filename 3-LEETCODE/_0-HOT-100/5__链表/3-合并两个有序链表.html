@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // LeetCode
+      // 21. Merge Two Sorted Lists
+      // 剑指 Offer 25. 合并两个排序的链表
+
+      // Question
+      // You are given the heads of two sorted linked lists list1 and list2.
+      // Merge the two lists into one sorted list.
+      // The list should be made by 【 splicing 】 together the nodes of the first two lists.
+      // Return the head of the merged linked list.
+
+      // leetcode
+      // 剑指 Offer 25. 合并两个排序的链表 https://leetcode.cn/problems/he-bing-liang-ge-pai-xu-de-lian-biao-lcof/
+
+      // 将两个升序链表合并为一个新的 升序 链表并返回。新链表是通过拼接给定的两个链表的所有节点组成的。
+      // 输入：l1 = [1,2,4], l2 = [1,3,4]
+      // 输出：[1,1,2,3,4,4]
+      // ---
+      // 输入：l1 = [], l2 = []
+      // 输出：[]
+      // ---
+      // 输入：l1 = [], l2 = [0]
+      // 输出：[0]
+
+      /**
+       * Definition for singly-linked list.
+       * function ListNode(val, next) {
+       *     this.val = (val===undefined ? 0 : val)
+       *     this.next = (next===undefined ? null : next)
+       * }
+       */
+      /**
+       * @param {ListNode} list1
+       * @param {ListNode} list2
+       * @return {ListNode}
+       */
+
+      // 对比
+      // 都会用到 ( 链表中间节点 ) ( 反转链表 ) ( 合并链表 ) ( 链表相等 )
+      // 143. 重排链表 https://leetcode.cn/problems/reorder-list/
+      // 234. 回文链表  https://leetcode.cn/problems/palindrome-linked-list/
+
+      // 对比
+      // 88. 合并两个有序数组 https://leetcode.cn/problems/merge-sorted-array/
+      // 617. 合并二叉树 https://leetcode.cn/problems/merge-two-binary-trees/
+      // 25. 合并两个排序的链表 https://leetcode.cn/problems/he-bing-liang-ge-pai-xu-de-lian-biao-lcof/
+
+      // 前置知识 - 关联知识
+      // - 0. 回文链表 https://leetcode.cn/problems/palindrome-linked-list/
+      // - 1. 重排链表  https://leetcode.cn/problems/reorder-list/
+      // - 2. 寻找链表中间节点 https://leetcode.cn/problems/convert-sorted-list-to-binary-search-tree/
+      // - 3. 反转链表 https://leetcode.cn/problems/fan-zhuan-lian-biao-lcof/
+      // - 4. 合并两个有序链表 https://leetcode.cn/problems/he-bing-liang-ge-pai-xu-de-lian-biao-lcof/
+
+      // 思路
+      // - 1. 因为是两个 ( 排序链表 - 两个升序有序的链表 )，所以我们只需要从头往后比较，将较小的先接入 结果链表中
+      // - 2. 直到其中一个链表遍历完，然后直接拼接剩下的链表 即可
+
+      var mergeTwoLists = function (list1, list2) {
+        // 如果其中一个为空，就直接返回另一个链表
+        // 包含了两个都为空的情况，比如都为空，list1不存在，返回list2，list2本来就是空，则相当于返回null
+        // if (list1 === null) return list2;
+        // if (list2 === null) return list1;
+        // 注意：上面两个条件可以不要，因为如果其中一个为空，都不会满足  while (list1 && list2)，则while不会执行，后面有对空的判断
+
+        let dummy = (list = new ListNode(null)); // 先 生成一个空节点(链表)，val=null next=null
+        // 这里缓存一下 list 的 头节点，该头节点是我们自己定义的头节点，和我们最终返回的头节点不一样
+        // 问题：为什么要缓存头节点呢？
+        // 回答：因为 list 我们在不断的重新赋值next来指向尾节点继续拼接，那么执行后指针不是在头节点了，而是尾节点；而题目说的是要返回头节点，所以需要缓存
+
+        // while
+        // 遍历两个链表，直到其中一个为空
+        while (list1 && list2) {
+          if (list1.val < list2.val) {
+            // 比较两个链表中的最前面的节点，取小的添加给list链表，然后移动list的next指针到尾节点，同时移动小的链表的指针next，继续比较list1.next.val 和 list2.val
+            // 问题：为什么要移动 list
+            // 回答：因为 list 中还要添加新的节点进来，必须在尾节点上的 next 指向新的节点
+            list.next = list1;
+            list1 = list1.next; // 后移
+          } else {
+            list.next = list2;
+            list2 = list2.next;
+          }
+          list = list.next; // list也后移
+        }
+
+        // while (list1) {
+        //   list3.next = list1;
+        //   list3 = list3.next;
+        //   list1 = list1.next;
+        // }
+
+        // while (list2) {
+        //   list3.next = list2;
+        //   list3 = list3.next;
+        //   list2 = list2.next;
+        // }
+
+        // 当上面的整个while循环结束，可能都遍历完了，也可能其中一个链表还有剩余，继续遍历有剩余节点的链表，添加给list
+        // 优化上面的两个while - 直接拼接，不用再遍历，因为升序有序
+        if (list1) list.next = list1;
+        if (list2) list.next = list2;
+
+        return dummy.next;
+        // 最后返回新节点的头节点，不然我们初始化list时的 ( 头节点 ) 并不是答案中的头节点，把我们自己的头节点的next才是真正的返回的合并后的头节点
+
+        // 注意
+        //  - 头节点上 head.next，而不是 head，因为声明时 head是val=null
+        //  - head是缓存的null节点，head.next 节点就是 新链表的头节点
+
+        // 套路
+        // 链表经常这样声明 let dummy = list = new ListNode(null)
+      };
+    </script>
+  </body>
+</html>

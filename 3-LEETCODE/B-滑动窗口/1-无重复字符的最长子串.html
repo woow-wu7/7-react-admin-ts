@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 题目
+      // 3. 无重复字符的最长子串
+
+      // 滑动窗口
+      // 思路 - 一般遇到 ( 子串问题 )，可以考虑使用 ( 滑动窗口 - 双指针 ) 的思想
+
+      // 本题思路
+      // 滑动窗口
+      // 1. 基本组成: 左右两个指针，一个set，两个变量 len maxLen
+      // 2. 移动右指针
+      //      - 右指针的值在set中不存在 - 添加 进set，然后 右移右指针，更新 len 和 maxLen
+      //      - 右指针的值在set中存在 - 删除左指针在set中的值，然后移动左指针，再判断右指针的值在set中否存在
+      //          - 不存在 - 就将右指针的值添加进set，并移动右指针
+      //          - 存在 - 继续删除左指针的值，并移动左指针
+      // - 总的思想是: 右移动右指针，不满足条件(即，存在相同字符了)时，右指针停止右滑，而是右移动左指针，删除左指针元素所在的set中的值，直到满足右指针右移的条件时，再右移右指针
+
+      // leetcode
+      // 3. 无重复字符的最长子串 https://leetcode.cn/problems/longest-substring-without-repeating-characters/
+
+      /**
+       * @param {string} s
+       * @return {number}
+       */
+
+      const s = "abcabcbb"; // 3
+      // const s = "bbbbb"; // 1
+      // s = "pwwkew"; // 3
+
+      var lengthOfLongestSubstring = function (s) {
+        // 定义四个变量: 左右指针，当前滑动窗口的长度，滑动窗口的最大长度
+        let left = (right = len = maxLen = 0);
+
+        // set.add
+        // set.has
+        // set.delete
+        // 注意
+        //  - 可以: 这里用 set，map，对象{} 都可以
+        //  - 不可以: 但是最好不要用数组，因为存在 ( 寻找是否存在includes，和删除已存在的值，都需要遍历 )，效率很低
+        let set = new Set();
+
+        // 总的条件: 右指针遍历完就结束整个遍历
+        while (right < s.length) {
+          // 1. 右指针的值 在 set 不存在
+          // ------------------------------------------ YYY 这段代码和 YYY 是重复的，可以做优化，这里为了方便理解不做优化了
+          if (!set.has(s[right])) {
+            set.add(s[right]);
+            right++;
+            len++;
+            if (maxLen < len) maxLen = len;
+          }
+          // 2. 右指针的值 在 set 存在，就在set中删除左指针的值，并向右移动左指针，直到 right指针的值在set中不存在为止
+          else {
+            // 右指针的值在set中存在
+            while (set.has(s[right])) {
+              set.delete(s[left]); // 删除左指针 在 set 中的值
+              left++;
+              len--;
+              // 这里没有更新 maxLen，因为减小了，maxLen肯定不是最大
+            }
+            //  --------------------------------------- YYY
+            set.add(s[right]); // set中不存在右指针时 ( 左指针不能在移动时 )，将 右指针 的值添加到 set 中
+            right++; // 右移 右指针
+            len++;
+            if (maxLen < len) maxLen = len;
+          }
+        }
+
+        return maxLen; // 返回记录的最大长度
+      };
+    </script>
+
+    <script>
+      // 暴力求解
+      // - (穷举)枚举所有子串，在判断是否有重复
+      /**
+       *
+       *
+       var lengthOfLongestSubstring = function (s) {
+        let res = "";
+        const len = s.length;
+
+        if (!len) return 0;
+
+        function allSame() {
+          for (let i = 1; i < s.length; i++) {
+            if (s[i] !== s[i - 1]) {
+              return false;
+            }
+          }
+          return true;
+        }
+        if (allSame()) return 1;
+
+        for (let i = 0; i < len; i++) {
+          for (let j = i + 1; j <= len; j++) {
+            const str = s.slice(i, j).split("").sort().join("");
+            let hasSame = false;
+            for (let k = 0; k < str.length; k++) {
+              if (str[k] === str[k + 1]) {
+                hasSame = true;
+              }
+            }
+            if (!hasSame) {
+              if (res.length < str.length) {
+                res = str;
+              }
+            }
+          }
+        }
+        return res.length;
+      };
+      const res = lengthOfLongestSubstring(s)
+      console.log(res)
+      *
+      **
+      ***/
+    </script>
+
+    <script>
+      // 暴力算法3
+
+      var lengthOfLongestSubstring3 = function (s) {
+        let max = 0;
+
+        for (let i = 0; i < s.length; i++) {
+          for (let j = i + 1; j <= s.length; j++) {
+            const str = s.slice(i, j);
+            const set = new Set(str.split(""));
+            const arr = Array.from(set);
+
+            if (arr.length === str.length && str.length > max) {
+              max = str.length;
+            }
+          }
+        }
+
+        if (!s.length) return 0;
+        if (s.trim().length === 0) return 1;
+
+        return max;
+      };
+    </script>
+  </body>
+</html>

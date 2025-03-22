@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>伪类选择器 :not()</title>
+    <style>
+      div {
+        color: blue;
+      }
+      :not(.child1) {
+        /* 选中除了 .child1 的元素，包含了所有层级 */
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div>这个也会被选中</div>
+    <div>
+      <div>father brother</div>
+      <div class="father">
+        <div class="child1">child1 - 只有child1不会被命中</div>
+        <div class="child2">child2</div>
+        <div class="child3">child3</div>
+        <!-- child2 和 child3 将是红色的 -->
+        <!-- 只有 child1 不会被命中 -->
+      </div>
+    </div>
+  </body>
+  <script>
+    // :not()
+    // - 语法：( :not(css选择器) )
+    // - 作用：( 伪类 :not() ) 用来匹配不符合选择器的元素
+  </script>
+</html>

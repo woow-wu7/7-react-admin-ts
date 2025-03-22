@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ellipsis</title>
+    <style>
+      .single-ellipsis {
+        width: 300px;
+        height: 20px;
+        background: yellow;
+
+        /* 以下三个属性实现 单行省略号 */
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      .multiple-ellipsis {
+        margin-top: 100px;
+        width: 300px;
+        background: yellow;
+        /* height: 100px; 注意在多行实现省略号时，不能加 height 属性，不然省略号下面还会有文字 */
+        /* height: 100px; 注意在多行实现省略号时，不能加 height 属性，不然省略号下面还会有文字 */
+        /* height: 100px; 注意在多行实现省略号时，不能加 height 属性，不然省略号下面还会有文字 */
+
+        /* 以下所有实现 多行省略号 */
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="single-ellipsis">单行省略号，单行省略号，单行省略号，单行省略号，单行省略号，单行省略号</div>
+
+    <div class="multiple-ellipsis">
+      多行省略号， 多行省略号， 多行省略号， 多行省略号， 多行省略号， 多行省略号， 多行省略号， 多行省略号，
+      多行省略号， 多行省略号， 多行省略号， 多行省略号， 多行省略号， 多行省略号， 多行省略号，
+    </div>
+  </body>
+
+  <script>
+    // clamp 夹子
+    // orient 朝向 方向
+  </script>
+</html>

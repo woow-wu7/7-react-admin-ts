@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 66. 加一
+
+      // 题目
+      // 给定一个由 整数 组成的 非空 数组所表示的非负整数，在该数的基础上加一。
+      // 最高位数字存放在数组的首位， 数组中每个元素只存储单个数字。
+      // 你可以假设除了整数 0 之外，这个整数不会以零开头。
+
+      // 示例 1：
+      // 输入：digits = [1,2,3]
+      // 输出：[1,2,4]
+      // 解释：输入数组表示数字 123。
+
+      // 示例 2：
+      // 输入：digits = [4,3,2,1]
+      // 输出：[4,3,2,2]
+      // 解释：输入数组表示数字 4321。
+
+      // 示例 3：
+      // 输入：digits = [0]
+      // 输出：[1]
+
+      // 提示：
+      // 1 <= digits.length <= 100
+      // 0 <= digits[i] <= 9
+
+      /**
+       * @param {number[]} digits
+       * @return {number[]}
+       */
+
+      // leetcode
+      // https://leetcode.cn/problems/plus-one/
+
+      // 思路
+      // - 1. 从后往前遍历数组
+      // - 2.
+      //  - aa 无进位: 最后一位的值不是9，说明只能是 0-8，加1不会超过9，也就是不会进位，所以+1后直接返回
+      //  - bb 有进位: 最后一位的值是9, +1会有进位，则该位置是0，指针前移，计算前面的值，重复以上 aa bb 步骤
+      var plusOne = function (digits) {
+        for (let i = digits.length - 1; i >= 0; i--) {
+          if (digits[i] !== 9) {
+            digits[i]++;
+            return digits;
+          } else {
+            digits[i] = 0;
+          }
+        }
+
+        // 如果跳出循环，说明原始数组中的值都是9，则进位，1后都是0
+        return [1, ...digits];
+      };
+    </script>
+  </body>
+</html>

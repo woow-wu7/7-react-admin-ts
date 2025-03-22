@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      section div {
+        width: 120px;
+        background: yellow;
+        margin: 10px 0;
+        /* height: 100px; 注意在多行实现省略号时，不能加 height 属性，不然省略号下面还会有文字 */
+        /* height: 100px; 注意在多行实现省略号时，不能加 height 属性，不然省略号下面还会有文字 */
+        /* height: 100px; 注意在多行实现省略号时，不能加 height 属性，不然省略号下面还会有文字 */
+      }
+
+      #ellipsis-single {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      #ellipsis-two {
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+      }
+
+      #ellipsis-three {
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <div id="ellipsis-single">
+        这是内容这是内容这是内容这是内容这是内容这是内容
+      </div>
+      <div id="ellipsis-two">这是内容的部门，会不会有省略号呢</div>
+      <div id="ellipsis-three">
+        这是内容这是内容这是内容这是内容这是内容这是内容
+      </div>
+    </section>
+
+    <script>
+      // 1
+      // FLEX-LAYOUT
+      // - [ container ]
+      //  - 1. flex-direction ---------- row column row-reverse column-reverse
+      //  - 2. flex-wrap --------------- warp nowrap warp-reverse
+      //  - 3. flex-flow --------------- flex-flow = flex-direction + flex-wrap
+      //  - 4. justify-content --------- flex-start flex-end center space-between space-around
+      //  - 5. align-items ------------- flex-start flex-end center baseline stretch
+      //  - 6. align-content ----------- flex-start flex-end center space-between space-around stretch
+      // - [ item ]
+      //  - 1. flex-grow --------------- 0
+      //  - 2. flex-shrink ------------- 1
+      //  - 3. flex-basis -------------- auto 元素自身大小，存在剩余空间时，占据主轴的空间
+      //  - 4. flex
+      //  - 5. order ------------------- 0
+      //  - 6. align-self -------------- flex-start flex-end center baseline stretch
+
+      // 2
+      // 文本超出三行隐藏
+      // overflow: hidden;
+      // text-overflow: ellipsis;
+      // display: -webkit-box;
+      // -webkit-box-orient: vertical;
+      // -webkit-line-clamp: 3;
+
+      // 3
+      // 联合类型 union type
+      // 交叉类型 intersection type
+      // -- european union. 欧盟
+      // -- intersection 十字路口 相交 交点
+
+      // type TA = { name: "a", age: 1 } | { name: "b" };
+      // type TB = { name: "a", age: 1 } & { name: "a", address: 1 };
+      // const union: TA = { name: "b" }; // 满足其中任意一个 或 全部
+      // const intersection: TB = { name: "a", age: 1, address: 1 }; // 取并集
+      // [详见](file:///Users/xiawu/work/personal/front-end/8-penetrate/1-FRONTEND/2-TS/9-Union-Intersection.ts)
+
+      // 4
+      const arr2 = [{ name: "a", age: 1 }, { name: "b", age: 2 }, 1, 2];
+      arr2.map((item) => {
+        item.age++; // 引用类型的数据: 会修改引用类型的数据 { name: "a", age: 2, }, { name: "b", age: 3, }
+        if (typeof item !== "object") item++; // 原始类型的数据: 不会被修改，仍然是 1 2
+      });
+      console.log("arr2", arr2);
+      // [ { name: "a", age: 2, }, { name: "b", age: 3, }, 1, 2, ];
+
+      // 5
+      // 完成一个 getDifferent 方法，要求接受两个参数，可以返回两个数组中不同的数据集合
+      // e.g
+      let aa = [1, 2, 3, 4];
+      let bb = [4, 5, 6];
+      // answer = [1,2,3,5,6]
+      // e.g
+      let aaa = [
+        { name: "a", age: 2 },
+        { name: "b", age: 2 },
+        { name: "c", age: 3 },
+      ];
+      let bbb = [
+        { name: "a", age: 1 },
+        { name: "b", age: 2 },
+        { name: "d", age: 3 },
+      ];
+      // answer = [{name: 'a', age:2}, {name: 'a', age:1}, {name: 'c', age:3}, {name: 'd', age:3}]
+
+      function getDifferent(a, b) {
+        // return Array.from(new Set([...a, ...b].map(JSON.stringify)));
+        const _aa = new Set(a.map(JSON.stringify));
+        const _bb = new Set(b.map(JSON.stringify));
+
+        for (let value of _aa) {
+          if (_bb.has(value)) {
+            _aa.delete(value);
+            _bb.delete(value);
+          }
+        }
+
+        const res = [...Array.from(_aa), ...Array.from(_bb)].map(JSON.parse);
+        return res;
+      }
+      const res11 = getDifferent(aa, bb);
+      console.log("res11: ", res11);
+      const res22 = getDifferent(aaa, bbb);
+      console.log("res22: ", res22);
+
+      // 6
+      // DeepClone
+      const obj = {
+        num: 1,
+        str: "string",
+        boo: true,
+        nul: null,
+        undefined: undefined,
+        [Symbol("symbol")]: "symbol", // symbol key
+        bigint: BigInt(9007199254740991), // bigint
+        arr: [1, 2, 3],
+        obj: {
+          name: "woow_wu7",
+          obj2: { age: 10 },
+        },
+        fun: function () {
+          console.log("this is a function.");
+        },
+        date: new Date(), // 特殊对象，结构化克隆
+        regexp: new RegExp(),
+        error: new Error(), // SyntaxError ReferenceError RangeError TypeError URIError EvalError
+      };
+      obj.circle = obj; // 循环引用
+
+      // ------------------------------------------------
+      // deepClone
+      // - 参数：再添加一个参数map，用来存储所有递归时传入的参数，该参数表示的是需要克隆的对象，如果该参数存在，就直接从缓存中取
+
+      const deepClone = (obj, map = new Map()) => {
+        if (typeof obj !== "object" || obj === null) {
+          return obj;
+        }
+
+        let res = Array.isArray(obj) ? [] : {};
+
+        if (map.has(obj)) return map.get(obj);
+        map.set(obj, res);
+
+        switch (obj.constructor) {
+          case Error:
+          case Date:
+          case RegExp: {
+            res = new obj.constructor(obj);
+            break;
+          }
+          default: {
+            Reflect.ownKeys(obj).forEach((key) => {
+              if (typeof obj[key] === "object") {
+                res[key] = deepClone(obj[key], map);
+              } else {
+                res[key] = obj[key];
+              }
+            });
+          }
+        }
+
+        return res;
+      };
+      // 调用
+      const result = deepClone(obj);
+      console.log("result", result);
+
+      // 修改原数据，看是否深拷贝成功
+      obj.num = 1111;
+      obj.str = "strrrrrr";
+      obj.boo = false;
+      obj.arr = [2, 2, 2, 2];
+      obj.obj = {};
+      obj.fun = function () {
+        console.log("this is a function2222222.");
+      };
+      obj.date = new Date(22222);
+      obj.regexp = new RegExp(22222);
+      obj.error = new Error(22222);
+
+      console.log("result", result);
+    </script>
+  </body>
+</html>

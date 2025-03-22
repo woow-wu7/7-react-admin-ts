@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 389. 找不同
+
+      // 给定两个字符串 s 和 t ，它们只包含小写字母。
+      // 字符串 t 由字符串 s 随机重排，然后在随机位置添加一个字母。
+      // 请找出在 t 中被添加的字母。
+
+      // 示例 1：
+      // 输入：s = "abcd", t = "abcde"
+      // 输出："e"
+      // 解释：'e' 是那个被添加的字母。
+
+      // 示例 2：
+      // 输入：s = "", t = "y"
+      // 输出："y"
+
+      /**
+       * @param {string} s
+       * @param {string} t
+       * @return {character}
+       */
+
+      // leetcode
+      // https://leetcode.cn/problems/find-the-difference/
+
+      // 思路
+      // - 因为: t 比 s ( 多了一个字符 )
+      // - 所以: 遍历 s，t逐个replace成 '', 最后剩余的字符即为结果
+
+      var findTheDifference = function (s, t) {
+        for (let i = 0; i < s.length; i++) {
+          t = t.replace(s[i], "");
+        }
+
+        return t;
+      };
+    </script>
+  </body>
+</html>

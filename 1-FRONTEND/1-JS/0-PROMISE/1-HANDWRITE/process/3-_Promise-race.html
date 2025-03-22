@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Promise.race()</title>
+  </head>
+  <body>
+    <script>
+      // English
+      // -
+      // succeed 成功 v
+      // success 成功 n
+      // successful 成功 adj
+      // -
+      // fail 失败 v
+      // failure 失败 n
+      // failed 失败 adj
+
+      // Promise.race()
+      // - 返回值: 返回一个新的promise
+      // - 参数: 数组，成员必须是promise对象，不是会用 Promise.resolve() 转成 promise 对象
+      // - 特点: 谁先 fulfilled，整个就 fulfilled；谁先 rejected，整个就 rejected
+      // - race: 比赛，竞争的意思
+
+      // 详见 本项目/2-FRONTEND/1-JS/8-promise/promise-handwrite/1._promise-all-race-finally.html
+
+      // 静态方法
+      Promise._race = (list) => {
+        return new Promise((resolve, reject) => {
+          Array.from(list).forEach((_promise) => {
+            Promise.resolve(_promise).then(resolve, reject);
+
+            // 相当于
+            // Promise.resolve(_promise).then(
+            //   (value) => resolve(value),
+            //   (reason) => reject(reason)
+            // );
+            // resolve 是 value => resolve(value) 的简写形式
+            // reject 是 reason => reject(reason) 的简写形式
+          });
+        });
+      };
+
+      // 测试
+      const p1 = new Promise((resolve) => setTimeout(() => resolve(3), 3000));
+      const p2 = new Promise((resolve) => setTimeout(() => resolve(2), 2000));
+      const list = [p1, p2];
+
+      Promise.race(list).then((values) => console.log(values));
+      Promise._race(list).then((values) => console.log(values));
+    </script>
+  </body>
+</html>

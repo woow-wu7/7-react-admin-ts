@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 2248. 多个数组求交集
+      // 给你一个二维整数数组 nums ，其中 nums[i] 是由 不同 正整数组成的一个非空数组，按 升序排列 返回一个数组，数组中的每个元素在 nums 所有数组 中都出现过。
+
+      // 输入：nums = [[3,1,2,4,5],[1,2,3,4],[3,4,5,6]]
+      // 输出：[3,4]
+
+      // 输入：nums = [[1,2,3],[4,5,6]]
+      // 输出：[]
+
+      /**
+       * @param {number[][]} nums
+       * @return {number[]}
+       */
+
+      // leetcode
+      // https://leetcode.cn/problems/intersection-of-multiple-arrays/
+
+      // 对比
+      // 2248. 多个数组求交集 https://leetcode.cn/problems/intersection-of-multiple-arrays/
+      // 349. 两个数组的交集 https://leetcode.cn/problems/intersection-of-two-arrays/
+      // 350. 两个数组的交集 II https://leetcode.cn/problems/intersection-of-two-arrays-ii/
+
+      var intersection = function (nums) {
+        const res = nums.reduce((prev, cur) => {
+          let same = [];
+
+          if (prev.length < cur.length) {
+            prev.forEach((value) => {
+              if (cur.includes(value)) same.push(value);
+            });
+          } else {
+            cur.forEach((value) => {
+              if (prev.includes(value)) same.push(value);
+            });
+          }
+          return same;
+        });
+
+        return res.sort((a, b) => a - b);
+      };
+    </script>
+  </body>
+</html>

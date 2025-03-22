@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>control the number of concurrent request. 并发数量限制</title>
+  </head>
+  <body>
+    <script>
+      // Control the number of concurrent request.
+
+      // 问题: 前端页面中需要同时发送20个请求，设计并发请求数最多为10个
+      // 要求:
+      // - 1. 最多同时执行 10 个任务
+      // - 2. 当前任务执行完后，释放队列空间，自动执行下一个任务
+      // - 3. 所有任务添加到任务队列后，自动开始执行任务
+
+      // English
+      // concurrency 并发 n
+      // currency 货币 n
+      //
+      // concurrent 同时发生的 并发的 adj
+      // current 现在的 当前的 adj
+      //【 concurrent request. 并发请求 】
+      //
+      // schedule 安排 v 预定 v 工作计划 n 日程安排 n
+      // scheduler 调度程序 n
+      //【 on schedule. 按计划 按时 】
+      // -- 1. The schedule is tight. 日程安排很紧
+      // -- 2. I have a full schedule. 我的日程很满
+      // -- 3. I'm already behind the schedule. 我已经落后于进度了
+      // -
+      // -- 4.【 make a schedule. 制定一个时间表 】= set up a schedule.
+      // -- 5.【 set up a schedule. 制定一个时间表 】
+      // -- 6.【 make a good work schedule. 做好工作安排 】
+      // -- 7.【 check the schedule. 查看日程 】
+      // -
+      // -- 8.【 What's on your schedule. 你的日程安排是什么 】
+      // -
+      // -- on schedule. 按计划 按时
+      // -- The project is on schedule. 项目按计划进行
+      // -- The train arrived on schedule. 火车按时到达
+      // -
+      // The meeting has been 【 scheduled 】 【 for 】 Monday's afternoon. 会议定于星期一下午举行
+      // -
+      // I need to schedule a meeting with my boss. 我需要安排与我老板的会议
+      // I need to schedule a meeting for my boss. 我需要为我的老板安排一个会议
+
+      class TaskScheduler {
+        max = 10;
+        taskQueue = [];
+        runningTaskLength = 0;
+        // Queue -> fist in first out -> push shift
+
+        constructor() {
+          // 使用 setTimeout 异步是为了保证 ( 同步任务addTask已经执行完毕 )，这里表示 当任务添加完成后自动执行，对应 ( 要求3 )
+          setTimeout(() => this.run());
+        }
+
+        // 入队
+        addTask = (task) => this.taskQueue.push(task);
+
+        run = () => {
+          const queueLength = this.taskQueue.length;
+          if (!queueLength) return; // 递归结束条件
+
+          const min = Math.min(this.max, queueLength); // 因为有可能 queueLength 小于 10 条，如果直接执行 10 条，将报错
+
+          // for循环 和 max
+          // - 保证 task 大于10个时，始终有10个在执行
+          // - 并行的10个任务，有1个完成时，max=1，会再取一个run，则始终一共10个任务在执行
+          for (let i = 0; i < min; i++) {
+            this.max--;
+            // this.max
+            // ------------------------------------------ 占用 任务空间 -> 为了保证每次不都是取10个任务，因为最后取的时候，可能不到10个任务了，我们动态修改 max
+            // ------------------------------------------ 注意: 其实我们可以不改变max的值，直接每次都是10 ( 但是这样有个问题是，并发的请求数会超过10个，因为又请求10个的时候有的请求并没有完成)
+
+            const task = this.taskQueue.shift(); // 队列先进先出 push <-> shift
+
+            this.runningTaskLength++;
+            task()
+              .then((res) => console.log(res))
+              .catch((err) => console.log(err))
+              .finally(() => {
+                this.max++; // -------------------------- 释放 任务空间
+                console.log("正在执行的任务数量", this.runningTaskLength);
+                this.runningTaskLength--;
+                this.run();
+                // 当一个任务执行完毕后，接着执行下一个任务
+                // - 1. 刚开始 min=10 ，一次循环，并行执行了10个任务后，max=0；当max=0时，没有一个任务完成，则没有max++
+                // - 2. 当 10 个任务中有一个任务执行完成(成功或失败)，接着 max=1，接着执行下一个任务run()，此时max=1，就会去任务队列中取一个执行，直到取完
+                // - 总结: 也就是说，并行10个任务，完成 ( 1 ) 个任务后，还有 ( 9 ) 个任务在执行，此时max=1，又取 ( 1 ) 个run，min=1，则总的有 ( 10 ) 个任务在执行
+              });
+          }
+        };
+      }
+
+      // 快速创建任务 - 每个任务2秒后返回结果
+      // 该函数执行后 - 返回一个函数
+      const createTask = (i) => () => {
+        return new Promise((resolve) => setTimeout(() => resolve(i), i * 1000));
+      };
+
+      const taskScheduler = new TaskScheduler();
+
+      // 1
+      // 创建任务 并 添加任务
+      // - 一共有20个请求，只能并发10个请求的逻辑在 TaskQueue 中实现
+      for (let i = 0; i < 20; i++) {
+        const task = createTask(i);
+        taskScheduler.addTask(task);
+      }
+
+      // setInterval(() => {
+      //   const task = createTask(new Date());
+      //   taskScheduler.addTask(task);
+      // }, 3000);
+    </script>
+    <script>
+      // 资料
+      // 一些条件限制 https://juejin.cn/post/7052700635154219015
+      // p-limit https://www.npmjs.com/package/p-limit
+    </script>
+  </body>
+</html>
